@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Đăng nhập - PostPilot</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#020617">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Fira+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/base.css">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <main class="center-page">
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="panel auth-card">
+      <a class="logo" href="/"><span class="logo-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></span>PostPilot</a>
+      <h1>Chào mừng trở lại</h1>
+      <p class="sub">Đăng nhập để quản lý lịch đăng bài.</p>
+      <form id="f" novalidate>
+        <div class="field">
+          <label for="u">Tên đăng nhập</label>
+          <input class="input" id="u" name="username" autocomplete="username" required autofocus>
+        </div>
+        <div class="field">
+          <label for="p">Mật khẩu</label>
+          <input class="input" id="p" name="password" type="password" autocomplete="current-password" required>
+        </div>
+        <p class="error-text" id="err" role="alert" aria-live="polite" hidden></p>
+        <button class="btn btn-primary" id="go" type="submit">Đăng nhập</button>
+      </form>
+      <a class="back-link" href="/">&larr; Về trang chủ</a>
+    </div>
+  </main>
+  <script src="/assets/login.js"></script>
+</body>
+</html>

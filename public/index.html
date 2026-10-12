@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="vi" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PostPilot - Tự động đăng bài lên nhóm Telegram</title>
+  <meta name="description" content="Lên lịch một lần, PostPilot tự động đăng bài lên nhiều nhóm và kênh Telegram đúng giờ, đúng múi giờ. Có nhật ký gửi, nút bấm, ảnh và định dạng.">
+  <meta name="theme-color" content="#020617">
+  <meta property="og:title" content="PostPilot - Tự động đăng bài lên nhóm Telegram">
+  <meta property="og:description" content="Lên lịch một lần, tự động đăng bài lên nhiều nhóm Telegram đúng giờ.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/base.css">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap">
+      <a class="logo" href="/" aria-label="PostPilot - trang chủ">
+        <span class="logo-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></span>
+        PostPilot
+      </a>
+      <nav class="nav-links" aria-label="Điều hướng chính">
+        <a href="#tinh-nang">Tính năng</a>
+        <a href="#cach-hoat-dong">Cách hoạt động</a>
+        <a href="#hoi-dap">Hỏi đáp</a>
+      </nav>
+      <a class="btn btn-primary btn-sm" href="/login">Đăng nhập</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="bg-grid" aria-hidden="true"></div>
+      <div class="wrap">
+        <div>
+          <span class="eyebrow"><span class="dot" aria-hidden="true"></span>Bot hoạt động 24/7 trên server của bạn</span>
+          <h1 class="display">Lên lịch một lần.<br><span class="grad">Telegram tự đăng</span> đúng giờ.</h1>
+          <p class="lead">PostPilot gửi bài tự động tới nhiều nhóm và kênh Telegram theo lịch bạn đặt: một lần, hằng ngày, theo thứ trong tuần hoặc lặp theo chu kỳ, luôn đúng múi giờ.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary btn-lg" href="/login">Mở bảng điều khiển
+              <svg class="icon" aria-hidden="true"><use href="/assets/sprite.svg#i-send"/></svg></a>
+            <a class="btn btn-lg" href="#cach-hoat-dong">Xem cách hoạt động</a>
+          </div>
+          <div class="trust">
+            <span><svg class="icon" aria-hidden="true"><use href="/assets/sprite.svg#i-check"/></svg>Không giới hạn số nhóm</span>
+            <span><svg class="icon" aria-hidden="true"><use href="/assets/sprite.svg#i-check"/></svg>Dữ liệu nằm trên server của bạn</span>
+            <span><svg class="icon" aria-hidden="true"><use href="/assets/sprite.svg#i-check"/></svg>Nhật ký từng lượt gửi</span>
+          </div>
+        </div>
+
+        <div class="mock" aria-hidden="true">
+          <div class="panel">
+            <div class="mock-head"><span>Hàng đợi sắp đăng</span><span class="chip ok">Đang chạy</span></div>
+            <div class="mock-body">
+              <div class="queue-item">
+                <div class="q-ico"><svg class="icon"><use href="/assets/sprite.svg#i-send"/></svg></div>
+                <div class="q-main"><div class="q-title">Bản tin sáng thị trường</div><div class="q-sub">Hằng ngày · 07:30 · 5 nhóm</div></div>
+                <span class="chip">07:30</span>
+              </div>
+              <div class="queue-item">
+                <div class="q-ico"><svg class="icon"><use href="/assets/sprite.svg#i-repeat"/></svg></div>
+                <div class="q-main"><div class="q-title">Nhắc ưu đãi cuối tuần</div><div class="q-sub">T6, T7 · 19:00 · 3 nhóm</div></div>
+                <span class="chip warn">19:00</span>
+              </div>
+              <div class="queue-item">
+                <div class="q-ico"><svg class="icon"><use href="/assets/sprite.svg#i-calendar"/></svg></div>
+                <div class="q-main"><div class="q-title">Thông báo sự kiện ra mắt</div><div class="q-sub">Một lần · 20/10 · 12 nhóm</div></div>
+                <span class="chip">20/10</span>
+              </div>
+            </div>
+            <div class="bubble">
+              <b>Bản tin sáng</b><br>Chỉ số mở cửa tích cực, xem chi tiết bên dưới.
+              <div class="btnrow"><span class="tbtn">Đọc đầy đủ</span><span class="tbtn">Tham gia nhóm</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" style="padding-top:24px">
+      <div class="wrap reveal">
+        <div class="metrics">
+          <div class="metric"><div class="num">4</div><div class="cap">Kiểu lịch đăng</div></div>
+          <div class="metric"><div class="num">15s</div><div class="cap">Chu kỳ kiểm tra hàng đợi</div></div>
+          <div class="metric"><div class="num">∞</div><div class="cap">Nhóm và kênh quản lý</div></div>
+          <div class="metric"><div class="num">100%</div><div class="cap">Dữ liệu do bạn kiểm soát</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="tinh-nang">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <div class="kicker">Tính năng</div>
+          <h2 class="title">Mọi thứ cần để vận hành nhóm Telegram đều đặn</h2>
+          <p>Thiết kế cho người quản lý cộng đồng, kênh tin tức và đội bán hàng cần đăng bài đúng lúc mà không phải canh giờ.</p>
+        </div>
+        <div class="features">
+          <article class="feature reveal"><div class="f-ico"><svg class="icon"><use href="/assets/sprite.svg#i-clock"/></svg></div><h3>Lịch đăng linh hoạt</h3><p>Một lần, hằng ngày, các thứ trong tuần hoặc lặp mỗi N phút. Hệ thống tự tính lượt kế tiếp.</p></article>
+          <article class="feature reveal"><div class="f-ico"><svg class="icon"><use href="/assets/sprite.svg#i-users"/></svg></div><h3>Đăng nhiều nhóm cùng lúc</h3><p>Chọn bất kỳ nhóm, siêu nhóm hay kênh nào. Gửi giãn cách để không chạm giới hạn của Telegram.</p></article>
+          <article class="feature reveal"><div class="f-ico"><svg class="icon"><use href="/assets/sprite.svg#i-globe"/></svg></div><h3>Đúng múi giờ</h3><p>Mỗi bài có múi giờ riêng, xử lý chính xác cả khi đổi giờ mùa hè.</p></article>
+          <article class="feature reveal"><div class="f-ico"><svg class="icon"><use href="/assets/sprite.svg#i-image"/></svg></div><h3>Ảnh, định dạng và nút bấm</h3><p>Hỗ trợ ảnh, HTML/MarkdownV2, nút link inline và xem trước giao diện tin nhắn ngay khi soạn.</p></article>
+          <article class="feature reveal"><div class="f-ico"><svg class="icon"><use href="/assets/sprite.svg#i-list"/></svg></div><h3>Nhật ký minh bạch</h3><p>Biết bài nào đã gửi, nhóm nào lỗi và vì sao. Có thể gửi lại thủ công chỉ một cú nhấp.</p></article>
+          <article class="feature reveal"><div class="f-ico"><svg class="icon"><use href="/assets/sprite.svg#i-shield"/></svg></div><h3>An toàn mặc định</h3><p>Đăng nhập có giới hạn thử sai, cookie HttpOnly, chống CSRF, tiêu đề bảo mật và token được che.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="cach-hoat-dong">
+      <div class="wrap">
+        <div class="sec-head center reveal">
+          <div class="kicker">Cách hoạt động</div>
+          <h2 class="title">Ba bước là xong</h2>
+        </div>
+        <div class="steps">
+          <div class="step reveal"><h3>Kết nối bot</h3><p>Tạo bot với @BotFather, dán token vào Cài đặt rồi thêm bot vào nhóm của bạn.</p></div>
+          <div class="step reveal"><h3>Soạn bài và đặt lịch</h3><p>Viết nội dung, chọn nhóm, đặt giờ. Xem trước tin nhắn như người đọc sẽ thấy.</p></div>
+          <div class="step reveal"><h3>Để PostPilot lo phần còn lại</h3><p>Bài được gửi đúng giờ, mọi kết quả đều được ghi lại trong nhật ký.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="hoi-dap">
+      <div class="wrap">
+        <div class="sec-head center reveal"><div class="kicker">Hỏi đáp</div><h2 class="title">Câu hỏi thường gặp</h2></div>
+        <div class="faq reveal">
+          <details><summary>Bot cần quyền gì trong nhóm?</summary><p>Với nhóm, chỉ cần thêm bot vào nhóm. Với kênh, hãy đặt bot làm quản trị viên có quyền đăng tin nhắn.</p></details>
+          <details><summary>Lấy Chat ID của nhóm như thế nào?</summary><p>Bạn có thể nhập @username của nhóm công khai, hoặc Chat ID dạng số (nhóm riêng tư thường bắt đầu bằng -100). PostPilot sẽ kiểm tra bot có truy cập được hay không khi thêm.</p></details>
+          <details><summary>Nếu server tắt đúng giờ đăng thì sao?</summary><p>Bài đăng một lần sẽ được gửi ngay khi server chạy lại. Lịch lặp bị bỏ lỡ quá 10 phút sẽ bỏ qua lượt đó và chờ lượt kế tiếp để tránh đăng dồn.</p></details>
+          <details><summary>Dữ liệu của tôi được lưu ở đâu?</summary><p>Trong một file JSON trên chính server của bạn, không gửi đi đâu khác ngoài Telegram. Bạn có thể xuất bản sao lưu bất cứ lúc nào.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" style="padding-top:0">
+      <div class="wrap reveal">
+        <div class="cta-band">
+          <h2 class="title">Sẵn sàng để nhóm của bạn luôn có tin mới?</h2>
+          <p>Đăng nhập và lên lịch bài đầu tiên chỉ trong vài phút.</p>
+          <a class="btn btn-primary btn-lg" href="/login">Vào bảng điều khiển</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap"><span>© <span id="yr">2026</span> PostPilot</span><span>Tự động hoá Telegram cho cộng đồng và doanh nghiệp</span></div>
+  </footer>
+  <script src="/assets/site.js"></script>
+</body>
+</html>

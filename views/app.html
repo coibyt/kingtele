@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bảng điều khiển - PostPilot</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#020617">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/base.css">
+  <link rel="stylesheet" href="/assets/app.css">
+</head>
+<body>
+  <a class="skip" href="#view">Bỏ qua tới nội dung</a>
+  <div class="shell">
+    <aside class="side" id="side">
+      <a class="logo" href="/"><span class="logo-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></span>PostPilot</a>
+      <nav class="menu" aria-label="Điều hướng bảng điều khiển">
+        <a href="#overview" data-route="overview"><svg class="icon" aria-hidden="true"><use href="/assets/sprite.svg#i-layout"/></svg>Tổng quan</a>
+        <a href="#posts" data-route="posts"><svg class="icon" aria-hidden="true"><use href="/assets/sprite.svg#i-file"/></svg>Bài đăng</a>
+        <a href="#groups" data-route="groups"><svg class="icon" aria-hidden="true"><use href="/assets/sprite.svg#i-users"/></svg>Nhóm Telegram</a>
+        <a href="#logs" data-route="logs"><svg class="icon" aria-hidden="true"><use href="/assets/sprite.svg#i-list"/></svg>Nhật ký gửi</a>
+        <a href="#settings" data-route="settings"><svg class="icon" aria-hidden="true"><use href="/assets/sprite.svg#i-sliders"/></svg>Cài đặt</a>
+      </nav>
+      <button class="btn btn-ghost side-out" id="logout" type="button"><svg class="icon" aria-hidden="true"><use href="/assets/sprite.svg#i-logout"/></svg>Đăng xuất</button>
+    </aside>
+    <div class="scrim" id="scrim"></div>
+    <div class="main">
+      <header class="topbar">
+        <button class="btn btn-icon btn-ghost" id="menuBtn" type="button" aria-label="Mở menu" aria-controls="side"><svg class="icon" aria-hidden="true"><use href="/assets/sprite.svg#i-menu"/></svg></button>
+        <strong id="pageTitle">Tổng quan</strong>
+        <span class="clock" id="clock" aria-label="Giờ hiện tại"></span>
+      </header>
+      <main id="view" tabindex="-1" aria-live="polite"></main>
+    </div>
+  </div>
+  <div class="toasts" id="toasts" role="status" aria-live="polite"></div>
+  <script src="/assets/app.js"></script>
+</body>
+</html>
