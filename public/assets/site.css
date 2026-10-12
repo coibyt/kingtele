@@ -130,3 +130,8 @@ footer.foot .wrap { display: flex; justify-content: space-between; flex-wrap: wr
   .btn-lg { width: 100%; }
   .auth-card { padding: 28px 22px; }
 }
+
+.nav-cta { display: flex; gap: 8px; align-items: center; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.auth-card .hint { text-align: center; }
+@media (max-width: 380px) { .nav-cta .btn-ghost { display: none; } }

@@ -22,39 +22,53 @@ function detect(head) {
 
 function createMedia({ store, uploadsDir }) {
   fs.mkdirSync(uploadsDir, { recursive: true });
+  const uploads = () => store.data.uploads;
 
   const isUsed = (file) => store.data.posts.some((p) => p.media && p.media.file === file);
+  const owner = (file) => (uploads()[file] || {}).u;
+  const userBytes = (userId) => Object.values(uploads()).reduce((n, x) => n + (x.u === userId ? x.size || 0 : 0), 0);
 
+  async function drop(file) {
+    delete uploads()[file];
+    await fsp.unlink(path.join(uploadsDir, file)).catch(() => {});
+  }
+
+  /** Xoá file nếu không còn bài nào dùng. */
   async function remove(file) {
     if (!file || !NAME_RE.test(file) || isUsed(file)) return;
-    await fsp.unlink(path.join(uploadsDir, file)).catch(() => {});
+    await drop(file);
   }
 
   /** Xoá file mồ côi (tải lên nhưng không gắn vào bài nào) cũ hơn 1 giờ. */
   async function sweep() {
     try {
+      let changed = false;
       for (const f of await fsp.readdir(uploadsDir)) {
-        const full = path.join(uploadsDir, f);
-        const st = await fsp.stat(full);
-        if ((!NAME_RE.test(f) || !isUsed(f)) && Date.now() - st.mtimeMs > 3600e3) await fsp.unlink(full).catch(() => {});
+        const st = await fsp.stat(path.join(uploadsDir, f));
+        if ((!NAME_RE.test(f) || !isUsed(f)) && Date.now() - st.mtimeMs > 3600e3) { await drop(f); changed = true; }
       }
+      if (changed) await store.save();
     } catch { /* bỏ qua */ }
   }
 
-  /** Nhận file thô (binary body), ghi ra đĩa theo luồng, kiểm tra loại + dung lượng. */
-  function upload(req) {
+  /**
+   * Nhận file thô (binary body), ghi ra đĩa theo luồng, kiểm tra loại + dung lượng.
+   * quota (byte): tổng dung lượng tối đa của người dùng; Infinity = không giới hạn.
+   */
+  function upload(req, userId, quota = Infinity) {
     return new Promise((resolve, reject) => {
       const fail = (status, msg) => reject(Object.assign(new Error(msg), { status }));
       const declared = Number(req.get('content-length'));
       if (declared > MAX_VIDEO) return fail(413, 'File quá lớn (tối đa 50MB cho video, 10MB cho ảnh)');
       if (!declared) return fail(400, 'Thiếu dữ liệu file');
+      if (userBytes(userId) + declared > quota) return fail(413, 'Đã hết dung lượng lưu trữ của tài khoản. Hãy xoá bớt bài có ảnh/video cũ.');
       const tmp = path.join(uploadsDir, `tmp-${crypto.randomUUID()}`);
       const ws = fs.createWriteStream(tmp);
       let size = 0, aborted = false;
-      const drop = (status, msg) => { if (aborted) return; aborted = true; ws.destroy(); fsp.unlink(tmp).catch(() => {}); req.unpipe(ws); req.resume(); fail(status, msg); };
-      req.on('data', (c) => { size += c.length; if (size > MAX_VIDEO) drop(413, 'File quá lớn (tối đa 50MB)'); });
-      req.on('error', () => drop(400, 'Tải lên bị gián đoạn'));
-      ws.on('error', () => drop(500, 'Không ghi được file lên máy chủ'));
+      const abort = (status, msg) => { if (aborted) return; aborted = true; ws.destroy(); fsp.unlink(tmp).catch(() => {}); req.unpipe(ws); req.resume(); fail(status, msg); };
+      req.on('data', (c) => { size += c.length; if (size > MAX_VIDEO) abort(413, 'File quá lớn (tối đa 50MB)'); });
+      req.on('error', () => abort(400, 'Tải lên bị gián đoạn'));
+      ws.on('error', () => abort(500, 'Không ghi được file lên máy chủ'));
       ws.on('finish', async () => {
         if (aborted) return;
         try {
@@ -67,6 +81,7 @@ function createMedia({ store, uploadsDir }) {
           if (type.kind === 'image' && size > MAX_IMAGE) { await fsp.unlink(tmp); return fail(413, 'Ảnh tối đa 10MB'); }
           const file = `${crypto.randomUUID()}.${type.ext}`;
           await fsp.rename(tmp, path.join(uploadsDir, file));
+          uploads()[file] = { u: userId, size };
           const rawName = req.get('x-filename') || '';
           let name = file;
           try { name = decodeURIComponent(rawName).replace(/[^\w.\- ()À-ỹ]/g, '_').slice(0, 100) || file; } catch { /* giữ tên mặc định */ }
@@ -77,7 +92,7 @@ function createMedia({ store, uploadsDir }) {
     });
   }
 
-  return { upload, remove, sweep, isUsed, NAME_RE, dir: uploadsDir };
+  return { upload, remove, sweep, isUsed, owner, userBytes, NAME_RE, dir: uploadsDir };
 }
 
 module.exports = { createMedia, NAME_RE };

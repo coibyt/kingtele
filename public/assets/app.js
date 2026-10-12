@@ -4,7 +4,7 @@
 const SVG = 'http://www.w3.org/2000/svg';
 const DAYS = ['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'];
 const view = document.getElementById('view');
-const state = { tz: 'Asia/Ho_Chi_Minh' };
+const state = { tz: 'Asia/Ho_Chi_Minh', user: null };
 
 // ---------- helpers ----------
 function h(tag, props, ...kids) {
@@ -467,6 +467,21 @@ async function logsView() {
       : empty('list', 'Chưa có nhật ký', 'Các lượt gửi sẽ xuất hiện ở đây.'));
 }
 
+function passwordForm() {
+  const cur = h('input', { class: 'input', id: 'pw-cur', type: 'password', autocomplete: 'current-password' });
+  const nxt = h('input', { class: 'input', id: 'pw-new', type: 'password', autocomplete: 'new-password', minLength: 8 });
+  const err = h('p', { class: 'error-text', role: 'alert' });
+  return h('form', { class: 'form-grid', novalidate: true, onsubmit: async (e) => {
+    e.preventDefault(); err.textContent = '';
+    try { await api('POST', '/account/password', { current: cur.value, next: nxt.value }); cur.value = ''; nxt.value = ''; toast('Đã đổi mật khẩu'); }
+    catch (ex) { err.textContent = ex.message; }
+  } },
+    h('div', { class: 'two' },
+      h('div', { class: 'field' }, h('label', { for: 'pw-cur' }, 'Mật khẩu hiện tại'), cur),
+      h('div', { class: 'field' }, h('label', { for: 'pw-new' }, 'Mật khẩu mới (từ 8 ký tự)'), nxt)),
+    err, h('div', null, h('button', { class: 'btn', type: 'submit' }, 'Đổi mật khẩu')));
+}
+
 async function settingsView() {
   const s = await api('GET', '/settings');
   state.tz = s.timezone;
@@ -478,6 +493,12 @@ async function settingsView() {
   return h('div', null,
     pageHead('Cài đặt', 'Kết nối bot và tuỳ chọn chung'),
     h('div', { class: 'stack', style: 'max-width:720px' },
+      s.tokenMasked ? null : h('div', { class: 'card card-pad' }, h('h2', null, 'Bắt đầu: kết nối bot Telegram của bạn'),
+        h('ol', { class: 'guide' },
+          h('li', null, 'Mở Telegram, chat với ', h('strong', null, '@BotFather'), ' và gửi lệnh ', h('code', null, '/newbot'), '.'),
+          h('li', null, 'Đặt tên và username cho bot (username phải kết thúc bằng ', h('code', null, 'bot'), ').'),
+          h('li', null, 'BotFather gửi cho bạn một ', h('strong', null, 'token'), ' (dạng 123456789:AA...). Dán vào ô bên dưới.'),
+          h('li', null, 'Thêm bot vào nhóm cần đăng (kênh: đặt bot làm quản trị viên có quyền đăng tin).'))),
       h('div', { class: 'card card-pad form-grid' }, h('h2', null, 'Bot Telegram'),
         h('div', { class: 'field' }, h('label', { for: 's-token' }, 'Token từ @BotFather'), token,
           h('span', { class: 'hint' }, s.tokenSource === 'env' ? `Đang dùng token từ biến môi trường (${s.tokenMasked}). Nhập token mới để ghi đè.` : s.tokenMasked ? `Đã lưu: ${s.tokenMasked}` : 'Chưa cấu hình.')),
@@ -492,14 +513,42 @@ async function settingsView() {
       h('div', { class: 'card card-pad form-grid' }, h('h2', null, 'Múi giờ mặc định'),
         h('div', { class: 'field' }, h('label', { for: 's-tz2' }, 'Áp dụng cho bài đăng mới'), tz),
         h('div', null, h('button', { class: 'btn', type: 'button', onclick: (e) => act(e.currentTarget, async () => { await api('PUT', '/settings', { timezone: tz.value }); state.tz = tz.value; }, 'Đã lưu múi giờ') }, 'Lưu múi giờ'))),
+      h('div', { class: 'card card-pad form-grid' }, h('h2', null, 'Tài khoản'),
+        h('p', { class: 'hint' }, `${s.user.name}${s.user.email ? ` · ${s.user.email}` : ' · Quản trị viên'}`),
+        s.user.role === 'admin' ? h('p', { class: 'hint' }, 'Mật khẩu quản trị được đặt bằng biến môi trường ADMIN_PASSWORD.') : passwordForm()),
       h('div', { class: 'card card-pad form-grid' }, h('h2', null, 'Sao lưu dữ liệu'),
-        h('p', { class: s.dataSafe ? 'hint' : 'error-text' }, s.dataSafe ? 'Dữ liệu đang lưu ngoài thư mục code, an toàn khi deploy lại.' : 'Cảnh báo: dữ liệu đang nằm trong thư mục code và sẽ mất khi deploy lại.'),
+        s.user.role === 'admin' ? h('p', { class: s.dataSafe ? 'hint' : 'error-text' }, s.dataSafe ? 'Dữ liệu đang lưu ngoài thư mục code, an toàn khi deploy lại.' : 'Cảnh báo: dữ liệu đang nằm trong thư mục code và sẽ mất khi deploy lại.') : null,
         h('p', { class: 'hint' }, 'Tải về nhóm, bài đăng và nhật ký dưới dạng JSON (không gồm token và mật khẩu).'),
         h('div', null, h('a', { class: 'btn', href: '/api/export', download: '' }, ico('download'), 'Tải bản sao lưu')))));
 }
 
+async function membersView() {
+  const r = await api('GET', '/admin/users');
+  const stat = (label, val) => h('div', { class: 'card stat' }, h('div', { class: 'lbl' }, label), h('div', { class: 'val' }, val));
+  const tempDialog = (u, pw) => dialog({ title: 'Mật khẩu tạm', small: true,
+    body: h('div', { class: 'form-grid' }, h('p', null, `Gửi mật khẩu này cho ${u.name}. Nó chỉ hiện một lần.`), h('code', { class: 'mono', style: 'font-size:1.1rem;user-select:all' }, pw)) });
+  return h('div', null,
+    pageHead('Thành viên', r.registrationOpen ? 'Đăng ký đang mở' : 'Đăng ký đang đóng (REGISTRATION_OPEN=0)'),
+    h('div', { class: 'stats' }, stat('Thành viên', r.totals.users), stat('Nhóm', r.totals.groups), stat('Bài đăng', r.totals.posts), stat('Đã gửi 24 giờ', r.totals.sent24h)),
+    r.users.length ? h('div', { class: 'card tbl-wrap' }, h('table', { class: 'tbl' },
+      h('thead', null, h('tr', null, ['Thành viên', 'Bot', 'Nhóm', 'Bài', 'Đã gửi', 'Lưu trữ', 'Tham gia', ''].map((c) => h('th', { scope: 'col' }, c)))),
+      h('tbody', null, r.users.map((u) => h('tr', null,
+        h('td', null, h('div', null, u.name, u.disabled ? h('span', { class: 'tag err', style: 'margin-left:8px' }, 'Đã khoá') : null), h('div', { class: 'li-s' }, u.email)),
+        h('td', null, u.hasBot ? h('span', { class: 'tag ok' }, 'Đã kết nối') : h('span', { class: 'tag' }, 'Chưa')),
+        h('td', null, u.groups), h('td', null, u.posts), h('td', null, u.sent), h('td', null, `${u.storageMB} MB`),
+        h('td', { class: 'mono', style: 'white-space:nowrap' }, fmtDT(u.createdAt)),
+        h('td', null, h('div', { class: 'row', style: 'flex-wrap:nowrap' },
+          h('button', { class: 'btn btn-sm', type: 'button', onclick: (e) => act(e.currentTarget, async () => { await api('POST', `/admin/users/${u.id}/disable`, { disabled: !u.disabled }); route(); }, u.disabled ? 'Đã mở khoá' : 'Đã khoá tài khoản') }, u.disabled ? 'Mở khoá' : 'Khoá'),
+          h('button', { class: 'btn btn-sm', type: 'button', onclick: async (e) => { const x = await act(e.currentTarget, () => api('POST', `/admin/users/${u.id}/reset-password`)); if (x) tempDialog(u, x.password); } }, 'Đặt lại MK'),
+          h('button', { class: 'btn btn-sm btn-danger btn-icon', type: 'button', 'aria-label': `Xoá ${u.name}`, onclick: async () => {
+            if (await confirmBox('Xoá thành viên?', `Xoá "${u.name}" cùng toàn bộ nhóm, bài đăng, ảnh và nhật ký của họ. Không thể hoàn tác.`, 'Xoá')) {
+              try { await api('DELETE', `/admin/users/${u.id}`); toast('Đã xoá thành viên'); route(); } catch (ex) { toast(ex.message, 'err'); }
+            }
+          } }, ico('trash'))))))))) : empty('users', 'Chưa có thành viên nào', 'Thành viên mới sẽ xuất hiện ở đây sau khi đăng ký.'));
+}
+
 // ---------- router ----------
-const routes = { overview: ['Tổng quan', overviewView], posts: ['Bài đăng', postsView], groups: ['Nhóm Telegram', groupsView], logs: ['Nhật ký gửi', logsView], settings: ['Cài đặt', settingsView] };
+const routes = { overview: ['Tổng quan', overviewView], posts: ['Bài đăng', postsView], groups: ['Nhóm Telegram', groupsView], logs: ['Nhật ký gửi', logsView], settings: ['Cài đặt', settingsView], members: ['Thành viên', membersView] };
 let token = 0;
 async function route() {
   const key = routes[location.hash.slice(1)] ? location.hash.slice(1) : 'overview';
@@ -527,4 +576,16 @@ const clock = document.getElementById('clock');
 const tick = () => { clock.textContent = new Intl.DateTimeFormat('vi-VN', { timeStyle: 'short', timeZone: state.tz }).format(new Date()); };
 setInterval(tick, 20000); tick();
 
-route();
+(async function boot() {
+  try {
+    const me = await api('GET', '/me');
+    state.user = me.user;
+    const who = document.getElementById('whoami');
+    who.replaceChildren(h('strong', null, me.user.name), h('span', null, me.user.email || 'Quản trị viên'));
+    who.hidden = false;
+    if (me.user.role === 'admin') {
+      document.querySelector('.menu').append(h('a', { href: '#members', 'data-route': 'members' }, ico('users'), 'Thành viên'));
+    }
+  } catch { /* api() đã chuyển về trang đăng nhập nếu hết phiên */ }
+  route();
+})();

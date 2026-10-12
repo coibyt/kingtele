@@ -6,6 +6,7 @@ Gồm: landing page, trang đăng nhập, bảng điều khiển (bài đăng, n
 - **Lịch**: một lần, hằng ngày, theo thứ trong tuần, lặp theo chu kỳ (≥ 5 phút), có múi giờ.
 - **Nội dung**: văn bản, ảnh/GIF/video tải từ máy (ảnh ≤10MB, MP4 ≤50MB, lưu ở `DATA_DIR/uploads`), link ảnh, HTML/MarkdownV2, nút link inline, gửi im lặng.
 - **Nhiều nhóm** cùng lúc, nhật ký từng lượt gửi, nút "Gửi ngay", tạm dừng/tiếp tục.
+- **Nhiều thành viên**: ai cũng có thể tạo tài khoản (email + mật khẩu) và dùng bot Telegram riêng của mình. Dữ liệu, nhóm, ảnh và nhật ký của mỗi người tách biệt. Tài khoản admin (biến `ADMIN_USERNAME`/`ADMIN_PASSWORD`) có trang **Thành viên** để khoá, đặt lại mật khẩu hoặc xoá tài khoản. Đặt `REGISTRATION_OPEN=0` để đóng đăng ký. Giới hạn mỗi tài khoản: 30 nhóm, 100 bài, 300MB ảnh/video (chỉnh bằng biến môi trường).
 - **Không cần database**: dữ liệu lưu ở `DATA_DIR/db.json`. Chỉ 2 dependency (`express`, `dotenv`).
 
 ## Chạy local

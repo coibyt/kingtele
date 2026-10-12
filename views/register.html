@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tạo tài khoản - PostPilot</title>
+  <meta name="description" content="Tạo tài khoản PostPilot để lên lịch tự động đăng bài lên nhóm Telegram.">
+  <meta name="theme-color" content="#020617">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Fira+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/base.css">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <main class="center-page">
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="panel auth-card">
+      <a class="logo" href="/"><span class="logo-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></span>PostPilot</a>
+      <h1>Tạo tài khoản</h1>
+      <p class="sub">Chỉ mất một phút. Sau đó bạn kết nối bot Telegram của mình và bắt đầu lên lịch đăng bài.</p>
+      <form id="f" novalidate>
+        <div class="field">
+          <label for="n">Họ và tên</label>
+          <input class="input" id="n" name="name" autocomplete="name" maxlength="60" required autofocus>
+        </div>
+        <div class="field">
+          <label for="e">Email</label>
+          <input class="input" id="e" name="email" type="email" autocomplete="email" inputmode="email" required>
+        </div>
+        <div class="field">
+          <label for="p">Mật khẩu</label>
+          <input class="input" id="p" name="password" type="password" autocomplete="new-password" minlength="8" required aria-describedby="phint">
+          <span class="hint" id="phint">Tối thiểu 8 ký tự.</span>
+        </div>
+        <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <p class="error-text" id="err" role="alert" aria-live="polite" hidden></p>
+        <button class="btn btn-primary" id="go" type="submit">Tạo tài khoản</button>
+        <p class="hint">Khi tạo tài khoản, bạn đồng ý không dùng dịch vụ để gửi tin rác hoặc nội dung vi phạm pháp luật.</p>
+      </form>
+      <a class="back-link" href="/login">Đã có tài khoản? Đăng nhập</a>
+    </div>
+  </main>
+  <script src="/assets/register.js"></script>
+</body>
+</html>

@@ -28,7 +28,7 @@
         <a href="#cach-hoat-dong">Cách hoạt động</a>
         <a href="#hoi-dap">Hỏi đáp</a>
       </nav>
-      <a class="btn btn-primary btn-sm" href="/login">Đăng nhập</a>
+      <div class="nav-cta"><a class="btn btn-ghost btn-sm" href="/login">Đăng nhập</a><a class="btn btn-primary btn-sm" href="/register">Tạo tài khoản</a></div>
     </div>
   </header>
 
@@ -41,13 +41,13 @@
           <h1 class="display">Lên lịch một lần.<br><span class="grad">Telegram tự đăng</span> đúng giờ.</h1>
           <p class="lead">PostPilot gửi bài tự động tới nhiều nhóm và kênh Telegram theo lịch bạn đặt: một lần, hằng ngày, theo thứ trong tuần hoặc lặp theo chu kỳ, luôn đúng múi giờ.</p>
           <div class="cta-row">
-            <a class="btn btn-primary btn-lg" href="/login">Mở bảng điều khiển
+            <a class="btn btn-primary btn-lg" href="/register">Tạo tài khoản
               <svg class="icon" aria-hidden="true"><use href="/assets/sprite.svg#i-send"/></svg></a>
-            <a class="btn btn-lg" href="#cach-hoat-dong">Xem cách hoạt động</a>
+            <a class="btn btn-lg" href="/login">Đăng nhập</a>
           </div>
           <div class="trust">
-            <span><svg class="icon" aria-hidden="true"><use href="/assets/sprite.svg#i-check"/></svg>Không giới hạn số nhóm</span>
-            <span><svg class="icon" aria-hidden="true"><use href="/assets/sprite.svg#i-check"/></svg>Dữ liệu nằm trên server của bạn</span>
+            <span><svg class="icon" aria-hidden="true"><use href="/assets/sprite.svg#i-check"/></svg>Tới 30 nhóm mỗi tài khoản</span>
+            <span><svg class="icon" aria-hidden="true"><use href="/assets/sprite.svg#i-check"/></svg>Mỗi thành viên dùng bot riêng</span>
             <span><svg class="icon" aria-hidden="true"><use href="/assets/sprite.svg#i-check"/></svg>Nhật ký từng lượt gửi</span>
           </div>
         </div>
@@ -86,8 +86,8 @@
         <div class="metrics">
           <div class="metric"><div class="num">4</div><div class="cap">Kiểu lịch đăng</div></div>
           <div class="metric"><div class="num">15s</div><div class="cap">Chu kỳ kiểm tra hàng đợi</div></div>
-          <div class="metric"><div class="num">∞</div><div class="cap">Nhóm và kênh quản lý</div></div>
-          <div class="metric"><div class="num">100%</div><div class="cap">Dữ liệu do bạn kiểm soát</div></div>
+          <div class="metric"><div class="num">30</div><div class="cap">Nhóm và kênh mỗi tài khoản</div></div>
+          <div class="metric"><div class="num">1</div><div class="cap">Bot riêng cho mỗi thành viên</div></div>
         </div>
       </div>
     </section>
@@ -117,7 +117,7 @@
           <h2 class="title">Ba bước là xong</h2>
         </div>
         <div class="steps">
-          <div class="step reveal"><h3>Kết nối bot</h3><p>Tạo bot với @BotFather, dán token vào Cài đặt rồi thêm bot vào nhóm của bạn.</p></div>
+          <div class="step reveal"><h3>Tạo tài khoản và kết nối bot</h3><p>Đăng ký, tạo bot với @BotFather, dán token vào Cài đặt rồi thêm bot vào nhóm của bạn.</p></div>
           <div class="step reveal"><h3>Soạn bài và đặt lịch</h3><p>Viết nội dung, chọn nhóm, đặt giờ. Xem trước tin nhắn như người đọc sẽ thấy.</p></div>
           <div class="step reveal"><h3>Để PostPilot lo phần còn lại</h3><p>Bài được gửi đúng giờ, mọi kết quả đều được ghi lại trong nhật ký.</p></div>
         </div>
@@ -131,7 +131,8 @@
           <details><summary>Bot cần quyền gì trong nhóm?</summary><p>Với nhóm, chỉ cần thêm bot vào nhóm. Với kênh, hãy đặt bot làm quản trị viên có quyền đăng tin nhắn.</p></details>
           <details><summary>Lấy Chat ID của nhóm như thế nào?</summary><p>Bạn có thể nhập @username của nhóm công khai, hoặc Chat ID dạng số (nhóm riêng tư thường bắt đầu bằng -100). PostPilot sẽ kiểm tra bot có truy cập được hay không khi thêm.</p></details>
           <details><summary>Nếu server tắt đúng giờ đăng thì sao?</summary><p>Bài đăng một lần sẽ được gửi ngay khi server chạy lại. Lịch lặp bị bỏ lỡ quá 10 phút sẽ bỏ qua lượt đó và chờ lượt kế tiếp để tránh đăng dồn.</p></details>
-          <details><summary>Dữ liệu của tôi được lưu ở đâu?</summary><p>Trong một file JSON trên chính server của bạn, không gửi đi đâu khác ngoài Telegram. Bạn có thể xuất bản sao lưu bất cứ lúc nào.</p></details>
+          <details><summary>Tôi cần chuẩn bị gì để bắt đầu?</summary><p>Chỉ cần một tài khoản Telegram. Bạn tự tạo bot miễn phí qua @BotFather, sau đó dán token vào mục Cài đặt. Bài đăng sẽ được gửi từ chính bot của bạn.</p></details>
+          <details><summary>Dữ liệu của tôi có bị người khác nhìn thấy không?</summary><p>Không. Nhóm, bài đăng, ảnh và nhật ký của mỗi tài khoản được tách riêng. Token bot chỉ dùng để gửi bài của chính bạn. Bạn có thể tải bản sao lưu bất cứ lúc nào.</p></details>
         </div>
       </div>
     </section>
@@ -140,8 +141,8 @@
       <div class="wrap reveal">
         <div class="cta-band">
           <h2 class="title">Sẵn sàng để nhóm của bạn luôn có tin mới?</h2>
-          <p>Đăng nhập và lên lịch bài đầu tiên chỉ trong vài phút.</p>
-          <a class="btn btn-primary btn-lg" href="/login">Vào bảng điều khiển</a>
+          <p>Tạo tài khoản và lên lịch bài đầu tiên chỉ trong vài phút.</p>
+          <a class="btn btn-primary btn-lg" href="/register">Tạo tài khoản</a>
         </div>
       </div>
     </section>

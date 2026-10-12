@@ -51,17 +51,17 @@ test('video dùng sendVideo, GIF dùng sendAnimation', async () => {
 
 test('upload nhận dạng theo nội dung và từ chối file lạ', async () => {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'pp-'));
-  const media = createMedia({ store: { data: { posts: [] } }, uploadsDir: dir });
+  const media = createMedia({ store: { data: { posts: [], uploads: {} } }, uploadsDir: dir });
   const fakeReq = (buf, name) => {
     const { Readable } = require('stream');
     const r = Readable.from([buf]);
     r.get = (h) => ({ 'content-length': String(buf.length), 'x-filename': encodeURIComponent(name) })[h.toLowerCase()];
     return r;
   };
-  const ok = await media.upload(fakeReq(PNG, 'ảnh đẹp.jpg')); // tên giả .jpg nhưng nội dung là PNG
+  const ok = await media.upload(fakeReq(PNG, 'ảnh đẹp.jpg'), 'u1'); // tên giả .jpg nhưng nội dung là PNG
   assert.strictEqual(ok.kind, 'image');
   assert.match(ok.file, /\.png$/);
-  await assert.rejects(media.upload(fakeReq(Buffer.from('<?php echo 1; ?> not media!!'), 'x.png')), /Định dạng không hỗ trợ/);
+  await assert.rejects(media.upload(fakeReq(Buffer.from('<?php echo 1; ?> not media!!'), 'x.png'), 'u1'), /Định dạng không hỗ trợ/);
   assert.deepStrictEqual(fs.readdirSync(dir), [ok.file]); // không để lại file tạm
   fs.rmSync(dir, { recursive: true, force: true });
 });

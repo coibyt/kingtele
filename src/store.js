@@ -5,8 +5,10 @@ const path = require('path');
 const crypto = require('crypto');
 
 const DEFAULTS = () => ({
-  version: 1,
+  version: 2,
   settings: { botToken: '', timezone: '', sessionSecret: crypto.randomBytes(32).toString('hex') },
+  users: [],
+  uploads: {},
   groups: [],
   posts: [],
   logs: [],
@@ -34,8 +36,19 @@ class Store {
         console.error(`[store] db.json hỏng, đã sao lưu sang ${bak}`);
       }
     }
+    this._migrate();
     this._write();
     return this;
+  }
+
+  /** Dữ liệu từ bản một-người-dùng thuộc về tài khoản admin. */
+  _migrate() {
+    const d = this.data;
+    for (const list of [d.groups, d.posts, d.logs]) for (const x of list) if (!x.userId) x.userId = 'admin';
+    for (const p of d.posts) {
+      if (p.media && p.media.file && !d.uploads[p.media.file]) d.uploads[p.media.file] = { u: p.userId, size: p.media.size || 0 };
+    }
+    d.version = 2;
   }
 
   _write() {
@@ -53,7 +66,7 @@ class Store {
 
   addLog(entry) {
     this.data.logs.unshift({ id: crypto.randomUUID(), at: Date.now(), ...entry });
-    if (this.data.logs.length > 2000) this.data.logs.length = 2000;
+    if (this.data.logs.length > 5000) this.data.logs.length = 5000;
   }
 }
 

@@ -7,7 +7,7 @@ form.addEventListener('submit', async (e) => {
   err.hidden = true;
   const username = form.username.value.trim();
   const password = form.password.value;
-  if (!username || !password) { err.textContent = 'Nhập tên đăng nhập và mật khẩu'; err.hidden = false; return; }
+  if (!username || !password) { err.textContent = 'Nhập email và mật khẩu'; err.hidden = false; return; }
   btn.disabled = true; btn.textContent = 'Đang đăng nhập...';
   try {
     const r = await fetch('/api/login', {
