@@ -1,5 +1,5 @@
 'use strict';
-/* PostPilot dashboard - vanilla JS, không dùng innerHTML với dữ liệu người dùng. */
+/* KingTele dashboard - vanilla JS, không dùng innerHTML với dữ liệu người dùng. */
 
 const SVG = 'http://www.w3.org/2000/svg';
 const DAYS = ['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'];
@@ -553,7 +553,7 @@ let token = 0;
 async function route() {
   const key = routes[location.hash.slice(1)] ? location.hash.slice(1) : 'overview';
   const [title, fn] = routes[key];
-  document.title = `${title} - PostPilot`;
+  document.title = `${title} - KingTele`;
   document.getElementById('pageTitle').textContent = title;
   document.querySelectorAll('.menu a').forEach((a) => (a.dataset.route === key ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current')));
   document.body.classList.remove('nav-open');

@@ -274,7 +274,7 @@ function createApi({ store, config, auth, scheduler, media, tokenFor }) {
 
   api.get('/export', (req, res) => {
     const strip = (p) => (p.media ? { ...p, media: { ...p.media, fileId: undefined } } : p);
-    res.setHeader('Content-Disposition', `attachment; filename="postpilot-backup-${new Date().toISOString().slice(0, 10)}.json"`);
+    res.setHeader('Content-Disposition', `attachment; filename="kingtele-backup-${new Date().toISOString().slice(0, 10)}.json"`);
     res.json({ groups: mine(d().groups, req), posts: mine(d().posts, req).map(strip), logs: mine(d().logs, req), settings: { timezone: tzOf(req) } });
   });
 

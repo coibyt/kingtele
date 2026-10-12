@@ -56,7 +56,7 @@ app.use(express.static(path.join(__dirname, 'public'), { maxAge: config.producti
 app.use((req, res) => res.status(404).sendFile(path.join(__dirname, 'views', '404.html')));
 
 const server = app.listen(config.port, () => {
-  console.log(`PostPilot chạy tại cổng ${config.port} (${config.production ? 'production' : 'dev'})`);
+  console.log(`KingTele chạy tại cổng ${config.port} (${config.production ? 'production' : 'dev'})`);
   scheduler.start();
   media.sweep();
 });

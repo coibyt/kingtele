@@ -1,7 +1,7 @@
 {
-  "name": "postpilot",
+  "name": "kingtele",
   "version": "1.0.0",
-  "description": "PostPilot - Lên lịch tự động đăng bài lên các nhóm Telegram",
+  "description": "KingTele - Lên lịch tự động đăng bài lên các nhóm Telegram",
   "main": "server.js",
   "private": true,
   "license": "MIT",
