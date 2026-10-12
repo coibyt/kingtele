@@ -5,7 +5,7 @@ const { nextRun } = require('./schedule');
 const TICK_MS = 15000;
 const STALE_MS = 10 * 60000; // lịch lặp bị bỏ lỡ quá 10 phút (server tắt) sẽ bỏ qua lượt đó
 
-function createScheduler({ store, getToken }) {
+function createScheduler({ store, getToken, uploadsDir }) {
   const running = new Set();
   let timer = null;
 
@@ -16,7 +16,7 @@ function createScheduler({ store, getToken }) {
     const groups = post.groupIds.map((id) => store.data.groups.find((g) => g.id === id)).filter(Boolean);
     for (const g of groups) {
       try {
-        const messageId = await sendPost(token, g.chatId, post);
+        const messageId = await sendPost(token, g.chatId, post, { uploadsDir });
         results.push({ groupId: g.id, ok: true });
         store.addLog({ postId: post.id, postTitle: post.title, groupId: g.id, groupTitle: g.title, status: 'ok', messageId, trigger });
         post.sentCount = (post.sentCount || 0) + 1;

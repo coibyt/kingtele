@@ -71,6 +71,27 @@ function nowIn(tz) {
   return { date: `${p.year}-${p.month}-${p.day}`, time: `${p.hour}:${p.minute}` };
 }
 
+function fmtSize(n) { return n >= 1048576 ? `${(n / 1048576).toFixed(1)} MB` : `${Math.max(1, Math.round(n / 1024))} KB`; }
+function uploadFile(file, onProgress) {
+  return new Promise((resolve, reject) => {
+    const x = new XMLHttpRequest();
+    x.open('POST', '/api/upload');
+    x.setRequestHeader('x-requested-with', 'postpilot');
+    x.setRequestHeader('x-filename', encodeURIComponent(file.name));
+    x.setRequestHeader('content-type', 'application/octet-stream');
+    x.upload.onprogress = (e) => { if (e.lengthComputable) onProgress(e.loaded / e.total); };
+    x.onload = () => {
+      let j = {};
+      try { j = JSON.parse(x.responseText); } catch { /* không phải JSON */ }
+      if (x.status === 401) { location.href = '/login'; return; }
+      if (x.status === 201) return resolve(j);
+      reject(new Error(j.error || (x.status === 413 ? 'File vượt giới hạn dung lượng của máy chủ' : 'Tải lên thất bại')));
+    };
+    x.onerror = () => reject(new Error('Lỗi mạng khi tải lên'));
+    x.send(file);
+  });
+}
+
 // ---------- dialog ----------
 function dialog({ title, body, footer, small }) {
   const d = h('dialog', { class: small ? 'sm' : '', 'aria-labelledby': 'dlgT' },
@@ -241,12 +262,14 @@ function openComposer(post, groups) {
   const sel = new Set(post ? post.groupIds : []);
   const days = new Set(s0.days || [1, 2, 3, 4, 5]);
   const buttons = (post ? post.buttons : []).map((b) => ({ ...b }));
+  let media = post && post.media ? { ...post.media } : null;
+  let uploading = false;
 
   const f = {
     title: h('input', { class: 'input', id: 'c-title', maxLength: 120, value: post ? post.title : '', placeholder: 'VD: Bản tin sáng' }),
     text: h('textarea', { class: 'input', id: 'c-text', maxLength: 4096, placeholder: 'Nội dung tin nhắn...' }),
     mode: h('select', { class: 'input', id: 'c-mode' }, [['none', 'Văn bản thường'], ['HTML', 'HTML (<b>, <i>, <a>...)'], ['MarkdownV2', 'MarkdownV2']].map(([v, l]) => h('option', { value: v, selected: post && post.parseMode === v }, l))),
-    image: h('input', { class: 'input', id: 'c-img', type: 'url', value: post ? post.imageUrl : '', placeholder: 'https://... (không bắt buộc)' }),
+    image: h('input', { class: 'input', id: 'c-img', type: 'url', value: post ? post.imageUrl : '', placeholder: 'https://...' }),
     date: h('input', { class: 'input', id: 's-date', type: 'date', value: s0.date || now.date, min: now.date }),
     time: h('input', { class: 'input', id: 's-time', type: 'time', value: s0.time || now.time }),
     every: h('input', { class: 'input', id: 's-every', type: 'number', min: 5, step: 5, value: s0.everyMinutes || 60 }),
@@ -283,6 +306,43 @@ function openComposer(post, groups) {
     f.date.required = t === 'once';
   }
 
+  const mediaBox = h('div', { class: 'media-box' });
+  const fileInput = h('input', { type: 'file', id: 'c-file', class: 'sr-only', accept: 'image/jpeg,image/png,image/webp,image/gif,video/mp4,video/quicktime', tabindex: -1, onchange: () => { if (fileInput.files[0]) pick(fileInput.files[0]); fileInput.value = ''; } });
+  async function pick(file) {
+    const isImg = /^image\/(jpeg|png|webp)$/.test(file.type);
+    const limit = isImg ? 10 : 50;
+    if (file.size > limit * 1048576) { err.textContent = `${isImg ? 'Ảnh' : 'Video/GIF'} tối đa ${limit}MB (file này ${fmtSize(file.size)})`; return; }
+    err.textContent = ''; uploading = true; save.disabled = true;
+    drawMedia(0);
+    try {
+      media = await uploadFile(file, (p) => drawMedia(p));
+      f.image.value = '';
+    } catch (ex) { err.textContent = ex.message; }
+    uploading = false; save.disabled = false;
+    drawMedia(); drawPreview();
+  }
+  function drawMedia(progress) {
+    if (uploading && progress != null) {
+      mediaBox.replaceChildren(h('div', { class: 'media-up', role: 'status' }, h('span', null, `Đang tải lên... ${Math.round(progress * 100)}%`),
+        h('div', { class: 'progress' }, h('i', { style: `width:${Math.round(progress * 100)}%` }))));
+      return;
+    }
+    if (media) {
+      const src = `/api/media/${media.file}`;
+      mediaBox.replaceChildren(h('div', { class: 'media-item' },
+        media.kind === 'video' ? h('video', { src, muted: true, preload: 'metadata' }) : h('img', { src, alt: '' }),
+        h('div', { class: 'media-meta' }, h('strong', null, media.name), h('span', { class: 'hint' }, `${{ image: 'Ảnh', video: 'Video', animation: 'GIF' }[media.kind]} · ${fmtSize(media.size)}`)),
+        h('button', { class: 'btn btn-sm btn-danger', type: 'button', onclick: () => { media = null; drawMedia(); drawPreview(); } }, ico('trash'), 'Gỡ')));
+      return;
+    }
+    const drop = h('button', { class: 'media-drop', type: 'button', onclick: () => fileInput.click() },
+      ico('image'), h('strong', null, 'Chọn ảnh hoặc video từ máy'), h('span', { class: 'hint' }, 'JPG, PNG, WEBP, GIF (≤10MB) · MP4 (≤50MB) · hoặc kéo thả vào đây'));
+    drop.addEventListener('dragover', (e) => { e.preventDefault(); drop.classList.add('over'); });
+    drop.addEventListener('dragleave', () => drop.classList.remove('over'));
+    drop.addEventListener('drop', (e) => { e.preventDefault(); drop.classList.remove('over'); if (e.dataTransfer.files[0]) pick(e.dataTransfer.files[0]); });
+    mediaBox.replaceChildren(drop);
+  }
+
   function drawButtons() {
     btnBox.replaceChildren(...buttons.map((b, i) => h('div', { class: 'btn-row' },
       h('input', { class: 'input', placeholder: 'Tên nút', maxLength: 64, value: b.text, 'aria-label': `Tên nút ${i + 1}`, oninput: (e) => { b.text = e.target.value; drawPreview(); } }),
@@ -293,7 +353,11 @@ function openComposer(post, groups) {
     count.textContent = `${f.text.value.length}/4096`;
     const body = h('div', { class: 'tg-text' });
     if (f.mode.value === 'HTML') safeHtml(f.text.value, body); else body.textContent = f.text.value;
-    const img = /^https:\/\//i.test(f.image.value) ? h('img', { src: f.image.value, alt: '', onerror: (e) => e.target.remove() }) : null;
+    let img = null;
+    if (media) {
+      const src = `/api/media/${media.file}`;
+      img = media.kind === 'video' ? h('video', { src, controls: true, muted: true, playsInline: true, preload: 'metadata' }) : h('img', { src, alt: '' });
+    } else if (/^https:\/\//i.test(f.image.value)) img = h('img', { src: f.image.value, alt: '', onerror: (e) => e.target.remove() });
     preview.replaceChildren(h('div', { class: 'tg-msg' }, img, f.text.value || !img ? body : null,
       buttons.some((b) => b.text) ? h('div', { class: 'tg-btns' }, buttons.filter((b) => b.text).map((b) => h('div', { class: 'tg-btn' }, b.text))) : null));
     if (!f.text.value && !img) body.append(h('span', { style: 'opacity:.5' }, 'Nội dung xem trước sẽ hiện ở đây'));
@@ -310,9 +374,9 @@ function openComposer(post, groups) {
     h('div', { class: 'form-grid' },
       h('div', { class: 'field' }, h('label', { for: 'c-title' }, 'Tiêu đề (để bạn quản lý)'), f.title),
       h('div', { class: 'field' }, h('label', { for: 'c-text' }, 'Nội dung'), f.text, count),
-      h('div', { class: 'two' },
-        h('div', { class: 'field' }, h('label', { for: 'c-mode' }, 'Định dạng'), f.mode),
-        h('div', { class: 'field' }, h('label', { for: 'c-img' }, 'Link ảnh'), f.image)),
+      h('div', { class: 'field' }, h('label', { for: 'c-mode' }, 'Định dạng'), f.mode),
+      h('div', { class: 'field' }, h('span', { class: 'label' }, 'Ảnh / video đính kèm'), mediaBox, fileInput,
+        h('label', { for: 'c-img', class: 'hint' }, 'Hoặc dán link ảnh (https://...)'), f.image),
       h('div', { class: 'field' }, h('span', { class: 'label' }, 'Nút bấm (link)'), btnBox,
         h('button', { class: 'btn btn-sm', type: 'button', style: 'justify-self:start', onclick: () => { if (buttons.length < 6) { buttons.push({ text: '', url: '' }); drawButtons(); } } }, ico('plus'), 'Thêm nút')),
       h('div', { class: 'field' }, h('span', { class: 'label' }, 'Gửi tới nhóm'), groupBox),
@@ -327,18 +391,19 @@ function openComposer(post, groups) {
 
   const save = h('button', { class: 'btn btn-primary', type: 'submit', form: 'composer' }, editing ? 'Lưu thay đổi' : 'Tạo bài đăng');
   const d = dialog({ title: editing ? 'Sửa bài đăng' : 'Bài đăng mới', body: form, footer: [h('button', { class: 'btn', type: 'button', onclick: () => d.close() }, 'Huỷ'), save] });
-  drawButtons(); drawPreview(); syncSchedule();
+  drawButtons(); drawMedia(); drawPreview(); syncSchedule();
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     err.textContent = '';
+    if (uploading) { err.textContent = 'Đang tải file lên, vui lòng chờ xong'; return; }
     const t = curType();
     const schedule = { type: t, time: f.time.value };
     if (t === 'once' || (t === 'interval' && f.date.value)) schedule.date = f.date.value;
     if (t === 'weekly') schedule.days = [...days];
     if (t === 'interval') { schedule.everyMinutes = Number(f.every.value); if (!schedule.date) delete schedule.time; }
     const payload = {
-      title: f.title.value, text: f.text.value, parseMode: f.mode.value, imageUrl: f.image.value,
+      title: f.title.value, text: f.text.value, parseMode: f.mode.value, imageUrl: media ? '' : f.image.value, media,
       buttons, groupIds: [...sel], schedule, timezone: f.tz.value, silent: f.silent.checked, noPreview: f.noPrev.checked,
     };
     save.disabled = true;

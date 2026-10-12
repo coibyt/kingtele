@@ -7,11 +7,13 @@ const { Store } = require('./src/store');
 const { createAuth } = require('./src/auth');
 const { createScheduler } = require('./src/scheduler');
 const { createApi } = require('./src/routes');
+const { createMedia } = require('./src/media');
 
 const store = new Store(config.dataDir).init();
 const token = () => store.data.settings.botToken || config.envBotToken;
 const auth = createAuth({ store, config });
-const scheduler = createScheduler({ store, getToken: token });
+const media = createMedia({ store, uploadsDir: config.uploadsDir });
+const scheduler = createScheduler({ store, getToken: token, uploadsDir: config.uploadsDir });
 
 const app = express();
 app.disable('x-powered-by');
@@ -37,7 +39,7 @@ app.use((req, res, next) => {
 
 app.use(express.json({ limit: '100kb' }));
 app.get('/healthz', (req, res) => res.json({ ok: true, uptime: Math.round(process.uptime()) }));
-app.use('/api', createApi({ store, config, auth, scheduler }));
+app.use('/api', createApi({ store, config, auth, scheduler, media }));
 
 const view = (name) => (req, res) => res.sendFile(path.join(__dirname, 'views', name));
 app.get('/app', (req, res) => (auth.session(req) ? view('app.html')(req, res) : res.redirect('/login')));
@@ -49,6 +51,7 @@ app.use((req, res) => res.status(404).sendFile(path.join(__dirname, 'views', '40
 const server = app.listen(config.port, () => {
   console.log(`PostPilot chạy tại cổng ${config.port} (${config.production ? 'production' : 'dev'})`);
   scheduler.start();
+  media.sweep();
 });
 
 async function shutdown() {

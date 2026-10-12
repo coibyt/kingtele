@@ -22,6 +22,7 @@ module.exports = {
   production,
   port: Number(env.PORT) || 3000,
   dataDir: path.resolve(env.DATA_DIR || './data'),
+  uploadsDir: path.join(path.resolve(env.DATA_DIR || './data'), 'uploads'),
   adminUser: env.ADMIN_USERNAME || 'admin',
   adminPassword,
   envBotToken: (env.TELEGRAM_BOT_TOKEN || '').trim(),

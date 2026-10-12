@@ -95,6 +95,19 @@ table.tbl { width: 100%; border-collapse: collapse; font-size: .9rem; }
 .form-grid { display: grid; gap: 18px; }
 .two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 
+/* Media upload */
+.media-drop { display: grid; justify-items: center; gap: 6px; padding: 24px 16px; text-align: center; border: 1.5px dashed var(--border); border-radius: 12px; background: var(--surface); cursor: pointer; transition: border-color .18s, background .18s; width: 100%; }
+.media-drop:hover, .media-drop.over { border-color: var(--accent); background: var(--accent-bg); }
+.media-drop .icon { width: 28px; height: 28px; color: var(--accent); }
+.media-item { display: flex; align-items: center; gap: 14px; padding: 10px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
+.media-item img, .media-item video { width: 72px; height: 72px; object-fit: cover; border-radius: 8px; background: #000; flex: none; }
+.media-meta { flex: 1; min-width: 0; display: grid; }
+.media-meta strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 500; font-size: .92rem; }
+.media-up { display: grid; gap: 10px; padding: 20px 16px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); font-size: .9rem; color: var(--text-2); }
+.progress { height: 8px; border-radius: 99px; background: var(--muted-bg); overflow: hidden; }
+.progress i { display: block; height: 100%; background: linear-gradient(90deg, #2aabee, #6366f1); transition: width .15s linear; }
+.tg-msg video { width: 100%; max-height: 260px; background: #000; display: block; }
+
 /* Dialog */
 dialog { border: 1px solid var(--border); border-radius: 18px; background: var(--card); color: var(--text); padding: 0; width: min(1020px, calc(100% - 24px)); max-height: calc(100dvh - 24px); box-shadow: 0 40px 100px -20px rgba(0, 0, 0, .9); }
 dialog.sm { width: min(440px, calc(100% - 24px)); }

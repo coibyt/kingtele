@@ -1,14 +1,17 @@
 'use strict';
 const express = require('express');
 const crypto = require('crypto');
+const fs = require('fs');
+const path = require('path');
 const { normalizeSchedule, nextRun, isValidTz } = require('./schedule');
 const tg = require('./telegram');
+const { NAME_RE } = require('./media');
 
 const wrap = (fn) => (req, res, next) => Promise.resolve(fn(req, res, next)).catch(next);
 const bad = (msg) => Object.assign(new Error(msg), { status: 400 });
 const str = (v, max) => (typeof v === 'string' ? v.trim().slice(0, max) : '');
 
-function createApi({ store, config, auth, scheduler }) {
+function createApi({ store, config, auth, scheduler, media }) {
   const api = express.Router();
   const token = () => store.data.settings.botToken || config.envBotToken;
   const tzOf = () => store.data.settings.timezone || config.defaultTz;
@@ -22,6 +25,19 @@ function createApi({ store, config, auth, scheduler }) {
   });
 
   api.use(auth.requireAuth);
+
+  // ---------- Ảnh / video ----------
+  api.post('/upload', wrap(async (req, res) => {
+    const out = await media.upload(req);
+    media.sweep();
+    res.status(201).json(out);
+  }));
+
+  api.get('/media/:file', (req, res) => {
+    if (!NAME_RE.test(req.params.file)) return res.status(404).end();
+    res.set('Cache-Control', 'private, max-age=3600');
+    res.sendFile(req.params.file, { root: media.dir }, (err) => { if (err && !res.headersSent) res.status(404).end(); });
+  });
 
   // ---------- Tổng quan ----------
   api.get('/overview', (req, res) => {
@@ -106,12 +122,20 @@ function createApi({ store, config, auth, scheduler }) {
   }));
 
   // ---------- Bài đăng ----------
-  function parsePost(body) {
+  function parsePost(body, existing) {
     const title = str(body.title, 120);
     const text = typeof body.text === 'string' ? body.text.trim() : '';
     const imageUrl = str(body.imageUrl, 1000);
     if (!title) throw bad('Nhập tiêu đề (chỉ để bạn dễ quản lý)');
-    if (!text && !imageUrl) throw bad('Bài đăng cần có nội dung hoặc ảnh');
+    let mediaObj = null;
+    if (body.media && body.media.file) {
+      const f = String(body.media.file);
+      if (!NAME_RE.test(f) || !fs.existsSync(path.join(media.dir, f))) throw bad('File ảnh/video không còn tồn tại, hãy tải lên lại');
+      const kind = { jpg: 'image', png: 'image', webp: 'image', gif: 'animation', mp4: 'video', mov: 'video' }[f.split('.').pop()];
+      const keep = existing && existing.media && existing.media.file === f ? existing.media : null;
+      mediaObj = { file: f, kind, name: str(body.media.name, 100) || f, size: Number(body.media.size) || 0, fileId: keep ? keep.fileId || '' : '' };
+    }
+    if (!text && !imageUrl && !mediaObj) throw bad('Bài đăng cần có nội dung, ảnh hoặc video');
     if (text.length > 4096) throw bad('Nội dung tối đa 4096 ký tự');
     if (imageUrl && !/^https:\/\//i.test(imageUrl)) throw bad('Link ảnh phải bắt đầu bằng https://');
     const parseMode = ['none', 'HTML', 'MarkdownV2'].includes(body.parseMode) ? body.parseMode : 'none';
@@ -123,7 +147,7 @@ function createApi({ store, config, auth, scheduler }) {
     if (!groupIds.length) throw bad('Chọn ít nhất một nhóm để đăng');
     let schedule;
     try { schedule = normalizeSchedule(body.schedule); } catch (e) { throw bad(e.message); }
-    return { title, text, imageUrl, parseMode, buttons, timezone, groupIds, schedule, silent: !!body.silent, noPreview: !!body.noPreview };
+    return { title, text, imageUrl: mediaObj ? '' : imageUrl, media: mediaObj, parseMode, buttons, timezone, groupIds, schedule, silent: !!body.silent, noPreview: !!body.noPreview };
   }
 
   api.get('/posts', (req, res) => res.json(store.data.posts));
@@ -141,11 +165,13 @@ function createApi({ store, config, auth, scheduler }) {
   api.put('/posts/:id', wrap(async (req, res) => {
     const post = find(store.data.posts, req.params.id);
     if (!post) return res.status(404).json({ error: 'Không tìm thấy bài đăng' });
-    const data = parsePost(req.body);
+    const data = parsePost(req.body, post);
     const next = nextRun(data.schedule, data.timezone, Date.now(), true);
     if (!next && data.schedule.type === 'once') throw bad('Thời điểm đăng đã ở trong quá khứ');
+    const oldFile = post.media && post.media.file;
     Object.assign(post, data, { nextRunAt: next, status: post.status === 'paused' ? 'paused' : 'active' });
     await store.save();
+    if (oldFile && oldFile !== (post.media && post.media.file)) await media.remove(oldFile);
     res.json(post);
   }));
 
@@ -175,8 +201,9 @@ function createApi({ store, config, auth, scheduler }) {
   api.delete('/posts/:id', wrap(async (req, res) => {
     const i = store.data.posts.findIndex((p) => p.id === req.params.id);
     if (i < 0) return res.status(404).json({ error: 'Không tìm thấy bài đăng' });
-    store.data.posts.splice(i, 1);
+    const [gone] = store.data.posts.splice(i, 1);
     await store.save();
+    if (gone.media) await media.remove(gone.media.file);
     res.json({ ok: true });
   }));
 

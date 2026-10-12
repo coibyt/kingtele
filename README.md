@@ -4,7 +4,7 @@ Website Node.js tự động đăng bài lên nhóm/kênh Telegram theo lịch.
 Gồm: landing page, trang đăng nhập, bảng điều khiển (bài đăng, nhóm, nhật ký, cài đặt).
 
 - **Lịch**: một lần, hằng ngày, theo thứ trong tuần, lặp theo chu kỳ (≥ 5 phút), có múi giờ.
-- **Nội dung**: văn bản, ảnh, HTML/MarkdownV2, nút link inline, gửi im lặng.
+- **Nội dung**: văn bản, ảnh/GIF/video tải từ máy (ảnh ≤10MB, MP4 ≤50MB, lưu ở `DATA_DIR/uploads`), link ảnh, HTML/MarkdownV2, nút link inline, gửi im lặng.
 - **Nhiều nhóm** cùng lúc, nhật ký từng lượt gửi, nút "Gửi ngay", tạm dừng/tiếp tục.
 - **Không cần database**: dữ liệu lưu ở `DATA_DIR/db.json`. Chỉ 2 dependency (`express`, `dotenv`).
 
