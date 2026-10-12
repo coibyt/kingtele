@@ -144,6 +144,7 @@ async function overviewView() {
   const max = Math.max(1, ...o.chart.map((c) => c.ok + c.error));
   return h('div', null,
     pageHead('Tổng quan', 'Tình hình đăng bài trong 7 ngày gần nhất', h('a', { class: 'btn btn-primary', href: '#posts', onclick: () => sessionStorage.setItem('newPost', '1') }, ico('plus'), 'Bài mới')),
+    o.dataSafe ? null : h('div', { class: 'banner', role: 'alert' }, ico('alert'), h('div', null, 'Dữ liệu đang lưu trong thư mục code nên sẽ mất khi deploy lại. Hãy đặt biến DATA_DIR trỏ ra ngoài thư mục app (xem README) và tải bản sao lưu ở ', h('a', { href: '#settings' }, 'Cài đặt'), '.')),
     o.botConfigured ? null : h('div', { class: 'banner', role: 'alert' }, ico('alert'), h('div', null, 'Chưa có token bot Telegram nên chưa thể gửi bài. ', h('a', { href: '#settings' }, 'Cấu hình ngay'))),
     h('div', { class: 'stats' },
       stat('users', 'Nhóm', o.groups, 'đã kết nối'),
@@ -492,6 +493,7 @@ async function settingsView() {
         h('div', { class: 'field' }, h('label', { for: 's-tz2' }, 'Áp dụng cho bài đăng mới'), tz),
         h('div', null, h('button', { class: 'btn', type: 'button', onclick: (e) => act(e.currentTarget, async () => { await api('PUT', '/settings', { timezone: tz.value }); state.tz = tz.value; }, 'Đã lưu múi giờ') }, 'Lưu múi giờ'))),
       h('div', { class: 'card card-pad form-grid' }, h('h2', null, 'Sao lưu dữ liệu'),
+        h('p', { class: s.dataSafe ? 'hint' : 'error-text' }, s.dataSafe ? 'Dữ liệu đang lưu ngoài thư mục code, an toàn khi deploy lại.' : 'Cảnh báo: dữ liệu đang nằm trong thư mục code và sẽ mất khi deploy lại.'),
         h('p', { class: 'hint' }, 'Tải về nhóm, bài đăng và nhật ký dưới dạng JSON (không gồm token và mật khẩu).'),
         h('div', null, h('a', { class: 'btn', href: '/api/export', download: '' }, ico('download'), 'Tải bản sao lưu')))));
 }

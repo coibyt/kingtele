@@ -58,7 +58,8 @@ Cần gói Hostinger có **Node.js Web Apps** (Business / Cloud).
 
 ### Lưu ý quan trọng
 
-- **Dữ liệu**: nếu mỗi lần deploy Hostinger tạo lại thư mục ứng dụng, `data/` trong thư mục code có thể mất. Đặt `DATA_DIR` ra ngoài thư mục deploy (VD `/home/<user>/postpilot-data`) và thỉnh thoảng bấm **Cài đặt → Tải bản sao lưu**. Hãy kiểm tra điều này bằng cách deploy lại một lần sau khi tạo dữ liệu thử.
+- **Dữ liệu** (đã tự xử lý): ở production, app tự lưu dữ liệu và file tải lên vào `~/kingtele-data` (ngoài thư mục code) và tự chuyển dữ liệu cũ sang đó. Phần dưới là thông tin bổ sung:
+- **Dữ liệu (chi tiết)**: nếu mỗi lần deploy Hostinger tạo lại thư mục ứng dụng, `data/` trong thư mục code có thể mất. Đặt `DATA_DIR` ra ngoài thư mục deploy (VD `/home/<user>/postpilot-data`) và thỉnh thoảng bấm **Cài đặt → Tải bản sao lưu**. Hãy kiểm tra điều này bằng cách deploy lại một lần sau khi tạo dữ liệu thử.
 - **Chạy 24/7**: bộ lập lịch chạy trong tiến trình Node. Gói hosting có thể dừng app khi không có lưu lượng; hãy kiểm tra app luôn "Running" (hoặc dùng uptime monitor ping `/healthz` mỗi 5 phút). Nếu cần độ tin cậy cao hơn, dùng VPS với `pm2`.
 - **Chỉ chạy 1 instance** (không scale ngang) để tránh gửi trùng.
 - Lịch lặp bị bỏ lỡ quá 10 phút (server tắt) sẽ bỏ qua lượt đó; bài một lần quá hạn sẽ gửi ngay khi server chạy lại.

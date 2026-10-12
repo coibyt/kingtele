@@ -68,6 +68,7 @@ function createApi({ store, config, auth, scheduler, media }) {
         .map((p) => ({ id: p.id, title: p.title, nextRunAt: p.nextRunAt, timezone: p.timezone, groups: p.groupIds.length })),
       recent: logs.slice(0, 6),
       botConfigured: !!token(),
+      dataSafe: config.dataSafe,
       timezone: tzOf(),
     });
   });
@@ -219,7 +220,7 @@ function createApi({ store, config, auth, scheduler, media }) {
   const mask = (t) => (t ? `${t.slice(0, 4)}••••••${t.slice(-4)}` : '');
   api.get('/settings', (req, res) => {
     const s = store.data.settings;
-    res.json({ timezone: tzOf(), tokenMasked: mask(token()), tokenSource: s.botToken ? 'app' : config.envBotToken ? 'env' : null });
+    res.json({ timezone: tzOf(), tokenMasked: mask(token()), tokenSource: s.botToken ? 'app' : config.envBotToken ? 'env' : null, dataSafe: config.dataSafe });
   });
 
   api.put('/settings', wrap(async (req, res) => {
