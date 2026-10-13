@@ -9,6 +9,7 @@ const DEFAULTS = () => ({
   settings: { botToken: '', timezone: '', sessionSecret: crypto.randomBytes(32).toString('hex') },
   users: [],
   uploads: {},
+  pointLog: [],
   groups: [],
   posts: [],
   logs: [],

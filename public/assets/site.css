@@ -135,3 +135,5 @@ footer.foot .wrap { display: flex; justify-content: space-between; flex-wrap: wr
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
 .auth-card .hint { text-align: center; }
 @media (max-width: 380px) { .nav-cta .btn-ghost { display: none; } }
+
+.ref-note { margin: -10px 0 22px; padding: 10px 14px; border-radius: 10px; background: var(--ok-bg); color: #86efac; font-size: .88rem; }

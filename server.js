@@ -8,6 +8,7 @@ const { createAuth } = require('./src/auth');
 const { createScheduler } = require('./src/scheduler');
 const { createApi } = require('./src/routes');
 const { createMedia } = require('./src/media');
+const { createPoints } = require('./src/points');
 
 const store = new Store(config.dataDir).init();
 // Token bot của từng thành viên; tài khoản admin dùng token trong Cài đặt hoặc biến môi trường.
@@ -17,9 +18,11 @@ const tokenFor = (userId) => {
   return (u && u.botToken) || '';
 };
 const isActive = (userId) => userId === 'admin' || store.data.users.some((u) => u.id === userId && !u.disabled);
-const auth = createAuth({ store, config });
+const points = createPoints({ store, config });
+if (points.migrate()) store.save();
+const auth = createAuth({ store, config, points });
 const media = createMedia({ store, uploadsDir: config.uploadsDir });
-const scheduler = createScheduler({ store, getToken: tokenFor, isActive, uploadsDir: config.uploadsDir });
+const scheduler = createScheduler({ store, getToken: tokenFor, isActive, uploadsDir: config.uploadsDir, points });
 
 const app = express();
 app.disable('x-powered-by');
@@ -45,7 +48,7 @@ app.use((req, res, next) => {
 
 app.use(express.json({ limit: '100kb' }));
 app.get('/healthz', (req, res) => res.json({ ok: true, uptime: Math.round(process.uptime()) }));
-app.use('/api', createApi({ store, config, auth, scheduler, media, tokenFor }));
+app.use('/api', createApi({ store, config, auth, scheduler, media, tokenFor, points }));
 
 const view = (name) => (req, res) => res.sendFile(path.join(__dirname, 'views', name));
 app.get('/app', (req, res) => (auth.session(req) ? view('app.html')(req, res) : res.redirect('/login')));

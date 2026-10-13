@@ -179,3 +179,12 @@ dialog[open] { animation: pop .22s var(--ease); display: flex; flex-direction: c
   .seg { grid-template-columns: 1fr 1fr; }
   .page-head h1 { font-size: 1.4rem; }
 }
+
+.pts { color: #7dd3fc !important; font-family: var(--mono); font-weight: 500; }
+.points-hero { display: grid; gap: 6px; align-content: start; }
+.points-hero .lbl { font-size: .85rem; color: var(--text-3); }
+.points-hero .btn { margin-top: 10px; justify-self: start; }
+.big-num { font-family: var(--mono); font-size: clamp(2.6rem, 6vw, 3.6rem); font-weight: 600; letter-spacing: -.04em; line-height: 1.1; background: linear-gradient(120deg, #7dd3fc, #2aabee 45%, #818cf8); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.copy-row { display: flex; gap: 8px; }
+.copy-row .input { min-width: 0; }
+@media (max-width: 520px) { .copy-row { flex-direction: column; } .copy-row .btn { width: 100%; } }

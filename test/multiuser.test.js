@@ -105,3 +105,30 @@ test('đổi mật khẩu cần mật khẩu hiện tại', async () => {
   const c = client();
   assert.strictEqual((await c('POST', '/api/login', { username: 'an@example.com', password: 'newpassword1' })).status, 200);
 });
+
+test('API điểm: 500 điểm khi đăng ký, điểm danh +50 một lần mỗi ngày, mã giới thiệu qua link', async () => {
+  const a = client(), b = client();
+  await a('POST', '/api/register', { name: 'Chi', email: 'chi@example.com', password: 'longenough3' }, { 'x-forwarded-for': '10.1.1.1' });
+  const p = await a('GET', '/api/points');
+  assert.strictEqual(p.json.balance, 500);
+  assert.match(p.json.refLink, /\/register\?ref=[0-9A-F]{8}$/);
+  assert.strictEqual((await a('POST', '/api/points/checkin')).json.balance, 550);
+  assert.strictEqual((await a('POST', '/api/points/checkin')).status, 400);
+  assert.strictEqual((await a('GET', '/api/me')).json.points, 550);
+
+  const code = p.json.refCode;
+  await b('POST', '/api/register', { name: 'Dung', email: 'dung@example.com', password: 'longenough4', ref: code }, { 'x-forwarded-for': '10.2.2.2' });
+  const after = await a('GET', '/api/points');
+  assert.strictEqual(after.json.referrals.length, 1);
+  assert.strictEqual(after.json.referrals[0].status, 'pending');
+  assert.strictEqual(after.json.referrals[0].name, 'D***'); // che tên người được giới thiệu
+
+  const admin = client();
+  await admin('POST', '/api/login', { username: 'boss', password: 'AdminPass123' });
+  const users = (await admin('GET', '/api/admin/users')).json.users;
+  const chi = users.find((u) => u.email === 'chi@example.com');
+  assert.strictEqual(chi.regIp, '10.1.1.1');
+  assert.strictEqual((await admin('POST', `/api/admin/users/${chi.id}/points`, { amount: 100, note: 'thưởng' })).json.points, 650);
+  assert.strictEqual((await a('GET', '/api/points')).json.history[0].reason, 'admin');
+  assert.strictEqual((await admin('GET', '/api/points')).json.unlimited, true);
+});

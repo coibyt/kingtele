@@ -1,4 +1,8 @@
 (() => {
+  try {
+    const q = new URLSearchParams(location.search).get('ref');
+    if (q && /^[A-Za-z0-9]{4,16}$/.test(q)) localStorage.setItem('kt_ref', q.toUpperCase());
+  } catch { /* localStorage bị chặn */ }
   document.documentElement.classList.remove('no-js');
   const y = document.getElementById('yr');
   if (y) y.textContent = new Date().getFullYear();

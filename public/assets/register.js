@@ -2,6 +2,14 @@ const form = document.getElementById('f');
 const err = document.getElementById('err');
 const btn = document.getElementById('go');
 
+let ref = '';
+try {
+  const q = new URLSearchParams(location.search).get('ref');
+  if (q && /^[A-Za-z0-9]{4,16}$/.test(q)) localStorage.setItem('kt_ref', q.toUpperCase());
+  ref = localStorage.getItem('kt_ref') || '';
+} catch { /* localStorage bị chặn */ }
+if (ref) document.getElementById('refnote').hidden = false;
+
 const show = (msg) => { err.textContent = msg; err.hidden = false; };
 
 form.addEventListener('submit', async (e) => {
@@ -18,7 +26,7 @@ form.addEventListener('submit', async (e) => {
     const r = await fetch('/api/register', {
       method: 'POST',
       headers: { 'content-type': 'application/json', 'x-requested-with': 'postpilot' },
-      body: JSON.stringify({ name, email, password, website: form.website.value }),
+      body: JSON.stringify({ name, email, password, website: form.website.value, ref }),
     });
     const j = await r.json().catch(() => ({}));
     if (!r.ok) throw new Error(j.error || 'Không tạo được tài khoản');

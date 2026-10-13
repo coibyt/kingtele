@@ -12,7 +12,7 @@ const bad = (msg, status = 400) => Object.assign(new Error(msg), { status });
 const str = (v, max) => (typeof v === 'string' ? v.trim().slice(0, max) : '');
 const MB = 1024 * 1024;
 
-function createApi({ store, config, auth, scheduler, media, tokenFor }) {
+function createApi({ store, config, auth, scheduler, media, tokenFor, points }) {
   const api = express.Router();
   const d = () => store.data;
 
@@ -29,7 +29,7 @@ function createApi({ store, config, auth, scheduler, media, tokenFor }) {
   api.post('/logout', auth.logout);
   api.get('/me', (req, res) => {
     const u = auth.session(req);
-    u ? res.json({ user: u, registrationOpen: config.registrationOpen }) : res.status(401).json({ error: 'Chưa đăng nhập' });
+    u ? res.json({ user: u, registrationOpen: config.registrationOpen, points: points.balanceOf(u.id) }) : res.status(401).json({ error: 'Chưa đăng nhập' });
   });
   api.get('/config', (req, res) => res.json({ registrationOpen: config.registrationOpen }));
 
@@ -84,8 +84,26 @@ function createApi({ store, config, auth, scheduler, media, tokenFor }) {
       botConfigured: !!token(req),
       dataSafe: isAdmin(req) ? config.dataSafe : true,
       timezone: tz,
+      points: points.balanceOf(req.user.id),
     });
   });
+
+  // ---------- Điểm King ----------
+  api.get('/points', (req, res) => {
+    const u = points.userOf(req.user.id);
+    if (!u) return res.json({ unlimited: true });
+    const base = config.baseUrl || `${req.protocol}://${req.get('host')}`;
+    res.json({ ...points.summary(u, tzOf(req)), refLink: `${base}/register?ref=${u.refCode}` });
+  });
+
+  api.post('/points/checkin', wrap(async (req, res) => {
+    const u = points.userOf(req.user.id);
+    if (!u) throw bad('Tài khoản quản trị không dùng Điểm King');
+    const r = points.checkin(u, tzOf(req));
+    if (!r.ok) throw bad('Hôm nay bạn đã điểm danh rồi. Quay lại vào ngày mai nhé!');
+    await store.save();
+    res.json({ ok: true, amount: r.amount, balance: u.points });
+  }));
 
   // ---------- Nhóm ----------
   api.get('/groups', (req, res) => res.json(mine(d().groups, req)));
@@ -210,6 +228,7 @@ function createApi({ store, config, auth, scheduler, media, tokenFor }) {
     const post = own(d().posts, req, req.params.id);
     if (!post) return res.status(404).json({ error: 'Không tìm thấy bài đăng' });
     if (!token(req)) throw bad('Chưa kết nối bot Telegram - vào Cài đặt');
+    if (!points.has(req.user.id)) throw bad('Không đủ Điểm King. Hãy điểm danh hoặc giới thiệu bạn bè để nhận thêm.', 402);
     if (scheduler.isRunning(post.id)) throw bad('Bài đang được gửi, vui lòng chờ');
     const results = await scheduler.runPost(post, 'manual');
     await store.save();
@@ -287,6 +306,8 @@ function createApi({ store, config, auth, scheduler, media, tokenFor }) {
     const count = (list, id) => list.filter((x) => x.userId === id).length;
     const users = d().users.map((u) => ({
       id: u.id, name: u.name, email: u.email, disabled: !!u.disabled, createdAt: u.createdAt, hasBot: !!u.botToken,
+      points: u.points, regIp: u.regIp || '', referredBy: u.referredBy ? (d().users.find((x) => x.id === u.referredBy) || {}).name || '?' : '',
+      referral: u.referral ? u.referral.status : '',
       groups: count(d().groups, u.id), posts: count(d().posts, u.id),
       sent: d().logs.filter((l) => l.userId === u.id && l.status === 'ok').length,
       storageMB: Math.round((media.userBytes(u.id) / MB) * 10) / 10,
@@ -308,6 +329,15 @@ function createApi({ store, config, auth, scheduler, media, tokenFor }) {
     target(req).disabled = !!req.body.disabled;
     await store.save();
     res.json({ ok: true });
+  }));
+
+  admin.post('/users/:id/points', wrap(async (req, res) => {
+    const u = target(req);
+    const amount = Math.trunc(Number(req.body.amount));
+    if (!Number.isFinite(amount) || amount === 0 || Math.abs(amount) > 1000000) throw bad('Số điểm không hợp lệ');
+    points.grant(u, amount, str(req.body.note, 120));
+    await store.save();
+    res.json({ points: u.points });
   }));
 
   admin.post('/users/:id/reset-password', wrap(async (req, res) => {

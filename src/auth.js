@@ -35,7 +35,7 @@ function limiter(max, windowMs) {
   };
 }
 
-function createAuth({ store, config }) {
+function createAuth({ store, config, points }) {
   const secret = () => store.data.settings.sessionSecret;
   const sign = (payload) => crypto.createHmac('sha256', secret()).update(payload).digest('base64url');
   const adminUser = () => ({ id: 'admin', role: 'admin', name: config.adminUser, email: '' });
@@ -108,6 +108,8 @@ function createAuth({ store, config }) {
       return res.status(401).json({ error: 'Sai email hoặc mật khẩu' });
     }
     loginIp.reset(ip); loginId.reset(ident);
+    const lu = id === 'admin' ? null : store.data.users.find((x) => x.id === id);
+    if (lu) { points.touchIp(lu, ip); store.save(); }
     setCookie(res, req, issue(id), TTL);
     res.json({ ok: true });
   }
@@ -133,6 +135,7 @@ function createAuth({ store, config }) {
       id: crypto.randomUUID(), name, email, passwordHash: await hashPassword(password),
       botToken: '', timezone: '', disabled: false, createdAt: Date.now(),
     };
+    points.initUser(user, { ip: req.ip, ref: b.ref });
     store.data.users.push(user);
     await store.save();
     setCookie(res, req, issue(user.id), TTL);

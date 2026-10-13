@@ -4,7 +4,17 @@
 const SVG = 'http://www.w3.org/2000/svg';
 const DAYS = ['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'];
 const view = document.getElementById('view');
-const state = { tz: 'Asia/Ho_Chi_Minh', user: null };
+const state = { tz: 'Asia/Ho_Chi_Minh', user: null, points: null };
+const num = (n) => Number(n).toLocaleString('vi-VN');
+function setPoints(n) {
+  state.points = n;
+  const el = document.getElementById('whoPts');
+  if (el) el.textContent = n == null ? '' : `${num(n)} Điểm King`;
+}
+async function refreshPoints() {
+  if (state.user && state.user.role === 'admin') return;
+  try { const me = await api('GET', '/me'); setPoints(me.points); } catch { /* bỏ qua */ }
+}
 
 // ---------- helpers ----------
 function h(tag, props, ...kids) {
@@ -144,6 +154,7 @@ async function overviewView() {
   const max = Math.max(1, ...o.chart.map((c) => c.ok + c.error));
   return h('div', null,
     pageHead('Tổng quan', 'Tình hình đăng bài trong 7 ngày gần nhất', h('a', { class: 'btn btn-primary', href: '#posts', onclick: () => sessionStorage.setItem('newPost', '1') }, ico('plus'), 'Bài mới')),
+    (o.points != null && o.points < 20) ? h('div', { class: 'banner', role: 'alert' }, ico('alert'), h('div', null, `Bạn chỉ còn ${o.points} Điểm King. `, h('a', { href: '#points' }, 'Điểm danh hoặc giới thiệu bạn bè'), ' để nhận thêm.')) : null,
     o.dataSafe ? null : h('div', { class: 'banner', role: 'alert' }, ico('alert'), h('div', null, 'Dữ liệu đang lưu trong thư mục code nên sẽ mất khi deploy lại. Hãy đặt biến DATA_DIR trỏ ra ngoài thư mục app (xem README) và tải bản sao lưu ở ', h('a', { href: '#settings' }, 'Cài đặt'), '.')),
     o.botConfigured ? null : h('div', { class: 'banner', role: 'alert' }, ico('alert'), h('div', null, 'Chưa có token bot Telegram nên chưa thể gửi bài. ', h('a', { href: '#settings' }, 'Cấu hình ngay'))),
     h('div', { class: 'stats' },
@@ -522,6 +533,75 @@ async function settingsView() {
         h('div', null, h('a', { class: 'btn', href: '/api/export', download: '' }, ico('download'), 'Tải bản sao lưu')))));
 }
 
+function copyText(text, input) {
+  if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(text);
+  input.select(); document.execCommand('copy');
+  return Promise.resolve();
+}
+const REASON = { signup: 'Quà đăng ký', checkin: 'Điểm danh', referral_bonus: 'Giới thiệu bạn bè', referred_bonus: 'Thưởng nhờ được giới thiệu', admin: 'Quản trị viên điều chỉnh' };
+const REF_STATUS = { pending: ['Chờ chạy bài đầu tiên', 'warn'], rewarded: ['Đã thưởng', 'ok'], rejected: ['Không hợp lệ', 'err'] };
+const REJECT = { same_ip: 'Trùng IP với bạn', duplicate_ip: 'Trùng IP với người đã giới thiệu trước', referrer_unavailable: 'Tài khoản giới thiệu không khả dụng' };
+
+async function pointsView() {
+  const p = await api('GET', '/points');
+  if (p.unlimited) {
+    return h('div', null, pageHead('Điểm King', 'Tài khoản quản trị'), empty('shield', 'Không giới hạn', 'Tài khoản quản trị gửi bài không bị trừ Điểm King.'));
+  }
+  setPoints(p.balance);
+  const r = p.rules;
+  const link = h('input', { class: 'input mono', readOnly: true, value: p.refLink, 'aria-label': 'Link giới thiệu của bạn', onclick: (e) => e.target.select() });
+  const rewarded = p.referrals.filter((x) => x.status === 'rewarded').length;
+  return h('div', null,
+    pageHead('Điểm King', 'Điểm để đăng bài: mỗi lượt gửi thành công tới một nhóm trừ ' + r.perSend + ' điểm'),
+    h('div', { class: 'grid2' },
+      h('div', { class: 'card card-pad points-hero' },
+        h('div', { class: 'lbl' }, 'Số dư của bạn'),
+        h('div', { class: 'big-num' }, num(p.balance)),
+        h('div', { class: 'hint' }, `Đã dùng ${num(p.spent)} điểm`),
+        h('button', { class: 'btn btn-primary', type: 'button', disabled: p.checkedInToday, onclick: (e) => act(e.currentTarget, async () => { await api('POST', '/points/checkin'); route(); }, `Điểm danh thành công, +${r.checkin} Điểm King`) },
+          ico('check'), p.checkedInToday ? 'Hôm nay đã điểm danh' : `Điểm danh nhận +${r.checkin}`),
+        p.checkedInToday ? h('div', { class: 'hint' }, 'Quay lại vào ngày mai để nhận tiếp.') : null),
+      h('div', { class: 'card card-pad form-grid' },
+        h('h2', null, 'Giới thiệu bạn bè'),
+        h('p', { class: 'hint' }, `Mỗi bạn đăng ký bằng link của bạn và chạy bài thành công, bạn nhận +${num(r.referrer)} điểm, bạn của bạn nhận thêm +${num(r.referee)} điểm (tổng ${num(r.signup + r.referee)} điểm).`),
+        h('div', { class: 'copy-row' }, link,
+          h('button', { class: 'btn', type: 'button', onclick: async (e) => { try { await copyText(p.refLink, link); toast('Đã sao chép link giới thiệu'); } catch { link.select(); toast('Hãy nhấn giữ để sao chép', 'err'); } } }, ico('copy'), 'Sao chép')),
+        h('p', { class: 'hint' }, `${p.referrals.length} người đã đăng ký · ${rewarded} người đã được thưởng · bạn kiếm được ${num(p.referralEarned)} điểm`))),
+    h('div', { class: 'card card-pad', style: 'margin-bottom:16px' }, h('h2', null, 'Cách kiếm và dùng điểm'),
+      h('ul', { class: 'guide' },
+        h('li', null, h('strong', null, `+${num(r.signup)}`), ' khi đăng ký tài khoản.'),
+        h('li', null, h('strong', null, `+${num(r.checkin)}`), ' mỗi ngày khi bấm Điểm danh.'),
+        h('li', null, h('strong', null, `+${num(r.referrer)}`), ' cho mỗi người bạn giới thiệu chạy bài thành công; người đó nhận thêm ', h('strong', null, `+${num(r.referee)}`), '.'),
+        h('li', null, h('strong', null, `-${r.perSend}`), ' cho mỗi lượt gửi thành công tới một nhóm (bài gửi 5 nhóm là 5 điểm).'),
+        h('li', null, 'Điểm thưởng giới thiệu chỉ được cộng khi người được giới thiệu dùng IP khác với IP của bạn.'))),
+    p.referrals.length ? h('div', { class: 'card tbl-wrap', style: 'margin-bottom:16px' }, h('table', { class: 'tbl' },
+      h('thead', null, h('tr', null, ['Người được giới thiệu', 'Ngày đăng ký', 'Trạng thái'].map((c) => h('th', { scope: 'col' }, c)))),
+      h('tbody', null, p.referrals.map((x) => h('tr', null,
+        h('td', null, x.name), h('td', { class: 'mono' }, fmtDT(x.joinedAt)),
+        h('td', null, h('span', { class: `tag ${REF_STATUS[x.status][1]}` }, REF_STATUS[x.status][0]), x.reason ? h('div', { class: 'err-msg' }, REJECT[x.reason] || x.reason) : null)))))) : null,
+    h('div', { class: 'card card-pad' }, h('h2', null, 'Lịch sử cộng điểm'),
+      p.history.length ? h('div', { class: 'list' }, p.history.map((l) => h('div', { class: 'li' },
+        h('div', { class: 'li-main' }, h('div', { class: 'li-t' }, REASON[l.reason] || l.reason), l.note ? h('div', { class: 'li-s' }, l.note) : null),
+        h('span', { class: `tag ${l.delta > 0 ? 'ok' : 'err'}` }, `${l.delta > 0 ? '+' : ''}${num(l.delta)}`),
+        h('span', { class: 'li-s mono' }, fmtDT(l.at))))) : h('p', { class: 'hint' }, 'Chưa có giao dịch nào.')));
+}
+
+function grantDialog(u) {
+  const amount = h('input', { class: 'input', id: 'gr-amount', type: 'number', step: 1, placeholder: 'VD: 500 hoặc -100' });
+  const note = h('input', { class: 'input', id: 'gr-note', maxLength: 120, placeholder: 'Ghi chú (không bắt buộc)' });
+  const err = h('p', { class: 'error-text', role: 'alert' });
+  const save = h('button', { class: 'btn btn-primary', type: 'submit', form: 'grant' }, 'Áp dụng');
+  const d = dialog({ title: `Điều chỉnh điểm: ${u.name}`, small: true, footer: [h('button', { class: 'btn', type: 'button', onclick: () => d.close() }, 'Huỷ'), save],
+    body: h('form', { id: 'grant', class: 'form-grid', novalidate: true, onsubmit: async (e) => {
+      e.preventDefault(); err.textContent = ''; save.disabled = true;
+      try { await api('POST', `/admin/users/${u.id}/points`, { amount: Number(amount.value), note: note.value }); d.close(); toast('Đã cập nhật điểm'); route(); }
+      catch (ex) { err.textContent = ex.message; save.disabled = false; }
+    } },
+      h('p', { class: 'hint' }, `Số dư hiện tại: ${num(u.points)}. Nhập số âm để trừ điểm.`),
+      h('div', { class: 'field' }, h('label', { for: 'gr-amount' }, 'Số điểm'), amount),
+      h('div', { class: 'field' }, h('label', { for: 'gr-note' }, 'Ghi chú'), note), err) });
+}
+
 async function membersView() {
   const r = await api('GET', '/admin/users');
   const stat = (label, val) => h('div', { class: 'card stat' }, h('div', { class: 'lbl' }, label), h('div', { class: 'val' }, val));
@@ -531,15 +611,17 @@ async function membersView() {
     pageHead('Thành viên', r.registrationOpen ? 'Đăng ký đang mở' : 'Đăng ký đang đóng (REGISTRATION_OPEN=0)'),
     h('div', { class: 'stats' }, stat('Thành viên', r.totals.users), stat('Nhóm', r.totals.groups), stat('Bài đăng', r.totals.posts), stat('Đã gửi 24 giờ', r.totals.sent24h)),
     r.users.length ? h('div', { class: 'card tbl-wrap' }, h('table', { class: 'tbl' },
-      h('thead', null, h('tr', null, ['Thành viên', 'Bot', 'Nhóm', 'Bài', 'Đã gửi', 'Lưu trữ', 'Tham gia', ''].map((c) => h('th', { scope: 'col' }, c)))),
+      h('thead', null, h('tr', null, ['Thành viên', 'Điểm', 'Bot', 'Nhóm', 'Bài', 'Đã gửi', 'Lưu trữ', 'IP đăng ký', 'Tham gia', ''].map((c) => h('th', { scope: 'col' }, c)))),
       h('tbody', null, r.users.map((u) => h('tr', null,
-        h('td', null, h('div', null, u.name, u.disabled ? h('span', { class: 'tag err', style: 'margin-left:8px' }, 'Đã khoá') : null), h('div', { class: 'li-s' }, u.email)),
+        h('td', null, h('div', null, u.name, u.disabled ? h('span', { class: 'tag err', style: 'margin-left:8px' }, 'Đã khoá') : null), h('div', { class: 'li-s' }, u.email), u.referredBy ? h('div', { class: 'li-s' }, `Giới thiệu bởi ${u.referredBy}${u.referral ? ` (${{ rewarded: 'đã thưởng', rejected: 'bị từ chối', pending: 'chờ' }[u.referral] || u.referral})` : ' (chờ)'}`) : null),
+        h('td', { class: 'mono' }, num(u.points)),
         h('td', null, u.hasBot ? h('span', { class: 'tag ok' }, 'Đã kết nối') : h('span', { class: 'tag' }, 'Chưa')),
-        h('td', null, u.groups), h('td', null, u.posts), h('td', null, u.sent), h('td', null, `${u.storageMB} MB`),
+        h('td', null, u.groups), h('td', null, u.posts), h('td', null, u.sent), h('td', null, `${u.storageMB} MB`), h('td', { class: 'mono' }, u.regIp || '—'),
         h('td', { class: 'mono', style: 'white-space:nowrap' }, fmtDT(u.createdAt)),
         h('td', null, h('div', { class: 'row', style: 'flex-wrap:nowrap' },
           h('button', { class: 'btn btn-sm', type: 'button', onclick: (e) => act(e.currentTarget, async () => { await api('POST', `/admin/users/${u.id}/disable`, { disabled: !u.disabled }); route(); }, u.disabled ? 'Đã mở khoá' : 'Đã khoá tài khoản') }, u.disabled ? 'Mở khoá' : 'Khoá'),
           h('button', { class: 'btn btn-sm', type: 'button', onclick: async (e) => { const x = await act(e.currentTarget, () => api('POST', `/admin/users/${u.id}/reset-password`)); if (x) tempDialog(u, x.password); } }, 'Đặt lại MK'),
+          h('button', { class: 'btn btn-sm', type: 'button', onclick: () => grantDialog(u) }, 'Điểm'),
           h('button', { class: 'btn btn-sm btn-danger btn-icon', type: 'button', 'aria-label': `Xoá ${u.name}`, onclick: async () => {
             if (await confirmBox('Xoá thành viên?', `Xoá "${u.name}" cùng toàn bộ nhóm, bài đăng, ảnh và nhật ký của họ. Không thể hoàn tác.`, 'Xoá')) {
               try { await api('DELETE', `/admin/users/${u.id}`); toast('Đã xoá thành viên'); route(); } catch (ex) { toast(ex.message, 'err'); }
@@ -548,7 +630,7 @@ async function membersView() {
 }
 
 // ---------- router ----------
-const routes = { overview: ['Tổng quan', overviewView], posts: ['Bài đăng', postsView], groups: ['Nhóm Telegram', groupsView], logs: ['Nhật ký gửi', logsView], settings: ['Cài đặt', settingsView], members: ['Thành viên', membersView] };
+const routes = { overview: ['Tổng quan', overviewView], posts: ['Bài đăng', postsView], groups: ['Nhóm Telegram', groupsView], logs: ['Nhật ký gửi', logsView], settings: ['Cài đặt', settingsView], points: ['Điểm King', pointsView], members: ['Thành viên', membersView] };
 let token = 0;
 async function route() {
   const key = routes[location.hash.slice(1)] ? location.hash.slice(1) : 'overview';
@@ -561,7 +643,7 @@ async function route() {
   if (!view.firstChild) view.append(h('div', { class: 'skeleton' }), h('div', { class: 'skeleton' }));
   try {
     const el = await fn();
-    if (mine === token) view.replaceChildren(el);
+    if (mine === token) { view.replaceChildren(el); refreshPoints(); }
   } catch (e) {
     if (mine === token) view.replaceChildren(empty('alert', 'Không tải được dữ liệu', e.message, h('button', { class: 'btn', type: 'button', onclick: route }, 'Thử lại')));
   }
@@ -581,7 +663,8 @@ setInterval(tick, 20000); tick();
     const me = await api('GET', '/me');
     state.user = me.user;
     const who = document.getElementById('whoami');
-    who.replaceChildren(h('strong', null, me.user.name), h('span', null, me.user.email || 'Quản trị viên'));
+    who.replaceChildren(h('strong', null, me.user.name), h('span', null, me.user.email || 'Quản trị viên'), h('span', { id: 'whoPts', class: 'pts' }));
+    setPoints(me.points);
     who.hidden = false;
     if (me.user.role === 'admin') {
       document.querySelector('.menu').append(h('a', { href: '#members', 'data-route': 'members' }, ico('users'), 'Thành viên'));

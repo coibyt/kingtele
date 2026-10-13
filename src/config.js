@@ -65,6 +65,8 @@ function resolveDataDir() {
 const data = resolveDataDir();
 console.log(`[config] Thư mục dữ liệu: ${data.dir}${data.safe ? '' : ' (KHÔNG an toàn khi deploy lại)'}`);
 
+const num = (k, d) => (env[k] !== undefined && env[k] !== '' && Number.isFinite(Number(env[k])) ? Number(env[k]) : d);
+
 module.exports = {
   production,
   port: Number(env.PORT) || 3000,
@@ -76,6 +78,14 @@ module.exports = {
   maxGroups: Number(env.MAX_GROUPS_PER_USER) || 30,
   maxPosts: Number(env.MAX_POSTS_PER_USER) || 100,
   maxUploadMB: Number(env.MAX_UPLOAD_MB_PER_USER) || 300,
+  baseUrl: (env.BASE_URL || '').replace(/\/+$/, ''),
+  points: {
+    signup: num('SIGNUP_POINTS', 500),          // tặng khi đăng ký
+    checkin: num('CHECKIN_POINTS', 50),         // điểm danh mỗi ngày
+    referrer: num('REFERRER_BONUS', 1000),      // người giới thiệu
+    referee: num('REFEREE_BONUS', 1000),        // người được giới thiệu (cộng thêm, tổng 1500)
+    perSend: num('POINTS_PER_SEND', 1),         // trừ mỗi lượt gửi thành công tới 1 nhóm
+  },
   adminUser: env.ADMIN_USERNAME || 'admin',
   adminPassword,
   envBotToken: (env.TELEGRAM_BOT_TOKEN || '').trim(),
