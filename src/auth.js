@@ -38,8 +38,8 @@ function limiter(max, windowMs) {
 function createAuth({ store, config, points }) {
   const secret = () => store.data.settings.sessionSecret;
   const sign = (payload) => crypto.createHmac('sha256', secret()).update(payload).digest('base64url');
-  const adminUser = () => ({ id: 'admin', role: 'admin', name: config.adminUser, email: '' });
-  const publicUser = (u) => ({ id: u.id, role: 'user', name: u.name, email: u.email });
+  const adminUser = () => ({ id: 'admin', role: 'admin', owner: true, name: config.adminUser, email: '' });
+  const publicUser = (u) => ({ id: u.id, role: u.isAdmin ? 'admin' : 'user', owner: false, name: u.name, email: u.email });
   const DUMMY = hashPassword('dummy-password-for-timing');
 
   function issue(id) {
@@ -85,7 +85,7 @@ function createAuth({ store, config, points }) {
 
   const loginIp = limiter(10, 15 * 60000);
   const loginId = limiter(8, 15 * 60000);
-  const regIp = limiter(5, 60 * 60000);
+  const regIp = limiter(20, 60 * 60000);
 
   async function login(req, res) {
     const ip = req.ip;
@@ -128,6 +128,10 @@ function createAuth({ store, config, points }) {
     if (email === String(config.adminUser).toLowerCase() || store.data.users.some((u) => u.email === email)) {
       regIp.hit(req.ip);
       return res.status(409).json({ error: 'Email này đã được đăng ký. Hãy đăng nhập.' });
+    }
+    const cap = Number(store.data.settings.maxAccountsPerIp);
+    if (cap > 0 && req.ip && store.data.users.filter((u) => u.regIp === req.ip).length >= cap) {
+      return res.status(403).json({ error: `Địa chỉ IP của bạn đã tạo tối đa ${cap} tài khoản.` });
     }
     if (store.data.users.length >= config.maxUsers) return res.status(403).json({ error: 'Hệ thống đã đạt giới hạn thành viên.' });
     regIp.hit(req.ip);

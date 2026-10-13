@@ -132,3 +132,53 @@ test('API điểm: 500 điểm khi đăng ký, điểm danh +50 một lần mỗ
   assert.strictEqual((await a('GET', '/api/points')).json.history[0].reason, 'admin');
   assert.strictEqual((await admin('GET', '/api/points')).json.unlimited, true);
 });
+
+test('admin đặt giới hạn tài khoản mỗi IP; để trống là không giới hạn', async () => {
+  const admin = client();
+  await admin('POST', '/api/login', { username: 'boss', password: 'AdminPass123' });
+  const reg = (email, ip) => client()('POST', '/api/register', { name: 'Test', email, password: 'longenough5' }, { 'x-forwarded-for': ip });
+
+  assert.strictEqual((await admin('PUT', '/api/admin/settings', { maxAccountsPerIp: 0 })).status, 400);
+  assert.strictEqual((await admin('PUT', '/api/admin/settings', { maxAccountsPerIp: 2 })).json.maxAccountsPerIp, 2);
+  assert.strictEqual((await reg('ip1@example.com', '10.9.9.9')).status, 201);
+  assert.strictEqual((await reg('ip2@example.com', '10.9.9.9')).status, 201);
+  const blocked = await reg('ip3@example.com', '10.9.9.9');
+  assert.strictEqual(blocked.status, 403);
+  assert.match(blocked.json.error, /tối đa 2 tài khoản/);
+  assert.strictEqual((await reg('ip4@example.com', '10.9.9.8')).status, 201); // IP khác vẫn đăng ký được
+
+  assert.strictEqual((await admin('PUT', '/api/admin/settings', { maxAccountsPerIp: '' })).json.maxAccountsPerIp, null);
+  assert.strictEqual((await reg('ip5@example.com', '10.9.9.9')).status, 201); // không giới hạn
+  assert.strictEqual((await admin('GET', '/api/admin/users')).json.settings.maxAccountsPerIp, null);
+});
+
+test('nhiều quản trị viên: cấp quyền, xem/chỉnh điểm, nhưng không đụng được quản trị viên khác', async () => {
+  const owner = client();
+  await owner('POST', '/api/login', { username: 'boss', password: 'AdminPass123' });
+  const list = (await owner('GET', '/api/admin/users')).json.users;
+  const idOf = (email) => list.find((u) => u.email === email).id;
+
+  const staff = client();
+  await staff('POST', '/api/login', { username: 'ip1@example.com', password: 'longenough5' });
+  assert.strictEqual((await staff('GET', '/api/admin/users')).status, 403); // chưa phải quản trị
+
+  assert.strictEqual((await owner('POST', `/api/admin/users/${idOf('ip1@example.com')}/role`, { admin: true })).status, 200);
+  assert.strictEqual((await owner('POST', `/api/admin/users/${idOf('ip2@example.com')}/role`, { admin: true })).status, 200);
+  assert.strictEqual((await staff('GET', '/api/me')).json.user.role, 'admin');
+
+  const users = (await staff('GET', '/api/admin/users')).json;
+  assert.strictEqual(users.owner, false);
+  const chi = users.users.find((u) => u.email === 'chi@example.com');
+  assert.ok(chi.points >= 500); // xem được điểm của thành viên
+  assert.strictEqual((await staff('POST', `/api/admin/users/${chi.id}/points`, { amount: -50 })).json.points, chi.points - 50);
+
+  const other = idOf('ip2@example.com');
+  assert.strictEqual((await staff('POST', `/api/admin/users/${other}/disable`, { disabled: true })).status, 403);
+  assert.strictEqual((await staff('POST', `/api/admin/users/${other}/reset-password`)).status, 403);
+  assert.strictEqual((await staff('DELETE', `/api/admin/users/${other}`)).status, 403);
+  assert.strictEqual((await staff('POST', `/api/admin/users/${other}/role`, { admin: false })).status, 403);
+
+  assert.strictEqual((await staff('GET', '/api/points')).json.unlimited, true); // quản trị viên không bị trừ điểm
+  assert.strictEqual((await owner('POST', `/api/admin/users/${idOf('ip1@example.com')}/role`, { admin: false })).status, 200);
+  assert.strictEqual((await staff('GET', '/api/admin/users')).status, 403); // gỡ quyền có hiệu lực ngay
+});

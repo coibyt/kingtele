@@ -11,7 +11,8 @@ const mask = (name) => `${(String(name).trim()[0] || '?').toUpperCase()}***`;
 function createPoints({ store, config }) {
   const P = config.points;
   const users = () => store.data.users;
-  const userOf = (id) => (id === 'admin' ? null : users().find((u) => u.id === id) || null);
+  // Quản trị viên (tài khoản chính hoặc thành viên được cấp quyền) không bị trừ điểm.
+  const userOf = (id) => { const u = id === 'admin' ? null : users().find((x) => x.id === id); return u && !u.isAdmin ? u : null; };
 
   function genCode() {
     for (;;) {
@@ -43,7 +44,7 @@ function createPoints({ store, config }) {
     user.regIp = ip || ''; user.ips = [];
     touchIp(user, ip);
     const code = String(ref || '').trim().toUpperCase();
-    const referrer = code ? users().find((u) => u.refCode === code && !u.disabled) : null;
+    const referrer = code ? users().find((u) => u.refCode === code && !u.disabled && !u.isAdmin) : null;
     if (referrer) user.referredBy = referrer.id;
     credit(user, P.signup, 'signup', 'Quà tặng đăng ký');
   }

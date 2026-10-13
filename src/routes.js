@@ -306,6 +306,7 @@ function createApi({ store, config, auth, scheduler, media, tokenFor, points }) 
     const count = (list, id) => list.filter((x) => x.userId === id).length;
     const users = d().users.map((u) => ({
       id: u.id, name: u.name, email: u.email, disabled: !!u.disabled, createdAt: u.createdAt, hasBot: !!u.botToken,
+      isAdmin: !!u.isAdmin, ipCount: u.regIp ? d().users.filter((x) => x.regIp === u.regIp).length : 0,
       points: u.points, regIp: u.regIp || '', referredBy: u.referredBy ? (d().users.find((x) => x.id === u.referredBy) || {}).name || '?' : '',
       referral: u.referral ? u.referral.status : '',
       groups: count(d().groups, u.id), posts: count(d().posts, u.id),
@@ -316,8 +317,26 @@ function createApi({ store, config, auth, scheduler, media, tokenFor, points }) 
       users,
       totals: { users: users.length, posts: d().posts.length, groups: d().groups.length, sent24h: d().logs.filter((l) => l.at > dayAgo && l.status === 'ok').length },
       registrationOpen: config.registrationOpen,
+      owner: req.user.id === 'admin',
+      settings: { maxAccountsPerIp: Number(d().settings.maxAccountsPerIp) || null },
     });
   });
+
+  admin.put('/settings', wrap(async (req, res) => {
+    const v = req.body.maxAccountsPerIp;
+    if (v === null || v === undefined || v === '') delete d().settings.maxAccountsPerIp; // để trống = không giới hạn
+    else {
+      const n = Math.trunc(Number(v));
+      if (!Number.isFinite(n) || n < 1 || n > 10000) throw bad('Số tài khoản mỗi IP phải từ 1 đến 10000 (hoặc để trống nếu không giới hạn)');
+      d().settings.maxAccountsPerIp = n;
+    }
+    await store.save();
+    res.json({ maxAccountsPerIp: Number(d().settings.maxAccountsPerIp) || null });
+  }));
+
+  const owner = (req, res, next) => (req.user.id === 'admin' ? next() : res.status(403).json({ error: 'Chỉ tài khoản quản trị chính mới làm được việc này' }));
+  // Quản trị viên phụ không được khoá / đặt lại mật khẩu / xoá quản trị viên khác.
+  const guard = (req, u) => { if (u.isAdmin && req.user.id !== 'admin') throw bad('Chỉ tài khoản quản trị chính mới thao tác được với quản trị viên', 403); };
 
   const target = (req) => {
     const u = d().users.find((x) => x.id === req.params.id);
@@ -325,8 +344,15 @@ function createApi({ store, config, auth, scheduler, media, tokenFor, points }) 
     return u;
   };
 
+  admin.post('/users/:id/role', owner, wrap(async (req, res) => {
+    target(req).isAdmin = !!req.body.admin;
+    await store.save();
+    res.json({ ok: true });
+  }));
+
   admin.post('/users/:id/disable', wrap(async (req, res) => {
-    target(req).disabled = !!req.body.disabled;
+    const u = target(req); guard(req, u);
+    u.disabled = !!req.body.disabled;
     await store.save();
     res.json({ ok: true });
   }));
@@ -341,7 +367,7 @@ function createApi({ store, config, auth, scheduler, media, tokenFor, points }) 
   }));
 
   admin.post('/users/:id/reset-password', wrap(async (req, res) => {
-    const u = target(req);
+    const u = target(req); guard(req, u);
     const temp = crypto.randomBytes(9).toString('base64url');
     u.passwordHash = await auth.hashPassword(temp);
     await store.save();
@@ -349,7 +375,7 @@ function createApi({ store, config, auth, scheduler, media, tokenFor, points }) 
   }));
 
   admin.delete('/users/:id', wrap(async (req, res) => {
-    const u = target(req);
+    const u = target(req); guard(req, u);
     const files = d().posts.filter((p) => p.userId === u.id && p.media).map((p) => p.media.file);
     d().posts = d().posts.filter((p) => p.userId !== u.id);
     d().groups = d().groups.filter((g) => g.userId !== u.id);

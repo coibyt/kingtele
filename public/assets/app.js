@@ -607,26 +607,53 @@ async function membersView() {
   const stat = (label, val) => h('div', { class: 'card stat' }, h('div', { class: 'lbl' }, label), h('div', { class: 'val' }, val));
   const tempDialog = (u, pw) => dialog({ title: 'Mật khẩu tạm', small: true,
     body: h('div', { class: 'form-grid' }, h('p', null, `Gửi mật khẩu này cho ${u.name}. Nó chỉ hiện một lần.`), h('code', { class: 'mono', style: 'font-size:1.1rem;user-select:all' }, pw)) });
+
+  const cap = h('input', { class: 'input', id: 'ip-cap', type: 'number', min: 1, step: 1, inputMode: 'numeric', placeholder: 'Để trống = không giới hạn', value: r.settings.maxAccountsPerIp || '' });
+  const capErr = h('p', { class: 'error-text', role: 'alert' });
+  const capCard = h('form', { class: 'card card-pad form-grid', novalidate: true, style: 'margin-bottom:16px', onsubmit: async (e) => {
+    e.preventDefault(); capErr.textContent = '';
+    const raw = cap.value.trim();
+    try {
+      await api('PUT', '/admin/settings', { maxAccountsPerIp: raw === '' ? null : Number(raw) });
+      toast(raw === '' ? 'Đã bỏ giới hạn: không giới hạn tài khoản mỗi IP' : `Mỗi IP được tạo tối đa ${raw} tài khoản`);
+    } catch (ex) { capErr.textContent = ex.message; }
+  } },
+    h('h2', null, 'Giới hạn tài khoản mỗi địa chỉ IP'),
+    h('div', { class: 'field' }, h('label', { for: 'ip-cap' }, 'Số tài khoản tối đa được tạo từ một địa chỉ IP'), cap,
+      h('span', { class: 'hint' }, 'Để trống nếu không muốn giới hạn. Chỉ áp dụng cho tài khoản đăng ký mới, tài khoản đã có không bị ảnh hưởng.')),
+    capErr, h('div', null, h('button', { class: 'btn btn-primary', type: 'submit' }, 'Lưu giới hạn')));
+
+  const actions = (u) => {
+    const locked = u.isAdmin && !r.owner; // quản trị viên phụ không thao tác được với quản trị viên khác
+    return h('div', { class: 'row', style: 'min-width:190px' },
+      u.isAdmin ? null : h('button', { class: 'btn btn-sm', type: 'button', onclick: () => grantDialog(u) }, 'Điểm'),
+      r.owner ? h('button', { class: 'btn btn-sm', type: 'button', onclick: (e) => act(e.currentTarget, async () => { await api('POST', `/admin/users/${u.id}/role`, { admin: !u.isAdmin }); route(); }, u.isAdmin ? 'Đã gỡ quyền quản trị' : 'Đã cấp quyền quản trị') }, u.isAdmin ? 'Gỡ QT' : 'Cấp QT') : null,
+      locked ? null : h('button', { class: 'btn btn-sm', type: 'button', onclick: (e) => act(e.currentTarget, async () => { await api('POST', `/admin/users/${u.id}/disable`, { disabled: !u.disabled }); route(); }, u.disabled ? 'Đã mở khoá' : 'Đã khoá tài khoản') }, u.disabled ? 'Mở khoá' : 'Khoá'),
+      locked ? null : h('button', { class: 'btn btn-sm', type: 'button', onclick: async (e) => { const x = await act(e.currentTarget, () => api('POST', `/admin/users/${u.id}/reset-password`)); if (x) tempDialog(u, x.password); } }, 'Đặt lại MK'),
+      locked ? null : h('button', { class: 'btn btn-sm btn-danger btn-icon', type: 'button', 'aria-label': `Xoá ${u.name}`, onclick: async () => {
+        if (await confirmBox('Xoá thành viên?', `Xoá "${u.name}" cùng toàn bộ nhóm, bài đăng, ảnh và nhật ký của họ. Không thể hoàn tác.`, 'Xoá')) {
+          try { await api('DELETE', `/admin/users/${u.id}`); toast('Đã xoá thành viên'); route(); } catch (ex) { toast(ex.message, 'err'); }
+        }
+      } }, ico('trash')));
+  };
+
   return h('div', null,
     pageHead('Thành viên', r.registrationOpen ? 'Đăng ký đang mở' : 'Đăng ký đang đóng (REGISTRATION_OPEN=0)'),
     h('div', { class: 'stats' }, stat('Thành viên', r.totals.users), stat('Nhóm', r.totals.groups), stat('Bài đăng', r.totals.posts), stat('Đã gửi 24 giờ', r.totals.sent24h)),
+    capCard,
     r.users.length ? h('div', { class: 'card tbl-wrap' }, h('table', { class: 'tbl' },
-      h('thead', null, h('tr', null, ['Thành viên', 'Điểm', 'Bot', 'Nhóm', 'Bài', 'Đã gửi', 'Lưu trữ', 'IP đăng ký', 'Tham gia', ''].map((c) => h('th', { scope: 'col' }, c)))),
+      h('thead', null, h('tr', null, ['Thành viên', 'Điểm King', 'Hoạt động', 'IP đăng ký', 'Thao tác'].map((c) => h('th', { scope: 'col' }, c)))),
       h('tbody', null, r.users.map((u) => h('tr', null,
-        h('td', null, h('div', null, u.name, u.disabled ? h('span', { class: 'tag err', style: 'margin-left:8px' }, 'Đã khoá') : null), h('div', { class: 'li-s' }, u.email), u.referredBy ? h('div', { class: 'li-s' }, `Giới thiệu bởi ${u.referredBy}${u.referral ? ` (${{ rewarded: 'đã thưởng', rejected: 'bị từ chối', pending: 'chờ' }[u.referral] || u.referral})` : ' (chờ)'}`) : null),
-        h('td', { class: 'mono' }, num(u.points)),
-        h('td', null, u.hasBot ? h('span', { class: 'tag ok' }, 'Đã kết nối') : h('span', { class: 'tag' }, 'Chưa')),
-        h('td', null, u.groups), h('td', null, u.posts), h('td', null, u.sent), h('td', null, `${u.storageMB} MB`), h('td', { class: 'mono' }, u.regIp || '—'),
-        h('td', { class: 'mono', style: 'white-space:nowrap' }, fmtDT(u.createdAt)),
-        h('td', null, h('div', { class: 'row', style: 'flex-wrap:nowrap' },
-          h('button', { class: 'btn btn-sm', type: 'button', onclick: (e) => act(e.currentTarget, async () => { await api('POST', `/admin/users/${u.id}/disable`, { disabled: !u.disabled }); route(); }, u.disabled ? 'Đã mở khoá' : 'Đã khoá tài khoản') }, u.disabled ? 'Mở khoá' : 'Khoá'),
-          h('button', { class: 'btn btn-sm', type: 'button', onclick: async (e) => { const x = await act(e.currentTarget, () => api('POST', `/admin/users/${u.id}/reset-password`)); if (x) tempDialog(u, x.password); } }, 'Đặt lại MK'),
-          h('button', { class: 'btn btn-sm', type: 'button', onclick: () => grantDialog(u) }, 'Điểm'),
-          h('button', { class: 'btn btn-sm btn-danger btn-icon', type: 'button', 'aria-label': `Xoá ${u.name}`, onclick: async () => {
-            if (await confirmBox('Xoá thành viên?', `Xoá "${u.name}" cùng toàn bộ nhóm, bài đăng, ảnh và nhật ký của họ. Không thể hoàn tác.`, 'Xoá')) {
-              try { await api('DELETE', `/admin/users/${u.id}`); toast('Đã xoá thành viên'); route(); } catch (ex) { toast(ex.message, 'err'); }
-            }
-          } }, ico('trash'))))))))) : empty('users', 'Chưa có thành viên nào', 'Thành viên mới sẽ xuất hiện ở đây sau khi đăng ký.'));
+        h('td', null,
+          h('div', null, u.name, u.isAdmin ? h('span', { class: 'tag acc', style: 'margin-left:8px' }, 'Quản trị') : null, u.disabled ? h('span', { class: 'tag err', style: 'margin-left:8px' }, 'Đã khoá') : null),
+          h('div', { class: 'li-s' }, u.email),
+          u.referredBy ? h('div', { class: 'li-s' }, `Giới thiệu bởi ${u.referredBy}${u.referral ? ` (${{ rewarded: 'đã thưởng', rejected: 'bị từ chối', pending: 'chờ' }[u.referral] || u.referral})` : ' (chờ)'}`) : null),
+        h('td', { class: 'mono' }, u.isAdmin ? 'Không giới hạn' : num(u.points)),
+        h('td', null,
+          h('div', null, `${u.groups} nhóm · ${u.posts} bài · ${u.sent} đã gửi`),
+          h('div', { class: 'li-s' }, `${u.hasBot ? 'Đã kết nối bot' : 'Chưa kết nối bot'} · ${u.storageMB} MB · ${fmtDT(u.createdAt)}`)),
+        h('td', { class: 'mono', style: 'white-space:nowrap' }, u.regIp || '—', u.ipCount > 1 ? h('span', { class: 'tag warn', style: 'margin-left:8px' }, `${u.ipCount} TK`) : null),
+        h('td', null, actions(u))))))) : empty('users', 'Chưa có thành viên nào', 'Thành viên mới sẽ xuất hiện ở đây sau khi đăng ký.'));
 }
 
 // ---------- router ----------
