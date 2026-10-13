@@ -137,3 +137,33 @@ footer.foot .wrap { display: flex; justify-content: space-between; flex-wrap: wr
 @media (max-width: 380px) { .nav-cta .btn-ghost { display: none; } }
 
 .ref-note { margin: -10px 0 22px; padding: 10px 14px; border-radius: 10px; background: var(--ok-bg); color: #86efac; font-size: .88rem; }
+
+/* Thanh trên cùng gọn trên điện thoại: không để tràn ngang */
+html, body { overflow-x: clip; }
+.nav .wrap { min-width: 0; }
+.nav-cta { min-width: 0; flex: 0 1 auto; }
+@media (max-width: 640px) {
+  .nav .wrap { gap: 8px; }
+  .nav-cta { gap: 6px; }
+  .nav-cta .btn-ghost { display: none; }
+  .nav-cta .lang-select { max-width: 112px; padding-left: 10px; }
+  .nav-cta .btn-sm { padding: 0 12px; }
+  .nav .logo { font-size: 1.05rem; flex: none; }
+}
+@media (max-width: 440px) { .nav .logo-name { display: none; } }
+
+/* Nội dung hero không được rộng hơn màn hình */
+.hero .wrap > * { min-width: 0; }
+.eyebrow { max-width: 100%; white-space: normal; }
+@media (max-width: 960px) { .hero .wrap { grid-template-columns: minmax(0, 1fr); } }
+.mock, .panel, .mock-body { min-width: 0; }
+.queue-item { min-width: 0; }
+.queue-item .chip { flex: none; }
+.q-main { overflow: hidden; }
+.bubble { overflow-wrap: anywhere; }
+.bubble .btnrow { flex-wrap: wrap; }
+@media (max-width: 360px) {
+  .nav-cta .lang-select { max-width: 92px; font-size: .8rem; padding-right: 24px; }
+  .nav-cta .btn-sm { padding: 0 10px; font-size: .82rem; }
+  .wrap { width: calc(100% - 32px); }
+}
