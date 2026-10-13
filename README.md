@@ -9,6 +9,7 @@ Gồm: landing page, trang đăng nhập, bảng điều khiển (bài đăng, n
 - **Nhiều thành viên**: ai cũng có thể tạo tài khoản (email + mật khẩu) và dùng bot Telegram riêng của mình. Dữ liệu, nhóm, ảnh và nhật ký của mỗi người tách biệt. Tài khoản admin (biến `ADMIN_USERNAME`/`ADMIN_PASSWORD`) có trang **Thành viên** để khoá, đặt lại mật khẩu hoặc xoá tài khoản. Đặt `REGISTRATION_OPEN=0` để đóng đăng ký. Giới hạn mỗi tài khoản: 30 nhóm, 100 bài, 300MB ảnh/video (chỉnh bằng biến môi trường).
 - **Quản trị**: tài khoản admin chính (biến môi trường) có thể cấp quyền quản trị cho thành viên khác (nút "Cấp QT"). Quản trị viên xem điểm, cộng/trừ điểm, khoá thành viên; chỉ admin chính mới thao tác được với quản trị viên khác. Trang Thành viên có ô **Giới hạn tài khoản mỗi IP** (để trống = không giới hạn).
 - **Điểm King**: đăng ký tặng 500 điểm; mỗi lượt gửi thành công tới 1 nhóm trừ 1 điểm; điểm danh +50/ngày; giới thiệu bạn (link `/register?ref=MÃ`): khi người được giới thiệu chạy bài thành công lần đầu thì người giới thiệu +1000, người được giới thiệu +1000 (tổng 1500), với điều kiện **khác IP**. Số điểm chỉnh bằng biến môi trường (xem `.env.example`). Admin không bị trừ điểm và có thể cộng/trừ điểm cho thành viên ở trang Thành viên.
+- **Đa ngôn ngữ (15 + tiếng Việt)**: English, 简体中文, Español, हिन्दी, العربية (chữ phải→trái), Português, Русский, 日本語, 한국어, Deutsch, Français, Bahasa Indonesia, ไทย, Türkçe, Suomi. Ngôn ngữ tự chọn theo quốc gia (múi giờ của trình duyệt) khi trình duyệt chỉ để tiếng Anh mặc định, nếu không thì theo ngôn ngữ trình duyệt; khách đổi tay bằng ô chọn ngôn ngữ (lưu lại). Có thể xem thử bằng `?lang=ja`. Ngôn ngữ chưa hỗ trợ dùng tiếng Anh.
 - **Không cần database**: dữ liệu lưu ở `DATA_DIR/db.json`. Chỉ 2 dependency (`express`, `dotenv`).
 
 ## Chạy local
@@ -85,3 +86,14 @@ test/              node --test
 ## Bảo mật
 
 Cookie `HttpOnly; SameSite=Strict; Secure`, giới hạn 5 lần đăng nhập sai/15 phút/IP, header `X-Requested-With` bắt buộc cho thao tác ghi, CSP chặt, token bot luôn bị che trong giao diện. Đây là app một quản trị viên, không có đăng ký người dùng.
+
+## Thêm / sửa bản dịch
+
+Văn bản gốc trong code là tiếng Việt; bản dịch nằm ở `i18n/src/*.txt` (mỗi khối: `= chuỗi tiếng Việt` rồi các dòng `mã| bản dịch`). Quy trình:
+
+```bash
+npm run i18n:keys   # quét giao diện, cập nhật i18n/keys.json (phát hiện chuỗi mới)
+npm run i18n        # kiểm tra đủ chuỗi + đủ {0},{1}, rồi dựng public/assets/lang/*.js
+```
+
+`npm run i18n` báo lỗi nếu thiếu chuỗi hoặc thiếu ngôn ngữ. Thêm một ngôn ngữ mới: thêm mã vào `LANGS` trong `scripts/build-i18n.js` và `public/assets/i18n.js`, thêm dòng dịch vào các file `.txt`, rồi chạy `npm run i18n`.

@@ -1,0 +1,698 @@
+# Trang chủ (2/2): tính năng, các bước, hỏi đáp
+
+= Mọi thứ cần để vận hành nhóm Telegram đều đặn
+en| Everything you need to keep your Telegram groups active
+zh| 持续运营 Telegram 群组所需的一切
+es| Todo lo que necesitas para mantener activos tus grupos de Telegram
+hi| अपने Telegram ग्रुप को लगातार सक्रिय रखने के लिए सब कुछ
+ar| كل ما تحتاجه لإبقاء مجموعات تيليجرام نشطة باستمرار
+pt| Tudo o que você precisa para manter seus grupos do Telegram ativos
+ru| Всё необходимое, чтобы ваши группы в Telegram жили регулярно
+ja| Telegramグループを定期的に運営するために必要なすべて
+ko| Telegram 그룹을 꾸준히 운영하는 데 필요한 모든 것
+de| Alles, was Sie brauchen, um Ihre Telegram-Gruppen aktiv zu halten
+fr| Tout ce qu'il faut pour animer régulièrement vos groupes Telegram
+id| Semua yang Anda butuhkan agar grup Telegram tetap aktif
+th| ทุกสิ่งที่ต้องใช้เพื่อดูแลกลุ่ม Telegram ให้คึกคักสม่ำเสมอ
+tr| Telegram gruplarınızı düzenli işletmek için ihtiyacınız olan her şey
+fi| Kaikki mitä tarvitset Telegram-ryhmien aktiivisena pitämiseen
+
+= Thiết kế cho người quản lý cộng đồng, kênh tin tức và đội bán hàng cần đăng bài đúng lúc mà không phải canh giờ.
+en| Built for community managers, news channels and sales teams who need to post at the right moment without watching the clock.
+zh| 专为社群管理员、新闻频道和销售团队打造,无需守着时间也能准时发布。
+es| Pensado para community managers, canales de noticias y equipos de ventas que necesitan publicar en el momento justo sin vigilar el reloj.
+hi| कम्युनिटी मैनेजर, न्यूज़ चैनल और सेल्स टीम के लिए, जिन्हें घड़ी देखे बिना सही समय पर पोस्ट करना होता है।
+ar| صُمم لمديري المجتمعات وقنوات الأخبار وفرق المبيعات الذين يحتاجون إلى النشر في اللحظة المناسبة دون مراقبة الساعة.
+pt| Feito para gestores de comunidade, canais de notícias e equipes de vendas que precisam publicar na hora certa sem vigiar o relógio.
+ru| Для администраторов сообществ, новостных каналов и отделов продаж, которым нужно публиковать вовремя, не следя за часами.
+ja| 時計を気にせず適切なタイミングで投稿したい、コミュニティ運営者、ニュースチャンネル、営業チーム向けに設計されています。
+ko| 시계를 보지 않고도 적절한 때에 게시해야 하는 커뮤니티 관리자, 뉴스 채널, 영업팀을 위해 만들었습니다.
+de| Entwickelt für Community-Manager, Nachrichtenkanäle und Vertriebsteams, die zum richtigen Zeitpunkt posten müssen, ohne auf die Uhr zu schauen.
+fr| Conçu pour les community managers, les chaînes d'actualité et les équipes commerciales qui doivent publier au bon moment sans surveiller l'horloge.
+id| Dibuat untuk pengelola komunitas, kanal berita, dan tim penjualan yang perlu posting tepat waktu tanpa harus memantau jam.
+th| ออกแบบมาสำหรับผู้ดูแลคอมมูนิตี้ แชนเนลข่าว และทีมขาย ที่ต้องโพสต์ให้ตรงเวลาโดยไม่ต้องคอยดูนาฬิกา
+tr| Saate bakmadan doğru anda paylaşım yapması gereken topluluk yöneticileri, haber kanalları ve satış ekipleri için tasarlandı.
+fi| Suunniteltu yhteisönhallinnoijille, uutiskanaville ja myyntitiimeille, jotka haluavat julkaista oikeaan aikaan kelloa tuijottamatta.
+
+= Lịch đăng linh hoạt
+en| Flexible scheduling
+zh| 灵活的发布计划
+es| Programación flexible
+hi| लचीला शेड्यूल
+ar| جدولة مرنة
+pt| Agendamento flexível
+ru| Гибкое расписание
+ja| 柔軟なスケジュール
+ko| 유연한 일정 설정
+de| Flexible Zeitplanung
+fr| Planification flexible
+id| Penjadwalan fleksibel
+th| ตั้งเวลาได้ยืดหยุ่น
+tr| Esnek zamanlama
+fi| Joustava aikataulutus
+
+= Một lần, hằng ngày, các thứ trong tuần hoặc lặp mỗi N phút. Hệ thống tự tính lượt kế tiếp.
+en| Once, daily, selected weekdays, or repeating every N minutes. The next run is calculated for you.
+zh| 单次、每天、每周指定日期,或每 N 分钟重复。系统自动计算下一次发布时间。
+es| Una vez, a diario, ciertos días de la semana o cada N minutos. El sistema calcula la siguiente ejecución.
+hi| एक बार, रोज़, सप्ताह के चुने दिन या हर N मिनट पर दोहराएँ। अगला समय सिस्टम खुद तय करता है।
+ar| مرة واحدة أو يوميًا أو أيام محددة من الأسبوع أو كل N دقيقة. يحسب النظام الموعد التالي تلقائيًا.
+pt| Uma vez, todo dia, dias da semana escolhidos ou a cada N minutos. O sistema calcula a próxima execução.
+ru| Один раз, ежедневно, по выбранным дням недели или каждые N минут. Следующий запуск система рассчитает сама.
+ja| 1回、毎日、曜日指定、またはN分ごとの繰り返し。次回の実行時刻は自動で計算されます。
+ko| 한 번, 매일, 특정 요일 또는 N분마다 반복. 다음 실행 시간은 시스템이 자동으로 계산합니다.
+de| Einmalig, täglich, an gewählten Wochentagen oder alle N Minuten. Den nächsten Termin berechnet das System für Sie.
+fr| Une fois, chaque jour, certains jours de la semaine ou toutes les N minutes. Le système calcule la prochaine exécution.
+id| Sekali, harian, hari tertentu dalam seminggu, atau berulang setiap N menit. Sistem menghitung pengiriman berikutnya.
+th| ครั้งเดียว รายวัน เฉพาะวันในสัปดาห์ หรือซ้ำทุก N นาที ระบบคำนวณรอบถัดไปให้เอง
+tr| Tek seferlik, günlük, haftanın seçili günleri veya her N dakikada bir. Sonraki çalışma zamanını sistem hesaplar.
+fi| Kerran, päivittäin, valittuina viikonpäivinä tai joka N. minuutti. Järjestelmä laskee seuraavan ajankohdan puolestasi.
+
+= Đăng nhiều nhóm cùng lúc
+en| Post to many groups at once
+zh| 同时发布到多个群组
+es| Publica en muchos grupos a la vez
+hi| एक साथ कई ग्रुप में पोस्ट करें
+ar| انشر في عدة مجموعات في وقت واحد
+pt| Publique em vários grupos de uma vez
+ru| Публикация сразу в нескольких группах
+ja| 複数のグループへ同時に投稿
+ko| 여러 그룹에 동시에 게시
+de| In viele Gruppen gleichzeitig posten
+fr| Publiez dans plusieurs groupes à la fois
+id| Posting ke banyak grup sekaligus
+th| โพสต์หลายกลุ่มพร้อมกัน
+tr| Birçok gruba aynı anda gönderin
+fi| Julkaise moneen ryhmään kerralla
+
+= Chọn bất kỳ nhóm, siêu nhóm hay kênh nào. Gửi giãn cách để không chạm giới hạn của Telegram.
+en| Choose any group, supergroup or channel. Messages are spaced out so you never hit Telegram's limits.
+zh| 可选择任意群组、超级群组或频道。发送时自动错开间隔,避免触及 Telegram 的限制。
+es| Elige cualquier grupo, supergrupo o canal. Los envíos se espacian para no superar los límites de Telegram.
+hi| कोई भी ग्रुप, सुपरग्रुप या चैनल चुनें। भेजने में अंतराल रखा जाता है ताकि Telegram की सीमा पार न हो।
+ar| اختر أي مجموعة أو مجموعة خارقة أو قناة. تُرسل الرسائل بفواصل زمنية حتى لا تتجاوز حدود تيليجرام.
+pt| Escolha qualquer grupo, supergrupo ou canal. Os envios são espaçados para não atingir os limites do Telegram.
+ru| Выбирайте любые группы, супергруппы и каналы. Отправка идёт с паузами, чтобы не превысить лимиты Telegram.
+ja| グループ、スーパーグループ、チャンネルを自由に選択。Telegramの制限に触れないよう、送信間隔を空けて配信します。
+ko| 그룹, 슈퍼그룹, 채널을 자유롭게 선택하세요. Telegram 제한에 걸리지 않도록 간격을 두고 전송합니다.
+de| Wählen Sie beliebige Gruppen, Supergruppen oder Kanäle. Der Versand erfolgt zeitversetzt, damit Sie die Telegram-Limits nicht erreichen.
+fr| Choisissez n'importe quel groupe, supergroupe ou canal. Les envois sont espacés pour ne jamais atteindre les limites de Telegram.
+id| Pilih grup, supergrup, atau kanal apa pun. Pengiriman diberi jeda agar tidak melewati batas Telegram.
+th| เลือกกลุ่ม ซูเปอร์กรุ๊ป หรือแชนเนลได้ทุกแบบ ระบบส่งแบบเว้นช่วงเพื่อไม่ให้เกินข้อจำกัดของ Telegram
+tr| İstediğiniz grubu, süper grubu veya kanalı seçin. Gönderimler Telegram sınırlarına takılmamak için aralıklı yapılır.
+fi| Valitse mikä tahansa ryhmä, supersyhmä tai kanava. Viestit lähetetään väliajoin, ettei Telegramin rajoja ylitetä.
+
+= Đúng múi giờ
+en| Right time zone
+zh| 正确的时区
+es| Zona horaria correcta
+hi| सही टाइम ज़ोन
+ar| المنطقة الزمنية الصحيحة
+pt| Fuso horário correto
+ru| Нужный часовой пояс
+ja| 正しいタイムゾーン
+ko| 정확한 시간대
+de| Richtige Zeitzone
+fr| Bon fuseau horaire
+id| Zona waktu yang tepat
+th| เขตเวลาที่ถูกต้อง
+tr| Doğru saat dilimi
+fi| Oikea aikavyöhyke
+
+= Mỗi bài có múi giờ riêng, xử lý chính xác cả khi đổi giờ mùa hè.
+en| Each post has its own time zone, handled correctly even across daylight saving changes.
+zh| 每条内容都有独立时区,夏令时切换也能准确处理。
+es| Cada publicación tiene su propia zona horaria, con manejo correcto incluso en los cambios de horario de verano.
+hi| हर पोस्ट का अपना टाइम ज़ोन होता है, डेलाइट सेविंग बदलने पर भी सही समय रहता है।
+ar| لكل منشور منطقته الزمنية الخاصة، ويُعالج بدقة حتى عند تغيير التوقيت الصيفي.
+pt| Cada publicação tem seu próprio fuso horário, tratado corretamente até na mudança do horário de verão.
+ru| У каждой публикации свой часовой пояс, включая корректный переход на летнее время.
+ja| 投稿ごとにタイムゾーンを設定でき、夏時間の切り替えにも正確に対応します。
+ko| 게시물마다 시간대를 따로 지정할 수 있으며 서머타임 변경도 정확히 처리합니다.
+de| Jeder Beitrag hat seine eigene Zeitzone, auch bei der Umstellung auf Sommerzeit korrekt berücksichtigt.
+fr| Chaque publication a son propre fuseau horaire, géré correctement même lors du passage à l'heure d'été.
+id| Setiap postingan punya zona waktu sendiri, dan diproses akurat bahkan saat pergantian waktu musim panas.
+th| แต่ละโพสต์มีเขตเวลาของตัวเอง และรองรับการเปลี่ยนเวลาออมแสงได้อย่างถูกต้อง
+tr| Her gönderinin kendi saat dilimi vardır; yaz saati geçişlerinde bile doğru çalışır.
+fi| Jokaisella julkaisulla on oma aikavyöhykkeensä, ja kesäaikaan siirtyminen huomioidaan oikein.
+
+= Ảnh, định dạng và nút bấm
+en| Images, formatting and buttons
+zh| 图片、格式和按钮
+es| Imágenes, formato y botones
+hi| इमेज, फ़ॉर्मेटिंग और बटन
+ar| الصور والتنسيق والأزرار
+pt| Imagens, formatação e botões
+ru| Изображения, форматирование и кнопки
+ja| 画像、書式、ボタン
+ko| 이미지, 서식, 버튼
+de| Bilder, Formatierung und Schaltflächen
+fr| Images, mise en forme et boutons
+id| Gambar, format, dan tombol
+th| รูปภาพ การจัดรูปแบบ และปุ่ม
+tr| Görseller, biçimlendirme ve düğmeler
+fi| Kuvat, muotoilu ja painikkeet
+
+= Hỗ trợ ảnh, HTML/MarkdownV2, nút link inline và xem trước giao diện tin nhắn ngay khi soạn.
+en| Supports images, HTML/MarkdownV2, inline link buttons, and a live preview of the message as you write.
+zh| 支持图片、HTML/MarkdownV2、内联链接按钮,编辑时即可实时预览消息效果。
+es| Admite imágenes, HTML/MarkdownV2, botones de enlace y vista previa del mensaje mientras escribes.
+hi| इमेज, HTML/MarkdownV2, इनलाइन लिंक बटन और लिखते समय संदेश का प्रीव्यू।
+ar| يدعم الصور وHTML/MarkdownV2 وأزرار الروابط ومعاينة الرسالة أثناء الكتابة.
+pt| Suporta imagens, HTML/MarkdownV2, botões de link e pré-visualização da mensagem enquanto você escreve.
+ru| Поддержка изображений, HTML/MarkdownV2, кнопок со ссылками и предпросмотр сообщения прямо при наборе.
+ja| 画像、HTML/MarkdownV2、リンクボタンに対応し、作成中にメッセージのプレビューを確認できます。
+ko| 이미지, HTML/MarkdownV2, 링크 버튼을 지원하며 작성하면서 메시지 미리보기를 확인할 수 있습니다.
+de| Unterstützt Bilder, HTML/MarkdownV2, Link-Schaltflächen und eine Live-Vorschau der Nachricht beim Schreiben.
+fr| Prend en charge les images, HTML/MarkdownV2, les boutons de lien et l'aperçu du message pendant la rédaction.
+id| Mendukung gambar, HTML/MarkdownV2, tombol tautan, dan pratinjau pesan langsung saat menulis.
+th| รองรับรูปภาพ HTML/MarkdownV2 ปุ่มลิงก์ และดูตัวอย่างข้อความได้ทันทีขณะเขียน
+tr| Görselleri, HTML/MarkdownV2'yi, bağlantı düğmelerini ve yazarken mesaj önizlemesini destekler.
+fi| Tukee kuvia, HTML/MarkdownV2:ta, linkkipainikkeita ja viestin esikatselua kirjoittaessa.
+
+= Nhật ký minh bạch
+en| Transparent logs
+zh| 清晰透明的日志
+es| Registro transparente
+hi| पारदर्शी लॉग
+ar| سجل شفاف
+pt| Registro transparente
+ru| Прозрачный журнал
+ja| 透明性の高い履歴
+ko| 투명한 기록
+de| Transparentes Protokoll
+fr| Historique transparent
+id| Catatan yang transparan
+th| บันทึกที่โปร่งใส
+tr| Şeffaf kayıtlar
+fi| Läpinäkyvä loki
+
+= Biết bài nào đã gửi, nhóm nào lỗi và vì sao. Có thể gửi lại thủ công chỉ một cú nhấp.
+en| See which posts were sent, which groups failed and why. Resend manually with a single click.
+zh| 一目了然哪些已发送、哪些群组出错及原因。一键即可手动重发。
+es| Consulta qué publicaciones se enviaron, qué grupos fallaron y por qué. Reenvía manualmente con un solo clic.
+hi| देखें कौन-सी पोस्ट भेजी गई, किस ग्रुप में त्रुटि हुई और क्यों। एक क्लिक में दोबारा भेजें।
+ar| اعرف أي المنشورات أُرسلت وأي المجموعات فشلت ولماذا. أعد الإرسال يدويًا بنقرة واحدة.
+pt| Veja quais publicações foram enviadas, quais grupos falharam e por quê. Reenvie manualmente com um clique.
+ru| Видно, что отправлено, в каких группах была ошибка и почему. Повторная отправка вручную в один клик.
+ja| どの投稿が送信され、どのグループで失敗したか、その理由まで確認できます。ワンクリックで手動再送も可能です。
+ko| 어떤 게시물이 전송되었고 어느 그룹에서 왜 실패했는지 확인하세요. 클릭 한 번으로 수동 재전송도 가능합니다.
+de| Sehen Sie, welche Beiträge gesendet wurden, welche Gruppen fehlschlugen und warum. Manuelles erneutes Senden mit einem Klick.
+fr| Voyez quelles publications sont parties, quels groupes ont échoué et pourquoi. Renvoyez manuellement en un clic.
+id| Lihat postingan mana yang terkirim, grup mana yang gagal, dan alasannya. Kirim ulang manual hanya dengan sekali klik.
+th| ดูว่าโพสต์ไหนส่งแล้ว กลุ่มไหนผิดพลาดและเพราะอะไร ส่งซ้ำด้วยตนเองได้ในคลิกเดียว
+tr| Hangi gönderilerin iletildiğini, hangi grupların hata verdiğini ve nedenini görün. Tek tıkla elle yeniden gönderin.
+fi| Näet mitkä julkaisut lähtivät, missä ryhmissä oli virhe ja miksi. Lähetä uudelleen käsin yhdellä napsautuksella.
+
+= An toàn mặc định
+en| Secure by default
+zh| 默认安全
+es| Seguro por defecto
+hi| डिफ़ॉल्ट रूप से सुरक्षित
+ar| آمن افتراضيًا
+pt| Seguro por padrão
+ru| Безопасность по умолчанию
+ja| 標準で安全
+ko| 기본적으로 안전
+de| Standardmäßig sicher
+fr| Sécurisé par défaut
+id| Aman secara bawaan
+th| ปลอดภัยตั้งแต่เริ่มต้น
+tr| Varsayılan olarak güvenli
+fi| Turvallinen oletuksena
+
+= Đăng nhập có giới hạn thử sai, cookie HttpOnly, chống CSRF, tiêu đề bảo mật và token được che.
+en| Login attempt limits, HttpOnly cookies, CSRF protection, security headers and masked tokens.
+zh| 登录错误次数限制、HttpOnly Cookie、CSRF 防护、安全响应头,以及令牌遮蔽显示。
+es| Límite de intentos de acceso, cookies HttpOnly, protección CSRF, cabeceras de seguridad y tokens ocultos.
+hi| लॉगिन प्रयासों की सीमा, HttpOnly कुकी, CSRF सुरक्षा, सिक्योरिटी हेडर और छिपे हुए टोकन।
+ar| حد لمحاولات تسجيل الدخول، وملفات HttpOnly، وحماية CSRF، وترويسات أمان، وإخفاء الرموز.
+pt| Limite de tentativas de login, cookies HttpOnly, proteção CSRF, cabeçalhos de segurança e tokens ocultos.
+ru| Ограничение попыток входа, cookie HttpOnly, защита от CSRF, заголовки безопасности и скрытые токены.
+ja| ログイン試行回数の制限、HttpOnly Cookie、CSRF対策、セキュリティヘッダー、トークンのマスク表示。
+ko| 로그인 시도 제한, HttpOnly 쿠키, CSRF 방어, 보안 헤더, 토큰 가림 처리.
+de| Begrenzte Anmeldeversuche, HttpOnly-Cookies, CSRF-Schutz, Sicherheits-Header und maskierte Tokens.
+fr| Limitation des tentatives de connexion, cookies HttpOnly, protection CSRF, en-têtes de sécurité et jetons masqués.
+id| Batas percobaan login, cookie HttpOnly, perlindungan CSRF, header keamanan, dan token yang disamarkan.
+th| จำกัดจำนวนครั้งที่เข้าสู่ระบบผิด คุกกี้ HttpOnly ป้องกัน CSRF เฮดเดอร์ความปลอดภัย และซ่อนโทเคน
+tr| Giriş denemesi sınırı, HttpOnly çerezler, CSRF koruması, güvenlik başlıkları ve maskelenmiş belirteçler.
+fi| Kirjautumisyritysten rajoitus, HttpOnly-evästeet, CSRF-suojaus, suojaotsakkeet ja piilotetut tunnisteet.
+
+= Ba bước là xong
+en| Done in three steps
+zh| 三步搞定
+es| Listo en tres pasos
+hi| तीन कदम में पूरा
+ar| ثلاث خطوات فقط
+pt| Pronto em três passos
+ru| Всего три шага
+ja| 3ステップで完了
+ko| 세 단계면 끝
+de| In drei Schritten erledigt
+fr| Terminé en trois étapes
+id| Selesai dalam tiga langkah
+th| เสร็จใน 3 ขั้นตอน
+tr| Üç adımda tamam
+fi| Valmista kolmessa vaiheessa
+
+= Tạo tài khoản và kết nối bot
+en| Create an account and connect your bot
+zh| 创建账号并连接机器人
+es| Crea una cuenta y conecta tu bot
+hi| खाता बनाएँ और अपना बॉट जोड़ें
+ar| أنشئ حسابًا واربط البوت
+pt| Crie uma conta e conecte seu bot
+ru| Создайте аккаунт и подключите бота
+ja| アカウントを作成してボットを接続
+ko| 계정을 만들고 봇 연결하기
+de| Konto erstellen und Bot verbinden
+fr| Créez un compte et connectez votre bot
+id| Buat akun dan hubungkan bot
+th| สร้างบัญชีและเชื่อมต่อบอท
+tr| Hesap oluşturun ve botunuzu bağlayın
+fi| Luo tili ja yhdistä bottisi
+
+= Đăng ký, tạo bot với @BotFather, dán token vào Cài đặt rồi thêm bot vào nhóm của bạn.
+en| Sign up, create a bot with @BotFather, paste the token into Settings, then add the bot to your group.
+zh| 注册后,用 @BotFather 创建机器人,将令牌粘贴到“设置”,再把机器人加入你的群组。
+es| Regístrate, crea un bot con @BotFather, pega el token en Ajustes y añade el bot a tu grupo.
+hi| साइन अप करें, @BotFather से बॉट बनाएँ, टोकन को सेटिंग्स में पेस्ट करें और बॉट को अपने ग्रुप में जोड़ें।
+ar| سجّل، وأنشئ بوتًا عبر @BotFather، والصق الرمز في الإعدادات، ثم أضف البوت إلى مجموعتك.
+pt| Cadastre-se, crie um bot com o @BotFather, cole o token em Configurações e adicione o bot ao seu grupo.
+ru| Зарегистрируйтесь, создайте бота через @BotFather, вставьте токен в «Настройки» и добавьте бота в свою группу.
+ja| 登録後、@BotFatherでボットを作成し、トークンを設定に貼り付けて、グループにボットを追加します。
+ko| 가입한 뒤 @BotFather로 봇을 만들고, 토큰을 설정에 붙여넣은 다음 그룹에 봇을 추가하세요.
+de| Registrieren, mit @BotFather einen Bot erstellen, den Token in den Einstellungen einfügen und den Bot Ihrer Gruppe hinzufügen.
+fr| Inscrivez-vous, créez un bot avec @BotFather, collez le jeton dans Paramètres, puis ajoutez le bot à votre groupe.
+id| Daftar, buat bot dengan @BotFather, tempel token di Pengaturan, lalu tambahkan bot ke grup Anda.
+th| สมัครสมาชิก สร้างบอทกับ @BotFather วางโทเคนในการตั้งค่า แล้วเพิ่มบอทเข้ากลุ่มของคุณ
+tr| Kaydolun, @BotFather ile bir bot oluşturun, belirteci Ayarlar'a yapıştırın ve botu grubunuza ekleyin.
+fi| Rekisteröidy, luo botti @BotFatherilla, liitä tunniste asetuksiin ja lisää botti ryhmääsi.
+
+= Soạn bài và đặt lịch
+en| Write and schedule
+zh| 撰写并设置发布时间
+es| Redacta y programa
+hi| पोस्ट लिखें और शेड्यूल करें
+ar| اكتب وحدد الجدول
+pt| Escreva e agende
+ru| Напишите и запланируйте
+ja| 作成して予約
+ko| 작성하고 예약하기
+de| Schreiben und planen
+fr| Rédigez et planifiez
+id| Tulis dan jadwalkan
+th| เขียนโพสต์และตั้งเวลา
+tr| Yazın ve zamanlayın
+fi| Kirjoita ja ajasta
+
+= Viết nội dung, chọn nhóm, đặt giờ. Xem trước tin nhắn như người đọc sẽ thấy.
+en| Write the content, choose groups, set the time. Preview the message exactly as readers will see it.
+zh| 编写内容、选择群组、设定时间。预览效果与读者看到的完全一致。
+es| Escribe el contenido, elige los grupos y fija la hora. Previsualiza el mensaje tal como lo verán los lectores.
+hi| सामग्री लिखें, ग्रुप चुनें, समय तय करें। संदेश वैसा ही देखें जैसा पाठक देखेंगे।
+ar| اكتب المحتوى واختر المجموعات وحدد الوقت. عاين الرسالة كما سيراها القرّاء.
+pt| Escreva o conteúdo, escolha os grupos e defina o horário. Veja a prévia da mensagem como os leitores a verão.
+ru| Напишите текст, выберите группы, задайте время. Предпросмотр покажет сообщение так, как его увидят читатели.
+ja| 内容を書き、グループと時刻を選ぶだけ。読者に表示されるとおりにメッセージをプレビューできます。
+ko| 내용을 쓰고 그룹과 시간을 정하세요. 독자에게 보일 모습 그대로 미리 볼 수 있습니다.
+de| Inhalt schreiben, Gruppen wählen, Zeit festlegen. Die Vorschau zeigt die Nachricht so, wie Leser sie sehen.
+fr| Rédigez le contenu, choisissez les groupes, fixez l'heure. Prévisualisez le message tel que les lecteurs le verront.
+id| Tulis konten, pilih grup, atur waktu. Pratinjau pesan persis seperti yang dilihat pembaca.
+th| เขียนเนื้อหา เลือกกลุ่ม ตั้งเวลา แล้วดูตัวอย่างข้อความเหมือนที่ผู้อ่านจะเห็นจริง
+tr| İçeriği yazın, grupları seçin, saati belirleyin. Mesajı okuyucuların göreceği şekilde önizleyin.
+fi| Kirjoita sisältö, valitse ryhmät ja aseta aika. Esikatsele viesti juuri sellaisena kuin lukijat sen näkevät.
+
+= Để KingTele lo phần còn lại
+en| Let KingTele handle the rest
+zh| 剩下的交给 KingTele
+es| Deja el resto a KingTele
+hi| बाकी काम KingTele पर छोड़ें
+ar| دع KingTele يتولى الباقي
+pt| Deixe o resto com o KingTele
+ru| Остальное сделает KingTele
+ja| あとはKingTeleにおまかせ
+ko| 나머지는 KingTele이 처리합니다
+de| Den Rest übernimmt KingTele
+fr| KingTele s'occupe du reste
+id| Sisanya serahkan pada KingTele
+th| ที่เหลือให้ KingTele จัดการ
+tr| Gerisini KingTele halleder
+fi| Loput hoitaa KingTele
+
+= Bài được gửi đúng giờ, mọi kết quả đều được ghi lại trong nhật ký.
+en| Posts go out on time, and every result is recorded in the log.
+zh| 内容准时发出,所有结果都会记录在日志中。
+es| Las publicaciones salen a su hora y cada resultado queda registrado.
+hi| पोस्ट ठीक समय पर जाती हैं और हर नतीजा लॉग में दर्ज होता है।
+ar| تُرسل المنشورات في وقتها وتُسجَّل كل نتيجة في السجل.
+pt| As publicações saem na hora certa e todos os resultados ficam registrados.
+ru| Публикации уходят вовремя, а каждый результат записывается в журнал.
+ja| 投稿は時間どおりに送信され、すべての結果が履歴に記録されます。
+ko| 게시물이 정시에 발송되고 모든 결과가 기록에 남습니다.
+de| Beiträge gehen pünktlich raus, jedes Ergebnis wird protokolliert.
+fr| Les publications partent à l'heure et chaque résultat est consigné dans l'historique.
+id| Postingan terkirim tepat waktu dan setiap hasilnya tercatat.
+th| โพสต์ถูกส่งตรงเวลา และทุกผลลัพธ์ถูกบันทึกไว้ในบันทึก
+tr| Gönderiler zamanında çıkar, her sonuç günlüğe kaydedilir.
+fi| Julkaisut lähtevät ajallaan ja jokainen tulos tallentuu lokiin.
+
+= Câu hỏi thường gặp
+en| Frequently asked questions
+zh| 常见问题
+es| Preguntas frecuentes
+hi| अक्सर पूछे जाने वाले प्रश्न
+ar| الأسئلة الشائعة
+pt| Perguntas frequentes
+ru| Часто задаваемые вопросы
+ja| よくある質問
+ko| 자주 묻는 질문
+de| Häufig gestellte Fragen
+fr| Questions fréquentes
+id| Pertanyaan yang sering diajukan
+th| คำถามที่พบบ่อย
+tr| Sıkça sorulan sorular
+fi| Usein kysytyt kysymykset
+
+= Bot cần quyền gì trong nhóm?
+en| What permissions does the bot need in the group?
+zh| 机器人在群组中需要什么权限?
+es| ¿Qué permisos necesita el bot en el grupo?
+hi| बॉट को ग्रुप में कौन-सी अनुमति चाहिए?
+ar| ما الصلاحيات التي يحتاجها البوت في المجموعة؟
+pt| Que permissões o bot precisa no grupo?
+ru| Какие права нужны боту в группе?
+ja| ボットにはグループでどんな権限が必要ですか?
+ko| 봇에게 그룹에서 어떤 권한이 필요한가요?
+de| Welche Berechtigungen braucht der Bot in der Gruppe?
+fr| De quelles autorisations le bot a-t-il besoin dans le groupe ?
+id| Izin apa yang dibutuhkan bot di grup?
+th| บอทต้องมีสิทธิ์อะไรในกลุ่ม
+tr| Botun grupta hangi izinlere ihtiyacı var?
+fi| Mitä oikeuksia botti tarvitsee ryhmässä?
+
+= Với nhóm, chỉ cần thêm bot vào nhóm. Với kênh, hãy đặt bot làm quản trị viên có quyền đăng tin nhắn.
+en| For a group, just add the bot to the group. For a channel, make the bot an administrator with permission to post messages.
+zh| 群组只需把机器人加入群组;频道则需将机器人设为拥有发布消息权限的管理员。
+es| En un grupo basta con añadir el bot. En un canal, nómbralo administrador con permiso para publicar mensajes.
+hi| ग्रुप के लिए बस बॉट को ग्रुप में जोड़ें। चैनल के लिए बॉट को संदेश पोस्ट करने की अनुमति वाला एडमिन बनाएँ।
+ar| في المجموعة يكفي إضافة البوت إليها. وفي القناة اجعل البوت مشرفًا مع صلاحية نشر الرسائل.
+pt| Em um grupo, basta adicionar o bot. Em um canal, torne o bot administrador com permissão para publicar mensagens.
+ru| В группе достаточно добавить бота. В канале назначьте бота администратором с правом публиковать сообщения.
+ja| グループの場合はボットを追加するだけです。チャンネルの場合は、メッセージ投稿権限を持つ管理者にボットを設定してください。
+ko| 그룹은 봇을 추가하기만 하면 됩니다. 채널은 메시지 게시 권한이 있는 관리자로 봇을 지정하세요.
+de| Bei einer Gruppe genügt es, den Bot hinzuzufügen. Bei einem Kanal machen Sie den Bot zum Administrator mit Berechtigung zum Senden von Nachrichten.
+fr| Pour un groupe, il suffit d'ajouter le bot. Pour un canal, nommez-le administrateur avec l'autorisation de publier des messages.
+id| Untuk grup, cukup tambahkan bot ke grup. Untuk kanal, jadikan bot admin dengan izin memposting pesan.
+th| สำหรับกลุ่ม เพียงเพิ่มบอทเข้ากลุ่ม สำหรับแชนเนล ให้ตั้งบอทเป็นผู้ดูแลที่มีสิทธิ์โพสต์ข้อความ
+tr| Grup için botu gruba eklemeniz yeterli. Kanal için botu mesaj gönderme yetkisi olan yönetici yapın.
+fi| Ryhmässä riittää, että lisäät botin ryhmään. Kanavassa tee botista ylläpitäjä, jolla on oikeus julkaista viestejä.
+
+= Lấy Chat ID của nhóm như thế nào?
+en| How do I get a group's Chat ID?
+zh| 如何获取群组的 Chat ID?
+es| ¿Cómo obtengo el Chat ID de un grupo?
+hi| ग्रुप की Chat ID कैसे पाएँ?
+ar| كيف أحصل على معرّف الدردشة (Chat ID) للمجموعة؟
+pt| Como obtenho o Chat ID de um grupo?
+ru| Как узнать Chat ID группы?
+ja| グループのChat IDはどう調べますか?
+ko| 그룹의 Chat ID는 어떻게 확인하나요?
+de| Wie finde ich die Chat-ID einer Gruppe?
+fr| Comment obtenir l'ID de discussion d'un groupe ?
+id| Bagaimana cara mendapatkan Chat ID grup?
+th| จะหา Chat ID ของกลุ่มได้อย่างไร
+tr| Bir grubun Chat ID'sini nasıl bulurum?
+fi| Miten saan ryhmän Chat ID:n?
+
+= Bạn có thể nhập @username của nhóm công khai, hoặc Chat ID dạng số (nhóm riêng tư thường bắt đầu bằng -100). KingTele sẽ kiểm tra bot có truy cập được hay không khi thêm.
+en| You can enter the @username of a public group, or a numeric Chat ID (private groups usually start with -100). KingTele checks whether the bot can access it when you add it.
+zh| 公开群组可直接输入 @用户名,也可输入数字形式的 Chat ID(私有群组通常以 -100 开头)。添加时 KingTele 会检查机器人是否能访问该群组。
+es| Puedes escribir el @usuario de un grupo público o un Chat ID numérico (los grupos privados suelen empezar por -100). KingTele comprueba al añadirlo si el bot tiene acceso.
+hi| सार्वजनिक ग्रुप का @username या संख्या वाली Chat ID दर्ज करें (निजी ग्रुप की ID आम तौर पर -100 से शुरू होती है)। जोड़ते समय KingTele जाँचता है कि बॉट की पहुँच है या नहीं।
+ar| يمكنك إدخال @اسم_المستخدم للمجموعة العامة أو معرّف دردشة رقمي (تبدأ المجموعات الخاصة عادةً بـ -100). يتحقق KingTele عند الإضافة من وصول البوت إليها.
+pt| Você pode informar o @usuário de um grupo público ou um Chat ID numérico (grupos privados geralmente começam com -100). O KingTele verifica se o bot tem acesso ao adicionar.
+ru| Введите @username публичной группы или числовой Chat ID (у закрытых групп он обычно начинается с -100). При добавлении KingTele проверит, есть ли у бота доступ.
+ja| 公開グループの@ユーザー名、または数値のChat IDを入力できます(非公開グループは通常-100から始まります)。追加時にKingTeleがボットのアクセス可否を確認します。
+ko| 공개 그룹은 @사용자이름, 또는 숫자 형태의 Chat ID를 입력할 수 있습니다(비공개 그룹은 보통 -100으로 시작). 추가할 때 KingTele이 봇이 접근 가능한지 확인합니다.
+de| Sie können den @Benutzernamen einer öffentlichen Gruppe oder eine numerische Chat-ID eingeben (private Gruppen beginnen meist mit -100). KingTele prüft beim Hinzufügen, ob der Bot Zugriff hat.
+fr| Saisissez le @nom d'utilisateur d'un groupe public ou un ID numérique (les groupes privés commencent souvent par -100). KingTele vérifie à l'ajout que le bot y a accès.
+id| Anda bisa memasukkan @username grup publik atau Chat ID berupa angka (grup privat biasanya diawali -100). KingTele akan memeriksa apakah bot bisa mengaksesnya saat ditambahkan.
+th| ใส่ @username ของกลุ่มสาธารณะ หรือ Chat ID ที่เป็นตัวเลข (กลุ่มส่วนตัวมักขึ้นต้นด้วย -100) KingTele จะตรวจสอบว่าบอทเข้าถึงได้หรือไม่ตอนเพิ่ม
+tr| Herkese açık bir grubun @kullanıcıadı'nı veya sayısal Chat ID'yi girebilirsiniz (özel gruplar genelde -100 ile başlar). KingTele ekleme sırasında botun erişimi olup olmadığını kontrol eder.
+fi| Voit syöttää julkisen ryhmän @käyttäjänimen tai numeerisen Chat ID:n (yksityiset ryhmät alkavat yleensä -100). KingTele tarkistaa lisättäessä, onko botilla pääsy.
+
+= Nếu server tắt đúng giờ đăng thì sao?
+en| What if the server is down at posting time?
+zh| 如果发布时服务器恰好关闭怎么办?
+es| ¿Qué pasa si el servidor está caído a la hora de publicar?
+hi| अगर पोस्ट के समय सर्वर बंद हो तो क्या होगा?
+ar| ماذا لو كان الخادم متوقفًا وقت النشر؟
+pt| E se o servidor estiver fora do ar na hora da publicação?
+ru| Что, если сервер выключен в момент публикации?
+ja| 投稿時刻にサーバーが停止していたらどうなりますか?
+ko| 게시 시각에 서버가 꺼져 있으면 어떻게 되나요?
+de| Was passiert, wenn der Server zur Postingzeit ausgefallen ist?
+fr| Que se passe-t-il si le serveur est arrêté à l'heure de publication ?
+id| Bagaimana jika server mati saat waktu posting?
+th| ถ้าเซิร์ฟเวอร์ปิดอยู่ตอนถึงเวลาโพสต์จะเป็นอย่างไร
+tr| Gönderi saatinde sunucu kapalıysa ne olur?
+fi| Mitä jos palvelin on pois päältä julkaisuhetkellä?
+
+= Bài đăng một lần sẽ được gửi ngay khi server chạy lại. Lịch lặp bị bỏ lỡ quá 10 phút sẽ bỏ qua lượt đó và chờ lượt kế tiếp để tránh đăng dồn.
+en| One-time posts are sent as soon as the server is back. Recurring posts missed by more than 10 minutes skip that run and wait for the next one, to avoid posting in a burst.
+zh| 单次发布会在服务器恢复后立即发出。循环发布若错过超过 10 分钟,将跳过本次并等待下一次,避免集中补发。
+es| Las publicaciones de una sola vez se envían en cuanto el servidor vuelve. Las recurrentes que se pierdan más de 10 minutos omiten esa ejecución y esperan la siguiente, para evitar envíos en ráfaga.
+hi| एक बार वाली पोस्ट सर्वर चालू होते ही भेज दी जाती है। दोहराई जाने वाली पोस्ट 10 मिनट से ज़्यादा छूट जाए तो वह बार छोड़ दी जाती है और अगली बार का इंतज़ार किया जाता है, ताकि एक साथ ढेर न लगे।
+ar| تُرسل المنشورات لمرة واحدة فور عودة الخادم. أما المتكررة التي فاتها أكثر من 10 دقائق فتتخطى تلك الدورة وتنتظر التالية لتجنب النشر دفعة واحدة.
+pt| Publicações únicas são enviadas assim que o servidor volta. As recorrentes atrasadas mais de 10 minutos pulam aquela execução e aguardam a próxima, para evitar envios em rajada.
+ru| Разовые публикации отправляются сразу после возобновления работы сервера. Повторяющиеся, пропущенные более чем на 10 минут, пропускают этот запуск и ждут следующий, чтобы не публиковать всё разом.
+ja| 1回限りの投稿は、サーバー復旧後すぐに送信されます。繰り返し投稿が10分以上遅れた場合はその回をスキップして次回を待ち、まとめて投稿されるのを防ぎます。
+ko| 1회성 게시물은 서버가 복구되는 즉시 전송됩니다. 반복 게시물이 10분 넘게 누락되면 해당 회차는 건너뛰고 다음 회차를 기다려 몰아서 게시되는 것을 막습니다.
+de| Einmalige Beiträge werden sofort gesendet, sobald der Server wieder läuft. Wiederkehrende Beiträge, die um mehr als 10 Minuten verpasst wurden, überspringen diesen Durchlauf und warten auf den nächsten, um Massenversand zu vermeiden.
+fr| Les publications uniques partent dès que le serveur redémarre. Les publications récurrentes manquées de plus de 10 minutes sautent ce passage et attendent le suivant, pour éviter les envois en rafale.
+id| Postingan sekali jalan dikirim begitu server hidup lagi. Postingan berulang yang terlewat lebih dari 10 menit akan melewati giliran itu dan menunggu giliran berikutnya, agar tidak terkirim sekaligus.
+th| โพสต์แบบครั้งเดียวจะถูกส่งทันทีเมื่อเซิร์ฟเวอร์กลับมาทำงาน ส่วนโพสต์ที่ตั้งซ้ำและพลาดเกิน 10 นาทีจะข้ามรอบนั้นและรอรอบถัดไป เพื่อไม่ให้โพสต์รวดเดียวหลายรอบ
+tr| Tek seferlik gönderiler sunucu tekrar açılır açılmaz iletilir. 10 dakikadan fazla kaçırılan tekrarlı gönderiler o turu atlar ve bir sonrakini bekler; böylece art arda toplu gönderim yapılmaz.
+fi| Kertajulkaisut lähetetään heti, kun palvelin palaa käyttöön. Toistuvat julkaisut, jotka myöhästyvät yli 10 minuuttia, ohittavat kyseisen kerran ja odottavat seuraavaa, jotta niitä ei lähetetä kerralla.
+
+= Điểm King là gì?
+en| What are King Points?
+zh| 什么是 King 积分?
+es| ¿Qué son los Puntos King?
+hi| King पॉइंट क्या हैं?
+ar| ما هي نقاط King؟
+pt| O que são os Pontos King?
+ru| Что такое King-баллы?
+ja| Kingポイントとは?
+ko| King 포인트란 무엇인가요?
+de| Was sind King-Punkte?
+fr| Que sont les Points King ?
+id| Apa itu Poin King?
+th| คะแนน King คืออะไร
+tr| King Puanı nedir?
+fi| Mitä ovat King-pisteet?
+
+= Là điểm để đăng bài. Mỗi lượt bài gửi thành công tới một nhóm trừ 1 điểm. Bạn nhận 500 điểm khi đăng ký, thêm 50 điểm mỗi ngày khi điểm danh, và nhận thêm khi giới thiệu bạn bè dùng KingTele (xem mục Điểm King sau khi đăng nhập).
+en| Points used for posting. Each post successfully sent to one group costs 1 point. You get 500 points when you sign up, 50 more each day you check in, and extra points when you invite friends to KingTele (see the King Points section after logging in).
+zh| 用于发布内容的积分。每向一个群组成功发送一次扣 1 分。注册赠送 500 分,每日签到再得 50 分,邀请好友使用 KingTele 还能获得更多(登录后见“King 积分”页面)。
+es| Son los puntos que se usan para publicar. Cada publicación enviada con éxito a un grupo cuesta 1 punto. Recibes 500 al registrarte, 50 más cada día que marcas asistencia y puntos extra al invitar amigos a KingTele (consulta la sección Puntos King al iniciar sesión).
+hi| पोस्ट करने के लिए इस्तेमाल होने वाले पॉइंट। किसी ग्रुप में सफलतापूर्वक भेजी गई हर पोस्ट पर 1 पॉइंट कटता है। साइन अप पर 500 पॉइंट, रोज़ चेक-इन पर 50 और दोस्तों को KingTele पर बुलाने पर और पॉइंट मिलते हैं (लॉग इन के बाद King पॉइंट सेक्शन देखें)।
+ar| هي النقاط المستخدمة في النشر. كل منشور يُرسل بنجاح إلى مجموعة يخصم نقطة واحدة. تحصل على 500 نقطة عند التسجيل و50 نقطة إضافية كل يوم عند تسجيل الحضور، ونقاطًا إضافية عند دعوة الأصدقاء إلى KingTele (راجع قسم نقاط King بعد تسجيل الدخول).
+pt| São os pontos usados para publicar. Cada publicação enviada com sucesso a um grupo custa 1 ponto. Você ganha 500 ao se cadastrar, mais 50 a cada dia em que faz check-in e pontos extras ao indicar amigos ao KingTele (veja a seção Pontos King após entrar).
+ru| Баллы, которые тратятся на публикации. Каждая успешная отправка в одну группу стоит 1 балл. За регистрацию вы получаете 500 баллов, за ежедневную отметку ещё 50, а за приглашение друзей в KingTele — дополнительные баллы (раздел «King-баллы» после входа).
+ja| 投稿に使うポイントです。1つのグループへの送信が成功するたびに1ポイント消費します。登録時に500ポイント、毎日のチェックインで50ポイント、友達をKingTeleに紹介するとさらにポイントがもらえます(ログイン後の「Kingポイント」をご覧ください)。
+ko| 게시에 사용하는 포인트입니다. 한 그룹에 성공적으로 보낼 때마다 1포인트가 차감됩니다. 가입 시 500포인트, 매일 출석 체크 시 50포인트, 친구를 KingTele에 초대하면 추가 포인트를 받습니다(로그인 후 King 포인트 메뉴 참고).
+de| Punkte zum Posten. Jeder erfolgreich an eine Gruppe gesendete Beitrag kostet 1 Punkt. Sie erhalten 500 Punkte bei der Anmeldung, 50 weitere für jedes tägliche Einchecken und Extrapunkte, wenn Sie Freunde zu KingTele einladen (siehe Bereich King-Punkte nach der Anmeldung).
+fr| Ce sont les points qui servent à publier. Chaque publication envoyée avec succès à un groupe coûte 1 point. Vous recevez 500 points à l'inscription, 50 de plus chaque jour de pointage, et des points supplémentaires en invitant des amis sur KingTele (voir la section Points King après connexion).
+id| Poin untuk memposting. Setiap postingan yang berhasil terkirim ke satu grup mengurangi 1 poin. Anda dapat 500 poin saat mendaftar, 50 poin tambahan setiap hari saat absen, dan poin ekstra saat mengajak teman memakai KingTele (lihat bagian Poin King setelah masuk).
+th| คือคะแนนที่ใช้สำหรับโพสต์ โพสต์ที่ส่งสำเร็จไปยังหนึ่งกลุ่มจะหัก 1 คะแนน คุณได้ 500 คะแนนเมื่อสมัคร เพิ่มอีก 50 คะแนนทุกวันที่เช็กอิน และได้คะแนนเพิ่มเมื่อชวนเพื่อนมาใช้ KingTele (ดูที่เมนูคะแนน King หลังเข้าสู่ระบบ)
+tr| Gönderi yapmak için kullanılan puanlardır. Bir gruba başarıyla gönderilen her gönderi 1 puana mal olur. Kayıtta 500 puan, her gün yoklama yaptığınızda 50 puan ve arkadaşlarınızı KingTele'ye davet ettiğinizde ek puan kazanırsınız (giriş yaptıktan sonra King Puanı bölümüne bakın).
+fi| Pisteitä käytetään julkaisemiseen. Jokainen onnistuneesti yhteen ryhmään lähetetty julkaisu maksaa 1 pisteen. Saat 500 pistettä rekisteröityessäsi, 50 lisää jokaisesta päivästä, jona kirjaudut päivittäiseen läsnäoloon, ja bonuspisteitä kun kutsut ystäviä KingTeleen (katso King-pisteet-osio kirjautumisen jälkeen).
+
+= Tôi cần chuẩn bị gì để bắt đầu?
+en| What do I need to get started?
+zh| 开始前需要准备什么?
+es| ¿Qué necesito para empezar?
+hi| शुरू करने के लिए मुझे क्या चाहिए?
+ar| ماذا أحتاج للبدء؟
+pt| O que preciso para começar?
+ru| Что нужно, чтобы начать?
+ja| 始めるには何が必要ですか?
+ko| 시작하려면 무엇이 필요한가요?
+de| Was brauche ich für den Einstieg?
+fr| De quoi ai-je besoin pour commencer ?
+id| Apa yang perlu saya siapkan untuk memulai?
+th| ต้องเตรียมอะไรบ้างก่อนเริ่มใช้งาน
+tr| Başlamak için neye ihtiyacım var?
+fi| Mitä tarvitsen aloittamiseen?
+
+= Chỉ cần một tài khoản Telegram. Bạn tự tạo bot miễn phí qua @BotFather, sau đó dán token vào mục Cài đặt. Bài đăng sẽ được gửi từ chính bot của bạn.
+en| Just a Telegram account. You create a bot for free through @BotFather, then paste its token into Settings. Your posts are sent from your own bot.
+zh| 只需一个 Telegram 账号。你可通过 @BotFather 免费创建机器人,然后把令牌粘贴到“设置”。内容将由你自己的机器人发出。
+es| Solo una cuenta de Telegram. Creas un bot gratis con @BotFather y pegas su token en Ajustes. Tus publicaciones se envían desde tu propio bot.
+hi| बस एक Telegram खाता। @BotFather से मुफ़्त में बॉट बनाएँ और उसका टोकन सेटिंग्स में पेस्ट करें। आपकी पोस्ट आपके अपने बॉट से भेजी जाएँगी।
+ar| يكفي حساب تيليجرام. أنشئ بوتًا مجانًا عبر @BotFather ثم الصق رمزه في الإعدادات. تُرسل منشوراتك من بوتك الخاص.
+pt| Basta uma conta do Telegram. Você cria um bot de graça com o @BotFather e cola o token em Configurações. Suas publicações são enviadas pelo seu próprio bot.
+ru| Достаточно аккаунта Telegram. Вы бесплатно создаёте бота через @BotFather и вставляете его токен в «Настройки». Публикации отправляются от вашего собственного бота.
+ja| 必要なのはTelegramアカウントだけです。@BotFatherで無料でボットを作成し、そのトークンを設定に貼り付けます。投稿はご自身のボットから送信されます。
+ko| Telegram 계정 하나면 됩니다. @BotFather로 봇을 무료로 만들고 토큰을 설정에 붙여넣으세요. 게시물은 본인의 봇으로 발송됩니다.
+de| Nur ein Telegram-Konto. Sie erstellen kostenlos einen Bot über @BotFather und fügen dessen Token in die Einstellungen ein. Ihre Beiträge werden von Ihrem eigenen Bot gesendet.
+fr| Un simple compte Telegram. Vous créez gratuitement un bot via @BotFather, puis collez son jeton dans Paramètres. Vos publications partent de votre propre bot.
+id| Cukup akun Telegram. Anda membuat bot gratis lewat @BotFather, lalu menempelkan tokennya di Pengaturan. Postingan dikirim dari bot Anda sendiri.
+th| ใช้แค่บัญชี Telegram สร้างบอทฟรีผ่าน @BotFather แล้ววางโทเคนในการตั้งค่า โพสต์จะถูกส่งจากบอทของคุณเอง
+tr| Yalnızca bir Telegram hesabı yeterli. @BotFather ile ücretsiz bir bot oluşturur, belirtecini Ayarlar'a yapıştırırsınız. Gönderiler kendi botunuzdan yapılır.
+fi| Tarvitset vain Telegram-tilin. Luot botin ilmaiseksi @BotFatherilla ja liität sen tunnisteen asetuksiin. Julkaisut lähetetään omasta botistasi.
+
+= Dữ liệu của tôi có bị người khác nhìn thấy không?
+en| Can other people see my data?
+zh| 我的数据会被别人看到吗?
+es| ¿Pueden otras personas ver mis datos?
+hi| क्या मेरा डेटा दूसरे लोग देख सकते हैं?
+ar| هل يمكن للآخرين رؤية بياناتي؟
+pt| Outras pessoas podem ver meus dados?
+ru| Могут ли другие пользователи видеть мои данные?
+ja| 他の人に自分のデータを見られることはありますか?
+ko| 다른 사람이 제 데이터를 볼 수 있나요?
+de| Können andere meine Daten sehen?
+fr| Mes données sont-elles visibles par d'autres personnes ?
+id| Apakah data saya bisa dilihat orang lain?
+th| คนอื่นเห็นข้อมูลของฉันได้หรือไม่
+tr| Verilerimi başkaları görebilir mi?
+fi| Näkevätkö muut tietojani?
+
+= Không. Nhóm, bài đăng, ảnh và nhật ký của mỗi tài khoản được tách riêng. Token bot chỉ dùng để gửi bài của chính bạn. Bạn có thể tải bản sao lưu bất cứ lúc nào.
+en| No. Each account's groups, posts, images and logs are kept separate. Your bot token is used only to send your own posts. You can download a backup at any time.
+zh| 不会。每个账号的群组、内容、图片和日志都相互隔离。机器人令牌仅用于发送你自己的内容。你可随时下载备份。
+es| No. Los grupos, publicaciones, imágenes y registros de cada cuenta están separados. El token del bot solo se usa para enviar tus propias publicaciones. Puedes descargar una copia de seguridad en cualquier momento.
+hi| नहीं। हर खाते के ग्रुप, पोस्ट, इमेज और लॉग अलग रखे जाते हैं। बॉट टोकन सिर्फ़ आपकी अपनी पोस्ट भेजने के लिए इस्तेमाल होता है। आप कभी भी बैकअप डाउनलोड कर सकते हैं।
+ar| لا. مجموعات كل حساب ومنشوراته وصوره وسجلاته منفصلة تمامًا. يُستخدم رمز البوت فقط لإرسال منشوراتك أنت. يمكنك تنزيل نسخة احتياطية في أي وقت.
+pt| Não. Grupos, publicações, imagens e registros de cada conta ficam separados. O token do bot é usado apenas para enviar as suas publicações. Você pode baixar um backup quando quiser.
+ru| Нет. Группы, публикации, изображения и журналы каждого аккаунта хранятся отдельно. Токен бота используется только для отправки ваших публикаций. Резервную копию можно скачать в любой момент.
+ja| いいえ。グループ、投稿、画像、履歴はアカウントごとに分離されています。ボットのトークンはご自身の投稿の送信にのみ使われます。バックアップはいつでもダウンロードできます。
+ko| 아니요. 계정별로 그룹, 게시물, 이미지, 기록이 분리되어 있습니다. 봇 토큰은 본인의 게시물을 보내는 데만 사용됩니다. 백업은 언제든 내려받을 수 있습니다.
+de| Nein. Gruppen, Beiträge, Bilder und Protokolle jedes Kontos sind getrennt. Ihr Bot-Token wird nur zum Senden Ihrer eigenen Beiträge verwendet. Sie können jederzeit ein Backup herunterladen.
+fr| Non. Les groupes, publications, images et historiques de chaque compte sont séparés. Le jeton du bot sert uniquement à envoyer vos propres publications. Vous pouvez télécharger une sauvegarde à tout moment.
+id| Tidak. Grup, postingan, gambar, dan catatan setiap akun dipisahkan. Token bot hanya dipakai untuk mengirim postingan Anda sendiri. Anda bisa mengunduh cadangan kapan saja.
+th| ไม่ได้ กลุ่ม โพสต์ รูปภาพ และบันทึกของแต่ละบัญชีถูกแยกออกจากกัน โทเคนบอทใช้เพื่อส่งโพสต์ของคุณเองเท่านั้น และคุณดาวน์โหลดไฟล์สำรองได้ทุกเมื่อ
+tr| Hayır. Her hesabın grupları, gönderileri, görselleri ve kayıtları ayrı tutulur. Bot belirteci yalnızca kendi gönderilerinizi göndermek için kullanılır. Yedeği istediğiniz zaman indirebilirsiniz.
+fi| Ei. Jokaisen tilin ryhmät, julkaisut, kuvat ja lokit pidetään erillään. Bot-tunnistetta käytetään vain omien julkaisujesi lähettämiseen. Voit ladata varmuuskopion milloin tahansa.
+
+= Sẵn sàng để nhóm của bạn luôn có tin mới?
+en| Ready to keep your group full of fresh content?
+zh| 准备好让你的群组始终有新内容了吗?
+es| ¿Listo para que tu grupo siempre tenga novedades?
+hi| क्या आपका ग्रुप हमेशा ताज़ा खबरों से भरा रखने के लिए तैयार हैं?
+ar| هل أنت مستعد لتبقى مجموعتك مليئة بالجديد دائمًا؟
+pt| Pronto para manter seu grupo sempre com novidades?
+ru| Готовы, чтобы в вашей группе всегда были свежие новости?
+ja| グループをいつも新しい情報で満たす準備はできましたか?
+ko| 그룹을 항상 새로운 소식으로 채울 준비가 되셨나요?
+de| Bereit, Ihre Gruppe immer mit Neuigkeiten zu versorgen?
+fr| Prêt à garder votre groupe toujours alimenté en nouveautés ?
+id| Siap membuat grup Anda selalu punya kabar terbaru?
+th| พร้อมให้กลุ่มของคุณมีเรื่องใหม่ ๆ อยู่เสมอหรือยัง
+tr| Grubunuzun her zaman taze içerikle dolu olması için hazır mısınız?
+fi| Valmiina pitämään ryhmäsi täynnä tuoretta sisältöä?
+
+= Tạo tài khoản và lên lịch bài đầu tiên chỉ trong vài phút.
+en| Create an account and schedule your first post in just a few minutes.
+zh| 创建账号,几分钟内即可安排第一条内容。
+es| Crea una cuenta y programa tu primera publicación en pocos minutos.
+hi| खाता बनाएँ और कुछ ही मिनटों में अपनी पहली पोस्ट शेड्यूल करें।
+ar| أنشئ حسابًا وجدول أول منشور لك في دقائق قليلة.
+pt| Crie uma conta e agende sua primeira publicação em poucos minutos.
+ru| Создайте аккаунт и запланируйте первую публикацию всего за несколько минут.
+ja| アカウントを作成して、わずか数分で最初の投稿を予約できます。
+ko| 계정을 만들고 몇 분 만에 첫 게시물을 예약하세요.
+de| Konto erstellen und den ersten Beitrag in wenigen Minuten planen.
+fr| Créez un compte et planifiez votre première publication en quelques minutes.
+id| Buat akun dan jadwalkan postingan pertama Anda hanya dalam beberapa menit.
+th| สร้างบัญชีและตั้งเวลาโพสต์แรกได้ภายในไม่กี่นาที
+tr| Hesap oluşturun ve ilk gönderinizi birkaç dakika içinde zamanlayın.
+fi| Luo tili ja ajasta ensimmäinen julkaisusi muutamassa minuutissa.
+
+= Tự động hoá Telegram cho cộng đồng và doanh nghiệp
+en| Telegram automation for communities and businesses
+zh| 面向社群和企业的 Telegram 自动化
+es| Automatización de Telegram para comunidades y empresas
+hi| समुदायों और व्यवसायों के लिए Telegram ऑटोमेशन
+ar| أتمتة تيليجرام للمجتمعات والشركات
+pt| Automação do Telegram para comunidades e empresas
+ru| Автоматизация Telegram для сообществ и бизнеса
+ja| コミュニティと企業のためのTelegram自動化
+ko| 커뮤니티와 기업을 위한 Telegram 자동화
+de| Telegram-Automatisierung für Communities und Unternehmen
+fr| L'automatisation Telegram pour les communautés et les entreprises
+id| Otomatisasi Telegram untuk komunitas dan bisnis
+th| ระบบอัตโนมัติ Telegram สำหรับคอมมูนิตี้และธุรกิจ
+tr| Topluluklar ve işletmeler için Telegram otomasyonu
+fi| Telegram-automaatio yhteisöille ja yrityksille
+
+= Lên lịch một lần, KingTele tự động đăng bài lên nhiều nhóm và kênh Telegram đúng giờ, đúng múi giờ. Có nhật ký gửi, nút bấm, ảnh và định dạng.
+en| Schedule once and KingTele posts to many Telegram groups and channels on time, in the right time zone. With send logs, buttons, images and formatting.
+zh| 只需设置一次,KingTele 即可按正确时区准时向多个 Telegram 群组和频道发布。含发送日志、按钮、图片与格式。
+es| Programa una vez y KingTele publica a tiempo en muchos grupos y canales de Telegram, en la zona horaria correcta. Con registro de envíos, botones, imágenes y formato.
+hi| एक बार शेड्यूल करें और KingTele कई Telegram ग्रुप व चैनलों में सही टाइम ज़ोन के अनुसार ठीक समय पर पोस्ट करता है। भेजने का लॉग, बटन, इमेज और फ़ॉर्मेटिंग के साथ।
+ar| جدول مرة واحدة وسينشر KingTele في عدة مجموعات وقنوات تيليجرام في موعدها وبالمنطقة الزمنية الصحيحة. مع سجل الإرسال والأزرار والصور والتنسيق.
+pt| Agende uma vez e o KingTele publica em vários grupos e canais do Telegram na hora certa, no fuso correto. Com registro de envios, botões, imagens e formatação.
+ru| Запланируйте один раз, и KingTele вовремя опубликует в нескольких группах и каналах Telegram в нужном часовом поясе. Журнал отправок, кнопки, изображения и форматирование.
+ja| 一度予約すれば、KingTeleが複数のTelegramグループやチャンネルへ正しいタイムゾーンで時間どおりに投稿します。送信履歴、ボタン、画像、書式にも対応。
+ko| 한 번만 예약하면 KingTele이 올바른 시간대에 맞춰 여러 Telegram 그룹과 채널에 정시에 게시합니다. 발송 기록, 버튼, 이미지, 서식 지원.
+de| Einmal planen, und KingTele postet pünktlich in vielen Telegram-Gruppen und -Kanälen, in der richtigen Zeitzone. Mit Versandprotokoll, Schaltflächen, Bildern und Formatierung.
+fr| Planifiez une fois et KingTele publie à l'heure dans de nombreux groupes et canaux Telegram, dans le bon fuseau horaire. Avec historique des envois, boutons, images et mise en forme.
+id| Jadwalkan sekali dan KingTele memposting ke banyak grup dan kanal Telegram tepat waktu di zona waktu yang benar. Dilengkapi catatan pengiriman, tombol, gambar, dan format.
+th| ตั้งเวลาครั้งเดียว KingTele จะโพสต์ไปยังหลายกลุ่มและแชนเนล Telegram ตรงเวลาในเขตเวลาที่ถูกต้อง พร้อมบันทึกการส่ง ปุ่ม รูปภาพ และการจัดรูปแบบ
+tr| Bir kez zamanlayın, KingTele birçok Telegram grubuna ve kanalına doğru saat diliminde tam zamanında gönderir. Gönderim günlüğü, düğmeler, görseller ve biçimlendirme dahil.
+fi| Ajasta kerran, ja KingTele julkaisee useisiin Telegram-ryhmiin ja -kanaviin ajallaan oikeassa aikavyöhykkeessä. Mukana lähetysloki, painikkeet, kuvat ja muotoilu.
+
+= Lên lịch một lần, tự động đăng bài lên nhiều nhóm Telegram đúng giờ.
+en| Schedule once and post automatically to many Telegram groups on time.
+zh| 只需设置一次,即可准时自动发布到多个 Telegram 群组。
+es| Programa una vez y publica automáticamente a tiempo en muchos grupos de Telegram.
+hi| एक बार शेड्यूल करें और कई Telegram ग्रुप में ठीक समय पर अपने आप पोस्ट करें।
+ar| جدول مرة واحدة وانشر تلقائيًا في عدة مجموعات تيليجرام في موعدها.
+pt| Agende uma vez e publique automaticamente em vários grupos do Telegram na hora certa.
+ru| Запланируйте один раз и публикуйте автоматически в нескольких группах Telegram точно в срок.
+ja| 一度予約すれば、複数のTelegramグループへ時間どおりに自動投稿します。
+ko| 한 번만 예약하면 여러 Telegram 그룹에 정시에 자동으로 게시됩니다.
+de| Einmal planen und pünktlich automatisch in vielen Telegram-Gruppen posten.
+fr| Planifiez une fois et publiez automatiquement à l'heure dans de nombreux groupes Telegram.
+id| Jadwalkan sekali dan posting otomatis ke banyak grup Telegram tepat waktu.
+th| ตั้งเวลาครั้งเดียวแล้วโพสต์ไปยังหลายกลุ่ม Telegram ให้อัตโนมัติตรงเวลา
+tr| Bir kez zamanlayın, birçok Telegram grubuna zamanında otomatik gönderin.
+fi| Ajasta kerran ja julkaise automaattisesti useisiin Telegram-ryhmiin ajallaan.
+
+= KingTele - trang chủ
+en| KingTele - home
+zh| KingTele - 首页
+es| KingTele - inicio
+hi| KingTele - होम
+ar| KingTele - الصفحة الرئيسية
+pt| KingTele - início
+ru| KingTele - главная
+ja| KingTele - ホーム
+ko| KingTele - 홈
+de| KingTele - Startseite
+fr| KingTele - accueil
+id| KingTele - beranda
+th| KingTele - หน้าแรก
+tr| KingTele - ana sayfa
+fi| KingTele - etusivu
+
+= Điều hướng chính
+en| Main navigation
+zh| 主导航
+es| Navegación principal
+hi| मुख्य नेविगेशन
+ar| التنقل الرئيسي
+pt| Navegação principal
+ru| Основная навигация
+ja| メインナビゲーション
+ko| 주 메뉴
+de| Hauptnavigation
+fr| Navigation principale
+id| Navigasi utama
+th| เมนูหลัก
+tr| Ana gezinme
+fi| Päävalikko

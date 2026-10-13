@@ -1,0 +1,1072 @@
+# Tổng quan + danh sách bài đăng (126-188)
+
+= Nhóm
+en| Groups
+zh| 群组
+es| Grupos
+hi| ग्रुप
+ar| المجموعات
+pt| Grupos
+ru| Группы
+ja| グループ
+ko| 그룹
+de| Gruppen
+fr| Groupes
+id| Grup
+th| กลุ่ม
+tr| Gruplar
+fi| Ryhmät
+
+= đã kết nối
+en| connected
+zh| 已连接
+es| conectados
+hi| जुड़े हुए
+ar| متصلة
+pt| conectados
+ru| подключено
+ja| 接続済み
+ko| 연결됨
+de| verbunden
+fr| connectés
+id| terhubung
+th| เชื่อมต่อแล้ว
+tr| bağlı
+fi| yhdistetty
+
+= Bài đang chạy
+en| Active posts
+zh| 运行中的内容
+es| Publicaciones activas
+hi| सक्रिय पोस्ट
+ar| المنشورات النشطة
+pt| Publicações ativas
+ru| Активные публикации
+ja| 稼働中の投稿
+ko| 실행 중인 게시물
+de| Aktive Beiträge
+fr| Publications actives
+id| Postingan aktif
+th| โพสต์ที่กำลังทำงาน
+tr| Etkin gönderiler
+fi| Aktiiviset julkaisut
+
+= trên tổng {0} bài
+en| out of {0} posts
+zh| 共 {0} 条
+es| de {0} publicaciones
+hi| कुल {0} पोस्ट में से
+ar| من أصل {0} منشور
+pt| de {0} publicações
+ru| из {0} публикаций
+ja| 全{0}件中
+ko| 총 {0}개 중
+de| von insgesamt {0} Beiträgen
+fr| sur {0} publications
+id| dari total {0} postingan
+th| จากทั้งหมด {0} โพสต์
+tr| toplam {0} gönderiden
+fi| {0} julkaisusta
+
+= Đã gửi (7 ngày)
+en| Sent (7 days)
+zh| 已发送(7 天)
+es| Enviadas (7 días)
+hi| भेजी गई (7 दिन)
+ar| المُرسلة (7 أيام)
+pt| Enviadas (7 dias)
+ru| Отправлено (7 дней)
+ja| 送信済み(7日間)
+ko| 발송됨(7일)
+de| Gesendet (7 Tage)
+fr| Envoyées (7 jours)
+id| Terkirim (7 hari)
+th| ส่งแล้ว (7 วัน)
+tr| Gönderilen (7 gün)
+fi| Lähetetty (7 päivää)
+
+= {0} lượt lỗi
+en| {0} failed sends
+zh| {0} 次失败
+es| {0} envíos con error
+hi| {0} बार त्रुटि
+ar| {0} عمليات إرسال فاشلة
+pt| {0} envios com erro
+ru| {0} ошибок отправки
+ja| 失敗{0}件
+ko| 실패 {0}건
+de| {0} fehlgeschlagene Sendungen
+fr| {0} envois en échec
+id| {0} pengiriman gagal
+th| ส่งผิดพลาด {0} ครั้ง
+tr| {0} başarısız gönderim
+fi| {0} epäonnistunutta lähetystä
+
+= không có lỗi
+en| no errors
+zh| 无错误
+es| sin errores
+hi| कोई त्रुटि नहीं
+ar| لا أخطاء
+pt| sem erros
+ru| без ошибок
+ja| エラーなし
+ko| 오류 없음
+de| keine Fehler
+fr| aucune erreur
+id| tanpa kesalahan
+th| ไม่มีข้อผิดพลาด
+tr| hata yok
+fi| ei virheitä
+
+= Tỷ lệ thành công
+en| Success rate
+zh| 成功率
+es| Tasa de éxito
+hi| सफलता दर
+ar| نسبة النجاح
+pt| Taxa de sucesso
+ru| Доля успешных
+ja| 成功率
+ko| 성공률
+de| Erfolgsquote
+fr| Taux de réussite
+id| Tingkat keberhasilan
+th| อัตราความสำเร็จ
+tr| Başarı oranı
+fi| Onnistumisprosentti
+
+= 7 ngày gần nhất
+en| Last 7 days
+zh| 最近 7 天
+es| Últimos 7 días
+hi| पिछले 7 दिन
+ar| آخر 7 أيام
+pt| Últimos 7 dias
+ru| Последние 7 дней
+ja| 過去7日間
+ko| 최근 7일
+de| Letzte 7 Tage
+fr| 7 derniers jours
+id| 7 hari terakhir
+th| 7 วันล่าสุด
+tr| Son 7 gün
+fi| Viimeiset 7 päivää
+
+= Lượt gửi theo ngày
+en| Sends per day
+zh| 每日发送量
+es| Envíos por día
+hi| प्रतिदिन भेजे गए पोस्ट
+ar| عمليات الإرسال يوميًا
+pt| Envios por dia
+ru| Отправки по дням
+ja| 1日あたりの送信数
+ko| 일별 발송 수
+de| Sendungen pro Tag
+fr| Envois par jour
+id| Pengiriman per hari
+th| จำนวนการส่งต่อวัน
+tr| Günlük gönderimler
+fi| Lähetykset päivittäin
+
+= Biểu đồ lượt gửi 7 ngày
+en| Chart of sends over 7 days
+zh| 7 天发送量图表
+es| Gráfico de envíos de 7 días
+hi| 7 दिनों के भेजे गए पोस्ट का चार्ट
+ar| مخطط عمليات الإرسال لـ 7 أيام
+pt| Gráfico de envios de 7 dias
+ru| График отправок за 7 дней
+ja| 7日間の送信数グラフ
+ko| 7일간 발송 수 차트
+de| Diagramm der Sendungen der letzten 7 Tage
+fr| Graphique des envois sur 7 jours
+id| Grafik pengiriman 7 hari
+th| กราฟการส่ง 7 วัน
+tr| 7 günlük gönderim grafiği
+fi| 7 päivän lähetyskaavio
+
+= {0} thành công · {1} lỗi
+en| {0} succeeded · {1} failed
+zh| 成功 {0} · 失败 {1}
+es| {0} correctos · {1} con error
+hi| {0} सफल · {1} त्रुटि
+ar| {0} ناجحة · {1} فاشلة
+pt| {0} com sucesso · {1} com erro
+ru| успешно: {0} · с ошибкой: {1}
+ja| 成功 {0} · 失敗 {1}
+ko| 성공 {0} · 실패 {1}
+de| {0} erfolgreich · {1} fehlgeschlagen
+fr| {0} réussis · {1} en échec
+id| {0} berhasil · {1} gagal
+th| สำเร็จ {0} · ผิดพลาด {1}
+tr| {0} başarılı · {1} hatalı
+fi| {0} onnistui · {1} epäonnistui
+
+= Thành công
+en| Success
+zh| 成功
+es| Correcto
+hi| सफल
+ar| ناجح
+pt| Sucesso
+ru| Успешно
+ja| 成功
+ko| 성공
+de| Erfolgreich
+fr| Réussi
+id| Berhasil
+th| สำเร็จ
+tr| Başarılı
+fi| Onnistui
+
+= Lỗi
+en| Error
+zh| 错误
+es| Error
+hi| त्रुटि
+ar| خطأ
+pt| Erro
+ru| Ошибка
+ja| エラー
+ko| 오류
+de| Fehler
+fr| Erreur
+id| Kesalahan
+th| ข้อผิดพลาด
+tr| Hata
+fi| Virhe
+
+= Sắp đăng
+en| Up next
+zh| 即将发布
+es| Próximas
+hi| आगामी
+ar| القادمة
+pt| Próximas
+ru| Скоро
+ja| 投稿予定
+ko| 예정
+de| Als Nächstes
+fr| À venir
+id| Berikutnya
+th| ที่กำลังจะโพสต์
+tr| Sıradakiler
+fi| Seuraavaksi
+
+= Chưa có bài nào đang chờ đăng.
+en| No posts are waiting to be published.
+zh| 暂无待发布的内容。
+es| No hay publicaciones pendientes.
+hi| कोई पोस्ट प्रकाशन की प्रतीक्षा में नहीं है।
+ar| لا توجد منشورات في انتظار النشر.
+pt| Nenhuma publicação aguardando.
+ru| Нет публикаций в очереди.
+ja| 公開待ちの投稿はありません。
+ko| 게시 대기 중인 게시물이 없습니다.
+de| Keine Beiträge in der Warteschlange.
+fr| Aucune publication en attente.
+id| Belum ada postingan yang menunggu.
+th| ยังไม่มีโพสต์ที่รอโพสต์
+tr| Yayınlanmayı bekleyen gönderi yok.
+fi| Ei julkaisuja jonossa.
+
+= Hoạt động gần đây
+en| Recent activity
+zh| 最近动态
+es| Actividad reciente
+hi| हाल की गतिविधि
+ar| النشاط الأخير
+pt| Atividade recente
+ru| Недавняя активность
+ja| 最近のアクティビティ
+ko| 최근 활동
+de| Letzte Aktivität
+fr| Activité récente
+id| Aktivitas terbaru
+th| กิจกรรมล่าสุด
+tr| Son etkinlik
+fi| Viimeaikainen toiminta
+
+= Xem tất cả
+en| View all
+zh| 查看全部
+es| Ver todo
+hi| सभी देखें
+ar| عرض الكل
+pt| Ver tudo
+ru| Показать все
+ja| すべて表示
+ko| 모두 보기
+de| Alle anzeigen
+fr| Tout voir
+id| Lihat semua
+th| ดูทั้งหมด
+tr| Tümünü gör
+fi| Näytä kaikki
+
+= Chưa có lượt gửi nào.
+en| No sends yet.
+zh| 暂无发送记录。
+es| Aún no hay envíos.
+hi| अभी तक कुछ नहीं भेजा गया।
+ar| لا توجد عمليات إرسال بعد.
+pt| Ainda não há envios.
+ru| Отправок пока нет.
+ja| まだ送信はありません。
+ko| 아직 발송 내역이 없습니다.
+de| Noch keine Sendungen.
+fr| Aucun envoi pour le moment.
+id| Belum ada pengiriman.
+th| ยังไม่มีการส่ง
+tr| Henüz gönderim yok.
+fi| Ei vielä lähetyksiä.
+
+= Đã gửi
+en| Sent
+zh| 已发送
+es| Enviado
+hi| भेजा गया
+ar| تم الإرسال
+pt| Enviado
+ru| Отправлено
+ja| 送信済み
+ko| 발송됨
+de| Gesendet
+fr| Envoyé
+id| Terkirim
+th| ส่งแล้ว
+tr| Gönderildi
+fi| Lähetetty
+
+= Không có bài nào trong mục này
+en| No posts in this category
+zh| 此分类下没有内容
+es| No hay publicaciones en esta categoría
+hi| इस श्रेणी में कोई पोस्ट नहीं है
+ar| لا توجد منشورات في هذا القسم
+pt| Nenhuma publicação nesta categoria
+ru| В этой категории публикаций нет
+ja| このカテゴリには投稿がありません
+ko| 이 분류에 게시물이 없습니다
+de| Keine Beiträge in dieser Kategorie
+fr| Aucune publication dans cette catégorie
+id| Tidak ada postingan di kategori ini
+th| ไม่มีโพสต์ในหมวดนี้
+tr| Bu kategoride gönderi yok
+fi| Tässä luokassa ei ole julkaisuja
+
+= Chưa có bài đăng nào
+en| No posts yet
+zh| 还没有内容
+es| Aún no hay publicaciones
+hi| अभी तक कोई पोस्ट नहीं
+ar| لا توجد منشورات بعد
+pt| Ainda não há publicações
+ru| Публикаций пока нет
+ja| まだ投稿がありません
+ko| 아직 게시물이 없습니다
+de| Noch keine Beiträge
+fr| Aucune publication pour le moment
+id| Belum ada postingan
+th| ยังไม่มีโพสต์
+tr| Henüz gönderi yok
+fi| Ei vielä julkaisuja
+
+= Thử chọn bộ lọc khác.
+en| Try a different filter.
+zh| 试试其他筛选条件。
+es| Prueba con otro filtro.
+hi| कोई और फ़िल्टर आज़माएँ।
+ar| جرّب فلترًا آخر.
+pt| Tente outro filtro.
+ru| Попробуйте другой фильтр.
+ja| 別の絞り込みをお試しください。
+ko| 다른 필터를 선택해 보세요.
+de| Versuchen Sie einen anderen Filter.
+fr| Essayez un autre filtre.
+id| Coba filter lain.
+th| ลองเลือกตัวกรองอื่น
+tr| Başka bir filtre deneyin.
+fi| Kokeile toista suodatinta.
+
+= Tạo bài đầu tiên và đặt lịch để Telegram tự đăng.
+en| Create your first post and schedule it so Telegram posts it for you.
+zh| 创建第一条内容并设置时间,让 Telegram 自动发布。
+es| Crea tu primera publicación y prográmala para que Telegram la publique sola.
+hi| अपनी पहली पोस्ट बनाएँ और शेड्यूल करें ताकि Telegram अपने आप पोस्ट करे।
+ar| أنشئ أول منشور وجدوله ليُنشر تلقائيًا على تيليجرام.
+pt| Crie sua primeira publicação e agende para o Telegram publicar sozinho.
+ru| Создайте первую публикацию и запланируйте её, чтобы Telegram опубликовал её сам.
+ja| 最初の投稿を作成して予約すると、Telegramが自動で投稿します。
+ko| 첫 게시물을 만들고 예약하면 Telegram이 자동으로 게시합니다.
+de| Erstellen Sie Ihren ersten Beitrag und planen Sie ihn, damit Telegram ihn automatisch postet.
+fr| Créez votre première publication et planifiez-la pour que Telegram la publie tout seul.
+id| Buat postingan pertama dan jadwalkan agar Telegram memostingnya otomatis.
+th| สร้างโพสต์แรกและตั้งเวลา แล้ว Telegram จะโพสต์ให้อัตโนมัติ
+tr| İlk gönderinizi oluşturup zamanlayın, Telegram sizin yerinize paylaşsın.
+fi| Luo ensimmäinen julkaisu ja ajasta se, niin Telegram julkaisee sen puolestasi.
+
+= Tạo bài đăng
+en| Create post
+zh| 创建内容
+es| Crear publicación
+hi| पोस्ट बनाएँ
+ar| إنشاء منشور
+pt| Criar publicação
+ru| Создать публикацию
+ja| 投稿を作成
+ko| 게시물 만들기
+de| Beitrag erstellen
+fr| Créer une publication
+id| Buat postingan
+th| สร้างโพสต์
+tr| Gönderi oluştur
+fi| Luo julkaisu
+
+= Lọc bài đăng
+en| Filter posts
+zh| 筛选内容
+es| Filtrar publicaciones
+hi| पोस्ट फ़िल्टर करें
+ar| تصفية المنشورات
+pt| Filtrar publicações
+ru| Фильтр публикаций
+ja| 投稿を絞り込む
+ko| 게시물 필터
+de| Beiträge filtern
+fr| Filtrer les publications
+id| Filter postingan
+th| กรองโพสต์
+tr| Gönderileri filtrele
+fi| Suodata julkaisut
+
+= Tất cả
+en| All
+zh| 全部
+es| Todas
+hi| सभी
+ar| الكل
+pt| Todas
+ru| Все
+ja| すべて
+ko| 전체
+de| Alle
+fr| Toutes
+id| Semua
+th| ทั้งหมด
+tr| Tümü
+fi| Kaikki
+
+= Soạn nội dung và đặt lịch gửi tới các nhóm
+en| Write content and schedule it to your groups
+zh| 撰写内容并安排发送到各群组
+es| Redacta el contenido y prográmalo para tus grupos
+hi| सामग्री लिखें और अपने ग्रुप के लिए शेड्यूल करें
+ar| اكتب المحتوى وجدول إرساله إلى مجموعاتك
+pt| Escreva o conteúdo e agende o envio aos seus grupos
+ru| Напишите текст и запланируйте отправку в ваши группы
+ja| 内容を作成して、グループへの送信を予約します
+ko| 내용을 작성하고 그룹으로 발송을 예약하세요
+de| Inhalt schreiben und den Versand an Ihre Gruppen planen
+fr| Rédigez le contenu et planifiez l'envoi vers vos groupes
+id| Tulis konten dan jadwalkan pengiriman ke grup Anda
+th| เขียนเนื้อหาและตั้งเวลาส่งไปยังกลุ่มของคุณ
+tr| İçeriği yazın ve gruplarınıza gönderimi zamanlayın
+fi| Kirjoita sisältö ja ajasta lähetys ryhmiisi
+
+= (Chỉ có ảnh)
+en| (Image only)
+zh| (仅图片)
+es| (Solo imagen)
+hi| (केवल इमेज)
+ar| (صورة فقط)
+pt| (Somente imagem)
+ru| (Только изображение)
+ja| (画像のみ)
+ko| (이미지만)
+de| (Nur Bild)
+fr| (Image uniquement)
+id| (Hanya gambar)
+th| (รูปภาพอย่างเดียว)
+tr| (Yalnızca görsel)
+fi| (Vain kuva)
+
+= Lần tới: {0} ({1})
+en| Next: {0} ({1})
+zh| 下次:{0}({1})
+es| Próxima: {0} ({1})
+hi| अगली बार: {0} ({1})
+ar| التالي: {0} ({1})
+pt| Próxima: {0} ({1})
+ru| Далее: {0} ({1})
+ja| 次回:{0}({1})
+ko| 다음: {0} ({1})
+de| Nächste: {0} ({1})
+fr| Prochaine : {0} ({1})
+id| Berikutnya: {0} ({1})
+th| ครั้งถัดไป: {0} ({1})
+tr| Sonraki: {0} ({1})
+fi| Seuraava: {0} ({1})
+
+= {0} đã gửi
+en| {0} sent
+zh| 已发送 {0}
+es| {0} enviadas
+hi| {0} भेजी गईं
+ar| {0} مُرسل
+pt| {0} enviadas
+ru| отправлено: {0}
+ja| {0}件送信
+ko| {0}건 발송
+de| {0} gesendet
+fr| {0} envoyées
+id| {0} terkirim
+th| ส่งแล้ว {0}
+tr| {0} gönderildi
+fi| {0} lähetetty
+
+= · {0} lỗi
+en| · {0} failed
+zh| · 失败 {0}
+es| · {0} con error
+hi| · {0} त्रुटि
+ar| · {0} فاشلة
+pt| · {0} com erro
+ru| · ошибок: {0}
+ja| · 失敗{0}
+ko| · 실패 {0}
+de| · {0} fehlgeschlagen
+fr| · {0} en échec
+id| · {0} gagal
+th| · ผิดพลาด {0}
+tr| · {0} hatalı
+fi| · {0} epäonnistui
+
+= Chưa có nhóm
+en| No groups
+zh| 暂无群组
+es| Sin grupos
+hi| कोई ग्रुप नहीं
+ar| لا توجد مجموعات
+pt| Sem grupos
+ru| Нет групп
+ja| グループなし
+ko| 그룹 없음
+de| Keine Gruppen
+fr| Aucun groupe
+id| Belum ada grup
+th| ยังไม่มีกลุ่ม
+tr| Grup yok
+fi| Ei ryhmiä
+
+= Gửi lỗi {0}/{1} nhóm: {2}
+en| Failed for {0}/{1} groups: {2}
+zh| {0}/{1} 个群组发送失败:{2}
+es| Error en {0}/{1} grupos: {2}
+hi| {0}/{1} ग्रुप में भेजना विफल: {2}
+ar| فشل الإرسال إلى {0}/{1} مجموعة: {2}
+pt| Falha em {0}/{1} grupos: {2}
+ru| Ошибка в {0} из {1} групп: {2}
+ja| {1}グループ中{0}件で送信失敗:{2}
+ko| {1}개 그룹 중 {0}개에서 발송 실패: {2}
+de| Fehler bei {0}/{1} Gruppen: {2}
+fr| Échec pour {0}/{1} groupes : {2}
+id| Gagal di {0}/{1} grup: {2}
+th| ส่งไม่สำเร็จ {0}/{1} กลุ่ม: {2}
+tr| {0}/{1} grupta hata: {2}
+fi| Epäonnistui {0}/{1} ryhmässä: {2}
+
+= Đã gửi tới tất cả nhóm
+en| Sent to all groups
+zh| 已发送到所有群组
+es| Enviado a todos los grupos
+hi| सभी ग्रुप में भेज दिया गया
+ar| تم الإرسال إلى جميع المجموعات
+pt| Enviado a todos os grupos
+ru| Отправлено во все группы
+ja| すべてのグループに送信しました
+ko| 모든 그룹에 발송했습니다
+de| An alle Gruppen gesendet
+fr| Envoyé à tous les groupes
+id| Terkirim ke semua grup
+th| ส่งไปยังทุกกลุ่มแล้ว
+tr| Tüm gruplara gönderildi
+fi| Lähetetty kaikkiin ryhmiin
+
+= Gửi ngay
+en| Send now
+zh| 立即发送
+es| Enviar ahora
+hi| अभी भेजें
+ar| إرسال الآن
+pt| Enviar agora
+ru| Отправить сейчас
+ja| 今すぐ送信
+ko| 지금 발송
+de| Jetzt senden
+fr| Envoyer maintenant
+id| Kirim sekarang
+th| ส่งทันที
+tr| Şimdi gönder
+fi| Lähetä nyt
+
+= Đã tạm dừng
+en| Paused
+zh| 已暂停
+es| En pausa
+hi| रोका गया
+ar| تم الإيقاف المؤقت
+pt| Pausado
+ru| Приостановлено
+ja| 一時停止しました
+ko| 일시정지됨
+de| Pausiert
+fr| Mis en pause
+id| Dijeda
+th| หยุดชั่วคราวแล้ว
+tr| Duraklatıldı
+fi| Keskeytetty
+
+= Đã tiếp tục
+en| Resumed
+zh| 已恢复
+es| Reanudado
+hi| फिर से शुरू किया गया
+ar| تم الاستئناف
+pt| Retomado
+ru| Возобновлено
+ja| 再開しました
+ko| 재개됨
+de| Fortgesetzt
+fr| Repris
+id| Dilanjutkan
+th| ดำเนินการต่อแล้ว
+tr| Sürdürüldü
+fi| Jatkettu
+
+= Tiếp tục
+en| Resume
+zh| 恢复
+es| Reanudar
+hi| फिर शुरू करें
+ar| استئناف
+pt| Retomar
+ru| Возобновить
+ja| 再開
+ko| 재개
+de| Fortsetzen
+fr| Reprendre
+id| Lanjutkan
+th| ดำเนินการต่อ
+tr| Sürdür
+fi| Jatka
+
+= Sửa
+en| Edit
+zh| 编辑
+es| Editar
+hi| संपादित करें
+ar| تعديل
+pt| Editar
+ru| Изменить
+ja| 編集
+ko| 수정
+de| Bearbeiten
+fr| Modifier
+id| Ubah
+th| แก้ไข
+tr| Düzenle
+fi| Muokkaa
+
+= Xoá bài đăng?
+en| Delete this post?
+zh| 删除此内容?
+es| ¿Eliminar esta publicación?
+hi| यह पोस्ट हटाएँ?
+ar| حذف هذا المنشور؟
+pt| Excluir esta publicação?
+ru| Удалить публикацию?
+ja| この投稿を削除しますか?
+ko| 이 게시물을 삭제할까요?
+de| Diesen Beitrag löschen?
+fr| Supprimer cette publication ?
+id| Hapus postingan ini?
+th| ลบโพสต์นี้หรือไม่
+tr| Bu gönderi silinsin mi?
+fi| Poistetaanko julkaisu?
+
+= "{0}" sẽ bị xoá vĩnh viễn cùng lịch đăng.
+en| "{0}" and its schedule will be permanently deleted.
+zh| “{0}”及其发布计划将被永久删除。
+es| «{0}» y su programación se eliminarán permanentemente.
+hi| "{0}" और उसका शेड्यूल हमेशा के लिए हटा दिया जाएगा।
+ar| سيُحذف "{0}" وجدوله نهائيًا.
+pt| "{0}" e o agendamento serão excluídos permanentemente.
+ru| «{0}» и его расписание будут удалены безвозвратно.
+ja| 「{0}」とそのスケジュールは完全に削除されます。
+ko| "{0}"와(과) 해당 일정이 영구적으로 삭제됩니다.
+de| „{0}“ und der zugehörige Zeitplan werden dauerhaft gelöscht.
+fr| « {0} » et son planning seront supprimés définitivement.
+id| "{0}" dan jadwalnya akan dihapus permanen.
+th| "{0}" และตารางเวลาจะถูกลบถาวร
+tr| "{0}" ve zamanlaması kalıcı olarak silinecek.
+fi| "{0}" ja sen aikataulu poistetaan pysyvästi.
+
+= Xoá
+en| Delete
+zh| 删除
+es| Eliminar
+hi| हटाएँ
+ar| حذف
+pt| Excluir
+ru| Удалить
+ja| 削除
+ko| 삭제
+de| Löschen
+fr| Supprimer
+id| Hapus
+th| ลบ
+tr| Sil
+fi| Poista
+
+= Đã xoá bài đăng
+en| Post deleted
+zh| 已删除内容
+es| Publicación eliminada
+hi| पोस्ट हटा दी गई
+ar| تم حذف المنشور
+pt| Publicação excluída
+ru| Публикация удалена
+ja| 投稿を削除しました
+ko| 게시물을 삭제했습니다
+de| Beitrag gelöscht
+fr| Publication supprimée
+id| Postingan dihapus
+th| ลบโพสต์แล้ว
+tr| Gönderi silindi
+fi| Julkaisu poistettu
+
+= VD: Bản tin sáng
+en| e.g. Morning update
+zh| 例如:早间快讯
+es| p. ej. Resumen matutino
+hi| उदा. सुबह का अपडेट
+ar| مثال: نشرة الصباح
+pt| ex.: Resumo da manhã
+ru| напр., Утренняя сводка
+ja| 例:朝のニュース
+ko| 예: 아침 소식
+de| z. B. Morgen-Update
+fr| ex. : Point du matin
+id| mis. Kabar pagi
+th| เช่น ข่าวเช้า
+tr| örn. Sabah bülteni
+fi| esim. Aamukatsaus
+
+= Nội dung tin nhắn...
+en| Message content...
+zh| 消息内容……
+es| Contenido del mensaje...
+hi| संदेश की सामग्री...
+ar| محتوى الرسالة...
+pt| Conteúdo da mensagem...
+ru| Текст сообщения...
+ja| メッセージ内容...
+ko| 메시지 내용...
+de| Nachrichteninhalt...
+fr| Contenu du message...
+id| Isi pesan...
+th| เนื้อหาข้อความ...
+tr| Mesaj içeriği...
+fi| Viestin sisältö...
+
+= Văn bản thường
+en| Plain text
+zh| 纯文本
+es| Texto sin formato
+hi| सादा टेक्स्ट
+ar| نص عادي
+pt| Texto simples
+ru| Обычный текст
+ja| プレーンテキスト
+ko| 일반 텍스트
+de| Nur Text
+fr| Texte brut
+id| Teks biasa
+th| ข้อความธรรมดา
+tr| Düz metin
+fi| Pelkkä teksti
+
+= Kiểu lịch
+en| Schedule type
+zh| 计划类型
+es| Tipo de programación
+hi| शेड्यूल का प्रकार
+ar| نوع الجدولة
+pt| Tipo de agendamento
+ru| Тип расписания
+ja| スケジュールの種類
+ko| 일정 유형
+de| Zeitplan-Art
+fr| Type de planification
+id| Jenis jadwal
+th| ประเภทการตั้งเวลา
+tr| Zamanlama türü
+fi| Aikataulutyyppi
+
+= Một lần
+en| Once
+zh| 单次
+es| Una vez
+hi| एक बार
+ar| مرة واحدة
+pt| Uma vez
+ru| Один раз
+ja| 1回
+ko| 1회
+de| Einmalig
+fr| Une fois
+id| Sekali
+th| ครั้งเดียว
+tr| Tek sefer
+fi| Kerran
+
+= Hằng ngày
+en| Daily
+zh| 每天
+es| Diario
+hi| रोज़
+ar| يوميًا
+pt| Diário
+ru| Ежедневно
+ja| 毎日
+ko| 매일
+de| Täglich
+fr| Quotidien
+id| Harian
+th| รายวัน
+tr| Günlük
+fi| Päivittäin
+
+= Theo thứ
+en| By weekday
+zh| 按星期
+es| Por día
+hi| सप्ताह के दिन
+ar| حسب اليوم
+pt| Por dia
+ru| По дням
+ja| 曜日
+ko| 요일별
+de| Wochentage
+fr| Par jour
+id| Per hari
+th| ตามวัน
+tr| Haftanın günleri
+fi| Viikonpäivät
+
+= Chu kỳ
+en| Interval
+zh| 间隔
+es| Intervalo
+hi| अंतराल
+ar| فاصل
+pt| Intervalo
+ru| Интервал
+ja| 間隔
+ko| 주기
+de| Intervall
+fr| Intervalle
+id| Interval
+th| รอบ
+tr| Aralık
+fi| Väli
+
+= Ngày trong tuần
+en| Days of the week
+zh| 星期
+es| Días de la semana
+hi| सप्ताह के दिन
+ar| أيام الأسبوع
+pt| Dias da semana
+ru| Дни недели
+ja| 曜日
+ko| 요일
+de| Wochentage
+fr| Jours de la semaine
+id| Hari dalam seminggu
+th| วันในสัปดาห์
+tr| Haftanın günleri
+fi| Viikonpäivät
+
+= Ngày
+en| Date
+zh| 日期
+es| Fecha
+hi| तारीख़
+ar| التاريخ
+pt| Data
+ru| Дата
+ja| 日付
+ko| 날짜
+de| Datum
+fr| Date
+id| Tanggal
+th| วันที่
+tr| Tarih
+fi| Päivämäärä
+
+= Giờ
+en| Time
+zh| 时间
+es| Hora
+hi| समय
+ar| الوقت
+pt| Hora
+ru| Время
+ja| 時刻
+ko| 시간
+de| Uhrzeit
+fr| Heure
+id| Jam
+th| เวลา
+tr| Saat
+fi| Kellonaika
+
+= Các ngày đăng
+en| Posting days
+zh| 发布日
+es| Días de publicación
+hi| पोस्टिंग के दिन
+ar| أيام النشر
+pt| Dias de publicação
+ru| Дни публикации
+ja| 投稿する曜日
+ko| 게시 요일
+de| Posttage
+fr| Jours de publication
+id| Hari posting
+th| วันที่โพสต์
+tr| Gönderi günleri
+fi| Julkaisupäivät
+
+= Lặp mỗi (phút)
+en| Repeat every (minutes)
+zh| 重复间隔(分钟)
+es| Repetir cada (minutos)
+hi| हर कितने मिनट पर दोहराएँ
+ar| التكرار كل (دقائق)
+pt| Repetir a cada (minutos)
+ru| Повторять каждые (минуты)
+ja| 繰り返し間隔(分)
+ko| 반복 주기(분)
+de| Wiederholen alle (Minuten)
+fr| Répéter toutes les (minutes)
+id| Ulangi setiap (menit)
+th| ทำซ้ำทุก (นาที)
+tr| Tekrarlama aralığı (dakika)
+fi| Toista joka (minuuttia)
+
+= Tối thiểu 5 phút. Có thể đặt giờ bắt đầu bên cạnh.
+en| Minimum 5 minutes. You can also set a start time alongside.
+zh| 最少 5 分钟,也可在旁边设置开始时间。
+es| Mínimo 5 minutos. También puedes fijar una hora de inicio.
+hi| कम से कम 5 मिनट। साथ में शुरुआती समय भी तय कर सकते हैं।
+ar| الحد الأدنى 5 دقائق. يمكنك أيضًا تحديد وقت بدء بجانبه.
+pt| Mínimo de 5 minutos. Você também pode definir um horário de início.
+ru| Минимум 5 минут. Рядом можно задать время начала.
+ja| 最短5分。開始時刻も併せて指定できます。
+ko| 최소 5분. 시작 시간을 함께 지정할 수도 있습니다.
+de| Mindestens 5 Minuten. Daneben können Sie eine Startzeit festlegen.
+fr| 5 minutes minimum. Vous pouvez aussi définir une heure de début.
+id| Minimal 5 menit. Anda juga bisa menentukan waktu mulai.
+th| ขั้นต่ำ 5 นาที และตั้งเวลาเริ่มต้นไว้ข้าง ๆ ได้
+tr| En az 5 dakika. Yanında bir başlangıç saati de belirleyebilirsiniz.
+fi| Vähintään 5 minuuttia. Voit asettaa myös aloitusajan.
+
+= {0} tối đa {1}MB (file này {2})
+en| {0} max {1}MB (this file is {2})
+zh| {0} 最大 {1}MB(此文件为 {2})
+es| {0}: máximo {1}MB (este archivo pesa {2})
+hi| {0} अधिकतम {1}MB (यह फ़ाइल {2} है)
+ar| {0}: الحد الأقصى {1}MB (حجم هذا الملف {2})
+pt| {0}: máximo de {1}MB (este arquivo tem {2})
+ru| {0}: максимум {1} МБ (этот файл — {2})
+ja| {0}は最大{1}MBです(このファイルは{2})
+ko| {0} 최대 {1}MB (이 파일은 {2})
+de| {0}: maximal {1}MB (diese Datei hat {2})
+fr| {0} : {1} Mo maximum (ce fichier fait {2})
+id| {0} maks. {1}MB (file ini {2})
+th| {0} สูงสุด {1}MB (ไฟล์นี้ {2})
+tr| {0} en fazla {1}MB (bu dosya {2})
+fi| {0}: enintään {1} Mt (tämä tiedosto on {2})
+
+= Đang tải lên... {0}%
+en| Uploading... {0}%
+zh| 正在上传…… {0}%
+es| Subiendo... {0}%
+hi| अपलोड हो रहा है... {0}%
+ar| جارٍ الرفع... {0}%
+pt| Enviando... {0}%
+ru| Загрузка... {0}%
+ja| アップロード中... {0}%
+ko| 업로드 중... {0}%
+de| Wird hochgeladen... {0}%
+fr| Téléversement... {0}%
+id| Mengunggah... {0}%
+th| กำลังอัปโหลด... {0}%
+tr| Yükleniyor... {0}%
+fi| Ladataan... {0}%
+
+= Gỡ
+en| Remove
+zh| 移除
+es| Quitar
+hi| हटाएँ
+ar| إزالة
+pt| Remover
+ru| Убрать
+ja| 外す
+ko| 제거
+de| Entfernen
+fr| Retirer
+id| Lepas
+th| นำออก
+tr| Kaldır
+fi| Poista
+
+= Chọn ảnh hoặc video từ máy
+en| Choose an image or video from your device
+zh| 从设备选择图片或视频
+es| Elige una imagen o un vídeo de tu dispositivo
+hi| अपने डिवाइस से इमेज या वीडियो चुनें
+ar| اختر صورة أو مقطع فيديو من جهازك
+pt| Escolha uma imagem ou vídeo do seu dispositivo
+ru| Выберите изображение или видео на устройстве
+ja| 端末から画像または動画を選択
+ko| 기기에서 이미지 또는 동영상 선택
+de| Bild oder Video vom Gerät auswählen
+fr| Choisissez une image ou une vidéo sur votre appareil
+id| Pilih gambar atau video dari perangkat
+th| เลือกรูปภาพหรือวิดีโอจากอุปกรณ์
+tr| Cihazınızdan görsel veya video seçin
+fi| Valitse kuva tai video laitteeltasi
+
+= JPG, PNG, WEBP, GIF (≤10MB) · MP4 (≤50MB) · hoặc kéo thả vào đây
+en| JPG, PNG, WEBP, GIF (≤10MB) · MP4 (≤50MB) · or drag and drop here
+zh| JPG、PNG、WEBP、GIF(≤10MB)· MP4(≤50MB)· 或拖放到此处
+es| JPG, PNG, WEBP, GIF (≤10MB) · MP4 (≤50MB) · o arrastra y suelta aquí
+hi| JPG, PNG, WEBP, GIF (≤10MB) · MP4 (≤50MB) · या यहाँ खींचकर छोड़ें
+ar| JPG وPNG وWEBP وGIF (≤10MB) · MP4 (≤50MB) · أو اسحب وأفلت هنا
+pt| JPG, PNG, WEBP, GIF (≤10MB) · MP4 (≤50MB) · ou arraste e solte aqui
+ru| JPG, PNG, WEBP, GIF (≤10 МБ) · MP4 (≤50 МБ) · или перетащите сюда
+ja| JPG、PNG、WEBP、GIF(10MBまで)· MP4(50MBまで)· またはここにドラッグ&ドロップ
+ko| JPG, PNG, WEBP, GIF(≤10MB) · MP4(≤50MB) · 또는 여기에 끌어다 놓기
+de| JPG, PNG, WEBP, GIF (≤10MB) · MP4 (≤50MB) · oder hierher ziehen
+fr| JPG, PNG, WEBP, GIF (≤10 Mo) · MP4 (≤50 Mo) · ou glissez-déposez ici
+id| JPG, PNG, WEBP, GIF (≤10MB) · MP4 (≤50MB) · atau seret dan lepas di sini
+th| JPG, PNG, WEBP, GIF (≤10MB) · MP4 (≤50MB) · หรือลากมาวางที่นี่
+tr| JPG, PNG, WEBP, GIF (≤10MB) · MP4 (≤50MB) · veya buraya sürükleyip bırakın
+fi| JPG, PNG, WEBP, GIF (≤10 Mt) · MP4 (≤50 Mt) · tai vedä ja pudota tähän

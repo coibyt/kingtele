@@ -1,0 +1,919 @@
+# Menu, đăng nhập, đăng ký, 404, thông báo chung (72-125)
+
+= Bảng điều khiển - KingTele
+en| Dashboard - KingTele
+zh| 控制台 - KingTele
+es| Panel - KingTele
+hi| डैशबोर्ड - KingTele
+ar| لوحة التحكم - KingTele
+pt| Painel - KingTele
+ru| Панель управления - KingTele
+ja| ダッシュボード - KingTele
+ko| 대시보드 - KingTele
+de| Dashboard - KingTele
+fr| Tableau de bord - KingTele
+id| Dasbor - KingTele
+th| แดชบอร์ด - KingTele
+tr| Panel - KingTele
+fi| Hallintapaneeli - KingTele
+
+= Bỏ qua tới nội dung
+en| Skip to content
+zh| 跳到主要内容
+es| Saltar al contenido
+hi| सामग्री पर जाएँ
+ar| تخطَّ إلى المحتوى
+pt| Pular para o conteúdo
+ru| Перейти к содержимому
+ja| 本文へスキップ
+ko| 본문으로 건너뛰기
+de| Zum Inhalt springen
+fr| Aller au contenu
+id| Lewati ke konten
+th| ข้ามไปยังเนื้อหา
+tr| İçeriğe geç
+fi| Siirry sisältöön
+
+= Tổng quan
+en| Overview
+zh| 概览
+es| Resumen
+hi| अवलोकन
+ar| نظرة عامة
+pt| Visão geral
+ru| Обзор
+ja| 概要
+ko| 개요
+de| Übersicht
+fr| Vue d'ensemble
+id| Ringkasan
+th| ภาพรวม
+tr| Genel bakış
+fi| Yleiskatsaus
+
+= Bài đăng
+en| Posts
+zh| 内容
+es| Publicaciones
+hi| पोस्ट
+ar| المنشورات
+pt| Publicações
+ru| Публикации
+ja| 投稿
+ko| 게시물
+de| Beiträge
+fr| Publications
+id| Postingan
+th| โพสต์
+tr| Gönderiler
+fi| Julkaisut
+
+= Nhóm Telegram
+en| Telegram groups
+zh| Telegram 群组
+es| Grupos de Telegram
+hi| Telegram ग्रुप
+ar| مجموعات تيليجرام
+pt| Grupos do Telegram
+ru| Группы Telegram
+ja| Telegramグループ
+ko| Telegram 그룹
+de| Telegram-Gruppen
+fr| Groupes Telegram
+id| Grup Telegram
+th| กลุ่ม Telegram
+tr| Telegram grupları
+fi| Telegram-ryhmät
+
+= Điểm King
+en| King Points
+zh| King 积分
+es| Puntos King
+hi| King पॉइंट
+ar| نقاط King
+pt| Pontos King
+ru| King-баллы
+ja| Kingポイント
+ko| King 포인트
+de| King-Punkte
+fr| Points King
+id| Poin King
+th| คะแนน King
+tr| King Puanı
+fi| King-pisteet
+
+= Nhật ký gửi
+en| Send log
+zh| 发送日志
+es| Registro de envíos
+hi| भेजने का लॉग
+ar| سجل الإرسال
+pt| Registro de envios
+ru| Журнал отправок
+ja| 送信履歴
+ko| 발송 기록
+de| Versandprotokoll
+fr| Historique des envois
+id| Catatan pengiriman
+th| บันทึกการส่ง
+tr| Gönderim günlüğü
+fi| Lähetysloki
+
+= Cài đặt
+en| Settings
+zh| 设置
+es| Ajustes
+hi| सेटिंग्स
+ar| الإعدادات
+pt| Configurações
+ru| Настройки
+ja| 設定
+ko| 설정
+de| Einstellungen
+fr| Paramètres
+id| Pengaturan
+th| การตั้งค่า
+tr| Ayarlar
+fi| Asetukset
+
+= Đăng xuất
+en| Log out
+zh| 退出登录
+es| Cerrar sesión
+hi| लॉग आउट
+ar| تسجيل الخروج
+pt| Sair
+ru| Выйти
+ja| ログアウト
+ko| 로그아웃
+de| Abmelden
+fr| Se déconnecter
+id| Keluar
+th| ออกจากระบบ
+tr| Çıkış yap
+fi| Kirjaudu ulos
+
+= Điều hướng bảng điều khiển
+en| Dashboard navigation
+zh| 控制台导航
+es| Navegación del panel
+hi| डैशबोर्ड नेविगेशन
+ar| التنقل في لوحة التحكم
+pt| Navegação do painel
+ru| Навигация по панели
+ja| ダッシュボードのナビゲーション
+ko| 대시보드 메뉴
+de| Dashboard-Navigation
+fr| Navigation du tableau de bord
+id| Navigasi dasbor
+th| เมนูแดชบอร์ด
+tr| Panel gezinmesi
+fi| Hallintapaneelin valikko
+
+= Mở menu
+en| Open menu
+zh| 打开菜单
+es| Abrir menú
+hi| मेनू खोलें
+ar| فتح القائمة
+pt| Abrir menu
+ru| Открыть меню
+ja| メニューを開く
+ko| 메뉴 열기
+de| Menü öffnen
+fr| Ouvrir le menu
+id| Buka menu
+th| เปิดเมนู
+tr| Menüyü aç
+fi| Avaa valikko
+
+= Giờ hiện tại
+en| Current time
+zh| 当前时间
+es| Hora actual
+hi| वर्तमान समय
+ar| الوقت الحالي
+pt| Hora atual
+ru| Текущее время
+ja| 現在時刻
+ko| 현재 시각
+de| Aktuelle Uhrzeit
+fr| Heure actuelle
+id| Waktu saat ini
+th| เวลาปัจจุบัน
+tr| Şu anki saat
+fi| Kellonaika
+
+= Đăng nhập - KingTele
+en| Log in - KingTele
+zh| 登录 - KingTele
+es| Iniciar sesión - KingTele
+hi| लॉग इन - KingTele
+ar| تسجيل الدخول - KingTele
+pt| Entrar - KingTele
+ru| Вход - KingTele
+ja| ログイン - KingTele
+ko| 로그인 - KingTele
+de| Anmelden - KingTele
+fr| Connexion - KingTele
+id| Masuk - KingTele
+th| เข้าสู่ระบบ - KingTele
+tr| Giriş - KingTele
+fi| Kirjautuminen - KingTele
+
+= Chào mừng trở lại
+en| Welcome back
+zh| 欢迎回来
+es| Te damos la bienvenida de nuevo
+hi| वापसी पर स्वागत है
+ar| مرحبًا بعودتك
+pt| Bem-vindo de volta
+ru| С возвращением
+ja| おかえりなさい
+ko| 다시 오신 것을 환영합니다
+de| Willkommen zurück
+fr| Bon retour
+id| Selamat datang kembali
+th| ยินดีต้อนรับกลับมา
+tr| Tekrar hoş geldiniz
+fi| Tervetuloa takaisin
+
+= Đăng nhập để quản lý lịch đăng bài.
+en| Log in to manage your posting schedule.
+zh| 登录以管理你的发布计划。
+es| Inicia sesión para gestionar tu calendario de publicaciones.
+hi| अपना पोस्टिंग शेड्यूल प्रबंधित करने के लिए लॉग इन करें।
+ar| سجّل الدخول لإدارة جدول منشوراتك.
+pt| Entre para gerenciar sua agenda de publicações.
+ru| Войдите, чтобы управлять расписанием публикаций.
+ja| ログインして投稿スケジュールを管理しましょう。
+ko| 로그인하여 게시 일정을 관리하세요.
+de| Melden Sie sich an, um Ihren Zeitplan zu verwalten.
+fr| Connectez-vous pour gérer votre planning de publications.
+id| Masuk untuk mengelola jadwal posting Anda.
+th| เข้าสู่ระบบเพื่อจัดการตารางโพสต์ของคุณ
+tr| Gönderi takviminizi yönetmek için giriş yapın.
+fi| Kirjaudu sisään hallitaksesi julkaisuaikataulua.
+
+= Mật khẩu
+en| Password
+zh| 密码
+es| Contraseña
+hi| पासवर्ड
+ar| كلمة المرور
+pt| Senha
+ru| Пароль
+ja| パスワード
+ko| 비밀번호
+de| Passwort
+fr| Mot de passe
+id| Kata sandi
+th| รหัสผ่าน
+tr| Parola
+fi| Salasana
+
+= Chưa có tài khoản? Tạo tài khoản
+en| No account yet? Create one
+zh| 还没有账号?立即创建
+es| ¿Aún no tienes cuenta? Crea una
+hi| अभी तक खाता नहीं है? बनाएँ
+ar| ليس لديك حساب؟ أنشئ حسابًا
+pt| Ainda não tem conta? Crie uma
+ru| Нет аккаунта? Создайте
+ja| アカウントをお持ちでない方は作成
+ko| 계정이 없으신가요? 계정 만들기
+de| Noch kein Konto? Jetzt erstellen
+fr| Pas encore de compte ? Créez-en un
+id| Belum punya akun? Buat akun
+th| ยังไม่มีบัญชี? สร้างบัญชี
+tr| Hesabınız yok mu? Oluşturun
+fi| Ei vielä tiliä? Luo tili
+
+= Tạo tài khoản - KingTele
+en| Create account - KingTele
+zh| 创建账号 - KingTele
+es| Crear cuenta - KingTele
+hi| खाता बनाएँ - KingTele
+ar| إنشاء حساب - KingTele
+pt| Criar conta - KingTele
+ru| Регистрация - KingTele
+ja| アカウント作成 - KingTele
+ko| 계정 만들기 - KingTele
+de| Konto erstellen - KingTele
+fr| Créer un compte - KingTele
+id| Buat akun - KingTele
+th| สร้างบัญชี - KingTele
+tr| Hesap oluştur - KingTele
+fi| Luo tili - KingTele
+
+= Tặng ngay
+en| Get
+zh| 立即获赠
+es| Recibe
+hi| तुरंत पाएँ
+ar| احصل على
+pt| Ganhe
+ru| Получите
+ja| 登録でもれなく
+ko| 지금 바로
+de| Erhalten Sie
+fr| Recevez
+id| Dapatkan
+th| รับทันที
+tr| Hemen kazanın:
+fi| Saat heti
+
+= 500 Điểm King
+en| 500 King Points
+zh| 500 King 积分
+es| 500 Puntos King
+hi| 500 King पॉइंट
+ar| 500 نقطة King
+pt| 500 Pontos King
+ru| 500 King-баллов
+ja| 500 Kingポイント
+ko| 500 King 포인트
+de| 500 King-Punkte
+fr| 500 Points King
+id| 500 Poin King
+th| 500 คะแนน King
+tr| 500 King Puanı
+fi| 500 King-pistettä
+
+= (đăng 500 bài). Sau đó bạn kết nối bot Telegram của mình và bắt đầu lên lịch đăng bài.
+en| (enough for 500 posts). Then connect your own Telegram bot and start scheduling posts.
+zh| (可发布 500 条内容)。之后连接你自己的 Telegram 机器人,即可开始安排发布。
+es| (suficientes para 500 publicaciones). Luego conecta tu propio bot de Telegram y empieza a programar publicaciones.
+hi| (500 पोस्ट के लिए पर्याप्त)। फिर अपना Telegram बॉट जोड़ें और पोस्ट शेड्यूल करना शुरू करें।
+ar| (تكفي لـ 500 منشور). بعدها اربط بوت تيليجرام الخاص بك وابدأ بجدولة المنشورات.
+pt| (suficientes para 500 publicações). Depois conecte seu próprio bot do Telegram e comece a agendar.
+ru| (хватит на 500 публикаций). Затем подключите своего бота Telegram и начните планировать публикации.
+ja| (500回分の投稿に相当)をプレゼント。そのあとご自身のTelegramボットを接続して、投稿の予約を始めましょう。
+ko| (게시물 500건 분량)을 드립니다. 이후 본인의 Telegram 봇을 연결하고 게시 예약을 시작하세요.
+de| (reicht für 500 Beiträge). Verbinden Sie danach Ihren eigenen Telegram-Bot und planen Sie Ihre Beiträge.
+fr| (de quoi publier 500 fois). Connectez ensuite votre propre bot Telegram et commencez à planifier vos publications.
+id| (cukup untuk 500 postingan). Setelah itu hubungkan bot Telegram Anda sendiri dan mulai menjadwalkan postingan.
+th| (เพียงพอสำหรับ 500 โพสต์) จากนั้นเชื่อมต่อบอท Telegram ของคุณเองแล้วเริ่มตั้งเวลาโพสต์
+tr| (500 gönderiye yeter). Ardından kendi Telegram botunuzu bağlayın ve gönderileri zamanlamaya başlayın.
+fi| (riittää 500 julkaisuun). Yhdistä sitten oma Telegram-bottisi ja aloita julkaisujen ajastaminen.
+
+= Bạn đang đăng ký qua link giới thiệu. Chạy bài đầu tiên thành công để nhận thêm 1000 Điểm King.
+en| You are signing up through a referral link. Send your first post successfully to earn 1000 more King Points.
+zh| 你正在通过邀请链接注册。成功发出第一条内容即可再获得 1000 King 积分。
+es| Te estás registrando mediante un enlace de invitación. Envía con éxito tu primera publicación para ganar 1000 Puntos King más.
+hi| आप रेफ़रल लिंक से साइन अप कर रहे हैं। पहली पोस्ट सफलतापूर्वक भेजने पर आपको 1000 और King पॉइंट मिलेंगे।
+ar| أنت تسجّل عبر رابط دعوة. أرسل أول منشور بنجاح لتحصل على 1000 نقطة King إضافية.
+pt| Você está se cadastrando por um link de indicação. Envie sua primeira publicação com sucesso para ganhar mais 1000 Pontos King.
+ru| Вы регистрируетесь по реферальной ссылке. Успешно отправьте первую публикацию и получите ещё 1000 King-баллов.
+ja| 紹介リンクから登録しています。最初の投稿を送信できると、さらに1000 Kingポイントがもらえます。
+ko| 추천 링크로 가입하는 중입니다. 첫 게시물을 성공적으로 보내면 1000 King 포인트를 추가로 받습니다.
+de| Sie registrieren sich über einen Empfehlungslink. Senden Sie Ihren ersten Beitrag erfolgreich, um 1000 weitere King-Punkte zu erhalten.
+fr| Vous vous inscrivez via un lien de parrainage. Envoyez votre première publication avec succès pour gagner 1000 Points King de plus.
+id| Anda mendaftar lewat tautan referral. Kirim postingan pertama dengan sukses untuk mendapat 1000 Poin King tambahan.
+th| คุณกำลังสมัครผ่านลิงก์แนะนำ ส่งโพสต์แรกสำเร็จเพื่อรับเพิ่มอีก 1000 คะแนน King
+tr| Davet bağlantısıyla kaydoluyorsunuz. İlk gönderinizi başarıyla gönderirseniz 1000 King Puanı daha kazanırsınız.
+fi| Rekisteröidyt suosituslinkin kautta. Lähetä ensimmäinen julkaisusi onnistuneesti saadaksesi vielä 1000 King-pistettä.
+
+= Họ và tên
+en| Full name
+zh| 姓名
+es| Nombre completo
+hi| पूरा नाम
+ar| الاسم الكامل
+pt| Nome completo
+ru| Полное имя
+ja| 氏名
+ko| 이름
+de| Vollständiger Name
+fr| Nom complet
+id| Nama lengkap
+th| ชื่อ-นามสกุล
+tr| Ad soyad
+fi| Koko nimi
+
+= Tối thiểu 8 ký tự.
+en| At least 8 characters.
+zh| 至少 8 个字符。
+es| Mínimo 8 caracteres.
+hi| कम से कम 8 अक्षर।
+ar| 8 أحرف على الأقل.
+pt| No mínimo 8 caracteres.
+ru| Не менее 8 символов.
+ja| 8文字以上。
+ko| 최소 8자.
+de| Mindestens 8 Zeichen.
+fr| 8 caractères minimum.
+id| Minimal 8 karakter.
+th| อย่างน้อย 8 ตัวอักษร
+tr| En az 8 karakter.
+fi| Vähintään 8 merkkiä.
+
+= Khi tạo tài khoản, bạn đồng ý không dùng dịch vụ để gửi tin rác hoặc nội dung vi phạm pháp luật.
+en| By creating an account, you agree not to use the service to send spam or unlawful content.
+zh| 创建账号即表示你同意不使用本服务发送垃圾信息或违法内容。
+es| Al crear una cuenta, aceptas no usar el servicio para enviar spam ni contenido ilegal.
+hi| खाता बनाकर आप सहमत होते हैं कि सेवा का उपयोग स्पैम या ग़ैरक़ानूनी सामग्री भेजने के लिए नहीं करेंगे।
+ar| بإنشاء الحساب فإنك توافق على عدم استخدام الخدمة لإرسال رسائل مزعجة أو محتوى مخالف للقانون.
+pt| Ao criar uma conta, você concorda em não usar o serviço para enviar spam ou conteúdo ilegal.
+ru| Создавая аккаунт, вы соглашаетесь не использовать сервис для рассылки спама и противоправного контента.
+ja| アカウントを作成すると、スパムや違法なコンテンツの送信にサービスを利用しないことに同意したものとみなされます。
+ko| 계정을 만들면 스팸이나 불법 콘텐츠를 보내는 데 서비스를 사용하지 않는 데 동의하는 것으로 간주됩니다.
+de| Mit der Kontoerstellung stimmen Sie zu, den Dienst nicht für Spam oder rechtswidrige Inhalte zu nutzen.
+fr| En créant un compte, vous acceptez de ne pas utiliser le service pour envoyer du spam ou des contenus illégaux.
+id| Dengan membuat akun, Anda setuju tidak menggunakan layanan ini untuk mengirim spam atau konten yang melanggar hukum.
+th| การสร้างบัญชีถือว่าคุณตกลงที่จะไม่ใช้บริการนี้ส่งสแปมหรือเนื้อหาที่ผิดกฎหมาย
+tr| Hesap oluşturarak hizmeti istenmeyen ileti veya yasa dışı içerik göndermek için kullanmamayı kabul edersiniz.
+fi| Luomalla tilin sitoudut olemaan käyttämättä palvelua roskapostin tai laittoman sisällön lähettämiseen.
+
+= Đã có tài khoản? Đăng nhập
+en| Already have an account? Log in
+zh| 已有账号?去登录
+es| ¿Ya tienes cuenta? Inicia sesión
+hi| पहले से खाता है? लॉग इन करें
+ar| لديك حساب بالفعل؟ سجّل الدخول
+pt| Já tem conta? Entre
+ru| Уже есть аккаунт? Войдите
+ja| すでにアカウントをお持ちの方はログイン
+ko| 이미 계정이 있으신가요? 로그인
+de| Schon ein Konto? Anmelden
+fr| Déjà un compte ? Connectez-vous
+id| Sudah punya akun? Masuk
+th| มีบัญชีแล้ว? เข้าสู่ระบบ
+tr| Zaten hesabınız var mı? Giriş yapın
+fi| Onko sinulla jo tili? Kirjaudu sisään
+
+= Tạo tài khoản KingTele để lên lịch tự động đăng bài lên nhóm Telegram.
+en| Create a KingTele account to automatically schedule posts to Telegram groups.
+zh| 创建 KingTele 账号,自动安排发布到 Telegram 群组。
+es| Crea una cuenta de KingTele para programar publicaciones automáticas en grupos de Telegram.
+hi| Telegram ग्रुप में अपने आप पोस्ट शेड्यूल करने के लिए KingTele खाता बनाएँ।
+ar| أنشئ حساب KingTele لجدولة المنشورات تلقائيًا في مجموعات تيليجرام.
+pt| Crie uma conta no KingTele para agendar publicações automáticas em grupos do Telegram.
+ru| Создайте аккаунт KingTele, чтобы автоматически планировать публикации в группах Telegram.
+ja| KingTeleのアカウントを作成して、Telegramグループへの投稿を自動で予約しましょう。
+ko| KingTele 계정을 만들어 Telegram 그룹에 자동 게시를 예약하세요.
+de| Erstellen Sie ein KingTele-Konto, um Beiträge automatisch in Telegram-Gruppen zu planen.
+fr| Créez un compte KingTele pour planifier automatiquement vos publications dans des groupes Telegram.
+id| Buat akun KingTele untuk menjadwalkan postingan otomatis ke grup Telegram.
+th| สร้างบัญชี KingTele เพื่อตั้งเวลาโพสต์ไปยังกลุ่ม Telegram อัตโนมัติ
+tr| Telegram gruplarına otomatik gönderi zamanlamak için bir KingTele hesabı oluşturun.
+fi| Luo KingTele-tili ajastaaksesi julkaisut automaattisesti Telegram-ryhmiin.
+
+= Không tìm thấy trang - KingTele
+en| Page not found - KingTele
+zh| 页面未找到 - KingTele
+es| Página no encontrada - KingTele
+hi| पेज नहीं मिला - KingTele
+ar| الصفحة غير موجودة - KingTele
+pt| Página não encontrada - KingTele
+ru| Страница не найдена - KingTele
+ja| ページが見つかりません - KingTele
+ko| 페이지를 찾을 수 없음 - KingTele
+de| Seite nicht gefunden - KingTele
+fr| Page introuvable - KingTele
+id| Halaman tidak ditemukan - KingTele
+th| ไม่พบหน้า - KingTele
+tr| Sayfa bulunamadı - KingTele
+fi| Sivua ei löytynyt - KingTele
+
+= Không tìm thấy trang
+en| Page not found
+zh| 页面未找到
+es| Página no encontrada
+hi| पेज नहीं मिला
+ar| الصفحة غير موجودة
+pt| Página não encontrada
+ru| Страница не найдена
+ja| ページが見つかりません
+ko| 페이지를 찾을 수 없음
+de| Seite nicht gefunden
+fr| Page introuvable
+id| Halaman tidak ditemukan
+th| ไม่พบหน้า
+tr| Sayfa bulunamadı
+fi| Sivua ei löytynyt
+
+= Đường dẫn này không tồn tại hoặc đã được di chuyển.
+en| This link doesn't exist or has been moved.
+zh| 此链接不存在或已被移动。
+es| Este enlace no existe o se ha movido.
+hi| यह लिंक मौजूद नहीं है या हटा दिया गया है।
+ar| هذا الرابط غير موجود أو تم نقله.
+pt| Este link não existe ou foi movido.
+ru| Эта ссылка не существует или была перемещена.
+ja| このリンクは存在しないか、移動されました。
+ko| 이 링크는 존재하지 않거나 이동되었습니다.
+de| Dieser Link existiert nicht oder wurde verschoben.
+fr| Ce lien n'existe pas ou a été déplacé.
+id| Tautan ini tidak ada atau telah dipindahkan.
+th| ไม่มีลิงก์นี้หรือถูกย้ายไปแล้ว
+tr| Bu bağlantı mevcut değil veya taşınmış.
+fi| Tätä linkkiä ei ole tai se on siirretty.
+
+= Về trang chủ
+en| Back to home
+zh| 返回首页
+es| Volver al inicio
+hi| होम पर वापस जाएँ
+ar| العودة إلى الرئيسية
+pt| Voltar ao início
+ru| На главную
+ja| ホームへ戻る
+ko| 홈으로 돌아가기
+de| Zurück zur Startseite
+fr| Retour à l'accueil
+id| Kembali ke beranda
+th| กลับหน้าแรก
+tr| Ana sayfaya dön
+fi| Takaisin etusivulle
+
+= {0} Điểm King
+en| {0} King Points
+zh| {0} King 积分
+es| {0} Puntos King
+hi| {0} King पॉइंट
+ar| {0} نقطة King
+pt| {0} Pontos King
+ru| {0} King-баллов
+ja| {0} Kingポイント
+ko| {0} King 포인트
+de| {0} King-Punkte
+fr| {0} Points King
+id| {0} Poin King
+th| {0} คะแนน King
+tr| {0} King Puanı
+fi| {0} King-pistettä
+
+= Hết phiên đăng nhập
+en| Your session has expired
+zh| 登录已过期
+es| Tu sesión ha caducado
+hi| आपका सत्र समाप्त हो गया है
+ar| انتهت جلستك
+pt| Sua sessão expirou
+ru| Сеанс истёк
+ja| セッションの有効期限が切れました
+ko| 세션이 만료되었습니다
+de| Ihre Sitzung ist abgelaufen
+fr| Votre session a expiré
+id| Sesi Anda telah berakhir
+th| เซสชันหมดอายุ
+tr| Oturumunuzun süresi doldu
+fi| Istuntosi on vanhentunut
+
+= Có lỗi xảy ra
+en| Something went wrong
+zh| 出错了
+es| Ha ocurrido un error
+hi| कुछ गड़बड़ हो गई
+ar| حدث خطأ
+pt| Ocorreu um erro
+ru| Произошла ошибка
+ja| エラーが発生しました
+ko| 오류가 발생했습니다
+de| Es ist ein Fehler aufgetreten
+fr| Une erreur est survenue
+id| Terjadi kesalahan
+th| เกิดข้อผิดพลาด
+tr| Bir hata oluştu
+fi| Tapahtui virhe
+
+= Một lần · {0} {1}
+en| Once · {0} {1}
+zh| 单次 · {0} {1}
+es| Una vez · {0} {1}
+hi| एक बार · {0} {1}
+ar| مرة واحدة · {0} {1}
+pt| Uma vez · {0} {1}
+ru| Однократно · {0} {1}
+ja| 1回 · {0} {1}
+ko| 1회 · {0} {1}
+de| Einmalig · {0} {1}
+fr| Une fois · {0} {1}
+id| Sekali · {0} {1}
+th| ครั้งเดียว · {0} {1}
+tr| Tek sefer · {0} {1}
+fi| Kerran · {0} {1}
+
+= Hằng ngày · {0}
+en| Daily · {0}
+zh| 每天 · {0}
+es| Diario · {0}
+hi| रोज़ · {0}
+ar| يوميًا · {0}
+pt| Diário · {0}
+ru| Ежедневно · {0}
+ja| 毎日 · {0}
+ko| 매일 · {0}
+de| Täglich · {0}
+fr| Chaque jour · {0}
+id| Harian · {0}
+th| ทุกวัน · {0}
+tr| Günlük · {0}
+fi| Päivittäin · {0}
+
+= Lặp mỗi {0} giờ
+en| Repeats every {0} h
+zh| 每 {0} 小时重复
+es| Se repite cada {0} h
+hi| हर {0} घंटे दोहराएँ
+ar| تكرار كل {0} ساعة
+pt| Repete a cada {0} h
+ru| Повтор каждые {0} ч
+ja| {0}時間ごとに繰り返し
+ko| {0}시간마다 반복
+de| Wiederholt alle {0} Std.
+fr| Se répète toutes les {0} h
+id| Berulang setiap {0} jam
+th| ทำซ้ำทุก {0} ชั่วโมง
+tr| Her {0} saatte bir tekrarlar
+fi| Toistuu {0} h välein
+
+= Lặp mỗi {0} phút
+en| Repeats every {0} min
+zh| 每 {0} 分钟重复
+es| Se repite cada {0} min
+hi| हर {0} मिनट दोहराएँ
+ar| تكرار كل {0} دقيقة
+pt| Repete a cada {0} min
+ru| Повтор каждые {0} мин
+ja| {0}分ごとに繰り返し
+ko| {0}분마다 반복
+de| Wiederholt alle {0} Min.
+fr| Se répète toutes les {0} min
+id| Berulang setiap {0} menit
+th| ทำซ้ำทุก {0} นาที
+tr| Her {0} dakikada bir tekrarlar
+fi| Toistuu {0} min välein
+
+= File vượt giới hạn dung lượng của máy chủ
+en| The file exceeds the server's size limit
+zh| 文件超出服务器容量限制
+es| El archivo supera el límite de tamaño del servidor
+hi| फ़ाइल सर्वर की आकार सीमा से बड़ी है
+ar| الملف يتجاوز حد حجم الخادم
+pt| O arquivo excede o limite de tamanho do servidor
+ru| Файл превышает допустимый размер на сервере
+ja| ファイルがサーバーのサイズ上限を超えています
+ko| 파일이 서버 용량 제한을 초과했습니다
+de| Die Datei überschreitet das Größenlimit des Servers
+fr| Le fichier dépasse la limite de taille du serveur
+id| File melebihi batas ukuran server
+th| ไฟล์มีขนาดเกินขีดจำกัดของเซิร์ฟเวอร์
+tr| Dosya sunucunun boyut sınırını aşıyor
+fi| Tiedosto ylittää palvelimen kokorajan
+
+= Tải lên thất bại
+en| Upload failed
+zh| 上传失败
+es| Error al subir el archivo
+hi| अपलोड विफल रहा
+ar| فشل الرفع
+pt| Falha no envio do arquivo
+ru| Не удалось загрузить файл
+ja| アップロードに失敗しました
+ko| 업로드 실패
+de| Upload fehlgeschlagen
+fr| Échec du téléversement
+id| Gagal mengunggah
+th| อัปโหลดไม่สำเร็จ
+tr| Yükleme başarısız
+fi| Lataus epäonnistui
+
+= Lỗi mạng khi tải lên
+en| Network error during upload
+zh| 上传时发生网络错误
+es| Error de red durante la subida
+hi| अपलोड के दौरान नेटवर्क त्रुटि
+ar| خطأ في الشبكة أثناء الرفع
+pt| Erro de rede durante o envio
+ru| Сетевая ошибка при загрузке
+ja| アップロード中にネットワークエラーが発生しました
+ko| 업로드 중 네트워크 오류가 발생했습니다
+de| Netzwerkfehler beim Hochladen
+fr| Erreur réseau pendant le téléversement
+id| Kesalahan jaringan saat mengunggah
+th| เครือข่ายขัดข้องระหว่างอัปโหลด
+tr| Yükleme sırasında ağ hatası
+fi| Verkkovirhe latauksen aikana
+
+= Đóng
+en| Close
+zh| 关闭
+es| Cerrar
+hi| बंद करें
+ar| إغلاق
+pt| Fechar
+ru| Закрыть
+ja| 閉じる
+ko| 닫기
+de| Schließen
+fr| Fermer
+id| Tutup
+th| ปิด
+tr| Kapat
+fi| Sulje
+
+= Xác nhận
+en| Confirm
+zh| 确认
+es| Confirmar
+hi| पुष्टि करें
+ar| تأكيد
+pt| Confirmar
+ru| Подтвердить
+ja| 確認
+ko| 확인
+de| Bestätigen
+fr| Confirmer
+id| Konfirmasi
+th| ยืนยัน
+tr| Onayla
+fi| Vahvista
+
+= Huỷ
+en| Cancel
+zh| 取消
+es| Cancelar
+hi| रद्द करें
+ar| إلغاء
+pt| Cancelar
+ru| Отмена
+ja| キャンセル
+ko| 취소
+de| Abbrechen
+fr| Annuler
+id| Batal
+th| ยกเลิก
+tr| İptal
+fi| Peruuta
+
+= Tạm dừng
+en| Pause
+zh| 暂停
+es| Pausar
+hi| रोकें
+ar| إيقاف مؤقت
+pt| Pausar
+ru| Пауза
+ja| 一時停止
+ko| 일시정지
+de| Pausieren
+fr| Pause
+id| Jeda
+th| หยุดชั่วคราว
+tr| Duraklat
+fi| Keskeytä
+
+= Hoàn tất
+en| Done
+zh| 已完成
+es| Completado
+hi| पूर्ण
+ar| مكتمل
+pt| Concluído
+ru| Завершено
+ja| 完了
+ko| 완료
+de| Abgeschlossen
+fr| Terminé
+id| Selesai
+th| เสร็จสิ้น
+tr| Tamamlandı
+fi| Valmis
+
+= Tình hình đăng bài trong 7 ngày gần nhất
+en| Posting activity over the last 7 days
+zh| 最近 7 天的发布情况
+es| Actividad de publicaciones de los últimos 7 días
+hi| पिछले 7 दिनों की पोस्टिंग गतिविधि
+ar| نشاط النشر خلال آخر 7 أيام
+pt| Atividade de publicações dos últimos 7 dias
+ru| Публикации за последние 7 дней
+ja| 過去7日間の投稿状況
+ko| 최근 7일간 게시 현황
+de| Postingaktivität der letzten 7 Tage
+fr| Activité de publication des 7 derniers jours
+id| Aktivitas posting 7 hari terakhir
+th| กิจกรรมการโพสต์ใน 7 วันที่ผ่านมา
+tr| Son 7 günün gönderi etkinliği
+fi| Julkaisutoiminta viimeisen 7 päivän ajalta
+
+= Bài mới
+en| New post
+zh| 新建内容
+es| Nueva publicación
+hi| नई पोस्ट
+ar| منشور جديد
+pt| Nova publicação
+ru| Новая публикация
+ja| 新規投稿
+ko| 새 게시물
+de| Neuer Beitrag
+fr| Nouvelle publication
+id| Postingan baru
+th| โพสต์ใหม่
+tr| Yeni gönderi
+fi| Uusi julkaisu
+
+= Bạn chỉ còn {0} Điểm King.
+en| You only have {0} King Points left.
+zh| 你只剩 {0} King 积分了。
+es| Solo te quedan {0} Puntos King.
+hi| आपके पास सिर्फ़ {0} King पॉइंट बचे हैं।
+ar| لم يتبقَّ لديك سوى {0} نقطة King.
+pt| Você só tem {0} Pontos King restantes.
+ru| У вас осталось всего {0} King-баллов.
+ja| 残りのKingポイントは{0}のみです。
+ko| King 포인트가 {0}점만 남았습니다.
+de| Sie haben nur noch {0} King-Punkte.
+fr| Il ne vous reste que {0} Points King.
+id| Poin King Anda tinggal {0}.
+th| คุณเหลือคะแนน King เพียง {0} คะแนน
+tr| Yalnızca {0} King Puanınız kaldı.
+fi| Sinulla on enää {0} King-pistettä.
+
+= Điểm danh hoặc giới thiệu bạn bè
+en| Check in or invite friends
+zh| 签到或邀请好友
+es| Marca asistencia o invita a amigos
+hi| चेक-इन करें या दोस्तों को बुलाएँ
+ar| سجّل حضورك أو ادعُ أصدقاءك
+pt| Faça check-in ou indique amigos
+ru| Отметьтесь или пригласите друзей,
+ja| チェックインするか友達を紹介して
+ko| 출석 체크하거나 친구를 초대하여
+de| Checken Sie ein oder laden Sie Freunde ein,
+fr| Pointez ou invitez des amis
+id| Absen atau ajak teman
+th| เช็กอินหรือชวนเพื่อน
+tr| Yoklama yapın veya arkadaşlarınızı davet edin
+fi| Kirjaudu läsnäoloon tai kutsu ystäviä
+
+= để nhận thêm.
+en| to get more.
+zh| 获取更多。
+es| para conseguir más.
+hi| और पॉइंट पाने के लिए।
+ar| للحصول على المزيد.
+pt| para ganhar mais.
+ru| чтобы получить больше.
+ja| ポイントを増やしましょう。
+ko| 포인트를 더 받으세요.
+de| um mehr zu erhalten.
+fr| pour en obtenir davantage.
+id| untuk mendapat lebih banyak.
+th| เพื่อรับคะแนนเพิ่ม
+tr| ve daha fazla kazanın.
+fi| saadaksesi lisää.
+
+= Dữ liệu đang lưu trong thư mục code nên sẽ mất khi deploy lại. Hãy đặt biến DATA_DIR trỏ ra ngoài thư mục app (xem README) và tải bản sao lưu ở
+en| Data is stored inside the code folder and will be lost on redeploy. Set DATA_DIR to a location outside the app folder (see README) and download a backup in
+zh| 数据存放在代码目录内,重新部署后会丢失。请将 DATA_DIR 设置到应用目录之外(见 README),并在以下位置下载备份:
+es| Los datos se guardan dentro de la carpeta del código y se perderán al volver a desplegar. Define DATA_DIR fuera de la carpeta de la app (ver README) y descarga una copia en
+hi| डेटा कोड फ़ोल्डर के अंदर सहेजा जा रहा है और दोबारा डिप्लॉय करने पर मिट जाएगा। DATA_DIR को ऐप फ़ोल्डर के बाहर सेट करें (README देखें) और बैकअप यहाँ से डाउनलोड करें:
+ar| البيانات محفوظة داخل مجلد الشيفرة وستُفقد عند إعادة النشر. عيّن DATA_DIR خارج مجلد التطبيق (راجع README) ونزّل نسخة احتياطية من
+pt| Os dados estão salvos dentro da pasta do código e serão perdidos em um novo deploy. Defina DATA_DIR fora da pasta do app (veja o README) e baixe um backup em
+ru| Данные хранятся внутри папки с кодом и будут потеряны при повторном деплое. Укажите DATA_DIR вне папки приложения (см. README) и скачайте резервную копию в разделе
+ja| データがコードのフォルダ内に保存されているため、再デプロイすると失われます。DATA_DIRをアプリのフォルダ外に設定し(READMEを参照)、バックアップを次の場所からダウンロードしてください:
+ko| 데이터가 코드 폴더 안에 저장되어 있어 재배포하면 사라집니다. DATA_DIR을 앱 폴더 밖으로 지정하고(README 참고) 다음에서 백업을 내려받으세요:
+de| Die Daten liegen im Code-Ordner und gehen beim erneuten Deployment verloren. Setzen Sie DATA_DIR außerhalb des App-Ordners (siehe README) und laden Sie ein Backup herunter unter
+fr| Les données sont stockées dans le dossier du code et seront perdues lors d'un nouveau déploiement. Définissez DATA_DIR hors du dossier de l'app (voir README) et téléchargez une sauvegarde dans
+id| Data tersimpan di dalam folder kode sehingga akan hilang saat deploy ulang. Atur DATA_DIR ke luar folder aplikasi (lihat README) dan unduh cadangan di
+th| ข้อมูลถูกเก็บไว้ในโฟลเดอร์โค้ด และจะหายเมื่อดีพลอยใหม่ ให้ตั้ง DATA_DIR ไปยังตำแหน่งนอกโฟลเดอร์แอป (ดู README) และดาวน์โหลดไฟล์สำรองที่
+tr| Veriler kod klasörünün içinde tutuluyor ve yeniden dağıtımda kaybolur. DATA_DIR'i uygulama klasörünün dışına ayarlayın (README'ye bakın) ve yedeği şuradan indirin:
+fi| Tiedot tallennetaan koodikansioon ja katoavat uudelleenjulkaisussa. Aseta DATA_DIR sovelluskansion ulkopuolelle (katso README) ja lataa varmuuskopio kohdasta
+
+= Chưa có token bot Telegram nên chưa thể gửi bài.
+en| No Telegram bot token yet, so posts can't be sent.
+zh| 尚未设置 Telegram 机器人令牌,因此无法发送内容。
+es| Aún no hay token del bot de Telegram, por lo que no se pueden enviar publicaciones.
+hi| अभी Telegram बॉट टोकन नहीं है, इसलिए पोस्ट नहीं भेजी जा सकतीं।
+ar| لا يوجد رمز لبوت تيليجرام بعد، لذلك لا يمكن إرسال المنشورات.
+pt| Ainda não há token do bot do Telegram, então não é possível enviar publicações.
+ru| Токен бота Telegram ещё не задан, поэтому публикации отправить нельзя.
+ja| Telegramボットのトークンが未設定のため、投稿を送信できません。
+ko| Telegram 봇 토큰이 아직 없어 게시물을 보낼 수 없습니다.
+de| Es gibt noch keinen Telegram-Bot-Token, daher können keine Beiträge gesendet werden.
+fr| Aucun jeton de bot Telegram n'est défini, les publications ne peuvent donc pas être envoyées.
+id| Token bot Telegram belum ada, sehingga postingan belum bisa dikirim.
+th| ยังไม่มีโทเคนบอท Telegram จึงยังส่งโพสต์ไม่ได้
+tr| Henüz Telegram bot belirteci yok, bu yüzden gönderiler yapılamıyor.
+fi| Telegram-bottitunnistetta ei ole vielä, joten julkaisuja ei voi lähettää.
+
+= Cấu hình ngay
+en| Set up now
+zh| 立即设置
+es| Configurar ahora
+hi| अभी सेट करें
+ar| اضبطه الآن
+pt| Configurar agora
+ru| Настроить сейчас
+ja| 今すぐ設定
+ko| 지금 설정하기
+de| Jetzt einrichten
+fr| Configurer maintenant
+id| Atur sekarang
+th| ตั้งค่าเลย
+tr| Şimdi ayarla
+fi| Määritä nyt

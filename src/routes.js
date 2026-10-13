@@ -60,7 +60,7 @@ function createApi({ store, config, auth, scheduler, media, tokenFor, points }) 
     const dayKey = (t) => new Intl.DateTimeFormat('en-CA', { timeZone: tz }).format(t);
     const buckets = Array.from({ length: 7 }, (_, i) => {
       const start = now - (6 - i) * day;
-      return { label: new Intl.DateTimeFormat('vi-VN', { weekday: 'short', timeZone: tz }).format(start), key: dayKey(start), ok: 0, error: 0 };
+      return { t: start, key: dayKey(start), ok: 0, error: 0 };
     });
     const since = now - 7 * day;
     let ok7 = 0, err7 = 0;
@@ -76,7 +76,7 @@ function createApi({ store, config, auth, scheduler, media, tokenFor, points }) 
       totalPosts: posts.length,
       sent7: ok7, failed7: err7,
       rate: ok7 + err7 ? Math.round((ok7 / (ok7 + err7)) * 100) : null,
-      chart: buckets.map(({ label, ok, error }) => ({ label, ok, error })),
+      chart: buckets.map(({ t, ok, error }) => ({ t, ok, error })),
       upcoming: posts.filter((p) => p.status === 'active' && p.nextRunAt)
         .sort((a, b) => a.nextRunAt - b.nextRunAt).slice(0, 6)
         .map((p) => ({ id: p.id, title: p.title, nextRunAt: p.nextRunAt, timezone: p.timezone, groups: p.groupIds.length })),

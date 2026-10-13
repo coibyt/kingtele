@@ -1,0 +1,1293 @@
+# Cài đặt (tiếp), Điểm King (261-336)
+
+= Đang dùng token từ biến môi trường ({0}). Nhập token mới để ghi đè.
+en| Using the token from the environment variable ({0}). Enter a new token to override it.
+zh| 当前使用环境变量中的令牌({0})。输入新令牌即可覆盖。
+es| Usando el token de la variable de entorno ({0}). Introduce uno nuevo para sustituirlo.
+hi| पर्यावरण वेरिएबल का टोकन इस्तेमाल हो रहा है ({0})। बदलने के लिए नया टोकन दर्ज करें।
+ar| يُستخدم الرمز من متغير البيئة ({0}). أدخل رمزًا جديدًا لاستبداله.
+pt| Usando o token da variável de ambiente ({0}). Informe um novo token para substituí-lo.
+ru| Используется токен из переменной окружения ({0}). Введите новый токен, чтобы заменить его.
+ja| 環境変数のトークンを使用中です({0})。新しいトークンを入力すると上書きされます。
+ko| 환경 변수의 토큰을 사용 중입니다({0}). 새 토큰을 입력하면 덮어씁니다.
+de| Es wird der Token aus der Umgebungsvariable verwendet ({0}). Geben Sie einen neuen Token ein, um ihn zu überschreiben.
+fr| Le jeton de la variable d'environnement est utilisé ({0}). Saisissez-en un nouveau pour le remplacer.
+id| Memakai token dari variabel lingkungan ({0}). Masukkan token baru untuk menggantinya.
+th| กำลังใช้โทเคนจากตัวแปรสภาพแวดล้อม ({0}) ใส่โทเคนใหม่เพื่อแทนที่
+tr| Ortam değişkenindeki belirteç kullanılıyor ({0}). Değiştirmek için yeni bir belirteç girin.
+fi| Käytössä on ympäristömuuttujan tunniste ({0}). Syötä uusi tunniste korvataksesi sen.
+
+= Đã lưu: {0}
+en| Saved: {0}
+zh| 已保存:{0}
+es| Guardado: {0}
+hi| सहेजा गया: {0}
+ar| تم الحفظ: {0}
+pt| Salvo: {0}
+ru| Сохранено: {0}
+ja| 保存済み:{0}
+ko| 저장됨: {0}
+de| Gespeichert: {0}
+fr| Enregistré : {0}
+id| Tersimpan: {0}
+th| บันทึกแล้ว: {0}
+tr| Kaydedildi: {0}
+fi| Tallennettu: {0}
+
+= Chưa cấu hình.
+en| Not configured yet.
+zh| 尚未配置。
+es| Sin configurar.
+hi| अभी कॉन्फ़िगर नहीं है।
+ar| لم يُضبط بعد.
+pt| Ainda não configurado.
+ru| Ещё не настроено.
+ja| 未設定です。
+ko| 아직 설정되지 않았습니다.
+de| Noch nicht konfiguriert.
+fr| Pas encore configuré.
+id| Belum dikonfigurasi.
+th| ยังไม่ได้ตั้งค่า
+tr| Henüz yapılandırılmadı.
+fi| Ei vielä määritetty.
+
+= Kết nối thành công: @{0} ({1})
+en| Connected successfully: @{0} ({1})
+zh| 连接成功:@{0}({1})
+es| Conexión correcta: @{0} ({1})
+hi| कनेक्शन सफल: @{0} ({1})
+ar| تم الاتصال بنجاح: @{0} ({1})
+pt| Conectado com sucesso: @{0} ({1})
+ru| Подключено: @{0} ({1})
+ja| 接続に成功しました:@{0}({1})
+ko| 연결 성공: @{0} ({1})
+de| Erfolgreich verbunden: @{0} ({1})
+fr| Connexion réussie : @{0} ({1})
+id| Berhasil terhubung: @{0} ({1})
+th| เชื่อมต่อสำเร็จ: @{0} ({1})
+tr| Bağlantı başarılı: @{0} ({1})
+fi| Yhdistetty onnistuneesti: @{0} ({1})
+
+= Đã lưu và kết nối bot
+en| Saved and bot connected
+zh| 已保存并连接机器人
+es| Guardado y bot conectado
+hi| सहेजा गया और बॉट जुड़ गया
+ar| تم الحفظ وربط البوت
+pt| Salvo e bot conectado
+ru| Сохранено, бот подключён
+ja| 保存してボットを接続しました
+ko| 저장하고 봇을 연결했습니다
+de| Gespeichert und Bot verbunden
+fr| Enregistré, bot connecté
+id| Tersimpan dan bot terhubung
+th| บันทึกและเชื่อมต่อบอทแล้ว
+tr| Kaydedildi ve bot bağlandı
+fi| Tallennettu ja botti yhdistetty
+
+= Lưu & kiểm tra
+en| Save & check
+zh| 保存并检查
+es| Guardar y comprobar
+hi| सहेजें और जाँचें
+ar| حفظ وفحص
+pt| Salvar e verificar
+ru| Сохранить и проверить
+ja| 保存して確認
+ko| 저장 및 확인
+de| Speichern & prüfen
+fr| Enregistrer et vérifier
+id| Simpan & periksa
+th| บันทึกและตรวจสอบ
+tr| Kaydet ve kontrol et
+fi| Tallenna ja tarkista
+
+= Đã xoá token
+en| Token deleted
+zh| 已删除令牌
+es| Token eliminado
+hi| टोकन हटा दिया गया
+ar| تم حذف الرمز
+pt| Token excluído
+ru| Токен удалён
+ja| トークンを削除しました
+ko| 토큰을 삭제했습니다
+de| Token gelöscht
+fr| Jeton supprimé
+id| Token dihapus
+th| ลบโทเคนแล้ว
+tr| Belirteç silindi
+fi| Tunniste poistettu
+
+= Xoá token
+en| Delete token
+zh| 删除令牌
+es| Eliminar token
+hi| टोकन हटाएँ
+ar| حذف الرمز
+pt| Excluir token
+ru| Удалить токен
+ja| トークンを削除
+ko| 토큰 삭제
+de| Token löschen
+fr| Supprimer le jeton
+id| Hapus token
+th| ลบโทเคน
+tr| Belirteci sil
+fi| Poista tunniste
+
+= Múi giờ mặc định
+en| Default time zone
+zh| 默认时区
+es| Zona horaria predeterminada
+hi| डिफ़ॉल्ट टाइम ज़ोन
+ar| المنطقة الزمنية الافتراضية
+pt| Fuso horário padrão
+ru| Часовой пояс по умолчанию
+ja| 既定のタイムゾーン
+ko| 기본 시간대
+de| Standard-Zeitzone
+fr| Fuseau horaire par défaut
+id| Zona waktu bawaan
+th| เขตเวลาเริ่มต้น
+tr| Varsayılan saat dilimi
+fi| Oletusaikavyöhyke
+
+= Áp dụng cho bài đăng mới
+en| Applies to new posts
+zh| 适用于新建内容
+es| Se aplica a las nuevas publicaciones
+hi| नई पोस्ट पर लागू होता है
+ar| ينطبق على المنشورات الجديدة
+pt| Aplica-se a novas publicações
+ru| Применяется к новым публикациям
+ja| 新しい投稿に適用されます
+ko| 새 게시물에 적용됩니다
+de| Gilt für neue Beiträge
+fr| S'applique aux nouvelles publications
+id| Berlaku untuk postingan baru
+th| ใช้กับโพสต์ใหม่
+tr| Yeni gönderilere uygulanır
+fi| Koskee uusia julkaisuja
+
+= Đã lưu múi giờ
+en| Time zone saved
+zh| 已保存时区
+es| Zona horaria guardada
+hi| टाइम ज़ोन सहेजा गया
+ar| تم حفظ المنطقة الزمنية
+pt| Fuso horário salvo
+ru| Часовой пояс сохранён
+ja| タイムゾーンを保存しました
+ko| 시간대를 저장했습니다
+de| Zeitzone gespeichert
+fr| Fuseau horaire enregistré
+id| Zona waktu disimpan
+th| บันทึกเขตเวลาแล้ว
+tr| Saat dilimi kaydedildi
+fi| Aikavyöhyke tallennettu
+
+= Lưu múi giờ
+en| Save time zone
+zh| 保存时区
+es| Guardar zona horaria
+hi| टाइम ज़ोन सहेजें
+ar| حفظ المنطقة الزمنية
+pt| Salvar fuso horário
+ru| Сохранить часовой пояс
+ja| タイムゾーンを保存
+ko| 시간대 저장
+de| Zeitzone speichern
+fr| Enregistrer le fuseau horaire
+id| Simpan zona waktu
+th| บันทึกเขตเวลา
+tr| Saat dilimini kaydet
+fi| Tallenna aikavyöhyke
+
+= Tài khoản
+en| Account
+zh| 账号
+es| Cuenta
+hi| खाता
+ar| الحساب
+pt| Conta
+ru| Аккаунт
+ja| アカウント
+ko| 계정
+de| Konto
+fr| Compte
+id| Akun
+th| บัญชี
+tr| Hesap
+fi| Tili
+
+= Quản trị viên
+en| Administrator
+zh| 管理员
+es| Administrador
+hi| एडमिन
+ar| مشرف
+pt| Administrador
+ru| Администратор
+ja| 管理者
+ko| 관리자
+de| Administrator
+fr| Administrateur
+id| Administrator
+th| ผู้ดูแลระบบ
+tr| Yönetici
+fi| Ylläpitäjä
+
+= Mật khẩu quản trị được đặt bằng biến môi trường ADMIN_PASSWORD.
+en| The admin password is set through the ADMIN_PASSWORD environment variable.
+zh| 管理员密码通过环境变量 ADMIN_PASSWORD 设置。
+es| La contraseña de administrador se define con la variable de entorno ADMIN_PASSWORD.
+hi| एडमिन पासवर्ड ADMIN_PASSWORD पर्यावरण वेरिएबल से सेट होता है।
+ar| تُضبط كلمة مرور المشرف عبر متغير البيئة ADMIN_PASSWORD.
+pt| A senha de administrador é definida pela variável de ambiente ADMIN_PASSWORD.
+ru| Пароль администратора задаётся переменной окружения ADMIN_PASSWORD.
+ja| 管理者パスワードは環境変数 ADMIN_PASSWORD で設定します。
+ko| 관리자 비밀번호는 환경 변수 ADMIN_PASSWORD로 설정합니다.
+de| Das Admin-Passwort wird über die Umgebungsvariable ADMIN_PASSWORD festgelegt.
+fr| Le mot de passe administrateur est défini par la variable d'environnement ADMIN_PASSWORD.
+id| Kata sandi admin diatur melalui variabel lingkungan ADMIN_PASSWORD.
+th| รหัสผ่านผู้ดูแลระบบตั้งผ่านตัวแปรสภาพแวดล้อม ADMIN_PASSWORD
+tr| Yönetici parolası ADMIN_PASSWORD ortam değişkeniyle ayarlanır.
+fi| Ylläpitäjän salasana asetetaan ympäristömuuttujalla ADMIN_PASSWORD.
+
+= Sao lưu dữ liệu
+en| Data backup
+zh| 数据备份
+es| Copia de seguridad
+hi| डेटा बैकअप
+ar| النسخ الاحتياطي للبيانات
+pt| Backup de dados
+ru| Резервное копирование
+ja| データのバックアップ
+ko| 데이터 백업
+de| Datensicherung
+fr| Sauvegarde des données
+id| Cadangan data
+th| สำรองข้อมูล
+tr| Veri yedeği
+fi| Tietojen varmuuskopio
+
+= Dữ liệu đang lưu ngoài thư mục code, an toàn khi deploy lại.
+en| Data is stored outside the code folder, so it is safe across redeploys.
+zh| 数据存放在代码目录之外,重新部署时是安全的。
+es| Los datos se guardan fuera de la carpeta del código, así que están a salvo al volver a desplegar.
+hi| डेटा कोड फ़ोल्डर के बाहर सहेजा गया है, इसलिए दोबारा डिप्लॉय करने पर सुरक्षित है।
+ar| البيانات محفوظة خارج مجلد الشيفرة، فهي آمنة عند إعادة النشر.
+pt| Os dados ficam fora da pasta do código, então estão seguros em novos deploys.
+ru| Данные хранятся вне папки с кодом, поэтому при повторном деплое они сохранятся.
+ja| データはコードのフォルダ外に保存されており、再デプロイしても安全です。
+ko| 데이터가 코드 폴더 밖에 저장되어 있어 재배포해도 안전합니다.
+de| Die Daten liegen außerhalb des Code-Ordners und sind beim erneuten Deployment sicher.
+fr| Les données sont stockées hors du dossier du code : elles survivent à un redéploiement.
+id| Data disimpan di luar folder kode, jadi aman saat deploy ulang.
+th| ข้อมูลเก็บอยู่นอกโฟลเดอร์โค้ด จึงปลอดภัยเมื่อดีพลอยใหม่
+tr| Veriler kod klasörünün dışında tutuluyor, bu yüzden yeniden dağıtımda güvende.
+fi| Tiedot tallennetaan koodikansion ulkopuolelle, joten ne säilyvät uudelleenjulkaisussa.
+
+= Cảnh báo: dữ liệu đang nằm trong thư mục code và sẽ mất khi deploy lại.
+en| Warning: data is inside the code folder and will be lost on redeploy.
+zh| 警告:数据位于代码目录内,重新部署时会丢失。
+es| Aviso: los datos están dentro de la carpeta del código y se perderán al volver a desplegar.
+hi| चेतावनी: डेटा कोड फ़ोल्डर के अंदर है और दोबारा डिप्लॉय करने पर मिट जाएगा।
+ar| تحذير: البيانات داخل مجلد الشيفرة وستُفقد عند إعادة النشر.
+pt| Aviso: os dados estão dentro da pasta do código e serão perdidos em um novo deploy.
+ru| Внимание: данные находятся в папке с кодом и будут потеряны при повторном деплое.
+ja| 警告:データがコードのフォルダ内にあり、再デプロイすると失われます。
+ko| 경고: 데이터가 코드 폴더 안에 있어 재배포하면 사라집니다.
+de| Warnung: Die Daten liegen im Code-Ordner und gehen beim erneuten Deployment verloren.
+fr| Attention : les données sont dans le dossier du code et seront perdues lors d'un redéploiement.
+id| Peringatan: data berada di dalam folder kode dan akan hilang saat deploy ulang.
+th| คำเตือน: ข้อมูลอยู่ในโฟลเดอร์โค้ดและจะหายเมื่อดีพลอยใหม่
+tr| Uyarı: Veriler kod klasörünün içinde ve yeniden dağıtımda kaybolacak.
+fi| Varoitus: tiedot ovat koodikansiossa ja katoavat uudelleenjulkaisussa.
+
+= Tải về nhóm, bài đăng và nhật ký dưới dạng JSON (không gồm token và mật khẩu).
+en| Download your groups, posts and logs as JSON (tokens and passwords are not included).
+zh| 以 JSON 格式下载群组、内容和日志(不含令牌和密码)。
+es| Descarga tus grupos, publicaciones y registros en JSON (sin tokens ni contraseñas).
+hi| अपने ग्रुप, पोस्ट और लॉग JSON में डाउनलोड करें (टोकन और पासवर्ड शामिल नहीं)।
+ar| نزّل مجموعاتك ومنشوراتك وسجلاتك بصيغة JSON (دون الرموز وكلمات المرور).
+pt| Baixe seus grupos, publicações e registros em JSON (sem tokens nem senhas).
+ru| Скачайте группы, публикации и журнал в формате JSON (без токенов и паролей).
+ja| グループ、投稿、履歴をJSON形式でダウンロードします(トークンとパスワードは含まれません)。
+ko| 그룹, 게시물, 기록을 JSON으로 내려받습니다(토큰과 비밀번호는 포함되지 않음).
+de| Laden Sie Gruppen, Beiträge und Protokolle als JSON herunter (ohne Token und Passwörter).
+fr| Téléchargez vos groupes, publications et historiques en JSON (sans jetons ni mots de passe).
+id| Unduh grup, postingan, dan catatan Anda dalam format JSON (tanpa token dan kata sandi).
+th| ดาวน์โหลดกลุ่ม โพสต์ และบันทึกเป็น JSON (ไม่รวมโทเคนและรหัสผ่าน)
+tr| Gruplarınızı, gönderilerinizi ve günlüklerinizi JSON olarak indirin (belirteç ve parola içermez).
+fi| Lataa ryhmät, julkaisut ja lokit JSON-muodossa (ei sisällä tunnisteita eikä salasanoja).
+
+= Tải bản sao lưu
+en| Download backup
+zh| 下载备份
+es| Descargar copia de seguridad
+hi| बैकअप डाउनलोड करें
+ar| تنزيل النسخة الاحتياطية
+pt| Baixar backup
+ru| Скачать резервную копию
+ja| バックアップをダウンロード
+ko| 백업 다운로드
+de| Backup herunterladen
+fr| Télécharger la sauvegarde
+id| Unduh cadangan
+th| ดาวน์โหลดไฟล์สำรอง
+tr| Yedeği indir
+fi| Lataa varmuuskopio
+
+= Quà đăng ký
+en| Sign-up gift
+zh| 注册礼
+es| Regalo de registro
+hi| साइन अप उपहार
+ar| هدية التسجيل
+pt| Presente de cadastro
+ru| Подарок за регистрацию
+ja| 登録プレゼント
+ko| 가입 선물
+de| Anmeldegeschenk
+fr| Cadeau d'inscription
+id| Hadiah pendaftaran
+th| ของขวัญสมัครสมาชิก
+tr| Kayıt hediyesi
+fi| Rekisteröitymislahja
+
+= Điểm danh
+en| Check-in
+zh| 签到
+es| Asistencia diaria
+hi| चेक-इन
+ar| تسجيل الحضور
+pt| Check-in
+ru| Ежедневная отметка
+ja| チェックイン
+ko| 출석 체크
+de| Tägliches Einchecken
+fr| Pointage
+id| Absen
+th| เช็กอิน
+tr| Yoklama
+fi| Päivittäinen läsnäolo
+
+= Giới thiệu bạn bè
+en| Invite friends
+zh| 邀请好友
+es| Invitar amigos
+hi| दोस्तों को आमंत्रित करें
+ar| دعوة الأصدقاء
+pt| Indicar amigos
+ru| Приглашение друзей
+ja| 友達紹介
+ko| 친구 초대
+de| Freunde einladen
+fr| Parrainer des amis
+id| Ajak teman
+th| ชวนเพื่อน
+tr| Arkadaş davet et
+fi| Kutsu ystäviä
+
+= Thưởng nhờ được giới thiệu
+en| Bonus for being referred
+zh| 被邀请奖励
+es| Bonificación por ser invitado
+hi| रेफ़र किए जाने का बोनस
+ar| مكافأة لأنك مدعو
+pt| Bônus por ser indicado
+ru| Бонус за приглашение
+ja| 紹介されたボーナス
+ko| 초대받은 보너스
+de| Bonus für die Empfehlung
+fr| Bonus de parrainage reçu
+id| Bonus karena diajak
+th| โบนัสที่ได้จากการถูกแนะนำ
+tr| Davet edilme bonusu
+fi| Bonus suosittelusta
+
+= Quản trị viên điều chỉnh
+en| Adjusted by administrator
+zh| 管理员调整
+es| Ajustado por el administrador
+hi| एडमिन द्वारा समायोजित
+ar| تعديل من المشرف
+pt| Ajustado pelo administrador
+ru| Корректировка администратора
+ja| 管理者による調整
+ko| 관리자 조정
+de| Vom Administrator angepasst
+fr| Ajusté par l'administrateur
+id| Disesuaikan oleh administrator
+th| ผู้ดูแลระบบปรับให้
+tr| Yönetici tarafından ayarlandı
+fi| Ylläpitäjän muutos
+
+= Chờ chạy bài đầu tiên
+en| Waiting for first post
+zh| 等待发出第一条内容
+es| Esperando la primera publicación
+hi| पहली पोस्ट का इंतज़ार
+ar| بانتظار أول منشور
+pt| Aguardando a primeira publicação
+ru| Ждём первую публикацию
+ja| 最初の投稿待ち
+ko| 첫 게시물 대기 중
+de| Wartet auf den ersten Beitrag
+fr| En attente de la première publication
+id| Menunggu postingan pertama
+th| รอโพสต์แรก
+tr| İlk gönderi bekleniyor
+fi| Odottaa ensimmäistä julkaisua
+
+= Đã thưởng
+en| Rewarded
+zh| 已奖励
+es| Recompensado
+hi| इनाम मिला
+ar| تمت المكافأة
+pt| Recompensado
+ru| Награда выдана
+ja| 付与済み
+ko| 지급됨
+de| Belohnt
+fr| Récompensé
+id| Sudah diberi hadiah
+th| ให้รางวัลแล้ว
+tr| Ödüllendirildi
+fi| Palkittu
+
+= Không hợp lệ
+en| Not eligible
+zh| 无效
+es| No válido
+hi| अमान्य
+ar| غير صالح
+pt| Não elegível
+ru| Не засчитано
+ja| 対象外
+ko| 해당 없음
+de| Nicht berechtigt
+fr| Non valide
+id| Tidak valid
+th| ไม่ผ่านเงื่อนไข
+tr| Geçersiz
+fi| Ei kelpaa
+
+= Trùng IP với bạn
+en| Same IP as yours
+zh| 与你的 IP 相同
+es| Misma IP que la tuya
+hi| आपके IP के समान
+ar| نفس عنوان IP الخاص بك
+pt| Mesmo IP que o seu
+ru| Тот же IP, что у вас
+ja| あなたと同じIP
+ko| 내 IP와 동일
+de| Gleiche IP wie Sie
+fr| Même IP que vous
+id| IP sama dengan Anda
+th| IP ซ้ำกับของคุณ
+tr| Sizinle aynı IP
+fi| Sama IP kuin sinulla
+
+= Trùng IP với người đã giới thiệu trước
+en| Same IP as a previously referred person
+zh| 与之前被邀请的人 IP 相同
+es| Misma IP que otra persona invitada antes
+hi| पहले रेफ़र किए गए व्यक्ति के IP के समान
+ar| نفس عنوان IP لشخص دُعي سابقًا
+pt| Mesmo IP de uma pessoa indicada antes
+ru| Тот же IP, что у ранее приглашённого
+ja| 以前紹介された人と同じIP
+ko| 이전에 초대된 사람과 IP 동일
+de| Gleiche IP wie eine zuvor geworbene Person
+fr| Même IP qu'une personne déjà parrainée
+id| IP sama dengan orang yang diajak sebelumnya
+th| IP ซ้ำกับคนที่เคยถูกแนะนำก่อนหน้า
+tr| Daha önce davet edilen biriyle aynı IP
+fi| Sama IP kuin aiemmin suositellulla
+
+= Tài khoản giới thiệu không khả dụng
+en| The referring account is unavailable
+zh| 邀请人账号不可用
+es| La cuenta que invitó no está disponible
+hi| रेफ़र करने वाला खाता उपलब्ध नहीं है
+ar| حساب الداعي غير متاح
+pt| A conta que indicou não está disponível
+ru| Аккаунт пригласившего недоступен
+ja| 紹介元のアカウントは利用できません
+ko| 초대한 계정을 사용할 수 없습니다
+de| Das werbende Konto ist nicht verfügbar
+fr| Le compte parrain n'est pas disponible
+id| Akun pengundang tidak tersedia
+th| บัญชีผู้แนะนำใช้งานไม่ได้
+tr| Davet eden hesap kullanılamıyor
+fi| Suosittelijan tili ei ole käytettävissä
+
+= Tài khoản quản trị
+en| Administrator account
+zh| 管理员账号
+es| Cuenta de administrador
+hi| एडमिन खाता
+ar| حساب المشرف
+pt| Conta de administrador
+ru| Аккаунт администратора
+ja| 管理者アカウント
+ko| 관리자 계정
+de| Administratorkonto
+fr| Compte administrateur
+id| Akun administrator
+th| บัญชีผู้ดูแลระบบ
+tr| Yönetici hesabı
+fi| Ylläpitäjän tili
+
+= Không giới hạn
+en| Unlimited
+zh| 无限制
+es| Ilimitado
+hi| असीमित
+ar| غير محدود
+pt| Ilimitado
+ru| Без ограничений
+ja| 無制限
+ko| 제한 없음
+de| Unbegrenzt
+fr| Illimité
+id| Tanpa batas
+th| ไม่จำกัด
+tr| Sınırsız
+fi| Rajoittamaton
+
+= Tài khoản quản trị gửi bài không bị trừ Điểm King.
+en| Administrator accounts are not charged King Points for posting.
+zh| 管理员账号发布内容不扣 King 积分。
+es| Las cuentas de administrador no gastan Puntos King al publicar.
+hi| एडमिन खाते से पोस्ट करने पर King पॉइंट नहीं कटते।
+ar| لا تُخصم نقاط King من حسابات المشرفين عند النشر.
+pt| Contas de administrador não gastam Pontos King ao publicar.
+ru| С аккаунтов администраторов King-баллы за публикации не списываются.
+ja| 管理者アカウントは投稿してもKingポイントを消費しません。
+ko| 관리자 계정은 게시해도 King 포인트가 차감되지 않습니다.
+de| Administratorkonten verbrauchen beim Posten keine King-Punkte.
+fr| Les comptes administrateur ne dépensent pas de Points King en publiant.
+id| Akun administrator tidak dipotong Poin King saat memposting.
+th| บัญชีผู้ดูแลระบบไม่ถูกหักคะแนน King เมื่อโพสต์
+tr| Yönetici hesapları gönderi yaparken King Puanı harcamaz.
+fi| Ylläpitäjätileiltä ei vähennetä King-pisteitä julkaisuista.
+
+= Link giới thiệu của bạn
+en| Your referral link
+zh| 你的邀请链接
+es| Tu enlace de invitación
+hi| आपका रेफ़रल लिंक
+ar| رابط الدعوة الخاص بك
+pt| Seu link de indicação
+ru| Ваша реферальная ссылка
+ja| あなたの紹介リンク
+ko| 내 추천 링크
+de| Ihr Empfehlungslink
+fr| Votre lien de parrainage
+id| Tautan referral Anda
+th| ลิงก์แนะนำของคุณ
+tr| Davet bağlantınız
+fi| Oma suosituslinkkisi
+
+= Điểm để đăng bài: mỗi lượt gửi thành công tới một nhóm trừ {0} điểm
+en| Points for posting: each successful send to one group costs {0} point(s)
+zh| 用于发布内容的积分:每向一个群组成功发送一次扣 {0} 分
+es| Puntos para publicar: cada envío correcto a un grupo cuesta {0} punto(s)
+hi| पोस्ट करने के पॉइंट: किसी ग्रुप में हर सफल भेजने पर {0} पॉइंट कटते हैं
+ar| نقاط للنشر: كل إرسال ناجح إلى مجموعة يخصم {0} نقطة
+pt| Pontos para publicar: cada envio bem-sucedido a um grupo custa {0} ponto(s)
+ru| Баллы для публикаций: каждая успешная отправка в одну группу стоит {0} б.
+ja| 投稿に使うポイント:1グループへの送信が成功するたびに{0}ポイント消費
+ko| 게시에 쓰는 포인트: 한 그룹에 성공적으로 보낼 때마다 {0}포인트 차감
+de| Punkte zum Posten: Jede erfolgreiche Sendung an eine Gruppe kostet {0} Punkt(e)
+fr| Points pour publier : chaque envoi réussi vers un groupe coûte {0} point(s)
+id| Poin untuk memposting: setiap pengiriman berhasil ke satu grup mengurangi {0} poin
+th| คะแนนสำหรับโพสต์: ส่งสำเร็จไปยังหนึ่งกลุ่มหัก {0} คะแนน
+tr| Gönderi puanları: bir gruba başarılı her gönderim {0} puan düşer
+fi| Pisteet julkaisuun: jokainen onnistunut lähetys yhteen ryhmään maksaa {0} pistettä
+
+= Số dư của bạn
+en| Your balance
+zh| 你的余额
+es| Tu saldo
+hi| आपका बैलेंस
+ar| رصيدك
+pt| Seu saldo
+ru| Ваш баланс
+ja| 残高
+ko| 내 잔액
+de| Ihr Guthaben
+fr| Votre solde
+id| Saldo Anda
+th| ยอดคงเหลือของคุณ
+tr| Bakiyeniz
+fi| Saldosi
+
+= Đã dùng {0} điểm
+en| {0} points used
+zh| 已使用 {0} 分
+es| {0} puntos usados
+hi| {0} पॉइंट इस्तेमाल हुए
+ar| تم استخدام {0} نقطة
+pt| {0} pontos usados
+ru| Использовано баллов: {0}
+ja| {0}ポイント使用済み
+ko| {0}포인트 사용
+de| {0} Punkte verbraucht
+fr| {0} points utilisés
+id| {0} poin terpakai
+th| ใช้ไปแล้ว {0} คะแนน
+tr| {0} puan kullanıldı
+fi| {0} pistettä käytetty
+
+= Điểm danh thành công, +{0} Điểm King
+en| Checked in, +{0} King Points
+zh| 签到成功,+{0} King 积分
+es| Asistencia registrada, +{0} Puntos King
+hi| चेक-इन सफल, +{0} King पॉइंट
+ar| تم تسجيل الحضور، +{0} نقطة King
+pt| Check-in feito, +{0} Pontos King
+ru| Отметка сделана, +{0} King-баллов
+ja| チェックイン完了、+{0} Kingポイント
+ko| 출석 체크 완료, +{0} King 포인트
+de| Eingecheckt, +{0} King-Punkte
+fr| Pointage réussi, +{0} Points King
+id| Absen berhasil, +{0} Poin King
+th| เช็กอินสำเร็จ +{0} คะแนน King
+tr| Yoklama yapıldı, +{0} King Puanı
+fi| Läsnäolo kirjattu, +{0} King-pistettä
+
+= Hôm nay đã điểm danh
+en| Checked in today
+zh| 今天已签到
+es| Ya marcaste asistencia hoy
+hi| आज चेक-इन हो चुका है
+ar| سجّلت حضورك اليوم
+pt| Check-in de hoje já feito
+ru| Сегодня уже отмечено
+ja| 本日はチェックイン済み
+ko| 오늘 출석 완료
+de| Heute bereits eingecheckt
+fr| Déjà pointé aujourd'hui
+id| Sudah absen hari ini
+th| เช็กอินวันนี้แล้ว
+tr| Bugün yoklama yapıldı
+fi| Läsnäolo kirjattu tänään
+
+= Điểm danh nhận +{0}
+en| Check in for +{0}
+zh| 签到领 +{0}
+es| Marcar asistencia y ganar +{0}
+hi| चेक-इन करके +{0} पाएँ
+ar| سجّل حضورك واحصل على +{0}
+pt| Faça check-in e ganhe +{0}
+ru| Отметиться и получить +{0}
+ja| チェックインして+{0}
+ko| 출석 체크하고 +{0} 받기
+de| Einchecken für +{0}
+fr| Pointer pour +{0}
+id| Absen dapat +{0}
+th| เช็กอินรับ +{0}
+tr| Yoklama yap, +{0} kazan
+fi| Kirjaudu läsnäoloon: +{0}
+
+= Quay lại vào ngày mai để nhận tiếp.
+en| Come back tomorrow to earn more.
+zh| 明天再来领取吧。
+es| Vuelve mañana para ganar más.
+hi| और पाने के लिए कल फिर आएँ।
+ar| عد غدًا لتحصل على المزيد.
+pt| Volte amanhã para ganhar mais.
+ru| Возвращайтесь завтра за новыми баллами.
+ja| 明日またチェックインしてください。
+ko| 내일 다시 와서 더 받으세요.
+de| Kommen Sie morgen wieder, um mehr zu erhalten.
+fr| Revenez demain pour en gagner davantage.
+id| Kembali besok untuk mendapat lagi.
+th| กลับมาใหม่พรุ่งนี้เพื่อรับเพิ่ม
+tr| Daha fazlası için yarın tekrar gelin.
+fi| Palaa huomenna ansaitsemaan lisää.
+
+= Mỗi bạn đăng ký bằng link của bạn và chạy bài thành công, bạn nhận +{0} điểm, bạn của bạn nhận thêm +{1} điểm (tổng {2} điểm).
+en| For each friend who signs up with your link and sends a post successfully, you get +{0} points and your friend gets an extra +{1} points ({2} in total).
+zh| 每位通过你的链接注册并成功发出内容的好友,你将获得 +{0} 分,好友额外获得 +{1} 分(共 {2} 分)。
+es| Por cada amigo que se registre con tu enlace y envíe una publicación con éxito, tú ganas +{0} puntos y tu amigo gana +{1} más ({2} en total).
+hi| आपके लिंक से साइन अप करके सफलतापूर्वक पोस्ट भेजने वाले हर दोस्त पर आपको +{0} पॉइंट और आपके दोस्त को अतिरिक्त +{1} पॉइंट मिलते हैं (कुल {2})।
+ar| مقابل كل صديق يسجّل عبر رابطك ويرسل منشورًا بنجاح تحصل على +{0} نقطة ويحصل صديقك على +{1} نقطة إضافية (المجموع {2}).
+pt| Para cada amigo que se cadastrar pelo seu link e enviar uma publicação com sucesso, você ganha +{0} pontos e seu amigo ganha +{1} a mais ({2} no total).
+ru| За каждого друга, который зарегистрируется по вашей ссылке и успешно отправит публикацию, вы получите +{0} баллов, а друг — ещё +{1} (всего {2}).
+ja| あなたのリンクから登録して投稿に成功した友達1人につき、あなたに+{0}ポイント、友達にも追加で+{1}ポイント(合計{2}ポイント)。
+ko| 내 링크로 가입해 게시물을 성공적으로 보낸 친구 1명마다 나는 +{0}포인트, 친구는 추가로 +{1}포인트를 받습니다(총 {2}포인트).
+de| Für jeden Freund, der sich über Ihren Link anmeldet und erfolgreich einen Beitrag sendet, erhalten Sie +{0} Punkte und Ihr Freund zusätzlich +{1} Punkte ({2} insgesamt).
+fr| Pour chaque ami qui s'inscrit avec votre lien et envoie une publication avec succès, vous gagnez +{0} points et votre ami +{1} de plus ({2} au total).
+id| Setiap teman yang mendaftar lewat tautan Anda dan berhasil mengirim postingan, Anda mendapat +{0} poin dan teman Anda mendapat tambahan +{1} poin (total {2}).
+th| เพื่อนแต่ละคนที่สมัครผ่านลิงก์ของคุณและส่งโพสต์สำเร็จ คุณรับ +{0} คะแนน และเพื่อนรับเพิ่ม +{1} คะแนน (รวม {2} คะแนน)
+tr| Bağlantınızla kaydolup başarıyla gönderi yapan her arkadaşınız için +{0} puan kazanırsınız, arkadaşınız ise ek +{1} puan kazanır (toplam {2}).
+fi| Jokaisesta ystävästä, joka rekisteröityy linkilläsi ja lähettää julkaisun onnistuneesti, saat +{0} pistettä ja ystäväsi saa +{1} lisäpistettä (yhteensä {2}).
+
+= Đã sao chép link giới thiệu
+en| Referral link copied
+zh| 已复制邀请链接
+es| Enlace de invitación copiado
+hi| रेफ़रल लिंक कॉपी किया गया
+ar| تم نسخ رابط الدعوة
+pt| Link de indicação copiado
+ru| Реферальная ссылка скопирована
+ja| 紹介リンクをコピーしました
+ko| 추천 링크를 복사했습니다
+de| Empfehlungslink kopiert
+fr| Lien de parrainage copié
+id| Tautan referral disalin
+th| คัดลอกลิงก์แนะนำแล้ว
+tr| Davet bağlantısı kopyalandı
+fi| Suosituslinkki kopioitu
+
+= Hãy nhấn giữ để sao chép
+en| Press and hold to copy
+zh| 请长按复制
+es| Mantén pulsado para copiar
+hi| कॉपी करने के लिए दबाकर रखें
+ar| اضغط مطولًا للنسخ
+pt| Pressione e segure para copiar
+ru| Нажмите и удерживайте, чтобы скопировать
+ja| 長押ししてコピーしてください
+ko| 길게 눌러 복사하세요
+de| Zum Kopieren gedrückt halten
+fr| Appuyez longuement pour copier
+id| Tekan lama untuk menyalin
+th| กดค้างเพื่อคัดลอก
+tr| Kopyalamak için basılı tutun
+fi| Kopioi painamalla pitkään
+
+= Sao chép
+en| Copy
+zh| 复制
+es| Copiar
+hi| कॉपी करें
+ar| نسخ
+pt| Copiar
+ru| Копировать
+ja| コピー
+ko| 복사
+de| Kopieren
+fr| Copier
+id| Salin
+th| คัดลอก
+tr| Kopyala
+fi| Kopioi
+
+= {0} người đã đăng ký · {1} người đã được thưởng · bạn kiếm được {2} điểm
+en| {0} signed up · {1} rewarded · you earned {2} points
+zh| {0} 人已注册 · {1} 人已获奖励 · 你已赚取 {2} 分
+es| {0} registrados · {1} recompensados · has ganado {2} puntos
+hi| {0} ने साइन अप किया · {1} को इनाम मिला · आपने {2} पॉइंट कमाए
+ar| {0} سجّلوا · {1} حصلوا على مكافأة · ربحت {2} نقطة
+pt| {0} cadastrados · {1} recompensados · você ganhou {2} pontos
+ru| зарегистрировалось: {0} · получили награду: {1} · вы заработали {2} баллов
+ja| 登録{0}人 · 報酬付与{1}人 · 獲得{2}ポイント
+ko| {0}명 가입 · {1}명 보상 지급 · 내가 번 포인트 {2}점
+de| {0} angemeldet · {1} belohnt · Sie haben {2} Punkte verdient
+fr| {0} inscrits · {1} récompensés · vous avez gagné {2} points
+id| {0} mendaftar · {1} sudah diberi hadiah · Anda mendapat {2} poin
+th| สมัครแล้ว {0} คน · ได้รับรางวัล {1} คน · คุณได้รับ {2} คะแนน
+tr| {0} kişi kaydoldu · {1} kişi ödüllendirildi · {2} puan kazandınız
+fi| {0} rekisteröitynyt · {1} palkittu · ansaitsit {2} pistettä
+
+= Cách kiếm và dùng điểm
+en| How to earn and use points
+zh| 积分的获取与使用
+es| Cómo ganar y usar puntos
+hi| पॉइंट कैसे कमाएँ और इस्तेमाल करें
+ar| كيفية كسب النقاط واستخدامها
+pt| Como ganhar e usar pontos
+ru| Как зарабатывать и тратить баллы
+ja| ポイントの貯め方と使い方
+ko| 포인트 적립 및 사용 방법
+de| So sammeln und nutzen Sie Punkte
+fr| Gagner et utiliser des points
+id| Cara mendapat dan memakai poin
+th| วิธีรับและใช้คะแนน
+tr| Puan nasıl kazanılır ve kullanılır
+fi| Pisteiden ansaitseminen ja käyttö
+
+= khi đăng ký tài khoản.
+en| when you sign up.
+zh| 注册账号时获得。
+es| al registrarte.
+hi| खाता बनाने पर।
+ar| عند التسجيل.
+pt| ao se cadastrar.
+ru| при регистрации.
+ja| アカウント登録時。
+ko| 가입할 때.
+de| bei der Anmeldung.
+fr| à l'inscription.
+id| saat mendaftar akun.
+th| เมื่อสมัครบัญชี
+tr| kayıt olunca.
+fi| rekisteröityessäsi.
+
+= mỗi ngày khi bấm Điểm danh.
+en| each day you press Check-in.
+zh| 每天点击“签到”时获得。
+es| cada día que pulsas Asistencia.
+hi| हर दिन चेक-इन दबाने पर।
+ar| كل يوم عند الضغط على تسجيل الحضور.
+pt| a cada dia em que você faz check-in.
+ru| за каждую ежедневную отметку.
+ja| 毎日チェックインするたび。
+ko| 매일 출석 체크를 누를 때마다.
+de| an jedem Tag, an dem Sie einchecken.
+fr| chaque jour où vous pointez.
+id| setiap hari saat menekan Absen.
+th| ทุกวันที่กดเช็กอิน
+tr| her gün yoklama yaptığınızda.
+fi| jokaisena päivänä, kun kirjaudut läsnäoloon.
+
+= cho mỗi người bạn giới thiệu chạy bài thành công; người đó nhận thêm
+en| for each friend you invite who sends a post successfully; they get an extra
+zh| 每成功邀请一位好友发出内容时获得;好友另得
+es| por cada amigo invitado que envía una publicación con éxito; él o ella recibe
+hi| आपके द्वारा बुलाए हर दोस्त के सफलतापूर्वक पोस्ट भेजने पर; उसे अतिरिक्त
+ar| مقابل كل صديق تدعوه ويرسل منشورًا بنجاح؛ ويحصل هو على
+pt| para cada amigo indicado que enviar uma publicação com sucesso; ele ganha mais
+ru| за каждого приглашённого друга, успешно отправившего публикацию; он получает ещё
+ja| 紹介した友達が投稿に成功するたび。友達にも追加で
+ko| 초대한 친구가 게시물을 성공적으로 보낼 때마다. 친구는 추가로
+de| für jeden eingeladenen Freund, der erfolgreich einen Beitrag sendet; er erhält zusätzlich
+fr| pour chaque ami parrainé qui envoie une publication avec succès ; il reçoit en plus
+id| untuk setiap teman yang Anda ajak dan berhasil mengirim postingan; teman Anda mendapat tambahan
+th| ต่อเพื่อนแต่ละคนที่คุณชวนและส่งโพสต์สำเร็จ โดยเพื่อนจะได้รับเพิ่ม
+tr| davet ettiğiniz her arkadaş başarıyla gönderi yaptığında; arkadaşınız ayrıca
+fi| jokaisesta kutsumastasi ystävästä, joka lähettää julkaisun onnistuneesti; hän saa lisäksi
+
+= cho mỗi lượt gửi thành công tới một nhóm (bài gửi 5 nhóm là 5 điểm).
+en| for each successful send to one group (a post sent to 5 groups costs 5 points).
+zh| 每向一个群组成功发送一次扣除(发到 5 个群组则扣 5 分)。
+es| por cada envío correcto a un grupo (una publicación enviada a 5 grupos cuesta 5 puntos).
+hi| किसी ग्रुप में हर सफल भेजने पर (5 ग्रुप में भेजी पोस्ट के 5 पॉइंट)।
+ar| مقابل كل إرسال ناجح إلى مجموعة (منشور يُرسل إلى 5 مجموعات يكلف 5 نقاط).
+pt| para cada envio bem-sucedido a um grupo (uma publicação enviada a 5 grupos custa 5 pontos).
+ru| за каждую успешную отправку в одну группу (публикация в 5 групп — 5 баллов).
+ja| 1グループへの送信が成功するたび(5グループに送ると5ポイント)。
+ko| 한 그룹에 성공적으로 보낼 때마다(5개 그룹에 보내면 5포인트).
+de| für jede erfolgreiche Sendung an eine Gruppe (ein Beitrag an 5 Gruppen kostet 5 Punkte).
+fr| pour chaque envoi réussi vers un groupe (une publication envoyée à 5 groupes coûte 5 points).
+id| untuk setiap pengiriman berhasil ke satu grup (postingan ke 5 grup = 5 poin).
+th| ต่อการส่งสำเร็จไปยังหนึ่งกลุ่ม (ส่งไป 5 กลุ่มหัก 5 คะแนน)
+tr| bir gruba başarılı her gönderim için (5 gruba giden gönderi 5 puan tutar).
+fi| jokaisesta onnistuneesta lähetyksestä yhteen ryhmään (viiteen ryhmään lähetetty julkaisu maksaa 5 pistettä).
+
+= Điểm thưởng giới thiệu chỉ được cộng khi người được giới thiệu dùng IP khác với IP của bạn.
+en| Referral bonus points are only awarded when the referred person uses a different IP address from yours.
+zh| 只有被邀请人使用与你不同的 IP 时,才会发放邀请奖励积分。
+es| Los puntos de invitación solo se otorgan si la persona invitada usa una IP distinta de la tuya.
+hi| रेफ़रल बोनस पॉइंट तभी मिलते हैं जब रेफ़र किया गया व्यक्ति आपसे अलग IP इस्तेमाल करे।
+ar| لا تُمنح نقاط مكافأة الدعوة إلا إذا استخدم المدعو عنوان IP مختلفًا عن عنوانك.
+pt| Os pontos de indicação só são concedidos se a pessoa indicada usar um IP diferente do seu.
+ru| Бонусные баллы за приглашение начисляются, только если у приглашённого другой IP, чем у вас.
+ja| 紹介ボーナスは、紹介された人があなたと異なるIPアドレスを使っている場合のみ付与されます。
+ko| 추천 보너스 포인트는 초대받은 사람이 내 IP와 다른 IP를 사용할 때만 지급됩니다.
+de| Empfehlungsboni werden nur vergeben, wenn die geworbene Person eine andere IP-Adresse als Sie verwendet.
+fr| Les points de parrainage ne sont attribués que si la personne parrainée utilise une IP différente de la vôtre.
+id| Poin bonus referral hanya diberikan jika orang yang diajak memakai alamat IP berbeda dari Anda.
+th| คะแนนโบนัสการแนะนำจะได้ก็ต่อเมื่อผู้ถูกแนะนำใช้ IP ที่ต่างจากของคุณ
+tr| Davet bonus puanları yalnızca davet edilen kişi sizden farklı bir IP adresi kullanıyorsa verilir.
+fi| Suosittelupisteet annetaan vain, jos suositeltu käyttää eri IP-osoitetta kuin sinä.
+
+= Người được giới thiệu
+en| Referred person
+zh| 被邀请人
+es| Persona invitada
+hi| रेफ़र किया गया व्यक्ति
+ar| الشخص المدعو
+pt| Pessoa indicada
+ru| Приглашённый
+ja| 紹介された人
+ko| 초대받은 사람
+de| Geworbene Person
+fr| Personne parrainée
+id| Orang yang diajak
+th| ผู้ถูกแนะนำ
+tr| Davet edilen kişi
+fi| Suositeltu henkilö
+
+= Ngày đăng ký
+en| Sign-up date
+zh| 注册日期
+es| Fecha de registro
+hi| साइन अप की तारीख़
+ar| تاريخ التسجيل
+pt| Data de cadastro
+ru| Дата регистрации
+ja| 登録日
+ko| 가입일
+de| Anmeldedatum
+fr| Date d'inscription
+id| Tanggal daftar
+th| วันที่สมัคร
+tr| Kayıt tarihi
+fi| Rekisteröitymispäivä
+
+= Trạng thái
+en| Status
+zh| 状态
+es| Estado
+hi| स्थिति
+ar| الحالة
+pt| Status
+ru| Статус
+ja| ステータス
+ko| 상태
+de| Status
+fr| Statut
+id| Status
+th| สถานะ
+tr| Durum
+fi| Tila
+
+= Lịch sử cộng điểm
+en| Points history
+zh| 积分记录
+es| Historial de puntos
+hi| पॉइंट का इतिहास
+ar| سجل النقاط
+pt| Histórico de pontos
+ru| История баллов
+ja| ポイント履歴
+ko| 포인트 내역
+de| Punkteverlauf
+fr| Historique des points
+id| Riwayat poin
+th| ประวัติคะแนน
+tr| Puan geçmişi
+fi| Pistehistoria
+
+= Chưa có giao dịch nào.
+en| No transactions yet.
+zh| 暂无记录。
+es| Aún no hay movimientos.
+hi| अभी कोई लेन-देन नहीं।
+ar| لا توجد معاملات بعد.
+pt| Ainda não há movimentações.
+ru| Операций пока нет.
+ja| まだ取引はありません。
+ko| 아직 내역이 없습니다.
+de| Noch keine Buchungen.
+fr| Aucune opération pour le moment.
+id| Belum ada transaksi.
+th| ยังไม่มีรายการ
+tr| Henüz işlem yok.
+fi| Ei vielä tapahtumia.
+
+= VD: 500 hoặc -100
+en| e.g. 500 or -100
+zh| 例如:500 或 -100
+es| p. ej. 500 o -100
+hi| उदा. 500 या -100
+ar| مثال: 500 أو -100
+pt| ex.: 500 ou -100
+ru| напр., 500 или -100
+ja| 例:500 または -100
+ko| 예: 500 또는 -100
+de| z. B. 500 oder -100
+fr| ex. : 500 ou -100
+id| mis. 500 atau -100
+th| เช่น 500 หรือ -100
+tr| örn. 500 veya -100
+fi| esim. 500 tai -100
+
+= Ghi chú (không bắt buộc)
+en| Note (optional)
+zh| 备注(可选)
+es| Nota (opcional)
+hi| टिप्पणी (वैकल्पिक)
+ar| ملاحظة (اختياري)
+pt| Observação (opcional)
+ru| Примечание (необязательно)
+ja| メモ(任意)
+ko| 메모(선택)
+de| Notiz (optional)
+fr| Note (facultatif)
+id| Catatan (opsional)
+th| หมายเหตุ (ไม่บังคับ)
+tr| Not (isteğe bağlı)
+fi| Muistiinpano (valinnainen)
+
+= Áp dụng
+en| Apply
+zh| 应用
+es| Aplicar
+hi| लागू करें
+ar| تطبيق
+pt| Aplicar
+ru| Применить
+ja| 適用
+ko| 적용
+de| Anwenden
+fr| Appliquer
+id| Terapkan
+th| นำไปใช้
+tr| Uygula
+fi| Ota käyttöön
+
+= Điều chỉnh điểm: {0}
+en| Adjust points: {0}
+zh| 调整积分:{0}
+es| Ajustar puntos: {0}
+hi| पॉइंट समायोजित करें: {0}
+ar| تعديل النقاط: {0}
+pt| Ajustar pontos: {0}
+ru| Корректировка баллов: {0}
+ja| ポイント調整:{0}
+ko| 포인트 조정: {0}
+de| Punkte anpassen: {0}
+fr| Ajuster les points : {0}
+id| Sesuaikan poin: {0}
+th| ปรับคะแนน: {0}
+tr| Puanı ayarla: {0}
+fi| Muuta pisteitä: {0}
+
+= Đã cập nhật điểm
+en| Points updated
+zh| 已更新积分
+es| Puntos actualizados
+hi| पॉइंट अपडेट किए गए
+ar| تم تحديث النقاط
+pt| Pontos atualizados
+ru| Баллы обновлены
+ja| ポイントを更新しました
+ko| 포인트를 업데이트했습니다
+de| Punkte aktualisiert
+fr| Points mis à jour
+id| Poin diperbarui
+th| อัปเดตคะแนนแล้ว
+tr| Puanlar güncellendi
+fi| Pisteet päivitetty
+
+= Số dư hiện tại: {0}. Nhập số âm để trừ điểm.
+en| Current balance: {0}. Enter a negative number to deduct points.
+zh| 当前余额:{0}。输入负数可扣除积分。
+es| Saldo actual: {0}. Introduce un número negativo para restar puntos.
+hi| वर्तमान बैलेंस: {0}। पॉइंट घटाने के लिए ऋणात्मक संख्या दर्ज करें।
+ar| الرصيد الحالي: {0}. أدخل رقمًا سالبًا لخصم نقاط.
+pt| Saldo atual: {0}. Informe um número negativo para subtrair pontos.
+ru| Текущий баланс: {0}. Введите отрицательное число, чтобы списать баллы.
+ja| 現在の残高:{0}。ポイントを減らすにはマイナスの数値を入力してください。
+ko| 현재 잔액: {0}. 포인트를 차감하려면 음수를 입력하세요.
+de| Aktuelles Guthaben: {0}. Geben Sie eine negative Zahl ein, um Punkte abzuziehen.
+fr| Solde actuel : {0}. Saisissez un nombre négatif pour retirer des points.
+id| Saldo saat ini: {0}. Masukkan angka negatif untuk mengurangi poin.
+th| ยอดคงเหลือปัจจุบัน: {0} ใส่ตัวเลขติดลบเพื่อหักคะแนน
+tr| Mevcut bakiye: {0}. Puan düşmek için negatif bir sayı girin.
+fi| Nykyinen saldo: {0}. Syötä negatiivinen luku vähentääksesi pisteitä.
+
+= Số điểm
+en| Points
+zh| 积分数
+es| Puntos
+hi| पॉइंट
+ar| عدد النقاط
+pt| Pontos
+ru| Баллы
+ja| ポイント数
+ko| 포인트
+de| Punkte
+fr| Points
+id| Jumlah poin
+th| จำนวนคะแนน
+tr| Puan
+fi| Pisteet
+
+= Ghi chú
+en| Note
+zh| 备注
+es| Nota
+hi| टिप्पणी
+ar| ملاحظة
+pt| Observação
+ru| Примечание
+ja| メモ
+ko| 메모
+de| Notiz
+fr| Note
+id| Catatan
+th| หมายเหตุ
+tr| Not
+fi| Muistiinpano
+
+= Mật khẩu tạm
+en| Temporary password
+zh| 临时密码
+es| Contraseña temporal
+hi| अस्थायी पासवर्ड
+ar| كلمة مرور مؤقتة
+pt| Senha temporária
+ru| Временный пароль
+ja| 一時パスワード
+ko| 임시 비밀번호
+de| Temporäres Passwort
+fr| Mot de passe temporaire
+id| Kata sandi sementara
+th| รหัสผ่านชั่วคราว
+tr| Geçici parola
+fi| Väliaikainen salasana
+
+= Gửi mật khẩu này cho {0}. Nó chỉ hiện một lần.
+en| Send this password to {0}. It is shown only once.
+zh| 请把此密码发给 {0}。它只会显示一次。
+es| Envía esta contraseña a {0}. Solo se muestra una vez.
+hi| यह पासवर्ड {0} को भेजें। यह सिर्फ़ एक बार दिखता है।
+ar| أرسل كلمة المرور هذه إلى {0}. تُعرض مرة واحدة فقط.
+pt| Envie esta senha para {0}. Ela é exibida apenas uma vez.
+ru| Передайте этот пароль пользователю {0}. Он показывается только один раз.
+ja| このパスワードを{0}さんに送ってください。表示されるのは一度だけです。
+ko| 이 비밀번호를 {0}에게 전달하세요. 한 번만 표시됩니다.
+de| Senden Sie dieses Passwort an {0}. Es wird nur einmal angezeigt.
+fr| Transmettez ce mot de passe à {0}. Il ne s'affiche qu'une fois.
+id| Kirim kata sandi ini ke {0}. Hanya ditampilkan sekali.
+th| ส่งรหัสผ่านนี้ให้ {0} โดยจะแสดงเพียงครั้งเดียว
+tr| Bu parolayı {0} kişisine iletin. Yalnızca bir kez gösterilir.
+fi| Lähetä tämä salasana käyttäjälle {0}. Se näytetään vain kerran.
+
+= Để trống = không giới hạn
+en| Leave empty = unlimited
+zh| 留空 = 不限制
+es| Vacío = ilimitado
+hi| खाली = असीमित
+ar| اتركه فارغًا = غير محدود
+pt| Vazio = ilimitado
+ru| Пусто = без ограничений
+ja| 空欄 = 無制限
+ko| 비워 두면 = 제한 없음
+de| Leer = unbegrenzt
+fr| Vide = illimité
+id| Kosong = tanpa batas
+th| เว้นว่าง = ไม่จำกัด
+tr| Boş = sınırsız
+fi| Tyhjä = rajoittamaton
+
+= Đã bỏ giới hạn: không giới hạn tài khoản mỗi IP
+en| Limit removed: unlimited accounts per IP
+zh| 已取消限制:每个 IP 不限制账号数
+es| Límite eliminado: cuentas ilimitadas por IP
+hi| सीमा हटाई गई: प्रति IP असीमित खाते
+ar| أُزيل الحد: عدد غير محدود من الحسابات لكل IP
+pt| Limite removido: contas ilimitadas por IP
+ru| Ограничение снято: число аккаунтов с одного IP не ограничено
+ja| 制限を解除しました:1つのIPあたりのアカウント数は無制限
+ko| 제한을 해제했습니다: IP당 계정 수 제한 없음
+de| Limit entfernt: unbegrenzt viele Konten pro IP
+fr| Limite supprimée : nombre de comptes illimité par IP
+id| Batas dihapus: akun per IP tanpa batas
+th| ยกเลิกขีดจำกัดแล้ว: ไม่จำกัดจำนวนบัญชีต่อ IP
+tr| Sınır kaldırıldı: IP başına sınırsız hesap
+fi| Raja poistettu: tilien määrä per IP on rajoittamaton
+
+= Mỗi IP được tạo tối đa {0} tài khoản
+en| Each IP can create up to {0} accounts
+zh| 每个 IP 最多可创建 {0} 个账号
+es| Cada IP puede crear hasta {0} cuentas
+hi| प्रति IP अधिकतम {0} खाते बन सकते हैं
+ar| يمكن لكل IP إنشاء {0} حسابات كحد أقصى
+pt| Cada IP pode criar até {0} contas
+ru| С одного IP можно создать не более {0} аккаунтов
+ja| 1つのIPで作成できるアカウントは最大{0}件です
+ko| IP당 최대 {0}개 계정을 만들 수 있습니다
+de| Pro IP sind maximal {0} Konten möglich
+fr| Chaque IP peut créer jusqu'à {0} comptes
+id| Setiap IP dapat membuat maksimal {0} akun
+th| แต่ละ IP สร้างบัญชีได้สูงสุด {0} บัญชี
+tr| Her IP en fazla {0} hesap oluşturabilir
+fi| Yhdestä IP:stä voi luoda enintään {0} tiliä
+
+= Giới hạn tài khoản mỗi địa chỉ IP
+en| Account limit per IP address
+zh| 每个 IP 地址的账号数量限制
+es| Límite de cuentas por dirección IP
+hi| प्रति IP पते खातों की सीमा
+ar| حد الحسابات لكل عنوان IP
+pt| Limite de contas por endereço IP
+ru| Лимит аккаунтов на один IP-адрес
+ja| IPアドレスごとのアカウント数の上限
+ko| IP 주소당 계정 수 제한
+de| Kontolimit pro IP-Adresse
+fr| Limite de comptes par adresse IP
+id| Batas akun per alamat IP
+th| ขีดจำกัดจำนวนบัญชีต่อที่อยู่ IP
+tr| IP adresi başına hesap sınırı
+fi| Tilirajoitus IP-osoitetta kohden
+
+= Số tài khoản tối đa được tạo từ một địa chỉ IP
+en| Maximum number of accounts that can be created from one IP address
+zh| 同一 IP 地址最多可创建的账号数
+es| Número máximo de cuentas que se pueden crear desde una dirección IP
+hi| एक IP पते से बनाए जा सकने वाले खातों की अधिकतम संख्या
+ar| الحد الأقصى لعدد الحسابات التي يمكن إنشاؤها من عنوان IP واحد
+pt| Número máximo de contas que podem ser criadas a partir de um endereço IP
+ru| Максимальное число аккаунтов, которое можно создать с одного IP-адреса
+ja| 1つのIPアドレスから作成できるアカウントの最大数
+ko| 하나의 IP 주소에서 만들 수 있는 최대 계정 수
+de| Maximale Anzahl an Konten, die von einer IP-Adresse erstellt werden können
+fr| Nombre maximal de comptes pouvant être créés depuis une adresse IP
+id| Jumlah maksimal akun yang bisa dibuat dari satu alamat IP
+th| จำนวนบัญชีสูงสุดที่สร้างได้จากที่อยู่ IP เดียว
+tr| Tek bir IP adresinden oluşturulabilecek en fazla hesap sayısı
+fi| Yhdestä IP-osoitteesta luotavien tilien enimmäismäärä
+
+= Để trống nếu không muốn giới hạn. Chỉ áp dụng cho tài khoản đăng ký mới, tài khoản đã có không bị ảnh hưởng.
+en| Leave empty for no limit. Applies only to new sign-ups; existing accounts are not affected.
+zh| 不想限制请留空。仅适用于新注册账号,已有账号不受影响。
+es| Déjalo vacío para no limitar. Solo se aplica a nuevos registros; las cuentas existentes no se ven afectadas.
+hi| सीमा न चाहें तो खाली छोड़ें। यह सिर्फ़ नए साइन अप पर लागू होता है, मौजूदा खातों पर असर नहीं पड़ता।
+ar| اتركه فارغًا لعدم وضع حد. ينطبق على التسجيلات الجديدة فقط ولا يؤثر على الحسابات الحالية.
+pt| Deixe vazio para não limitar. Vale apenas para novos cadastros; contas existentes não são afetadas.
+ru| Оставьте пустым, чтобы не ограничивать. Действует только для новых регистраций; существующие аккаунты не затрагиваются.
+ja| 制限しない場合は空欄にしてください。新規登録のみに適用され、既存アカウントには影響しません。
+ko| 제한하지 않으려면 비워 두세요. 새로 가입하는 계정에만 적용되며 기존 계정은 영향받지 않습니다.
+de| Leer lassen für kein Limit. Gilt nur für neue Anmeldungen; bestehende Konten bleiben unberührt.
+fr| Laissez vide pour ne pas limiter. S'applique uniquement aux nouvelles inscriptions ; les comptes existants ne sont pas touchés.
+id| Kosongkan jika tidak ingin membatasi. Hanya berlaku untuk pendaftaran baru; akun yang sudah ada tidak terpengaruh.
+th| เว้นว่างหากไม่ต้องการจำกัด ใช้กับการสมัครใหม่เท่านั้น บัญชีที่มีอยู่แล้วไม่ได้รับผลกระทบ
+tr| Sınır istemiyorsanız boş bırakın. Yalnızca yeni kayıtlara uygulanır; mevcut hesaplar etkilenmez.
+fi| Jätä tyhjäksi, jos et halua rajoitusta. Koskee vain uusia rekisteröitymisiä; olemassa olevat tilit eivät muutu.
+
+= Lưu giới hạn
+en| Save limit
+zh| 保存限制
+es| Guardar límite
+hi| सीमा सहेजें
+ar| حفظ الحد
+pt| Salvar limite
+ru| Сохранить лимит
+ja| 上限を保存
+ko| 제한 저장
+de| Limit speichern
+fr| Enregistrer la limite
+id| Simpan batas
+th| บันทึกขีดจำกัด
+tr| Sınırı kaydet
+fi| Tallenna raja
+
+= Điểm
+en| Points
+zh| 积分
+es| Puntos
+hi| पॉइंट
+ar| النقاط
+pt| Pontos
+ru| Баллы
+ja| ポイント
+ko| 포인트
+de| Punkte
+fr| Points
+id| Poin
+th| คะแนน
+tr| Puan
+fi| Pisteet

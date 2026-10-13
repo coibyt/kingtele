@@ -9,7 +9,9 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node --watch server.js",
-    "test": "node --test test/*.test.js"
+    "test": "node --test test/*.test.js",
+    "i18n": "node scripts/build-i18n.js",
+    "i18n:keys": "node scripts/extract-i18n-keys.js"
   },
   "dependencies": {
     "dotenv": "^16.4.5",

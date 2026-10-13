@@ -1,0 +1,596 @@
+# Trang quản trị thành viên (337-366) + chuỗi bổ sung
+
+= Đã gỡ quyền quản trị
+en| Admin rights removed
+zh| 已取消管理员权限
+es| Permisos de administrador retirados
+hi| एडमिन अधिकार हटा दिए गए
+ar| تمت إزالة صلاحيات المشرف
+pt| Permissões de administrador removidas
+ru| Права администратора сняты
+ja| 管理者権限を解除しました
+ko| 관리자 권한을 해제했습니다
+de| Administratorrechte entzogen
+fr| Droits d'administrateur retirés
+id| Hak administrator dicabut
+th| ยกเลิกสิทธิ์ผู้ดูแลระบบแล้ว
+tr| Yönetici yetkisi kaldırıldı
+fi| Ylläpitäjän oikeudet poistettu
+
+= Đã cấp quyền quản trị
+en| Admin rights granted
+zh| 已授予管理员权限
+es| Permisos de administrador concedidos
+hi| एडमिन अधिकार दिए गए
+ar| تم منح صلاحيات المشرف
+pt| Permissões de administrador concedidas
+ru| Права администратора выданы
+ja| 管理者権限を付与しました
+ko| 관리자 권한을 부여했습니다
+de| Administratorrechte erteilt
+fr| Droits d'administrateur accordés
+id| Hak administrator diberikan
+th| ให้สิทธิ์ผู้ดูแลระบบแล้ว
+tr| Yönetici yetkisi verildi
+fi| Ylläpitäjän oikeudet myönnetty
+
+= Gỡ QT
+en| Remove admin
+zh| 取消管理员
+es| Quitar admin
+hi| एडमिन हटाएँ
+ar| إزالة الإشراف
+pt| Remover admin
+ru| Снять админа
+ja| 管理者解除
+ko| 관리자 해제
+de| Admin entziehen
+fr| Retirer admin
+id| Cabut admin
+th| ถอดผู้ดูแล
+tr| Yöneticiliği al
+fi| Poista ylläpito
+
+= Cấp QT
+en| Make admin
+zh| 设为管理员
+es| Hacer admin
+hi| एडमिन बनाएँ
+ar| ترقية لمشرف
+pt| Tornar admin
+ru| Сделать админом
+ja| 管理者にする
+ko| 관리자 지정
+de| Zum Admin machen
+fr| Nommer admin
+id| Jadikan admin
+th| ตั้งเป็นผู้ดูแล
+tr| Yönetici yap
+fi| Tee ylläpitäjäksi
+
+= Đã mở khoá
+en| Unlocked
+zh| 已解锁
+es| Desbloqueado
+hi| अनलॉक किया गया
+ar| تم فك الحظر
+pt| Desbloqueado
+ru| Разблокировано
+ja| ロックを解除しました
+ko| 잠금을 해제했습니다
+de| Entsperrt
+fr| Débloqué
+id| Dibuka kuncinya
+th| ปลดล็อกแล้ว
+tr| Kilit açıldı
+fi| Avattu
+
+= Đã khoá tài khoản
+en| Account locked
+zh| 已锁定账号
+es| Cuenta bloqueada
+hi| खाता लॉक किया गया
+ar| تم قفل الحساب
+pt| Conta bloqueada
+ru| Аккаунт заблокирован
+ja| アカウントをロックしました
+ko| 계정을 잠갔습니다
+de| Konto gesperrt
+fr| Compte verrouillé
+id| Akun dikunci
+th| ล็อกบัญชีแล้ว
+tr| Hesap kilitlendi
+fi| Tili lukittu
+
+= Mở khoá
+en| Unlock
+zh| 解锁
+es| Desbloquear
+hi| अनलॉक करें
+ar| فك الحظر
+pt| Desbloquear
+ru| Разблокировать
+ja| ロック解除
+ko| 잠금 해제
+de| Entsperren
+fr| Débloquer
+id| Buka kunci
+th| ปลดล็อก
+tr| Kilidi aç
+fi| Avaa
+
+= Khoá
+en| Lock
+zh| 锁定
+es| Bloquear
+hi| लॉक करें
+ar| حظر
+pt| Bloquear
+ru| Заблокировать
+ja| ロック
+ko| 잠금
+de| Sperren
+fr| Verrouiller
+id| Kunci
+th| ล็อก
+tr| Kilitle
+fi| Lukitse
+
+= Đặt lại MK
+en| Reset password
+zh| 重置密码
+es| Restablecer contraseña
+hi| पासवर्ड रीसेट
+ar| إعادة تعيين كلمة المرور
+pt| Redefinir senha
+ru| Сбросить пароль
+ja| パスワード再設定
+ko| 비밀번호 재설정
+de| Passwort zurücksetzen
+fr| Réinitialiser le mot de passe
+id| Reset kata sandi
+th| รีเซ็ตรหัสผ่าน
+tr| Parolayı sıfırla
+fi| Nollaa salasana
+
+= Xoá thành viên?
+en| Delete this member?
+zh| 删除此成员?
+es| ¿Eliminar a este miembro?
+hi| इस सदस्य को हटाएँ?
+ar| حذف هذا العضو؟
+pt| Excluir este membro?
+ru| Удалить участника?
+ja| このメンバーを削除しますか?
+ko| 이 회원을 삭제할까요?
+de| Dieses Mitglied löschen?
+fr| Supprimer ce membre ?
+id| Hapus anggota ini?
+th| ลบสมาชิกนี้หรือไม่
+tr| Bu üye silinsin mi?
+fi| Poistetaanko jäsen?
+
+= Xoá "{0}" cùng toàn bộ nhóm, bài đăng, ảnh và nhật ký của họ. Không thể hoàn tác.
+en| Delete "{0}" along with all of their groups, posts, images and logs. This cannot be undone.
+zh| 删除“{0}”及其全部群组、内容、图片和日志。此操作无法撤销。
+es| Se eliminará «{0}» junto con todos sus grupos, publicaciones, imágenes y registros. No se puede deshacer.
+hi| "{0}" और उनके सभी ग्रुप, पोस्ट, इमेज और लॉग हटा दिए जाएँगे। इसे पूर्ववत नहीं किया जा सकता।
+ar| سيُحذف "{0}" مع جميع مجموعاته ومنشوراته وصوره وسجلاته. لا يمكن التراجع.
+pt| "{0}" será excluído junto com todos os grupos, publicações, imagens e registros. Não pode ser desfeito.
+ru| Участник «{0}» будет удалён вместе со всеми группами, публикациями, изображениями и журналом. Отменить нельзя.
+ja| 「{0}」と、そのすべてのグループ・投稿・画像・履歴を削除します。元に戻せません。
+ko| "{0}"과(와) 해당 회원의 모든 그룹, 게시물, 이미지, 기록을 삭제합니다. 되돌릴 수 없습니다.
+de| „{0}“ wird mit allen Gruppen, Beiträgen, Bildern und Protokollen gelöscht. Das kann nicht rückgängig gemacht werden.
+fr| « {0} » sera supprimé avec tous ses groupes, publications, images et historiques. Action irréversible.
+id| "{0}" akan dihapus beserta seluruh grup, postingan, gambar, dan catatannya. Tidak dapat dibatalkan.
+th| ลบ "{0}" พร้อมกลุ่ม โพสต์ รูปภาพ และบันทึกทั้งหมดของสมาชิก ไม่สามารถย้อนกลับได้
+tr| "{0}" tüm grupları, gönderileri, görselleri ve kayıtlarıyla birlikte silinecek. Geri alınamaz.
+fi| "{0}" poistetaan kaikkine ryhmineen, julkaisuineen, kuvineen ja lokeineen. Tätä ei voi perua.
+
+= Đã xoá thành viên
+en| Member deleted
+zh| 已删除成员
+es| Miembro eliminado
+hi| सदस्य हटा दिया गया
+ar| تم حذف العضو
+pt| Membro excluído
+ru| Участник удалён
+ja| メンバーを削除しました
+ko| 회원을 삭제했습니다
+de| Mitglied gelöscht
+fr| Membre supprimé
+id| Anggota dihapus
+th| ลบสมาชิกแล้ว
+tr| Üye silindi
+fi| Jäsen poistettu
+
+= Thành viên
+en| Members
+zh| 成员
+es| Miembros
+hi| सदस्य
+ar| الأعضاء
+pt| Membros
+ru| Участники
+ja| メンバー
+ko| 회원
+de| Mitglieder
+fr| Membres
+id| Anggota
+th| สมาชิก
+tr| Üyeler
+fi| Jäsenet
+
+= Đăng ký đang mở
+en| Registration is open
+zh| 注册已开放
+es| El registro está abierto
+hi| पंजीकरण खुला है
+ar| التسجيل مفتوح
+pt| Cadastro aberto
+ru| Регистрация открыта
+ja| 新規登録を受付中
+ko| 가입이 열려 있습니다
+de| Registrierung ist offen
+fr| Inscriptions ouvertes
+id| Pendaftaran dibuka
+th| เปิดรับสมัครอยู่
+tr| Kayıt açık
+fi| Rekisteröityminen on auki
+
+= Đăng ký đang đóng (REGISTRATION_OPEN=0)
+en| Registration is closed (REGISTRATION_OPEN=0)
+zh| 注册已关闭(REGISTRATION_OPEN=0)
+es| El registro está cerrado (REGISTRATION_OPEN=0)
+hi| पंजीकरण बंद है (REGISTRATION_OPEN=0)
+ar| التسجيل مغلق (REGISTRATION_OPEN=0)
+pt| Cadastro fechado (REGISTRATION_OPEN=0)
+ru| Регистрация закрыта (REGISTRATION_OPEN=0)
+ja| 新規登録は停止中(REGISTRATION_OPEN=0)
+ko| 가입이 닫혀 있습니다(REGISTRATION_OPEN=0)
+de| Registrierung ist geschlossen (REGISTRATION_OPEN=0)
+fr| Inscriptions fermées (REGISTRATION_OPEN=0)
+id| Pendaftaran ditutup (REGISTRATION_OPEN=0)
+th| ปิดรับสมัคร (REGISTRATION_OPEN=0)
+tr| Kayıt kapalı (REGISTRATION_OPEN=0)
+fi| Rekisteröityminen on suljettu (REGISTRATION_OPEN=0)
+
+= Đã gửi 24 giờ
+en| Sent in 24h
+zh| 24 小时发送量
+es| Enviadas en 24 h
+hi| 24 घंटे में भेजे गए
+ar| المُرسل خلال 24 ساعة
+pt| Enviadas em 24 h
+ru| Отправлено за 24 ч
+ja| 24時間の送信数
+ko| 24시간 발송 수
+de| Gesendet in 24 Std.
+fr| Envoyés en 24 h
+id| Terkirim 24 jam
+th| ส่งใน 24 ชม.
+tr| 24 saatte gönderilen
+fi| Lähetetty 24 h
+
+= Hoạt động
+en| Activity
+zh| 活动
+es| Actividad
+hi| गतिविधि
+ar| النشاط
+pt| Atividade
+ru| Активность
+ja| アクティビティ
+ko| 활동
+de| Aktivität
+fr| Activité
+id| Aktivitas
+th| กิจกรรม
+tr| Etkinlik
+fi| Toiminta
+
+= IP đăng ký
+en| Sign-up IP
+zh| 注册 IP
+es| IP de registro
+hi| साइन अप IP
+ar| IP التسجيل
+pt| IP de cadastro
+ru| IP регистрации
+ja| 登録時のIP
+ko| 가입 IP
+de| Anmelde-IP
+fr| IP d'inscription
+id| IP pendaftaran
+th| IP ตอนสมัคร
+tr| Kayıt IP'si
+fi| Rekisteröinti-IP
+
+= Thao tác
+en| Actions
+zh| 操作
+es| Acciones
+hi| कार्रवाइयाँ
+ar| الإجراءات
+pt| Ações
+ru| Действия
+ja| 操作
+ko| 작업
+de| Aktionen
+fr| Actions
+id| Tindakan
+th| การดำเนินการ
+tr| İşlemler
+fi| Toiminnot
+
+= Quản trị
+en| Admin
+zh| 管理员
+es| Admin
+hi| एडमिन
+ar| مشرف
+pt| Admin
+ru| Админ
+ja| 管理者
+ko| 관리자
+de| Admin
+fr| Admin
+id| Admin
+th| ผู้ดูแล
+tr| Yönetici
+fi| Ylläpitäjä
+
+= Đã khoá
+en| Locked
+zh| 已锁定
+es| Bloqueado
+hi| लॉक
+ar| محظور
+pt| Bloqueado
+ru| Заблокирован
+ja| ロック中
+ko| 잠김
+de| Gesperrt
+fr| Verrouillé
+id| Terkunci
+th| ถูกล็อก
+tr| Kilitli
+fi| Lukittu
+
+= Giới thiệu bởi
+en| Referred by
+zh| 邀请人:
+es| Invitado por
+hi| रेफ़र करने वाला:
+ar| دعاه
+pt| Indicado por
+ru| Приглашён
+ja| 紹介者:
+ko| 추천인:
+de| Geworben von
+fr| Parrainé par
+id| Diajak oleh
+th| แนะนำโดย
+tr| Davet eden:
+fi| Suosittelija:
+
+= đã thưởng
+en| rewarded
+zh| 已奖励
+es| recompensado
+hi| इनाम मिला
+ar| تمت المكافأة
+pt| recompensado
+ru| награда выдана
+ja| 付与済み
+ko| 지급됨
+de| belohnt
+fr| récompensé
+id| sudah diberi hadiah
+th| ให้รางวัลแล้ว
+tr| ödüllendirildi
+fi| palkittu
+
+= bị từ chối
+en| rejected
+zh| 已拒绝
+es| rechazado
+hi| अस्वीकृत
+ar| مرفوض
+pt| rejeitado
+ru| отклонено
+ja| 却下
+ko| 거절됨
+de| abgelehnt
+fr| refusé
+id| ditolak
+th| ถูกปฏิเสธ
+tr| reddedildi
+fi| hylätty
+
+= chờ
+en| pending
+zh| 待定
+es| pendiente
+hi| लंबित
+ar| قيد الانتظار
+pt| pendente
+ru| ожидание
+ja| 保留中
+ko| 대기
+de| ausstehend
+fr| en attente
+id| menunggu
+th| รอดำเนินการ
+tr| beklemede
+fi| odottaa
+
+= {0} nhóm · {1} bài · {2} đã gửi
+en| {0} groups · {1} posts · {2} sent
+zh| {0} 个群组 · {1} 条内容 · 已发送 {2}
+es| {0} grupos · {1} publicaciones · {2} enviadas
+hi| {0} ग्रुप · {1} पोस्ट · {2} भेजी गईं
+ar| {0} مجموعة · {1} منشور · {2} مُرسل
+pt| {0} grupos · {1} publicações · {2} enviadas
+ru| групп: {0} · публикаций: {1} · отправлено: {2}
+ja| {0}グループ · {1}投稿 · {2}件送信
+ko| 그룹 {0}개 · 게시물 {1}개 · 발송 {2}건
+de| {0} Gruppen · {1} Beiträge · {2} gesendet
+fr| {0} groupes · {1} publications · {2} envoyées
+id| {0} grup · {1} postingan · {2} terkirim
+th| {0} กลุ่ม · {1} โพสต์ · ส่งแล้ว {2}
+tr| {0} grup · {1} gönderi · {2} gönderildi
+fi| {0} ryhmää · {1} julkaisua · {2} lähetetty
+
+= Chưa có thành viên nào
+en| No members yet
+zh| 还没有成员
+es| Aún no hay miembros
+hi| अभी कोई सदस्य नहीं
+ar| لا يوجد أعضاء بعد
+pt| Ainda não há membros
+ru| Участников пока нет
+ja| まだメンバーがいません
+ko| 아직 회원이 없습니다
+de| Noch keine Mitglieder
+fr| Aucun membre pour le moment
+id| Belum ada anggota
+th| ยังไม่มีสมาชิก
+tr| Henüz üye yok
+fi| Ei vielä jäseniä
+
+= Thành viên mới sẽ xuất hiện ở đây sau khi đăng ký.
+en| New members will appear here after they sign up.
+zh| 新成员注册后会显示在这里。
+es| Los nuevos miembros aparecerán aquí tras registrarse.
+hi| नए सदस्य साइन अप करने के बाद यहाँ दिखेंगे।
+ar| سيظهر الأعضاء الجدد هنا بعد تسجيلهم.
+pt| Novos membros aparecerão aqui depois de se cadastrarem.
+ru| Новые участники появятся здесь после регистрации.
+ja| 新しいメンバーは登録後にここに表示されます。
+ko| 새 회원은 가입 후 여기에 표시됩니다.
+de| Neue Mitglieder erscheinen hier nach ihrer Anmeldung.
+fr| Les nouveaux membres apparaîtront ici après leur inscription.
+id| Anggota baru akan muncul di sini setelah mendaftar.
+th| สมาชิกใหม่จะแสดงที่นี่หลังสมัคร
+tr| Yeni üyeler kayıt olduktan sonra burada görünecek.
+fi| Uudet jäsenet näkyvät täällä rekisteröidyttyään.
+
+= Không tải được dữ liệu
+en| Couldn't load data
+zh| 无法加载数据
+es| No se pudieron cargar los datos
+hi| डेटा लोड नहीं हो सका
+ar| تعذّر تحميل البيانات
+pt| Não foi possível carregar os dados
+ru| Не удалось загрузить данные
+ja| データを読み込めませんでした
+ko| 데이터를 불러오지 못했습니다
+de| Daten konnten nicht geladen werden
+fr| Impossible de charger les données
+id| Gagal memuat data
+th| โหลดข้อมูลไม่สำเร็จ
+tr| Veriler yüklenemedi
+fi| Tietojen lataus epäonnistui
+
+= Thử lại
+en| Try again
+zh| 重试
+es| Reintentar
+hi| फिर कोशिश करें
+ar| أعد المحاولة
+pt| Tentar novamente
+ru| Повторить
+ja| 再試行
+ko| 다시 시도
+de| Erneut versuchen
+fr| Réessayer
+id| Coba lagi
+th| ลองอีกครั้ง
+tr| Tekrar dene
+fi| Yritä uudelleen
+
+= Ảnh
+en| Image
+zh| 图片
+es| Imagen
+hi| इमेज
+ar| صورة
+pt| Imagem
+ru| Изображение
+ja| 画像
+ko| 이미지
+de| Bild
+fr| Image
+id| Gambar
+th| รูปภาพ
+tr| Görsel
+fi| Kuva
+
+= Đã kết nối bot
+en| Bot connected
+zh| 已连接机器人
+es| Bot conectado
+hi| बॉट जुड़ा हुआ
+ar| البوت متصل
+pt| Bot conectado
+ru| Бот подключён
+ja| ボット接続済み
+ko| 봇 연결됨
+de| Bot verbunden
+fr| Bot connecté
+id| Bot terhubung
+th| เชื่อมต่อบอทแล้ว
+tr| Bot bağlı
+fi| Botti yhdistetty
+
+= Chưa kết nối bot
+en| Bot not connected
+zh| 未连接机器人
+es| Bot sin conectar
+hi| बॉट जुड़ा नहीं है
+ar| البوت غير متصل
+pt| Bot não conectado
+ru| Бот не подключён
+ja| ボット未接続
+ko| 봇 미연결
+de| Bot nicht verbunden
+fr| Bot non connecté
+id| Bot belum terhubung
+th| ยังไม่เชื่อมต่อบอท
+tr| Bot bağlı değil
+fi| Bottia ei ole yhdistetty
+
+= quá thời gian
+en| timed out
+zh| 超时
+es| tiempo agotado
+hi| समय समाप्त
+ar| انتهت المهلة
+pt| tempo esgotado
+ru| превышено время ожидания
+ja| タイムアウト
+ko| 시간 초과
+de| Zeitüberschreitung
+fr| délai dépassé
+id| waktu habis
+th| หมดเวลา
+tr| zaman aşımı
+fi| aikakatkaisu
+
+= lỗi mạng
+en| network error
+zh| 网络错误
+es| error de red
+hi| नेटवर्क त्रुटि
+ar| خطأ في الشبكة
+pt| erro de rede
+ru| ошибка сети
+ja| ネットワークエラー
+ko| 네트워크 오류
+de| Netzwerkfehler
+fr| erreur réseau
+id| kesalahan jaringan
+th| เครือข่ายผิดพลาด
+tr| ağ hatası
+fi| verkkovirhe

@@ -1,0 +1,1225 @@
+# Soạn bài, nhóm, nhật ký, cài đặt (189-260)
+
+= Tên nút
+en| Button label
+zh| 按钮名称
+es| Texto del botón
+hi| बटन का नाम
+ar| اسم الزر
+pt| Texto do botão
+ru| Название кнопки
+ja| ボタン名
+ko| 버튼 이름
+de| Beschriftung
+fr| Libellé du bouton
+id| Nama tombol
+th| ชื่อปุ่ม
+tr| Düğme adı
+fi| Painikkeen nimi
+
+= Tên nút {0}
+en| Button {0} label
+zh| 按钮 {0} 名称
+es| Texto del botón {0}
+hi| बटन {0} का नाम
+ar| اسم الزر {0}
+pt| Texto do botão {0}
+ru| Название кнопки {0}
+ja| ボタン{0}の名前
+ko| 버튼 {0} 이름
+de| Beschriftung Schaltfläche {0}
+fr| Libellé du bouton {0}
+id| Nama tombol {0}
+th| ชื่อปุ่ม {0}
+tr| {0}. düğme adı
+fi| Painikkeen {0} nimi
+
+= Link nút {0}
+en| Button {0} link
+zh| 按钮 {0} 链接
+es| Enlace del botón {0}
+hi| बटन {0} का लिंक
+ar| رابط الزر {0}
+pt| Link do botão {0}
+ru| Ссылка кнопки {0}
+ja| ボタン{0}のリンク
+ko| 버튼 {0} 링크
+de| Link Schaltfläche {0}
+fr| Lien du bouton {0}
+id| Tautan tombol {0}
+th| ลิงก์ปุ่ม {0}
+tr| {0}. düğme bağlantısı
+fi| Painikkeen {0} linkki
+
+= Xoá nút {0}
+en| Remove button {0}
+zh| 删除按钮 {0}
+es| Quitar botón {0}
+hi| बटन {0} हटाएँ
+ar| إزالة الزر {0}
+pt| Remover botão {0}
+ru| Удалить кнопку {0}
+ja| ボタン{0}を削除
+ko| 버튼 {0} 삭제
+de| Schaltfläche {0} entfernen
+fr| Supprimer le bouton {0}
+id| Hapus tombol {0}
+th| ลบปุ่ม {0}
+tr| {0}. düğmeyi kaldır
+fi| Poista painike {0}
+
+= Nội dung xem trước sẽ hiện ở đây
+en| The preview will appear here
+zh| 预览内容将显示在这里
+es| La vista previa aparecerá aquí
+hi| प्रीव्यू यहाँ दिखेगा
+ar| ستظهر المعاينة هنا
+pt| A prévia aparecerá aqui
+ru| Здесь появится предпросмотр
+ja| ここにプレビューが表示されます
+ko| 미리보기가 여기에 표시됩니다
+de| Hier erscheint die Vorschau
+fr| L'aperçu s'affichera ici
+id| Pratinjau akan muncul di sini
+th| ตัวอย่างจะแสดงที่นี่
+tr| Önizleme burada görünecek
+fi| Esikatselu näkyy tässä
+
+= Nhóm nhận bài
+en| Receiving groups
+zh| 接收群组
+es| Grupos receptores
+hi| पोस्ट पाने वाले ग्रुप
+ar| المجموعات المستلمة
+pt| Grupos que recebem
+ru| Группы-получатели
+ja| 配信先グループ
+ko| 수신 그룹
+de| Empfängergruppen
+fr| Groupes destinataires
+id| Grup penerima
+th| กลุ่มที่รับโพสต์
+tr| Alıcı gruplar
+fi| Vastaanottajaryhmät
+
+= Chưa có nhóm nào. Hãy thêm nhóm ở mục "Nhóm Telegram" trước.
+en| No groups yet. Add a group in the "Telegram groups" section first.
+zh| 还没有群组。请先在“Telegram 群组”中添加群组。
+es| Aún no hay grupos. Primero añade un grupo en la sección «Grupos de Telegram».
+hi| अभी कोई ग्रुप नहीं है। पहले "Telegram ग्रुप" सेक्शन में ग्रुप जोड़ें।
+ar| لا توجد مجموعات بعد. أضف مجموعة أولًا من قسم "مجموعات تيليجرام".
+pt| Ainda não há grupos. Adicione um grupo primeiro na seção "Grupos do Telegram".
+ru| Групп пока нет. Сначала добавьте группу в разделе «Группы Telegram».
+ja| グループがまだありません。先に「Telegramグループ」で追加してください。
+ko| 아직 그룹이 없습니다. 먼저 "Telegram 그룹" 메뉴에서 그룹을 추가하세요.
+de| Noch keine Gruppen. Fügen Sie zuerst unter „Telegram-Gruppen“ eine Gruppe hinzu.
+fr| Aucun groupe pour l'instant. Ajoutez d'abord un groupe dans « Groupes Telegram ».
+id| Belum ada grup. Tambahkan grup lebih dulu di menu "Grup Telegram".
+th| ยังไม่มีกลุ่ม โปรดเพิ่มกลุ่มที่เมนู "กลุ่ม Telegram" ก่อน
+tr| Henüz grup yok. Önce "Telegram grupları" bölümünden bir grup ekleyin.
+fi| Ryhmiä ei vielä ole. Lisää ensin ryhmä kohdassa "Telegram-ryhmät".
+
+= Tiêu đề (để bạn quản lý)
+en| Title (for your own reference)
+zh| 标题(仅供你管理使用)
+es| Título (para tu gestión)
+hi| शीर्षक (आपके प्रबंधन के लिए)
+ar| العنوان (لتنظيمك الخاص)
+pt| Título (para sua organização)
+ru| Заголовок (для вашего удобства)
+ja| タイトル(管理用)
+ko| 제목(관리용)
+de| Titel (zur eigenen Verwaltung)
+fr| Titre (pour votre organisation)
+id| Judul (untuk memudahkan Anda)
+th| ชื่อเรื่อง (ไว้จัดการเอง)
+tr| Başlık (kendi düzeniniz için)
+fi| Otsikko (omaa hallintaa varten)
+
+= Nội dung
+en| Content
+zh| 内容
+es| Contenido
+hi| सामग्री
+ar| المحتوى
+pt| Conteúdo
+ru| Текст
+ja| 内容
+ko| 내용
+de| Inhalt
+fr| Contenu
+id| Konten
+th| เนื้อหา
+tr| İçerik
+fi| Sisältö
+
+= Định dạng
+en| Format
+zh| 格式
+es| Formato
+hi| फ़ॉर्मेट
+ar| التنسيق
+pt| Formato
+ru| Формат
+ja| 書式
+ko| 서식
+de| Format
+fr| Format
+id| Format
+th| รูปแบบ
+tr| Biçim
+fi| Muotoilu
+
+= Ảnh / video đính kèm
+en| Attached image / video
+zh| 附带图片/视频
+es| Imagen / vídeo adjunto
+hi| संलग्न इमेज / वीडियो
+ar| الصورة / الفيديو المرفق
+pt| Imagem / vídeo anexo
+ru| Прикреплённое изображение / видео
+ja| 添付する画像/動画
+ko| 첨부 이미지 / 동영상
+de| Angehängtes Bild / Video
+fr| Image / vidéo jointe
+id| Gambar / video terlampir
+th| รูปภาพ / วิดีโอที่แนบ
+tr| Ekli görsel / video
+fi| Liitetty kuva / video
+
+= Hoặc dán link ảnh (https://...)
+en| Or paste an image link (https://...)
+zh| 或粘贴图片链接(https://...)
+es| O pega un enlace de imagen (https://...)
+hi| या इमेज का लिंक पेस्ट करें (https://...)
+ar| أو الصق رابط صورة (https://...)
+pt| Ou cole um link de imagem (https://...)
+ru| Или вставьте ссылку на изображение (https://...)
+ja| または画像のリンクを貼り付け(https://...)
+ko| 또는 이미지 링크 붙여넣기(https://...)
+de| Oder Bildlink einfügen (https://...)
+fr| Ou collez un lien d'image (https://...)
+id| Atau tempel tautan gambar (https://...)
+th| หรือวางลิงก์รูปภาพ (https://...)
+tr| Veya bir görsel bağlantısı yapıştırın (https://...)
+fi| Tai liitä kuvan linkki (https://...)
+
+= Nút bấm (link)
+en| Buttons (links)
+zh| 按钮(链接)
+es| Botones (enlaces)
+hi| बटन (लिंक)
+ar| الأزرار (روابط)
+pt| Botões (links)
+ru| Кнопки (ссылки)
+ja| ボタン(リンク)
+ko| 버튼(링크)
+de| Schaltflächen (Links)
+fr| Boutons (liens)
+id| Tombol (tautan)
+th| ปุ่ม (ลิงก์)
+tr| Düğmeler (bağlantı)
+fi| Painikkeet (linkit)
+
+= Thêm nút
+en| Add button
+zh| 添加按钮
+es| Añadir botón
+hi| बटन जोड़ें
+ar| إضافة زر
+pt| Adicionar botão
+ru| Добавить кнопку
+ja| ボタンを追加
+ko| 버튼 추가
+de| Schaltfläche hinzufügen
+fr| Ajouter un bouton
+id| Tambah tombol
+th| เพิ่มปุ่ม
+tr| Düğme ekle
+fi| Lisää painike
+
+= Gửi tới nhóm
+en| Send to groups
+zh| 发送到群组
+es| Enviar a grupos
+hi| ग्रुप में भेजें
+ar| إرسال إلى المجموعات
+pt| Enviar para grupos
+ru| Отправить в группы
+ja| 送信先グループ
+ko| 발송할 그룹
+de| An Gruppen senden
+fr| Envoyer aux groupes
+id| Kirim ke grup
+th| ส่งไปยังกลุ่ม
+tr| Gruplara gönder
+fi| Lähetä ryhmiin
+
+= Lịch đăng
+en| Schedule
+zh| 发布计划
+es| Programación
+hi| शेड्यूल
+ar| الجدولة
+pt| Agendamento
+ru| Расписание
+ja| スケジュール
+ko| 일정
+de| Zeitplan
+fr| Planification
+id| Jadwal
+th| ตารางเวลา
+tr| Zamanlama
+fi| Aikataulu
+
+= Múi giờ
+en| Time zone
+zh| 时区
+es| Zona horaria
+hi| टाइम ज़ोन
+ar| المنطقة الزمنية
+pt| Fuso horário
+ru| Часовой пояс
+ja| タイムゾーン
+ko| 시간대
+de| Zeitzone
+fr| Fuseau horaire
+id| Zona waktu
+th| เขตเวลา
+tr| Saat dilimi
+fi| Aikavyöhyke
+
+= Gửi im lặng (không báo âm thanh)
+en| Send silently (no notification sound)
+zh| 静音发送(不提示声音)
+es| Enviar en silencio (sin sonido de notificación)
+hi| चुपचाप भेजें (नोटिफ़िकेशन ध्वनि नहीं)
+ar| إرسال صامت (دون صوت إشعار)
+pt| Enviar em silêncio (sem som de notificação)
+ru| Отправить без звука (без звукового уведомления)
+ja| サイレント送信(通知音なし)
+ko| 무음으로 발송(알림음 없음)
+de| Lautlos senden (ohne Benachrichtigungston)
+fr| Envoyer en silence (sans son de notification)
+id| Kirim senyap (tanpa suara notifikasi)
+th| ส่งแบบเงียบ (ไม่มีเสียงแจ้งเตือน)
+tr| Sessiz gönder (bildirim sesi olmadan)
+fi| Lähetä äänettömästi (ei ilmoitusääntä)
+
+= Tắt xem trước link
+en| Disable link preview
+zh| 关闭链接预览
+es| Desactivar vista previa de enlaces
+hi| लिंक प्रीव्यू बंद करें
+ar| تعطيل معاينة الروابط
+pt| Desativar pré-visualização de links
+ru| Отключить предпросмотр ссылок
+ja| リンクのプレビューを無効にする
+ko| 링크 미리보기 끄기
+de| Link-Vorschau deaktivieren
+fr| Désactiver l'aperçu des liens
+id| Matikan pratinjau tautan
+th| ปิดตัวอย่างลิงก์
+tr| Bağlantı önizlemesini kapat
+fi| Poista linkkien esikatselu käytöstä
+
+= Xem trước
+en| Preview
+zh| 预览
+es| Vista previa
+hi| प्रीव्यू
+ar| معاينة
+pt| Pré-visualização
+ru| Предпросмотр
+ja| プレビュー
+ko| 미리보기
+de| Vorschau
+fr| Aperçu
+id| Pratinjau
+th| ตัวอย่าง
+tr| Önizleme
+fi| Esikatselu
+
+= Lưu thay đổi
+en| Save changes
+zh| 保存更改
+es| Guardar cambios
+hi| बदलाव सहेजें
+ar| حفظ التغييرات
+pt| Salvar alterações
+ru| Сохранить изменения
+ja| 変更を保存
+ko| 변경사항 저장
+de| Änderungen speichern
+fr| Enregistrer les modifications
+id| Simpan perubahan
+th| บันทึกการเปลี่ยนแปลง
+tr| Değişiklikleri kaydet
+fi| Tallenna muutokset
+
+= Sửa bài đăng
+en| Edit post
+zh| 编辑内容
+es| Editar publicación
+hi| पोस्ट संपादित करें
+ar| تعديل المنشور
+pt| Editar publicação
+ru| Изменить публикацию
+ja| 投稿を編集
+ko| 게시물 수정
+de| Beitrag bearbeiten
+fr| Modifier la publication
+id| Ubah postingan
+th| แก้ไขโพสต์
+tr| Gönderiyi düzenle
+fi| Muokkaa julkaisua
+
+= Bài đăng mới
+en| New post
+zh| 新内容
+es| Nueva publicación
+hi| नई पोस्ट
+ar| منشور جديد
+pt| Nova publicação
+ru| Новая публикация
+ja| 新しい投稿
+ko| 새 게시물
+de| Neuer Beitrag
+fr| Nouvelle publication
+id| Postingan baru
+th| โพสต์ใหม่
+tr| Yeni gönderi
+fi| Uusi julkaisu
+
+= Đang tải file lên, vui lòng chờ xong
+en| A file is uploading, please wait until it finishes
+zh| 文件正在上传,请等待完成
+es| Se está subiendo un archivo, espera a que termine
+hi| फ़ाइल अपलोड हो रही है, कृपया पूरा होने तक प्रतीक्षा करें
+ar| الملف قيد الرفع، يرجى الانتظار حتى ينتهي
+pt| Um arquivo está sendo enviado, aguarde a conclusão
+ru| Файл загружается, подождите завершения
+ja| ファイルをアップロード中です。完了までお待ちください
+ko| 파일을 업로드하는 중입니다. 완료될 때까지 기다려 주세요
+de| Eine Datei wird hochgeladen, bitte warten Sie bis zum Abschluss
+fr| Un fichier est en cours de téléversement, veuillez patienter
+id| File sedang diunggah, harap tunggu sampai selesai
+th| กำลังอัปโหลดไฟล์ โปรดรอจนเสร็จ
+tr| Bir dosya yükleniyor, lütfen tamamlanmasını bekleyin
+fi| Tiedostoa ladataan, odota kunnes se on valmis
+
+= Đã lưu thay đổi
+en| Changes saved
+zh| 已保存更改
+es| Cambios guardados
+hi| बदलाव सहेजे गए
+ar| تم حفظ التغييرات
+pt| Alterações salvas
+ru| Изменения сохранены
+ja| 変更を保存しました
+ko| 변경사항을 저장했습니다
+de| Änderungen gespeichert
+fr| Modifications enregistrées
+id| Perubahan disimpan
+th| บันทึกการเปลี่ยนแปลงแล้ว
+tr| Değişiklikler kaydedildi
+fi| Muutokset tallennettu
+
+= Đã tạo bài đăng
+en| Post created
+zh| 已创建内容
+es| Publicación creada
+hi| पोस्ट बनाई गई
+ar| تم إنشاء المنشور
+pt| Publicação criada
+ru| Публикация создана
+ja| 投稿を作成しました
+ko| 게시물을 만들었습니다
+de| Beitrag erstellt
+fr| Publication créée
+id| Postingan dibuat
+th| สร้างโพสต์แล้ว
+tr| Gönderi oluşturuldu
+fi| Julkaisu luotu
+
+= @tennhom hoặc -1001234567890
+en| @groupname or -1001234567890
+zh| @群组名 或 -1001234567890
+es| @nombredelgrupo o -1001234567890
+hi| @ग्रुपनाम या -1001234567890
+ar| @اسم_المجموعة أو -1001234567890
+pt| @nomedogrupo ou -1001234567890
+ru| @имя_группы или -1001234567890
+ja| @グループ名 または -1001234567890
+ko| @그룹이름 또는 -1001234567890
+de| @gruppenname oder -1001234567890
+fr| @nomdugroupe ou -1001234567890
+id| @namagrup atau -1001234567890
+th| @ชื่อกลุ่ม หรือ -1001234567890
+tr| @grupadı veya -1001234567890
+fi| @ryhmänimi tai -1001234567890
+
+= Tên hiển thị (tự lấy nếu bỏ trống)
+en| Display name (filled in automatically if empty)
+zh| 显示名称(留空则自动获取)
+es| Nombre visible (se obtiene automáticamente si lo dejas vacío)
+hi| डिस्प्ले नाम (खाली छोड़ने पर अपने आप भर जाएगा)
+ar| الاسم المعروض (يُجلب تلقائيًا إن تُرك فارغًا)
+pt| Nome de exibição (preenchido automaticamente se vazio)
+ru| Отображаемое имя (подставится автоматически, если пусто)
+ja| 表示名(空欄の場合は自動取得)
+ko| 표시 이름(비워 두면 자동으로 가져옵니다)
+de| Anzeigename (wird automatisch übernommen, wenn leer)
+fr| Nom affiché (récupéré automatiquement si vide)
+id| Nama tampilan (diisi otomatis jika kosong)
+th| ชื่อที่แสดง (ดึงให้อัตโนมัติถ้าเว้นว่าง)
+tr| Görünen ad (boş bırakılırsa otomatik alınır)
+fi| Näyttönimi (haetaan automaattisesti, jos tyhjä)
+
+= Thêm nhóm
+en| Add group
+zh| 添加群组
+es| Añadir grupo
+hi| ग्रुप जोड़ें
+ar| إضافة مجموعة
+pt| Adicionar grupo
+ru| Добавить группу
+ja| グループを追加
+ko| 그룹 추가
+de| Gruppe hinzufügen
+fr| Ajouter un groupe
+id| Tambah grup
+th| เพิ่มกลุ่ม
+tr| Grup ekle
+fi| Lisää ryhmä
+
+= Đã thêm nhóm
+en| Group added
+zh| 已添加群组
+es| Grupo añadido
+hi| ग्रुप जोड़ा गया
+ar| تمت إضافة المجموعة
+pt| Grupo adicionado
+ru| Группа добавлена
+ja| グループを追加しました
+ko| 그룹을 추가했습니다
+de| Gruppe hinzugefügt
+fr| Groupe ajouté
+id| Grup ditambahkan
+th| เพิ่มกลุ่มแล้ว
+tr| Grup eklendi
+fi| Ryhmä lisätty
+
+= Thêm nhóm hoặc kênh
+en| Add a group or channel
+zh| 添加群组或频道
+es| Añadir un grupo o canal
+hi| ग्रुप या चैनल जोड़ें
+ar| إضافة مجموعة أو قناة
+pt| Adicionar grupo ou canal
+ru| Добавить группу или канал
+ja| グループまたはチャンネルを追加
+ko| 그룹 또는 채널 추가
+de| Gruppe oder Kanal hinzufügen
+fr| Ajouter un groupe ou un canal
+id| Tambah grup atau kanal
+th| เพิ่มกลุ่มหรือแชนเนล
+tr| Grup veya kanal ekle
+fi| Lisää ryhmä tai kanava
+
+= Chat ID hoặc @username
+en| Chat ID or @username
+zh| Chat ID 或 @用户名
+es| Chat ID o @usuario
+hi| Chat ID या @username
+ar| Chat ID أو @اسم_المستخدم
+pt| Chat ID ou @usuário
+ru| Chat ID или @username
+ja| Chat ID または @ユーザー名
+ko| Chat ID 또는 @사용자이름
+de| Chat-ID oder @Benutzername
+fr| ID de discussion ou @nom d'utilisateur
+id| Chat ID atau @username
+th| Chat ID หรือ @username
+tr| Chat ID veya @kullanıcıadı
+fi| Chat ID tai @käyttäjänimi
+
+= Tên hiển thị
+en| Display name
+zh| 显示名称
+es| Nombre visible
+hi| डिस्प्ले नाम
+ar| الاسم المعروض
+pt| Nome de exibição
+ru| Отображаемое имя
+ja| 表示名
+ko| 표시 이름
+de| Anzeigename
+fr| Nom affiché
+id| Nama tampilan
+th| ชื่อที่แสดง
+tr| Görünen ad
+fi| Näyttönimi
+
+= Thêm bot vào nhóm trước (với kênh: đặt bot làm quản trị viên có quyền đăng). Nhóm riêng tư dùng Chat ID dạng -100xxxxxxxxxx.
+en| Add the bot to the group first (for a channel: make the bot an admin with permission to post). Private groups use a Chat ID like -100xxxxxxxxxx.
+zh| 请先把机器人加入群组(频道需将机器人设为有发布权限的管理员)。私有群组使用形如 -100xxxxxxxxxx 的 Chat ID。
+es| Añade primero el bot al grupo (en un canal: hazlo administrador con permiso para publicar). Los grupos privados usan un Chat ID como -100xxxxxxxxxx.
+hi| पहले बॉट को ग्रुप में जोड़ें (चैनल के लिए: बॉट को पोस्ट करने की अनुमति वाला एडमिन बनाएँ)। निजी ग्रुप के लिए -100xxxxxxxxxx जैसी Chat ID इस्तेमाल करें।
+ar| أضف البوت إلى المجموعة أولًا (في القناة: اجعله مشرفًا بصلاحية النشر). تستخدم المجموعات الخاصة معرّفًا مثل -100xxxxxxxxxx.
+pt| Adicione o bot ao grupo primeiro (em canais: torne-o administrador com permissão para publicar). Grupos privados usam um Chat ID como -100xxxxxxxxxx.
+ru| Сначала добавьте бота в группу (для канала — назначьте администратором с правом публикации). Для закрытых групп используйте Chat ID вида -100xxxxxxxxxx.
+ja| 先にボットをグループに追加してください(チャンネルの場合は、投稿権限のある管理者に設定)。非公開グループには-100xxxxxxxxxx形式のChat IDを使います。
+ko| 먼저 봇을 그룹에 추가하세요(채널은 게시 권한이 있는 관리자로 지정). 비공개 그룹은 -100xxxxxxxxxx 형식의 Chat ID를 사용합니다.
+de| Fügen Sie den Bot zuerst der Gruppe hinzu (bei Kanälen: als Administrator mit Sendeberechtigung). Private Gruppen verwenden eine Chat-ID wie -100xxxxxxxxxx.
+fr| Ajoutez d'abord le bot au groupe (pour un canal : nommez-le administrateur avec droit de publier). Les groupes privés utilisent un ID du type -100xxxxxxxxxx.
+id| Tambahkan bot ke grup terlebih dahulu (untuk kanal: jadikan bot admin dengan izin memposting). Grup privat memakai Chat ID seperti -100xxxxxxxxxx.
+th| เพิ่มบอทเข้ากลุ่มก่อน (แชนเนล: ตั้งบอทเป็นผู้ดูแลที่มีสิทธิ์โพสต์) กลุ่มส่วนตัวใช้ Chat ID รูปแบบ -100xxxxxxxxxx
+tr| Önce botu gruba ekleyin (kanal için: botu gönderi yetkisi olan yönetici yapın). Özel gruplar -100xxxxxxxxxx biçiminde bir Chat ID kullanır.
+fi| Lisää botti ensin ryhmään (kanavassa: tee botista ylläpitäjä, jolla on julkaisuoikeus). Yksityiset ryhmät käyttävät muotoa -100xxxxxxxxxx olevaa Chat ID:tä.
+
+= Các nhóm và kênh có thể nhận bài đăng
+en| Groups and channels that can receive posts
+zh| 可接收内容的群组和频道
+es| Grupos y canales que pueden recibir publicaciones
+hi| पोस्ट पाने वाले ग्रुप और चैनल
+ar| المجموعات والقنوات التي يمكنها استقبال المنشورات
+pt| Grupos e canais que podem receber publicações
+ru| Группы и каналы, куда можно публиковать
+ja| 投稿を受け取れるグループとチャンネル
+ko| 게시물을 받을 수 있는 그룹과 채널
+de| Gruppen und Kanäle, die Beiträge empfangen können
+fr| Groupes et canaux pouvant recevoir des publications
+id| Grup dan kanal yang bisa menerima postingan
+th| กลุ่มและแชนเนลที่รับโพสต์ได้
+tr| Gönderi alabilen gruplar ve kanallar
+fi| Ryhmät ja kanavat, jotka voivat vastaanottaa julkaisuja
+
+= Bot truy cập được
+en| Bot has access
+zh| 机器人可访问
+es| El bot tiene acceso
+hi| बॉट की पहुँच है
+ar| البوت لديه صلاحية الوصول
+pt| O bot tem acesso
+ru| У бота есть доступ
+ja| ボットがアクセス可能
+ko| 봇 접근 가능
+de| Bot hat Zugriff
+fr| Le bot y a accès
+id| Bot bisa mengakses
+th| บอทเข้าถึงได้
+tr| Bot erişebiliyor
+fi| Botilla on pääsy
+
+= Chưa kiểm tra
+en| Not checked
+zh| 未检查
+es| Sin comprobar
+hi| जाँच नहीं हुई
+ar| لم يُفحص
+pt| Não verificado
+ru| Не проверено
+ja| 未確認
+ko| 미확인
+de| Nicht geprüft
+fr| Non vérifié
+id| Belum diperiksa
+th| ยังไม่ตรวจสอบ
+tr| Kontrol edilmedi
+fi| Ei tarkistettu
+
+= Kết nối ổn
+en| Connection OK
+zh| 连接正常
+es| Conexión correcta
+hi| कनेक्शन ठीक है
+ar| الاتصال سليم
+pt| Conexão OK
+ru| Соединение в порядке
+ja| 接続は正常です
+ko| 연결 정상
+de| Verbindung in Ordnung
+fr| Connexion OK
+id| Koneksi baik
+th| เชื่อมต่อปกติ
+tr| Bağlantı sağlam
+fi| Yhteys kunnossa
+
+= Kiểm tra
+en| Check
+zh| 检查
+es| Comprobar
+hi| जाँचें
+ar| فحص
+pt| Verificar
+ru| Проверить
+ja| 確認
+ko| 확인
+de| Prüfen
+fr| Vérifier
+id| Periksa
+th| ตรวจสอบ
+tr| Kontrol et
+fi| Tarkista
+
+= Xoá {0}
+en| Delete {0}
+zh| 删除 {0}
+es| Eliminar {0}
+hi| {0} हटाएँ
+ar| حذف {0}
+pt| Excluir {0}
+ru| Удалить {0}
+ja| {0}を削除
+ko| {0} 삭제
+de| {0} löschen
+fr| Supprimer {0}
+id| Hapus {0}
+th| ลบ {0}
+tr| {0} öğesini sil
+fi| Poista {0}
+
+= Xoá nhóm?
+en| Delete this group?
+zh| 删除此群组?
+es| ¿Eliminar este grupo?
+hi| यह ग्रुप हटाएँ?
+ar| حذف هذه المجموعة؟
+pt| Excluir este grupo?
+ru| Удалить группу?
+ja| このグループを削除しますか?
+ko| 이 그룹을 삭제할까요?
+de| Diese Gruppe löschen?
+fr| Supprimer ce groupe ?
+id| Hapus grup ini?
+th| ลบกลุ่มนี้หรือไม่
+tr| Bu grup silinsin mi?
+fi| Poistetaanko ryhmä?
+
+= "{0}" sẽ bị gỡ khỏi danh sách và khỏi các bài đăng liên quan.
+en| "{0}" will be removed from the list and from related posts.
+zh| “{0}”将从列表及相关内容中移除。
+es| «{0}» se quitará de la lista y de las publicaciones relacionadas.
+hi| "{0}" को सूची और संबंधित पोस्ट से हटा दिया जाएगा।
+ar| ستُزال "{0}" من القائمة ومن المنشورات المرتبطة بها.
+pt| "{0}" será removido da lista e das publicações relacionadas.
+ru| «{0}» будет удалена из списка и из связанных публикаций.
+ja| 「{0}」は一覧および関連する投稿から削除されます。
+ko| "{0}"이(가) 목록과 관련 게시물에서 제거됩니다.
+de| „{0}“ wird aus der Liste und aus zugehörigen Beiträgen entfernt.
+fr| « {0} » sera retiré de la liste et des publications associées.
+id| "{0}" akan dihapus dari daftar dan dari postingan terkait.
+th| "{0}" จะถูกนำออกจากรายการและโพสต์ที่เกี่ยวข้อง
+tr| "{0}" listeden ve ilgili gönderilerden kaldırılacak.
+fi| "{0}" poistetaan luettelosta ja siihen liittyvistä julkaisuista.
+
+= Đã xoá nhóm
+en| Group deleted
+zh| 已删除群组
+es| Grupo eliminado
+hi| ग्रुप हटाया गया
+ar| تم حذف المجموعة
+pt| Grupo excluído
+ru| Группа удалена
+ja| グループを削除しました
+ko| 그룹을 삭제했습니다
+de| Gruppe gelöscht
+fr| Groupe supprimé
+id| Grup dihapus
+th| ลบกลุ่มแล้ว
+tr| Grup silindi
+fi| Ryhmä poistettu
+
+= Chưa có nhóm nào
+en| No groups yet
+zh| 还没有群组
+es| Aún no hay grupos
+hi| अभी कोई ग्रुप नहीं
+ar| لا توجد مجموعات بعد
+pt| Ainda não há grupos
+ru| Групп пока нет
+ja| まだグループがありません
+ko| 아직 그룹이 없습니다
+de| Noch keine Gruppen
+fr| Aucun groupe pour le moment
+id| Belum ada grup
+th| ยังไม่มีกลุ่ม
+tr| Henüz grup yok
+fi| Ei vielä ryhmiä
+
+= Thêm nhóm đầu tiên ở form phía trên.
+en| Add your first group using the form above.
+zh| 请在上方表单添加第一个群组。
+es| Añade tu primer grupo con el formulario de arriba.
+hi| ऊपर के फ़ॉर्म से अपना पहला ग्रुप जोड़ें।
+ar| أضف مجموعتك الأولى من النموذج أعلاه.
+pt| Adicione seu primeiro grupo no formulário acima.
+ru| Добавьте первую группу с помощью формы выше.
+ja| 上のフォームから最初のグループを追加してください。
+ko| 위 양식에서 첫 번째 그룹을 추가하세요.
+de| Fügen Sie Ihre erste Gruppe über das Formular oben hinzu.
+fr| Ajoutez votre premier groupe avec le formulaire ci-dessus.
+id| Tambahkan grup pertama Anda lewat formulir di atas.
+th| เพิ่มกลุ่มแรกของคุณจากแบบฟอร์มด้านบน
+tr| İlk grubunuzu yukarıdaki formdan ekleyin.
+fi| Lisää ensimmäinen ryhmäsi yllä olevalla lomakkeella.
+
+= Lọc theo trạng thái
+en| Filter by status
+zh| 按状态筛选
+es| Filtrar por estado
+hi| स्थिति के अनुसार फ़िल्टर करें
+ar| تصفية حسب الحالة
+pt| Filtrar por status
+ru| Фильтр по статусу
+ja| ステータスで絞り込み
+ko| 상태별 필터
+de| Nach Status filtern
+fr| Filtrer par statut
+id| Filter menurut status
+th| กรองตามสถานะ
+tr| Duruma göre filtrele
+fi| Suodata tilan mukaan
+
+= Lịch sử 200 lượt gửi gần nhất
+en| History of the last 200 sends
+zh| 最近 200 次发送记录
+es| Historial de los últimos 200 envíos
+hi| पिछले 200 भेजे गए पोस्ट का इतिहास
+ar| سجل آخر 200 عملية إرسال
+pt| Histórico dos últimos 200 envios
+ru| История последних 200 отправок
+ja| 直近200件の送信履歴
+ko| 최근 200건의 발송 기록
+de| Verlauf der letzten 200 Sendungen
+fr| Historique des 200 derniers envois
+id| Riwayat 200 pengiriman terakhir
+th| ประวัติการส่ง 200 ครั้งล่าสุด
+tr| Son 200 gönderimin geçmişi
+fi| Viimeisen 200 lähetyksen historia
+
+= Xoá toàn bộ nhật ký?
+en| Delete the entire log?
+zh| 清空全部日志?
+es| ¿Eliminar todo el registro?
+hi| पूरा लॉग हटाएँ?
+ar| حذف السجل بالكامل؟
+pt| Excluir todo o registro?
+ru| Удалить весь журнал?
+ja| 履歴をすべて削除しますか?
+ko| 기록을 모두 삭제할까요?
+de| Gesamtes Protokoll löschen?
+fr| Supprimer tout l'historique ?
+id| Hapus seluruh catatan?
+th| ลบบันทึกทั้งหมดหรือไม่
+tr| Tüm günlük silinsin mi?
+fi| Poistetaanko koko loki?
+
+= Hành động này không thể hoàn tác.
+en| This action cannot be undone.
+zh| 此操作无法撤销。
+es| Esta acción no se puede deshacer.
+hi| इस क्रिया को पूर्ववत नहीं किया जा सकता।
+ar| لا يمكن التراجع عن هذا الإجراء.
+pt| Esta ação não pode ser desfeita.
+ru| Это действие нельзя отменить.
+ja| この操作は元に戻せません。
+ko| 이 작업은 되돌릴 수 없습니다.
+de| Diese Aktion kann nicht rückgängig gemacht werden.
+fr| Cette action est irréversible.
+id| Tindakan ini tidak dapat dibatalkan.
+th| ไม่สามารถย้อนกลับการดำเนินการนี้ได้
+tr| Bu işlem geri alınamaz.
+fi| Tätä toimintoa ei voi peruuttaa.
+
+= Xoá hết
+en| Delete all
+zh| 全部删除
+es| Eliminar todo
+hi| सब हटाएँ
+ar| حذف الكل
+pt| Excluir tudo
+ru| Удалить всё
+ja| すべて削除
+ko| 모두 삭제
+de| Alles löschen
+fr| Tout supprimer
+id| Hapus semua
+th| ลบทั้งหมด
+tr| Tümünü sil
+fi| Poista kaikki
+
+= Đã xoá nhật ký
+en| Log deleted
+zh| 已清空日志
+es| Registro eliminado
+hi| लॉग हटा दिया गया
+ar| تم حذف السجل
+pt| Registro excluído
+ru| Журнал удалён
+ja| 履歴を削除しました
+ko| 기록을 삭제했습니다
+de| Protokoll gelöscht
+fr| Historique supprimé
+id| Catatan dihapus
+th| ลบบันทึกแล้ว
+tr| Günlük silindi
+fi| Loki poistettu
+
+= Xoá nhật ký
+en| Delete log
+zh| 清空日志
+es| Eliminar registro
+hi| लॉग हटाएँ
+ar| حذف السجل
+pt| Excluir registro
+ru| Удалить журнал
+ja| 履歴を削除
+ko| 기록 삭제
+de| Protokoll löschen
+fr| Supprimer l'historique
+id| Hapus catatan
+th| ลบบันทึก
+tr| Günlüğü sil
+fi| Poista loki
+
+= Thời gian
+en| Time
+zh| 时间
+es| Hora
+hi| समय
+ar| الوقت
+pt| Hora
+ru| Время
+ja| 日時
+ko| 시간
+de| Zeit
+fr| Heure
+id| Waktu
+th| เวลา
+tr| Zaman
+fi| Aika
+
+= Kết quả
+en| Result
+zh| 结果
+es| Resultado
+hi| परिणाम
+ar| النتيجة
+pt| Resultado
+ru| Результат
+ja| 結果
+ko| 결과
+de| Ergebnis
+fr| Résultat
+id| Hasil
+th| ผลลัพธ์
+tr| Sonuç
+fi| Tulos
+
+= Nguồn
+en| Source
+zh| 来源
+es| Origen
+hi| स्रोत
+ar| المصدر
+pt| Origem
+ru| Источник
+ja| 実行元
+ko| 출처
+de| Quelle
+fr| Source
+id| Sumber
+th| ที่มา
+tr| Kaynak
+fi| Lähde
+
+= Thủ công
+en| Manual
+zh| 手动
+es| Manual
+hi| मैन्युअल
+ar| يدوي
+pt| Manual
+ru| Вручную
+ja| 手動
+ko| 수동
+de| Manuell
+fr| Manuel
+id| Manual
+th| ด้วยตนเอง
+tr| Elle
+fi| Manuaalinen
+
+= Theo lịch
+en| Scheduled
+zh| 按计划
+es| Programado
+hi| शेड्यूल के अनुसार
+ar| مجدول
+pt| Agendado
+ru| По расписанию
+ja| 予約
+ko| 예약
+de| Geplant
+fr| Planifié
+id| Terjadwal
+th| ตามตารางเวลา
+tr| Zamanlı
+fi| Ajastettu
+
+= Chưa có nhật ký
+en| No log entries yet
+zh| 暂无日志
+es| Aún no hay registros
+hi| अभी कोई लॉग नहीं
+ar| لا توجد سجلات بعد
+pt| Ainda não há registros
+ru| Записей пока нет
+ja| まだ履歴がありません
+ko| 아직 기록이 없습니다
+de| Noch keine Protokolleinträge
+fr| Aucune entrée pour le moment
+id| Belum ada catatan
+th| ยังไม่มีบันทึก
+tr| Henüz günlük kaydı yok
+fi| Ei vielä lokimerkintöjä
+
+= Các lượt gửi sẽ xuất hiện ở đây.
+en| Sends will appear here.
+zh| 发送记录将显示在这里。
+es| Los envíos aparecerán aquí.
+hi| भेजे गए पोस्ट यहाँ दिखेंगे।
+ar| ستظهر عمليات الإرسال هنا.
+pt| Os envios aparecerão aqui.
+ru| Здесь появятся отправки.
+ja| 送信するとここに表示されます。
+ko| 발송 내역이 여기에 표시됩니다.
+de| Sendungen erscheinen hier.
+fr| Les envois apparaîtront ici.
+id| Pengiriman akan muncul di sini.
+th| การส่งจะแสดงที่นี่
+tr| Gönderimler burada görünecek.
+fi| Lähetykset näkyvät täällä.
+
+= Đã đổi mật khẩu
+en| Password changed
+zh| 已修改密码
+es| Contraseña cambiada
+hi| पासवर्ड बदल दिया गया
+ar| تم تغيير كلمة المرور
+pt| Senha alterada
+ru| Пароль изменён
+ja| パスワードを変更しました
+ko| 비밀번호를 변경했습니다
+de| Passwort geändert
+fr| Mot de passe modifié
+id| Kata sandi diubah
+th| เปลี่ยนรหัสผ่านแล้ว
+tr| Parola değiştirildi
+fi| Salasana vaihdettu
+
+= Mật khẩu hiện tại
+en| Current password
+zh| 当前密码
+es| Contraseña actual
+hi| वर्तमान पासवर्ड
+ar| كلمة المرور الحالية
+pt| Senha atual
+ru| Текущий пароль
+ja| 現在のパスワード
+ko| 현재 비밀번호
+de| Aktuelles Passwort
+fr| Mot de passe actuel
+id| Kata sandi saat ini
+th| รหัสผ่านปัจจุบัน
+tr| Mevcut parola
+fi| Nykyinen salasana
+
+= Mật khẩu mới (từ 8 ký tự)
+en| New password (8+ characters)
+zh| 新密码(至少 8 个字符)
+es| Nueva contraseña (mín. 8 caracteres)
+hi| नया पासवर्ड (कम से कम 8 अक्षर)
+ar| كلمة مرور جديدة (8 أحرف أو أكثر)
+pt| Nova senha (mín. 8 caracteres)
+ru| Новый пароль (от 8 символов)
+ja| 新しいパスワード(8文字以上)
+ko| 새 비밀번호(8자 이상)
+de| Neues Passwort (mind. 8 Zeichen)
+fr| Nouveau mot de passe (8 caractères min.)
+id| Kata sandi baru (min. 8 karakter)
+th| รหัสผ่านใหม่ (8 ตัวอักษรขึ้นไป)
+tr| Yeni parola (en az 8 karakter)
+fi| Uusi salasana (vähintään 8 merkkiä)
+
+= Đổi mật khẩu
+en| Change password
+zh| 修改密码
+es| Cambiar contraseña
+hi| पासवर्ड बदलें
+ar| تغيير كلمة المرور
+pt| Alterar senha
+ru| Сменить пароль
+ja| パスワードを変更
+ko| 비밀번호 변경
+de| Passwort ändern
+fr| Changer le mot de passe
+id| Ubah kata sandi
+th| เปลี่ยนรหัสผ่าน
+tr| Parolayı değiştir
+fi| Vaihda salasana
+
+= Kết nối bot và tuỳ chọn chung
+en| Connect your bot and general options
+zh| 连接机器人与通用选项
+es| Conecta tu bot y opciones generales
+hi| अपना बॉट जोड़ें और सामान्य विकल्प
+ar| ربط البوت والخيارات العامة
+pt| Conecte seu bot e opções gerais
+ru| Подключение бота и общие параметры
+ja| ボットの接続と全般設定
+ko| 봇 연결 및 일반 옵션
+de| Bot verbinden und allgemeine Optionen
+fr| Connexion du bot et options générales
+id| Hubungkan bot dan opsi umum
+th| เชื่อมต่อบอทและตัวเลือกทั่วไป
+tr| Botu bağlayın ve genel seçenekler
+fi| Yhdistä bottisi ja yleiset asetukset
+
+= Bắt đầu: kết nối bot Telegram của bạn
+en| Get started: connect your Telegram bot
+zh| 开始:连接你的 Telegram 机器人
+es| Primeros pasos: conecta tu bot de Telegram
+hi| शुरुआत: अपना Telegram बॉट जोड़ें
+ar| ابدأ: اربط بوت تيليجرام الخاص بك
+pt| Comece: conecte seu bot do Telegram
+ru| Начало: подключите своего бота Telegram
+ja| はじめに:Telegramボットを接続
+ko| 시작하기: Telegram 봇 연결
+de| Los geht's: Telegram-Bot verbinden
+fr| Pour commencer : connectez votre bot Telegram
+id| Mulai: hubungkan bot Telegram Anda
+th| เริ่มต้น: เชื่อมต่อบอท Telegram ของคุณ
+tr| Başlayın: Telegram botunuzu bağlayın
+fi| Aloita: yhdistä Telegram-bottisi
+
+= Mở Telegram, chat với
+en| Open Telegram and chat with
+zh| 打开 Telegram,与
+es| Abre Telegram y chatea con
+hi| Telegram खोलें और
+ar| افتح تيليجرام وتحدّث مع
+pt| Abra o Telegram e converse com o
+ru| Откройте Telegram и напишите
+ja| Telegramを開き、
+ko| Telegram을 열고
+de| Öffnen Sie Telegram und chatten Sie mit
+fr| Ouvrez Telegram et discutez avec
+id| Buka Telegram dan chat dengan
+th| เปิด Telegram แล้วแชตกับ
+tr| Telegram'ı açıp
+fi| Avaa Telegram ja keskustele
+
+= và gửi lệnh
+en| and send the command
+zh| 对话并发送命令
+es| y envía el comando
+hi| से चैट करें और यह कमांड भेजें:
+ar| وأرسل الأمر
+pt| e envie o comando
+ru| и отправьте команду
+ja| とチャットして、次のコマンドを送信します:
+ko| 와(과) 대화하고 다음 명령을 보내세요:
+de| und senden Sie den Befehl
+fr| et envoyez la commande
+id| lalu kirim perintah
+th| และส่งคำสั่ง
+tr| ile sohbet edin ve şu komutu gönderin:
+fi| ja lähetä komento
+
+= Đặt tên và username cho bot (username phải kết thúc bằng
+en| Name your bot and choose a username (it must end with
+zh| 为机器人设置名称和用户名(用户名必须以
+es| Ponle nombre y usuario al bot (el usuario debe terminar en
+hi| बॉट का नाम और username रखें (username का अंत इससे होना चाहिए:
+ar| سمِّ البوت واختر اسم مستخدم له (يجب أن ينتهي بـ
+pt| Dê um nome e um usuário ao bot (o usuário deve terminar com
+ru| Задайте боту имя и username (username должен заканчиваться на
+ja| ボットの名前とユーザー名を設定します(ユーザー名の末尾は
+ko| 봇의 이름과 사용자 이름을 정하세요(사용자 이름은
+de| Vergeben Sie Namen und Benutzernamen für den Bot (der Benutzername muss enden auf
+fr| Donnez un nom et un nom d'utilisateur au bot (il doit se terminer par
+id| Beri nama dan username untuk bot (username harus diakhiri dengan
+th| ตั้งชื่อและ username ให้บอท (username ต้องลงท้ายด้วย
+tr| Bota bir ad ve kullanıcı adı verin (kullanıcı adı şununla bitmelidir:
+fi| Anna botille nimi ja käyttäjänimi (käyttäjänimen on päätyttävä sanaan
+
+= BotFather gửi cho bạn một
+en| BotFather will send you a
+zh| BotFather 会发给你一个
+es| BotFather te enviará un
+hi| BotFather आपको एक
+ar| سيرسل لك BotFather
+pt| O BotFather enviará um
+ru| BotFather пришлёт вам
+ja| BotFatherから
+ko| BotFather가 보내 주는
+de| BotFather sendet Ihnen einen
+fr| BotFather vous envoie un
+id| BotFather akan mengirimi Anda
+th| BotFather จะส่ง
+tr| BotFather size bir
+fi| BotFather lähettää sinulle
+
+= (dạng 123456789:AA...). Dán vào ô bên dưới.
+en| (like 123456789:AA...). Paste it into the field below.
+zh| (形如 123456789:AA...)。请粘贴到下方输入框。
+es| (como 123456789:AA...). Pégalo en el campo de abajo.
+hi| भेजेगा (जैसे 123456789:AA...)। इसे नीचे के बॉक्स में पेस्ट करें।
+ar| (مثل 123456789:AA...). الصقه في الحقل أدناه.
+pt| (como 123456789:AA...). Cole no campo abaixo.
+ru| (вида 123456789:AA...). Вставьте его в поле ниже.
+ja| (例:123456789:AA...)が届きます。下の欄に貼り付けてください。
+ko| (예: 123456789:AA...)을 아래 칸에 붙여넣으세요.
+de| (wie 123456789:AA...). Fügen Sie ihn in das Feld unten ein.
+fr| (de la forme 123456789:AA...). Collez-le dans le champ ci-dessous.
+id| (seperti 123456789:AA...). Tempel ke kolom di bawah.
+th| (รูปแบบเช่น 123456789:AA...) วางลงในช่องด้านล่าง
+tr| gönderir (123456789:AA... biçiminde). Aşağıdaki alana yapıştırın.
+fi| (muotoa 123456789:AA...). Liitä se alla olevaan kenttään.
+
+= Thêm bot vào nhóm cần đăng (kênh: đặt bot làm quản trị viên có quyền đăng tin).
+en| Add the bot to the group you want to post in (for a channel: make the bot an admin with permission to post).
+zh| 把机器人加入要发布的群组(频道:将机器人设为有发布权限的管理员)。
+es| Añade el bot al grupo donde quieres publicar (en un canal: hazlo administrador con permiso para publicar).
+hi| बॉट को उस ग्रुप में जोड़ें जहाँ पोस्ट करनी है (चैनल: बॉट को पोस्ट करने की अनुमति वाला एडमिन बनाएँ)।
+ar| أضف البوت إلى المجموعة التي تريد النشر فيها (في القناة: اجعله مشرفًا بصلاحية النشر).
+pt| Adicione o bot ao grupo em que deseja publicar (em canais: torne-o administrador com permissão para publicar).
+ru| Добавьте бота в группу, где нужно публиковать (в канале — назначьте администратором с правом публикации).
+ja| 投稿したいグループにボットを追加します(チャンネルの場合は、投稿権限のある管理者に設定)。
+ko| 게시할 그룹에 봇을 추가하세요(채널은 게시 권한이 있는 관리자로 지정).
+de| Fügen Sie den Bot der Gruppe hinzu, in der gepostet werden soll (bei Kanälen: als Administrator mit Sendeberechtigung).
+fr| Ajoutez le bot au groupe où publier (pour un canal : nommez-le administrateur avec droit de publier).
+id| Tambahkan bot ke grup tempat Anda ingin memposting (kanal: jadikan bot admin dengan izin memposting).
+th| เพิ่มบอทเข้ากลุ่มที่ต้องการโพสต์ (แชนเนล: ตั้งบอทเป็นผู้ดูแลที่มีสิทธิ์โพสต์)
+tr| Botu gönderi yapmak istediğiniz gruba ekleyin (kanal için: botu gönderi yetkisi olan yönetici yapın).
+fi| Lisää botti ryhmään, johon haluat julkaista (kanavassa: tee botista ylläpitäjä, jolla on julkaisuoikeus).
+
+= Token từ @BotFather
+en| Token from @BotFather
+zh| 来自 @BotFather 的令牌
+es| Token de @BotFather
+hi| @BotFather से मिला टोकन
+ar| الرمز من @BotFather
+pt| Token do @BotFather
+ru| Токен от @BotFather
+ja| @BotFatherのトークン
+ko| @BotFather에서 받은 토큰
+de| Token von @BotFather
+fr| Jeton de @BotFather
+id| Token dari @BotFather
+th| โทเคนจาก @BotFather
+tr| @BotFather'dan gelen belirteç
+fi| Tunniste @BotFatherilta

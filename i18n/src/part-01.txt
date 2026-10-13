@@ -1,0 +1,528 @@
+# Trang chủ (1/2). Mỗi khối: "= khoá tiếng Việt" rồi 15 dòng "mã| bản dịch".
+
+= KingTele - Tự động đăng bài lên nhóm Telegram
+en| KingTele - Automatically post to Telegram groups
+zh| KingTele - 自动发布到 Telegram 群组
+es| KingTele - Publica automáticamente en grupos de Telegram
+hi| KingTele - Telegram ग्रुप में अपने आप पोस्ट करें
+ar| KingTele - النشر التلقائي في مجموعات تيليجرام
+pt| KingTele - Publique automaticamente em grupos do Telegram
+ru| KingTele - Автопубликация в группах Telegram
+ja| KingTele - Telegramグループへ自動投稿
+ko| KingTele - Telegram 그룹에 자동으로 게시
+de| KingTele - Automatisch in Telegram-Gruppen posten
+fr| KingTele - Publiez automatiquement dans vos groupes Telegram
+id| KingTele - Posting otomatis ke grup Telegram
+th| KingTele - โพสต์อัตโนมัติไปยังกลุ่ม Telegram
+tr| KingTele - Telegram gruplarına otomatik paylaşım
+fi| KingTele - Julkaise automaattisesti Telegram-ryhmiin
+
+= Tính năng
+en| Features
+zh| 功能
+es| Funciones
+hi| सुविधाएँ
+ar| الميزات
+pt| Recursos
+ru| Возможности
+ja| 機能
+ko| 기능
+de| Funktionen
+fr| Fonctionnalités
+id| Fitur
+th| ฟีเจอร์
+tr| Özellikler
+fi| Ominaisuudet
+
+= Cách hoạt động
+en| How it works
+zh| 使用方法
+es| Cómo funciona
+hi| यह कैसे काम करता है
+ar| كيف يعمل
+pt| Como funciona
+ru| Как это работает
+ja| 使い方
+ko| 이용 방법
+de| So funktioniert's
+fr| Comment ça marche
+id| Cara kerja
+th| วิธีการทำงาน
+tr| Nasıl çalışır
+fi| Näin se toimii
+
+= Hỏi đáp
+en| FAQ
+zh| 常见问题
+es| Preguntas frecuentes
+hi| अक्सर पूछे जाने वाले प्रश्न
+ar| الأسئلة الشائعة
+pt| Perguntas frequentes
+ru| Вопросы и ответы
+ja| よくある質問
+ko| 자주 묻는 질문
+de| Häufige Fragen
+fr| FAQ
+id| Tanya jawab
+th| คำถามที่พบบ่อย
+tr| Sık sorulan sorular
+fi| UKK
+
+= Đăng nhập
+en| Log in
+zh| 登录
+es| Iniciar sesión
+hi| लॉग इन करें
+ar| تسجيل الدخول
+pt| Entrar
+ru| Войти
+ja| ログイン
+ko| 로그인
+de| Anmelden
+fr| Se connecter
+id| Masuk
+th| เข้าสู่ระบบ
+tr| Giriş yap
+fi| Kirjaudu sisään
+
+= Tạo tài khoản
+en| Create account
+zh| 创建账号
+es| Crear cuenta
+hi| खाता बनाएँ
+ar| إنشاء حساب
+pt| Criar conta
+ru| Создать аккаунт
+ja| アカウント作成
+ko| 계정 만들기
+de| Konto erstellen
+fr| Créer un compte
+id| Buat akun
+th| สร้างบัญชี
+tr| Hesap oluştur
+fi| Luo tili
+
+= Bot hoạt động 24/7, không cần cài đặt
+en| Bot runs 24/7, no installation needed
+zh| 机器人全天候运行,无需安装
+es| El bot funciona 24/7, sin instalar nada
+hi| बॉट 24/7 चलता है, इंस्टॉल करने की ज़रूरत नहीं
+ar| يعمل البوت على مدار الساعة دون أي تثبيت
+pt| O bot funciona 24/7, sem instalar nada
+ru| Бот работает 24/7, ничего устанавливать не нужно
+ja| ボットは24時間365日稼働、インストール不要
+ko| 봇이 24시간 작동, 설치 불필요
+de| Der Bot läuft rund um die Uhr, ohne Installation
+fr| Le bot tourne 24h/24, sans installation
+id| Bot aktif 24/7, tanpa instalasi
+th| บอททำงาน 24/7 ไม่ต้องติดตั้ง
+tr| Bot 7/24 çalışır, kurulum gerekmez
+fi| Botti toimii ympäri vuorokauden, asennusta ei tarvita
+
+= Lên lịch một lần.
+en| Schedule once.
+zh| 只需设置一次。
+es| Programa una vez.
+hi| एक बार शेड्यूल करें।
+ar| جدول مرة واحدة.
+pt| Agende uma vez.
+ru| Запланируйте один раз.
+ja| 一度予約するだけ。
+ko| 한 번만 예약하세요.
+de| Einmal planen.
+fr| Planifiez une fois.
+id| Jadwalkan sekali.
+th| ตั้งเวลาครั้งเดียว
+tr| Bir kez planlayın.
+fi| Ajasta kerran.
+
+= Telegram tự đăng
+en| Telegram posts it
+zh| Telegram 自动发布,
+es| Telegram publica solo
+hi| Telegram खुद पोस्ट करेगा
+ar| وتيليجرام ينشر تلقائيًا
+pt| O Telegram publica sozinho
+ru| Telegram опубликует сам
+ja| Telegramが自動で投稿
+ko| Telegram이 알아서 게시합니다
+de| Telegram postet von selbst
+fr| Telegram publie tout seul
+id| Telegram posting sendiri
+th| Telegram โพสต์ให้เอง
+tr| Telegram kendisi paylaşır
+fi| Telegram julkaisee itse
+
+= đúng giờ.
+en| on time.
+zh| 准时送达。
+es| a la hora exacta.
+hi| ठीक समय पर।
+ar| في الوقت المحدد.
+pt| na hora certa.
+ru| точно в срок.
+ja| 時間どおりに。
+ko| 정시에.
+de| pünktlich.
+fr| à l'heure.
+id| tepat waktu.
+th| ตรงเวลา
+tr| tam zamanında.
+fi| täsmälleen ajallaan.
+
+= KingTele gửi bài tự động tới nhiều nhóm và kênh Telegram theo lịch bạn đặt: một lần, hằng ngày, theo thứ trong tuần hoặc lặp theo chu kỳ, luôn đúng múi giờ.
+en| KingTele automatically sends posts to many Telegram groups and channels on your schedule: once, daily, on chosen weekdays or at repeating intervals, always in the right time zone.
+zh| KingTele 按你设定的计划,自动向多个 Telegram 群组和频道发布内容:单次、每天、每周指定日期或按固定间隔重复,并始终使用正确的时区。
+es| KingTele envía publicaciones automáticamente a muchos grupos y canales de Telegram según tu calendario: una vez, a diario, ciertos días de la semana o a intervalos, siempre en la zona horaria correcta.
+hi| KingTele आपके तय शेड्यूल के अनुसार कई Telegram ग्रुप और चैनलों में अपने आप पोस्ट भेजता है: एक बार, रोज़, सप्ताह के चुने दिनों में या तय अंतराल पर, हमेशा सही टाइम ज़ोन में।
+ar| يرسل KingTele المنشورات تلقائيًا إلى عدة مجموعات وقنوات تيليجرام وفق جدولك: مرة واحدة أو يوميًا أو في أيام محددة من الأسبوع أو بفواصل متكررة، وبالمنطقة الزمنية الصحيحة دائمًا.
+pt| O KingTele envia publicações automaticamente para vários grupos e canais do Telegram no horário que você definir: uma vez, todo dia, em dias da semana escolhidos ou em intervalos, sempre no fuso horário certo.
+ru| KingTele автоматически отправляет публикации в несколько групп и каналов Telegram по вашему расписанию: один раз, ежедневно, в выбранные дни недели или с повторением через заданный интервал, всегда в нужном часовом поясе.
+ja| KingTeleは、設定したスケジュールに従って複数のTelegramグループやチャンネルへ自動で投稿します。1回のみ、毎日、曜日指定、一定間隔の繰り返しに対応し、常に正しいタイムゾーンで送信します。
+ko| KingTele은 설정한 일정에 따라 여러 Telegram 그룹과 채널에 자동으로 게시합니다. 한 번, 매일, 특정 요일, 반복 주기 모두 가능하며 항상 올바른 시간대를 적용합니다.
+de| KingTele sendet Beiträge automatisch nach Ihrem Zeitplan an viele Telegram-Gruppen und -Kanäle: einmalig, täglich, an bestimmten Wochentagen oder in Intervallen, stets in der richtigen Zeitzone.
+fr| KingTele envoie automatiquement vos publications à de nombreux groupes et canaux Telegram selon votre planning : une fois, chaque jour, certains jours de la semaine ou à intervalle régulier, toujours dans le bon fuseau horaire.
+id| KingTele mengirim postingan otomatis ke banyak grup dan kanal Telegram sesuai jadwal Anda: sekali, harian, pada hari tertentu dalam seminggu, atau berulang dengan interval, selalu di zona waktu yang tepat.
+th| KingTele ส่งโพสต์ไปยังหลายกลุ่มและแชนเนล Telegram ให้อัตโนมัติตามเวลาที่คุณตั้ง ทั้งแบบครั้งเดียว รายวัน เฉพาะวันในสัปดาห์ หรือซ้ำตามรอบ และใช้เขตเวลาที่ถูกต้องเสมอ
+tr| KingTele, belirlediğiniz takvime göre birçok Telegram grubuna ve kanalına otomatik gönderi yapar: tek seferlik, günlük, haftanın seçili günlerinde veya belirli aralıklarla, her zaman doğru saat diliminde.
+fi| KingTele lähettää julkaisut automaattisesti useisiin Telegram-ryhmiin ja -kanaviin aikataulusi mukaan: kerran, päivittäin, valittuina viikonpäivinä tai toistuvasti, aina oikeassa aikavyöhykkeessä.
+
+= Tới 30 nhóm mỗi tài khoản
+en| Up to 30 groups per account
+zh| 每个账号最多 30 个群组
+es| Hasta 30 grupos por cuenta
+hi| प्रति खाता 30 ग्रुप तक
+ar| حتى 30 مجموعة لكل حساب
+pt| Até 30 grupos por conta
+ru| До 30 групп на аккаунт
+ja| 1アカウントあたり最大30グループ
+ko| 계정당 최대 30개 그룹
+de| Bis zu 30 Gruppen pro Konto
+fr| Jusqu'à 30 groupes par compte
+id| Hingga 30 grup per akun
+th| สูงสุด 30 กลุ่มต่อบัญชี
+tr| Hesap başına 30 gruba kadar
+fi| Jopa 30 ryhmää tiliä kohden
+
+= Mỗi thành viên dùng bot riêng
+en| Every member uses their own bot
+zh| 每位成员使用自己的机器人
+es| Cada miembro usa su propio bot
+hi| हर सदस्य अपना अलग बॉट इस्तेमाल करता है
+ar| كل عضو يستخدم بوته الخاص
+pt| Cada membro usa o próprio bot
+ru| У каждого участника свой бот
+ja| メンバーごとに専用のボットを使用
+ko| 회원마다 자신의 봇을 사용
+de| Jedes Mitglied nutzt seinen eigenen Bot
+fr| Chaque membre utilise son propre bot
+id| Setiap anggota memakai bot sendiri
+th| สมาชิกแต่ละคนใช้บอทของตัวเอง
+tr| Her üye kendi botunu kullanır
+fi| Jokainen jäsen käyttää omaa bottiaan
+
+= Tặng 500 Điểm King khi đăng ký
+en| 500 King Points free when you sign up
+zh| 注册即送 500 King 积分
+es| 500 Puntos King de regalo al registrarte
+hi| साइन अप करने पर 500 King पॉइंट मुफ़्त
+ar| 500 نقطة King هدية عند التسجيل
+pt| 500 Pontos King de presente ao se cadastrar
+ru| 500 King-баллов в подарок при регистрации
+ja| 登録で500 Kingポイントをプレゼント
+ko| 가입 시 500 King 포인트 증정
+de| 500 King-Punkte geschenkt bei der Anmeldung
+fr| 500 Points King offerts à l'inscription
+id| Gratis 500 Poin King saat mendaftar
+th| รับฟรี 500 คะแนน King เมื่อสมัคร
+tr| Kayıt olunca 500 King Puanı hediye
+fi| 500 King-pistettä lahjaksi rekisteröityessä
+
+= Nhật ký từng lượt gửi
+en| A log of every send
+zh| 每次发送都有记录
+es| Registro de cada envío
+hi| हर भेजे गए पोस्ट का लॉग
+ar| سجل لكل عملية إرسال
+pt| Registro de cada envio
+ru| Журнал каждой отправки
+ja| 送信ごとの履歴
+ko| 발송 기록 제공
+de| Protokoll jedes Versands
+fr| Historique de chaque envoi
+id| Catatan setiap pengiriman
+th| บันทึกทุกครั้งที่ส่ง
+tr| Her gönderimin kaydı
+fi| Loki jokaisesta lähetyksestä
+
+= Hàng đợi sắp đăng
+en| Upcoming queue
+zh| 待发布队列
+es| Cola de próximas publicaciones
+hi| आने वाली पोस्ट की कतार
+ar| قائمة المنشورات القادمة
+pt| Fila de próximas publicações
+ru| Очередь публикаций
+ja| 投稿予定キュー
+ko| 예정된 게시물 대기열
+de| Anstehende Beiträge
+fr| File d'attente à venir
+id| Antrean posting berikutnya
+th| คิวโพสต์ที่กำลังจะถึง
+tr| Yaklaşan gönderi kuyruğu
+fi| Tulevien julkaisujen jono
+
+= Đang chạy
+en| Active
+zh| 运行中
+es| Activo
+hi| चालू
+ar| قيد التشغيل
+pt| Ativo
+ru| Активно
+ja| 稼働中
+ko| 실행 중
+de| Aktiv
+fr| Actif
+id| Aktif
+th| กำลังทำงาน
+tr| Çalışıyor
+fi| Käynnissä
+
+= Bản tin sáng thị trường
+en| Morning market update
+zh| 早间市场快讯
+es| Resumen matutino del mercado
+hi| सुबह का बाज़ार अपडेट
+ar| نشرة السوق الصباحية
+pt| Resumo matinal do mercado
+ru| Утренняя сводка рынка
+ja| 朝の市況ニュース
+ko| 아침 시장 소식
+de| Morgendlicher Marktüberblick
+fr| Point marché du matin
+id| Kabar pasar pagi
+th| ข่าวตลาดยามเช้า
+tr| Sabah piyasa bülteni
+fi| Aamun markkinakatsaus
+
+= Hằng ngày · 07:30 · 5 nhóm
+en| Daily · 07:30 · 5 groups
+zh| 每天 · 07:30 · 5 个群组
+es| Diario · 07:30 · 5 grupos
+hi| रोज़ · 07:30 · 5 ग्रुप
+ar| يوميًا · 07:30 · 5 مجموعات
+pt| Diário · 07:30 · 5 grupos
+ru| Ежедневно · 07:30 · 5 групп
+ja| 毎日 · 07:30 · 5グループ
+ko| 매일 · 07:30 · 5개 그룹
+de| Täglich · 07:30 · 5 Gruppen
+fr| Chaque jour · 07:30 · 5 groupes
+id| Harian · 07:30 · 5 grup
+th| ทุกวัน · 07:30 · 5 กลุ่ม
+tr| Günlük · 07:30 · 5 grup
+fi| Päivittäin · 07:30 · 5 ryhmää
+
+= Nhắc ưu đãi cuối tuần
+en| Weekend offer reminder
+zh| 周末优惠提醒
+es| Recordatorio de oferta de fin de semana
+hi| वीकेंड ऑफ़र की याद दिलाना
+ar| تذكير بعرض نهاية الأسبوع
+pt| Lembrete da oferta de fim de semana
+ru| Напоминание об акции на выходные
+ja| 週末特典のお知らせ
+ko| 주말 혜택 알림
+de| Erinnerung an das Wochenend-Angebot
+fr| Rappel de l'offre du week-end
+id| Pengingat promo akhir pekan
+th| เตือนโปรโมชันสุดสัปดาห์
+tr| Hafta sonu fırsatı hatırlatması
+fi| Viikonlopputarjouksen muistutus
+
+= T6, T7 · 19:00 · 3 nhóm
+en| Fri, Sat · 19:00 · 3 groups
+zh| 周五、周六 · 19:00 · 3 个群组
+es| Vie, sáb · 19:00 · 3 grupos
+hi| शुक्र, शनि · 19:00 · 3 ग्रुप
+ar| الجمعة، السبت · 19:00 · 3 مجموعات
+pt| Sex, sáb · 19:00 · 3 grupos
+ru| Пт, сб · 19:00 · 3 группы
+ja| 金・土 · 19:00 · 3グループ
+ko| 금, 토 · 19:00 · 3개 그룹
+de| Fr, Sa · 19:00 · 3 Gruppen
+fr| Ven, sam · 19:00 · 3 groupes
+id| Jum, Sab · 19:00 · 3 grup
+th| ศ., ส. · 19:00 · 3 กลุ่ม
+tr| Cum, Cmt · 19:00 · 3 grup
+fi| Pe, la · 19:00 · 3 ryhmää
+
+= Thông báo sự kiện ra mắt
+en| Launch event announcement
+zh| 发布活动通知
+es| Anuncio del evento de lanzamiento
+hi| लॉन्च इवेंट की सूचना
+ar| إعلان فعالية الإطلاق
+pt| Anúncio do evento de lançamento
+ru| Анонс презентации запуска
+ja| ローンチイベントのお知らせ
+ko| 출시 행사 안내
+de| Ankündigung des Launch-Events
+fr| Annonce de l'événement de lancement
+id| Pengumuman acara peluncuran
+th| ประกาศงานเปิดตัว
+tr| Lansman etkinliği duyurusu
+fi| Julkistustapahtuman ilmoitus
+
+= Một lần · 20/10 · 12 nhóm
+en| Once · 20/10 · 12 groups
+zh| 单次 · 20/10 · 12 个群组
+es| Una vez · 20/10 · 12 grupos
+hi| एक बार · 20/10 · 12 ग्रुप
+ar| مرة واحدة · 20/10 · 12 مجموعة
+pt| Uma vez · 20/10 · 12 grupos
+ru| Однократно · 20/10 · 12 групп
+ja| 1回 · 20/10 · 12グループ
+ko| 1회 · 20/10 · 12개 그룹
+de| Einmalig · 20/10 · 12 Gruppen
+fr| Une fois · 20/10 · 12 groupes
+id| Sekali · 20/10 · 12 grup
+th| ครั้งเดียว · 20/10 · 12 กลุ่ม
+tr| Tek sefer · 20/10 · 12 grup
+fi| Kerran · 20/10 · 12 ryhmää
+
+= Bản tin sáng
+en| Morning update
+zh| 早间快讯
+es| Resumen matutino
+hi| सुबह का अपडेट
+ar| نشرة الصباح
+pt| Resumo da manhã
+ru| Утренняя сводка
+ja| 朝のニュース
+ko| 아침 소식
+de| Morgen-Update
+fr| Point du matin
+id| Kabar pagi
+th| ข่าวเช้า
+tr| Sabah bülteni
+fi| Aamukatsaus
+
+= Chỉ số mở cửa tích cực, xem chi tiết bên dưới.
+en| Positive market open, details below.
+zh| 开盘表现积极,详情见下方。
+es| Apertura positiva, detalles abajo.
+hi| बाज़ार की शुरुआत सकारात्मक रही, विवरण नीचे देखें।
+ar| افتتاح إيجابي للسوق، التفاصيل أدناه.
+pt| Abertura positiva, detalhes abaixo.
+ru| Позитивное открытие торгов, подробности ниже.
+ja| 好調な寄り付き。詳細は下記をご覧ください。
+ko| 긍정적인 개장, 자세한 내용은 아래를 확인하세요.
+de| Positive Eröffnung, Details unten.
+fr| Ouverture positive, détails ci-dessous.
+id| Pembukaan pasar positif, detail di bawah.
+th| ตลาดเปิดบวก ดูรายละเอียดด้านล่าง
+tr| Piyasa olumlu açıldı, ayrıntılar aşağıda.
+fi| Positiivinen avaus, lisätiedot alla.
+
+= Đọc đầy đủ
+en| Read more
+zh| 阅读全文
+es| Leer más
+hi| पूरा पढ़ें
+ar| اقرأ المزيد
+pt| Ler mais
+ru| Читать полностью
+ja| 続きを読む
+ko| 더 읽기
+de| Weiterlesen
+fr| Lire la suite
+id| Baca selengkapnya
+th| อ่านเพิ่มเติม
+tr| Devamını oku
+fi| Lue lisää
+
+= Tham gia nhóm
+en| Join the group
+zh| 加入群组
+es| Unirse al grupo
+hi| ग्रुप जॉइन करें
+ar| انضم إلى المجموعة
+pt| Entrar no grupo
+ru| Вступить в группу
+ja| グループに参加
+ko| 그룹 참여
+de| Gruppe beitreten
+fr| Rejoindre le groupe
+id| Gabung grup
+th| เข้าร่วมกลุ่ม
+tr| Gruba katıl
+fi| Liity ryhmään
+
+= Kiểu lịch đăng
+en| Schedule types
+zh| 发布计划类型
+es| Tipos de programación
+hi| शेड्यूल के प्रकार
+ar| أنواع الجدولة
+pt| Tipos de agendamento
+ru| Типы расписания
+ja| スケジュールの種類
+ko| 일정 유형
+de| Zeitplan-Arten
+fr| Types de planification
+id| Jenis jadwal
+th| ประเภทการตั้งเวลา
+tr| Zamanlama türleri
+fi| Aikataulutyypit
+
+= Chu kỳ kiểm tra hàng đợi
+en| Queue check interval
+zh| 队列检查间隔
+es| Intervalo de revisión de la cola
+hi| कतार जाँचने का अंतराल
+ar| فاصل فحص قائمة الانتظار
+pt| Intervalo de verificação da fila
+ru| Интервал проверки очереди
+ja| キューの確認間隔
+ko| 대기열 확인 주기
+de| Prüfintervall der Warteschlange
+fr| Intervalle de vérification de la file
+id| Interval pengecekan antrean
+th| ความถี่ในการตรวจคิว
+tr| Kuyruk kontrol aralığı
+fi| Jonon tarkistusväli
+
+= Nhóm và kênh mỗi tài khoản
+en| Groups and channels per account
+zh| 每个账号的群组和频道数
+es| Grupos y canales por cuenta
+hi| प्रति खाता ग्रुप और चैनल
+ar| المجموعات والقنوات لكل حساب
+pt| Grupos e canais por conta
+ru| Групп и каналов на аккаунт
+ja| 1アカウントあたりのグループ・チャンネル数
+ko| 계정당 그룹 및 채널 수
+de| Gruppen und Kanäle pro Konto
+fr| Groupes et canaux par compte
+id| Grup dan kanal per akun
+th| กลุ่มและแชนเนลต่อบัญชี
+tr| Hesap başına grup ve kanal
+fi| Ryhmiä ja kanavia tiliä kohden
+
+= Điểm King tặng khi đăng ký
+en| King Points free at sign-up
+zh| 注册赠送的 King 积分
+es| Puntos King de regalo al registrarte
+hi| साइन अप पर मुफ़्त King पॉइंट
+ar| نقاط King مجانية عند التسجيل
+pt| Pontos King de presente no cadastro
+ru| King-баллов в подарок при регистрации
+ja| 登録時にもらえるKingポイント
+ko| 가입 시 증정 King 포인트
+de| King-Punkte geschenkt bei der Anmeldung
+fr| Points King offerts à l'inscription
+id| Poin King gratis saat mendaftar
+th| คะแนน King ฟรีเมื่อสมัคร
+tr| Kayıtta hediye King Puanı
+fi| King-pistettä lahjaksi rekisteröityessä

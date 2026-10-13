@@ -1,0 +1,1327 @@
+# Thông báo của form đăng nhập/đăng ký và lỗi từ server (367-444)
+
+= Nhập email và mật khẩu
+en| Enter your email and password
+zh| 请输入邮箱和密码
+es| Introduce tu correo y contraseña
+hi| अपना ईमेल और पासवर्ड दर्ज करें
+ar| أدخل بريدك الإلكتروني وكلمة المرور
+pt| Informe seu e-mail e senha
+ru| Введите email и пароль
+ja| メールアドレスとパスワードを入力してください
+ko| 이메일과 비밀번호를 입력하세요
+de| E-Mail und Passwort eingeben
+fr| Saisissez votre e-mail et votre mot de passe
+id| Masukkan email dan kata sandi
+th| กรอกอีเมลและรหัสผ่าน
+tr| E-posta ve parolanızı girin
+fi| Syötä sähköpostiosoite ja salasana
+
+= Đang đăng nhập...
+en| Logging in...
+zh| 正在登录……
+es| Iniciando sesión...
+hi| लॉग इन हो रहा है...
+ar| جارٍ تسجيل الدخول...
+pt| Entrando...
+ru| Выполняется вход...
+ja| ログイン中...
+ko| 로그인 중...
+de| Anmeldung läuft...
+fr| Connexion...
+id| Sedang masuk...
+th| กำลังเข้าสู่ระบบ...
+tr| Giriş yapılıyor...
+fi| Kirjaudutaan...
+
+= Đăng nhập thất bại
+en| Login failed
+zh| 登录失败
+es| Error al iniciar sesión
+hi| लॉग इन विफल रहा
+ar| فشل تسجيل الدخول
+pt| Falha ao entrar
+ru| Не удалось войти
+ja| ログインに失敗しました
+ko| 로그인에 실패했습니다
+de| Anmeldung fehlgeschlagen
+fr| Échec de la connexion
+id| Gagal masuk
+th| เข้าสู่ระบบไม่สำเร็จ
+tr| Giriş başarısız
+fi| Kirjautuminen epäonnistui
+
+= Nhập họ tên (ít nhất 2 ký tự)
+en| Enter your full name (at least 2 characters)
+zh| 请输入姓名(至少 2 个字符)
+es| Introduce tu nombre completo (mínimo 2 caracteres)
+hi| अपना पूरा नाम दर्ज करें (कम से कम 2 अक्षर)
+ar| أدخل اسمك الكامل (حرفان على الأقل)
+pt| Informe seu nome completo (mínimo de 2 caracteres)
+ru| Введите полное имя (не менее 2 символов)
+ja| 氏名を入力してください(2文字以上)
+ko| 이름을 입력하세요(2자 이상)
+de| Vollständigen Namen eingeben (mind. 2 Zeichen)
+fr| Saisissez votre nom complet (2 caractères minimum)
+id| Masukkan nama lengkap (minimal 2 karakter)
+th| กรอกชื่อ-นามสกุล (อย่างน้อย 2 ตัวอักษร)
+tr| Ad soyadınızı girin (en az 2 karakter)
+fi| Syötä koko nimesi (vähintään 2 merkkiä)
+
+= Email không hợp lệ
+en| Invalid email address
+zh| 邮箱格式不正确
+es| Correo electrónico no válido
+hi| अमान्य ईमेल पता
+ar| بريد إلكتروني غير صالح
+pt| E-mail inválido
+ru| Некорректный email
+ja| メールアドレスが正しくありません
+ko| 올바르지 않은 이메일입니다
+de| Ungültige E-Mail-Adresse
+fr| Adresse e-mail invalide
+id| Email tidak valid
+th| อีเมลไม่ถูกต้อง
+tr| Geçersiz e-posta adresi
+fi| Virheellinen sähköpostiosoite
+
+= Mật khẩu cần từ 8 ký tự trở lên
+en| Password must be at least 8 characters
+zh| 密码至少需要 8 个字符
+es| La contraseña debe tener al menos 8 caracteres
+hi| पासवर्ड कम से कम 8 अक्षर का होना चाहिए
+ar| يجب ألا تقل كلمة المرور عن 8 أحرف
+pt| A senha deve ter pelo menos 8 caracteres
+ru| Пароль должен содержать не менее 8 символов
+ja| パスワードは8文字以上にしてください
+ko| 비밀번호는 8자 이상이어야 합니다
+de| Das Passwort muss mindestens 8 Zeichen lang sein
+fr| Le mot de passe doit contenir au moins 8 caractères
+id| Kata sandi minimal 8 karakter
+th| รหัสผ่านต้องมีอย่างน้อย 8 ตัวอักษร
+tr| Parola en az 8 karakter olmalı
+fi| Salasanan on oltava vähintään 8 merkkiä
+
+= Đang tạo tài khoản...
+en| Creating account...
+zh| 正在创建账号……
+es| Creando cuenta...
+hi| खाता बन रहा है...
+ar| جارٍ إنشاء الحساب...
+pt| Criando conta...
+ru| Создание аккаунта...
+ja| アカウント作成中...
+ko| 계정 만드는 중...
+de| Konto wird erstellt...
+fr| Création du compte...
+id| Membuat akun...
+th| กำลังสร้างบัญชี...
+tr| Hesap oluşturuluyor...
+fi| Luodaan tiliä...
+
+= Không tạo được tài khoản
+en| Couldn't create the account
+zh| 无法创建账号
+es| No se pudo crear la cuenta
+hi| खाता नहीं बन सका
+ar| تعذّر إنشاء الحساب
+pt| Não foi possível criar a conta
+ru| Не удалось создать аккаунт
+ja| アカウントを作成できませんでした
+ko| 계정을 만들 수 없습니다
+de| Konto konnte nicht erstellt werden
+fr| Impossible de créer le compte
+id| Gagal membuat akun
+th| สร้างบัญชีไม่สำเร็จ
+tr| Hesap oluşturulamadı
+fi| Tilin luonti epäonnistui
+
+= Chưa đăng nhập
+en| Not logged in
+zh| 尚未登录
+es| No has iniciado sesión
+hi| लॉग इन नहीं है
+ar| لم تسجّل الدخول
+pt| Você não está logado
+ru| Вы не вошли в систему
+ja| ログインしていません
+ko| 로그인하지 않았습니다
+de| Nicht angemeldet
+fr| Vous n'êtes pas connecté
+id| Belum masuk
+th| ยังไม่ได้เข้าสู่ระบบ
+tr| Giriş yapılmadı
+fi| Et ole kirjautunut sisään
+
+= Tài khoản quản trị không dùng Điểm King
+en| Administrator accounts don't use King Points
+zh| 管理员账号不使用 King 积分
+es| Las cuentas de administrador no usan Puntos King
+hi| एडमिन खाते King पॉइंट का उपयोग नहीं करते
+ar| حسابات المشرفين لا تستخدم نقاط King
+pt| Contas de administrador não usam Pontos King
+ru| Аккаунты администраторов не используют King-баллы
+ja| 管理者アカウントはKingポイントを使用しません
+ko| 관리자 계정은 King 포인트를 사용하지 않습니다
+de| Administratorkonten verwenden keine King-Punkte
+fr| Les comptes administrateur n'utilisent pas de Points King
+id| Akun administrator tidak memakai Poin King
+th| บัญชีผู้ดูแลระบบไม่ใช้คะแนน King
+tr| Yönetici hesapları King Puanı kullanmaz
+fi| Ylläpitäjätilit eivät käytä King-pisteitä
+
+= Hôm nay bạn đã điểm danh rồi. Quay lại vào ngày mai nhé!
+en| You've already checked in today. Come back tomorrow!
+zh| 今天你已经签到过了,明天再来吧!
+es| Ya marcaste asistencia hoy. ¡Vuelve mañana!
+hi| आप आज चेक-इन कर चुके हैं। कल फिर आइए!
+ar| سجّلت حضورك اليوم بالفعل. عد غدًا!
+pt| Você já fez check-in hoje. Volte amanhã!
+ru| Сегодня вы уже отметились. Возвращайтесь завтра!
+ja| 本日はすでにチェックイン済みです。また明日お越しください!
+ko| 오늘은 이미 출석 체크를 했습니다. 내일 다시 오세요!
+de| Sie haben heute bereits eingecheckt. Kommen Sie morgen wieder!
+fr| Vous avez déjà pointé aujourd'hui. Revenez demain !
+id| Anda sudah absen hari ini. Kembali besok ya!
+th| วันนี้คุณเช็กอินแล้ว กลับมาใหม่พรุ่งนี้นะ
+tr| Bugün zaten yoklama yaptınız. Yarın tekrar gelin!
+fi| Olet jo kirjannut läsnäolon tänään. Tule huomenna uudelleen!
+
+= Mỗi tài khoản tối đa {0} nhóm
+en| Each account can have up to {0} groups
+zh| 每个账号最多 {0} 个群组
+es| Cada cuenta puede tener hasta {0} grupos
+hi| प्रति खाता अधिकतम {0} ग्रुप
+ar| لكل حساب {0} مجموعة كحد أقصى
+pt| Cada conta pode ter até {0} grupos
+ru| На один аккаунт — не более {0} групп
+ja| 1アカウントあたり最大{0}グループです
+ko| 계정당 최대 {0}개 그룹
+de| Pro Konto sind maximal {0} Gruppen möglich
+fr| Chaque compte peut avoir jusqu'à {0} groupes
+id| Setiap akun maksimal {0} grup
+th| แต่ละบัญชีมีได้สูงสุด {0} กลุ่ม
+tr| Her hesap en fazla {0} gruba sahip olabilir
+fi| Yhdellä tilillä voi olla enintään {0} ryhmää
+
+= Nhập Chat ID hoặc @username của nhóm
+en| Enter the group's Chat ID or @username
+zh| 请输入群组的 Chat ID 或 @用户名
+es| Introduce el Chat ID o @usuario del grupo
+hi| ग्रुप की Chat ID या @username दर्ज करें
+ar| أدخل Chat ID أو @اسم_المستخدم للمجموعة
+pt| Informe o Chat ID ou @usuário do grupo
+ru| Введите Chat ID или @username группы
+ja| グループのChat IDまたは@ユーザー名を入力してください
+ko| 그룹의 Chat ID 또는 @사용자이름을 입력하세요
+de| Chat-ID oder @Benutzername der Gruppe eingeben
+fr| Saisissez l'ID de discussion ou le @nom d'utilisateur du groupe
+id| Masukkan Chat ID atau @username grup
+th| กรอก Chat ID หรือ @username ของกลุ่ม
+tr| Grubun Chat ID'sini veya @kullanıcıadı'nı girin
+fi| Syötä ryhmän Chat ID tai @käyttäjänimi
+
+= Nhóm này đã có trong danh sách
+en| This group is already in the list
+zh| 此群组已在列表中
+es| Este grupo ya está en la lista
+hi| यह ग्रुप पहले से सूची में है
+ar| هذه المجموعة موجودة بالفعل في القائمة
+pt| Este grupo já está na lista
+ru| Эта группа уже есть в списке
+ja| このグループはすでに一覧にあります
+ko| 이 그룹은 이미 목록에 있습니다
+de| Diese Gruppe ist bereits in der Liste
+fr| Ce groupe est déjà dans la liste
+id| Grup ini sudah ada di daftar
+th| กลุ่มนี้อยู่ในรายการแล้ว
+tr| Bu grup zaten listede
+fi| Ryhmä on jo luettelossa
+
+= Hãy kết nối bot Telegram của bạn ở mục Cài đặt trước khi thêm nhóm
+en| Connect your Telegram bot in Settings before adding a group
+zh| 添加群组前,请先在“设置”中连接你的 Telegram 机器人
+es| Conecta tu bot de Telegram en Ajustes antes de añadir un grupo
+hi| ग्रुप जोड़ने से पहले सेटिंग्स में अपना Telegram बॉट जोड़ें
+ar| اربط بوت تيليجرام الخاص بك من الإعدادات قبل إضافة مجموعة
+pt| Conecte seu bot do Telegram em Configurações antes de adicionar um grupo
+ru| Перед добавлением группы подключите бота Telegram в «Настройках»
+ja| グループを追加する前に、設定でTelegramボットを接続してください
+ko| 그룹을 추가하기 전에 설정에서 Telegram 봇을 연결하세요
+de| Verbinden Sie vor dem Hinzufügen einer Gruppe Ihren Telegram-Bot in den Einstellungen
+fr| Connectez votre bot Telegram dans Paramètres avant d'ajouter un groupe
+id| Hubungkan bot Telegram Anda di Pengaturan sebelum menambah grup
+th| โปรดเชื่อมต่อบอท Telegram ในการตั้งค่าก่อนเพิ่มกลุ่ม
+tr| Grup eklemeden önce Ayarlar'dan Telegram botunuzu bağlayın
+fi| Yhdistä Telegram-bottisi asetuksissa ennen ryhmän lisäämistä
+
+= Bot không truy cập được nhóm này: {0}. Hãy thêm bot vào nhóm (và cấp quyền đăng bài nếu là kênh).
+en| The bot can't access this group: {0}. Add the bot to the group (and give it permission to post if it's a channel).
+zh| 机器人无法访问此群组:{0}。请把机器人加入群组(若是频道,还需授予发布权限)。
+es| El bot no puede acceder a este grupo: {0}. Añade el bot al grupo (y dale permiso para publicar si es un canal).
+hi| बॉट इस ग्रुप तक नहीं पहुँच पा रहा: {0}। बॉट को ग्रुप में जोड़ें (चैनल हो तो पोस्ट करने की अनुमति भी दें)।
+ar| لا يستطيع البوت الوصول إلى هذه المجموعة: {0}. أضف البوت إلى المجموعة (وامنحه صلاحية النشر إن كانت قناة).
+pt| O bot não consegue acessar este grupo: {0}. Adicione o bot ao grupo (e dê permissão para publicar se for um canal).
+ru| У бота нет доступа к этой группе: {0}. Добавьте бота в группу (а для канала ещё и дайте право публикации).
+ja| ボットがこのグループにアクセスできません:{0}。ボットをグループに追加してください(チャンネルの場合は投稿権限も付与)。
+ko| 봇이 이 그룹에 접근할 수 없습니다: {0}. 봇을 그룹에 추가하세요(채널이면 게시 권한도 부여).
+de| Der Bot hat keinen Zugriff auf diese Gruppe: {0}. Fügen Sie den Bot der Gruppe hinzu (bei Kanälen auch mit Sendeberechtigung).
+fr| Le bot n'a pas accès à ce groupe : {0}. Ajoutez le bot au groupe (et donnez-lui le droit de publier s'il s'agit d'un canal).
+id| Bot tidak bisa mengakses grup ini: {0}. Tambahkan bot ke grup (dan beri izin memposting jika berupa kanal).
+th| บอทเข้าถึงกลุ่มนี้ไม่ได้: {0} โปรดเพิ่มบอทเข้ากลุ่ม (และให้สิทธิ์โพสต์หากเป็นแชนเนล)
+tr| Bot bu gruba erişemiyor: {0}. Botu gruba ekleyin (kanalsa gönderi yetkisi de verin).
+fi| Botilla ei ole pääsyä tähän ryhmään: {0}. Lisää botti ryhmään (kanavassa anna myös julkaisuoikeus).
+
+= Không tìm thấy nhóm
+en| Group not found
+zh| 未找到群组
+es| Grupo no encontrado
+hi| ग्रुप नहीं मिला
+ar| لم يتم العثور على المجموعة
+pt| Grupo não encontrado
+ru| Группа не найдена
+ja| グループが見つかりません
+ko| 그룹을 찾을 수 없습니다
+de| Gruppe nicht gefunden
+fr| Groupe introuvable
+id| Grup tidak ditemukan
+th| ไม่พบกลุ่ม
+tr| Grup bulunamadı
+fi| Ryhmää ei löytynyt
+
+= Nhập tiêu đề (chỉ để bạn dễ quản lý)
+en| Enter a title (just to help you keep track)
+zh| 请输入标题(仅方便你管理)
+es| Introduce un título (solo para tu organización)
+hi| शीर्षक दर्ज करें (सिर्फ़ आपके प्रबंधन के लिए)
+ar| أدخل عنوانًا (لتنظيمك الخاص فقط)
+pt| Informe um título (apenas para sua organização)
+ru| Введите заголовок (только для вашего удобства)
+ja| タイトルを入力してください(管理用です)
+ko| 제목을 입력하세요(관리용)
+de| Titel eingeben (nur zur eigenen Verwaltung)
+fr| Saisissez un titre (pour votre organisation uniquement)
+id| Masukkan judul (hanya untuk memudahkan Anda)
+th| กรอกชื่อเรื่อง (ไว้จัดการเองเท่านั้น)
+tr| Bir başlık girin (yalnızca kendi düzeniniz için)
+fi| Syötä otsikko (vain oman hallintasi avuksi)
+
+= File ảnh/video không còn tồn tại, hãy tải lên lại
+en| The image/video file no longer exists, please upload it again
+zh| 图片/视频文件已不存在,请重新上传
+es| El archivo de imagen o vídeo ya no existe, súbelo de nuevo
+hi| इमेज/वीडियो फ़ाइल अब मौजूद नहीं है, कृपया फिर से अपलोड करें
+ar| ملف الصورة/الفيديو لم يعد موجودًا، يرجى رفعه مجددًا
+pt| O arquivo de imagem/vídeo não existe mais, envie novamente
+ru| Файл изображения/видео больше не существует, загрузите его снова
+ja| 画像/動画ファイルが存在しません。もう一度アップロードしてください
+ko| 이미지/동영상 파일이 더 이상 존재하지 않습니다. 다시 업로드하세요
+de| Die Bild-/Videodatei existiert nicht mehr, bitte erneut hochladen
+fr| Le fichier image/vidéo n'existe plus, veuillez le téléverser à nouveau
+id| File gambar/video sudah tidak ada, silakan unggah ulang
+th| ไฟล์รูปภาพ/วิดีโอไม่มีอยู่แล้ว โปรดอัปโหลดใหม่
+tr| Görsel/video dosyası artık mevcut değil, lütfen yeniden yükleyin
+fi| Kuva-/videotiedostoa ei enää ole, lataa se uudelleen
+
+= Bài đăng cần có nội dung, ảnh hoặc video
+en| A post needs text, an image or a video
+zh| 内容需包含文字、图片或视频
+es| La publicación necesita texto, una imagen o un vídeo
+hi| पोस्ट में टेक्स्ट, इमेज या वीडियो होना ज़रूरी है
+ar| يجب أن يحتوي المنشور على نص أو صورة أو فيديو
+pt| A publicação precisa de texto, imagem ou vídeo
+ru| В публикации должен быть текст, изображение или видео
+ja| 投稿にはテキスト、画像、または動画が必要です
+ko| 게시물에는 내용, 이미지 또는 동영상이 필요합니다
+de| Ein Beitrag braucht Text, ein Bild oder ein Video
+fr| La publication doit contenir du texte, une image ou une vidéo
+id| Postingan harus berisi teks, gambar, atau video
+th| โพสต์ต้องมีข้อความ รูปภาพ หรือวิดีโอ
+tr| Gönderide metin, görsel veya video olmalı
+fi| Julkaisussa on oltava teksti, kuva tai video
+
+= Nội dung tối đa 4096 ký tự
+en| Content can be at most 4096 characters
+zh| 内容最多 4096 个字符
+es| El contenido admite como máximo 4096 caracteres
+hi| सामग्री अधिकतम 4096 अक्षर की हो सकती है
+ar| الحد الأقصى للمحتوى 4096 حرفًا
+pt| O conteúdo pode ter no máximo 4096 caracteres
+ru| Текст — не более 4096 символов
+ja| 内容は4096文字までです
+ko| 내용은 최대 4096자입니다
+de| Der Inhalt darf höchstens 4096 Zeichen lang sein
+fr| Le contenu est limité à 4096 caractères
+id| Konten maksimal 4096 karakter
+th| เนื้อหายาวได้สูงสุด 4096 ตัวอักษร
+tr| İçerik en fazla 4096 karakter olabilir
+fi| Sisältö saa olla enintään 4096 merkkiä
+
+= Link ảnh phải bắt đầu bằng https://
+en| The image link must start with https://
+zh| 图片链接必须以 https:// 开头
+es| El enlace de la imagen debe empezar por https://
+hi| इमेज लिंक https:// से शुरू होना चाहिए
+ar| يجب أن يبدأ رابط الصورة بـ https://
+pt| O link da imagem deve começar com https://
+ru| Ссылка на изображение должна начинаться с https://
+ja| 画像のリンクはhttps://で始まる必要があります
+ko| 이미지 링크는 https://로 시작해야 합니다
+de| Der Bildlink muss mit https:// beginnen
+fr| Le lien de l'image doit commencer par https://
+id| Tautan gambar harus diawali https://
+th| ลิงก์รูปภาพต้องขึ้นต้นด้วย https://
+tr| Görsel bağlantısı https:// ile başlamalı
+fi| Kuvan linkin on alettava https://
+
+= Mỗi nút cần tên và link bắt đầu bằng http(s)://
+en| Each button needs a label and a link starting with http(s)://
+zh| 每个按钮都需要名称和以 http(s):// 开头的链接
+es| Cada botón necesita un texto y un enlace que empiece por http(s)://
+hi| हर बटन को नाम और http(s):// से शुरू होने वाला लिंक चाहिए
+ar| يحتاج كل زر إلى اسم ورابط يبدأ بـ http(s)://
+pt| Cada botão precisa de um texto e de um link que comece com http(s)://
+ru| У каждой кнопки должно быть название и ссылка, начинающаяся с http(s)://
+ja| 各ボタンには名前と、http(s)://で始まるリンクが必要です
+ko| 각 버튼에는 이름과 http(s)://로 시작하는 링크가 필요합니다
+de| Jede Schaltfläche braucht eine Beschriftung und einen Link, der mit http(s):// beginnt
+fr| Chaque bouton nécessite un libellé et un lien commençant par http(s)://
+id| Setiap tombol butuh nama dan tautan yang diawali http(s)://
+th| ปุ่มแต่ละปุ่มต้องมีชื่อและลิงก์ที่ขึ้นต้นด้วย http(s)://
+tr| Her düğmenin bir adı ve http(s):// ile başlayan bir bağlantısı olmalı
+fi| Jokaisella painikkeella on oltava nimi ja linkki, joka alkaa http(s)://
+
+= Chọn ít nhất một nhóm để đăng
+en| Choose at least one group to post to
+zh| 请至少选择一个要发布的群组
+es| Elige al menos un grupo donde publicar
+hi| पोस्ट करने के लिए कम से कम एक ग्रुप चुनें
+ar| اختر مجموعة واحدة على الأقل للنشر فيها
+pt| Escolha pelo menos um grupo para publicar
+ru| Выберите хотя бы одну группу для публикации
+ja| 投稿先のグループを1つ以上選択してください
+ko| 게시할 그룹을 하나 이상 선택하세요
+de| Wählen Sie mindestens eine Gruppe zum Posten aus
+fr| Choisissez au moins un groupe où publier
+id| Pilih setidaknya satu grup untuk memposting
+th| เลือกอย่างน้อยหนึ่งกลุ่มเพื่อโพสต์
+tr| Gönderi yapmak için en az bir grup seçin
+fi| Valitse vähintään yksi ryhmä, johon julkaistaan
+
+= Mỗi tài khoản tối đa {0} bài đăng. Hãy xoá bớt bài cũ.
+en| Each account can have up to {0} posts. Please delete some old posts.
+zh| 每个账号最多 {0} 条内容。请删除一些旧内容。
+es| Cada cuenta puede tener hasta {0} publicaciones. Elimina algunas antiguas.
+hi| प्रति खाता अधिकतम {0} पोस्ट। कृपया कुछ पुरानी पोस्ट हटाएँ।
+ar| لكل حساب {0} منشور كحد أقصى. يرجى حذف بعض المنشورات القديمة.
+pt| Cada conta pode ter até {0} publicações. Exclua algumas antigas.
+ru| На один аккаунт — не более {0} публикаций. Удалите старые.
+ja| 1アカウントあたり最大{0}件の投稿です。古い投稿を削除してください。
+ko| 계정당 최대 {0}개의 게시물을 만들 수 있습니다. 오래된 게시물을 삭제하세요.
+de| Pro Konto sind maximal {0} Beiträge möglich. Bitte löschen Sie ältere Beiträge.
+fr| Chaque compte peut avoir jusqu'à {0} publications. Supprimez-en d'anciennes.
+id| Setiap akun maksimal {0} postingan. Hapus beberapa postingan lama.
+th| แต่ละบัญชีมีโพสต์ได้สูงสุด {0} โพสต์ โปรดลบโพสต์เก่าบางส่วน
+tr| Her hesap en fazla {0} gönderiye sahip olabilir. Lütfen eski gönderileri silin.
+fi| Yhdellä tilillä voi olla enintään {0} julkaisua. Poista vanhoja julkaisuja.
+
+= Thời điểm đăng đã ở trong quá khứ
+en| The posting time is in the past
+zh| 发布时间已过
+es| La hora de publicación ya pasó
+hi| पोस्टिंग का समय बीत चुका है
+ar| وقت النشر في الماضي
+pt| O horário de publicação já passou
+ru| Время публикации уже прошло
+ja| 投稿時刻がすでに過ぎています
+ko| 게시 시각이 이미 지났습니다
+de| Der Zeitpunkt liegt in der Vergangenheit
+fr| L'heure de publication est déjà passée
+id| Waktu posting sudah lewat
+th| เวลาโพสต์ผ่านไปแล้ว
+tr| Gönderi zamanı geçmişte kaldı
+fi| Julkaisuajankohta on jo mennyt
+
+= Không tìm thấy bài đăng
+en| Post not found
+zh| 未找到内容
+es| Publicación no encontrada
+hi| पोस्ट नहीं मिली
+ar| لم يتم العثور على المنشور
+pt| Publicação não encontrada
+ru| Публикация не найдена
+ja| 投稿が見つかりません
+ko| 게시물을 찾을 수 없습니다
+de| Beitrag nicht gefunden
+fr| Publication introuvable
+id| Postingan tidak ditemukan
+th| ไม่พบโพสต์
+tr| Gönderi bulunamadı
+fi| Julkaisua ei löytynyt
+
+= Lịch đã hết hạn - hãy sửa bài và chọn thời điểm mới
+en| The schedule has expired - edit the post and choose a new time
+zh| 计划已过期,请编辑内容并选择新的时间
+es| La programación ha caducado: edita la publicación y elige una nueva hora
+hi| शेड्यूल की अवधि समाप्त हो गई है - पोस्ट संपादित करें और नया समय चुनें
+ar| انتهت صلاحية الجدول - عدّل المنشور واختر وقتًا جديدًا
+pt| O agendamento expirou - edite a publicação e escolha um novo horário
+ru| Расписание истекло — измените публикацию и выберите новое время
+ja| スケジュールの期限が切れています。投稿を編集して新しい時刻を選んでください
+ko| 일정이 만료되었습니다. 게시물을 수정하고 새 시간을 선택하세요
+de| Der Zeitplan ist abgelaufen - bearbeiten Sie den Beitrag und wählen Sie einen neuen Zeitpunkt
+fr| Le planning a expiré - modifiez la publication et choisissez une nouvelle heure
+id| Jadwal sudah kedaluwarsa - ubah postingan dan pilih waktu baru
+th| ตารางเวลาหมดอายุแล้ว โปรดแก้ไขโพสต์และเลือกเวลาใหม่
+tr| Zamanlama süresi doldu - gönderiyi düzenleyip yeni bir zaman seçin
+fi| Aikataulu on vanhentunut - muokkaa julkaisua ja valitse uusi ajankohta
+
+= Trạng thái không hợp lệ
+en| Invalid status
+zh| 状态无效
+es| Estado no válido
+hi| अमान्य स्थिति
+ar| حالة غير صالحة
+pt| Status inválido
+ru| Недопустимый статус
+ja| ステータスが正しくありません
+ko| 올바르지 않은 상태입니다
+de| Ungültiger Status
+fr| Statut invalide
+id| Status tidak valid
+th| สถานะไม่ถูกต้อง
+tr| Geçersiz durum
+fi| Virheellinen tila
+
+= Chưa kết nối bot Telegram - vào Cài đặt
+en| Telegram bot not connected - go to Settings
+zh| 尚未连接 Telegram 机器人,请前往“设置”
+es| Bot de Telegram sin conectar: ve a Ajustes
+hi| Telegram बॉट जुड़ा नहीं है - सेटिंग्स में जाएँ
+ar| لم يُربط بوت تيليجرام - انتقل إلى الإعدادات
+pt| Bot do Telegram não conectado - vá em Configurações
+ru| Бот Telegram не подключён — откройте «Настройки»
+ja| Telegramボットが未接続です。設定を開いてください
+ko| Telegram 봇이 연결되지 않았습니다. 설정으로 이동하세요
+de| Telegram-Bot nicht verbunden - gehen Sie zu den Einstellungen
+fr| Bot Telegram non connecté - rendez-vous dans Paramètres
+id| Bot Telegram belum terhubung - buka Pengaturan
+th| ยังไม่ได้เชื่อมต่อบอท Telegram โปรดไปที่การตั้งค่า
+tr| Telegram botu bağlı değil - Ayarlar'a gidin
+fi| Telegram-bottia ei ole yhdistetty - siirry asetuksiin
+
+= Không đủ Điểm King. Hãy điểm danh hoặc giới thiệu bạn bè để nhận thêm.
+en| Not enough King Points. Check in or invite friends to earn more.
+zh| King 积分不足。请签到或邀请好友获取更多。
+es| No tienes suficientes Puntos King. Marca asistencia o invita a amigos para ganar más.
+hi| King पॉइंट पर्याप्त नहीं हैं। और पाने के लिए चेक-इन करें या दोस्तों को बुलाएँ।
+ar| نقاط King غير كافية. سجّل حضورك أو ادعُ أصدقاءك لتحصل على المزيد.
+pt| Pontos King insuficientes. Faça check-in ou indique amigos para ganhar mais.
+ru| Недостаточно King-баллов. Отметьтесь или пригласите друзей, чтобы получить больше.
+ja| Kingポイントが足りません。チェックインや友達紹介でポイントを増やしましょう。
+ko| King 포인트가 부족합니다. 출석 체크하거나 친구를 초대해 더 받으세요.
+de| Nicht genug King-Punkte. Checken Sie ein oder laden Sie Freunde ein, um mehr zu erhalten.
+fr| Points King insuffisants. Pointez ou invitez des amis pour en obtenir davantage.
+id| Poin King tidak cukup. Absen atau ajak teman untuk mendapat lebih banyak.
+th| คะแนน King ไม่พอ เช็กอินหรือชวนเพื่อนเพื่อรับเพิ่ม
+tr| King Puanı yetersiz. Daha fazlası için yoklama yapın veya arkadaşlarınızı davet edin.
+fi| King-pisteet eivät riitä. Kirjaudu läsnäoloon tai kutsu ystäviä saadaksesi lisää.
+
+= Bài đang được gửi, vui lòng chờ
+en| The post is being sent, please wait
+zh| 内容正在发送,请稍候
+es| La publicación se está enviando, espera un momento
+hi| पोस्ट भेजी जा रही है, कृपया प्रतीक्षा करें
+ar| المنشور قيد الإرسال، يرجى الانتظار
+pt| A publicação está sendo enviada, aguarde
+ru| Публикация отправляется, подождите
+ja| 投稿を送信中です。しばらくお待ちください
+ko| 게시물을 발송하는 중입니다. 잠시만 기다려 주세요
+de| Der Beitrag wird gesendet, bitte warten
+fr| La publication est en cours d'envoi, veuillez patienter
+id| Postingan sedang dikirim, harap tunggu
+th| กำลังส่งโพสต์ โปรดรอสักครู่
+tr| Gönderi gönderiliyor, lütfen bekleyin
+fi| Julkaisua lähetetään, odota hetki
+
+= Múi giờ không hợp lệ
+en| Invalid time zone
+zh| 时区无效
+es| Zona horaria no válida
+hi| अमान्य टाइम ज़ोन
+ar| منطقة زمنية غير صالحة
+pt| Fuso horário inválido
+ru| Недопустимый часовой пояс
+ja| タイムゾーンが正しくありません
+ko| 올바르지 않은 시간대입니다
+de| Ungültige Zeitzone
+fr| Fuseau horaire invalide
+id| Zona waktu tidak valid
+th| เขตเวลาไม่ถูกต้อง
+tr| Geçersiz saat dilimi
+fi| Virheellinen aikavyöhyke
+
+= Token không đúng định dạng (dạng 123456:ABC...)
+en| The token format is incorrect (it should look like 123456:ABC...)
+zh| 令牌格式不正确(应形如 123456:ABC...)
+es| El formato del token no es correcto (debe verse como 123456:ABC...)
+hi| टोकन का फ़ॉर्मैट सही नहीं है (123456:ABC... जैसा होना चाहिए)
+ar| صيغة الرمز غير صحيحة (يجب أن تبدو مثل 123456:ABC...)
+pt| O formato do token está incorreto (deve ser como 123456:ABC...)
+ru| Неверный формат токена (должен выглядеть как 123456:ABC...)
+ja| トークンの形式が正しくありません(123456:ABC...の形式)
+ko| 토큰 형식이 올바르지 않습니다(123456:ABC... 형태)
+de| Das Token-Format ist falsch (es sollte wie 123456:ABC... aussehen)
+fr| Le format du jeton est incorrect (il doit ressembler à 123456:ABC...)
+id| Format token salah (harus seperti 123456:ABC...)
+th| รูปแบบโทเคนไม่ถูกต้อง (ควรเป็นแบบ 123456:ABC...)
+tr| Belirteç biçimi hatalı (123456:ABC... gibi olmalı)
+fi| Tunnisteen muoto on virheellinen (sen pitäisi näyttää tältä: 123456:ABC...)
+
+= Số tài khoản mỗi IP phải từ 1 đến 10000 (hoặc để trống nếu không giới hạn)
+en| Accounts per IP must be between 1 and 10000 (or leave empty for no limit)
+zh| 每个 IP 的账号数必须在 1 到 10000 之间(不限制请留空)
+es| Las cuentas por IP deben estar entre 1 y 10000 (o déjalo vacío para no limitar)
+hi| प्रति IP खाते 1 से 10000 के बीच होने चाहिए (सीमा न चाहें तो खाली छोड़ें)
+ar| يجب أن يكون عدد الحسابات لكل IP بين 1 و10000 (أو اتركه فارغًا لعدم التقييد)
+pt| As contas por IP devem estar entre 1 e 10000 (ou deixe vazio para não limitar)
+ru| Число аккаунтов на IP — от 1 до 10000 (или оставьте пустым, чтобы не ограничивать)
+ja| IPごとのアカウント数は1〜10000で指定してください(制限しない場合は空欄)
+ko| IP당 계정 수는 1~10000이어야 합니다(제한하지 않으려면 비워 두세요)
+de| Konten pro IP müssen zwischen 1 und 10000 liegen (oder leer lassen für kein Limit)
+fr| Le nombre de comptes par IP doit être compris entre 1 et 10000 (ou laissez vide pour ne pas limiter)
+id| Akun per IP harus antara 1 dan 10000 (atau kosongkan jika tanpa batas)
+th| จำนวนบัญชีต่อ IP ต้องอยู่ระหว่าง 1 ถึง 10000 (หรือเว้นว่างหากไม่จำกัด)
+tr| IP başına hesap sayısı 1 ile 10000 arasında olmalı (sınırsız için boş bırakın)
+fi| Tilien määrän per IP on oltava 1-10000 (tai jätä tyhjäksi, jos rajoitusta ei ole)
+
+= Chỉ tài khoản quản trị chính mới làm được việc này
+en| Only the main administrator account can do this
+zh| 只有主管理员账号才能执行此操作
+es| Solo la cuenta de administrador principal puede hacer esto
+hi| यह काम सिर्फ़ मुख्य एडमिन खाता कर सकता है
+ar| حساب المشرف الرئيسي وحده يمكنه القيام بذلك
+pt| Somente a conta de administrador principal pode fazer isso
+ru| Это может сделать только главный администратор
+ja| この操作はメインの管理者アカウントのみ可能です
+ko| 이 작업은 주 관리자 계정만 할 수 있습니다
+de| Das kann nur das Haupt-Administratorkonto
+fr| Seul le compte administrateur principal peut effectuer cette action
+id| Hanya akun administrator utama yang dapat melakukannya
+th| เฉพาะบัญชีผู้ดูแลระบบหลักเท่านั้นที่ทำได้
+tr| Bunu yalnızca ana yönetici hesabı yapabilir
+fi| Vain pääylläpitäjän tili voi tehdä tämän
+
+= Chỉ tài khoản quản trị chính mới thao tác được với quản trị viên
+en| Only the main administrator account can manage other administrators
+zh| 只有主管理员账号才能操作其他管理员
+es| Solo la cuenta de administrador principal puede gestionar a otros administradores
+hi| अन्य एडमिन पर कार्रवाई सिर्फ़ मुख्य एडमिन खाता कर सकता है
+ar| حساب المشرف الرئيسي وحده يمكنه التعامل مع المشرفين الآخرين
+pt| Somente a conta de administrador principal pode gerenciar outros administradores
+ru| Действия с другими администраторами доступны только главному администратору
+ja| 他の管理者の操作はメインの管理者アカウントのみ可能です
+ko| 다른 관리자에 대한 작업은 주 관리자 계정만 할 수 있습니다
+de| Nur das Haupt-Administratorkonto kann andere Administratoren verwalten
+fr| Seul le compte administrateur principal peut gérer les autres administrateurs
+id| Hanya akun administrator utama yang dapat mengelola administrator lain
+th| เฉพาะบัญชีผู้ดูแลระบบหลักเท่านั้นที่จัดการผู้ดูแลคนอื่นได้
+tr| Diğer yöneticileri yalnızca ana yönetici hesabı yönetebilir
+fi| Vain pääylläpitäjän tili voi hallita muita ylläpitäjiä
+
+= Không tìm thấy thành viên
+en| Member not found
+zh| 未找到成员
+es| Miembro no encontrado
+hi| सदस्य नहीं मिला
+ar| لم يتم العثور على العضو
+pt| Membro não encontrado
+ru| Участник не найден
+ja| メンバーが見つかりません
+ko| 회원을 찾을 수 없습니다
+de| Mitglied nicht gefunden
+fr| Membre introuvable
+id| Anggota tidak ditemukan
+th| ไม่พบสมาชิก
+tr| Üye bulunamadı
+fi| Jäsentä ei löytynyt
+
+= Số điểm không hợp lệ
+en| Invalid number of points
+zh| 积分数无效
+es| Número de puntos no válido
+hi| अमान्य पॉइंट संख्या
+ar| عدد نقاط غير صالح
+pt| Quantidade de pontos inválida
+ru| Недопустимое число баллов
+ja| ポイント数が正しくありません
+ko| 올바르지 않은 포인트 수입니다
+de| Ungültige Punktzahl
+fr| Nombre de points invalide
+id| Jumlah poin tidak valid
+th| จำนวนคะแนนไม่ถูกต้อง
+tr| Geçersiz puan miktarı
+fi| Virheellinen pistemäärä
+
+= Không tìm thấy
+en| Not found
+zh| 未找到
+es| No encontrado
+hi| नहीं मिला
+ar| غير موجود
+pt| Não encontrado
+ru| Не найдено
+ja| 見つかりません
+ko| 찾을 수 없습니다
+de| Nicht gefunden
+fr| Introuvable
+id| Tidak ditemukan
+th| ไม่พบ
+tr| Bulunamadı
+fi| Ei löytynyt
+
+= Lỗi máy chủ
+en| Server error
+zh| 服务器错误
+es| Error del servidor
+hi| सर्वर त्रुटि
+ar| خطأ في الخادم
+pt| Erro do servidor
+ru| Ошибка сервера
+ja| サーバーエラー
+ko| 서버 오류
+de| Serverfehler
+fr| Erreur du serveur
+id| Kesalahan server
+th| เซิร์ฟเวอร์ผิดพลาด
+tr| Sunucu hatası
+fi| Palvelinvirhe
+
+= Đăng nhập sai quá nhiều lần. Thử lại sau 15 phút.
+en| Too many failed login attempts. Try again in 15 minutes.
+zh| 登录失败次数过多,请 15 分钟后再试。
+es| Demasiados intentos fallidos. Inténtalo de nuevo dentro de 15 minutos.
+hi| लॉग इन के बहुत ज़्यादा असफल प्रयास। 15 मिनट बाद फिर कोशिश करें।
+ar| محاولات تسجيل دخول فاشلة كثيرة. حاول مجددًا بعد 15 دقيقة.
+pt| Muitas tentativas de login malsucedidas. Tente novamente em 15 minutos.
+ru| Слишком много неудачных попыток входа. Повторите через 15 минут.
+ja| ログインの失敗が多すぎます。15分後にもう一度お試しください。
+ko| 로그인 실패가 너무 많습니다. 15분 후에 다시 시도하세요.
+de| Zu viele fehlgeschlagene Anmeldeversuche. Versuchen Sie es in 15 Minuten erneut.
+fr| Trop de tentatives de connexion échouées. Réessayez dans 15 minutes.
+id| Terlalu banyak percobaan masuk yang gagal. Coba lagi dalam 15 menit.
+th| เข้าสู่ระบบผิดพลาดหลายครั้งเกินไป ลองอีกครั้งใน 15 นาที
+tr| Çok fazla başarısız giriş denemesi. 15 dakika sonra tekrar deneyin.
+fi| Liian monta epäonnistunutta kirjautumisyritystä. Yritä uudelleen 15 minuutin kuluttua.
+
+= Tài khoản đã bị khoá. Liên hệ quản trị viên.
+en| This account has been locked. Contact an administrator.
+zh| 此账号已被锁定,请联系管理员。
+es| Esta cuenta ha sido bloqueada. Contacta con un administrador.
+hi| यह खाता लॉक कर दिया गया है। एडमिन से संपर्क करें।
+ar| تم قفل هذا الحساب. تواصل مع المشرف.
+pt| Esta conta foi bloqueada. Entre em contato com um administrador.
+ru| Аккаунт заблокирован. Свяжитесь с администратором.
+ja| このアカウントはロックされています。管理者にお問い合わせください。
+ko| 이 계정은 잠겨 있습니다. 관리자에게 문의하세요.
+de| Dieses Konto wurde gesperrt. Wenden Sie sich an einen Administrator.
+fr| Ce compte a été verrouillé. Contactez un administrateur.
+id| Akun ini telah dikunci. Hubungi administrator.
+th| บัญชีนี้ถูกล็อก โปรดติดต่อผู้ดูแลระบบ
+tr| Bu hesap kilitlendi. Bir yöneticiyle iletişime geçin.
+fi| Tämä tili on lukittu. Ota yhteyttä ylläpitäjään.
+
+= Sai email hoặc mật khẩu
+en| Wrong email or password
+zh| 邮箱或密码错误
+es| Correo o contraseña incorrectos
+hi| ईमेल या पासवर्ड ग़लत है
+ar| البريد الإلكتروني أو كلمة المرور غير صحيحة
+pt| E-mail ou senha incorretos
+ru| Неверный email или пароль
+ja| メールアドレスまたはパスワードが違います
+ko| 이메일 또는 비밀번호가 올바르지 않습니다
+de| E-Mail oder Passwort falsch
+fr| E-mail ou mot de passe incorrect
+id| Email atau kata sandi salah
+th| อีเมลหรือรหัสผ่านไม่ถูกต้อง
+tr| E-posta veya parola hatalı
+fi| Väärä sähköposti tai salasana
+
+= Hiện chưa mở đăng ký tài khoản mới.
+en| New account registration is currently closed.
+zh| 目前暂未开放新账号注册。
+es| El registro de nuevas cuentas está cerrado por ahora.
+hi| फ़िलहाल नए खातों का पंजीकरण बंद है।
+ar| التسجيل في حسابات جديدة مغلق حاليًا.
+pt| O cadastro de novas contas está fechado no momento.
+ru| Регистрация новых аккаунтов сейчас закрыта.
+ja| 現在、新規アカウントの登録は受け付けていません。
+ko| 현재 신규 계정 가입이 닫혀 있습니다.
+de| Die Registrierung neuer Konten ist derzeit geschlossen.
+fr| Les inscriptions de nouveaux comptes sont actuellement fermées.
+id| Pendaftaran akun baru sedang ditutup.
+th| ขณะนี้ปิดรับสมัครบัญชีใหม่
+tr| Yeni hesap kaydı şu anda kapalı.
+fi| Uusien tilien rekisteröityminen on tällä hetkellä suljettu.
+
+= Yêu cầu không hợp lệ
+en| Invalid request
+zh| 请求无效
+es| Solicitud no válida
+hi| अमान्य अनुरोध
+ar| طلب غير صالح
+pt| Solicitação inválida
+ru| Недопустимый запрос
+ja| リクエストが正しくありません
+ko| 올바르지 않은 요청입니다
+de| Ungültige Anfrage
+fr| Requête invalide
+id| Permintaan tidak valid
+th| คำขอไม่ถูกต้อง
+tr| Geçersiz istek
+fi| Virheellinen pyyntö
+
+= Bạn tạo tài khoản quá nhiều lần. Thử lại sau.
+en| You've created accounts too many times. Try again later.
+zh| 你创建账号的次数过多,请稍后再试。
+es| Has creado cuentas demasiadas veces. Inténtalo más tarde.
+hi| आपने बहुत बार खाते बनाए हैं। बाद में फिर कोशिश करें।
+ar| أنشأت حسابات مرات كثيرة. حاول لاحقًا.
+pt| Você criou contas vezes demais. Tente novamente mais tarde.
+ru| Вы слишком часто создаёте аккаунты. Повторите позже.
+ja| アカウント作成の回数が多すぎます。しばらくしてからお試しください。
+ko| 계정을 너무 많이 만들었습니다. 나중에 다시 시도하세요.
+de| Sie haben zu oft Konten erstellt. Versuchen Sie es später erneut.
+fr| Vous avez créé trop de comptes. Réessayez plus tard.
+id| Anda terlalu sering membuat akun. Coba lagi nanti.
+th| คุณสร้างบัญชีบ่อยเกินไป โปรดลองใหม่ภายหลัง
+tr| Çok fazla hesap oluşturdunuz. Daha sonra tekrar deneyin.
+fi| Olet luonut tilejä liian monta kertaa. Yritä myöhemmin uudelleen.
+
+= Email này đã được đăng ký. Hãy đăng nhập.
+en| This email is already registered. Please log in.
+zh| 此邮箱已注册,请直接登录。
+es| Este correo ya está registrado. Inicia sesión.
+hi| यह ईमेल पहले से पंजीकृत है। कृपया लॉग इन करें।
+ar| هذا البريد مسجّل بالفعل. يرجى تسجيل الدخول.
+pt| Este e-mail já está cadastrado. Faça login.
+ru| Этот email уже зарегистрирован. Войдите.
+ja| このメールアドレスはすでに登録されています。ログインしてください。
+ko| 이미 가입된 이메일입니다. 로그인하세요.
+de| Diese E-Mail ist bereits registriert. Bitte melden Sie sich an.
+fr| Cet e-mail est déjà enregistré. Connectez-vous.
+id| Email ini sudah terdaftar. Silakan masuk.
+th| อีเมลนี้ลงทะเบียนแล้ว โปรดเข้าสู่ระบบ
+tr| Bu e-posta zaten kayıtlı. Lütfen giriş yapın.
+fi| Tämä sähköposti on jo rekisteröity. Kirjaudu sisään.
+
+= Địa chỉ IP của bạn đã tạo tối đa {0} tài khoản.
+en| Your IP address has already created the maximum of {0} accounts.
+zh| 你的 IP 地址已创建了上限 {0} 个账号。
+es| Tu dirección IP ya ha creado el máximo de {0} cuentas.
+hi| आपके IP पते से अधिकतम {0} खाते पहले ही बन चुके हैं।
+ar| أنشأ عنوان IP الخاص بك الحد الأقصى وهو {0} حسابات.
+pt| Seu endereço IP já criou o máximo de {0} contas.
+ru| С вашего IP-адреса уже создано максимальное число аккаунтов — {0}.
+ja| お使いのIPアドレスでは、上限の{0}件のアカウントがすでに作成されています。
+ko| 사용 중인 IP 주소로 이미 최대 {0}개 계정을 만들었습니다.
+de| Von Ihrer IP-Adresse wurden bereits maximal {0} Konten erstellt.
+fr| Votre adresse IP a déjà créé le maximum de {0} comptes.
+id| Alamat IP Anda sudah membuat maksimal {0} akun.
+th| ที่อยู่ IP ของคุณสร้างบัญชีครบสูงสุด {0} บัญชีแล้ว
+tr| IP adresiniz en fazla {0} hesap oluşturma sınırına ulaştı.
+fi| IP-osoitteestasi on jo luotu enimmäismäärä eli {0} tiliä.
+
+= Hệ thống đã đạt giới hạn thành viên.
+en| The system has reached its member limit.
+zh| 系统已达到成员数量上限。
+es| El sistema ha alcanzado su límite de miembros.
+hi| सिस्टम सदस्य सीमा तक पहुँच चुका है।
+ar| بلغ النظام الحد الأقصى لعدد الأعضاء.
+pt| O sistema atingiu o limite de membros.
+ru| Достигнут предел числа участников.
+ja| システムのメンバー数が上限に達しました。
+ko| 시스템이 회원 수 한도에 도달했습니다.
+de| Das System hat sein Mitgliederlimit erreicht.
+fr| Le système a atteint sa limite de membres.
+id| Sistem telah mencapai batas anggota.
+th| ระบบมีสมาชิกครบตามขีดจำกัดแล้ว
+tr| Sistem üye sınırına ulaştı.
+fi| Järjestelmä on saavuttanut jäsenrajansa.
+
+= Tài khoản quản trị đổi mật khẩu qua biến môi trường ADMIN_PASSWORD.
+en| The administrator account changes its password through the ADMIN_PASSWORD environment variable.
+zh| 管理员账号需通过环境变量 ADMIN_PASSWORD 修改密码。
+es| La cuenta de administrador cambia su contraseña mediante la variable de entorno ADMIN_PASSWORD.
+hi| एडमिन खाता पासवर्ड ADMIN_PASSWORD पर्यावरण वेरिएबल से बदलता है।
+ar| تُغيَّر كلمة مرور حساب المشرف عبر متغير البيئة ADMIN_PASSWORD.
+pt| A conta de administrador altera a senha pela variável de ambiente ADMIN_PASSWORD.
+ru| Пароль администратора меняется через переменную окружения ADMIN_PASSWORD.
+ja| 管理者アカウントのパスワードは環境変数 ADMIN_PASSWORD で変更します。
+ko| 관리자 계정의 비밀번호는 환경 변수 ADMIN_PASSWORD로 변경합니다.
+de| Das Administratorkonto ändert sein Passwort über die Umgebungsvariable ADMIN_PASSWORD.
+fr| Le compte administrateur change son mot de passe via la variable d'environnement ADMIN_PASSWORD.
+id| Akun administrator mengganti kata sandi lewat variabel lingkungan ADMIN_PASSWORD.
+th| บัญชีผู้ดูแลระบบเปลี่ยนรหัสผ่านผ่านตัวแปรสภาพแวดล้อม ADMIN_PASSWORD
+tr| Yönetici hesabı parolasını ADMIN_PASSWORD ortam değişkeniyle değiştirir.
+fi| Ylläpitäjätilin salasana vaihdetaan ympäristömuuttujalla ADMIN_PASSWORD.
+
+= Mật khẩu hiện tại không đúng
+en| The current password is incorrect
+zh| 当前密码不正确
+es| La contraseña actual no es correcta
+hi| वर्तमान पासवर्ड सही नहीं है
+ar| كلمة المرور الحالية غير صحيحة
+pt| A senha atual está incorreta
+ru| Текущий пароль неверен
+ja| 現在のパスワードが正しくありません
+ko| 현재 비밀번호가 올바르지 않습니다
+de| Das aktuelle Passwort ist falsch
+fr| Le mot de passe actuel est incorrect
+id| Kata sandi saat ini salah
+th| รหัสผ่านปัจจุบันไม่ถูกต้อง
+tr| Mevcut parola yanlış
+fi| Nykyinen salasana on väärä
+
+= Mật khẩu mới cần từ 8 ký tự trở lên
+en| The new password must be at least 8 characters
+zh| 新密码至少需要 8 个字符
+es| La nueva contraseña debe tener al menos 8 caracteres
+hi| नया पासवर्ड कम से कम 8 अक्षर का होना चाहिए
+ar| يجب ألا تقل كلمة المرور الجديدة عن 8 أحرف
+pt| A nova senha deve ter pelo menos 8 caracteres
+ru| Новый пароль должен содержать не менее 8 символов
+ja| 新しいパスワードは8文字以上にしてください
+ko| 새 비밀번호는 8자 이상이어야 합니다
+de| Das neue Passwort muss mindestens 8 Zeichen lang sein
+fr| Le nouveau mot de passe doit contenir au moins 8 caractères
+id| Kata sandi baru minimal 8 karakter
+th| รหัสผ่านใหม่ต้องมีอย่างน้อย 8 ตัวอักษร
+tr| Yeni parola en az 8 karakter olmalı
+fi| Uuden salasanan on oltava vähintään 8 merkkiä
+
+= Chỉ quản trị viên
+en| Administrators only
+zh| 仅限管理员
+es| Solo administradores
+hi| सिर्फ़ एडमिन के लिए
+ar| للمشرفين فقط
+pt| Somente administradores
+ru| Только для администраторов
+ja| 管理者のみ
+ko| 관리자 전용
+de| Nur für Administratoren
+fr| Réservé aux administrateurs
+id| Khusus administrator
+th| เฉพาะผู้ดูแลระบบ
+tr| Yalnızca yöneticiler
+fi| Vain ylläpitäjille
+
+= Hết Điểm King. Hãy điểm danh hoặc giới thiệu bạn bè để nhận thêm điểm.
+en| Out of King Points. Check in or invite friends to earn more.
+zh| King 积分已用完。请签到或邀请好友获取更多积分。
+es| Sin Puntos King. Marca asistencia o invita a amigos para ganar más.
+hi| King पॉइंट खत्म हो गए। और पाने के लिए चेक-इन करें या दोस्तों को बुलाएँ।
+ar| نفدت نقاط King. سجّل حضورك أو ادعُ أصدقاءك لتحصل على المزيد.
+pt| Sem Pontos King. Faça check-in ou indique amigos para ganhar mais.
+ru| King-баллы закончились. Отметьтесь или пригласите друзей, чтобы получить больше.
+ja| Kingポイントがなくなりました。チェックインや友達紹介でポイントを増やしましょう。
+ko| King 포인트가 모두 소진되었습니다. 출석 체크하거나 친구를 초대해 더 받으세요.
+de| Keine King-Punkte mehr. Checken Sie ein oder laden Sie Freunde ein, um mehr zu erhalten.
+fr| Plus de Points King. Pointez ou invitez des amis pour en obtenir davantage.
+id| Poin King habis. Absen atau ajak teman untuk mendapat lebih banyak.
+th| คะแนน King หมดแล้ว เช็กอินหรือชวนเพื่อนเพื่อรับเพิ่ม
+tr| King Puanı bitti. Daha fazlası için yoklama yapın veya arkadaşlarınızı davet edin.
+fi| King-pisteet loppuivat. Kirjaudu läsnäoloon tai kutsu ystäviä saadaksesi lisää.
+
+= Bài đăng không còn nhóm nào
+en| The post no longer has any groups
+zh| 此内容已没有任何群组
+es| La publicación ya no tiene ningún grupo
+hi| इस पोस्ट में अब कोई ग्रुप नहीं बचा
+ar| لم يعد للمنشور أي مجموعة
+pt| A publicação não tem mais nenhum grupo
+ru| В публикации не осталось ни одной группы
+ja| この投稿には配信先グループがありません
+ko| 이 게시물에 남은 그룹이 없습니다
+de| Der Beitrag hat keine Gruppen mehr
+fr| La publication n'a plus aucun groupe
+id| Postingan tidak lagi memiliki grup
+th| โพสต์นี้ไม่มีกลุ่มเหลืออยู่แล้ว
+tr| Gönderinin artık hiç grubu yok
+fi| Julkaisulla ei ole enää yhtään ryhmää
+
+= File quá lớn (tối đa 50MB cho video, 10MB cho ảnh)
+en| File too large (max 50MB for video, 10MB for images)
+zh| 文件过大(视频最大 50MB,图片最大 10MB)
+es| Archivo demasiado grande (máx. 50MB para vídeo, 10MB para imágenes)
+hi| फ़ाइल बहुत बड़ी है (वीडियो के लिए अधिकतम 50MB, इमेज के लिए 10MB)
+ar| الملف كبير جدًا (الحد الأقصى 50MB للفيديو و10MB للصور)
+pt| Arquivo muito grande (máx. 50MB para vídeo, 10MB para imagens)
+ru| Файл слишком большой (максимум 50 МБ для видео, 10 МБ для изображений)
+ja| ファイルが大きすぎます(動画は50MB、画像は10MBまで)
+ko| 파일이 너무 큽니다(동영상 최대 50MB, 이미지 최대 10MB)
+de| Datei zu groß (max. 50MB für Videos, 10MB für Bilder)
+fr| Fichier trop volumineux (50 Mo max pour les vidéos, 10 Mo pour les images)
+id| File terlalu besar (maks. 50MB untuk video, 10MB untuk gambar)
+th| ไฟล์ใหญ่เกินไป (วิดีโอสูงสุด 50MB รูปภาพสูงสุด 10MB)
+tr| Dosya çok büyük (video için en fazla 50MB, görsel için 10MB)
+fi| Tiedosto on liian suuri (enintään 50 Mt videolle, 10 Mt kuville)
+
+= Thiếu dữ liệu file
+en| File data is missing
+zh| 缺少文件数据
+es| Faltan los datos del archivo
+hi| फ़ाइल का डेटा नहीं मिला
+ar| بيانات الملف مفقودة
+pt| Faltam os dados do arquivo
+ru| Нет данных файла
+ja| ファイルのデータがありません
+ko| 파일 데이터가 없습니다
+de| Dateidaten fehlen
+fr| Données du fichier manquantes
+id| Data file tidak ada
+th| ไม่มีข้อมูลไฟล์
+tr| Dosya verisi eksik
+fi| Tiedoston tiedot puuttuvat
+
+= Đã hết dung lượng lưu trữ của tài khoản. Hãy xoá bớt bài có ảnh/video cũ.
+en| This account is out of storage. Delete some posts with old images/videos.
+zh| 账号存储空间已用完。请删除一些带旧图片/视频的内容。
+es| La cuenta se ha quedado sin almacenamiento. Elimina algunas publicaciones con imágenes o vídeos antiguos.
+hi| इस खाते की स्टोरेज खत्म हो गई है। पुरानी इमेज/वीडियो वाली कुछ पोस्ट हटाएँ।
+ar| نفدت مساحة التخزين لهذا الحساب. احذف بعض المنشورات ذات الصور/الفيديوهات القديمة.
+pt| O armazenamento da conta acabou. Exclua algumas publicações com imagens/vídeos antigos.
+ru| Место в хранилище аккаунта закончилось. Удалите несколько публикаций со старыми изображениями/видео.
+ja| アカウントの保存容量がいっぱいです。古い画像/動画を含む投稿を削除してください。
+ko| 계정 저장 공간이 가득 찼습니다. 오래된 이미지/동영상이 있는 게시물을 삭제하세요.
+de| Der Speicherplatz des Kontos ist aufgebraucht. Löschen Sie einige Beiträge mit alten Bildern/Videos.
+fr| Le stockage du compte est plein. Supprimez des publications contenant d'anciennes images/vidéos.
+id| Penyimpanan akun penuh. Hapus beberapa postingan dengan gambar/video lama.
+th| พื้นที่จัดเก็บของบัญชีเต็มแล้ว โปรดลบโพสต์ที่มีรูปภาพ/วิดีโอเก่าบางส่วน
+tr| Hesabın depolama alanı doldu. Eski görsel/videolu bazı gönderileri silin.
+fi| Tilin tallennustila on täynnä. Poista julkaisuja, joissa on vanhoja kuvia/videoita.
+
+= File quá lớn (tối đa 50MB)
+en| File too large (max 50MB)
+zh| 文件过大(最大 50MB)
+es| Archivo demasiado grande (máx. 50MB)
+hi| फ़ाइल बहुत बड़ी है (अधिकतम 50MB)
+ar| الملف كبير جدًا (الحد الأقصى 50MB)
+pt| Arquivo muito grande (máx. 50MB)
+ru| Файл слишком большой (максимум 50 МБ)
+ja| ファイルが大きすぎます(50MBまで)
+ko| 파일이 너무 큽니다(최대 50MB)
+de| Datei zu groß (max. 50MB)
+fr| Fichier trop volumineux (50 Mo max)
+id| File terlalu besar (maks. 50MB)
+th| ไฟล์ใหญ่เกินไป (สูงสุด 50MB)
+tr| Dosya çok büyük (en fazla 50MB)
+fi| Tiedosto on liian suuri (enintään 50 Mt)
+
+= Tải lên bị gián đoạn
+en| Upload was interrupted
+zh| 上传被中断
+es| La subida se interrumpió
+hi| अपलोड बाधित हो गया
+ar| انقطع الرفع
+pt| O envio foi interrompido
+ru| Загрузка прервана
+ja| アップロードが中断されました
+ko| 업로드가 중단되었습니다
+de| Upload wurde unterbrochen
+fr| Le téléversement a été interrompu
+id| Pengunggahan terputus
+th| การอัปโหลดถูกขัดจังหวะ
+tr| Yükleme kesintiye uğradı
+fi| Lataus keskeytyi
+
+= Không ghi được file lên máy chủ
+en| Couldn't save the file on the server
+zh| 无法将文件写入服务器
+es| No se pudo guardar el archivo en el servidor
+hi| फ़ाइल सर्वर पर सहेजी नहीं जा सकी
+ar| تعذّر حفظ الملف على الخادم
+pt| Não foi possível salvar o arquivo no servidor
+ru| Не удалось сохранить файл на сервере
+ja| サーバーにファイルを保存できませんでした
+ko| 서버에 파일을 저장하지 못했습니다
+de| Die Datei konnte nicht auf dem Server gespeichert werden
+fr| Impossible d'enregistrer le fichier sur le serveur
+id| Gagal menyimpan file di server
+th| บันทึกไฟล์ลงเซิร์ฟเวอร์ไม่ได้
+tr| Dosya sunucuya kaydedilemedi
+fi| Tiedostoa ei voitu tallentaa palvelimelle
+
+= Định dạng không hỗ trợ. Dùng JPG, PNG, WEBP, GIF hoặc MP4.
+en| Unsupported format. Use JPG, PNG, WEBP, GIF or MP4.
+zh| 不支持的格式。请使用 JPG、PNG、WEBP、GIF 或 MP4。
+es| Formato no compatible. Usa JPG, PNG, WEBP, GIF o MP4.
+hi| यह फ़ॉर्मैट समर्थित नहीं है। JPG, PNG, WEBP, GIF या MP4 इस्तेमाल करें।
+ar| تنسيق غير مدعوم. استخدم JPG أو PNG أو WEBP أو GIF أو MP4.
+pt| Formato não suportado. Use JPG, PNG, WEBP, GIF ou MP4.
+ru| Неподдерживаемый формат. Используйте JPG, PNG, WEBP, GIF или MP4.
+ja| 未対応の形式です。JPG、PNG、WEBP、GIF、MP4をご利用ください。
+ko| 지원하지 않는 형식입니다. JPG, PNG, WEBP, GIF 또는 MP4를 사용하세요.
+de| Nicht unterstütztes Format. Verwenden Sie JPG, PNG, WEBP, GIF oder MP4.
+fr| Format non pris en charge. Utilisez JPG, PNG, WEBP, GIF ou MP4.
+id| Format tidak didukung. Gunakan JPG, PNG, WEBP, GIF, atau MP4.
+th| ไม่รองรับรูปแบบนี้ ใช้ JPG, PNG, WEBP, GIF หรือ MP4
+tr| Desteklenmeyen biçim. JPG, PNG, WEBP, GIF veya MP4 kullanın.
+fi| Muotoa ei tueta. Käytä JPG-, PNG-, WEBP-, GIF- tai MP4-tiedostoa.
+
+= Ảnh tối đa 10MB
+en| Images can be at most 10MB
+zh| 图片最大 10MB
+es| Las imágenes admiten un máximo de 10MB
+hi| इमेज अधिकतम 10MB की हो सकती है
+ar| الحد الأقصى للصور 10MB
+pt| As imagens podem ter no máximo 10MB
+ru| Изображения — не более 10 МБ
+ja| 画像は10MBまでです
+ko| 이미지는 최대 10MB입니다
+de| Bilder dürfen höchstens 10MB groß sein
+fr| Les images sont limitées à 10 Mo
+id| Gambar maksimal 10MB
+th| รูปภาพสูงสุด 10MB
+tr| Görseller en fazla 10MB olabilir
+fi| Kuvat saavat olla enintään 10 Mt
+
+= Lỗi xử lý file
+en| Error processing the file
+zh| 处理文件时出错
+es| Error al procesar el archivo
+hi| फ़ाइल प्रोसेस करने में त्रुटि
+ar| خطأ في معالجة الملف
+pt| Erro ao processar o arquivo
+ru| Ошибка обработки файла
+ja| ファイルの処理中にエラーが発生しました
+ko| 파일 처리 중 오류가 발생했습니다
+de| Fehler bei der Dateiverarbeitung
+fr| Erreur lors du traitement du fichier
+id| Kesalahan saat memproses file
+th| เกิดข้อผิดพลาดในการประมวลผลไฟล์
+tr| Dosya işlenirken hata oluştu
+fi| Virhe tiedoston käsittelyssä
+
+= Quà tặng đăng ký
+en| Sign-up gift
+zh| 注册礼
+es| Regalo de registro
+hi| साइन अप उपहार
+ar| هدية التسجيل
+pt| Presente de cadastro
+ru| Подарок за регистрацию
+ja| 登録プレゼント
+ko| 가입 선물
+de| Anmeldegeschenk
+fr| Cadeau d'inscription
+id| Hadiah pendaftaran
+th| ของขวัญสมัครสมาชิก
+tr| Kayıt hediyesi
+fi| Rekisteröitymislahja
+
+= Quà tặng thành viên
+en| Member gift
+zh| 会员礼
+es| Regalo para miembros
+hi| सदस्य उपहार
+ar| هدية العضوية
+pt| Presente de membro
+ru| Подарок участнику
+ja| メンバープレゼント
+ko| 회원 선물
+de| Mitgliedergeschenk
+fr| Cadeau membre
+id| Hadiah anggota
+th| ของขวัญสมาชิก
+tr| Üye hediyesi
+fi| Jäsenlahja
+
+= Bạn bè {0} đã chạy bài thành công
+en| Friend {0} sent a post successfully
+zh| 好友 {0} 已成功发出内容
+es| Tu amigo {0} envió una publicación con éxito
+hi| दोस्त {0} ने सफलतापूर्वक पोस्ट भेजी
+ar| أرسل الصديق {0} منشورًا بنجاح
+pt| O amigo {0} enviou uma publicação com sucesso
+ru| Друг {0} успешно отправил публикацию
+ja| 友達の{0}さんが投稿に成功しました
+ko| 친구 {0}님이 게시물을 성공적으로 보냈습니다
+de| Freund {0} hat erfolgreich einen Beitrag gesendet
+fr| Votre ami {0} a envoyé une publication avec succès
+id| Teman {0} berhasil mengirim postingan
+th| เพื่อน {0} ส่งโพสต์สำเร็จแล้ว
+tr| Arkadaşınız {0} başarıyla gönderi yaptı
+fi| Ystävä {0} lähetti julkaisun onnistuneesti
+
+= Điểm danh {0}
+en| Check-in {0}
+zh| 签到 {0}
+es| Asistencia {0}
+hi| चेक-इन {0}
+ar| تسجيل حضور {0}
+pt| Check-in {0}
+ru| Отметка {0}
+ja| チェックイン {0}
+ko| 출석 {0}
+de| Einchecken {0}
+fr| Pointage {0}
+id| Absen {0}
+th| เช็กอิน {0}
+tr| Yoklama {0}
+fi| Läsnäolo {0}
+
+= Thiếu cấu hình lịch đăng
+en| Schedule settings are missing
+zh| 缺少发布计划设置
+es| Faltan los ajustes de programación
+hi| शेड्यूल सेटिंग्स नहीं मिलीं
+ar| إعدادات الجدولة مفقودة
+pt| Faltam as configurações de agendamento
+ru| Не заданы настройки расписания
+ja| スケジュール設定がありません
+ko| 일정 설정이 없습니다
+de| Zeitplaneinstellungen fehlen
+fr| Paramètres de planification manquants
+id| Pengaturan jadwal tidak ada
+th| ไม่มีการตั้งค่าตารางเวลา
+tr| Zamanlama ayarları eksik
+fi| Aikataulun asetukset puuttuvat
+
+= Ngày/giờ đăng không hợp lệ
+en| Invalid posting date/time
+zh| 发布日期/时间无效
+es| Fecha u hora de publicación no válidas
+hi| पोस्टिंग की तारीख़/समय अमान्य है
+ar| تاريخ/وقت النشر غير صالح
+pt| Data/hora de publicação inválida
+ru| Недопустимые дата/время публикации
+ja| 投稿の日時が正しくありません
+ko| 게시 날짜/시간이 올바르지 않습니다
+de| Ungültiges Datum bzw. Uhrzeit
+fr| Date/heure de publication invalide
+id| Tanggal/jam posting tidak valid
+th| วันที่/เวลาโพสต์ไม่ถูกต้อง
+tr| Geçersiz gönderi tarihi/saati
+fi| Virheellinen julkaisupäivä/-aika
+
+= Giờ đăng không hợp lệ
+en| Invalid posting time
+zh| 发布时间无效
+es| Hora de publicación no válida
+hi| पोस्टिंग का समय अमान्य है
+ar| وقت النشر غير صالح
+pt| Horário de publicação inválido
+ru| Недопустимое время публикации
+ja| 投稿の時刻が正しくありません
+ko| 게시 시간이 올바르지 않습니다
+de| Ungültige Uhrzeit
+fr| Heure de publication invalide
+id| Jam posting tidak valid
+th| เวลาโพสต์ไม่ถูกต้อง
+tr| Geçersiz gönderi saati
+fi| Virheellinen julkaisuaika
+
+= Chọn ít nhất một ngày trong tuần
+en| Choose at least one day of the week
+zh| 请至少选择一个星期日
+es| Elige al menos un día de la semana
+hi| सप्ताह का कम से कम एक दिन चुनें
+ar| اختر يومًا واحدًا على الأقل من الأسبوع
+pt| Escolha pelo menos um dia da semana
+ru| Выберите хотя бы один день недели
+ja| 曜日を1つ以上選択してください
+ko| 요일을 하나 이상 선택하세요
+de| Wählen Sie mindestens einen Wochentag
+fr| Choisissez au moins un jour de la semaine
+id| Pilih setidaknya satu hari dalam seminggu
+th| เลือกอย่างน้อยหนึ่งวันในสัปดาห์
+tr| Haftanın en az bir gününü seçin
+fi| Valitse vähintään yksi viikonpäivä
+
+= Chu kỳ lặp tối thiểu 5 phút
+en| The minimum repeat interval is 5 minutes
+zh| 重复间隔至少 5 分钟
+es| El intervalo de repetición mínimo es de 5 minutos
+hi| दोहराने का न्यूनतम अंतराल 5 मिनट है
+ar| الحد الأدنى لفاصل التكرار 5 دقائق
+pt| O intervalo mínimo de repetição é de 5 minutos
+ru| Минимальный интервал повторения — 5 минут
+ja| 繰り返し間隔は最短5分です
+ko| 반복 주기는 최소 5분입니다
+de| Das minimale Wiederholungsintervall beträgt 5 Minuten
+fr| L'intervalle de répétition minimum est de 5 minutes
+id| Interval pengulangan minimal 5 menit
+th| รอบการทำซ้ำขั้นต่ำ 5 นาที
+tr| En kısa tekrar aralığı 5 dakikadır
+fi| Pienin toistoväli on 5 minuuttia
+
+= Thời điểm bắt đầu không hợp lệ
+en| Invalid start time
+zh| 开始时间无效
+es| Hora de inicio no válida
+hi| शुरुआती समय अमान्य है
+ar| وقت البدء غير صالح
+pt| Horário de início inválido
+ru| Недопустимое время начала
+ja| 開始時刻が正しくありません
+ko| 시작 시간이 올바르지 않습니다
+de| Ungültige Startzeit
+fr| Heure de début invalide
+id| Waktu mulai tidak valid
+th| เวลาเริ่มต้นไม่ถูกต้อง
+tr| Geçersiz başlangıç saati
+fi| Virheellinen aloitusaika
+
+= Kiểu lịch không hợp lệ
+en| Invalid schedule type
+zh| 计划类型无效
+es| Tipo de programación no válido
+hi| शेड्यूल का प्रकार अमान्य है
+ar| نوع الجدولة غير صالح
+pt| Tipo de agendamento inválido
+ru| Недопустимый тип расписания
+ja| スケジュールの種類が正しくありません
+ko| 올바르지 않은 일정 유형입니다
+de| Ungültige Zeitplan-Art
+fr| Type de planification invalide
+id| Jenis jadwal tidak valid
+th| ประเภทการตั้งเวลาไม่ถูกต้อง
+tr| Geçersiz zamanlama türü
+fi| Virheellinen aikataulutyyppi
+
+= Chưa cấu hình token bot Telegram
+en| Telegram bot token not configured
+zh| 尚未配置 Telegram 机器人令牌
+es| Token del bot de Telegram sin configurar
+hi| Telegram बॉट टोकन कॉन्फ़िगर नहीं है
+ar| لم يُضبط رمز بوت تيليجرام
+pt| Token do bot do Telegram não configurado
+ru| Токен бота Telegram не настроен
+ja| Telegramボットのトークンが未設定です
+ko| Telegram 봇 토큰이 설정되지 않았습니다
+de| Telegram-Bot-Token nicht konfiguriert
+fr| Jeton du bot Telegram non configuré
+id| Token bot Telegram belum dikonfigurasi
+th| ยังไม่ได้ตั้งค่าโทเคนบอท Telegram
+tr| Telegram bot belirteci yapılandırılmadı
+fi| Telegram-bottitunnistetta ei ole määritetty
+
+= Không kết nối được Telegram ({0})
+en| Couldn't connect to Telegram ({0})
+zh| 无法连接 Telegram({0})
+es| No se pudo conectar con Telegram ({0})
+hi| Telegram से कनेक्ट नहीं हो सका ({0})
+ar| تعذّر الاتصال بتيليجرام ({0})
+pt| Não foi possível conectar ao Telegram ({0})
+ru| Не удалось подключиться к Telegram ({0})
+ja| Telegramに接続できませんでした({0})
+ko| Telegram에 연결할 수 없습니다({0})
+de| Verbindung zu Telegram fehlgeschlagen ({0})
+fr| Impossible de se connecter à Telegram ({0})
+id| Tidak dapat terhubung ke Telegram ({0})
+th| เชื่อมต่อ Telegram ไม่ได้ ({0})
+tr| Telegram'a bağlanılamadı ({0})
+fi| Telegramiin ei saatu yhteyttä ({0})

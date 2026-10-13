@@ -55,7 +55,13 @@ app.get('/app', (req, res) => (auth.session(req) ? view('app.html')(req, res) : 
 app.get('/login', (req, res) => (auth.session(req) ? res.redirect('/app') : view('login.html')(req, res)));
 app.get('/register', (req, res) => (auth.session(req) ? res.redirect('/app') : view('register.html')(req, res)));
 
-app.use(express.static(path.join(__dirname, 'public'), { maxAge: config.production ? '7d' : 0, extensions: ['html'] }));
+app.use(express.static(path.join(__dirname, 'public'), {
+  extensions: ['html'],
+  setHeaders: (res, file) => {
+    // Mã giao diện/ngôn ngữ đổi theo từng lần deploy: luôn xác thực lại bằng ETag để người dùng thấy bản mới ngay.
+    res.setHeader('Cache-Control', /\.(html|js|css)$/.test(file) ? 'no-cache' : 'public, max-age=604800');
+  },
+}));
 app.use((req, res) => res.status(404).sendFile(path.join(__dirname, 'views', '404.html')));
 
 const server = app.listen(config.port, () => {

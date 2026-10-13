@@ -2,10 +2,13 @@
 /* KingTele dashboard - vanilla JS, không dùng innerHTML với dữ liệu người dùng. */
 
 const SVG = 'http://www.w3.org/2000/svg';
-const DAYS = ['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'];
+const LOCALE = (window.I18N && window.I18N.locale) || 'vi-VN';
+const LANG = (window.I18N && window.I18N.lang) || 'vi';
+// Nhãn thứ trong tuần (0 = Chủ nhật) theo ngôn ngữ hiện tại
+const dayLabel = (d) => new Intl.DateTimeFormat(LOCALE, { weekday: 'short', timeZone: 'UTC' }).format(new Date(Date.UTC(2023, 0, 1 + d)));
 const view = document.getElementById('view');
 const state = { tz: 'Asia/Ho_Chi_Minh', user: null, points: null };
-const num = (n) => Number(n).toLocaleString('vi-VN');
+const num = (n) => Number(n).toLocaleString(LOCALE);
 function setPoints(n) {
   state.points = n;
   const el = document.getElementById('whoPts');
@@ -59,10 +62,10 @@ function toast(msg, type = 'ok') {
   document.getElementById('toasts').append(t);
   setTimeout(() => t.remove(), type === 'ok' ? 3500 : 6000);
 }
-const fmtDT = (ts, tz) => new Intl.DateTimeFormat('vi-VN', { dateStyle: 'short', timeStyle: 'short', timeZone: tz || state.tz }).format(ts);
+const fmtDT = (ts, tz) => new Intl.DateTimeFormat(LOCALE, { dateStyle: 'short', timeStyle: 'short', timeZone: tz || state.tz }).format(ts);
 function rel(ts) {
   const diff = ts - Date.now(), abs = Math.abs(diff);
-  const f = new Intl.RelativeTimeFormat('vi', { numeric: 'auto' });
+  const f = new Intl.RelativeTimeFormat(LANG, { numeric: 'auto' });
   if (abs < 3600e3) return f.format(Math.round(diff / 60e3), 'minute');
   if (abs < 86400e3) return f.format(Math.round(diff / 3600e3), 'hour');
   return f.format(Math.round(diff / 86400e3), 'day');
@@ -71,9 +74,9 @@ function describe(s) {
   const t = s.time;
   if (s.type === 'once') return `Một lần · ${s.date.split('-').reverse().join('/')} ${t}`;
   if (s.type === 'daily') return `Hằng ngày · ${t}`;
-  if (s.type === 'weekly') return `${s.days.map((d) => DAYS[d]).join(', ')} · ${t}`;
+  if (s.type === 'weekly') return `${s.days.map(dayLabel).join(', ')} · ${t}`;
   const n = s.everyMinutes;
-  return `Lặp mỗi ${n % 60 === 0 ? `${n / 60} giờ` : `${n} phút`}`;
+  return n % 60 === 0 ? `Lặp mỗi ${n / 60} giờ` : `Lặp mỗi ${n} phút`;
 }
 function nowIn(tz) {
   const p = {};
@@ -164,11 +167,11 @@ async function overviewView() {
       stat('shield', 'Tỷ lệ thành công', o.rate == null ? '--' : `${o.rate}%`, '7 ngày gần nhất')),
     h('div', { class: 'grid2' },
       h('div', { class: 'card card-pad' }, h('h2', null, 'Lượt gửi theo ngày'),
-        h('div', { class: 'chart', role: 'img', 'aria-label': `Biểu đồ lượt gửi 7 ngày: ${o.chart.map((c) => `${c.label} ${c.ok} thành công ${c.error} lỗi`).join('; ')}` },
+        h('div', { class: 'chart', role: 'img', 'aria-label': 'Biểu đồ lượt gửi 7 ngày' },
           o.chart.map((c) => h('div', { class: 'bar-col', title: `${c.ok} thành công · ${c.error} lỗi` },
             h('div', { class: 'bar-stack', style: `height:${Math.max(2, ((c.ok + c.error) / max) * 100)}%` },
               h('div', { class: 'bar-ok', style: `flex:${c.ok}` }), h('div', { class: 'bar-err', style: `flex:${c.error}` })),
-            h('small', null, c.label)))),
+            h('small', null, new Intl.DateTimeFormat(LOCALE, { weekday: 'short', timeZone: o.timezone }).format(c.t))))),
         h('div', { class: 'legend' }, h('span', null, h('i', { style: 'background:#2aabee' }), 'Thành công'), h('span', null, h('i', { style: 'background:#ef4444' }), 'Lỗi'))),
       h('div', { class: 'card card-pad' }, h('h2', null, 'Sắp đăng'),
         o.upcoming.length ? h('div', { class: 'list' }, o.upcoming.map((p) => h('div', { class: 'li' },
@@ -303,7 +306,7 @@ function openComposer(post, groups) {
   const dayChecks = h('div', { class: 'days', role: 'group', 'aria-label': 'Ngày trong tuần' },
     [1, 2, 3, 4, 5, 6, 0].map((d) => h('div', { class: 'check' },
       h('input', { type: 'checkbox', id: `d-${d}`, checked: days.has(d), onchange: (e) => { e.target.checked ? days.add(d) : days.delete(d); } }),
-      h('label', { for: `d-${d}` }, DAYS[d]))));
+      h('label', { for: `d-${d}` }, dayLabel(d)))));
   const rowDate = h('div', { class: 'field' }, h('label', { for: 's-date' }, 'Ngày'), f.date);
   const rowTime = h('div', { class: 'field' }, h('label', { for: 's-time' }, 'Giờ'), f.time);
   const rowDays = h('div', { class: 'field' }, h('span', { class: 'label' }, 'Các ngày đăng'), dayChecks);
@@ -343,7 +346,7 @@ function openComposer(post, groups) {
       const src = `/api/media/${media.file}`;
       mediaBox.replaceChildren(h('div', { class: 'media-item' },
         media.kind === 'video' ? h('video', { src, muted: true, preload: 'metadata' }) : h('img', { src, alt: '' }),
-        h('div', { class: 'media-meta' }, h('strong', null, media.name), h('span', { class: 'hint' }, `${{ image: 'Ảnh', video: 'Video', animation: 'GIF' }[media.kind]} · ${fmtSize(media.size)}`)),
+        h('div', { class: 'media-meta' }, h('strong', null, media.name), h('span', { class: 'hint' }, { image: 'Ảnh', video: 'Video', animation: 'GIF' }[media.kind], ` · ${fmtSize(media.size)}`)),
         h('button', { class: 'btn btn-sm btn-danger', type: 'button', onclick: () => { media = null; drawMedia(); drawPreview(); } }, ico('trash'), 'Gỡ')));
       return;
     }
@@ -525,7 +528,7 @@ async function settingsView() {
         h('div', { class: 'field' }, h('label', { for: 's-tz2' }, 'Áp dụng cho bài đăng mới'), tz),
         h('div', null, h('button', { class: 'btn', type: 'button', onclick: (e) => act(e.currentTarget, async () => { await api('PUT', '/settings', { timezone: tz.value }); state.tz = tz.value; }, 'Đã lưu múi giờ') }, 'Lưu múi giờ'))),
       h('div', { class: 'card card-pad form-grid' }, h('h2', null, 'Tài khoản'),
-        h('p', { class: 'hint' }, `${s.user.name}${s.user.email ? ` · ${s.user.email}` : ' · Quản trị viên'}`),
+        h('p', { class: 'hint' }, s.user.name, ' · ', s.user.email || 'Quản trị viên'),
         s.user.role === 'admin' ? h('p', { class: 'hint' }, 'Mật khẩu quản trị được đặt bằng biến môi trường ADMIN_PASSWORD.') : passwordForm()),
       h('div', { class: 'card card-pad form-grid' }, h('h2', null, 'Sao lưu dữ liệu'),
         s.user.role === 'admin' ? h('p', { class: s.dataSafe ? 'hint' : 'error-text' }, s.dataSafe ? 'Dữ liệu đang lưu ngoài thư mục code, an toàn khi deploy lại.' : 'Cảnh báo: dữ liệu đang nằm trong thư mục code và sẽ mất khi deploy lại.') : null,
@@ -552,7 +555,7 @@ async function pointsView() {
   const link = h('input', { class: 'input mono', readOnly: true, value: p.refLink, 'aria-label': 'Link giới thiệu của bạn', onclick: (e) => e.target.select() });
   const rewarded = p.referrals.filter((x) => x.status === 'rewarded').length;
   return h('div', null,
-    pageHead('Điểm King', 'Điểm để đăng bài: mỗi lượt gửi thành công tới một nhóm trừ ' + r.perSend + ' điểm'),
+    pageHead('Điểm King', `Điểm để đăng bài: mỗi lượt gửi thành công tới một nhóm trừ ${r.perSend} điểm`),
     h('div', { class: 'grid2' },
       h('div', { class: 'card card-pad points-hero' },
         h('div', { class: 'lbl' }, 'Số dư của bạn'),
@@ -647,11 +650,11 @@ async function membersView() {
         h('td', null,
           h('div', null, u.name, u.isAdmin ? h('span', { class: 'tag acc', style: 'margin-left:8px' }, 'Quản trị') : null, u.disabled ? h('span', { class: 'tag err', style: 'margin-left:8px' }, 'Đã khoá') : null),
           h('div', { class: 'li-s' }, u.email),
-          u.referredBy ? h('div', { class: 'li-s' }, `Giới thiệu bởi ${u.referredBy}${u.referral ? ` (${{ rewarded: 'đã thưởng', rejected: 'bị từ chối', pending: 'chờ' }[u.referral] || u.referral})` : ' (chờ)'}`) : null),
+          u.referredBy ? h('div', { class: 'li-s' }, 'Giới thiệu bởi ', u.referredBy, ' · ', { rewarded: 'đã thưởng', rejected: 'bị từ chối', pending: 'chờ' }[u.referral || 'pending']) : null),
         h('td', { class: 'mono' }, u.isAdmin ? 'Không giới hạn' : num(u.points)),
         h('td', null,
           h('div', null, `${u.groups} nhóm · ${u.posts} bài · ${u.sent} đã gửi`),
-          h('div', { class: 'li-s' }, `${u.hasBot ? 'Đã kết nối bot' : 'Chưa kết nối bot'} · ${u.storageMB} MB · ${fmtDT(u.createdAt)}`)),
+          h('div', { class: 'li-s' }, u.hasBot ? 'Đã kết nối bot' : 'Chưa kết nối bot', ` · ${u.storageMB} MB · ${fmtDT(u.createdAt)}`)),
         h('td', { class: 'mono', style: 'white-space:nowrap' }, u.regIp || '—', u.ipCount > 1 ? h('span', { class: 'tag warn', style: 'margin-left:8px' }, `${u.ipCount} TK`) : null),
         h('td', null, actions(u))))))) : empty('users', 'Chưa có thành viên nào', 'Thành viên mới sẽ xuất hiện ở đây sau khi đăng ký.'));
 }
@@ -682,7 +685,7 @@ document.getElementById('scrim').addEventListener('click', () => document.body.c
 document.getElementById('logout').addEventListener('click', async () => { await api('POST', '/logout').catch(() => {}); location.href = '/login'; });
 
 const clock = document.getElementById('clock');
-const tick = () => { clock.textContent = new Intl.DateTimeFormat('vi-VN', { timeStyle: 'short', timeZone: state.tz }).format(new Date()); };
+const tick = () => { clock.textContent = new Intl.DateTimeFormat(LOCALE, { timeStyle: 'short', timeZone: state.tz }).format(new Date()); };
 setInterval(tick, 20000); tick();
 
 (async function boot() {
