@@ -122,7 +122,7 @@ class El {
   find(cls) { for (const c of this.children) { if (c instanceof El) { if (c.className.split(' ').includes(cls)) return c; const d = c.find(cls); if (d) return d; } } return null; }
 }
 
-function harness({ ua = 'Mozilla/5.0 (Linux; Android 14) Chrome/130 Mobile Safari/537.36', platform = 'Linux armv8l', touch = 5, standalone = false, storage = {}, related = null } = {}) {
+function harness({ ua = 'Mozilla/5.0 (Linux; Android 14) Chrome/130 Mobile Safari/537.36', platform = 'Linux armv8l', touch = 5, standalone = false, storage = {}, related = null, calls = [] } = {}) {
   const docL = {}, winL = {};
   const classes = new Set();
   const body = new El('body');
@@ -135,14 +135,16 @@ function harness({ ua = 'Mozilla/5.0 (Linux; Android 14) Chrome/130 Mobile Safar
       body, createElement: (t) => new El(t), querySelectorAll: () => [],
       addEventListener: (t, f) => { (docL[t] = docL[t] || []).push(f); },
     },
-    Date, Number, String,
+    Date, Number, String, Uint8Array, Array, Math, JSON, RegExp,
+    sessionStorage: { _s: {}, getItem(k) { return k in this._s ? this._s[k] : null; }, setItem(k, v) { this._s[k] = String(v); } },
+    fetch: (url, opts) => { calls.push({ url, ...JSON.parse(opts.body) }); return Promise.resolve(); },
   };
   sandbox.window = { addEventListener: (t, f) => { (winL[t] = winL[t] || []).push(f); }, matchMedia: () => ({ matches: standalone, addEventListener() {} }) };
   vm.runInNewContext(read('assets/pwa.js'), sandbox);
   const fireDoc = (t) => (docL[t] || []).forEach((f) => f({ target: body }));
   const fireWin = (t, ev = {}) => (winL[t] || []).forEach((f) => f({ preventDefault() {}, ...ev }));
   const banner = () => body.find('install-banner');
-  return { storage, fireDoc, fireWin, banner, hasClass: (c) => classes.has(c), api: sandbox.window.KT_PWA };
+  return { storage, calls, fireDoc, fireWin, banner, hasClass: (c) => classes.has(c), api: sandbox.window.KT_PWA };
 }
 const tick = () => new Promise((r) => setImmediate(r));
 
@@ -228,4 +230,40 @@ test('iPhone Safari thấy thanh mời (cài thủ công); trình duyệt nhúng
   const ff = harness({ ua: 'Mozilla/5.0 (Windows NT 10.0; rv:130.0) Gecko/20100101 Firefox/130.0', platform: 'Win32', touch: 0 });
   ff.fireDoc('DOMContentLoaded');
   assert.strictEqual(ff.banner(), null);
+});
+
+// ---- báo sự kiện cài đặt cho server ----
+const types = (h) => h.calls.map((c) => c.type);
+
+test('báo sự kiện: thanh mời hiện (một lần), bấm nút cài, cài xong', () => {
+  const h = harness();
+  h.fireDoc('DOMContentLoaded'); h.fireWin('beforeinstallprompt');
+  assert.deepStrictEqual(types(h), ['banner_shown']);
+  assert.match(h.calls[0].device, /^[a-z0-9]{8,40}$/);
+  assert.strictEqual(h.calls[0].url, '/api/pwa/event');
+  h.banner().find('ib-go').listeners.click; // nút đã gắn
+  h.fireWin('appinstalled');
+  assert.deepStrictEqual(types(h), ['banner_shown', 'installed']);
+  // lần sau (tải lại trang) không báo "thanh đã hiện" lần nữa
+  const again = harness({ storage: h.storage });
+  again.fireDoc('DOMContentLoaded'); again.fireWin('beforeinstallprompt');
+  assert.deepStrictEqual(types(again), []);
+});
+
+test('báo sự kiện: dùng cùng một mã thiết bị cho mọi sự kiện', () => {
+  const h = harness();
+  h.fireDoc('DOMContentLoaded'); h.fireWin('beforeinstallprompt'); h.fireWin('appinstalled');
+  assert.strictEqual(new Set(h.calls.map((c) => c.device)).size, 1);
+  assert.strictEqual(h.storage.kt_device, h.calls[0].device);
+});
+
+test('báo sự kiện: mở bằng ứng dụng đã cài -> app_open (một lần mỗi phiên)', () => {
+  const h = harness({ standalone: true });
+  assert.deepStrictEqual(types(h), ['app_open']);
+});
+
+test('báo sự kiện: không báo "đã cài" khi chỉ phát hiện qua getInstalledRelatedApps', async () => {
+  const h = harness({ related: async () => [{ platform: 'webapp' }] });
+  await tick();
+  assert.deepStrictEqual(types(h), []);
 });

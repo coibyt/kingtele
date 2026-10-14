@@ -1,0 +1,409 @@
+# Thống kê lượt cài ứng dụng (trang quản trị)
+
+= Khác
+en| Other
+zh| 其他
+es| Otros
+hi| अन्य
+ar| أخرى
+pt| Outros
+ru| Другие
+ja| その他
+ko| 기타
+de| Sonstige
+fr| Autres
+id| Lainnya
+th| อื่น ๆ
+tr| Diğer
+fi| Muut
+
+= Ứng dụng
+en| App
+zh| 应用
+es| App
+hi| ऐप
+ar| التطبيق
+pt| App
+ru| Приложение
+ja| アプリ
+ko| 앱
+de| App
+fr| Application
+id| Aplikasi
+th| แอป
+tr| Uygulama
+fi| Sovellus
+
+= Lượt cài và mức độ sử dụng ứng dụng KingTele
+en| Installs and usage of the KingTele app
+zh| KingTele 应用的安装量与使用情况
+es| Instalaciones y uso de la app de KingTele
+hi| KingTele ऐप के इंस्टॉल और उपयोग
+ar| عمليات تثبيت تطبيق KingTele ومدى استخدامه
+pt| Instalações e uso do app do KingTele
+ru| Установки и использование приложения KingTele
+ja| KingTeleアプリのインストール数と利用状況
+ko| KingTele 앱 설치 수 및 사용 현황
+de| Installationen und Nutzung der KingTele-App
+fr| Installations et utilisation de l'application KingTele
+id| Jumlah instal dan penggunaan aplikasi KingTele
+th| จำนวนการติดตั้งและการใช้งานแอป KingTele
+tr| KingTele uygulamasının yükleme ve kullanım durumu
+fi| KingTele-sovelluksen asennukset ja käyttö
+
+= Lượt cài
+en| Installs
+zh| 安装量
+es| Instalaciones
+hi| इंस्टॉल
+ar| التثبيتات
+pt| Instalações
+ru| Установки
+ja| インストール数
+ko| 설치 수
+de| Installationen
+fr| Installations
+id| Instal
+th| การติดตั้ง
+tr| Yüklemeler
+fi| Asennukset
+
+= {0} lượt trong 7 ngày
+en| {0} in the last 7 days
+zh| 近 7 天 {0} 次
+es| {0} en los últimos 7 días
+hi| पिछले 7 दिनों में {0}
+ar| {0} خلال آخر 7 أيام
+pt| {0} nos últimos 7 dias
+ru| {0} за последние 7 дней
+ja| 過去7日間で{0}件
+ko| 최근 7일간 {0}건
+de| {0} in den letzten 7 Tagen
+fr| {0} sur les 7 derniers jours
+id| {0} dalam 7 hari terakhir
+th| {0} ครั้งใน 7 วันที่ผ่านมา
+tr| Son 7 günde {0}
+fi| {0} viimeisen 7 päivän aikana
+
+= Đang dùng app
+en| Using the app
+zh| 正在使用应用
+es| Usando la app
+hi| ऐप इस्तेमाल कर रहे
+ar| يستخدمون التطبيق
+pt| Usando o app
+ru| Пользуются приложением
+ja| アプリ利用中
+ko| 앱 사용 중
+de| Nutzen die App
+fr| Utilisent l'application
+id| Memakai aplikasi
+th| กำลังใช้แอป
+tr| Uygulamayı kullanan
+fi| Käyttävät sovellusta
+
+= mở app trong 7 ngày qua
+en| opened the app in the last 7 days
+zh| 近 7 天打开过应用
+es| abrieron la app en los últimos 7 días
+hi| पिछले 7 दिनों में ऐप खोला
+ar| فتحوا التطبيق خلال آخر 7 أيام
+pt| abriram o app nos últimos 7 dias
+ru| открывали приложение за последние 7 дней
+ja| 過去7日間にアプリを開いた数
+ko| 최근 7일간 앱을 연 기기
+de| haben die App in den letzten 7 Tagen geöffnet
+fr| ont ouvert l'application ces 7 derniers jours
+id| membuka aplikasi dalam 7 hari terakhir
+th| เปิดแอปใน 7 วันที่ผ่านมา
+tr| son 7 günde uygulamayı açtı
+fi| avasi sovelluksen viimeisen 7 päivän aikana
+
+= Bấm nút cài
+en| Install clicks
+zh| 点击安装
+es| Clics en instalar
+hi| इंस्टॉल बटन दबाए
+ar| النقر على التثبيت
+pt| Cliques em instalar
+ru| Нажатия «Установить»
+ja| インストールのクリック数
+ko| 설치 버튼 클릭
+de| Klicks auf Installieren
+fr| Clics sur Installer
+id| Klik instal
+th| จำนวนการกดติดตั้ง
+tr| Yükle tıklamaları
+fi| Asenna-napsautukset
+
+= tổng số lần bấm
+en| total clicks
+zh| 总点击次数
+es| clics en total
+hi| कुल क्लिक
+ar| إجمالي النقرات
+pt| total de cliques
+ru| всего нажатий
+ja| クリック総数
+ko| 총 클릭 수
+de| Klicks insgesamt
+fr| nombre total de clics
+id| total klik
+th| จำนวนครั้งที่กดทั้งหมด
+tr| toplam tıklama
+fi| napsautuksia yhteensä
+
+= Thanh mời đã hiện
+en| Invite bar shown
+zh| 已显示安装提示条
+es| Barra de invitación mostrada
+hi| इंस्टॉल बार दिखाया गया
+ar| ظهور شريط الدعوة
+pt| Barra de convite exibida
+ru| Показана панель приглашения
+ja| 案内バーの表示数
+ko| 안내 바 노출
+de| Einladungsleiste angezeigt
+fr| Bandeau d'invitation affiché
+id| Bilah ajakan ditampilkan
+th| แถบชวนติดตั้งที่แสดง
+tr| Davet çubuğu gösterildi
+fi| Kutsupalkki näytetty
+
+= thiết bị đã thấy thanh mời
+en| devices that saw the invite bar
+zh| 看到提示条的设备
+es| dispositivos que vieron la barra
+hi| जिन डिवाइस ने बार देखा
+ar| أجهزة شاهدت الشريط
+pt| dispositivos que viram a barra
+ru| устройств видели панель
+ja| 案内バーを見た端末数
+ko| 안내 바를 본 기기
+de| Geräte, die die Leiste gesehen haben
+fr| appareils ayant vu le bandeau
+id| perangkat yang melihat bilah ajakan
+th| อุปกรณ์ที่เห็นแถบชวน
+tr| çubuğu gören cihazlar
+fi| laitetta näki palkin
+
+= Lượt cài 30 ngày gần nhất
+en| Installs in the last 30 days
+zh| 近 30 天安装量
+es| Instalaciones de los últimos 30 días
+hi| पिछले 30 दिनों के इंस्टॉल
+ar| التثبيتات خلال آخر 30 يومًا
+pt| Instalações dos últimos 30 dias
+ru| Установки за последние 30 дней
+ja| 過去30日間のインストール数
+ko| 최근 30일간 설치 수
+de| Installationen der letzten 30 Tage
+fr| Installations des 30 derniers jours
+id| Instal 30 hari terakhir
+th| การติดตั้งใน 30 วันที่ผ่านมา
+tr| Son 30 günün yüklemeleri
+fi| Asennukset viimeisen 30 päivän ajalta
+
+= Theo thiết bị
+en| By device
+zh| 按设备
+es| Por dispositivo
+hi| डिवाइस के अनुसार
+ar| حسب الجهاز
+pt| Por dispositivo
+ru| По устройствам
+ja| 端末別
+ko| 기기별
+de| Nach Gerät
+fr| Par appareil
+id| Menurut perangkat
+th| ตามอุปกรณ์
+tr| Cihaza göre
+fi| Laitteittain
+
+= Chưa có lượt cài nào
+en| No installs yet
+zh| 暂无安装
+es| Aún no hay instalaciones
+hi| अभी तक कोई इंस्टॉल नहीं
+ar| لا توجد تثبيتات بعد
+pt| Ainda não há instalações
+ru| Установок пока нет
+ja| まだインストールはありません
+ko| 아직 설치가 없습니다
+de| Noch keine Installationen
+fr| Aucune installation pour le moment
+id| Belum ada instalasi
+th| ยังไม่มีการติดตั้ง
+tr| Henüz yükleme yok
+fi| Ei vielä asennuksia
+
+= Lượt cài gần đây
+en| Recent installs
+zh| 最近安装
+es| Instalaciones recientes
+hi| हाल के इंस्टॉल
+ar| أحدث التثبيتات
+pt| Instalações recentes
+ru| Последние установки
+ja| 最近のインストール
+ko| 최근 설치
+de| Letzte Installationen
+fr| Installations récentes
+id| Instal terbaru
+th| การติดตั้งล่าสุด
+tr| Son yüklemeler
+fi| Viimeisimmät asennukset
+
+= Thiết bị
+en| Device
+zh| 设备
+es| Dispositivo
+hi| डिवाइस
+ar| الجهاز
+pt| Dispositivo
+ru| Устройство
+ja| 端末
+ko| 기기
+de| Gerät
+fr| Appareil
+id| Perangkat
+th| อุปกรณ์
+tr| Cihaz
+fi| Laite
+
+= Ghi nhận
+en| Recorded when
+zh| 记录时机
+es| Registrado al
+hi| दर्ज किया गया
+ar| وقت التسجيل
+pt| Registrado quando
+ru| Зафиксировано
+ja| 記録タイミング
+ko| 기록 시점
+de| Erfasst bei
+fr| Enregistré lors de
+id| Dicatat saat
+th| บันทึกเมื่อ
+tr| Kaydedilme anı
+fi| Kirjattu kun
+
+= Khách chưa đăng nhập
+en| Visitor (not logged in)
+zh| 访客(未登录)
+es| Visitante (sin iniciar sesión)
+hi| विज़िटर (लॉग इन नहीं)
+ar| زائر (غير مسجّل الدخول)
+pt| Visitante (sem login)
+ru| Гость (без входа)
+ja| 訪問者(未ログイン)
+ko| 방문자(미로그인)
+de| Besucher (nicht angemeldet)
+fr| Visiteur (non connecté)
+id| Pengunjung (belum masuk)
+th| ผู้เยี่ยมชม (ยังไม่เข้าสู่ระบบ)
+tr| Ziyaretçi (giriş yapmamış)
+fi| Vierailija (ei kirjautunut)
+
+= Khi cài xong
+en| Install completed
+zh| 安装完成时
+es| Instalación completada
+hi| इंस्टॉल पूरा होने पर
+ar| اكتمال التثبيت
+pt| Instalação concluída
+ru| Установка завершена
+ja| インストール完了時
+ko| 설치 완료 시
+de| Installation abgeschlossen
+fr| Installation terminée
+id| Instalasi selesai
+th| เมื่อติดตั้งเสร็จ
+tr| Yükleme tamamlandığında
+fi| Asennus valmis
+
+= Khi mở app lần đầu
+en| First app launch
+zh| 首次打开应用时
+es| Primera apertura de la app
+hi| ऐप पहली बार खोलने पर
+ar| أول فتح للتطبيق
+pt| Primeira abertura do app
+ru| Первый запуск приложения
+ja| アプリ初回起動時
+ko| 앱 첫 실행 시
+de| Erster App-Start
+fr| Premier lancement de l'application
+id| Pertama kali membuka aplikasi
+th| เมื่อเปิดแอปครั้งแรก
+tr| Uygulama ilk açıldığında
+fi| Sovelluksen ensimmäinen avaus
+
+= Lượt cài sẽ xuất hiện ở đây khi khách cài ứng dụng.
+en| Installs will appear here once visitors install the app.
+zh| 访客安装应用后,记录会显示在这里。
+es| Las instalaciones aparecerán aquí cuando los visitantes instalen la app.
+hi| जब विज़िटर ऐप इंस्टॉल करेंगे, तब वे यहाँ दिखेंगे।
+ar| ستظهر التثبيتات هنا عندما يثبّت الزوار التطبيق.
+pt| As instalações aparecerão aqui quando os visitantes instalarem o app.
+ru| Установки появятся здесь, когда посетители установят приложение.
+ja| 訪問者がアプリをインストールすると、ここに表示されます。
+ko| 방문자가 앱을 설치하면 여기에 표시됩니다.
+de| Installationen erscheinen hier, sobald Besucher die App installieren.
+fr| Les installations apparaîtront ici lorsque des visiteurs installeront l'application.
+id| Instalasi akan muncul di sini saat pengunjung menginstal aplikasi.
+th| การติดตั้งจะแสดงที่นี่เมื่อผู้เยี่ยมชมติดตั้งแอป
+tr| Ziyaretçiler uygulamayı yüklediğinde yüklemeler burada görünecek.
+fi| Asennukset näkyvät täällä, kun vierailijat asentavat sovelluksen.
+
+= Mỗi thiết bị chỉ tính một lần. Trên iPhone, lượt cài được ghi nhận khi khách mở ứng dụng lần đầu.
+en| Each device is counted once. On iPhone, an install is recorded when the visitor first opens the app.
+zh| 每台设备只计一次。在 iPhone 上,访客首次打开应用时才记录安装。
+es| Cada dispositivo se cuenta una sola vez. En iPhone, la instalación se registra cuando el visitante abre la app por primera vez.
+hi| हर डिवाइस सिर्फ़ एक बार गिना जाता है। iPhone पर इंस्टॉल तब दर्ज होता है जब विज़िटर पहली बार ऐप खोलता है।
+ar| يُحتسب كل جهاز مرة واحدة فقط. على الآيفون يُسجَّل التثبيت عندما يفتح الزائر التطبيق لأول مرة.
+pt| Cada dispositivo é contado uma vez. No iPhone, a instalação é registrada quando o visitante abre o app pela primeira vez.
+ru| Каждое устройство учитывается один раз. На iPhone установка фиксируется при первом запуске приложения.
+ja| 端末ごとに1回だけカウントします。iPhoneでは、訪問者が初めてアプリを開いたときにインストールとして記録されます。
+ko| 기기당 한 번만 집계됩니다. iPhone에서는 방문자가 앱을 처음 열 때 설치로 기록됩니다.
+de| Jedes Gerät wird nur einmal gezählt. Auf dem iPhone wird die Installation erfasst, wenn der Besucher die App zum ersten Mal öffnet.
+fr| Chaque appareil n'est compté qu'une fois. Sur iPhone, l'installation est enregistrée à la première ouverture de l'application.
+id| Setiap perangkat dihitung sekali. Di iPhone, instalasi dicatat saat pengunjung pertama kali membuka aplikasi.
+th| นับอุปกรณ์ละหนึ่งครั้ง บน iPhone ระบบจะบันทึกการติดตั้งเมื่อผู้เยี่ยมชมเปิดแอปครั้งแรก
+tr| Her cihaz yalnızca bir kez sayılır. iPhone'da yükleme, ziyaretçi uygulamayı ilk kez açtığında kaydedilir.
+fi| Jokainen laite lasketaan vain kerran. iPhonessa asennus kirjataan, kun vierailija avaa sovelluksen ensimmäisen kerran.
+
+= Quá nhiều yêu cầu
+en| Too many requests
+zh| 请求过多
+es| Demasiadas solicitudes
+hi| बहुत अधिक अनुरोध
+ar| طلبات كثيرة جدًا
+pt| Solicitações demais
+ru| Слишком много запросов
+ja| リクエストが多すぎます
+ko| 요청이 너무 많습니다
+de| Zu viele Anfragen
+fr| Trop de requêtes
+id| Terlalu banyak permintaan
+th| คำขอมากเกินไป
+tr| Çok fazla istek
+fi| Liian monta pyyntöä
+
+= Sự kiện không hợp lệ
+en| Invalid event
+zh| 事件无效
+es| Evento no válido
+hi| अमान्य इवेंट
+ar| حدث غير صالح
+pt| Evento inválido
+ru| Недопустимое событие
+ja| イベントが正しくありません
+ko| 올바르지 않은 이벤트입니다
+de| Ungültiges Ereignis
+fr| Événement invalide
+id| Peristiwa tidak valid
+th| เหตุการณ์ไม่ถูกต้อง
+tr| Geçersiz olay
+fi| Virheellinen tapahtuma

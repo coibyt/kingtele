@@ -188,3 +188,9 @@ dialog[open] { animation: pop .22s var(--ease); display: flex; flex-direction: c
 .copy-row { display: flex; gap: 8px; }
 .copy-row .input { min-width: 0; }
 @media (max-width: 520px) { .copy-row { flex-direction: column; } .copy-row .btn { width: 100%; } }
+
+.chart30 { display: grid; grid-template-columns: repeat(30, 1fr); gap: 3px; height: 150px; align-items: end; }
+.bar30 { height: 100%; display: flex; align-items: flex-end; }
+.bar30 i { display: block; width: 100%; min-height: 3px; border-radius: 3px 3px 0 0; background: linear-gradient(180deg, #38bdf8, #2aabee); }
+.bar30 i.zero { background: var(--muted-bg); }
+@media (max-width: 520px) { .chart30 { gap: 2px; } }

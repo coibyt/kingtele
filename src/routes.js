@@ -12,7 +12,7 @@ const bad = (msg, status = 400) => Object.assign(new Error(msg), { status });
 const str = (v, max) => (typeof v === 'string' ? v.trim().slice(0, max) : '');
 const MB = 1024 * 1024;
 
-function createApi({ store, config, auth, scheduler, media, tokenFor, points }) {
+function createApi({ store, config, auth, scheduler, media, tokenFor, points, pwaStats }) {
   const api = express.Router();
   const d = () => store.data;
 
@@ -32,6 +32,20 @@ function createApi({ store, config, auth, scheduler, media, tokenFor, points }) 
     u ? res.json({ user: u, registrationOpen: config.registrationOpen, points: points.balanceOf(u.id) }) : res.status(401).json({ error: 'Chưa đăng nhập' });
   });
   api.get('/config', (req, res) => res.json({ registrationOpen: config.registrationOpen }));
+
+  // Thống kê cài ứng dụng: khách chưa đăng nhập cũng gửi được. Giới hạn 120 sự kiện/giờ/IP, chỉ nhận loại sự kiện cho phép.
+  const pwaHits = new Map();
+  api.post('/pwa/event', wrap(async (req, res) => {
+    if (req.get('x-requested-with') !== 'postpilot') return res.status(403).json({ error: 'Yêu cầu không hợp lệ' });
+    const now = Date.now();
+    const h = pwaHits.get(req.ip) && pwaHits.get(req.ip).until > now ? pwaHits.get(req.ip) : { n: 0, until: now + 3600e3 };
+    if (++h.n > 120) return res.status(429).json({ error: 'Quá nhiều yêu cầu' });
+    pwaHits.set(req.ip, h);
+    const who = auth.session(req);
+    if (!pwaStats.record(req.body || {}, req.get('user-agent') || '', who ? who.id : '')) return res.status(400).json({ error: 'Sự kiện không hợp lệ' });
+    await store.save();
+    res.status(204).end();
+  }));
 
   api.use(auth.requireAuth);
   api.post('/account/password', wrap(auth.changePassword));
@@ -320,6 +334,13 @@ function createApi({ store, config, auth, scheduler, media, tokenFor, points }) 
       owner: req.user.id === 'admin',
       settings: { maxAccountsPerIp: Number(d().settings.maxAccountsPerIp) || null },
     });
+  });
+
+  admin.get('/pwa', (req, res) => {
+    const tz = tzOf(req);
+    const fmt = new Intl.DateTimeFormat('en-CA', { timeZone: tz });
+    const nameOf = (id) => (id === 'admin' ? req.user.name : (d().users.find((u) => u.id === id) || {}).name || '');
+    res.json({ ...pwaStats.summary({ dayKey: (t) => fmt.format(t), nameOf }), timezone: tz });
   });
 
   admin.put('/settings', wrap(async (req, res) => {

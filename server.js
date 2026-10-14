@@ -9,6 +9,7 @@ const { createScheduler } = require('./src/scheduler');
 const { createApi } = require('./src/routes');
 const { createMedia } = require('./src/media');
 const { createPoints } = require('./src/points');
+const { createPwaStats } = require('./src/pwa-stats');
 
 const store = new Store(config.dataDir).init();
 // Token bot của từng thành viên; tài khoản admin dùng token trong Cài đặt hoặc biến môi trường.
@@ -19,6 +20,7 @@ const tokenFor = (userId) => {
 };
 const isActive = (userId) => userId === 'admin' || store.data.users.some((u) => u.id === userId && !u.disabled);
 const points = createPoints({ store, config });
+const pwaStats = createPwaStats({ store });
 if (points.migrate()) store.save();
 const auth = createAuth({ store, config, points });
 const media = createMedia({ store, uploadsDir: config.uploadsDir });
@@ -48,7 +50,7 @@ app.use((req, res, next) => {
 
 app.use(express.json({ limit: '100kb' }));
 app.get('/healthz', (req, res) => res.json({ ok: true, uptime: Math.round(process.uptime()) }));
-app.use('/api', createApi({ store, config, auth, scheduler, media, tokenFor, points }));
+app.use('/api', createApi({ store, config, auth, scheduler, media, tokenFor, points, pwaStats }));
 
 const view = (name) => (req, res) => res.sendFile(path.join(__dirname, 'views', name));
 app.get('/app', (req, res) => (auth.session(req) ? view('app.html')(req, res) : res.redirect('/login')));

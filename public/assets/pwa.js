@@ -38,6 +38,27 @@
 
   window.KT_PWA = { shouldShowBanner };
 
+  // Báo sự kiện cho server để quản trị viên xem thống kê lượt cài (chỉ gồm mã thiết bị ngẫu nhiên, không có thông tin cá nhân)
+  function deviceId() {
+    let id = store.get('kt_device');
+    if (!id || !/^[a-z0-9]{8,40}$/.test(id)) {
+      const a = new Uint8Array(10);
+      if (window.crypto && window.crypto.getRandomValues) window.crypto.getRandomValues(a); else for (let i = 0; i < a.length; i++) a[i] = Math.floor(Math.random() * 256);
+      id = Array.from(a, (b) => b.toString(36).padStart(2, '0')).join('').slice(0, 20);
+      store.set('kt_device', id);
+    }
+    return id;
+  }
+  function report(type) {
+    try {
+      fetch('/api/pwa/event', {
+        method: 'POST', keepalive: true,
+        headers: { 'content-type': 'application/json', 'x-requested-with': 'postpilot' },
+        body: JSON.stringify({ type, device: deviceId() }),
+      }).catch(() => {});
+    } catch { /* không có mạng / fetch: bỏ qua */ }
+  }
+
   // 1) Service worker (cần https hoặc localhost)
   if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
     window.addEventListener('load', () => { navigator.serviceWorker.register('/sw.js').catch(() => {}); });
@@ -45,7 +66,12 @@
 
   // 2) Trạng thái đã cài hay chưa
   const markInstalled = () => { store.set(KEY_INSTALLED, '1'); deferred = null; refresh(); };
-  if (standalone()) store.set(KEY_INSTALLED, '1'); // đang chạy trong app => chắc chắn đã cài
+  if (standalone()) {
+    store.set(KEY_INSTALLED, '1'); // đang chạy trong app => chắc chắn đã cài
+    try {
+      if (!sessionStorage.getItem('kt_open_rep')) { sessionStorage.setItem('kt_open_rep', '1'); report('app_open'); }
+    } catch { report('app_open'); }
+  }
   // Chrome (Android/máy tính): hỏi trình duyệt xem ứng dụng đã cài trên máy chưa, kể cả khi đang mở bằng tab thường
   if (navigator.getInstalledRelatedApps) {
     navigator.getInstalledRelatedApps().then((apps) => { if (apps && apps.some((a) => a.platform === 'webapp')) markInstalled(); }).catch(() => {});
@@ -96,6 +122,7 @@
     banner.append(icon, text, go, close);
     document.body.append(banner);
     document.body.classList.add('has-install-banner');
+    if (!store.get('kt_banner_rep')) { store.set('kt_banner_rep', '1'); report('banner_shown'); }
   }
 
   function hideBanner() {
@@ -105,7 +132,7 @@
 
   document.addEventListener('DOMContentLoaded', refresh);
   window.addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); deferred = e; refresh(); });
-  window.addEventListener('appinstalled', markInstalled);
+  window.addEventListener('appinstalled', () => { report('installed'); markInstalled(); });
   if (mq.addEventListener) mq.addEventListener('change', () => { if (standalone()) store.set(KEY_INSTALLED, '1'); refresh(); });
 
   // 4) Hộp hướng dẫn cài thủ công
@@ -142,7 +169,7 @@
     try {
       await ev.prompt();
       const choice = await ev.userChoice;
-      if (choice && choice.outcome === 'accepted') return markInstalled();
+      if (choice && choice.outcome === 'accepted') { report('installed'); return markInstalled(); }
     } catch { help(); }
     refresh();
   }
@@ -150,6 +177,6 @@
   document.addEventListener('click', (e) => {
     const t = e.target;
     if (t.closest && t.closest('[data-reload]')) { location.reload(); return; }
-    if (t.closest && t.closest('[data-install], [data-install-now]')) { e.preventDefault(); install(); }
+    if (t.closest && t.closest('[data-install], [data-install-now]')) { e.preventDefault(); report('install_click'); install(); }
   });
 })();

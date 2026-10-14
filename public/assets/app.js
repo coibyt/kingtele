@@ -605,6 +605,40 @@ function grantDialog(u) {
       h('div', { class: 'field' }, h('label', { for: 'gr-note' }, 'Ghi chú'), note), err) });
 }
 
+async function appStatsView() {
+  const s = await api('GET', '/admin/pwa');
+  const stat = (label, val, sub) => h('div', { class: 'card stat' }, h('div', { class: 'lbl' }, label), h('div', { class: 'val' }, num(val)), h('div', { class: 'sub' }, sub));
+  const max = Math.max(1, ...s.chart.map((c) => c.installs));
+  const day = new Intl.DateTimeFormat(LOCALE, { day: '2-digit', month: '2-digit', timeZone: s.timezone });
+  const PL = { ios: 'iPhone / iPad', android: 'Android', windows: 'Windows', mac: 'Mac', linux: 'Linux', other: 'Khác' };
+  const plats = Object.entries(s.byPlatform).sort((a, b) => b[1] - a[1]);
+  const total = Math.max(1, s.installs);
+  return h('div', null,
+    pageHead('Ứng dụng', 'Lượt cài và mức độ sử dụng ứng dụng KingTele'),
+    h('div', { class: 'stats' },
+      stat('Lượt cài', s.installs, `${num(s.installs7)} lượt trong 7 ngày`),
+      stat('Đang dùng app', s.active7, 'mở app trong 7 ngày qua'),
+      stat('Bấm nút cài', s.clicks, 'tổng số lần bấm'),
+      stat('Thanh mời đã hiện', s.bannerShown, 'thiết bị đã thấy thanh mời')),
+    h('div', { class: 'grid2' },
+      h('div', { class: 'card card-pad' }, h('h2', null, 'Lượt cài 30 ngày gần nhất'),
+        h('div', { class: 'chart30', role: 'img', 'aria-label': 'Lượt cài 30 ngày gần nhất' },
+          s.chart.map((c) => h('div', { class: 'bar30', title: `${day.format(c.t)}: ${c.installs}` }, h('i', { class: c.installs ? '' : 'zero', style: `height:${Math.max(3, (c.installs / max) * 100)}%` }))))),
+      h('div', { class: 'card card-pad' }, h('h2', null, 'Theo thiết bị'),
+        plats.length ? h('div', { class: 'list' }, plats.map(([k, n]) => h('div', { class: 'li' },
+          h('div', { class: 'li-main' }, h('div', { class: 'li-t' }, PL[k] || PL.other), h('div', { class: 'progress', style: 'margin-top:6px' }, h('i', { style: `width:${Math.round((n / total) * 100)}%` })))
+          , h('span', { class: 'tag acc mono' }, num(n))))) : h('p', { class: 'hint' }, 'Chưa có lượt cài nào'))),
+    s.recent.length ? h('div', { class: 'card' },
+      h('div', { class: 'card-pad', style: 'padding-bottom:0' }, h('h2', null, 'Lượt cài gần đây')),
+      h('div', { class: 'tbl-wrap' }, h('table', { class: 'tbl' },
+        h('thead', null, h('tr', null, ['Thời gian', 'Thiết bị', 'Thành viên', 'Ghi nhận'].map((c) => h('th', { scope: 'col' }, c)))),
+        h('tbody', null, s.recent.map((r) => h('tr', null,
+          h('td', { class: 'mono', style: 'white-space:nowrap' }, fmtDT(r.at)), h('td', null, PL[r.platform] || PL.other),
+          h('td', null, r.member || 'Khách chưa đăng nhập'), h('td', null, r.source === 'event' ? 'Khi cài xong' : 'Khi mở app lần đầu')))))))
+      : empty('download', 'Chưa có lượt cài nào', 'Lượt cài sẽ xuất hiện ở đây khi khách cài ứng dụng.'),
+    h('p', { class: 'hint', style: 'margin-top:14px' }, 'Mỗi thiết bị chỉ tính một lần. Trên iPhone, lượt cài được ghi nhận khi khách mở ứng dụng lần đầu.'));
+}
+
 async function membersView() {
   const r = await api('GET', '/admin/users');
   const stat = (label, val) => h('div', { class: 'card stat' }, h('div', { class: 'lbl' }, label), h('div', { class: 'val' }, val));
@@ -660,7 +694,7 @@ async function membersView() {
 }
 
 // ---------- router ----------
-const routes = { overview: ['Tổng quan', overviewView], posts: ['Bài đăng', postsView], groups: ['Nhóm Telegram', groupsView], logs: ['Nhật ký gửi', logsView], settings: ['Cài đặt', settingsView], points: ['Điểm King', pointsView], members: ['Thành viên', membersView] };
+const routes = { overview: ['Tổng quan', overviewView], posts: ['Bài đăng', postsView], groups: ['Nhóm Telegram', groupsView], logs: ['Nhật ký gửi', logsView], settings: ['Cài đặt', settingsView], points: ['Điểm King', pointsView], members: ['Thành viên', membersView], installs: ['Ứng dụng', appStatsView] };
 let token = 0;
 async function route() {
   const key = routes[location.hash.slice(1)] ? location.hash.slice(1) : 'overview';
@@ -697,7 +731,8 @@ setInterval(tick, 20000); tick();
     setPoints(me.points);
     who.hidden = false;
     if (me.user.role === 'admin') {
-      document.querySelector('.menu').append(h('a', { href: '#members', 'data-route': 'members' }, ico('users'), 'Thành viên'));
+      document.querySelector('.menu').append(h('a', { href: '#members', 'data-route': 'members' }, ico('users'), 'Thành viên'),
+        h('a', { href: '#installs', 'data-route': 'installs' }, ico('download'), 'Ứng dụng'));
     }
   } catch { /* api() đã chuyển về trang đăng nhập nếu hết phiên */ }
   route();

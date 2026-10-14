@@ -182,3 +182,30 @@ test('nhiều quản trị viên: cấp quyền, xem/chỉnh điểm, nhưng kh�
   assert.strictEqual((await owner('POST', `/api/admin/users/${idOf('ip1@example.com')}/role`, { admin: false })).status, 200);
   assert.strictEqual((await staff('GET', '/api/admin/users')).status, 403); // gỡ quyền có hiệu lực ngay
 });
+
+
+test('thống kê cài ứng dụng: khách gửi sự kiện, chỉ admin xem được', async () => {
+  const anon = client();
+  const hdr = { 'user-agent': 'Mozilla/5.0 (Linux; Android 14) Chrome/130 Mobile Safari/537.36' };
+  assert.strictEqual((await anon('POST', '/api/pwa/event', { type: 'installed', device: 'devapitest01' }, hdr)).status, 204);
+  assert.strictEqual((await anon('POST', '/api/pwa/event', { type: 'app_open', device: 'devapitest02' }, { 'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) Mobile Safari' })).status, 204);
+  assert.strictEqual((await anon('POST', '/api/pwa/event', { type: 'installed', device: 'x' })).status, 400);
+  assert.strictEqual((await anon('POST', '/api/pwa/event', { type: 'bogus', device: 'devapitest03' })).status, 400);
+  // thiếu header chống CSRF -> bị chặn
+  const raw = await fetch(BASE + '/api/pwa/event', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ type: 'installed', device: 'devapitest04' }) });
+  assert.strictEqual(raw.status, 403);
+
+  const member = client();
+  await member('POST', '/api/login', { username: 'an@example.com', password: 'newpassword1' });
+  assert.strictEqual((await member('GET', '/api/admin/pwa')).status, 403);
+  assert.strictEqual((await anon('GET', '/api/admin/pwa')).status, 401);
+
+  const admin = client();
+  await admin('POST', '/api/login', { username: 'boss', password: 'AdminPass123' });
+  const s = (await admin('GET', '/api/admin/pwa')).json;
+  assert.strictEqual(s.installs, 2);
+  assert.strictEqual(s.byPlatform.android, 1);
+  assert.strictEqual(s.byPlatform.ios, 1);
+  assert.strictEqual(s.chart.length, 30);
+  assert.strictEqual(s.recent.length, 2);
+});

@@ -10,6 +10,7 @@ const DEFAULTS = () => ({
   users: [],
   uploads: {},
   pointLog: [],
+  pwa: { devices: {} },
   groups: [],
   posts: [],
   logs: [],
