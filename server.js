@@ -59,7 +59,7 @@ app.use(express.static(path.join(__dirname, 'public'), {
   extensions: ['html'],
   setHeaders: (res, file) => {
     // Mã giao diện/ngôn ngữ đổi theo từng lần deploy: luôn xác thực lại bằng ETag để người dùng thấy bản mới ngay.
-    res.setHeader('Cache-Control', /\.(html|js|css)$/.test(file) ? 'no-cache' : 'public, max-age=604800');
+    res.setHeader('Cache-Control', /\.(html|js|css|webmanifest)$/.test(file) ? 'no-cache' : 'public, max-age=604800');
   },
 }));
 app.use((req, res) => res.status(404).sendFile(path.join(__dirname, 'views', '404.html')));

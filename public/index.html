@@ -2,7 +2,7 @@
 <html lang="vi" class="no-js">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>KingTele - Tự động đăng bài lên nhóm Telegram</title>
   <meta name="description" content="Lên lịch một lần, KingTele tự động đăng bài lên nhiều nhóm và kênh Telegram đúng giờ, đúng múi giờ. Có nhật ký gửi, nút bấm, ảnh và định dạng.">
   <meta name="theme-color" content="#020617">
@@ -11,6 +11,13 @@
   <meta property="og:type" content="website">
   <script src="/assets/i18n-core.js"></script>
   <script src="/assets/i18n.js"></script>
+    <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="KingTele">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <script src="/assets/pwa.js" defer></script>
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,6 +53,7 @@
             <a class="btn btn-primary btn-lg" href="/register">Tạo tài khoản
               <svg class="icon" aria-hidden="true"><use href="/assets/sprite.svg#i-send"/></svg></a>
             <a class="btn btn-lg" href="/login">Đăng nhập</a>
+            <button class="btn btn-lg btn-install" type="button" data-install hidden><svg class="icon" aria-hidden="true"><use href="/assets/sprite.svg#i-download"/></svg>Cài ứng dụng</button>
           </div>
           <div class="trust">
             <span><svg class="icon" aria-hidden="true"><use href="/assets/sprite.svg#i-check"/></svg>Tới 30 nhóm mỗi tài khoản</span>

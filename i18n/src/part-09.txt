@@ -1,0 +1,154 @@
+# Cài ứng dụng (PWA) và trang ngoại tuyến
+
+= Cài ứng dụng
+en| Install app
+zh| 安装应用
+es| Instalar la app
+hi| ऐप इंस्टॉल करें
+ar| تثبيت التطبيق
+pt| Instalar o app
+ru| Установить приложение
+ja| アプリをインストール
+ko| 앱 설치
+de| App installieren
+fr| Installer l'application
+id| Instal aplikasi
+th| ติดตั้งแอป
+tr| Uygulamayı yükle
+fi| Asenna sovellus
+
+= Ngoại tuyến - KingTele
+en| Offline - KingTele
+zh| 离线 - KingTele
+es| Sin conexión - KingTele
+hi| ऑफ़लाइन - KingTele
+ar| غير متصل - KingTele
+pt| Offline - KingTele
+ru| Нет сети - KingTele
+ja| オフライン - KingTele
+ko| 오프라인 - KingTele
+de| Offline - KingTele
+fr| Hors ligne - KingTele
+id| Offline - KingTele
+th| ออฟไลน์ - KingTele
+tr| Çevrimdışı - KingTele
+fi| Ei yhteyttä - KingTele
+
+= Bạn đang ngoại tuyến
+en| You're offline
+zh| 你已离线
+es| Estás sin conexión
+hi| आप ऑफ़लाइन हैं
+ar| أنت غير متصل بالإنترنت
+pt| Você está offline
+ru| Вы не в сети
+ja| オフラインです
+ko| 오프라인 상태입니다
+de| Sie sind offline
+fr| Vous êtes hors ligne
+id| Anda sedang offline
+th| คุณออฟไลน์อยู่
+tr| Çevrimdışısınız
+fi| Olet offline-tilassa
+
+= Không có kết nối mạng. Hãy kiểm tra Wi-Fi hoặc dữ liệu di động rồi thử lại.
+en| No network connection. Check your Wi-Fi or mobile data and try again.
+zh| 没有网络连接。请检查 Wi-Fi 或移动数据后重试。
+es| Sin conexión de red. Revisa tu Wi-Fi o tus datos móviles e inténtalo de nuevo.
+hi| नेटवर्क कनेक्शन नहीं है। अपना Wi-Fi या मोबाइल डेटा जाँचें और फिर कोशिश करें।
+ar| لا يوجد اتصال بالشبكة. تحقق من الواي فاي أو بيانات الجوال وحاول مجددًا.
+pt| Sem conexão de rede. Verifique o Wi-Fi ou os dados móveis e tente novamente.
+ru| Нет подключения к сети. Проверьте Wi-Fi или мобильный интернет и повторите попытку.
+ja| ネットワークに接続できません。Wi-Fiまたはモバイルデータを確認して、もう一度お試しください。
+ko| 네트워크에 연결되어 있지 않습니다. Wi-Fi 또는 모바일 데이터를 확인한 후 다시 시도하세요.
+de| Keine Netzwerkverbindung. Prüfen Sie WLAN oder mobile Daten und versuchen Sie es erneut.
+fr| Aucune connexion réseau. Vérifiez votre Wi-Fi ou vos données mobiles puis réessayez.
+id| Tidak ada koneksi jaringan. Periksa Wi-Fi atau data seluler Anda lalu coba lagi.
+th| ไม่มีการเชื่อมต่อเครือข่าย ตรวจสอบ Wi-Fi หรืออินเทอร์เน็ตมือถือแล้วลองอีกครั้ง
+tr| Ağ bağlantısı yok. Wi-Fi'nizi veya mobil verinizi kontrol edip tekrar deneyin.
+fi| Ei verkkoyhteyttä. Tarkista Wi-Fi tai mobiilidata ja yritä uudelleen.
+
+= Tải lại
+en| Reload
+zh| 重新加载
+es| Recargar
+hi| फिर से लोड करें
+ar| إعادة التحميل
+pt| Recarregar
+ru| Обновить
+ja| 再読み込み
+ko| 새로고침
+de| Neu laden
+fr| Recharger
+id| Muat ulang
+th| โหลดใหม่
+tr| Yeniden yükle
+fi| Lataa uudelleen
+
+= Cài KingTele lên máy
+en| Install KingTele on your device
+zh| 将 KingTele 安装到设备
+es| Instala KingTele en tu dispositivo
+hi| KingTele को अपने डिवाइस में इंस्टॉल करें
+ar| ثبّت KingTele على جهازك
+pt| Instale o KingTele no seu dispositivo
+ru| Установите KingTele на устройство
+ja| KingTeleを端末にインストール
+ko| KingTele을 기기에 설치
+de| KingTele auf dem Gerät installieren
+fr| Installer KingTele sur votre appareil
+id| Instal KingTele di perangkat Anda
+th| ติดตั้ง KingTele ลงบนอุปกรณ์ของคุณ
+tr| KingTele'yi cihazınıza yükleyin
+fi| Asenna KingTele laitteellesi
+
+= Mở trang này bằng Safari, bấm nút Chia sẻ rồi chọn "Thêm vào MH chính".
+en| Open this page in Safari, tap the Share button, then choose "Add to Home Screen".
+zh| 用 Safari 打开此页面,点按“分享”按钮,然后选择“添加到主屏幕”。
+es| Abre esta página en Safari, toca el botón Compartir y elige «Añadir a pantalla de inicio».
+hi| इस पेज को Safari में खोलें, शेयर बटन दबाएँ और "होम स्क्रीन में जोड़ें" चुनें।
+ar| افتح هذه الصفحة في Safari، ثم اضغط زر المشاركة واختر "إضافة إلى الشاشة الرئيسية".
+pt| Abra esta página no Safari, toque no botão Compartilhar e escolha "Adicionar à Tela de Início".
+ru| Откройте эту страницу в Safari, нажмите «Поделиться» и выберите «На экран “Домой”».
+ja| このページをSafariで開き、共有ボタンをタップして「ホーム画面に追加」を選んでください。
+ko| 이 페이지를 Safari에서 열고 공유 버튼을 누른 뒤 "홈 화면에 추가"를 선택하세요.
+de| Öffnen Sie diese Seite in Safari, tippen Sie auf „Teilen“ und wählen Sie „Zum Home-Bildschirm“.
+fr| Ouvrez cette page dans Safari, touchez le bouton Partager puis choisissez « Sur l'écran d'accueil ».
+id| Buka halaman ini di Safari, ketuk tombol Bagikan, lalu pilih "Tambah ke Layar Utama".
+th| เปิดหน้านี้ใน Safari แตะปุ่มแชร์ แล้วเลือก "เพิ่มลงในหน้าจอโฮม"
+tr| Bu sayfayı Safari'de açın, Paylaş düğmesine dokunun ve "Ana Ekrana Ekle"yi seçin.
+fi| Avaa tämä sivu Safarissa, napauta Jaa-painiketta ja valitse "Lisää Koti-valikkoon".
+
+= Mở menu của trình duyệt (dấu ⋮ hoặc ⋯) rồi chọn "Cài đặt ứng dụng" hoặc "Thêm vào màn hình chính".
+en| Open the browser menu (the ⋮ or ⋯ icon) and choose "Install app" or "Add to Home screen".
+zh| 打开浏览器菜单(⋮ 或 ⋯ 图标),选择“安装应用”或“添加到主屏幕”。
+es| Abre el menú del navegador (el icono ⋮ o ⋯) y elige «Instalar aplicación» o «Añadir a pantalla de inicio».
+hi| ब्राउज़र का मेनू (⋮ या ⋯ आइकन) खोलें और "ऐप इंस्टॉल करें" या "होम स्क्रीन पर जोड़ें" चुनें।
+ar| افتح قائمة المتصفح (رمز ⋮ أو ⋯) واختر "تثبيت التطبيق" أو "إضافة إلى الشاشة الرئيسية".
+pt| Abra o menu do navegador (ícone ⋮ ou ⋯) e escolha "Instalar app" ou "Adicionar à tela inicial".
+ru| Откройте меню браузера (значок ⋮ или ⋯) и выберите «Установить приложение» или «Добавить на главный экран».
+ja| ブラウザのメニュー(⋮ または ⋯)を開き、「アプリをインストール」または「ホーム画面に追加」を選んでください。
+ko| 브라우저 메뉴(⋮ 또는 ⋯ 아이콘)를 열고 "앱 설치" 또는 "홈 화면에 추가"를 선택하세요.
+de| Öffnen Sie das Browsermenü (Symbol ⋮ oder ⋯) und wählen Sie „App installieren“ oder „Zum Startbildschirm hinzufügen“.
+fr| Ouvrez le menu du navigateur (icône ⋮ ou ⋯) et choisissez « Installer l'application » ou « Ajouter à l'écran d'accueil ».
+id| Buka menu browser (ikon ⋮ atau ⋯) lalu pilih "Instal aplikasi" atau "Tambahkan ke layar utama".
+th| เปิดเมนูของเบราว์เซอร์ (ไอคอน ⋮ หรือ ⋯) แล้วเลือก "ติดตั้งแอป" หรือ "เพิ่มลงในหน้าจอหลัก"
+tr| Tarayıcı menüsünü (⋮ veya ⋯ simgesi) açın ve "Uygulamayı yükle" ya da "Ana ekrana ekle"yi seçin.
+fi| Avaa selaimen valikko (⋮- tai ⋯-kuvake) ja valitse "Asenna sovellus" tai "Lisää aloitusnäytölle".
+
+= Bạn đang mở trong trình duyệt tích hợp của ứng dụng khác. Hãy mở trang này bằng Chrome (Android) hoặc Safari (iPhone) để cài.
+en| You're viewing this inside another app's built-in browser. Open this page in Chrome (Android) or Safari (iPhone) to install.
+zh| 你正在其他应用的内置浏览器中打开本页。请用 Chrome(安卓)或 Safari(iPhone)打开后再安装。
+es| Estás viendo esta página en el navegador integrado de otra app. Ábrela en Chrome (Android) o Safari (iPhone) para instalar.
+hi| आप इसे किसी दूसरे ऐप के इन-बिल्ट ब्राउज़र में देख रहे हैं। इंस्टॉल करने के लिए इसे Chrome (Android) या Safari (iPhone) में खोलें।
+ar| تفتح هذه الصفحة داخل متصفح مدمج في تطبيق آخر. افتحها في Chrome (أندرويد) أو Safari (آيفون) للتثبيت.
+pt| Você está vendo esta página no navegador embutido de outro app. Abra no Chrome (Android) ou no Safari (iPhone) para instalar.
+ru| Вы открыли страницу во встроенном браузере другого приложения. Для установки откройте её в Chrome (Android) или Safari (iPhone).
+ja| 他のアプリ内蔵のブラウザで開いています。インストールするには、Chrome(Android)またはSafari(iPhone)で開いてください。
+ko| 다른 앱의 내장 브라우저로 열려 있습니다. 설치하려면 Chrome(안드로이드) 또는 Safari(아이폰)에서 이 페이지를 여세요.
+de| Sie öffnen die Seite im integrierten Browser einer anderen App. Öffnen Sie sie zum Installieren in Chrome (Android) oder Safari (iPhone).
+fr| Vous consultez cette page dans le navigateur intégré d'une autre application. Ouvrez-la dans Chrome (Android) ou Safari (iPhone) pour l'installer.
+id| Anda membuka halaman ini di browser bawaan aplikasi lain. Buka di Chrome (Android) atau Safari (iPhone) untuk menginstal.
+th| คุณกำลังเปิดหน้านี้ในเบราว์เซอร์ที่ฝังอยู่ในแอปอื่น โปรดเปิดด้วย Chrome (Android) หรือ Safari (iPhone) เพื่อติดตั้ง
+tr| Bu sayfayı başka bir uygulamanın yerleşik tarayıcısında açtınız. Yüklemek için Chrome (Android) veya Safari (iPhone) ile açın.
+fi| Avasit sivun toisen sovelluksen sisäisessä selaimessa. Asenna avaamalla se Chromessa (Android) tai Safarissa (iPhone).

@@ -117,3 +117,23 @@ html.i18n-pending body { opacity: 0; }
   [dir="rtl"] .side { left: auto; right: 0; transform: translateX(100%); }
   [dir="rtl"] body.nav-open .side { transform: none; }
 }
+
+/* ---------- Ứng dụng cài trên máy (PWA) ---------- */
+.pwa-dialog { overflow: visible; border: 1px solid var(--border); border-radius: 18px; background: var(--card); color: var(--text); padding: 24px; width: min(420px, calc(100% - 24px)); box-shadow: 0 40px 100px -20px rgba(0, 0, 0, .9); }
+.pwa-dialog::backdrop { background: rgba(2, 6, 23, .75); backdrop-filter: blur(4px); }
+.pwa-dialog h2 { font-size: 1.15rem; margin-bottom: 12px; }
+.pwa-dialog p { color: var(--text-2); margin-bottom: 14px; }
+.pwa-dialog .pwa-warn { color: #fcd34d; font-size: .9rem; }
+.pwa-dialog .btn { width: 100%; }
+.btn-install { border-color: rgba(42, 171, 238, .45); color: #7dd3fc; }
+.side-install { justify-content: flex-start; color: #7dd3fc; border-color: rgba(42, 171, 238, .35); }
+.side-lang { margin-top: auto; }
+.side-install:not([hidden]) + .side-lang { margin-top: 0; }
+.side-install:not([hidden]) { margin-top: auto; }
+/* Khi chạy như ứng dụng: chừa vùng tai thỏ / thanh điều hướng */
+.nav { padding-top: env(safe-area-inset-top); }
+.topbar { padding-top: env(safe-area-inset-top); height: calc(60px + env(safe-area-inset-top)); }
+.side { padding-top: calc(22px + env(safe-area-inset-top)); padding-bottom: calc(22px + env(safe-area-inset-bottom)); }
+.toasts { bottom: calc(20px + env(safe-area-inset-bottom)); }
+#view { padding-bottom: calc(80px + env(safe-area-inset-bottom)); }
+@media (display-mode: standalone) { body { overscroll-behavior-y: none; } }
