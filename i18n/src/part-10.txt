@@ -1,0 +1,52 @@
+# Thanh mời cài ứng dụng
+
+= Cài ứng dụng KingTele
+en| Install the KingTele app
+zh| 安装 KingTele 应用
+es| Instala la app de KingTele
+hi| KingTele ऐप इंस्टॉल करें
+ar| ثبّت تطبيق KingTele
+pt| Instale o app do KingTele
+ru| Установите приложение KingTele
+ja| KingTeleアプリをインストール
+ko| KingTele 앱 설치
+de| KingTele-App installieren
+fr| Installez l'application KingTele
+id| Instal aplikasi KingTele
+th| ติดตั้งแอป KingTele
+tr| KingTele uygulamasını yükleyin
+fi| Asenna KingTele-sovellus
+
+= Mở nhanh từ màn hình chính, luôn cập nhật cùng website.
+en| Open it fast from your home screen, always in sync with the website.
+zh| 从主屏幕一键打开,并与网站始终保持同步。
+es| Ábrela rápido desde la pantalla de inicio, siempre sincronizada con el sitio web.
+hi| होम स्क्रीन से तुरंत खोलें, वेबसाइट के साथ हमेशा सिंक।
+ar| افتحه بسرعة من الشاشة الرئيسية، ومتزامن دائمًا مع الموقع.
+pt| Abra rapidamente pela tela inicial, sempre sincronizado com o site.
+ru| Быстрый запуск с главного экрана, всегда синхронно с сайтом.
+ja| ホーム画面からすぐ開けて、ウェブサイトといつでも同期します。
+ko| 홈 화면에서 바로 열고, 웹사이트와 항상 동기화됩니다.
+de| Schnell vom Startbildschirm öffnen, stets synchron mit der Website.
+fr| Ouvrez-la vite depuis l'écran d'accueil, toujours synchronisée avec le site.
+id| Buka cepat dari layar utama, selalu sinkron dengan website.
+th| เปิดได้เร็วจากหน้าจอหลัก และซิงก์กับเว็บไซต์เสมอ
+tr| Ana ekrandan hızlıca açın, web sitesiyle her zaman senkron.
+fi| Avaa nopeasti aloitusnäytöltä, aina synkassa verkkosivuston kanssa.
+
+= Cài ngay
+en| Install now
+zh| 立即安装
+es| Instalar ahora
+hi| अभी इंस्टॉल करें
+ar| ثبّت الآن
+pt| Instalar agora
+ru| Установить
+ja| 今すぐインストール
+ko| 지금 설치
+de| Jetzt installieren
+fr| Installer maintenant
+id| Instal sekarang
+th| ติดตั้งเลย
+tr| Şimdi yükle
+fi| Asenna nyt

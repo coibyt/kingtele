@@ -1,28 +1,114 @@
-/* Cài KingTele thành ứng dụng (PWA): đăng ký service worker + nút "Cài ứng dụng". */
+/* Cài KingTele thành ứng dụng (PWA):
+ *  - đăng ký service worker
+ *  - nút "Cài ứng dụng" (data-install)
+ *  - thanh mời cài nổi bật: chỉ hiện với khách CHƯA cài; ẩn hẳn khi đã cài. */
 (() => {
   'use strict';
+
+  const KEY_INSTALLED = 'kt_app_installed';
+  const KEY_SNOOZE = 'kt_install_snooze';
+  const SNOOZE_MS = 24 * 3600 * 1000; // khách bấm × thì nhắc lại sau 1 ngày
+
+  const store = {
+    get(k) { try { return localStorage.getItem(k); } catch { return null; } },
+    set(k, v) { try { localStorage.setItem(k, v); } catch { /* localStorage bị chặn */ } },
+  };
+
+  /**
+   * Có nên hiện thanh mời cài không?
+   * - đang chạy trong app (standalone) hoặc đã đánh dấu đã cài  -> không
+   * - khách vừa bấm × (chưa hết 1 ngày)                       -> không
+   * - trình duyệt cho cài trực tiếp (hasPrompt) hoặc iPhone/iPad Safari (cài thủ công) -> có
+   * - trình duyệt không cài được (Firefox máy tính, trình duyệt nhúng của app khác)    -> không
+   */
+  function shouldShowBanner({ standalone, installedFlag, snoozedUntil, now, hasPrompt, isIOS, inApp }) {
+    if (standalone || installedFlag) return false;
+    if (snoozedUntil && now < snoozedUntil) return false;
+    if (hasPrompt) return true;
+    return !!isIOS && !inApp;
+  }
+
+  const ua = navigator.userAgent || '';
+  const isIOS = /iphone|ipad|ipod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  const inApp = /FBAN|FBAV|Instagram|Zalo|Line\/|MicroMessenger|TikTok|; wv\)/i.test(ua); // trình duyệt nhúng trong app khác
+  const mq = window.matchMedia ? window.matchMedia('(display-mode: standalone)') : { matches: false };
+  const standalone = () => mq.matches || navigator.standalone === true;
+  let deferred = null;
+  let banner = null;
+
+  window.KT_PWA = { shouldShowBanner };
 
   // 1) Service worker (cần https hoặc localhost)
   if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
     window.addEventListener('load', () => { navigator.serviceWorker.register('/sw.js').catch(() => {}); });
   }
 
-  // 2) Nút cài đặt
-  const ua = navigator.userAgent || '';
-  const isIOS = /iphone|ipad|ipod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-  const inAppBrowser = /FBAN|FBAV|Instagram|Zalo|Line\/|MicroMessenger|TikTok|; wv\)/i.test(ua); // trình duyệt nhúng trong app khác
-  const installed = () => window.matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
-  let deferred = null;
+  // 2) Trạng thái đã cài hay chưa
+  const markInstalled = () => { store.set(KEY_INSTALLED, '1'); deferred = null; refresh(); };
+  if (standalone()) store.set(KEY_INSTALLED, '1'); // đang chạy trong app => chắc chắn đã cài
+  // Chrome (Android/máy tính): hỏi trình duyệt xem ứng dụng đã cài trên máy chưa, kể cả khi đang mở bằng tab thường
+  if (navigator.getInstalledRelatedApps) {
+    navigator.getInstalledRelatedApps().then((apps) => { if (apps && apps.some((a) => a.platform === 'webapp')) markInstalled(); }).catch(() => {});
+  }
+
+  function visible() {
+    return shouldShowBanner({
+      standalone: standalone(),
+      installedFlag: store.get(KEY_INSTALLED) === '1',
+      snoozedUntil: Number(store.get(KEY_SNOOZE)) || 0,
+      now: Date.now(),
+      hasPrompt: !!deferred,
+      isIOS, inApp,
+    });
+  }
 
   function refresh() {
-    const hide = installed();
+    const hide = standalone() || store.get(KEY_INSTALLED) === '1';
     document.querySelectorAll('[data-install]').forEach((b) => { b.hidden = hide; });
+    if (visible()) showBanner(); else hideBanner();
   }
+
+  // 3) Thanh mời cài nổi bật
+  function showBanner() {
+    if (banner || !document.body) return;
+    banner = document.createElement('aside');
+    banner.className = 'install-banner';
+    banner.setAttribute('role', 'region');
+    banner.setAttribute('aria-label', 'Cài ứng dụng KingTele');
+
+    const icon = document.createElement('img');
+    icon.src = '/assets/icons/icon-192.png'; icon.alt = ''; icon.width = 48; icon.height = 48;
+
+    const text = document.createElement('div');
+    text.className = 'ib-text';
+    const t = document.createElement('strong'); t.textContent = 'Cài ứng dụng KingTele';
+    const s = document.createElement('span'); s.textContent = 'Mở nhanh từ màn hình chính, luôn cập nhật cùng website.';
+    text.append(t, s);
+
+    const go = document.createElement('button');
+    go.type = 'button'; go.className = 'btn btn-primary ib-go'; go.textContent = 'Cài ngay';
+    go.setAttribute('data-install-now', '');
+
+    const close = document.createElement('button');
+    close.type = 'button'; close.className = 'ib-close'; close.setAttribute('aria-label', 'Đóng'); close.textContent = '×';
+    close.addEventListener('click', () => { store.set(KEY_SNOOZE, String(Date.now() + SNOOZE_MS)); hideBanner(); });
+
+    banner.append(icon, text, go, close);
+    document.body.append(banner);
+    document.body.classList.add('has-install-banner');
+  }
+
+  function hideBanner() {
+    if (banner) { banner.remove(); banner = null; }
+    if (document.body) document.body.classList.remove('has-install-banner');
+  }
+
   document.addEventListener('DOMContentLoaded', refresh);
   window.addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); deferred = e; refresh(); });
-  window.addEventListener('appinstalled', () => { deferred = null; refresh(); });
-  window.matchMedia('(display-mode: standalone)').addEventListener?.('change', refresh);
+  window.addEventListener('appinstalled', markInstalled);
+  if (mq.addEventListener) mq.addEventListener('change', () => { if (standalone()) store.set(KEY_INSTALLED, '1'); refresh(); });
 
+  // 4) Hộp hướng dẫn cài thủ công
   function help() {
     const d = document.createElement('dialog');
     d.className = 'pwa-dialog';
@@ -33,7 +119,7 @@
       ? 'Mở trang này bằng Safari, bấm nút Chia sẻ rồi chọn "Thêm vào MH chính".'
       : 'Mở menu của trình duyệt (dấu ⋮ hoặc ⋯) rồi chọn "Cài đặt ứng dụng" hoặc "Thêm vào màn hình chính".';
     d.append(h, p);
-    if (inAppBrowser) {
+    if (inApp) {
       const w = document.createElement('p');
       w.className = 'pwa-warn';
       w.textContent = 'Bạn đang mở trong trình duyệt tích hợp của ứng dụng khác. Hãy mở trang này bằng Chrome (Android) hoặc Safari (iPhone) để cài.';
@@ -50,19 +136,20 @@
   }
 
   async function install() {
-    if (!deferred) return help(); // iOS, Firefox, hoặc trình duyệt chưa cho phép cài trực tiếp: hướng dẫn thủ công
+    if (!deferred) return help(); // iPhone, Firefox, hoặc trình duyệt chưa cho cài trực tiếp: hướng dẫn thủ công
     const ev = deferred;
     deferred = null;
     try {
       await ev.prompt();
-      await ev.userChoice;
+      const choice = await ev.userChoice;
+      if (choice && choice.outcome === 'accepted') return markInstalled();
     } catch { help(); }
     refresh();
   }
 
   document.addEventListener('click', (e) => {
-    if (e.target.closest && e.target.closest('[data-reload]')) { location.reload(); return; }
-    const b = e.target.closest && e.target.closest('[data-install]');
-    if (b) { e.preventDefault(); install(); }
+    const t = e.target;
+    if (t.closest && t.closest('[data-reload]')) { location.reload(); return; }
+    if (t.closest && t.closest('[data-install], [data-install-now]')) { e.preventDefault(); install(); }
   });
 })();

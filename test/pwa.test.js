@@ -110,3 +110,122 @@ test('server phục vụ service worker không bị lưu đệm cứng', () => {
   const src = fs.readFileSync(path.join(__dirname, '..', 'server.js'), 'utf8');
   assert.match(src, /no-cache/);
 });
+
+// ---- thanh mời cài ứng dụng: chạy chính public/assets/pwa.js với DOM giả ----
+class El {
+  constructor(tag) { this.tagName = tag.toUpperCase(); this.children = []; this.attrs = {}; this.className = ''; this.listeners = {}; this.parent = null; this.hidden = false; }
+  append(...n) { n.forEach((x) => { if (x instanceof El) x.parent = this; this.children.push(x); }); }
+  setAttribute(k, v) { this.attrs[k] = v; }
+  addEventListener(t, f) { (this.listeners[t] = this.listeners[t] || []).push(f); }
+  remove() { if (this.parent) this.parent.children = this.parent.children.filter((c) => c !== this); this.parent = null; }
+  click() { (this.listeners.click || []).forEach((f) => f({ target: this })); }
+  find(cls) { for (const c of this.children) { if (c instanceof El) { if (c.className.split(' ').includes(cls)) return c; const d = c.find(cls); if (d) return d; } } return null; }
+}
+
+function harness({ ua = 'Mozilla/5.0 (Linux; Android 14) Chrome/130 Mobile Safari/537.36', platform = 'Linux armv8l', touch = 5, standalone = false, storage = {}, related = null } = {}) {
+  const docL = {}, winL = {};
+  const classes = new Set();
+  const body = new El('body');
+  body.classList = { add: (c) => classes.add(c), remove: (c) => classes.delete(c) };
+  const sandbox = {
+    navigator: { userAgent: ua, platform, maxTouchPoints: touch, serviceWorker: undefined, ...(related ? { getInstalledRelatedApps: related } : {}) },
+    location: { protocol: 'http:', hostname: 'example.test' },
+    localStorage: { getItem: (k) => (k in storage ? storage[k] : null), setItem: (k, v) => { storage[k] = String(v); } },
+    document: {
+      body, createElement: (t) => new El(t), querySelectorAll: () => [],
+      addEventListener: (t, f) => { (docL[t] = docL[t] || []).push(f); },
+    },
+    Date, Number, String,
+  };
+  sandbox.window = { addEventListener: (t, f) => { (winL[t] = winL[t] || []).push(f); }, matchMedia: () => ({ matches: standalone, addEventListener() {} }) };
+  vm.runInNewContext(read('assets/pwa.js'), sandbox);
+  const fireDoc = (t) => (docL[t] || []).forEach((f) => f({ target: body }));
+  const fireWin = (t, ev = {}) => (winL[t] || []).forEach((f) => f({ preventDefault() {}, ...ev }));
+  const banner = () => body.find('install-banner');
+  return { storage, fireDoc, fireWin, banner, hasClass: (c) => classes.has(c), api: sandbox.window.KT_PWA };
+}
+const tick = () => new Promise((r) => setImmediate(r));
+
+test('quyết định hiện thanh mời cài', () => {
+  const { shouldShowBanner: f } = harness().api;
+  const base = { standalone: false, installedFlag: false, snoozedUntil: 0, now: 1000, hasPrompt: true, isIOS: false, inApp: false };
+  assert.strictEqual(f(base), true);
+  assert.strictEqual(f({ ...base, standalone: true }), false);
+  assert.strictEqual(f({ ...base, installedFlag: true }), false);
+  assert.strictEqual(f({ ...base, snoozedUntil: 2000 }), false);
+  assert.strictEqual(f({ ...base, snoozedUntil: 500 }), true);
+  assert.strictEqual(f({ ...base, hasPrompt: false }), false);                  // trình duyệt không cài được
+  assert.strictEqual(f({ ...base, hasPrompt: false, isIOS: true }), true);      // iPhone Safari: cài thủ công
+  assert.strictEqual(f({ ...base, hasPrompt: false, isIOS: true, inApp: true }), false);
+});
+
+test('khách chưa cài: có sự kiện cài đặt thì thanh nổi bật xuất hiện', () => {
+  const h = harness();
+  h.fireDoc('DOMContentLoaded');
+  assert.strictEqual(h.banner(), null);               // chưa chắc cài được -> chưa hiện
+  h.fireWin('beforeinstallprompt');
+  assert.ok(h.banner());
+  assert.ok(h.hasClass('has-install-banner'));
+  assert.ok(h.banner().find('ib-go'));
+});
+
+test('khách đã cài (đang chạy trong app) thì không bao giờ hiện, và được ghi nhớ đã cài', () => {
+  const h = harness({ standalone: true });
+  h.fireDoc('DOMContentLoaded'); h.fireWin('beforeinstallprompt');
+  assert.strictEqual(h.banner(), null);
+  assert.strictEqual(h.storage.kt_app_installed, '1');
+});
+
+test('đã được ghi nhớ là đã cài (mở lại bằng tab thường) thì không hiện', () => {
+  const h = harness({ storage: { kt_app_installed: '1' } });
+  h.fireDoc('DOMContentLoaded'); h.fireWin('beforeinstallprompt');
+  assert.strictEqual(h.banner(), null);
+});
+
+test('Chrome báo ứng dụng đã cài trên máy (getInstalledRelatedApps) thì ẩn thanh', async () => {
+  const h = harness({ related: async () => [{ platform: 'webapp', url: 'https://kingtele.com/manifest.webmanifest' }] });
+  await tick();
+  h.fireDoc('DOMContentLoaded'); h.fireWin('beforeinstallprompt');
+  assert.strictEqual(h.banner(), null);
+  assert.strictEqual(h.storage.kt_app_installed, '1');
+});
+
+test('bấm × thì ẩn và nhắc lại sau 1 ngày', () => {
+  const h = harness();
+  h.fireDoc('DOMContentLoaded'); h.fireWin('beforeinstallprompt');
+  h.banner().find('ib-close').click();
+  assert.strictEqual(h.banner(), null);
+  assert.ok(Number(h.storage.kt_install_snooze) > Date.now() + 23 * 3600e3);
+  h.fireWin('beforeinstallprompt');
+  assert.strictEqual(h.banner(), null); // đang trong thời gian tạm ẩn
+
+  const later = harness({ storage: { kt_install_snooze: String(Date.now() - 1000) } }); // hết hạn tạm ẩn
+  later.fireDoc('DOMContentLoaded'); later.fireWin('beforeinstallprompt');
+  assert.ok(later.banner());
+});
+
+test('cài xong (appinstalled) thì thanh biến mất ngay và không hiện lại', () => {
+  const h = harness();
+  h.fireDoc('DOMContentLoaded'); h.fireWin('beforeinstallprompt');
+  assert.ok(h.banner());
+  h.fireWin('appinstalled');
+  assert.strictEqual(h.banner(), null);
+  assert.strictEqual(h.storage.kt_app_installed, '1');
+  assert.strictEqual(h.hasClass('has-install-banner'), false);
+  h.fireWin('beforeinstallprompt');
+  assert.strictEqual(h.banner(), null);
+});
+
+test('iPhone Safari thấy thanh mời (cài thủ công); trình duyệt nhúng và Firefox máy tính thì không', () => {
+  const ios = harness({ ua: 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605 Version/17.0 Mobile Safari/604.1', platform: 'iPhone' });
+  ios.fireDoc('DOMContentLoaded');
+  assert.ok(ios.banner());
+
+  const fb = harness({ ua: 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605 Mobile [FBAN/FBIOS;FBAV/450]', platform: 'iPhone' });
+  fb.fireDoc('DOMContentLoaded');
+  assert.strictEqual(fb.banner(), null);
+
+  const ff = harness({ ua: 'Mozilla/5.0 (Windows NT 10.0; rv:130.0) Gecko/20100101 Firefox/130.0', platform: 'Win32', touch: 0 });
+  ff.fireDoc('DOMContentLoaded');
+  assert.strictEqual(ff.banner(), null);
+});
