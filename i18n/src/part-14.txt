@@ -1,0 +1,426 @@
+# Hướng dẫn kết nối Telegram (2/2): Bước 2 đến Bước 5, Chat ID nhóm riêng tư
+
+= Bước 2. Dán token vào KingTele
+en| Step 2. Paste the token into KingTele
+zh| 第 2 步:把令牌粘贴到 KingTele
+es| Paso 2. Pega el token en KingTele
+hi| चरण 2. टोकन को KingTele में पेस्ट करें
+ar| الخطوة 2. الصق الرمز في KingTele
+pt| Passo 2. Cole o token no KingTele
+ru| Шаг 2. Вставьте токен в KingTele
+ja| ステップ2:トークンをKingTeleに貼り付け
+ko| 2단계. 토큰을 KingTele에 붙여넣기
+de| Schritt 2. Token in KingTele einfügen
+fr| Étape 2. Collez le jeton dans KingTele
+id| Langkah 2. Tempel token ke KingTele
+th| ขั้นตอนที่ 2 วางโทเคนใน KingTele
+tr| Adım 2. Belirteci KingTele'ye yapıştırın
+fi| Vaihe 2. Liitä tunniste KingTeleen
+
+= Kéo xuống phần **Bot Telegram** ngay bên dưới, **dán token** vào ô **Token từ @BotFather**.
+en| Scroll down to the **Bot Telegram** section right below, and **paste the token** into the **Token from @BotFather** field.
+zh| 向下滚动到下方的 **Bot Telegram** 区域,把令牌**粘贴**到**来自 @BotFather 的令牌**输入框。
+es| Baja hasta la sección **Bot Telegram** justo debajo y **pega el token** en el campo **Token de @BotFather**.
+hi| नीचे **Bot Telegram** सेक्शन तक स्क्रॉल करें और **@BotFather से मिला टोकन** वाले बॉक्स में **टोकन पेस्ट करें**।
+ar| مرّر لأسفل إلى قسم **Bot Telegram** الموجود مباشرة أدناه، و**الصق الرمز** في حقل **الرمز من @BotFather**.
+pt| Role até a seção **Bot Telegram** logo abaixo e **cole o token** no campo **Token do @BotFather**.
+ru| Прокрутите вниз до раздела **Bot Telegram** и **вставьте токен** в поле **Токен от @BotFather**.
+ja| すぐ下の**Bot Telegram**欄までスクロールし、**@BotFatherのトークン**の入力欄に**トークンを貼り付け**ます。
+ko| 바로 아래 **Bot Telegram** 영역으로 스크롤하여 **@BotFather에서 받은 토큰** 칸에 **토큰을 붙여넣으세요**.
+de| Scrollen Sie zum Bereich **Bot Telegram** direkt darunter und **fügen Sie den Token** in das Feld **Token von @BotFather** ein.
+fr| Faites défiler jusqu'à la section **Bot Telegram** juste en dessous et **collez le jeton** dans le champ **Jeton de @BotFather**.
+id| Gulir ke bagian **Bot Telegram** tepat di bawah, lalu **tempel token** ke kolom **Token dari @BotFather**.
+th| เลื่อนลงไปที่ส่วน **Bot Telegram** ด้านล่าง แล้ว **วางโทเคน** ในช่อง **โทเคนจาก @BotFather**
+tr| Hemen aşağıdaki **Bot Telegram** bölümüne inin ve **belirteci** **@BotFather'dan gelen belirteç** alanına yapıştırın.
+fi| Vieritä alla olevaan **Bot Telegram** -osioon ja **liitä tunniste** kenttään **Tunniste @BotFatherilta**.
+
+= Bấm nút **Lưu & kiểm tra**. Thành công khi thấy dòng **Kết nối thành công: @tên_bot**.
+en| Press the **Save & check** button. It worked when you see **Connected successfully: @bot_name**.
+zh| 点击**保存并检查**按钮。看到 **连接成功:@机器人名** 就表示成功。
+es| Pulsa el botón **Guardar y comprobar**. Todo va bien cuando veas **Conexión correcta: @nombre_del_bot**.
+hi| **सहेजें और जाँचें** बटन दबाएँ। जब **कनेक्शन सफल: @बॉट_नाम** दिखे तो काम हो गया।
+ar| اضغط زر **حفظ وفحص**. يكتمل الأمر عندما ترى **تم الاتصال بنجاح: @اسم_البوت**.
+pt| Clique no botão **Salvar e verificar**. Deu certo quando aparecer **Conectado com sucesso: @nome_do_bot**.
+ru| Нажмите кнопку **Сохранить и проверить**. Всё получилось, если вы видите **Подключено: @имя_бота**.
+ja| **保存して確認**ボタンを押します。**接続に成功しました:@ボット名** と表示されれば完了です。
+ko| **저장 및 확인** 버튼을 누르세요. **연결 성공: @봇이름** 이 보이면 성공입니다.
+de| Klicken Sie auf **Speichern & prüfen**. Es hat geklappt, wenn **Erfolgreich verbunden: @Bot-Name** erscheint.
+fr| Cliquez sur **Enregistrer et vérifier**. C'est réussi quand vous voyez **Connexion réussie : @nom_du_bot**.
+id| Tekan tombol **Simpan & periksa**. Berhasil jika muncul **Berhasil terhubung: @nama_bot**.
+th| กดปุ่ม **บันทึกและตรวจสอบ** สำเร็จเมื่อเห็นข้อความ **เชื่อมต่อสำเร็จ: @ชื่อบอท**
+tr| **Kaydet ve kontrol et** düğmesine basın. **Bağlantı başarılı: @bot_adı** yazısını görünce tamamdır.
+fi| Paina **Tallenna ja tarkista** -painiketta. Onnistui, kun näet **Yhdistetty onnistuneesti: @botin_nimi**.
+
+= Báo lỗi? Hãy chắc rằng bạn đã **sao chép đủ cả chuỗi token** (có dấu `:` ở giữa) và **không thừa khoảng trắng** ở đầu hoặc cuối.
+en| Got an error? Make sure you copied the **whole token string** (it has a `:` in the middle) and that there are **no extra spaces** at the start or end.
+zh| 报错了?请确认你**复制了完整的令牌**(中间有一个 `:`),并且开头和结尾**没有多余的空格**。
+es| ¿Da error? Comprueba que copiaste la **cadena completa del token** (tiene un `:` en medio) y que **no sobran espacios** al principio o al final.
+hi| त्रुटि आई? जाँचें कि आपने **पूरा टोकन** कॉपी किया है (बीच में `:` होता है) और शुरू या अंत में **कोई फ़ालतू स्पेस नहीं** है।
+ar| ظهر خطأ؟ تأكد من أنك نسخت **الرمز كاملًا** (يوجد `:` في المنتصف) وأنه **لا توجد مسافات زائدة** في البداية أو النهاية.
+pt| Deu erro? Confira se copiou a **sequência completa do token** (tem um `:` no meio) e se **não há espaços sobrando** no início ou no fim.
+ru| Ошибка? Убедитесь, что вы скопировали **токен целиком** (посередине есть `:`) и что **нет лишних пробелов** в начале или в конце.
+ja| エラーが出ましたか?**トークン全体**をコピーできているか(途中に `:` があります)、先頭や末尾に**余分なスペースがない**か確認してください。
+ko| 오류가 나나요? **토큰 전체**를 복사했는지(가운데에 `:`가 있습니다), 앞뒤에 **불필요한 공백이 없는지** 확인하세요.
+de| Fehlermeldung? Prüfen Sie, ob Sie den **gesamten Token** kopiert haben (in der Mitte steht ein `:`) und ob am Anfang oder Ende **keine überflüssigen Leerzeichen** stehen.
+fr| Une erreur ? Vérifiez que vous avez copié **tout le jeton** (il y a un `:` au milieu) et qu'il n'y a **pas d'espace en trop** au début ou à la fin.
+id| Muncul error? Pastikan Anda menyalin **seluruh token** (ada tanda `:` di tengah) dan **tidak ada spasi berlebih** di awal atau akhir.
+th| ขึ้นข้อผิดพลาด? ตรวจสอบว่าคัดลอก **โทเคนครบทั้งสาย** (มี `:` ตรงกลาง) และ **ไม่มีช่องว่างเกิน** ที่หน้าหรือท้าย
+tr| Hata mı aldınız? **Belirtecin tamamını** kopyaladığınızdan (ortasında `:` var) ve başında ya da sonunda **fazladan boşluk olmadığından** emin olun.
+fi| Tuliko virhe? Varmista, että kopioit **koko tunnisteen** (keskellä on `:`) eikä alussa tai lopussa ole **ylimääräisiä välilyöntejä**.
+
+= Bước 3. Thêm bot vào nhóm hoặc kênh
+en| Step 3. Add the bot to your group or channel
+zh| 第 3 步:把机器人加入群组或频道
+es| Paso 3. Añade el bot a tu grupo o canal
+hi| चरण 3. बॉट को अपने ग्रुप या चैनल में जोड़ें
+ar| الخطوة 3. أضف البوت إلى مجموعتك أو قناتك
+pt| Passo 3. Adicione o bot ao grupo ou canal
+ru| Шаг 3. Добавьте бота в группу или канал
+ja| ステップ3:ボットをグループまたはチャンネルに追加
+ko| 3단계. 봇을 그룹이나 채널에 추가하기
+de| Schritt 3. Bot zu Gruppe oder Kanal hinzufügen
+fr| Étape 3. Ajoutez le bot à votre groupe ou canal
+id| Langkah 3. Tambahkan bot ke grup atau kanal
+th| ขั้นตอนที่ 3 เพิ่มบอทเข้ากลุ่มหรือแชนเนล
+tr| Adım 3. Botu grubunuza veya kanalınıza ekleyin
+fi| Vaihe 3. Lisää botti ryhmääsi tai kanavaasi
+
+= **Nhóm:** mở nhóm, bấm vào **tên nhóm** ở thanh trên cùng, chọn **Thêm thành viên** (Add members), gõ **username bot** của bạn (ví dụ `@kingtele_cuaban_bot`), chọn bot rồi bấm **Thêm**.
+en| **Group:** open the group, tap the **group name** at the top, choose **Add members**, type your **bot's username** (for example `@kingtele_cuaban_bot`), select the bot, then tap **Add**.
+zh| **群组:**打开群组,点击顶部的**群组名称**,选择**添加成员**(Add members),输入你的**机器人用户名**(例如 `@kingtele_cuaban_bot`),选中机器人后点击**添加**。
+es| **Grupo:** abre el grupo, toca el **nombre del grupo** en la parte superior, elige **Añadir miembros** (Add members), escribe el **usuario de tu bot** (por ejemplo `@kingtele_cuaban_bot`), selecciónalo y toca **Añadir**.
+hi| **ग्रुप:** ग्रुप खोलें, ऊपर **ग्रुप के नाम** पर दबाएँ, **सदस्य जोड़ें** (Add members) चुनें, अपने **बॉट का username** लिखें (जैसे `@kingtele_cuaban_bot`), बॉट चुनें और **जोड़ें** दबाएँ।
+ar| **المجموعة:** افتح المجموعة، واضغط على **اسم المجموعة** في الأعلى، واختر **إضافة أعضاء** (Add members)، واكتب **اسم مستخدم البوت** (مثل `@kingtele_cuaban_bot`)، ثم اخترْه واضغط **إضافة**.
+pt| **Grupo:** abra o grupo, toque no **nome do grupo** no topo, escolha **Adicionar membros** (Add members), digite o **nome de usuário do bot** (por exemplo `@kingtele_cuaban_bot`), selecione o bot e toque em **Adicionar**.
+ru| **Группа:** откройте группу, нажмите на **название группы** вверху, выберите **Добавить участников** (Add members), введите **username вашего бота** (например `@kingtele_cuaban_bot`), выберите его и нажмите **Добавить**.
+ja| **グループ:**グループを開き、上部の**グループ名**をタップして**メンバーを追加**(Add members)を選び、**ボットのユーザー名**(例:`@kingtele_cuaban_bot`)を入力、ボットを選んで**追加**をタップします。
+ko| **그룹:** 그룹을 열고 상단의 **그룹 이름**을 누른 뒤 **멤버 추가**(Add members)를 선택하고, **봇 사용자 이름**(예: `@kingtele_cuaban_bot`)을 입력해 봇을 선택하고 **추가**를 누르세요.
+de| **Gruppe:** Öffnen Sie die Gruppe, tippen Sie oben auf den **Gruppennamen**, wählen Sie **Mitglieder hinzufügen** (Add members), geben Sie den **Benutzernamen Ihres Bots** ein (z. B. `@kingtele_cuaban_bot`), wählen Sie ihn aus und tippen Sie auf **Hinzufügen**.
+fr| **Groupe :** ouvrez le groupe, touchez le **nom du groupe** en haut, choisissez **Ajouter des membres** (Add members), saisissez le **nom d'utilisateur de votre bot** (par exemple `@kingtele_cuaban_bot`), sélectionnez-le puis touchez **Ajouter**.
+id| **Grup:** buka grup, ketuk **nama grup** di bagian atas, pilih **Tambah anggota** (Add members), ketik **username bot** Anda (misalnya `@kingtele_cuaban_bot`), pilih bot lalu ketuk **Tambah**.
+th| **กลุ่ม:** เปิดกลุ่ม แตะ **ชื่อกลุ่ม** ด้านบน เลือก **เพิ่มสมาชิก** (Add members) พิมพ์ **username ของบอท** (เช่น `@kingtele_cuaban_bot`) เลือกบอท แล้วแตะ **เพิ่ม**
+tr| **Grup:** Grubu açın, üstteki **grup adına** dokunun, **Üye ekle** (Add members) seçeneğini seçin, **botunuzun kullanıcı adını** yazın (örneğin `@kingtele_cuaban_bot`), botu seçip **Ekle**'ye dokunun.
+fi| **Ryhmä:** avaa ryhmä, napauta ylhäällä **ryhmän nimeä**, valitse **Lisää jäseniä** (Add members), kirjoita **botin käyttäjänimi** (esimerkiksi `@kingtele_cuaban_bot`), valitse botti ja napauta **Lisää**.
+
+= **Kênh:** mở kênh, bấm **tên kênh** → **Quản trị viên** (Administrators) → **Thêm quản trị viên**, chọn bot của bạn, bật quyền **Đăng tin nhắn** (Post messages) rồi bấm **Lưu**.
+en| **Channel:** open the channel, tap the **channel name** → **Administrators** → **Add Administrator**, choose your bot, turn on **Post messages**, then tap **Save**.
+zh| **频道:**打开频道,点击**频道名称** → **管理员**(Administrators) → **添加管理员**,选择你的机器人,开启**发布消息**(Post messages)权限,然后点击**保存**。
+es| **Canal:** abre el canal, toca el **nombre del canal** → **Administradores** (Administrators) → **Añadir administrador**, elige tu bot, activa el permiso **Publicar mensajes** (Post messages) y toca **Guardar**.
+hi| **चैनल:** चैनल खोलें, **चैनल के नाम** पर दबाएँ → **एडमिन** (Administrators) → **एडमिन जोड़ें**, अपना बॉट चुनें, **संदेश पोस्ट करें** (Post messages) की अनुमति चालू करें और **सहेजें** दबाएँ।
+ar| **القناة:** افتح القناة، واضغط على **اسم القناة** ← **المشرفون** (Administrators) ← **إضافة مشرف**، واختر البوت، وفعّل صلاحية **نشر الرسائل** (Post messages) ثم اضغط **حفظ**.
+pt| **Canal:** abra o canal, toque no **nome do canal** → **Administradores** (Administrators) → **Adicionar administrador**, escolha o bot, ative a permissão **Publicar mensagens** (Post messages) e toque em **Salvar**.
+ru| **Канал:** откройте канал, нажмите на **название канала** → **Администраторы** (Administrators) → **Добавить администратора**, выберите бота, включите право **Публикация сообщений** (Post messages) и нажмите **Сохранить**.
+ja| **チャンネル:**チャンネルを開き、**チャンネル名**をタップ → **管理者**(Administrators) → **管理者を追加**でボットを選び、**メッセージの投稿**(Post messages)権限をオンにして**保存**をタップします。
+ko| **채널:** 채널을 열고 **채널 이름**을 누른 뒤 → **관리자**(Administrators) → **관리자 추가**에서 봇을 선택하고, **메시지 게시**(Post messages) 권한을 켠 다음 **저장**을 누르세요.
+de| **Kanal:** Öffnen Sie den Kanal, tippen Sie auf den **Kanalnamen** → **Administratoren** (Administrators) → **Administrator hinzufügen**, wählen Sie Ihren Bot, aktivieren Sie **Nachrichten posten** (Post messages) und tippen Sie auf **Speichern**.
+fr| **Canal :** ouvrez le canal, touchez le **nom du canal** → **Administrateurs** (Administrators) → **Ajouter un administrateur**, choisissez votre bot, activez **Publier des messages** (Post messages) puis touchez **Enregistrer**.
+id| **Kanal:** buka kanal, ketuk **nama kanal** → **Administrator** (Administrators) → **Tambah administrator**, pilih bot Anda, aktifkan izin **Posting pesan** (Post messages), lalu ketuk **Simpan**.
+th| **แชนเนล:** เปิดแชนเนล แตะ **ชื่อแชนเนล** → **ผู้ดูแล** (Administrators) → **เพิ่มผู้ดูแล** เลือกบอทของคุณ เปิดสิทธิ์ **โพสต์ข้อความ** (Post messages) แล้วแตะ **บันทึก**
+tr| **Kanal:** Kanalı açın, **kanal adına** dokunun → **Yöneticiler** (Administrators) → **Yönetici ekle**, botunuzu seçin, **Mesaj gönder** (Post messages) iznini açın ve **Kaydet**'e dokunun.
+fi| **Kanava:** avaa kanava, napauta **kanavan nimeä** → **Ylläpitäjät** (Administrators) → **Lisää ylläpitäjä**, valitse bottisi, ota käyttöön oikeus **Julkaise viestejä** (Post messages) ja napauta **Tallenna**.
+
+= Nếu nhóm đang **chỉ cho quản trị viên nhắn tin**, hãy đặt bot làm **quản trị viên** của nhóm.
+en| If the group is set so that **only administrators can send messages**, make the bot an **administrator** of the group.
+zh| 如果群组设置为**只有管理员可以发言**,请把机器人设为群组的**管理员**。
+es| Si el grupo está configurado para que **solo los administradores puedan escribir**, haz al bot **administrador** del grupo.
+hi| अगर ग्रुप में **सिर्फ़ एडमिन संदेश भेज सकते हैं**, तो बॉट को ग्रुप का **एडमिन** बनाएँ।
+ar| إذا كانت المجموعة مضبوطة بحيث **يرسل المشرفون فقط الرسائل**، فاجعل البوت **مشرفًا** في المجموعة.
+pt| Se o grupo permite que **somente administradores enviem mensagens**, torne o bot **administrador** do grupo.
+ru| Если в группе **писать могут только администраторы**, назначьте бота **администратором** группы.
+ja| グループが**管理者だけがメッセージを送れる設定**の場合は、ボットをそのグループの**管理者**にしてください。
+ko| 그룹이 **관리자만 메시지를 보낼 수 있게** 설정되어 있다면, 봇을 그룹 **관리자**로 지정하세요.
+de| Wenn in der Gruppe **nur Administratoren Nachrichten senden dürfen**, machen Sie den Bot zum **Administrator** der Gruppe.
+fr| Si le groupe est réglé pour que **seuls les administrateurs puissent écrire**, nommez le bot **administrateur** du groupe.
+id| Jika grup diatur agar **hanya administrator yang boleh mengirim pesan**, jadikan bot **administrator** grup.
+th| ถ้ากลุ่มตั้งให้ **เฉพาะผู้ดูแลส่งข้อความได้** ให้ตั้งบอทเป็น **ผู้ดูแล** ของกลุ่ม
+tr| Grup **yalnızca yöneticilerin mesaj göndermesine** izin veriyorsa, botu grubun **yöneticisi** yapın.
+fi| Jos ryhmässä **vain ylläpitäjät voivat lähettää viestejä**, tee botista ryhmän **ylläpitäjä**.
+
+= Bạn phải là **chủ hoặc quản trị viên** của nhóm hoặc kênh thì mới thêm được bot.
+en| You must be the **owner or an administrator** of the group or channel to add a bot.
+zh| 只有群组或频道的**所有者或管理员**才能添加机器人。
+es| Debes ser **propietario o administrador** del grupo o canal para poder añadir un bot.
+hi| बॉट जोड़ने के लिए आपको ग्रुप या चैनल का **मालिक या एडमिन** होना ज़रूरी है।
+ar| يجب أن تكون **مالك أو مشرف** المجموعة أو القناة لتتمكن من إضافة بوت.
+pt| Você precisa ser **dono ou administrador** do grupo ou canal para adicionar um bot.
+ru| Добавить бота может только **владелец или администратор** группы или канала.
+ja| ボットを追加できるのは、グループまたはチャンネルの**オーナーか管理者**だけです。
+ko| 봇을 추가하려면 그룹이나 채널의 **소유자 또는 관리자**여야 합니다.
+de| Zum Hinzufügen eines Bots müssen Sie **Eigentümer oder Administrator** der Gruppe oder des Kanals sein.
+fr| Vous devez être **propriétaire ou administrateur** du groupe ou du canal pour y ajouter un bot.
+id| Anda harus menjadi **pemilik atau administrator** grup atau kanal untuk bisa menambahkan bot.
+th| คุณต้องเป็น **เจ้าของหรือผู้ดูแล** ของกลุ่มหรือแชนเนลจึงจะเพิ่มบอทได้
+tr| Bot ekleyebilmek için grubun veya kanalın **sahibi ya da yöneticisi** olmanız gerekir.
+fi| Sinun on oltava ryhmän tai kanavan **omistaja tai ylläpitäjä**, jotta voit lisätä botin.
+
+= Bước 4. Thêm nhóm vào KingTele (kể cả nhóm riêng tư)
+en| Step 4. Add the group to KingTele (private groups too)
+zh| 第 4 步:把群组添加到 KingTele(包括私有群组)
+es| Paso 4. Añade el grupo a KingTele (también los privados)
+hi| चरण 4. ग्रुप को KingTele में जोड़ें (निजी ग्रुप भी)
+ar| الخطوة 4. أضف المجموعة إلى KingTele (حتى الخاصة)
+pt| Passo 4. Adicione o grupo ao KingTele (inclusive privados)
+ru| Шаг 4. Добавьте группу в KingTele (в том числе закрытую)
+ja| ステップ4:グループをKingTeleに追加(非公開グループも)
+ko| 4단계. KingTele에 그룹 추가하기(비공개 그룹 포함)
+de| Schritt 4. Gruppe in KingTele hinzufügen (auch private)
+fr| Étape 4. Ajoutez le groupe à KingTele (y compris privé)
+id| Langkah 4. Tambahkan grup ke KingTele (termasuk grup privat)
+th| ขั้นตอนที่ 4 เพิ่มกลุ่มใน KingTele (รวมถึงกลุ่มส่วนตัว)
+tr| Adım 4. Grubu KingTele'ye ekleyin (özel gruplar dahil)
+fi| Vaihe 4. Lisää ryhmä KingTeleen (myös yksityiset)
+
+= Vào mục **Nhóm Telegram** của KingTele (menu bên trái), điền ô **Chat ID hoặc @username**. Có 2 trường hợp:
+en| Open **Telegram groups** in KingTele (left menu) and fill in the **Chat ID or @username** field. There are 2 cases:
+zh| 打开 KingTele 左侧菜单的 **Telegram 群组**,填写 **Chat ID 或 @用户名** 输入框。分两种情况:
+es| Entra en **Grupos de Telegram** en KingTele (menú izquierdo) y rellena el campo **Chat ID o @usuario**. Hay 2 casos:
+hi| KingTele के बाएँ मेन्यू में **Telegram ग्रुप** खोलें और **Chat ID या @username** वाला बॉक्स भरें। दो स्थितियाँ हैं:
+ar| افتح **مجموعات تيليجرام** في KingTele (القائمة اليسرى) واملأ حقل **Chat ID أو @اسم_المستخدم**. هناك حالتان:
+pt| Abra **Grupos do Telegram** no KingTele (menu à esquerda) e preencha o campo **Chat ID ou @usuário**. Há 2 casos:
+ru| Откройте **Группы Telegram** в KingTele (меню слева) и заполните поле **Chat ID или @username**. Есть два случая:
+ja| KingTeleの左メニューにある**Telegramグループ**を開き、**Chat ID または @ユーザー名**の欄に入力します。2つのケースがあります。
+ko| KingTele 왼쪽 메뉴의 **Telegram 그룹**을 열고 **Chat ID 또는 @사용자이름** 칸을 채우세요. 두 가지 경우가 있습니다.
+de| Öffnen Sie in KingTele (linkes Menü) **Telegram-Gruppen** und füllen Sie das Feld **Chat-ID oder @Benutzername** aus. Es gibt 2 Fälle:
+fr| Ouvrez **Groupes Telegram** dans KingTele (menu de gauche) et remplissez le champ **ID de discussion ou @nom d'utilisateur**. Il y a 2 cas :
+id| Buka **Grup Telegram** di KingTele (menu kiri) dan isi kolom **Chat ID atau @username**. Ada 2 kasus:
+th| เปิด **กลุ่ม Telegram** ใน KingTele (เมนูซ้าย) แล้วกรอกช่อง **Chat ID หรือ @username** มี 2 กรณี:
+tr| KingTele'de (sol menü) **Telegram grupları** bölümünü açın ve **Chat ID veya @kullanıcıadı** alanını doldurun. 2 durum var:
+fi| Avaa KingTelessä (vasen valikko) **Telegram-ryhmät** ja täytä kenttä **Chat ID tai @käyttäjänimi**. Tapauksia on kaksi:
+
+= **Nhóm hoặc kênh công khai** (có link dạng `t.me/tennhom`): chỉ cần gõ `@tennhom`, ví dụ `@kingtele_group`.
+en| **Public group or channel** (has a link like `t.me/tennhom`): just type `@tennhom`, for example `@kingtele_group`.
+zh| **公开群组或频道**(链接形如 `t.me/tennhom`):只需输入 `@tennhom`,例如 `@kingtele_group`。
+es| **Grupo o canal público** (con un enlace como `t.me/tennhom`): basta con escribir `@tennhom`, por ejemplo `@kingtele_group`.
+hi| **सार्वजनिक ग्रुप या चैनल** (जिसका लिंक `t.me/tennhom` जैसा हो): बस `@tennhom` लिखें, जैसे `@kingtele_group`।
+ar| **مجموعة أو قناة عامة** (لها رابط مثل `t.me/tennhom`): يكفي كتابة `@tennhom`، مثل `@kingtele_group`.
+pt| **Grupo ou canal público** (com link como `t.me/tennhom`): basta digitar `@tennhom`, por exemplo `@kingtele_group`.
+ru| **Публичная группа или канал** (ссылка вида `t.me/tennhom`): достаточно ввести `@tennhom`, например `@kingtele_group`.
+ja| **公開グループ・チャンネル**(`t.me/tennhom` のようなリンクがあるもの):`@tennhom` と入力するだけです。例:`@kingtele_group`
+ko| **공개 그룹 또는 채널**(`t.me/tennhom` 같은 링크가 있는 경우): `@tennhom`만 입력하면 됩니다. 예: `@kingtele_group`
+de| **Öffentliche Gruppe oder öffentlicher Kanal** (mit einem Link wie `t.me/tennhom`): Geben Sie einfach `@tennhom` ein, zum Beispiel `@kingtele_group`.
+fr| **Groupe ou canal public** (avec un lien du type `t.me/tennhom`) : tapez simplement `@tennhom`, par exemple `@kingtele_group`.
+id| **Grup atau kanal publik** (punya tautan seperti `t.me/tennhom`): cukup ketik `@tennhom`, misalnya `@kingtele_group`.
+th| **กลุ่มหรือแชนเนลสาธารณะ** (มีลิงก์แบบ `t.me/tennhom`): พิมพ์ `@tennhom` ได้เลย เช่น `@kingtele_group`
+tr| **Herkese açık grup veya kanal** (`t.me/tennhom` gibi bir bağlantısı olan): sadece `@tennhom` yazın, örneğin `@kingtele_group`.
+fi| **Julkinen ryhmä tai kanava** (linkki on muotoa `t.me/tennhom`): kirjoita vain `@tennhom`, esimerkiksi `@kingtele_group`.
+
+= **Nhóm riêng tư** (chỉ vào được bằng link mời, không có @username): cần **Chat ID**, là dãy số thường **bắt đầu bằng** `-100`, ví dụ `-1001234567890`. Có 3 cách lấy, **Cách 1 dễ nhất**:
+en| **Private group** (joinable only by invite link, no @username): you need the **Chat ID**, a number that usually **starts with** `-100`, for example `-1001234567890`. There are 3 ways to get it, and **Method 1 is the easiest**:
+zh| **私有群组**(只能通过邀请链接加入,没有 @用户名):需要 **Chat ID**,这是一串通常以 `-100` **开头**的数字,例如 `-1001234567890`。获取方法有 3 种,其中**方法 1 最简单**:
+es| **Grupo privado** (solo se entra con enlace de invitación, sin @usuario): necesitas el **Chat ID**, un número que suele **empezar por** `-100`, por ejemplo `-1001234567890`. Hay 3 formas de obtenerlo y la **forma 1 es la más fácil**:
+hi| **निजी ग्रुप** (सिर्फ़ इनवाइट लिंक से जुड़ा जा सकता है, @username नहीं होता): आपको **Chat ID** चाहिए, एक संख्या जो आम तौर पर `-100` **से शुरू** होती है, जैसे `-1001234567890`। पाने के 3 तरीके हैं, **तरीका 1 सबसे आसान** है:
+ar| **مجموعة خاصة** (لا يُدخل إليها إلا برابط دعوة وليس لها @اسم_مستخدم): تحتاج إلى **Chat ID**، وهو رقم يبدأ عادةً **بـ** `-100`، مثل `-1001234567890`. هناك 3 طرق للحصول عليه، و**الطريقة 1 هي الأسهل**:
+pt| **Grupo privado** (só entra com link de convite, sem @usuário): você precisa do **Chat ID**, um número que geralmente **começa com** `-100`, por exemplo `-1001234567890`. Há 3 maneiras de obtê-lo, e o **Método 1 é o mais fácil**:
+ru| **Закрытая группа** (вход только по ссылке-приглашению, нет @username): нужен **Chat ID** — число, которое обычно **начинается с** `-100`, например `-1001234567890`. Узнать его можно тремя способами, **способ 1 самый простой**:
+ja| **非公開グループ**(招待リンクでのみ参加でき、@ユーザー名がないもの):**Chat ID** が必要です。通常 `-100` **で始まる**数字で、例:`-1001234567890`。取得方法は3つあり、**方法1が一番簡単**です。
+ko| **비공개 그룹**(초대 링크로만 입장 가능하고 @사용자이름이 없는 경우): **Chat ID**가 필요합니다. 보통 `-100`**으로 시작하는** 숫자이며, 예: `-1001234567890`. 구하는 방법은 3가지이고 **방법 1이 가장 쉽습니다**.
+de| **Private Gruppe** (Beitritt nur per Einladungslink, kein @Benutzername): Sie brauchen die **Chat-ID**, eine Zahl, die meist mit `-100` **beginnt**, zum Beispiel `-1001234567890`. Es gibt 3 Wege, sie zu finden, **Weg 1 ist der einfachste**:
+fr| **Groupe privé** (accessible seulement par lien d'invitation, sans @nom d'utilisateur) : il vous faut l'**ID de discussion**, un nombre qui **commence** généralement par `-100`, par exemple `-1001234567890`. Il y a 3 façons de l'obtenir, et la **méthode 1 est la plus simple** :
+id| **Grup privat** (hanya bisa masuk lewat tautan undangan, tanpa @username): Anda butuh **Chat ID**, angka yang biasanya **diawali** `-100`, misalnya `-1001234567890`. Ada 3 cara mendapatkannya, dan **Cara 1 paling mudah**:
+th| **กลุ่มส่วนตัว** (เข้าได้เฉพาะลิงก์เชิญ ไม่มี @username): ต้องใช้ **Chat ID** ซึ่งเป็นตัวเลขที่มัก **ขึ้นต้นด้วย** `-100` เช่น `-1001234567890` มี 3 วิธีในการหา และ **วิธีที่ 1 ง่ายที่สุด**:
+tr| **Özel grup** (yalnızca davet bağlantısıyla girilir, @kullanıcıadı yoktur): **Chat ID** gerekir; genellikle `-100` **ile başlayan** bir sayıdır, örneğin `-1001234567890`. Almanın 3 yolu var, **Yöntem 1 en kolayıdır**:
+fi| **Yksityinen ryhmä** (liitytään vain kutsulinkillä, ei @käyttäjänimeä): tarvitset **Chat ID:n**, numeron, joka alkaa yleensä **merkeillä** `-100`, esimerkiksi `-1001234567890`. Sen saa selville kolmella tavalla, **tapa 1 on helpoin**:
+
+= **Cách 1 (khuyên dùng, ngay trong KingTele):** sau Bước 3, hãy **gửi một tin nhắn bất kỳ trong nhóm** (ví dụ `hello`). Rồi vào mục **Nhóm Telegram** của KingTele, bấm **Tìm nhóm bot đã thêm**. Nhóm sẽ hiện ra kèm Chat ID, bấm **Thêm** là xong.
+en| **Method 1 (recommended, right inside KingTele):** after Step 3, **send any message in the group** (for example `hello`). Then open **Telegram groups** in KingTele and press **Find groups the bot was added to**. Your group appears with its Chat ID; press **Add** and you're done.
+zh| **方法 1(推荐,直接在 KingTele 里完成):**完成第 3 步后,**在群里随便发一条消息**(例如 `hello`)。然后打开 KingTele 的 **Telegram 群组**,点击**查找机器人已加入的群组**。群组会连同 Chat ID 一起出现,点击**添加**即可。
+es| **Forma 1 (recomendada, dentro de KingTele):** tras el Paso 3, **envía cualquier mensaje en el grupo** (por ejemplo `hello`). Luego entra en **Grupos de Telegram** en KingTele y pulsa **Buscar grupos donde se añadió el bot**. El grupo aparecerá con su Chat ID; pulsa **Añadir** y listo.
+hi| **तरीका 1 (सुझाया गया, सीधे KingTele में):** चरण 3 के बाद **ग्रुप में कोई भी संदेश भेजें** (जैसे `hello`)। फिर KingTele में **Telegram ग्रुप** खोलें और **जिन ग्रुप में बॉट जोड़ा गया है उन्हें खोजें** दबाएँ। ग्रुप Chat ID के साथ दिखेगा, **जोड़ें** दबाएँ और काम हो गया।
+ar| **الطريقة 1 (الموصى بها، داخل KingTele مباشرة):** بعد الخطوة 3، **أرسل أي رسالة في المجموعة** (مثل `hello`). ثم افتح **مجموعات تيليجرام** في KingTele واضغط **ابحث عن المجموعات التي أُضيف إليها البوت**. ستظهر مجموعتك مع Chat ID، اضغط **إضافة** وانتهى الأمر.
+pt| **Método 1 (recomendado, dentro do KingTele):** após o Passo 3, **envie qualquer mensagem no grupo** (por exemplo `hello`). Depois abra **Grupos do Telegram** no KingTele e clique em **Buscar grupos onde o bot foi adicionado**. O grupo aparece com o Chat ID; clique em **Adicionar** e pronto.
+ru| **Способ 1 (рекомендуем, прямо в KingTele):** после шага 3 **отправьте в группе любое сообщение** (например `hello`). Затем откройте **Группы Telegram** в KingTele и нажмите **Найти группы, куда добавлен бот**. Группа появится вместе с Chat ID, нажмите **Добавить** — и готово.
+ja| **方法1(おすすめ、KingTele内で完結):**ステップ3のあと、**グループで何かメッセージを送って**ください(例:`hello`)。続いてKingTeleの**Telegramグループ**を開き、**ボットを追加したグループを検索**を押します。グループがChat IDとともに表示されるので、**追加**を押せば完了です。
+ko| **방법 1(추천, KingTele 안에서 해결):** 3단계 후 **그룹에서 아무 메시지나 보내세요**(예: `hello`). 그런 다음 KingTele의 **Telegram 그룹**을 열고 **봇이 추가된 그룹 찾기**를 누르세요. 그룹이 Chat ID와 함께 나타나면 **추가**를 누르면 끝입니다.
+de| **Weg 1 (empfohlen, direkt in KingTele):** **Senden Sie nach Schritt 3 eine beliebige Nachricht in der Gruppe** (zum Beispiel `hello`). Öffnen Sie dann in KingTele **Telegram-Gruppen** und klicken Sie auf **Gruppen finden, zu denen der Bot hinzugefügt wurde**. Ihre Gruppe erscheint mit der Chat-ID; klicken Sie auf **Hinzufügen**, fertig.
+fr| **Méthode 1 (recommandée, directement dans KingTele) :** après l'Étape 3, **envoyez un message quelconque dans le groupe** (par exemple `hello`). Ouvrez ensuite **Groupes Telegram** dans KingTele et cliquez sur **Trouver les groupes où le bot a été ajouté**. Le groupe apparaît avec son ID ; cliquez sur **Ajouter** et c'est fait.
+id| **Cara 1 (disarankan, langsung di KingTele):** setelah Langkah 3, **kirim pesan apa pun di grup** (misalnya `hello`). Lalu buka **Grup Telegram** di KingTele dan tekan **Cari grup tempat bot ditambahkan**. Grup akan muncul beserta Chat ID-nya; tekan **Tambah** dan selesai.
+th| **วิธีที่ 1 (แนะนำ ทำใน KingTele ได้เลย):** หลังขั้นตอนที่ 3 ให้ **ส่งข้อความอะไรก็ได้ในกลุ่ม** (เช่น `hello`) แล้วเปิด **กลุ่ม Telegram** ใน KingTele กด **ค้นหากลุ่มที่เพิ่มบอทแล้ว** กลุ่มจะแสดงพร้อม Chat ID กด **เพิ่ม** ก็เสร็จ
+tr| **Yöntem 1 (önerilen, doğrudan KingTele içinde):** 3. adımdan sonra **grupta herhangi bir mesaj gönderin** (örneğin `hello`). Ardından KingTele'de **Telegram grupları** bölümünü açıp **Botun eklendiği grupları bul** düğmesine basın. Grup, Chat ID'siyle birlikte görünür; **Ekle**'ye basın, işlem tamam.
+fi| **Tapa 1 (suositeltu, suoraan KingTelessä):** lähetä vaiheen 3 jälkeen **ryhmään mikä tahansa viesti** (esimerkiksi `hello`). Avaa sitten KingTelessä **Telegram-ryhmät** ja paina **Hae ryhmät, joihin botti on lisätty**. Ryhmä näkyy Chat ID:n kanssa; paina **Lisää**, niin olet valmis.
+
+= Lưu ý: Telegram chỉ giữ thông tin này khoảng **24 giờ**. Nếu không thấy nhóm, hãy nhắn thêm một tin trong nhóm rồi bấm tìm lại.
+en| Note: Telegram only keeps this information for about **24 hours**. If you don't see the group, send another message in the group and search again.
+zh| 注意:Telegram 只会保留这些信息约 **24 小时**。如果没看到群组,请在群里再发一条消息,然后重新查找。
+es| Nota: Telegram solo conserva esta información unas **24 horas**. Si no ves el grupo, envía otro mensaje en el grupo y vuelve a buscar.
+hi| ध्यान दें: Telegram यह जानकारी सिर्फ़ लगभग **24 घंटे** रखता है। ग्रुप न दिखे तो ग्रुप में एक और संदेश भेजें और फिर से खोजें।
+ar| ملاحظة: يحتفظ تيليجرام بهذه المعلومات لمدة **24 ساعة** تقريبًا فقط. إن لم تظهر المجموعة، أرسل رسالة أخرى فيها ثم ابحث مجددًا.
+pt| Observação: o Telegram guarda essa informação por apenas cerca de **24 horas**. Se não vir o grupo, envie outra mensagem no grupo e busque de novo.
+ru| Примечание: Telegram хранит эти данные только около **24 часов**. Если группы не видно, отправьте в ней ещё одно сообщение и повторите поиск.
+ja| 注意:Telegramがこの情報を保持するのは約**24時間**だけです。グループが表示されない場合は、グループでもう一度メッセージを送ってから再検索してください。
+ko| 참고: Telegram은 이 정보를 약 **24시간**만 보관합니다. 그룹이 보이지 않으면 그룹에서 메시지를 한 번 더 보낸 뒤 다시 검색하세요.
+de| Hinweis: Telegram speichert diese Informationen nur etwa **24 Stunden**. Wenn Sie die Gruppe nicht sehen, senden Sie eine weitere Nachricht in der Gruppe und suchen Sie erneut.
+fr| Remarque : Telegram ne conserve ces informations qu'environ **24 heures**. Si vous ne voyez pas le groupe, envoyez un autre message dans le groupe et relancez la recherche.
+id| Catatan: Telegram hanya menyimpan informasi ini sekitar **24 jam**. Jika grup tidak muncul, kirim satu pesan lagi di grup lalu cari ulang.
+th| หมายเหตุ: Telegram เก็บข้อมูลนี้ไว้เพียงประมาณ **24 ชั่วโมง** ถ้าไม่เห็นกลุ่ม ให้ส่งข้อความในกลุ่มอีกหนึ่งข้อความแล้วค้นหาใหม่
+tr| Not: Telegram bu bilgiyi yalnızca yaklaşık **24 saat** saklar. Grubu göremezseniz grupta bir mesaj daha gönderin ve tekrar arayın.
+fi| Huomaa: Telegram säilyttää nämä tiedot vain noin **24 tuntia**. Jos et näe ryhmää, lähetä ryhmään uusi viesti ja hae uudelleen.
+
+= **Cách 2 (dùng bot lấy ID):** thêm bot [@RawDataBot](https://t.me/RawDataBot) vào nhóm. Bot sẽ gửi một đoạn chữ, tìm dòng `"chat": {` rồi dòng `"id":` ngay bên dưới, **dãy số có dấu trừ** đó chính là Chat ID. Lấy xong hãy **xoá bot này khỏi nhóm**.
+en| **Method 2 (use an ID bot):** add the bot [@RawDataBot](https://t.me/RawDataBot) to the group. It sends a block of text; find the line `"chat": {` and the `"id":` line right below it. That **number with a minus sign** is the Chat ID. When you have it, **remove this bot from the group**.
+zh| **方法 2(用 ID 机器人):**把机器人 [@RawDataBot](https://t.me/RawDataBot) 加入群组。它会发出一段文字,找到 `"chat": {` 这一行,紧接着下面的 `"id":` 那一行,**带负号的数字**就是 Chat ID。获取后请把这个机器人**从群组中移除**。
+es| **Forma 2 (con un bot de ID):** añade el bot [@RawDataBot](https://t.me/RawDataBot) al grupo. Enviará un bloque de texto; busca la línea `"chat": {` y la línea `"id":` justo debajo. Ese **número con signo menos** es el Chat ID. Cuando lo tengas, **quita este bot del grupo**.
+hi| **तरीका 2 (ID बॉट से):** बॉट [@RawDataBot](https://t.me/RawDataBot) को ग्रुप में जोड़ें। वह कुछ टेक्स्ट भेजेगा; `"chat": {` वाली लाइन और उसके ठीक नीचे `"id":` वाली लाइन खोजें। वह **ऋण चिह्न वाली संख्या** ही Chat ID है। मिल जाने पर इस बॉट को **ग्रुप से हटा दें**।
+ar| **الطريقة 2 (باستخدام بوت المعرّفات):** أضف البوت [@RawDataBot](https://t.me/RawDataBot) إلى المجموعة. سيرسل نصًا؛ ابحث عن السطر `"chat": {` ثم السطر `"id":` تحته مباشرة، و**الرقم الذي تسبقه علامة ناقص** هو Chat ID. بعد الحصول عليه **أزل هذا البوت من المجموعة**.
+pt| **Método 2 (com um bot de ID):** adicione o bot [@RawDataBot](https://t.me/RawDataBot) ao grupo. Ele envia um bloco de texto; procure a linha `"chat": {` e a linha `"id":` logo abaixo. Esse **número com sinal de menos** é o Chat ID. Depois de anotar, **remova este bot do grupo**.
+ru| **Способ 2 (бот для получения ID):** добавьте бота [@RawDataBot](https://t.me/RawDataBot) в группу. Он пришлёт блок текста; найдите строку `"chat": {` и сразу под ней строку `"id":`. **Число со знаком минус** — это и есть Chat ID. Получив его, **удалите этого бота из группы**.
+ja| **方法2(ID確認用ボットを使う):**ボット [@RawDataBot](https://t.me/RawDataBot) をグループに追加します。ボットが文章を送るので、`"chat": {` の行と、そのすぐ下の `"id":` の行を探してください。**マイナス記号付きの数字**がChat IDです。確認できたら、このボットは**グループから削除**してください。
+ko| **방법 2(ID 확인 봇 사용):** 봇 [@RawDataBot](https://t.me/RawDataBot)을 그룹에 추가하세요. 봇이 글을 보내면 `"chat": {` 줄과 바로 아래 `"id":` 줄을 찾으세요. **마이너스 기호가 붙은 숫자**가 Chat ID입니다. 확인한 뒤에는 이 봇을 **그룹에서 내보내세요**.
+de| **Weg 2 (mit einem ID-Bot):** Fügen Sie den Bot [@RawDataBot](https://t.me/RawDataBot) zur Gruppe hinzu. Er sendet einen Textblock; suchen Sie die Zeile `"chat": {` und direkt darunter die Zeile `"id":`. Diese **Zahl mit Minuszeichen** ist die Chat-ID. Danach **entfernen Sie diesen Bot wieder aus der Gruppe**.
+fr| **Méthode 2 (avec un bot d'ID) :** ajoutez le bot [@RawDataBot](https://t.me/RawDataBot) au groupe. Il envoie un bloc de texte ; repérez la ligne `"chat": {` puis la ligne `"id":` juste en dessous. Ce **nombre précédé d'un signe moins** est l'ID de discussion. Une fois noté, **retirez ce bot du groupe**.
+id| **Cara 2 (pakai bot pencari ID):** tambahkan bot [@RawDataBot](https://t.me/RawDataBot) ke grup. Bot akan mengirim sebaris teks; cari baris `"chat": {` lalu baris `"id":` tepat di bawahnya. **Angka dengan tanda minus** itulah Chat ID. Setelah dapat, **keluarkan bot ini dari grup**.
+th| **วิธีที่ 2 (ใช้บอทดูไอดี):** เพิ่มบอท [@RawDataBot](https://t.me/RawDataBot) เข้ากลุ่ม บอทจะส่งข้อความยาว ให้หาบรรทัด `"chat": {` และบรรทัด `"id":` ที่อยู่ถัดลงมา **ตัวเลขที่มีเครื่องหมายลบ** นั่นคือ Chat ID เมื่อได้แล้ว **นำบอทนี้ออกจากกลุ่ม**
+tr| **Yöntem 2 (ID botu kullanın):** [@RawDataBot](https://t.me/RawDataBot) botunu gruba ekleyin. Bir metin bloğu gönderir; `"chat": {` satırını ve hemen altındaki `"id":` satırını bulun. **Eksi işaretli sayı** Chat ID'dir. Aldıktan sonra bu botu **gruptan çıkarın**.
+fi| **Tapa 2 (ID-botti):** lisää botti [@RawDataBot](https://t.me/RawDataBot) ryhmään. Se lähettää tekstilohkon; etsi rivi `"chat": {` ja heti sen alla oleva rivi `"id":`. **Miinusmerkillinen numero** on Chat ID. Kun olet saanut sen, **poista tämä botti ryhmästä**.
+
+= **Cách 3 (chuyển tiếp tin nhắn):** **chuyển tiếp** (Forward) một tin nhắn bất kỳ của nhóm hoặc kênh đó cho bot [@getidsbot](https://t.me/getidsbot), bot sẽ trả lời Chat ID. Cách này có thể không hiện nếu nhóm đã tắt chuyển tiếp.
+en| **Method 3 (forward a message):** **forward** any message from that group or channel to the bot [@getidsbot](https://t.me/getidsbot) and it replies with the Chat ID. This may not work if the group has forwarding turned off.
+zh| **方法 3(转发消息):**把该群组或频道里的任意一条消息**转发**给机器人 [@getidsbot](https://t.me/getidsbot),它会回复 Chat ID。如果群组关闭了转发功能,这个方法可能无效。
+es| **Forma 3 (reenviar un mensaje):** **reenvía** cualquier mensaje de ese grupo o canal al bot [@getidsbot](https://t.me/getidsbot) y te responderá con el Chat ID. Puede no funcionar si el grupo tiene desactivado el reenvío.
+hi| **तरीका 3 (संदेश फ़ॉरवर्ड करें):** उस ग्रुप या चैनल का कोई भी संदेश बॉट [@getidsbot](https://t.me/getidsbot) को **फ़ॉरवर्ड** करें, वह Chat ID बता देगा। अगर ग्रुप में फ़ॉरवर्ड बंद है तो यह तरीका काम नहीं कर सकता।
+ar| **الطريقة 3 (إعادة توجيه رسالة):** **أعد توجيه** أي رسالة من تلك المجموعة أو القناة إلى البوت [@getidsbot](https://t.me/getidsbot) وسيرد عليك بـ Chat ID. قد لا تعمل هذه الطريقة إذا كان إعادة التوجيه معطّلًا في المجموعة.
+pt| **Método 3 (encaminhar uma mensagem):** **encaminhe** qualquer mensagem desse grupo ou canal para o bot [@getidsbot](https://t.me/getidsbot) e ele responde com o Chat ID. Pode não funcionar se o grupo tiver o encaminhamento desativado.
+ru| **Способ 3 (пересылка сообщения):** **перешлите** любое сообщение из этой группы или канала боту [@getidsbot](https://t.me/getidsbot), и он ответит Chat ID. Может не сработать, если в группе запрещена пересылка.
+ja| **方法3(メッセージを転送):**そのグループまたはチャンネルのメッセージを何か1つ、ボット [@getidsbot](https://t.me/getidsbot) に**転送**すると、Chat IDを返信してくれます。グループで転送が無効になっている場合は表示されないことがあります。
+ko| **방법 3(메시지 전달):** 해당 그룹이나 채널의 메시지 하나를 봇 [@getidsbot](https://t.me/getidsbot)에게 **전달(Forward)**하면 Chat ID를 답장해 줍니다. 그룹에서 전달이 꺼져 있으면 표시되지 않을 수 있습니다.
+de| **Weg 3 (Nachricht weiterleiten):** Leiten Sie eine beliebige Nachricht aus der Gruppe oder dem Kanal an den Bot [@getidsbot](https://t.me/getidsbot) **weiter**; er antwortet mit der Chat-ID. Das funktioniert eventuell nicht, wenn in der Gruppe das Weiterleiten deaktiviert ist.
+fr| **Méthode 3 (transférer un message) :** **transférez** un message quelconque de ce groupe ou canal au bot [@getidsbot](https://t.me/getidsbot) ; il répond avec l'ID de discussion. Cela peut ne pas fonctionner si le transfert est désactivé dans le groupe.
+id| **Cara 3 (teruskan pesan):** **teruskan** pesan apa pun dari grup atau kanal itu ke bot [@getidsbot](https://t.me/getidsbot), lalu bot membalas dengan Chat ID. Cara ini bisa gagal jika grup menonaktifkan penerusan pesan.
+th| **วิธีที่ 3 (ส่งต่อข้อความ):** **ส่งต่อ** ข้อความใดก็ได้จากกลุ่มหรือแชนเนลนั้นไปให้บอท [@getidsbot](https://t.me/getidsbot) บอทจะตอบกลับเป็น Chat ID วิธีนี้อาจใช้ไม่ได้หากกลุ่มปิดการส่งต่อ
+tr| **Yöntem 3 (mesajı iletme):** O grubun veya kanalın herhangi bir mesajını [@getidsbot](https://t.me/getidsbot) botuna **iletin**, bot Chat ID ile yanıt verir. Grupta iletme kapalıysa bu yöntem çalışmayabilir.
+fi| **Tapa 3 (viestin edelleenlähetys):** **lähetä edelleen** mikä tahansa ryhmän tai kanavan viesti botille [@getidsbot](https://t.me/getidsbot), niin se vastaa Chat ID:llä. Tämä ei välttämättä toimi, jos ryhmässä edelleenlähetys on poistettu käytöstä.
+
+= Hai bot ở Cách 2 và Cách 3 là của bên thứ ba, KingTele không liên quan. Chỉ dùng để xem ID, **không chia sẻ token bot của bạn** cho họ.
+en| The bots in Method 2 and Method 3 belong to third parties and are not affiliated with KingTele. Use them only to see the ID, and **never share your own bot's token** with them.
+zh| 方法 2 和方法 3 中的机器人属于第三方,与 KingTele 无关。只用它们查看 ID,**切勿把你自己机器人的令牌分享给它们**。
+es| Los bots de la forma 2 y la forma 3 son de terceros y no tienen relación con KingTele. Úsalos solo para ver el ID y **nunca compartas el token de tu bot** con ellos.
+hi| तरीका 2 और तरीका 3 के बॉट किसी तीसरे पक्ष के हैं, KingTele से उनका कोई संबंध नहीं है। इन्हें सिर्फ़ ID देखने के लिए इस्तेमाल करें और **अपने बॉट का टोकन कभी साझा न करें**।
+ar| البوتان المذكوران في الطريقتين 2 و3 تابعان لأطراف خارجية ولا علاقة لـ KingTele بهما. استخدمهما لمعرفة المعرّف فقط، و**لا تشارك رمز بوتك** معهما أبدًا.
+pt| Os bots do Método 2 e do Método 3 são de terceiros e não têm relação com o KingTele. Use-os apenas para ver o ID e **nunca compartilhe o token do seu bot** com eles.
+ru| Боты из способов 2 и 3 принадлежат третьим лицам и не связаны с KingTele. Используйте их только чтобы узнать ID и **никогда не передавайте им токен своего бота**.
+ja| 方法2と方法3のボットは第三者のもので、KingTeleとは無関係です。IDを確認する目的だけに使い、**ご自身のボットのトークンは絶対に共有しないでください**。
+ko| 방법 2와 방법 3의 봇은 제3자가 운영하며 KingTele과 관련이 없습니다. ID를 확인하는 용도로만 쓰고, **내 봇의 토큰은 절대 공유하지 마세요**.
+de| Die Bots aus Weg 2 und Weg 3 gehören Dritten und haben nichts mit KingTele zu tun. Nutzen Sie sie nur, um die ID zu sehen, und **geben Sie niemals den Token Ihres eigenen Bots weiter**.
+fr| Les bots des méthodes 2 et 3 appartiennent à des tiers et n'ont aucun lien avec KingTele. Utilisez-les uniquement pour voir l'ID et **ne partagez jamais le jeton de votre propre bot** avec eux.
+id| Bot pada Cara 2 dan Cara 3 milik pihak ketiga dan tidak terkait dengan KingTele. Gunakan hanya untuk melihat ID, dan **jangan pernah membagikan token bot Anda** kepada mereka.
+th| บอทในวิธีที่ 2 และ 3 เป็นของบุคคลที่สาม ไม่เกี่ยวข้องกับ KingTele ใช้เพื่อดูไอดีเท่านั้น และ **ห้ามแชร์โทเคนบอทของคุณ** ให้พวกเขา
+tr| Yöntem 2 ve 3'teki botlar üçüncü tarafların olup KingTele ile ilgisi yoktur. Yalnızca ID'yi görmek için kullanın ve **kendi botunuzun belirtecini asla paylaşmayın**.
+fi| Tavoissa 2 ja 3 mainitut botit ovat kolmansien osapuolten eikä niillä ole yhteyttä KingTeleen. Käytä niitä vain ID:n katsomiseen äläkä **koskaan jaa oman bottisi tunnistetta** niille.
+
+= Dán Chat ID vào ô, **giữ nguyên dấu trừ** ở đầu, rồi bấm **Thêm nhóm**. Thành công khi thấy nhãn xanh **Bot truy cập được**.
+en| Paste the Chat ID into the field, **keep the minus sign** at the start, then press **Add group**. It worked when you see the green label **Bot has access**.
+zh| 把 Chat ID 粘贴到输入框,**保留开头的负号**,然后点击**添加群组**。看到绿色标签**机器人可访问**就表示成功。
+es| Pega el Chat ID en el campo, **conserva el signo menos** del principio y pulsa **Añadir grupo**. Todo va bien cuando veas la etiqueta verde **El bot tiene acceso**.
+hi| Chat ID को बॉक्स में पेस्ट करें, शुरू का **ऋण चिह्न बनाए रखें**, फिर **ग्रुप जोड़ें** दबाएँ। हरे लेबल **बॉट की पहुँच है** दिखे तो सफल है।
+ar| الصق Chat ID في الحقل، و**أبقِ علامة الناقص** في البداية، ثم اضغط **إضافة مجموعة**. يكتمل الأمر عندما ترى الوسم الأخضر **البوت لديه صلاحية الوصول**.
+pt| Cole o Chat ID no campo, **mantenha o sinal de menos** no início e clique em **Adicionar grupo**. Deu certo quando aparecer o rótulo verde **O bot tem acesso**.
+ru| Вставьте Chat ID в поле, **сохраните знак минус** в начале и нажмите **Добавить группу**. Всё получилось, если появилась зелёная метка **У бота есть доступ**.
+ja| Chat IDを入力欄に貼り付け、先頭の**マイナス記号はそのまま**にして**グループを追加**を押します。緑のラベル**ボットがアクセス可能**が表示されれば成功です。
+ko| Chat ID를 칸에 붙여넣고 앞의 **마이너스 기호를 그대로 둔** 채 **그룹 추가**를 누르세요. 초록색 **봇 접근 가능** 표시가 보이면 성공입니다.
+de| Fügen Sie die Chat-ID in das Feld ein, **behalten Sie das Minuszeichen** am Anfang bei und klicken Sie auf **Gruppe hinzufügen**. Es hat geklappt, wenn das grüne Label **Bot hat Zugriff** erscheint.
+fr| Collez l'ID dans le champ, **conservez le signe moins** au début, puis cliquez sur **Ajouter un groupe**. C'est réussi quand l'étiquette verte **Le bot y a accès** apparaît.
+id| Tempel Chat ID ke kolom, **pertahankan tanda minus** di awal, lalu tekan **Tambah grup**. Berhasil jika muncul label hijau **Bot bisa mengakses**.
+th| วาง Chat ID ลงในช่อง **เก็บเครื่องหมายลบ** ไว้ที่ด้านหน้า แล้วกด **เพิ่มกลุ่ม** สำเร็จเมื่อเห็นป้ายสีเขียว **บอทเข้าถึงได้**
+tr| Chat ID'yi alana yapıştırın, baştaki **eksi işaretini koruyun** ve **Grup ekle**'ye basın. Yeşil **Bot erişebiliyor** etiketini görünce tamamdır.
+fi| Liitä Chat ID kenttään, **säilytä alussa oleva miinusmerkki** ja paina **Lisää ryhmä**. Onnistui, kun näet vihreän merkinnän **Botilla on pääsy**.
+
+= Báo lỗi **Bot không truy cập được nhóm này**? Kiểm tra: (1) bot đã được **thêm vào nhóm** chưa; (2) với kênh: bot đã là **quản trị viên** chưa; (3) Chat ID đã **đủ dấu trừ và đủ chữ số** chưa.
+en| Got the error **The bot can't access this group**? Check: (1) has the bot been **added to the group**; (2) for a channel, is the bot an **administrator**; (3) does the Chat ID have **the minus sign and all its digits**.
+zh| 提示**机器人无法访问此群组**?请检查:(1)机器人是否已**加入群组**;(2)如果是频道,机器人是否已是**管理员**;(3)Chat ID 是否**带负号且数字完整**。
+es| ¿Aparece el error **El bot no puede acceder a este grupo**? Comprueba: (1) que el bot esté **añadido al grupo**; (2) en un canal, que el bot sea **administrador**; (3) que el Chat ID tenga **el signo menos y todos sus dígitos**.
+hi| **बॉट इस ग्रुप तक नहीं पहुँच पा रहा** त्रुटि आई? जाँचें: (1) बॉट को **ग्रुप में जोड़ा** गया है या नहीं; (2) चैनल हो तो बॉट **एडमिन** है या नहीं; (3) Chat ID में **ऋण चिह्न और सभी अंक** पूरे हैं या नहीं।
+ar| ظهر الخطأ **لا يستطيع البوت الوصول إلى هذه المجموعة**؟ تحقق من: (1) أن البوت **مضاف إلى المجموعة**؛ (2) في القنوات: أن البوت **مشرف**؛ (3) أن Chat ID يحتوي على **علامة الناقص وجميع الأرقام**.
+pt| Apareceu o erro **O bot não consegue acessar este grupo**? Verifique: (1) se o bot foi **adicionado ao grupo**; (2) em canais, se o bot é **administrador**; (3) se o Chat ID tem **o sinal de menos e todos os dígitos**.
+ru| Ошибка **У бота нет доступа к этой группе**? Проверьте: (1) **добавлен ли бот в группу**; (2) для канала — **является ли бот администратором**; (3) **есть ли в Chat ID минус и все цифры**.
+ja| **ボットがこのグループにアクセスできません**というエラーが出ましたか?次を確認してください。(1)ボットが**グループに追加**されているか、(2)チャンネルの場合はボットが**管理者**か、(3)Chat IDに**マイナス記号と全ての桁**があるか。
+ko| **봇이 이 그룹에 접근할 수 없습니다** 오류가 나나요? 확인하세요: (1) 봇이 **그룹에 추가**되었는지, (2) 채널이라면 봇이 **관리자**인지, (3) Chat ID에 **마이너스 기호와 모든 숫자**가 있는지.
+de| Fehler **Der Bot hat keinen Zugriff auf diese Gruppe**? Prüfen Sie: (1) ist der Bot **zur Gruppe hinzugefügt**; (2) bei Kanälen: ist der Bot **Administrator**; (3) hat die Chat-ID **das Minuszeichen und alle Ziffern**.
+fr| Erreur **Le bot n'a pas accès à ce groupe** ? Vérifiez : (1) que le bot est **ajouté au groupe** ; (2) pour un canal, qu'il est **administrateur** ; (3) que l'ID a **le signe moins et tous ses chiffres**.
+id| Muncul error **Bot tidak bisa mengakses grup ini**? Periksa: (1) apakah bot sudah **ditambahkan ke grup**; (2) untuk kanal, apakah bot sudah menjadi **administrator**; (3) apakah Chat ID punya **tanda minus dan semua digitnya**.
+th| ขึ้นข้อผิดพลาด **บอทเข้าถึงกลุ่มนี้ไม่ได้**? ตรวจสอบว่า (1) บอทถูก **เพิ่มเข้ากลุ่ม** แล้วหรือยัง (2) ถ้าเป็นแชนเนล บอทเป็น **ผู้ดูแล** แล้วหรือยัง (3) Chat ID มี **เครื่องหมายลบและตัวเลขครบ** หรือไม่
+tr| **Bot bu gruba erişemiyor** hatası mı aldınız? Kontrol edin: (1) bot **gruba eklendi** mi; (2) kanalsa bot **yönetici** mi; (3) Chat ID'de **eksi işareti ve tüm rakamlar** var mı.
+fi| Tuliko virhe **Botilla ei ole pääsyä tähän ryhmään**? Tarkista: (1) onko botti **lisätty ryhmään**; (2) kanavassa: onko botti **ylläpitäjä**; (3) onko Chat ID:ssä **miinusmerkki ja kaikki numerot**.
+
+= Bước 5. Đăng thử bài đầu tiên
+en| Step 5. Send your first test post
+zh| 第 5 步:发布第一条测试内容
+es| Paso 5. Publica tu primera prueba
+hi| चरण 5. पहली टेस्ट पोस्ट भेजें
+ar| الخطوة 5. جرّب أول منشور
+pt| Passo 5. Publique seu primeiro teste
+ru| Шаг 5. Опубликуйте первое тестовое сообщение
+ja| ステップ5:最初のテスト投稿を送る
+ko| 5단계. 첫 테스트 게시물 보내기
+de| Schritt 5. Ersten Testbeitrag senden
+fr| Étape 5. Publiez votre première publication test
+id| Langkah 5. Kirim postingan uji pertama
+th| ขั้นตอนที่ 5 ลองโพสต์แรก
+tr| Adım 5. İlk deneme gönderinizi yapın
+fi| Vaihe 5. Lähetä ensimmäinen testijulkaisu
+
+= Vào mục **Bài đăng** → bấm **Bài mới**. Nhập tiêu đề và nội dung, **chọn nhóm** nhận bài, rồi đặt lịch: một lần, hằng ngày, theo thứ hoặc theo chu kỳ.
+en| Open **Posts** → press **New post**. Enter a title and content, **choose the groups** that receive it, then set the schedule: once, daily, by weekday or at an interval.
+zh| 打开**内容** → 点击**新建内容**。填写标题和正文,**选择接收的群组**,然后设置计划:单次、每天、按星期或按间隔。
+es| Entra en **Publicaciones** → pulsa **Nueva publicación**. Escribe el título y el contenido, **elige los grupos** que la recibirán y fija la programación: una vez, a diario, por día de la semana o por intervalo.
+hi| **पोस्ट** खोलें → **नई पोस्ट** दबाएँ। शीर्षक और सामग्री लिखें, पोस्ट पाने वाले **ग्रुप चुनें**, फिर शेड्यूल तय करें: एक बार, रोज़, सप्ताह के दिन के अनुसार या अंतराल पर।
+ar| افتح **المنشورات** ← اضغط **منشور جديد**. أدخل العنوان والمحتوى، و**اختر المجموعات** التي ستستلمه، ثم حدد الجدولة: مرة واحدة أو يوميًا أو حسب أيام الأسبوع أو بفاصل زمني.
+pt| Abra **Publicações** → clique em **Nova publicação**. Informe título e conteúdo, **escolha os grupos** que vão receber e defina o agendamento: uma vez, diário, por dia da semana ou por intervalo.
+ru| Откройте **Публикации** → нажмите **Новая публикация**. Введите заголовок и текст, **выберите группы**-получатели и задайте расписание: один раз, ежедневно, по дням недели или с интервалом.
+ja| **投稿**を開き → **新規投稿**を押します。タイトルと内容を入力し、受け取る**グループを選んで**、スケジュールを設定します(1回、毎日、曜日、間隔)。
+ko| **게시물**을 열고 → **새 게시물**을 누르세요. 제목과 내용을 입력하고, 받을 **그룹을 선택**한 다음 일정을 정합니다: 1회, 매일, 요일별 또는 주기.
+de| Öffnen Sie **Beiträge** → klicken Sie auf **Neuer Beitrag**. Geben Sie Titel und Inhalt ein, **wählen Sie die Gruppen** aus und legen Sie den Zeitplan fest: einmalig, täglich, nach Wochentagen oder im Intervall.
+fr| Ouvrez **Publications** → cliquez sur **Nouvelle publication**. Saisissez un titre et le contenu, **choisissez les groupes** destinataires, puis définissez la planification : une fois, chaque jour, par jour de la semaine ou à intervalle régulier.
+id| Buka **Postingan** → tekan **Postingan baru**. Isi judul dan konten, **pilih grup** penerima, lalu atur jadwal: sekali, harian, per hari dalam seminggu, atau berulang dengan interval.
+th| เปิด **โพสต์** → กด **โพสต์ใหม่** ใส่ชื่อเรื่องและเนื้อหา **เลือกกลุ่ม** ที่จะรับโพสต์ แล้วตั้งเวลา: ครั้งเดียว รายวัน ตามวัน หรือตามรอบ
+tr| **Gönderiler** bölümünü açın → **Yeni gönderi**'ye basın. Başlık ve içeriği girin, gönderiyi alacak **grupları seçin**, ardından zamanlamayı belirleyin: tek sefer, günlük, haftanın günlerine göre veya aralıklı.
+fi| Avaa **Julkaisut** → paina **Uusi julkaisu**. Kirjoita otsikko ja sisältö, **valitse ryhmät**, jotka saavat julkaisun, ja aseta aikataulu: kerran, päivittäin, viikonpäivien mukaan tai välein.
+
+= Trước khi tin vào lịch, hãy bấm **Gửi ngay** ở bài vừa tạo một lần: tin nhắn sẽ xuất hiện trong nhóm sau vài giây. Xem kết quả ở mục **Nhật ký gửi**.
+en| Before trusting the schedule, press **Send now** on the post you just created: the message appears in the group within a few seconds. See the result under **Send log**.
+zh| 在相信计划之前,先对刚创建的内容点击一次**立即发送**:几秒后消息就会出现在群里。结果可在**发送日志**中查看。
+es| Antes de fiarte de la programación, pulsa **Enviar ahora** en la publicación recién creada: el mensaje aparecerá en el grupo en unos segundos. Consulta el resultado en **Registro de envíos**.
+hi| शेड्यूल पर भरोसा करने से पहले, अभी बनाई पोस्ट पर एक बार **अभी भेजें** दबाएँ: संदेश कुछ सेकंड में ग्रुप में दिख जाएगा। नतीजा **भेजने का लॉग** में देखें।
+ar| قبل الاعتماد على الجدولة، اضغط **إرسال الآن** على المنشور الذي أنشأته للتو: ستظهر الرسالة في المجموعة خلال ثوانٍ. شاهد النتيجة في **سجل الإرسال**.
+pt| Antes de confiar no agendamento, clique em **Enviar agora** na publicação que acabou de criar: a mensagem aparece no grupo em poucos segundos. Veja o resultado em **Registro de envios**.
+ru| Прежде чем полагаться на расписание, один раз нажмите **Отправить сейчас** у только что созданной публикации: сообщение появится в группе через несколько секунд. Результат смотрите в **Журнале отправок**.
+ja| スケジュールを信用する前に、作成した投稿で一度**今すぐ送信**を押してください。数秒でグループにメッセージが届きます。結果は**送信履歴**で確認できます。
+ko| 일정을 믿기 전에 방금 만든 게시물에서 **지금 발송**을 한 번 눌러 보세요. 몇 초 안에 그룹에 메시지가 나타납니다. 결과는 **발송 기록**에서 확인하세요.
+de| Bevor Sie sich auf den Zeitplan verlassen, klicken Sie beim neuen Beitrag einmal auf **Jetzt senden**: Die Nachricht erscheint nach wenigen Sekunden in der Gruppe. Das Ergebnis sehen Sie im **Versandprotokoll**.
+fr| Avant de vous fier au planning, cliquez une fois sur **Envoyer maintenant** sur la publication que vous venez de créer : le message apparaît dans le groupe en quelques secondes. Consultez le résultat dans **Historique des envois**.
+id| Sebelum mengandalkan jadwal, tekan **Kirim sekarang** pada postingan yang baru dibuat: pesan akan muncul di grup dalam beberapa detik. Lihat hasilnya di **Catatan pengiriman**.
+th| ก่อนเชื่อมั่นในตารางเวลา ให้กด **ส่งทันที** ที่โพสต์ที่เพิ่งสร้างหนึ่งครั้ง ข้อความจะขึ้นในกลุ่มภายในไม่กี่วินาที ดูผลได้ที่ **บันทึกการส่ง**
+tr| Zamanlamaya güvenmeden önce yeni oluşturduğunuz gönderide bir kez **Şimdi gönder**'e basın: mesaj birkaç saniye içinde grupta görünür. Sonucu **Gönderim günlüğü** bölümünde görün.
+fi| Ennen kuin luotat aikatauluun, paina juuri luodulla julkaisulla kerran **Lähetä nyt**: viesti ilmestyy ryhmään muutamassa sekunnissa. Näet tuloksen kohdassa **Lähetysloki**.
+
+= Mỗi lượt gửi thành công tới một nhóm trừ **1 Điểm King**. Bạn được tặng sẵn **500 điểm** khi đăng ký, điểm danh mỗi ngày nhận thêm **50 điểm**.
+en| Each successful send to one group costs **1 King Point**. You get **500 points** free at sign-up, and **50 more** each day you check in.
+zh| 每向一个群组成功发送一次,扣 **1 King 积分**。注册时已赠送 **500 积分**,每天签到再得 **50 积分**。
+es| Cada envío correcto a un grupo cuesta **1 Punto King**. Recibes **500 puntos** de regalo al registrarte y **50 más** cada día que marcas asistencia.
+hi| किसी ग्रुप में हर सफल भेजने पर **1 King पॉइंट** कटता है। साइन अप पर आपको **500 पॉइंट** मुफ़्त मिलते हैं और हर दिन चेक-इन करने पर **50 और**।
+ar| كل إرسال ناجح إلى مجموعة يخصم **نقطة King واحدة**. تحصل على **500 نقطة** هدية عند التسجيل، و**50 نقطة إضافية** كل يوم تسجّل فيه حضورك.
+pt| Cada envio bem-sucedido a um grupo custa **1 Ponto King**. Você ganha **500 pontos** de presente no cadastro e **mais 50** a cada dia em que faz check-in.
+ru| Каждая успешная отправка в одну группу стоит **1 King-балл**. При регистрации вам дарят **500 баллов**, а за ежедневную отметку добавляется ещё **50 баллов**.
+ja| 1つのグループへの送信が成功するたびに**1 Kingポイント**を消費します。登録時に**500ポイント**をプレゼントし、毎日のチェックインでさらに**50ポイント**もらえます。
+ko| 한 그룹에 성공적으로 보낼 때마다 **1 King 포인트**가 차감됩니다. 가입 시 **500포인트**를 드리고, 매일 출석 체크하면 **50포인트**를 더 받습니다.
+de| Jede erfolgreiche Sendung an eine Gruppe kostet **1 King-Punkt**. Bei der Anmeldung erhalten Sie **500 Punkte** geschenkt und für jedes tägliche Einchecken **50 weitere**.
+fr| Chaque envoi réussi vers un groupe coûte **1 Point King**. Vous recevez **500 points** offerts à l'inscription et **50 de plus** chaque jour de pointage.
+id| Setiap pengiriman berhasil ke satu grup mengurangi **1 Poin King**. Anda mendapat **500 poin** gratis saat mendaftar, dan **50 poin lagi** setiap hari saat absen.
+th| ส่งสำเร็จไปยังหนึ่งกลุ่มหัก **1 คะแนน King** คุณได้ **500 คะแนน** ฟรีเมื่อสมัคร และได้เพิ่มอีก **50 คะแนน** ทุกวันที่เช็กอิน
+tr| Bir gruba başarılı her gönderim **1 King Puanı** düşer. Kayıtta **500 puan** hediye alırsınız, her gün yoklama yaptığınızda **50 puan** daha kazanırsınız.
+fi| Jokainen onnistunut lähetys yhteen ryhmään maksaa **1 King-pisteen**. Saat **500 pistettä** lahjaksi rekisteröityessäsi ja **50 lisää** jokaisesta päivästä, jona kirjaudut läsnäoloon.
+
+= Bot đang gắn với dịch vụ khác (webhook) nên không dò được nhóm. Hãy nhập Chat ID thủ công.
+en| The bot is attached to another service (webhook), so groups can't be detected. Please enter the Chat ID manually.
+zh| 该机器人已绑定到其他服务(webhook),因此无法自动查找群组。请手动输入 Chat ID。
+es| El bot está vinculado a otro servicio (webhook), por lo que no se pueden detectar grupos. Introduce el Chat ID manualmente.
+hi| बॉट किसी दूसरी सेवा (webhook) से जुड़ा है, इसलिए ग्रुप नहीं खोजे जा सकते। कृपया Chat ID हाथ से दर्ज करें।
+ar| البوت مرتبط بخدمة أخرى (webhook) لذا لا يمكن اكتشاف المجموعات. يرجى إدخال Chat ID يدويًا.
+pt| O bot está ligado a outro serviço (webhook), então não é possível detectar grupos. Informe o Chat ID manualmente.
+ru| Бот привязан к другому сервису (webhook), поэтому группы найти не удаётся. Введите Chat ID вручную.
+ja| ボットが別のサービス(webhook)に紐づいているため、グループを検出できません。Chat IDを手動で入力してください。
+ko| 봇이 다른 서비스(webhook)에 연결되어 있어 그룹을 찾을 수 없습니다. Chat ID를 직접 입력하세요.
+de| Der Bot ist mit einem anderen Dienst verbunden (Webhook), daher können keine Gruppen erkannt werden. Bitte geben Sie die Chat-ID manuell ein.
+fr| Le bot est relié à un autre service (webhook), les groupes ne peuvent donc pas être détectés. Saisissez l'ID de discussion manuellement.
+id| Bot terhubung ke layanan lain (webhook) sehingga grup tidak bisa dideteksi. Silakan masukkan Chat ID secara manual.
+th| บอทผูกอยู่กับบริการอื่น (webhook) จึงตรวจหากลุ่มไม่ได้ โปรดกรอก Chat ID ด้วยตนเอง
+tr| Bot başka bir hizmete (webhook) bağlı olduğundan gruplar algılanamıyor. Lütfen Chat ID'yi elle girin.
+fi| Botti on liitetty toiseen palveluun (webhook), joten ryhmiä ei voi tunnistaa. Syötä Chat ID käsin.

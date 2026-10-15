@@ -446,8 +446,23 @@ async function groupsView() {
       h('div', { class: 'field' }, h('label', { for: 'g-title' }, 'Tên hiển thị'), title)),
     h('p', { class: 'hint' }, 'Thêm bot vào nhóm trước (với kênh: đặt bot làm quản trị viên có quyền đăng). Nhóm riêng tư dùng Chat ID dạng -100xxxxxxxxxx.'),
     err, h('div', null, addBtn));
+
+  const found = h('div', { class: 'list' });
+  const findHint = h('p', { class: 'hint', role: 'status' });
+  const findBtn = h('button', { class: 'btn', type: 'button', onclick: (e) => act(e.currentTarget, async () => {
+    const list = await api('GET', '/groups/discover');
+    found.replaceChildren(...list.map((c) => h('div', { class: 'li' },
+      h('div', { class: 'li-main' }, h('div', { class: 'li-t' }, c.title), h('div', { class: 'li-s mono' }, c.chatId)),
+      h('span', { class: 'tag' }, c.type === 'channel' ? 'Kênh' : 'Nhóm'),
+      h('button', { class: 'btn btn-sm btn-primary', type: 'button', onclick: (ev) => act(ev.currentTarget, async () => { await api('POST', '/groups', { chatId: c.chatId, title: c.title }); route(); }, 'Đã thêm nhóm') }, ico('plus'), 'Thêm'))));
+    findHint.textContent = list.length ? '' : 'Chưa thấy nhóm nào. Hãy thêm bot vào nhóm, gửi một tin nhắn bất kỳ trong nhóm rồi bấm tìm lại.';
+  }) }, ico('refresh'), 'Tìm nhóm bot đã thêm');
+  const finder = h('div', { class: 'card card-pad form-grid', style: 'margin-top:16px' }, h('h2', null, 'Chưa biết Chat ID? KingTele tìm giúp bạn'),
+    rich('Đã thêm bot vào nhóm nhưng chưa biết Chat ID? **Gửi một tin nhắn bất kỳ trong nhóm**, rồi bấm nút bên dưới. Nhóm riêng tư cũng tìm được.', 'hint'),
+    h('div', null, findBtn), findHint, found);
+
   return h('div', null,
-    pageHead('Nhóm Telegram', 'Các nhóm và kênh có thể nhận bài đăng'), form,
+    pageHead('Nhóm Telegram', 'Các nhóm và kênh có thể nhận bài đăng'), form, finder,
     h('div', { style: 'height:20px' }),
     groups.length ? h('div', { class: 'card card-pad' }, h('div', { class: 'list' }, groups.map((g) => h('div', { class: 'li' },
       h('div', { class: 'li-main' }, h('div', { class: 'li-t' }, g.title), h('div', { class: 'li-s mono' }, g.chatId)),
@@ -496,6 +511,112 @@ function passwordForm() {
     err, h('div', null, h('button', { class: 'btn', type: 'submit' }, 'Đổi mật khẩu')));
 }
 
+/** Đoạn văn có chữ đậm, mã lệnh và link (cú pháp markdown): dịch cả câu rồi mới dựng (xem i18n.js). */
+function rich(text, cls, tag = 'p') {
+  const e = h(tag, { class: cls || null });
+  e.setAttribute('data-rich', text);
+  e.setAttribute('translate', 'no'); // nội dung con đã được dịch bởi rich()
+  if (window.I18N && window.I18N.rich) window.I18N.rich(e); else e.textContent = text;
+  return e;
+}
+
+// ---- Hình minh hoạ: mô phỏng giao diện Telegram (nhãn bằng tiếng Anh vì Telegram hiển thị theo ngôn ngữ máy) ----
+const mockBox = (...kids) => { const e = h('div', { class: 'tgmock', dir: 'ltr' }, ...kids); e.setAttribute('translate', 'no'); return e; };
+const bubble = (who, ...kids) => h('div', { class: `tb ${who}` }, ...kids);
+const mockCaption = () => h('div', { class: 'mock-cap' }, 'Hình minh hoạ (ví dụ)');
+
+function mockBotFather() {
+  return h('div', null, mockCaption(), mockBox(
+    h('div', { class: 'tgbar' }, h('span', { class: 'tgav' }, 'B'), h('strong', null, 'BotFather'), h('span', { class: 'verified' }, '✓')),
+    bubble('me', '/newbot'),
+    bubble('bot', 'Alright, a new bot. How are we going to call it? Please choose a name for your bot.'),
+    bubble('me', 'My KingTele Bot'),
+    bubble('bot', 'Good. Now let\'s choose a username for your bot. It must end in ', h('b', null, 'bot'), '. Like this, for example: TetrisBot or tetris_bot.'),
+    bubble('me', 'kingtele_cuaban_bot'),
+    bubble('bot', 'Done! Congratulations on your new bot. You will find it at t.me/kingtele_cuaban_bot.', h('br'), h('br'),
+      'Use this token to access the HTTP API:', h('br'), h('mark', null, '123456789:AAHxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'), h('br'), h('br'),
+      'Keep your token secure and store it safely, it can be used by anyone to control your bot.')));
+}
+
+function mockAddToGroup() {
+  const chip = (t) => h('span', { class: 'pchip' }, t);
+  const arr = () => h('span', { class: 'parr' }, '›');
+  const row = (...c) => h('div', { class: 'pathrow' }, ...c.flatMap((x, i) => (i ? [arr(), x] : [x])));
+  return h('div', null, mockCaption(), mockBox(
+    h('div', { class: 'mlabel' }, 'Group'),
+    row(chip('Group name'), chip('Add members'), chip('@kingtele_cuaban_bot'), chip('Add')),
+    h('div', { class: 'mlabel' }, 'Channel'),
+    row(chip('Channel name'), chip('Administrators'), chip('Add Administrator'), chip('@kingtele_cuaban_bot')),
+    h('div', { class: 'toggle-row' }, h('span', null, 'Post messages'), h('span', { class: 'switch-on' }, h('i'))),
+    h('div', { class: 'pathrow' }, chip('Save'))));
+}
+
+function mockChatId() {
+  return h('div', null, mockCaption(), mockBox(
+    h('div', { class: 'mlabel' }, '@RawDataBot'),
+    h('pre', { class: 'jsonmock' }, '"chat": {\n  ', h('span', { class: 'hl' }, '"id": -1001234567890,'), '\n  "title": "My private group",\n  "type": "supergroup"\n}'),
+    h('div', { class: 'mlabel' }, 'KingTele'),
+    h('div', { class: 'found-mock' }, h('div', null, h('strong', null, 'My private group'), h('div', { class: 'mono' }, h('span', { class: 'hl' }, '-1001234567890'))), h('span', { class: 'mbtn' }, '+ Add'))));
+}
+
+function guideCard(hasBot) {
+  const step = (n, title, ...body) => h('section', { class: 'gstep' },
+    h('div', { class: 'gnum', 'aria-hidden': 'true' }, String(n)),
+    h('div', { class: 'gbody' }, h('h3', null, title), ...body));
+  const list = (...items) => h('ol', { class: 'gl' }, items.map((t) => h('li', null, rich(t))));
+  const bullets = (...items) => h('ul', { class: 'gl gl-b' }, items.map((t) => h('li', null, rich(t))));
+  const callout = (text, kind) => rich(text, `callout ${kind || ''}`.trim());
+  return h('details', { class: 'card guide-card', open: !hasBot },
+    h('summary', null, 'Hướng dẫn kết nối Telegram: làm theo 5 bước là chạy'),
+    h('div', { class: 'guide-body' },
+      rich('Bạn chỉ cần **một tài khoản Telegram** (cài ứng dụng tại [telegram.org/apps](https://telegram.org/apps)). Cả 5 bước mất khoảng **5 phút**. Các bước khó đều có hình minh hoạ.', 'lead'),
+
+      step(1, 'Bước 1. Tạo bot Telegram của bạn',
+        list(
+          'Mở Telegram, bấm biểu tượng **kính lúp** và tìm **BotFather**. Chọn tài khoản có **dấu tích xanh** (chính chủ), hoặc bấm thẳng vào [t.me/BotFather](https://t.me/BotFather).',
+          'Bấm **Start** (Bắt đầu), rồi gõ `/newbot` và gửi đi.',
+          'BotFather hỏi **tên bot**: gõ một tên hiển thị bất kỳ, ví dụ `My KingTele Bot`.',
+          'Tiếp theo gõ **username** cho bot. Username phải **kết thúc bằng** `bot`, chỉ gồm chữ không dấu, số và dấu gạch dưới, và chưa ai dùng. Ví dụ: `kingtele_cuaban_bot`. Nếu báo bị trùng, hãy thêm vài con số.',
+          'Khi thành công, BotFather gửi tin nhắn có dòng **Use this token to access the HTTP API** kèm một chuỗi dạng `123456789:AAH...`. Đó là **token**. **Nhấn giữ** vào chuỗi đó để **sao chép**.'),
+        mockBotFather(),
+        callout('**Giữ kín token.** Ai có token là điều khiển được bot của bạn: đừng gửi cho người lạ hay đăng công khai. Nếu lỡ lộ, nhắn `/revoke` cho BotFather để đổi token mới.', 'warn')),
+
+      step(2, 'Bước 2. Dán token vào KingTele',
+        list(
+          'Kéo xuống phần **Bot Telegram** ngay bên dưới, **dán token** vào ô **Token từ @BotFather**.',
+          'Bấm nút **Lưu & kiểm tra**. Thành công khi thấy dòng **Kết nối thành công: @tên_bot**.',
+          'Báo lỗi? Hãy chắc rằng bạn đã **sao chép đủ cả chuỗi token** (có dấu `:` ở giữa) và **không thừa khoảng trắng** ở đầu hoặc cuối.')),
+
+      step(3, 'Bước 3. Thêm bot vào nhóm hoặc kênh',
+        bullets(
+          '**Nhóm:** mở nhóm, bấm vào **tên nhóm** ở thanh trên cùng, chọn **Thêm thành viên** (Add members), gõ **username bot** của bạn (ví dụ `@kingtele_cuaban_bot`), chọn bot rồi bấm **Thêm**.',
+          '**Kênh:** mở kênh, bấm **tên kênh** → **Quản trị viên** (Administrators) → **Thêm quản trị viên**, chọn bot của bạn, bật quyền **Đăng tin nhắn** (Post messages) rồi bấm **Lưu**.',
+          'Nếu nhóm đang **chỉ cho quản trị viên nhắn tin**, hãy đặt bot làm **quản trị viên** của nhóm.',
+          'Bạn phải là **chủ hoặc quản trị viên** của nhóm hoặc kênh thì mới thêm được bot.'),
+        mockAddToGroup()),
+
+      step(4, 'Bước 4. Thêm nhóm vào KingTele (kể cả nhóm riêng tư)',
+        rich('Vào mục **Nhóm Telegram** của KingTele (menu bên trái), điền ô **Chat ID hoặc @username**. Có 2 trường hợp:'),
+        bullets(
+          '**Nhóm hoặc kênh công khai** (có link dạng `t.me/tennhom`): chỉ cần gõ `@tennhom`, ví dụ `@kingtele_group`.',
+          '**Nhóm riêng tư** (chỉ vào được bằng link mời, không có @username): cần **Chat ID**, là dãy số thường **bắt đầu bằng** `-100`, ví dụ `-1001234567890`. Có 3 cách lấy, **Cách 1 dễ nhất**:'),
+        h('div', { class: 'methods' },
+          rich('**Cách 1 (khuyên dùng, ngay trong KingTele):** sau Bước 3, hãy **gửi một tin nhắn bất kỳ trong nhóm** (ví dụ `hello`). Rồi vào mục **Nhóm Telegram** của KingTele, bấm **Tìm nhóm bot đã thêm**. Nhóm sẽ hiện ra kèm Chat ID, bấm **Thêm** là xong.', 'method'),
+          rich('Lưu ý: Telegram chỉ giữ thông tin này khoảng **24 giờ**. Nếu không thấy nhóm, hãy nhắn thêm một tin trong nhóm rồi bấm tìm lại.', 'hint'),
+          rich('**Cách 2 (dùng bot lấy ID):** thêm bot [@RawDataBot](https://t.me/RawDataBot) vào nhóm. Bot sẽ gửi một đoạn chữ, tìm dòng `"chat": {` rồi dòng `"id":` ngay bên dưới, **dãy số có dấu trừ** đó chính là Chat ID. Lấy xong hãy **xoá bot này khỏi nhóm**.', 'method'),
+          rich('**Cách 3 (chuyển tiếp tin nhắn):** **chuyển tiếp** (Forward) một tin nhắn bất kỳ của nhóm hoặc kênh đó cho bot [@getidsbot](https://t.me/getidsbot), bot sẽ trả lời Chat ID. Cách này có thể không hiện nếu nhóm đã tắt chuyển tiếp.', 'method'),
+          rich('Hai bot ở Cách 2 và Cách 3 là của bên thứ ba, KingTele không liên quan. Chỉ dùng để xem ID, **không chia sẻ token bot của bạn** cho họ.', 'hint')),
+        mockChatId(),
+        rich('Dán Chat ID vào ô, **giữ nguyên dấu trừ** ở đầu, rồi bấm **Thêm nhóm**. Thành công khi thấy nhãn xanh **Bot truy cập được**.'),
+        callout('Báo lỗi **Bot không truy cập được nhóm này**? Kiểm tra: (1) bot đã được **thêm vào nhóm** chưa; (2) với kênh: bot đã là **quản trị viên** chưa; (3) Chat ID đã **đủ dấu trừ và đủ chữ số** chưa.', 'warn')),
+
+      step(5, 'Bước 5. Đăng thử bài đầu tiên',
+        list(
+          'Vào mục **Bài đăng** → bấm **Bài mới**. Nhập tiêu đề và nội dung, **chọn nhóm** nhận bài, rồi đặt lịch: một lần, hằng ngày, theo thứ hoặc theo chu kỳ.',
+          'Trước khi tin vào lịch, hãy bấm **Gửi ngay** ở bài vừa tạo một lần: tin nhắn sẽ xuất hiện trong nhóm sau vài giây. Xem kết quả ở mục **Nhật ký gửi**.',
+          'Mỗi lượt gửi thành công tới một nhóm trừ **1 Điểm King**. Bạn được tặng sẵn **500 điểm** khi đăng ký, điểm danh mỗi ngày nhận thêm **50 điểm**.'))));
+}
+
 async function settingsView() {
   const s = await api('GET', '/settings');
   state.tz = s.timezone;
@@ -507,12 +628,7 @@ async function settingsView() {
   return h('div', null,
     pageHead('Cài đặt', 'Kết nối bot và tuỳ chọn chung'),
     h('div', { class: 'stack', style: 'max-width:720px' },
-      s.tokenMasked ? null : h('div', { class: 'card card-pad' }, h('h2', null, 'Bắt đầu: kết nối bot Telegram của bạn'),
-        h('ol', { class: 'guide' },
-          h('li', null, 'Mở Telegram, chat với ', h('strong', null, '@BotFather'), ' và gửi lệnh ', h('code', null, '/newbot'), '.'),
-          h('li', null, 'Đặt tên và username cho bot (username phải kết thúc bằng ', h('code', null, 'bot'), ').'),
-          h('li', null, 'BotFather gửi cho bạn một ', h('strong', null, 'token'), ' (dạng 123456789:AA...). Dán vào ô bên dưới.'),
-          h('li', null, 'Thêm bot vào nhóm cần đăng (kênh: đặt bot làm quản trị viên có quyền đăng tin).'))),
+      guideCard(!!s.tokenMasked),
       h('div', { class: 'card card-pad form-grid' }, h('h2', null, 'Bot Telegram'),
         h('div', { class: 'field' }, h('label', { for: 's-token' }, 'Token từ @BotFather'), token,
           h('span', { class: 'hint' }, s.tokenSource === 'env' ? `Đang dùng token từ biến môi trường (${s.tokenMasked}). Nhập token mới để ghi đè.` : s.tokenMasked ? `Đã lưu: ${s.tokenMasked}` : 'Chưa cấu hình.')),

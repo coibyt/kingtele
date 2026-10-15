@@ -137,6 +137,18 @@ function createApi({ store, config, auth, scheduler, media, tokenFor, points, pw
   // ---------- Nhóm ----------
   api.get('/groups', (req, res) => res.json(mine(d().groups, req)));
 
+  // Tìm các nhóm/kênh mà bot của thành viên đã được thêm vào (để khách không phải tự đọc Chat ID)
+  api.get('/groups/discover', wrap(async (req, res) => {
+    if (!token(req)) throw bad('Hãy kết nối bot Telegram của bạn ở mục Cài đặt trước khi thêm nhóm');
+    let updates;
+    try { updates = await tg.getUpdates(token(req)); } catch (e) {
+      if (e.code === 409) throw bad('Bot đang gắn với dịch vụ khác (webhook) nên không dò được nhóm. Hãy nhập Chat ID thủ công.');
+      throw bad(e.message);
+    }
+    const have = new Set(mine(d().groups, req).map((g) => String(g.chatId)));
+    res.json(tg.chatsFromUpdates(updates).filter((c) => !have.has(c.chatId)));
+  }));
+
   api.post('/groups', wrap(async (req, res) => {
     const groups = mine(d().groups, req);
     if (!isAdmin(req) && groups.length >= config.maxGroups) throw bad(`Mỗi tài khoản tối đa ${config.maxGroups} nhóm`);

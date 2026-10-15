@@ -110,4 +110,21 @@ async function sendPost(token, chatId, post, ctx = {}) {
   return m.message_id;
 }
 
-module.exports = { getMe, getChat, sendPost, sleep };
+/** Cập nhật gần đây bot nhận được (Telegram giữ tối đa 24 giờ). Không xác nhận nên không mất dữ liệu. */
+const getUpdates = (token) => call(token, 'getUpdates', { limit: 100, timeout: 0, allowed_updates: ['message', 'channel_post', 'my_chat_member'] });
+
+/** Lấy danh sách nhóm/kênh từ các cập nhật; bỏ nhóm mà bot đã bị mời ra. Mới nhất trước. */
+function chatsFromUpdates(updates) {
+  const seen = new Map();
+  for (const u of updates || []) {
+    const ev = u.my_chat_member || null;
+    const chat = (ev && ev.chat) || (u.message && u.message.chat) || (u.edited_message && u.edited_message.chat)
+      || (u.channel_post && u.channel_post.chat) || (u.edited_channel_post && u.edited_channel_post.chat);
+    if (!chat || !['group', 'supergroup', 'channel'].includes(chat.type)) continue;
+    const gone = !!ev && ['left', 'kicked'].includes(ev.new_chat_member && ev.new_chat_member.status);
+    seen.set(String(chat.id), { chatId: String(chat.id), title: chat.title || chat.username || String(chat.id), type: chat.type, username: chat.username || '', gone });
+  }
+  return [...seen.values()].filter((c) => !c.gone).reverse().map(({ gone, ...c }) => c);
+}
+
+module.exports = { getMe, getChat, getUpdates, chatsFromUpdates, sendPost, sleep };

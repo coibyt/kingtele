@@ -1,0 +1,273 @@
+# Hướng dẫn kết nối Telegram (1/2): tìm nhóm, giới thiệu, Bước 1
+
+= Kênh
+en| Channel
+zh| 频道
+es| Canal
+hi| चैनल
+ar| قناة
+pt| Canal
+ru| Канал
+ja| チャンネル
+ko| 채널
+de| Kanal
+fr| Canal
+id| Kanal
+th| แชนเนล
+tr| Kanal
+fi| Kanava
+
+= Thêm
+en| Add
+zh| 添加
+es| Añadir
+hi| जोड़ें
+ar| إضافة
+pt| Adicionar
+ru| Добавить
+ja| 追加
+ko| 추가
+de| Hinzufügen
+fr| Ajouter
+id| Tambah
+th| เพิ่ม
+tr| Ekle
+fi| Lisää
+
+= Chưa thấy nhóm nào. Hãy thêm bot vào nhóm, gửi một tin nhắn bất kỳ trong nhóm rồi bấm tìm lại.
+en| No groups found yet. Add the bot to your group, send any message in the group, then search again.
+zh| 暂时没有找到群组。请先把机器人加入群组,在群里随便发一条消息,然后再点一次查找。
+es| Aún no se ha encontrado ningún grupo. Añade el bot al grupo, envía cualquier mensaje en el grupo y vuelve a buscar.
+hi| अभी कोई ग्रुप नहीं मिला। बॉट को ग्रुप में जोड़ें, ग्रुप में कोई भी संदेश भेजें और फिर दोबारा खोजें।
+ar| لم يتم العثور على أي مجموعة بعد. أضف البوت إلى المجموعة، وأرسل أي رسالة فيها، ثم ابحث مجددًا.
+pt| Nenhum grupo encontrado ainda. Adicione o bot ao grupo, envie qualquer mensagem no grupo e busque novamente.
+ru| Групп пока не найдено. Добавьте бота в группу, отправьте в ней любое сообщение и повторите поиск.
+ja| まだグループが見つかりません。ボットをグループに追加し、グループで何かメッセージを送ってから、もう一度検索してください。
+ko| 아직 그룹을 찾지 못했습니다. 봇을 그룹에 추가하고 그룹에서 아무 메시지나 보낸 뒤 다시 검색하세요.
+de| Noch keine Gruppe gefunden. Fügen Sie den Bot der Gruppe hinzu, senden Sie eine beliebige Nachricht in der Gruppe und suchen Sie erneut.
+fr| Aucun groupe trouvé pour l'instant. Ajoutez le bot au groupe, envoyez un message quelconque dans le groupe, puis relancez la recherche.
+id| Belum ada grup yang ditemukan. Tambahkan bot ke grup, kirim pesan apa pun di grup, lalu cari lagi.
+th| ยังไม่พบกลุ่ม เพิ่มบอทเข้ากลุ่ม ส่งข้อความอะไรก็ได้ในกลุ่ม แล้วกดค้นหาอีกครั้ง
+tr| Henüz grup bulunamadı. Botu gruba ekleyin, grupta herhangi bir mesaj gönderin ve tekrar arayın.
+fi| Ryhmiä ei vielä löytynyt. Lisää botti ryhmään, lähetä ryhmään mikä tahansa viesti ja hae uudelleen.
+
+= Tìm nhóm bot đã thêm
+en| Find groups the bot was added to
+zh| 查找机器人已加入的群组
+es| Buscar grupos donde se añadió el bot
+hi| जिन ग्रुप में बॉट जोड़ा गया है उन्हें खोजें
+ar| ابحث عن المجموعات التي أُضيف إليها البوت
+pt| Buscar grupos onde o bot foi adicionado
+ru| Найти группы, куда добавлен бот
+ja| ボットを追加したグループを検索
+ko| 봇이 추가된 그룹 찾기
+de| Gruppen finden, zu denen der Bot hinzugefügt wurde
+fr| Trouver les groupes où le bot a été ajouté
+id| Cari grup tempat bot ditambahkan
+th| ค้นหากลุ่มที่เพิ่มบอทแล้ว
+tr| Botun eklendiği grupları bul
+fi| Hae ryhmät, joihin botti on lisätty
+
+= Chưa biết Chat ID? KingTele tìm giúp bạn
+en| Don't know the Chat ID? Let KingTele find it for you
+zh| 不知道 Chat ID?让 KingTele 帮你找
+es| ¿No sabes el Chat ID? KingTele lo busca por ti
+hi| Chat ID नहीं पता? KingTele आपके लिए खोज देगा
+ar| لا تعرف معرّف الدردشة (Chat ID)؟ دع KingTele يبحث عنه لك
+pt| Não sabe o Chat ID? O KingTele encontra para você
+ru| Не знаете Chat ID? KingTele найдёт его за вас
+ja| Chat IDが分かりませんか?KingTeleが探します
+ko| Chat ID를 모르시나요? KingTele이 대신 찾아 드립니다
+de| Chat-ID unbekannt? KingTele findet sie für Sie
+fr| Vous ne connaissez pas l'ID de discussion ? KingTele le trouve pour vous
+id| Tidak tahu Chat ID? KingTele carikan untuk Anda
+th| ไม่รู้ Chat ID? ให้ KingTele ช่วยหาให้
+tr| Chat ID'yi bilmiyor musunuz? KingTele sizin için bulsun
+fi| Etkö tiedä Chat ID:tä? KingTele löytää sen puolestasi
+
+= Đã thêm bot vào nhóm nhưng chưa biết Chat ID? **Gửi một tin nhắn bất kỳ trong nhóm**, rồi bấm nút bên dưới. Nhóm riêng tư cũng tìm được.
+en| Added the bot to your group but don't know the Chat ID? **Send any message in the group**, then press the button below. Private groups can be found too.
+zh| 已把机器人加入群组但不知道 Chat ID?**在群里随便发一条消息**,然后点击下面的按钮。私有群组也能找到。
+es| ¿Ya añadiste el bot al grupo pero no sabes el Chat ID? **Envía cualquier mensaje en el grupo** y pulsa el botón de abajo. También encuentra grupos privados.
+hi| बॉट को ग्रुप में जोड़ दिया पर Chat ID नहीं पता? **ग्रुप में कोई भी संदेश भेजें**, फिर नीचे का बटन दबाएँ। निजी ग्रुप भी मिल जाते हैं।
+ar| أضفت البوت إلى المجموعة لكنك لا تعرف Chat ID؟ **أرسل أي رسالة في المجموعة** ثم اضغط الزر أدناه. يمكن العثور على المجموعات الخاصة أيضًا.
+pt| Já adicionou o bot ao grupo mas não sabe o Chat ID? **Envie qualquer mensagem no grupo** e clique no botão abaixo. Grupos privados também são encontrados.
+ru| Добавили бота в группу, но не знаете Chat ID? **Отправьте в группе любое сообщение** и нажмите кнопку ниже. Закрытые группы тоже находятся.
+ja| ボットをグループに追加したけれどChat IDが分からない場合は、**グループで何かメッセージを送って**から下のボタンを押してください。非公開グループも見つかります。
+ko| 봇을 그룹에 추가했는데 Chat ID를 모르시나요? **그룹에서 아무 메시지나 보낸 뒤** 아래 버튼을 누르세요. 비공개 그룹도 찾을 수 있습니다.
+de| Bot zur Gruppe hinzugefügt, aber die Chat-ID unbekannt? **Senden Sie eine beliebige Nachricht in der Gruppe** und klicken Sie auf die Schaltfläche unten. Auch private Gruppen werden gefunden.
+fr| Le bot est dans le groupe mais vous ne connaissez pas l'ID ? **Envoyez un message quelconque dans le groupe**, puis cliquez sur le bouton ci-dessous. Les groupes privés sont aussi trouvés.
+id| Sudah menambahkan bot ke grup tapi belum tahu Chat ID? **Kirim pesan apa pun di grup**, lalu tekan tombol di bawah. Grup privat juga bisa ditemukan.
+th| เพิ่มบอทเข้ากลุ่มแล้วแต่ไม่รู้ Chat ID? **ส่งข้อความอะไรก็ได้ในกลุ่ม** แล้วกดปุ่มด้านล่าง กลุ่มส่วนตัวก็ค้นเจอ
+tr| Botu gruba eklediniz ama Chat ID'yi bilmiyor musunuz? **Grupta herhangi bir mesaj gönderin**, ardından aşağıdaki düğmeye basın. Özel gruplar da bulunur.
+fi| Lisäsitkö botin ryhmään, mutta et tiedä Chat ID:tä? **Lähetä ryhmään mikä tahansa viesti** ja paina alla olevaa painiketta. Myös yksityiset ryhmät löytyvät.
+
+= Hình minh hoạ (ví dụ)
+en| Illustration (example)
+zh| 示意图(示例)
+es| Ilustración (ejemplo)
+hi| उदाहरण चित्र
+ar| صورة توضيحية (مثال)
+pt| Ilustração (exemplo)
+ru| Иллюстрация (пример)
+ja| イメージ図(例)
+ko| 예시 이미지
+de| Abbildung (Beispiel)
+fr| Illustration (exemple)
+id| Ilustrasi (contoh)
+th| ภาพประกอบ (ตัวอย่าง)
+tr| Örnek görsel
+fi| Havainnekuva (esimerkki)
+
+= Hướng dẫn kết nối Telegram: làm theo 5 bước là chạy
+en| Telegram setup guide: follow 5 steps and you're running
+zh| Telegram 连接指南:按 5 个步骤操作即可使用
+es| Guía para conectar Telegram: sigue 5 pasos y listo
+hi| Telegram कनेक्ट करने की गाइड: 5 कदम और काम शुरू
+ar| دليل ربط تيليجرام: اتبع 5 خطوات وتبدأ العمل
+pt| Guia para conectar o Telegram: siga 5 passos e pronto
+ru| Подключение Telegram: 5 шагов, и всё работает
+ja| Telegram接続ガイド:5つのステップで完了
+ko| Telegram 연결 안내: 5단계만 따라 하면 끝
+de| Telegram verbinden: in 5 Schritten startklar
+fr| Guide de connexion Telegram : 5 étapes et c'est parti
+id| Panduan menghubungkan Telegram: ikuti 5 langkah, langsung jalan
+th| คู่มือเชื่อมต่อ Telegram: ทำตาม 5 ขั้นตอนก็ใช้งานได้
+tr| Telegram bağlantı rehberi: 5 adımda hazır
+fi| Telegramin yhdistämisopas: 5 vaihetta ja valmista
+
+= Bạn chỉ cần **một tài khoản Telegram** (cài ứng dụng tại [telegram.org/apps](https://telegram.org/apps)). Cả 5 bước mất khoảng **5 phút**. Các bước khó đều có hình minh hoạ.
+en| All you need is **a Telegram account** (get the app at [telegram.org/apps](https://telegram.org/apps)). The 5 steps take about **5 minutes**. The harder steps come with illustrations.
+zh| 你只需要**一个 Telegram 账号**(在 [telegram.org/apps](https://telegram.org/apps) 下载应用)。5 个步骤大约需要 **5 分钟**。较难的步骤都配有示意图。
+es| Solo necesitas **una cuenta de Telegram** (instala la app en [telegram.org/apps](https://telegram.org/apps)). Los 5 pasos llevan unos **5 minutos**. Los pasos más difíciles incluyen ilustraciones.
+hi| आपको सिर्फ़ **एक Telegram खाता** चाहिए (ऐप [telegram.org/apps](https://telegram.org/apps) से इंस्टॉल करें)। पाँचों चरणों में लगभग **5 मिनट** लगते हैं। कठिन चरणों के साथ चित्र दिए गए हैं।
+ar| كل ما تحتاجه **حساب تيليجرام** (ثبّت التطبيق من [telegram.org/apps](https://telegram.org/apps)). تستغرق الخطوات الخمس نحو **5 دقائق**. والخطوات الصعبة مرفقة بصور توضيحية.
+pt| Você só precisa de **uma conta do Telegram** (instale o app em [telegram.org/apps](https://telegram.org/apps)). Os 5 passos levam cerca de **5 minutos**. Os passos mais difíceis têm ilustrações.
+ru| Вам нужен только **аккаунт Telegram** (приложение — на [telegram.org/apps](https://telegram.org/apps)). Все 5 шагов займут около **5 минут**. К сложным шагам есть иллюстрации.
+ja| 必要なのは**Telegramアカウント**だけです([telegram.org/apps](https://telegram.org/apps)でアプリを入手)。5つのステップは約**5分**で終わります。難しい手順にはイメージ図を付けています。
+ko| 필요한 것은 **Telegram 계정** 하나뿐입니다([telegram.org/apps](https://telegram.org/apps)에서 앱 설치). 5단계는 약 **5분**이면 끝납니다. 어려운 단계에는 이미지가 있습니다.
+de| Sie brauchen nur **ein Telegram-Konto** (App unter [telegram.org/apps](https://telegram.org/apps)). Die 5 Schritte dauern etwa **5 Minuten**. Die schwierigeren Schritte haben Abbildungen.
+fr| Il vous faut seulement **un compte Telegram** (application sur [telegram.org/apps](https://telegram.org/apps)). Les 5 étapes prennent environ **5 minutes**. Les étapes délicates sont illustrées.
+id| Anda hanya perlu **akun Telegram** (instal aplikasinya di [telegram.org/apps](https://telegram.org/apps)). Kelima langkah memakan waktu sekitar **5 menit**. Langkah yang sulit disertai ilustrasi.
+th| คุณต้องมีเพียง **บัญชี Telegram** (ติดตั้งแอปที่ [telegram.org/apps](https://telegram.org/apps)) ทั้ง 5 ขั้นตอนใช้เวลาราว **5 นาที** ขั้นตอนที่ยากมีภาพประกอบ
+tr| Tek ihtiyacınız **bir Telegram hesabı** (uygulamayı [telegram.org/apps](https://telegram.org/apps) adresinden kurun). 5 adım yaklaşık **5 dakika** sürer. Zor adımlarda görseller var.
+fi| Tarvitset vain **Telegram-tilin** (sovellus osoitteesta [telegram.org/apps](https://telegram.org/apps)). Viisi vaihetta vie noin **5 minuuttia**. Hankalimmissa vaiheissa on havainnekuvat.
+
+= Bước 1. Tạo bot Telegram của bạn
+en| Step 1. Create your Telegram bot
+zh| 第 1 步:创建你的 Telegram 机器人
+es| Paso 1. Crea tu bot de Telegram
+hi| चरण 1. अपना Telegram बॉट बनाएँ
+ar| الخطوة 1. أنشئ بوت تيليجرام الخاص بك
+pt| Passo 1. Crie seu bot do Telegram
+ru| Шаг 1. Создайте своего бота Telegram
+ja| ステップ1:Telegramボットを作成
+ko| 1단계. Telegram 봇 만들기
+de| Schritt 1. Telegram-Bot erstellen
+fr| Étape 1. Créez votre bot Telegram
+id| Langkah 1. Buat bot Telegram Anda
+th| ขั้นตอนที่ 1 สร้างบอท Telegram ของคุณ
+tr| Adım 1. Telegram botunuzu oluşturun
+fi| Vaihe 1. Luo oma Telegram-bottisi
+
+= Mở Telegram, bấm biểu tượng **kính lúp** và tìm **BotFather**. Chọn tài khoản có **dấu tích xanh** (chính chủ), hoặc bấm thẳng vào [t.me/BotFather](https://t.me/BotFather).
+en| Open Telegram, tap the **magnifier** icon and search for **BotFather**. Choose the account with the **blue check mark** (the official one), or tap [t.me/BotFather](https://t.me/BotFather) directly.
+zh| 打开 Telegram,点击**放大镜**图标搜索 **BotFather**。选择带**蓝色认证标记**的官方账号,或直接点击 [t.me/BotFather](https://t.me/BotFather)。
+es| Abre Telegram, toca el icono de la **lupa** y busca **BotFather**. Elige la cuenta con la **marca azul de verificación** (la oficial), o toca directamente [t.me/BotFather](https://t.me/BotFather).
+hi| Telegram खोलें, **मैग्निफ़ायर** आइकन दबाएँ और **BotFather** खोजें। **नीले टिक** वाला (आधिकारिक) अकाउंट चुनें, या सीधे [t.me/BotFather](https://t.me/BotFather) दबाएँ।
+ar| افتح تيليجرام، واضغط على أيقونة **العدسة** وابحث عن **BotFather**. اختر الحساب الذي عليه **علامة التوثيق الزرقاء** (الرسمي)، أو اضغط مباشرة على [t.me/BotFather](https://t.me/BotFather).
+pt| Abra o Telegram, toque na **lupa** e procure por **BotFather**. Escolha a conta com o **selo azul de verificação** (a oficial) ou toque direto em [t.me/BotFather](https://t.me/BotFather).
+ru| Откройте Telegram, нажмите значок **лупы** и найдите **BotFather**. Выберите аккаунт с **синей галочкой** (официальный) или нажмите прямо на [t.me/BotFather](https://t.me/BotFather).
+ja| Telegramを開き、**虫眼鏡**アイコンをタップして**BotFather**を検索します。**青い認証マーク**が付いた公式アカウントを選ぶか、[t.me/BotFather](https://t.me/BotFather)を直接タップしてください。
+ko| Telegram을 열고 **돋보기** 아이콘을 눌러 **BotFather**를 검색하세요. **파란 인증 표시**가 있는 공식 계정을 선택하거나 [t.me/BotFather](https://t.me/BotFather)를 바로 누르세요.
+de| Öffnen Sie Telegram, tippen Sie auf die **Lupe** und suchen Sie **BotFather**. Wählen Sie das Konto mit dem **blauen Haken** (das offizielle) oder tippen Sie direkt auf [t.me/BotFather](https://t.me/BotFather).
+fr| Ouvrez Telegram, touchez la **loupe** et cherchez **BotFather**. Choisissez le compte avec la **coche bleue** (le compte officiel), ou touchez directement [t.me/BotFather](https://t.me/BotFather).
+id| Buka Telegram, ketuk ikon **kaca pembesar** dan cari **BotFather**. Pilih akun dengan **tanda centang biru** (yang resmi), atau langsung ketuk [t.me/BotFather](https://t.me/BotFather).
+th| เปิด Telegram แตะไอคอน **แว่นขยาย** แล้วค้นหา **BotFather** เลือกบัญชีที่มี **เครื่องหมายถูกสีน้ำเงิน** (ของจริง) หรือแตะที่ [t.me/BotFather](https://t.me/BotFather) ได้เลย
+tr| Telegram'ı açın, **büyüteç** simgesine dokunup **BotFather** aratın. **Mavi onay işareti** olan (resmi) hesabı seçin veya doğrudan [t.me/BotFather](https://t.me/BotFather) bağlantısına dokunun.
+fi| Avaa Telegram, napauta **suurennuslasia** ja hae **BotFather**. Valitse tili, jossa on **sininen vahvistusmerkki** (virallinen), tai napauta suoraan [t.me/BotFather](https://t.me/BotFather).
+
+= Bấm **Start** (Bắt đầu), rồi gõ `/newbot` và gửi đi.
+en| Tap **Start**, then type `/newbot` and send it.
+zh| 点击 **Start**(开始),然后输入 `/newbot` 并发送。
+es| Toca **Start** (Iniciar), escribe `/newbot` y envíalo.
+hi| **Start** (शुरू करें) दबाएँ, फिर `/newbot` लिखकर भेजें।
+ar| اضغط **Start** (ابدأ)، ثم اكتب `/newbot` وأرسله.
+pt| Toque em **Start** (Iniciar), depois digite `/newbot` e envie.
+ru| Нажмите **Start** (Запустить), затем введите `/newbot` и отправьте.
+ja| **Start**(開始)をタップし、`/newbot` と入力して送信します。
+ko| **Start**(시작)를 누른 뒤 `/newbot`을 입력해 보내세요.
+de| Tippen Sie auf **Start**, geben Sie dann `/newbot` ein und senden Sie es ab.
+fr| Touchez **Start** (Démarrer), puis tapez `/newbot` et envoyez.
+id| Ketuk **Start** (Mulai), lalu ketik `/newbot` dan kirim.
+th| แตะ **Start** (เริ่ม) แล้วพิมพ์ `/newbot` ส่งไป
+tr| **Start** (Başlat) düğmesine dokunun, sonra `/newbot` yazıp gönderin.
+fi| Napauta **Start** (Aloita), kirjoita sitten `/newbot` ja lähetä.
+
+= BotFather hỏi **tên bot**: gõ một tên hiển thị bất kỳ, ví dụ `My KingTele Bot`.
+en| BotFather asks for the **bot name**: type any display name, for example `My KingTele Bot`.
+zh| BotFather 会询问**机器人名称**:输入任意显示名称,例如 `My KingTele Bot`。
+es| BotFather pregunta el **nombre del bot**: escribe cualquier nombre visible, por ejemplo `My KingTele Bot`.
+hi| BotFather **बॉट का नाम** पूछेगा: कोई भी डिस्प्ले नाम लिखें, जैसे `My KingTele Bot`।
+ar| سيسأل BotFather عن **اسم البوت**: اكتب أي اسم ظاهر، مثل `My KingTele Bot`.
+pt| O BotFather pergunta o **nome do bot**: digite qualquer nome de exibição, por exemplo `My KingTele Bot`.
+ru| BotFather спросит **имя бота**: введите любое отображаемое имя, например `My KingTele Bot`.
+ja| BotFatherが**ボットの名前**を尋ねます。表示名を自由に入力してください(例:`My KingTele Bot`)。
+ko| BotFather가 **봇 이름**을 물어봅니다. 표시될 이름을 아무거나 입력하세요. 예: `My KingTele Bot`
+de| BotFather fragt nach dem **Bot-Namen**: Geben Sie einen beliebigen Anzeigenamen ein, zum Beispiel `My KingTele Bot`.
+fr| BotFather demande le **nom du bot** : saisissez n'importe quel nom affiché, par exemple `My KingTele Bot`.
+id| BotFather menanyakan **nama bot**: ketik nama tampilan apa saja, misalnya `My KingTele Bot`.
+th| BotFather จะถาม **ชื่อบอท** พิมพ์ชื่อที่แสดงอะไรก็ได้ เช่น `My KingTele Bot`
+tr| BotFather **bot adını** sorar: istediğiniz bir görünen ad yazın, örneğin `My KingTele Bot`.
+fi| BotFather kysyy **botin nimeä**: kirjoita mikä tahansa näyttönimi, esimerkiksi `My KingTele Bot`.
+
+= Tiếp theo gõ **username** cho bot. Username phải **kết thúc bằng** `bot`, chỉ gồm chữ không dấu, số và dấu gạch dưới, và chưa ai dùng. Ví dụ: `kingtele_cuaban_bot`. Nếu báo bị trùng, hãy thêm vài con số.
+en| Next, type a **username** for the bot. It must **end with** `bot`, contain only letters (no accents), digits and underscores, and not be taken. Example: `kingtele_cuaban_bot`. If it says the name is taken, add a few digits.
+zh| 接着输入机器人的**用户名**。用户名必须以 `bot` **结尾**,只能包含字母(不带音标)、数字和下划线,且未被占用。例如:`kingtele_cuaban_bot`。如果提示已被占用,请加几个数字。
+es| A continuación escribe el **nombre de usuario** del bot. Debe **terminar en** `bot`, contener solo letras (sin tildes), números y guiones bajos, y no estar en uso. Ejemplo: `kingtele_cuaban_bot`. Si dice que está ocupado, añade unos números.
+hi| अब बॉट का **username** लिखें। यह `bot` **पर खत्म** होना चाहिए, इसमें सिर्फ़ अंग्रेज़ी अक्षर, अंक और अंडरस्कोर हों, और यह किसी और का न हो। उदाहरण: `kingtele_cuaban_bot`। अगर "पहले से लिया गया" बताए, तो कुछ अंक जोड़ दें।
+ar| بعد ذلك اكتب **اسم المستخدم** للبوت. يجب أن **ينتهي بـ** `bot` وأن يحتوي على أحرف لاتينية وأرقام وشرطات سفلية فقط، وألا يكون مستخدمًا. مثال: `kingtele_cuaban_bot`. إذا ظهر أنه مستخدم، أضف بعض الأرقام.
+pt| Em seguida, digite o **nome de usuário** do bot. Ele deve **terminar com** `bot`, ter apenas letras (sem acentos), números e sublinhados, e não estar em uso. Exemplo: `kingtele_cuaban_bot`. Se disser que já existe, acrescente alguns números.
+ru| Далее введите **username** бота. Он должен **заканчиваться на** `bot`, содержать только латинские буквы, цифры и подчёркивания и быть свободным. Пример: `kingtele_cuaban_bot`. Если имя занято, добавьте несколько цифр.
+ja| 次にボットの**ユーザー名**を入力します。**末尾は** `bot` にし、英字(アクセント記号なし)・数字・アンダースコアのみで、他の人が使っていないものにしてください。例:`kingtele_cuaban_bot`。使用済みと表示されたら数字を足してください。
+ko| 다음으로 봇의 사용자 이름을 입력하세요. **사용자 이름은** `bot`**으로 끝나야** 하며, 영문자(악센트 없음)·숫자·밑줄만 쓸 수 있고 다른 사람이 쓰지 않는 이름이어야 합니다. 예: `kingtele_cuaban_bot`. 이미 사용 중이라고 나오면 숫자를 몇 개 붙이세요.
+de| Geben Sie als Nächstes den **Benutzernamen** des Bots ein. Er muss auf `bot` **enden**, darf nur Buchstaben (ohne Akzente), Ziffern und Unterstriche enthalten und darf noch nicht vergeben sein. Beispiel: `kingtele_cuaban_bot`. Ist er vergeben, hängen Sie ein paar Ziffern an.
+fr| Saisissez ensuite le **nom d'utilisateur** du bot. Il doit **se terminer par** `bot`, ne contenir que des lettres (sans accents), des chiffres et des tirets bas, et ne pas être déjà pris. Exemple : `kingtele_cuaban_bot`. S'il est pris, ajoutez quelques chiffres.
+id| Selanjutnya ketik **username** bot. Harus **diakhiri** `bot`, hanya berisi huruf (tanpa aksen), angka, dan garis bawah, serta belum dipakai orang lain. Contoh: `kingtele_cuaban_bot`. Jika dinyatakan sudah dipakai, tambahkan beberapa angka.
+th| จากนั้นพิมพ์ **username** ของบอท ต้อง **ลงท้ายด้วย** `bot` ใช้ได้เฉพาะตัวอักษรอังกฤษ ตัวเลข และขีดล่าง และยังไม่มีใครใช้ เช่น `kingtele_cuaban_bot` ถ้าแจ้งว่าซ้ำ ให้เติมตัวเลขต่อท้าย
+tr| Ardından botun **kullanıcı adını** yazın. `bot` **ile bitmeli**, yalnızca harf (aksansız), rakam ve alt çizgi içermeli ve başkası tarafından kullanılmıyor olmalı. Örnek: `kingtele_cuaban_bot`. Alınmış diyorsa birkaç rakam ekleyin.
+fi| Kirjoita seuraavaksi botin **käyttäjänimi**. Sen on **päätyttävä sanaan** `bot`, siinä saa olla vain kirjaimia (ei aksentteja), numeroita ja alaviivoja, eikä se saa olla varattu. Esimerkki: `kingtele_cuaban_bot`. Jos nimi on varattu, lisää muutama numero.
+
+= Khi thành công, BotFather gửi tin nhắn có dòng **Use this token to access the HTTP API** kèm một chuỗi dạng `123456789:AAH...`. Đó là **token**. **Nhấn giữ** vào chuỗi đó để **sao chép**.
+en| When it works, BotFather sends a message with the line **Use this token to access the HTTP API** followed by a string like `123456789:AAH...`. That is the **token**. **Press and hold** the string to **copy** it.
+zh| 成功后,BotFather 会发来一条消息,其中有 **Use this token to access the HTTP API** 一行,后面跟着形如 `123456789:AAH...` 的字符串,这就是**令牌(token)**。**长按**该字符串即可**复制**。
+es| Si todo va bien, BotFather envía un mensaje con la línea **Use this token to access the HTTP API** seguida de una cadena como `123456789:AAH...`. Ese es el **token**. **Mantén pulsada** la cadena para **copiarla**.
+hi| सफल होने पर BotFather एक संदेश भेजता है जिसमें **Use this token to access the HTTP API** लाइन और उसके बाद `123456789:AAH...` जैसी एक स्ट्रिंग होती है। यही **टोकन** है। उसे **दबाकर रखें** और **कॉपी** करें।
+ar| عند النجاح يرسل BotFather رسالة فيها السطر **Use this token to access the HTTP API** يليه نص مثل `123456789:AAH...`. هذا هو **الرمز (token)**. **اضغط مطولًا** على النص لـ**نسخه**.
+pt| Quando der certo, o BotFather envia uma mensagem com a linha **Use this token to access the HTTP API** seguida de uma sequência como `123456789:AAH...`. Esse é o **token**. **Pressione e segure** a sequência para **copiá-la**.
+ru| При успехе BotFather пришлёт сообщение со строкой **Use this token to access the HTTP API** и последовательностью вида `123456789:AAH...`. Это и есть **токен**. **Нажмите и удерживайте** её, чтобы **скопировать**.
+ja| 成功すると、BotFatherから **Use this token to access the HTTP API** という行と、`123456789:AAH...` のような文字列を含むメッセージが届きます。これが**トークン**です。文字列を**長押し**して**コピー**してください。
+ko| 성공하면 BotFather가 **Use this token to access the HTTP API** 줄과 `123456789:AAH...` 형태의 문자열이 담긴 메시지를 보냅니다. 이것이 **토큰**입니다. 문자열을 **길게 눌러** **복사**하세요.
+de| Bei Erfolg sendet BotFather eine Nachricht mit der Zeile **Use this token to access the HTTP API** und einer Zeichenfolge wie `123456789:AAH...`. Das ist der **Token**. **Halten Sie** die Zeichenfolge gedrückt, um sie zu **kopieren**.
+fr| En cas de succès, BotFather envoie un message avec la ligne **Use this token to access the HTTP API** suivie d'une chaîne du type `123456789:AAH...`. C'est le **jeton**. **Appuyez longuement** sur cette chaîne pour la **copier**.
+id| Jika berhasil, BotFather mengirim pesan berisi baris **Use this token to access the HTTP API** diikuti rangkaian seperti `123456789:AAH...`. Itulah **token**. **Tekan lama** rangkaian itu untuk **menyalinnya**.
+th| เมื่อสำเร็จ BotFather จะส่งข้อความที่มีบรรทัด **Use this token to access the HTTP API** ตามด้วยสายอักขระแบบ `123456789:AAH...` นั่นคือ **โทเคน** กด **ค้างที่สายอักขระนั้น** เพื่อ **คัดลอก**
+tr| Başarılı olursa BotFather, **Use this token to access the HTTP API** satırının ve `123456789:AAH...` gibi bir dizenin yer aldığı bir mesaj gönderir. Bu **belirteçtir (token)**. Dizeye **basılı tutarak** **kopyalayın**.
+fi| Onnistuessa BotFather lähettää viestin, jossa on rivi **Use this token to access the HTTP API** ja sen perässä merkkijono, kuten `123456789:AAH...`. Se on **tunniste (token)**. **Paina merkkijonoa pitkään** **kopioidaksesi** sen.
+
+= **Giữ kín token.** Ai có token là điều khiển được bot của bạn: đừng gửi cho người lạ hay đăng công khai. Nếu lỡ lộ, nhắn `/revoke` cho BotFather để đổi token mới.
+en| **Keep the token private.** Anyone with the token can control your bot: never send it to strangers or post it publicly. If it leaks, message `/revoke` to BotFather to get a new token.
+zh| **请保管好令牌。**任何拿到令牌的人都能控制你的机器人:不要发给陌生人或公开发布。如果泄露,请给 BotFather 发送 `/revoke` 以更换新令牌。
+es| **Mantén el token en secreto.** Quien tenga el token puede controlar tu bot: no lo envíes a desconocidos ni lo publiques. Si se filtra, envía `/revoke` a BotFather para obtener uno nuevo.
+hi| **टोकन को गुप्त रखें।** टोकन जिसके पास हो, वह आपका बॉट चला सकता है: इसे अजनबियों को न भेजें और सार्वजनिक रूप से न डालें। लीक हो जाए तो BotFather को `/revoke` भेजकर नया टोकन लें।
+ar| **أبقِ الرمز سرّيًا.** أي شخص يملك الرمز يستطيع التحكم في بوتك: لا ترسله لغرباء ولا تنشره علنًا. وإذا تسرّب، أرسل `/revoke` إلى BotFather للحصول على رمز جديد.
+pt| **Mantenha o token em sigilo.** Quem tiver o token controla seu bot: não envie a desconhecidos nem publique. Se vazar, envie `/revoke` ao BotFather para gerar um novo.
+ru| **Держите токен в секрете.** Кто знает токен, тот управляет вашим ботом: не отправляйте его посторонним и не публикуйте. Если он утёк, отправьте BotFather `/revoke`, чтобы получить новый.
+ja| **トークンは秘密にしてください。**トークンを知っている人は誰でもボットを操作できます。他人に送ったり公開したりしないでください。漏れてしまった場合は、BotFatherに `/revoke` を送って新しいトークンに変更します。
+ko| **토큰은 비밀로 하세요.** 토큰을 아는 사람은 누구나 봇을 조종할 수 있습니다. 모르는 사람에게 보내거나 공개하지 마세요. 유출되었다면 BotFather에게 `/revoke`를 보내 새 토큰으로 바꾸세요.
+de| **Halten Sie den Token geheim.** Wer den Token kennt, kann Ihren Bot steuern: Senden Sie ihn nicht an Fremde und veröffentlichen Sie ihn nicht. Ist er bekannt geworden, senden Sie `/revoke` an BotFather, um einen neuen zu erhalten.
+fr| **Gardez le jeton secret.** Quiconque le possède peut contrôler votre bot : ne l'envoyez pas à des inconnus et ne le publiez pas. S'il fuit, envoyez `/revoke` à BotFather pour en obtenir un nouveau.
+id| **Rahasiakan token.** Siapa pun yang punya token bisa mengendalikan bot Anda: jangan kirim ke orang asing atau posting publik. Jika bocor, kirim `/revoke` ke BotFather untuk mendapat token baru.
+th| **เก็บโทเคนเป็นความลับ** ใครมีโทเคนก็ควบคุมบอทของคุณได้ อย่าส่งให้คนแปลกหน้าหรือโพสต์สาธารณะ หากหลุดไป ให้ส่ง `/revoke` ไปที่ BotFather เพื่อออกโทเคนใหม่
+tr| **Belirteci gizli tutun.** Belirtece sahip olan botunuzu yönetebilir: yabancılara göndermeyin veya herkese açık paylaşmayın. Sızarsa BotFather'a `/revoke` yazarak yeni bir belirteç alın.
+fi| **Pidä tunniste salassa.** Kuka tahansa tunnisteen tietävä voi ohjata bottiasi: älä lähetä sitä tuntemattomille äläkä julkaise sitä. Jos se vuotaa, lähetä BotFatherille `/revoke` saadaksesi uuden tunnisteen.

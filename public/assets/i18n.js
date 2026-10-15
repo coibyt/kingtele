@@ -80,7 +80,20 @@
     try { localStorage.setItem(KEY, code); } catch { /* bỏ qua */ }
     location.reload();
   }
-  window.I18N = { lang, locale: meta.locale, dir: root.dir, langs: LANGS, setLang };
+  let compiled = null; // từ điển đã biên dịch (có sau khi tải xong ngôn ngữ)
+  /** Dựng nội dung giàu định dạng cho phần tử có thuộc tính data-rich (đã dịch nếu có từ điển). */
+  function rich(el) {
+    const src = el.getAttribute('data-rich') || '';
+    const text = compiled ? window.I18NCore.translate(compiled, src) : src;
+    el.replaceChildren(...window.I18NCore.parseRich(text).map((k) => {
+      if (k.t === 'text') return document.createTextNode(k.v);
+      const e = document.createElement(k.t === 'b' ? 'strong' : k.t === 'code' ? 'code' : 'a');
+      e.textContent = k.v;
+      if (k.t === 'a') { e.href = k.href; e.target = '_blank'; e.rel = 'noopener noreferrer'; }
+      return e;
+    }));
+  }
+  window.I18N = { lang, locale: meta.locale, dir: root.dir, langs: LANGS, setLang, rich };
 
   function buildSwitchers() {
     document.querySelectorAll('[data-lang-switch]').forEach((box) => {
@@ -119,6 +132,8 @@
     const data = (window.__I18N_DICT || {})[lang];
     if (!data) return reveal();
     const dict = window.I18NCore.compile(data);
+    compiled = dict;
+    document.querySelectorAll('[data-rich]').forEach(rich);
     const tr = (text) => window.I18NCore.translate(dict, text);
     const SKIP = new Set(['SCRIPT', 'STYLE', 'TEXTAREA', 'CODE']);
     const ATTRS = ['placeholder', 'aria-label', 'title', 'alt'];
@@ -140,6 +155,7 @@
     }
     function walk(node) {
       if (node.nodeType === 3) return textNode(node);
+      if (node.nodeType === 1 && node.hasAttribute('data-rich')) return rich(node);
       if (node.nodeType !== 1 || skipped(node)) return;
       const tw = document.createTreeWalker(node, NodeFilter.SHOW_TEXT);
       for (let n = tw.nextNode(); n; n = tw.nextNode()) textNode(n);

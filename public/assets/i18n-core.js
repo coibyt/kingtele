@@ -42,5 +42,24 @@
     return out === undefined ? raw : m[1] + out + m[3];
   }
 
-  return { compile, translate };
+  /**
+   * Chuỗi giàu định dạng: **đậm**, `mã`, [chữ](https://link). Trả về danh sách token an toàn (không bao giờ là HTML).
+   * Dịch cả chuỗi trước rồi mới dựng, để thứ tự từ đúng ở mọi ngôn ngữ.
+   */
+  function parseRich(text) {
+    const out = [];
+    const re = /\*\*([^*]+)\*\*|`([^`]+)`|\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g;
+    let last = 0, m;
+    while ((m = re.exec(text))) {
+      if (m.index > last) out.push({ t: 'text', v: text.slice(last, m.index) });
+      if (m[1] !== undefined) out.push({ t: 'b', v: m[1] });
+      else if (m[2] !== undefined) out.push({ t: 'code', v: m[2] });
+      else out.push({ t: 'a', v: m[3], href: m[4] });
+      last = re.lastIndex;
+    }
+    if (last < text.length) out.push({ t: 'text', v: text.slice(last) });
+    return out;
+  }
+
+  return { compile, translate, parseRich };
 }));
