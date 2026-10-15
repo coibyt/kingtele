@@ -1,7 +1,9 @@
 'use strict';
 require('dotenv').config();
 const express = require('express');
+const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 const config = require('./src/config');
 const { Store } = require('./src/store');
 const { createAuth } = require('./src/auth');
@@ -54,7 +56,30 @@ app.use(express.json({ limit: '100kb' }));
 app.get('/healthz', (req, res) => res.json({ ok: true, uptime: Math.round(process.uptime()) }));
 app.use('/api', createApi({ store, config, auth, scheduler, media, tokenFor, points, pwaStats, traffic }));
 
-const view = (name) => (req, res) => res.sendFile(path.join(__dirname, 'views', name));
+// CDN của nhà cung cấp hosting có thể bỏ header Cache-Control, nên gắn mã phiên bản (?v=) vào mọi file /assets
+// trong HTML: mỗi lần deploy là một địa chỉ mới, điện thoại luôn tải bản mới.
+const ASSET_VERSION = (() => {
+  const h = crypto.createHash('sha1');
+  const walk = (dir) => fs.readdirSync(dir, { withFileTypes: true }).forEach((e) => {
+    const f = path.join(dir, e.name);
+    if (e.isDirectory()) return walk(f);
+    const st = fs.statSync(f);
+    h.update(`${f}:${st.size}:${Math.round(st.mtimeMs)}`);
+  });
+  try { walk(path.join(__dirname, 'public', 'assets')); } catch { /* không có thì dùng mã rỗng */ }
+  return h.digest('hex').slice(0, 10);
+})();
+const htmlCache = new Map();
+const page = (file, status = 200) => (req, res) => {
+  let html = htmlCache.get(file);
+  if (!html) {
+    html = fs.readFileSync(file, 'utf8').replace(/(["'])(\/assets\/[^"'?]+\.(?:js|css))\1/g, `$1$2?v=${ASSET_VERSION}$1`);
+    htmlCache.set(file, html);
+  }
+  res.status(status).set({ 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-cache' }).send(html);
+};
+const view = (name) => page(path.join(__dirname, 'views', name));
+app.get('/', page(path.join(__dirname, 'public', 'index.html')));
 app.get('/app', (req, res) => (auth.session(req) ? view('app.html')(req, res) : res.redirect('/login')));
 app.get('/login', (req, res) => (auth.session(req) ? res.redirect('/app') : view('login.html')(req, res)));
 app.get('/register', (req, res) => (auth.session(req) ? res.redirect('/app') : view('register.html')(req, res)));
@@ -66,7 +91,7 @@ app.use(express.static(path.join(__dirname, 'public'), {
     res.setHeader('Cache-Control', /\.(html|js|css|webmanifest)$/.test(file) ? 'no-cache' : 'public, max-age=604800');
   },
 }));
-app.use((req, res) => res.status(404).sendFile(path.join(__dirname, 'views', '404.html')));
+app.use(page(path.join(__dirname, 'views', '404.html'), 404));
 
 const server = app.listen(config.port, () => {
   console.log(`KingTele chạy tại cổng ${config.port} (${config.production ? 'production' : 'dev'})`);

@@ -1,6 +1,7 @@
 /* Đa ngôn ngữ: tự chọn ngôn ngữ theo vị trí/trình duyệt, dịch DOM theo từ điển, có nút đổi ngôn ngữ. */
 (function () {
   'use strict';
+  const me = document.currentScript; // mang mã phiên bản (?v=) để từ điển ngôn ngữ cũng được làm mới
   const LANGS = [
     { code: 'vi', name: 'Tiếng Việt', locale: 'vi-VN' },
     { code: 'en', name: 'English', locale: 'en-US' },
@@ -122,8 +123,9 @@
   const reveal = () => root.classList.remove('i18n-pending');
   setTimeout(reveal, 2500);
 
+  const ver = (/[?&]v=[\w]+/.exec(me && me.src) || [''])[0].replace('&', '?');
   const s = document.createElement('script');
-  s.src = `/assets/lang/${lang}.js`;
+  s.src = `/assets/lang/${lang}.js${ver}`;
   s.onerror = reveal; // không tải được từ điển: hiện nguyên văn
   s.onload = () => whenReady(start);
   document.head.appendChild(s);

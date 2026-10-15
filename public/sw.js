@@ -5,7 +5,7 @@
  *  - CSS/JS/biểu tượng/bản dịch: ưu tiên mạng (luôn mới), chỉ dùng bản lưu khi mất mạng. */
 'use strict';
 
-const VERSION = 'kt-v1';
+const VERSION = 'kt-v2';
 const STATIC = `${VERSION}-static`;
 const OFFLINE = '/offline.html';
 const PRECACHE = [
