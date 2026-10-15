@@ -1,0 +1,341 @@
+# Thống kê truy cập website (trang quản trị)
+
+= Trang chủ
+en| Home
+zh| 首页
+es| Inicio
+hi| होम
+ar| الرئيسية
+pt| Início
+ru| Главная
+ja| ホーム
+ko| 홈
+de| Startseite
+fr| Accueil
+id| Beranda
+th| หน้าแรก
+tr| Ana sayfa
+fi| Etusivu
+
+= Đăng ký
+en| Sign-up
+zh| 注册
+es| Registro
+hi| साइन अप
+ar| التسجيل
+pt| Cadastro
+ru| Регистрация
+ja| 登録
+ko| 가입
+de| Registrierung
+fr| Inscription
+id| Pendaftaran
+th| สมัครสมาชิก
+tr| Kayıt
+fi| Rekisteröityminen
+
+= Bảng điều khiển
+en| Dashboard
+zh| 控制台
+es| Panel
+hi| डैशबोर्ड
+ar| لوحة التحكم
+pt| Painel
+ru| Панель управления
+ja| ダッシュボード
+ko| 대시보드
+de| Dashboard
+fr| Tableau de bord
+id| Dasbor
+th| แดชบอร์ด
+tr| Panel
+fi| Hallintapaneeli
+
+= Truy cập trực tiếp
+en| Direct visits
+zh| 直接访问
+es| Visitas directas
+hi| सीधी विज़िट
+ar| زيارات مباشرة
+pt| Acessos diretos
+ru| Прямые заходы
+ja| 直接アクセス
+ko| 직접 방문
+de| Direkte Besuche
+fr| Accès direct
+id| Kunjungan langsung
+th| เข้าโดยตรง
+tr| Doğrudan ziyaretler
+fi| Suorat vierailut
+
+= Nguồn khác
+en| Other sources
+zh| 其他来源
+es| Otras fuentes
+hi| अन्य स्रोत
+ar| مصادر أخرى
+pt| Outras origens
+ru| Другие источники
+ja| その他の流入元
+ko| 기타 유입
+de| Andere Quellen
+fr| Autres sources
+id| Sumber lain
+th| แหล่งอื่น ๆ
+tr| Diğer kaynaklar
+fi| Muut lähteet
+
+= Khách hôm nay
+en| Visitors today
+zh| 今日访客
+es| Visitantes hoy
+hi| आज के विज़िटर
+ar| زوار اليوم
+pt| Visitantes hoje
+ru| Посетители сегодня
+ja| 本日の訪問者
+ko| 오늘 방문자
+de| Besucher heute
+fr| Visiteurs aujourd'hui
+id| Pengunjung hari ini
+th| ผู้เยี่ยมชมวันนี้
+tr| Bugünkü ziyaretçiler
+fi| Vierailijat tänään
+
+= Lượt xem hôm nay
+en| Page views today
+zh| 今日浏览量
+es| Páginas vistas hoy
+hi| आज के पेज व्यू
+ar| مشاهدات الصفحات اليوم
+pt| Visualizações hoje
+ru| Просмотры сегодня
+ja| 本日のページビュー
+ko| 오늘 페이지뷰
+de| Seitenaufrufe heute
+fr| Pages vues aujourd'hui
+id| Tayangan halaman hari ini
+th| ยอดดูหน้าเว็บวันนี้
+tr| Bugünkü sayfa görüntüleme
+fi| Sivunäytöt tänään
+
+= Đăng ký hôm nay
+en| Sign-ups today
+zh| 今日注册
+es| Registros hoy
+hi| आज के साइन अप
+ar| تسجيلات اليوم
+pt| Cadastros hoje
+ru| Регистрации сегодня
+ja| 本日の登録数
+ko| 오늘 가입
+de| Anmeldungen heute
+fr| Inscriptions aujourd'hui
+id| Pendaftaran hari ini
+th| ผู้สมัครวันนี้
+tr| Bugünkü kayıtlar
+fi| Rekisteröitymiset tänään
+
+= Tỉ lệ đăng ký
+en| Sign-up rate
+zh| 注册转化率
+es| Tasa de registro
+hi| साइन अप दर
+ar| نسبة التسجيل
+pt| Taxa de cadastro
+ru| Конверсия в регистрацию
+ja| 登録率
+ko| 가입 전환율
+de| Anmeldequote
+fr| Taux d'inscription
+id| Tingkat pendaftaran
+th| อัตราการสมัคร
+tr| Kayıt oranı
+fi| Rekisteröitymisprosentti
+
+= Khách truy cập 30 ngày gần nhất
+en| Visitors in the last 30 days
+zh| 近 30 天访客
+es| Visitantes de los últimos 30 días
+hi| पिछले 30 दिनों के विज़िटर
+ar| الزوار خلال آخر 30 يومًا
+pt| Visitantes dos últimos 30 dias
+ru| Посетители за последние 30 дней
+ja| 過去30日間の訪問者
+ko| 최근 30일 방문자
+de| Besucher der letzten 30 Tage
+fr| Visiteurs des 30 derniers jours
+id| Pengunjung 30 hari terakhir
+th| ผู้เยี่ยมชมใน 30 วันที่ผ่านมา
+tr| Son 30 günün ziyaretçileri
+fi| Vierailijat viimeisen 30 päivän ajalta
+
+= Chưa có dữ liệu truy cập
+en| No visit data yet
+zh| 暂无访问数据
+es| Aún no hay datos de visitas
+hi| अभी तक विज़िट का डेटा नहीं
+ar| لا توجد بيانات زيارات بعد
+pt| Ainda não há dados de acesso
+ru| Данных о посещениях пока нет
+ja| まだアクセスデータがありません
+ko| 아직 방문 데이터가 없습니다
+de| Noch keine Besucherdaten
+fr| Aucune donnée de visite pour le moment
+id| Belum ada data kunjungan
+th| ยังไม่มีข้อมูลการเข้าชม
+tr| Henüz ziyaret verisi yok
+fi| Ei vielä vierailutietoja
+
+= hôm qua: {0}
+en| yesterday: {0}
+zh| 昨天:{0}
+es| ayer: {0}
+hi| कल: {0}
+ar| أمس: {0}
+pt| ontem: {0}
+ru| вчера: {0}
+ja| 昨日:{0}
+ko| 어제: {0}
+de| gestern: {0}
+fr| hier : {0}
+id| kemarin: {0}
+th| เมื่อวาน: {0}
+tr| dün: {0}
+fi| eilen: {0}
+
+= trên tổng số khách hôm nay
+en| of today's visitors
+zh| 占今日访客比例
+es| de los visitantes de hoy
+hi| आज के विज़िटरों में से
+ar| من زوار اليوم
+pt| dos visitantes de hoje
+ru| от посетителей за сегодня
+ja| 本日の訪問者に対する割合
+ko| 오늘 방문자 대비
+de| der heutigen Besucher
+fr| des visiteurs du jour
+id| dari pengunjung hari ini
+th| จากผู้เยี่ยมชมวันนี้
+tr| bugünkü ziyaretçilerin
+fi| tämän päivän vierailijoista
+
+= Truy cập
+en| Traffic
+zh| 访问
+es| Tráfico
+hi| ट्रैफ़िक
+ar| الزيارات
+pt| Acessos
+ru| Трафик
+ja| アクセス
+ko| 방문
+de| Besucher
+fr| Trafic
+id| Kunjungan
+th| การเข้าชม
+tr| Trafik
+fi| Liikenne
+
+= Lượng khách truy cập website, tự cập nhật mỗi 15 giây
+en| Website visitors, updated automatically every 15 seconds
+zh| 网站访客数据,每 15 秒自动更新
+es| Visitantes del sitio web, con actualización automática cada 15 segundos
+hi| वेबसाइट के विज़िटर, हर 15 सेकंड में अपने आप अपडेट
+ar| زوار الموقع، يتحدّث تلقائيًا كل 15 ثانية
+pt| Visitantes do site, atualizados automaticamente a cada 15 segundos
+ru| Посетители сайта, автообновление каждые 15 секунд
+ja| ウェブサイトの訪問者数(15秒ごとに自動更新)
+ko| 웹사이트 방문자 현황(15초마다 자동 갱신)
+de| Website-Besucher, automatische Aktualisierung alle 15 Sekunden
+fr| Visiteurs du site, mise à jour automatique toutes les 15 secondes
+id| Pengunjung website, diperbarui otomatis setiap 15 detik
+th| ผู้เข้าชมเว็บไซต์ อัปเดตอัตโนมัติทุก 15 วินาที
+tr| Web sitesi ziyaretçileri, her 15 saniyede otomatik güncellenir
+fi| Verkkosivuston vierailijat, päivittyy automaattisesti 15 sekunnin välein
+
+= Đang xem ngay bây giờ
+en| Viewing right now
+zh| 当前在线
+es| Viendo ahora mismo
+hi| अभी देख रहे हैं
+ar| يتصفحون الآن
+pt| Vendo agora
+ru| Смотрят прямо сейчас
+ja| 現在閲覧中
+ko| 지금 보고 있는 사람
+de| Gerade online
+fr| En ligne actuellement
+id| Sedang melihat sekarang
+th| กำลังเข้าชมตอนนี้
+tr| Şu anda görüntüleyen
+fi| Katsovat juuri nyt
+
+= người mở website trong 90 giây qua
+en| people who opened the website in the last 90 seconds
+zh| 人在过去 90 秒内打开了网站
+es| personas abrieron el sitio en los últimos 90 segundos
+hi| लोगों ने पिछले 90 सेकंड में वेबसाइट खोली
+ar| أشخاص فتحوا الموقع خلال آخر 90 ثانية
+pt| pessoas abriram o site nos últimos 90 segundos
+ru| человек открывали сайт за последние 90 секунд
+ja| 人が過去90秒以内にサイトを開いています
+ko| 명이 최근 90초 내에 웹사이트를 열었습니다
+de| Personen haben die Website in den letzten 90 Sekunden geöffnet
+fr| personnes ont ouvert le site ces 90 dernières secondes
+id| orang membuka website dalam 90 detik terakhir
+th| คนเปิดเว็บไซต์ใน 90 วินาทีที่ผ่านมา
+tr| kişi son 90 saniyede web sitesini açtı
+fi| henkilöä avasi sivuston viimeisen 90 sekunnin aikana
+
+= Nguồn truy cập (7 ngày)
+en| Traffic sources (7 days)
+zh| 访问来源(7 天)
+es| Fuentes de tráfico (7 días)
+hi| ट्रैफ़िक स्रोत (7 दिन)
+ar| مصادر الزيارات (7 أيام)
+pt| Origens de acesso (7 dias)
+ru| Источники трафика (7 дней)
+ja| 流入元(7日間)
+ko| 유입 경로(7일)
+de| Besucherquellen (7 Tage)
+fr| Sources de trafic (7 jours)
+id| Sumber kunjungan (7 hari)
+th| แหล่งที่มาของผู้เข้าชม (7 วัน)
+tr| Trafik kaynakları (7 gün)
+fi| Liikenteen lähteet (7 päivää)
+
+= Thiết bị truy cập (7 ngày)
+en| Visitor devices (7 days)
+zh| 访问设备(7 天)
+es| Dispositivos de los visitantes (7 días)
+hi| विज़िटर के डिवाइस (7 दिन)
+ar| أجهزة الزوار (7 أيام)
+pt| Dispositivos dos visitantes (7 dias)
+ru| Устройства посетителей (7 дней)
+ja| 訪問者の端末(7日間)
+ko| 방문자 기기(7일)
+de| Geräte der Besucher (7 Tage)
+fr| Appareils des visiteurs (7 jours)
+id| Perangkat pengunjung (7 hari)
+th| อุปกรณ์ของผู้เข้าชม (7 วัน)
+tr| Ziyaretçi cihazları (7 gün)
+fi| Vierailijoiden laitteet (7 päivää)
+
+= Khách được đếm theo trình duyệt (không lưu IP). Ngày tính theo múi giờ {0}. Lượt truy cập của quản trị viên không được tính.
+en| Visitors are counted per browser (no IP is stored). Days follow the {0} time zone. Administrator visits are not counted.
+zh| 访客按浏览器计数(不保存 IP)。日期按 {0} 时区计算。管理员的访问不计入。
+es| Los visitantes se cuentan por navegador (no se guarda la IP). Los días siguen la zona horaria {0}. Las visitas de administradores no se cuentan.
+hi| विज़िटर ब्राउज़र के हिसाब से गिने जाते हैं (IP सहेजा नहीं जाता)। दिन {0} टाइम ज़ोन के अनुसार हैं। एडमिन की विज़िट नहीं गिनी जाती।
+ar| يُحتسب الزوار حسب المتصفح (لا يُحفظ عنوان IP). تُحسب الأيام وفق المنطقة الزمنية {0}. لا تُحتسب زيارات المشرفين.
+pt| Os visitantes são contados por navegador (nenhum IP é armazenado). Os dias seguem o fuso {0}. Acessos de administradores não são contados.
+ru| Посетители считаются по браузеру (IP не сохраняется). Дни считаются по часовому поясу {0}. Заходы администраторов не учитываются.
+ja| 訪問者はブラウザ単位でカウントします(IPは保存しません)。日付は{0}のタイムゾーンで集計します。管理者のアクセスは含まれません。
+ko| 방문자는 브라우저 기준으로 집계됩니다(IP는 저장하지 않음). 날짜는 {0} 시간대 기준입니다. 관리자 방문은 집계되지 않습니다.
+de| Besucher werden pro Browser gezählt (es wird keine IP gespeichert). Tage richten sich nach der Zeitzone {0}. Besuche von Administratoren werden nicht gezählt.
+fr| Les visiteurs sont comptés par navigateur (aucune IP n'est stockée). Les jours suivent le fuseau {0}. Les visites des administrateurs ne sont pas comptées.
+id| Pengunjung dihitung per browser (IP tidak disimpan). Hari mengikuti zona waktu {0}. Kunjungan administrator tidak dihitung.
+th| นับผู้เข้าชมตามเบราว์เซอร์ (ไม่เก็บ IP) วันนับตามเขตเวลา {0} ไม่นับการเข้าชมของผู้ดูแลระบบ
+tr| Ziyaretçiler tarayıcı başına sayılır (IP saklanmaz). Günler {0} saat dilimine göre hesaplanır. Yöneticilerin ziyaretleri sayılmaz.
+fi| Vierailijat lasketaan selaimittain (IP-osoitetta ei tallenneta). Päivät noudattavat aikavyöhykettä {0}. Ylläpitäjien vierailuja ei lasketa.

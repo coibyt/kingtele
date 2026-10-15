@@ -12,7 +12,7 @@ const bad = (msg, status = 400) => Object.assign(new Error(msg), { status });
 const str = (v, max) => (typeof v === 'string' ? v.trim().slice(0, max) : '');
 const MB = 1024 * 1024;
 
-function createApi({ store, config, auth, scheduler, media, tokenFor, points, pwaStats }) {
+function createApi({ store, config, auth, scheduler, media, tokenFor, points, pwaStats, traffic }) {
   const api = express.Router();
   const d = () => store.data;
 
@@ -35,6 +35,21 @@ function createApi({ store, config, auth, scheduler, media, tokenFor, points, pw
 
   // Thống kê cài ứng dụng: khách chưa đăng nhập cũng gửi được. Giới hạn 120 sự kiện/giờ/IP, chỉ nhận loại sự kiện cho phép.
   const pwaHits = new Map();
+  // Đếm khách truy cập (ẩn danh). Bỏ qua quản trị viên và bot; giới hạn 1200 sự kiện/giờ/IP.
+  const trackHits = new Map();
+  api.post('/track', (req, res) => {
+    if (req.get('x-requested-with') !== 'postpilot') return res.status(403).json({ error: 'Yêu cầu không hợp lệ' });
+    const now = Date.now();
+    const h = trackHits.get(req.ip) && trackHits.get(req.ip).until > now ? trackHits.get(req.ip) : { n: 0, until: now + 3600e3 };
+    if (++h.n > 1200) return res.status(429).json({ error: 'Quá nhiều yêu cầu' });
+    trackHits.set(req.ip, h);
+    const who = auth.session(req);
+    if (who && who.role === 'admin') return res.status(204).end();
+    const r = traffic.record(req.body || {}, { ua: req.get('user-agent') || '', siteHost: req.hostname });
+    if (r === 'invalid') return res.status(400).json({ error: 'Sự kiện không hợp lệ' });
+    res.status(204).end();
+  });
+
   api.post('/pwa/event', wrap(async (req, res) => {
     if (req.get('x-requested-with') !== 'postpilot') return res.status(403).json({ error: 'Yêu cầu không hợp lệ' });
     const now = Date.now();
@@ -334,6 +349,12 @@ function createApi({ store, config, auth, scheduler, media, tokenFor, points, pw
       owner: req.user.id === 'admin',
       settings: { maxAccountsPerIp: Number(d().settings.maxAccountsPerIp) || null },
     });
+  });
+
+  admin.get('/traffic', (req, res) => {
+    const signupsByDay = {};
+    for (const u of d().users) { const k = traffic.dayKey(u.createdAt); signupsByDay[k] = (signupsByDay[k] || 0) + 1; }
+    res.json(traffic.summary({ signupsByDay }));
   });
 
   admin.get('/pwa', (req, res) => {

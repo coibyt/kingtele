@@ -11,6 +11,7 @@ const DEFAULTS = () => ({
   uploads: {},
   pointLog: [],
   pwa: { devices: {} },
+  traffic: { days: {} },
   groups: [],
   posts: [],
   logs: [],

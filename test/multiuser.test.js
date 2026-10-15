@@ -209,3 +209,32 @@ test('thống kê cài ứng dụng: khách gửi sự kiện, chỉ admin xem �
   assert.strictEqual(s.chart.length, 30);
   assert.strictEqual(s.recent.length, 2);
 });
+
+test('thống kê truy cập: khách được đếm, quản trị viên không được đếm, chỉ admin xem được', async () => {
+  const hdr = (ua) => ({ 'user-agent': ua });
+  const WINUA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/130 Safari/537.36';
+  const v1 = client(), v2 = client();
+  assert.strictEqual((await v1('POST', '/api/track', { type: 'view', vid: 'trafficvis001', path: '/', ref: 'https://l.facebook.com/' }, hdr(WINUA))).status, 204);
+  assert.strictEqual((await v2('POST', '/api/track', { type: 'view', vid: 'trafficvis002', path: '/register' }, hdr(WINUA))).status, 204);
+  assert.strictEqual((await v2('POST', '/api/track', { type: 'bad', vid: 'trafficvis002', path: '/' }, hdr(WINUA))).status, 400);
+  const raw = await fetch(BASE + '/api/track', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ type: 'view', vid: 'trafficvis003', path: '/' }) });
+  assert.strictEqual(raw.status, 403); // thiếu header chống CSRF
+
+  const admin = client();
+  await admin('POST', '/api/login', { username: 'boss', password: 'AdminPass123' });
+  assert.strictEqual((await admin('POST', '/api/track', { type: 'view', vid: 'adminvisitor1', path: '/app' }, hdr(WINUA))).status, 204); // bị bỏ qua
+
+  const s = (await admin('GET', '/api/admin/traffic')).json;
+  assert.strictEqual(s.online, 2);
+  assert.strictEqual(s.today.visitors, 2);
+  assert.strictEqual(s.today.views, 2);
+  assert.strictEqual(s.sources.facebook, 1);
+  assert.strictEqual(s.onlineByPage.register, 1);
+  assert.ok(s.today.signups >= 1);                 // các thành viên đăng ký trong lúc chạy test
+  assert.strictEqual(s.chart.length, 30);
+
+  const member = client();
+  await member('POST', '/api/login', { username: 'an@example.com', password: 'newpassword1' });
+  assert.strictEqual((await member('GET', '/api/admin/traffic')).status, 403);
+  assert.strictEqual((await client()('GET', '/api/admin/traffic')).status, 401);
+});

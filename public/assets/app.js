@@ -605,6 +605,72 @@ function grantDialog(u) {
       h('div', { class: 'field' }, h('label', { for: 'gr-note' }, 'Ghi chú'), note), err) });
 }
 
+async function trafficView() {
+  let s = await api('GET', '/admin/traffic');
+  const PAGE = { home: 'Trang chủ', login: 'Đăng nhập', register: 'Đăng ký', app: 'Bảng điều khiển', other: 'Khác' };
+  const SRC = { facebook: 'Facebook', google: 'Google', telegram: 'Telegram', zalo: 'Zalo', direct: 'Truy cập trực tiếp', other: 'Nguồn khác' };
+  const PL = { ios: 'iPhone / iPad', android: 'Android', windows: 'Windows', mac: 'Mac', linux: 'Linux', other: 'Khác' };
+  const day = new Intl.DateTimeFormat(LOCALE, { day: '2-digit', month: '2-digit', timeZone: s.timezone });
+
+  const liveNum = h('div', { class: 'live-num' });
+  const liveBy = h('div', { class: 'row' });
+  const els = {};
+  const stat = (key, label) => {
+    const val = h('div', { class: 'val' }), sub = h('div', { class: 'sub' });
+    els[key] = { val, sub };
+    return h('div', { class: 'card stat' }, h('div', { class: 'lbl' }, label), val, sub);
+  };
+  const cards = [stat('visitors', 'Khách hôm nay'), stat('views', 'Lượt xem hôm nay'), stat('signups', 'Đăng ký hôm nay'), stat('rate', 'Tỉ lệ đăng ký')];
+  const chart = h('div', { class: 'chart30', role: 'img', 'aria-label': 'Khách truy cập 30 ngày gần nhất' });
+  const srcBox = h('div', { class: 'list' });
+  const platBox = h('div', { class: 'list' });
+
+  const rows = (map, labels) => {
+    const entries = Object.entries(map).sort((a, b) => b[1] - a[1]);
+    const total = Math.max(1, entries.reduce((n, e) => n + e[1], 0));
+    if (!entries.length) return [h('p', { class: 'hint' }, 'Chưa có dữ liệu truy cập')];
+    return entries.map(([k, n]) => h('div', { class: 'li' },
+      h('div', { class: 'li-main' }, h('div', { class: 'li-t' }, labels[k] || labels.other), h('div', { class: 'progress', style: 'margin-top:6px' }, h('i', { style: `width:${Math.round((n / total) * 100)}%` }))),
+      h('span', { class: 'tag acc mono' }, num(n))));
+  };
+
+  function paint() {
+    liveNum.textContent = num(s.online);
+    liveBy.replaceChildren(...Object.entries(s.onlineByPage).sort((a, b) => b[1] - a[1]).map(([k, n]) => h('span', { class: 'tag acc' }, PAGE[k] || PAGE.other, ` · ${n}`)));
+    const t = s.today, y = s.yesterday;
+    els.visitors.val.textContent = num(t.visitors); els.visitors.sub.textContent = `hôm qua: ${num(y.visitors)}`;
+    els.views.val.textContent = num(t.views); els.views.sub.textContent = `hôm qua: ${num(y.views)}`;
+    els.signups.val.textContent = num(t.signups); els.signups.sub.textContent = `hôm qua: ${num(y.signups)}`;
+    els.rate.val.textContent = `${t.visitors ? Math.round((t.signups / t.visitors) * 1000) / 10 : 0}%`; els.rate.sub.textContent = 'trên tổng số khách hôm nay';
+    const max = Math.max(1, ...s.chart.map((c) => c.visitors));
+    chart.replaceChildren(...s.chart.map((c) => h('div', { class: 'bar30', title: `${day.format(c.t)}: ${c.visitors} · ${c.views}` },
+      h('i', { class: c.visitors ? '' : 'zero', style: `height:${Math.max(3, (c.visitors / max) * 100)}%` }))));
+    srcBox.replaceChildren(...rows(s.sources, SRC));
+    platBox.replaceChildren(...rows(s.platforms, PL));
+  }
+  paint();
+
+  // Tự cập nhật mỗi 15 giây khi đang xem trang này
+  const timer = setInterval(async () => {
+    if (!document.body.contains(liveNum)) return clearInterval(timer);
+    if (document.visibilityState !== 'visible') return;
+    try { s = await api('GET', '/admin/traffic'); paint(); } catch { /* thử lại lần sau */ }
+  }, 15000);
+
+  return h('div', null,
+    pageHead('Truy cập', 'Lượng khách truy cập website, tự cập nhật mỗi 15 giây'),
+    h('div', { class: 'card live-card' },
+      h('span', { class: 'live-dot', 'aria-hidden': 'true' }),
+      h('div', null, h('div', { class: 'lbl' }, 'Đang xem ngay bây giờ'), liveNum, h('div', { class: 'hint' }, 'người mở website trong 90 giây qua')),
+      liveBy),
+    h('div', { class: 'stats' }, cards),
+    h('div', { class: 'grid2' },
+      h('div', { class: 'card card-pad' }, h('h2', null, 'Khách truy cập 30 ngày gần nhất'), chart),
+      h('div', { class: 'card card-pad' }, h('h2', null, 'Nguồn truy cập (7 ngày)'), srcBox)),
+    h('div', { class: 'card card-pad' }, h('h2', null, 'Thiết bị truy cập (7 ngày)'), platBox),
+    h('p', { class: 'hint', style: 'margin-top:14px' }, `Khách được đếm theo trình duyệt (không lưu IP). Ngày tính theo múi giờ ${s.timezone}. Lượt truy cập của quản trị viên không được tính.`));
+}
+
 async function appStatsView() {
   const s = await api('GET', '/admin/pwa');
   const stat = (label, val, sub) => h('div', { class: 'card stat' }, h('div', { class: 'lbl' }, label), h('div', { class: 'val' }, num(val)), h('div', { class: 'sub' }, sub));
@@ -694,7 +760,7 @@ async function membersView() {
 }
 
 // ---------- router ----------
-const routes = { overview: ['Tổng quan', overviewView], posts: ['Bài đăng', postsView], groups: ['Nhóm Telegram', groupsView], logs: ['Nhật ký gửi', logsView], settings: ['Cài đặt', settingsView], points: ['Điểm King', pointsView], members: ['Thành viên', membersView], installs: ['Ứng dụng', appStatsView] };
+const routes = { overview: ['Tổng quan', overviewView], posts: ['Bài đăng', postsView], groups: ['Nhóm Telegram', groupsView], logs: ['Nhật ký gửi', logsView], settings: ['Cài đặt', settingsView], points: ['Điểm King', pointsView], members: ['Thành viên', membersView], installs: ['Ứng dụng', appStatsView], traffic: ['Truy cập', trafficView] };
 let token = 0;
 async function route() {
   const key = routes[location.hash.slice(1)] ? location.hash.slice(1) : 'overview';
@@ -732,7 +798,8 @@ setInterval(tick, 20000); tick();
     who.hidden = false;
     if (me.user.role === 'admin') {
       document.querySelector('.menu').append(h('a', { href: '#members', 'data-route': 'members' }, ico('users'), 'Thành viên'),
-        h('a', { href: '#installs', 'data-route': 'installs' }, ico('download'), 'Ứng dụng'));
+        h('a', { href: '#installs', 'data-route': 'installs' }, ico('download'), 'Ứng dụng'),
+        h('a', { href: '#traffic', 'data-route': 'traffic' }, ico('globe'), 'Truy cập'));
     }
   } catch { /* api() đã chuyển về trang đăng nhập nếu hết phiên */ }
   route();
