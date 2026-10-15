@@ -9,7 +9,7 @@ const MIME = { jpg: 'image/jpeg', png: 'image/png', webp: 'image/webp', gif: 'im
 const METHOD = { image: ['sendPhoto', 'photo'], animation: ['sendAnimation', 'animation'], video: ['sendVideo', 'video'] };
 
 /** payload: object (JSON) hoặc FormData (tải file lên). */
-async function call(token, method, payload, attempt = 0) {
+async function call(token, method, payload, attempt = 0, timeoutMs = 0) {
   if (!token) throw new Error('Chưa cấu hình token bot Telegram');
   const isForm = typeof FormData !== 'undefined' && payload instanceof FormData;
   let res;
@@ -17,7 +17,7 @@ async function call(token, method, payload, attempt = 0) {
     res = await fetch(`https://api.telegram.org/bot${token}/${method}`, {
       method: 'POST',
       ...(isForm ? { body: payload } : { headers: { 'content-type': 'application/json' }, body: JSON.stringify(payload || {}) }),
-      signal: AbortSignal.timeout(isForm ? 180000 : 25000),
+      signal: AbortSignal.timeout(timeoutMs || (isForm ? 180000 : 25000)),
     });
   } catch (e) {
     throw new Error(`Không kết nối được Telegram (${e.name === 'TimeoutError' ? 'quá thời gian' : 'lỗi mạng'})`);
@@ -27,7 +27,7 @@ async function call(token, method, payload, attempt = 0) {
   const retry = json.parameters && json.parameters.retry_after;
   if (res.status === 429 && retry && attempt < 2) {
     await sleep((retry + 1) * 1000);
-    return call(token, method, payload, attempt + 1);
+    return call(token, method, payload, attempt + 1, timeoutMs);
   }
   const err = new Error(json.description || `Telegram HTTP ${res.status}`);
   err.code = json.error_code || res.status;
@@ -127,4 +127,7 @@ function chatsFromUpdates(updates) {
   return [...seen.values()].filter((c) => !c.gone).reverse().map(({ gone, ...c }) => c);
 }
 
-module.exports = { getMe, getChat, getUpdates, chatsFromUpdates, sendPost, sleep };
+/** Gọi phương thức bất kỳ; opts.timeoutMs cho long polling. */
+const callRaw = (token, method, payload, opts = {}) => call(token, method, payload, 0, opts.timeoutMs || 0);
+
+module.exports = { callRaw, getMe, getChat, getUpdates, chatsFromUpdates, sendPost, sleep };

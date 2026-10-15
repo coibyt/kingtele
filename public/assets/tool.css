@@ -1,0 +1,49 @@
+/* Trang công cụ miễn phí (SEO), chỉ tiếng Việt. Dùng biến màu từ base.css. */
+.tool-wrap { width: min(860px, 100% - 40px); margin-inline: auto; }
+.tool-hero { position: relative; padding: 48px 0 40px; overflow: hidden; }
+.tool-hero .tool-wrap { position: relative; }
+.crumbs { display: flex; gap: 8px; align-items: center; font-size: .85rem; color: var(--text-3); margin-bottom: 18px; }
+.crumbs a { color: var(--text-3); }
+.tool-h1 { font-size: clamp(2rem, 6vw, 3.1rem); line-height: 1.1; margin: 0 0 14px; }
+.tool-hero .lead { max-width: 640px; margin-bottom: 26px; }
+.tool-card { background: var(--card); border: 1px solid var(--border-soft); border-radius: 18px; padding: 22px; }
+.tool-card label { display: block; font-weight: 600; margin-bottom: 10px; }
+.tool-row { display: flex; gap: 10px; }
+.tool-row input { flex: 1; min-width: 0; min-height: 52px; padding: 0 16px; border-radius: 13px; border: 1px solid var(--border-soft); background: #0b1226; color: var(--text); font: 500 .95rem var(--mono); }
+.tool-row input:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3px var(--accent-bg); }
+.tool-card .hint { margin-top: 10px; overflow-wrap: anywhere; }
+.tool-out { margin-top: 16px; border-radius: 14px; padding: 16px; border: 1px solid var(--border-soft); background: #0b1226; }
+.tool-out.err { border-color: rgba(248, 113, 113, .4); background: var(--err-bg); color: #fecaca; }
+.tool-out .t { font-size: .85rem; color: var(--text-3); margin-bottom: 6px; }
+.tool-out .idrow { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.tool-out .idv { font: 600 clamp(1.15rem, 4.6vw, 1.6rem) var(--mono); color: #7dd3fc; overflow-wrap: anywhere; }
+.tool-out .meta { margin-top: 10px; font-size: .88rem; color: var(--text-3); }
+.bot-panel { margin-top: 16px; display: flex; gap: 16px; align-items: center; justify-content: space-between; border: 1px dashed #35466a; border-radius: 16px; padding: 18px 20px; }
+.bot-panel[hidden] { display: none; }
+.bot-panel p { margin: 6px 0 0; color: var(--text-3); font-size: .92rem; }
+.tool-sec { padding: 36px 0; }
+.tool-sec[hidden] { display: none; }
+.tool-sec h2 { font-size: clamp(1.4rem, 4vw, 1.9rem); margin: 0 0 18px; }
+.lead-sm { color: var(--text-3); margin: 0 0 20px; }
+.ways { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.way { background: var(--card); border: 1px solid var(--border-soft); border-radius: 16px; padding: 20px; }
+.way h3 { margin: 10px 0 8px; font-size: 1.05rem; }
+.way p { margin: 0; color: var(--text-3); font-size: .93rem; }
+.way-n { display: inline-grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg, #2aabee, #6366f1); color: #03121c; font-weight: 700; }
+.note-box { margin-top: 16px; padding: 14px 16px; border-radius: 12px; background: var(--accent-bg); color: var(--text); }
+.yt { position: relative; aspect-ratio: 16 / 9; border-radius: 16px; overflow: hidden; background: #000; border: 1px solid var(--border-soft); }
+.yt iframe, .yt button { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.yt button { padding: 0; cursor: pointer; background: #000 center / cover no-repeat; display: grid; place-items: center; }
+.yt .play { width: 72px; height: 50px; border-radius: 14px; background: #f00; display: grid; place-items: center; }
+.yt .play::after { content: ''; border-left: 18px solid #fff; border-top: 11px solid transparent; border-bottom: 11px solid transparent; margin-left: 4px; }
+.tool-cta { padding: 56px 0 72px; text-align: center; }
+.tool-cta h2 { font-size: clamp(1.5rem, 4.5vw, 2.1rem); margin: 0 0 10px; }
+.tool-cta p { color: var(--text-3); margin: 0 0 22px; }
+.tool-sec code, .tool-card code, .bot-panel code, .faq code { font-family: var(--mono); font-size: .88em; background: #111a33; padding: 2px 6px; border-radius: 6px; }
+@media (max-width: 720px) {
+  .ways { grid-template-columns: 1fr; }
+  .tool-row { flex-direction: column; }
+  .tool-row .btn { width: 100%; }
+  .bot-panel { flex-direction: column; align-items: stretch; text-align: left; }
+  .tool-hero { padding-top: 32px; }
+}

@@ -1,0 +1,18 @@
+# Liên kết công cụ ở chân trang chủ
+
+= Công cụ lấy ID nhóm Telegram
+en| Telegram group ID finder
+zh| Telegram 群组 ID 查询工具
+es| Herramienta para obtener el ID de grupos de Telegram
+hi| Telegram ग्रुप ID पता करने का टूल
+ar| أداة معرفة معرّف مجموعة تيليجرام
+pt| Ferramenta para obter o ID de grupos do Telegram
+ru| Инструмент для получения ID группы Telegram
+ja| Telegramグループ ID 取得ツール
+ko| Telegram 그룹 ID 확인 도구
+de| Tool zum Ermitteln der Telegram-Gruppen-ID
+fr| Outil pour obtenir l'ID d'un groupe Telegram
+id| Alat cek ID grup Telegram
+th| เครื่องมือหา ID กลุ่ม Telegram
+tr| Telegram grup kimliği bulucu
+fi| Telegram-ryhmän ID:n hakutyökalu

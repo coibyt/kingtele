@@ -13,6 +13,7 @@ const { createMedia } = require('./src/media');
 const { createPoints } = require('./src/points');
 const { createPwaStats } = require('./src/pwa-stats');
 const { createTraffic } = require('./src/traffic');
+const { startToolBot } = require('./src/chatid-tool');
 
 const store = new Store(config.dataDir).init();
 // Token bot của từng thành viên; tài khoản admin dùng token trong Cài đặt hoặc biến môi trường.
@@ -42,7 +43,7 @@ app.use((req, res, next) => {
     'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
     'Content-Security-Policy': [
       "default-src 'self'", "script-src 'self'", "style-src 'self' https://fonts.googleapis.com", "style-src-attr 'unsafe-inline'",
-      "font-src https://fonts.gstatic.com", "img-src 'self' data: https:", "connect-src 'self'",
+      "font-src https://fonts.gstatic.com", "img-src 'self' data: https:", "connect-src 'self'", "frame-src https://www.youtube-nocookie.com",
       "frame-ancestors 'none'", "base-uri 'self'", "form-action 'self'",
     ].join('; '),
   });
@@ -54,7 +55,8 @@ app.use((req, res, next) => {
 
 app.use(express.json({ limit: '100kb' }));
 app.get('/healthz', (req, res) => res.json({ ok: true, uptime: Math.round(process.uptime()) }));
-app.use('/api', createApi({ store, config, auth, scheduler, media, tokenFor, points, pwaStats, traffic }));
+const chatIdTool = config.toolBotToken ? startToolBot({ token: config.toolBotToken }) : null; // bot của công cụ /cong-cu/lay-id-nhom-telegram
+app.use('/api', createApi({ store, config, auth, scheduler, media, tokenFor, points, pwaStats, traffic, chatIdTool }));
 
 // CDN của nhà cung cấp hosting có thể bỏ header Cache-Control, nên gắn mã phiên bản (?v=) vào mọi file /assets
 // trong HTML: mỗi lần deploy là một địa chỉ mới, điện thoại luôn tải bản mới.
@@ -73,13 +75,14 @@ const htmlCache = new Map();
 const page = (file, status = 200) => (req, res) => {
   let html = htmlCache.get(file);
   if (!html) {
-    html = fs.readFileSync(file, 'utf8').replace(/(["'])(\/assets\/[^"'?]+\.(?:js|css))\1/g, `$1$2?v=${ASSET_VERSION}$1`);
+    html = fs.readFileSync(file, 'utf8').replace(/__YT_ID__/g, config.toolYoutubeId).replace(/(["'])(\/assets\/[^"'?]+\.(?:js|css))\1/g, `$1$2?v=${ASSET_VERSION}$1`);
     htmlCache.set(file, html);
   }
   res.status(status).set({ 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-cache' }).send(html);
 };
 const view = (name) => page(path.join(__dirname, 'views', name));
 app.get('/', page(path.join(__dirname, 'public', 'index.html')));
+app.get('/cong-cu/lay-id-nhom-telegram', view('tool-chat-id.html'));
 app.get('/app', (req, res) => (auth.session(req) ? view('app.html')(req, res) : res.redirect('/login')));
 app.get('/login', (req, res) => (auth.session(req) ? res.redirect('/app') : view('login.html')(req, res)));
 app.get('/register', (req, res) => (auth.session(req) ? res.redirect('/app') : view('register.html')(req, res)));

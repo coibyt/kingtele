@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Lấy ID nhóm Telegram (Chat ID) miễn phí, cả nhóm riêng tư</title>
+  <meta name="description" content="Công cụ miễn phí lấy Chat ID nhóm Telegram: dán link nhóm công khai, link tin nhắn riêng tư hoặc thêm bot vào nhóm để nhận ID dạng -100…. Không cần đăng nhập.">
+  <link rel="canonical" href="https://kingtele.com/cong-cu/lay-id-nhom-telegram">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="KingTele">
+  <meta property="og:locale" content="vi_VN">
+  <meta property="og:title" content="Lấy ID nhóm Telegram (Chat ID) miễn phí, cả nhóm riêng tư">
+  <meta property="og:description" content="Dán link nhóm hoặc thêm bot vào nhóm để lấy Chat ID Telegram trong vài giây. Miễn phí, không cần đăng nhập.">
+  <meta property="og:url" content="https://kingtele.com/cong-cu/lay-id-nhom-telegram">
+  <meta property="og:image" content="https://kingtele.com/assets/icons/icon-512.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#020617">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <script src="/assets/analytics.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=Fira+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/base.css">
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="stylesheet" href="/assets/tool.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"WebApplication","name":"Công cụ lấy ID nhóm Telegram","url":"https://kingtele.com/cong-cu/lay-id-nhom-telegram","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","inLanguage":"vi","offers":{"@type":"Offer","price":"0","priceCurrency":"VND"},"publisher":{"@type":"Organization","name":"KingTele","url":"https://kingtele.com"}},
+    {"@type":"BreadcrumbList","itemListElement":[
+      {"@type":"ListItem","position":1,"name":"KingTele","item":"https://kingtele.com/"},
+      {"@type":"ListItem","position":2,"name":"Công cụ","item":"https://kingtele.com/cong-cu/lay-id-nhom-telegram"},
+      {"@type":"ListItem","position":3,"name":"Lấy ID nhóm Telegram"}]},
+    {"@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"Chat ID nhóm Telegram là gì?","acceptedAnswer":{"@type":"Answer","text":"Chat ID là dãy số định danh duy nhất của một nhóm, siêu nhóm hoặc kênh Telegram. Bot dùng số này để biết phải gửi tin vào đâu. Nhóm công khai có thể dùng @tên_nhóm thay cho Chat ID, còn nhóm riêng tư bắt buộc phải có Chat ID."}},
+      {"@type":"Question","name":"Chat ID của nhóm Telegram riêng tư có dạng gì?","acceptedAnswer":{"@type":"Answer","text":"Nhóm và kênh riêng tư thường có Chat ID là số âm bắt đầu bằng -100, ví dụ -1001234567890. Khi nhập vào bot hoặc công cụ khác, hãy giữ nguyên dấu trừ và đủ các chữ số."}},
+      {"@type":"Question","name":"Có lấy được Chat ID từ link mời t.me/+… không?","acceptedAnswer":{"@type":"Answer","text":"Không. Link mời riêng tư không chứa Chat ID và Telegram không cho tra ngược từ link đó. Bạn có hai cách: thêm bot của công cụ vào nhóm để bot báo ID, hoặc dán link của một tin nhắn trong nhóm có dạng t.me/c/số/số, công cụ sẽ tách ID từ link."}},
+      {"@type":"Question","name":"Vì sao chuyển tiếp tin nhắn từ nhóm cho bot lại không ra ID nhóm?","acceptedAnswer":{"@type":"Answer","text":"Khi bạn chuyển tiếp tin của một người dùng hoặc từ nhóm thường, Telegram không gửi kèm Chat ID của nhóm. Chỉ tin chuyển tiếp từ kênh (channel) mới có thông tin này. Với nhóm, cách chắc chắn là thêm bot vào nhóm hoặc dán link tin nhắn."}},
+      {"@type":"Question","name":"Bot của công cụ có đọc tin nhắn trong nhóm của tôi không?","acceptedAnswer":{"@type":"Answer","text":"Bot chỉ phản hồi Chat ID khi được thêm vào nhóm hoặc khi có lệnh /id, sau đó tự rời nhóm. Công cụ không lưu nội dung tin nhắn, không hỏi và không lưu token bot của bạn."}},
+      {"@type":"Question","name":"Công cụ này có miễn phí và cần đăng nhập không?","acceptedAnswer":{"@type":"Answer","text":"Công cụ hoàn toàn miễn phí và không cần đăng nhập hay tạo tài khoản."}},
+      {"@type":"Question","name":"Tôi dùng Chat ID để làm gì?","acceptedAnswer":{"@type":"Answer","text":"Bạn dán Chat ID vào KingTele để đặt lịch tự động đăng bài, kể cả hình ảnh, GIF và video, lên nhóm hoặc kênh Telegram đó. Đăng ký KingTele miễn phí và nhận 500 Điểm King, tương đương 500 lượt gửi."}}
+    ]}
+  ]}
+  </script>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap">
+      <a class="logo" href="/" aria-label="KingTele - trang chủ">
+        <span class="logo-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></span>
+        <span class="logo-name">KingTele</span>
+      </a>
+      <div class="nav-cta"><a class="btn btn-ghost btn-sm" href="/login">Đăng nhập</a><a class="btn btn-primary btn-sm" href="/register">Đăng ký miễn phí</a></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="tool-hero">
+      <div class="bg-grid" aria-hidden="true"></div>
+      <div class="wrap tool-wrap">
+        <nav class="crumbs" aria-label="Đường dẫn"><a href="/">KingTele</a><span aria-hidden="true">/</span><span>Công cụ miễn phí</span></nav>
+        <h1 class="display tool-h1">Lấy <span class="grad">ID nhóm Telegram</span> trong vài giây</h1>
+        <p class="lead">Dán link nhóm hoặc kênh, công cụ trả về <strong>Chat ID</strong> để bạn dán vào bot. Nhóm riêng tư cũng lấy được. Miễn phí, không cần đăng nhập.</p>
+
+        <form class="tool-card" id="lookup" novalidate>
+          <label for="inp">Link nhóm, link tin nhắn hoặc @tên_nhóm</label>
+          <div class="tool-row">
+            <input id="inp" name="input" type="text" inputmode="url" autocomplete="off" autocapitalize="off" spellcheck="false" maxlength="300" placeholder="t.me/tennhom  hoặc  t.me/c/1234567890/5  hoặc  @tennhom">
+            <button class="btn btn-primary btn-lg" type="submit" id="go">Lấy ID</button>
+          </div>
+          <p class="hint">Ví dụ: <code>https://t.me/kingtele_group</code> · <code>https://t.me/c/1234567890/12</code></p>
+          <div id="out" class="tool-out" role="status" aria-live="polite" hidden></div>
+        </form>
+
+        <div class="bot-panel" id="botPanel" hidden>
+          <div>
+            <strong>Nhóm riêng tư? Thêm bot, bot báo ID ngay.</strong>
+            <p>Thêm <a id="botLink" href="https://t.me/" target="_blank" rel="noopener">@bot</a> vào nhóm hoặc kênh của bạn. Bot gửi Chat ID rồi tự rời nhóm. Nhóm thường cũng có thể gõ <code>/id</code>.</p>
+          </div>
+          <a class="btn" id="botBtn" href="https://t.me/" target="_blank" rel="noopener">Mở bot trên Telegram</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="tool-sec">
+      <div class="wrap tool-wrap">
+        <h2>3 cách lấy Chat ID nhóm Telegram</h2>
+        <div class="ways">
+          <article class="way">
+            <span class="way-n">1</span>
+            <h3>Nhóm, kênh công khai</h3>
+            <p>Có link dạng <code>t.me/tennhom</code>. Dán link vào ô phía trên, công cụ tra ra Chat ID dạng <code>-100…</code> và cho bạn sao chép.</p>
+          </article>
+          <article class="way">
+            <span class="way-n">2</span>
+            <h3>Nhóm riêng tư: link tin nhắn</h3>
+            <p>Bấm giữ một tin nhắn trong nhóm, chọn <strong>Sao chép liên kết</strong> (link dạng <code>t.me/c/…</code>), rồi dán vào ô phía trên. Công cụ tách Chat ID trực tiếp từ link.</p>
+          </article>
+          <article class="way">
+            <span class="way-n">3</span>
+            <h3>Nhóm riêng tư: thêm bot</h3>
+            <p>Thêm bot của công cụ vào nhóm, bot trả lời ngay Chat ID. Với kênh, bạn có thể chuyển tiếp (forward) một bài của kênh cho bot.</p>
+          </article>
+        </div>
+        <p class="note-box"><strong>Lưu ý:</strong> link mời riêng tư dạng <code>t.me/+abc…</code> không chứa Chat ID nên không tra được. Hãy dùng cách 2 hoặc cách 3.</p>
+      </div>
+    </section>
+
+    <section class="tool-sec" id="video-sec" data-yt="__YT_ID__" hidden>
+      <div class="wrap tool-wrap">
+        <h2>Xem video hướng dẫn</h2>
+        <div class="yt" id="yt"></div>
+      </div>
+    </section>
+
+    <section class="tool-sec">
+      <div class="wrap tool-wrap">
+        <h2>Có Chat ID rồi, làm gì tiếp?</h2>
+        <p class="lead-sm">Dán Chat ID vào KingTele để <strong>đặt lịch tự động đăng bài</strong> (văn bản, ảnh, GIF, video) lên nhiều nhóm và kênh Telegram: một lần, hằng ngày, theo thứ trong tuần hoặc theo chu kỳ. Đăng ký nhận ngay <strong>500 Điểm King</strong> (tương đương 500 lượt gửi).</p>
+        <a class="btn btn-primary btn-lg" href="/register">Đăng ký KingTele miễn phí</a>
+      </div>
+    </section>
+
+    <section class="tool-sec" id="hoi-dap">
+      <div class="wrap tool-wrap">
+        <h2>Câu hỏi thường gặp</h2>
+        <div class="faq">
+          <details><summary>Chat ID nhóm Telegram là gì?</summary><p>Chat ID là dãy số định danh duy nhất của một nhóm, siêu nhóm hoặc kênh Telegram. Bot dùng số này để biết phải gửi tin vào đâu. Nhóm công khai có thể dùng @tên_nhóm thay cho Chat ID, còn nhóm riêng tư bắt buộc phải có Chat ID.</p></details>
+          <details><summary>Chat ID của nhóm Telegram riêng tư có dạng gì?</summary><p>Nhóm và kênh riêng tư thường có Chat ID là số âm bắt đầu bằng <code>-100</code>, ví dụ <code>-1001234567890</code>. Khi nhập vào bot hoặc công cụ khác, hãy giữ nguyên dấu trừ và đủ các chữ số.</p></details>
+          <details><summary>Có lấy được Chat ID từ link mời t.me/+… không?</summary><p>Không. Link mời riêng tư không chứa Chat ID và Telegram không cho tra ngược từ link đó. Bạn có hai cách: thêm bot của công cụ vào nhóm để bot báo ID, hoặc dán link của một tin nhắn trong nhóm có dạng <code>t.me/c/số/số</code>, công cụ sẽ tách ID từ link.</p></details>
+          <details><summary>Vì sao chuyển tiếp tin nhắn từ nhóm cho bot lại không ra ID nhóm?</summary><p>Khi bạn chuyển tiếp tin của một người dùng hoặc từ nhóm thường, Telegram không gửi kèm Chat ID của nhóm. Chỉ tin chuyển tiếp từ kênh (channel) mới có thông tin này. Với nhóm, cách chắc chắn là thêm bot vào nhóm hoặc dán link tin nhắn.</p></details>
+          <details><summary>Bot của công cụ có đọc tin nhắn trong nhóm của tôi không?</summary><p>Bot chỉ phản hồi Chat ID khi được thêm vào nhóm hoặc khi có lệnh <code>/id</code>, sau đó tự rời nhóm. Công cụ không lưu nội dung tin nhắn, không hỏi và không lưu token bot của bạn.</p></details>
+          <details><summary>Công cụ này có miễn phí và cần đăng nhập không?</summary><p>Công cụ hoàn toàn miễn phí và không cần đăng nhập hay tạo tài khoản.</p></details>
+          <details><summary>Tôi dùng Chat ID để làm gì?</summary><p>Bạn dán Chat ID vào KingTele để đặt lịch tự động đăng bài, kể cả hình ảnh, GIF và video, lên nhóm hoặc kênh Telegram đó. Đăng ký KingTele miễn phí và nhận 500 Điểm King, tương đương 500 lượt gửi.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="tool-cta">
+      <div class="wrap tool-wrap">
+        <h2>Tự động đăng bài lên Telegram, không cần canh giờ</h2>
+        <p>Đặt lịch một lần, KingTele gửi đúng giờ tới mọi nhóm bạn quản lý.</p>
+        <a class="btn btn-primary btn-lg" href="/register">Đăng ký KingTele miễn phí</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap"><span>© <span id="yr">2026</span> KingTele</span><span><a href="/">Trang chủ</a> · <a href="/register">Đăng ký</a> · <a href="/login">Đăng nhập</a></span></div>
+  </footer>
+  <script src="/assets/tool.js"></script>
+</body>
+</html>

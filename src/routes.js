@@ -12,7 +12,9 @@ const bad = (msg, status = 400) => Object.assign(new Error(msg), { status });
 const str = (v, max) => (typeof v === 'string' ? v.trim().slice(0, max) : '');
 const MB = 1024 * 1024;
 
-function createApi({ store, config, auth, scheduler, media, tokenFor, points, pwaStats, traffic }) {
+const { lookup: lookupChatId, MESSAGES: MSG } = require('./chatid-tool');
+
+function createApi({ store, config, auth, scheduler, media, tokenFor, points, pwaStats, traffic, chatIdTool }) {
   const api = express.Router();
   const d = () => store.data;
 
@@ -32,6 +34,23 @@ function createApi({ store, config, auth, scheduler, media, tokenFor, points, pw
     u ? res.json({ user: u, registrationOpen: config.registrationOpen, points: points.balanceOf(u.id) }) : res.status(401).json({ error: 'Chưa đăng nhập' });
   });
   api.get('/config', (req, res) => res.json({ registrationOpen: config.registrationOpen }));
+
+  // Công cụ miễn phí lấy ID nhóm Telegram: không cần đăng nhập. 30 lượt tra/10 phút/IP.
+  const toolHits = new Map();
+  api.get('/tool/info', (req, res) => res.json({ bot: chatIdTool ? chatIdTool.username() : '' }));
+  api.post('/tool/chat-id', wrap(async (req, res) => {
+    if (req.get('x-requested-with') !== 'postpilot') return res.status(403).json({ error: 'Yêu cầu không hợp lệ' });
+    const now = Date.now();
+    const h = toolHits.get(req.ip) && toolHits.get(req.ip).until > now ? toolHits.get(req.ip) : { n: 0, until: now + 600e3 };
+    if (++h.n > 30) return res.status(429).json({ error: MSG.rate });
+    toolHits.set(req.ip, h);
+    if (toolHits.size > 5000) for (const [k, v] of toolHits) if (v.until < now) toolHits.delete(k);
+    try {
+      res.json(await lookupChatId(str(req.body && req.body.input, 300), config.toolBotToken));
+    } catch (e) {
+      res.status(e.status || 500).json({ error: e.status ? e.message : MSG.generic });
+    }
+  }));
 
   // Thống kê cài ứng dụng: khách chưa đăng nhập cũng gửi được. Giới hạn 120 sự kiện/giờ/IP, chỉ nhận loại sự kiện cho phép.
   const pwaHits = new Map();

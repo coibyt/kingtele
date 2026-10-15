@@ -89,5 +89,7 @@ module.exports = {
   adminUser: env.ADMIN_USERNAME || 'admin',
   adminPassword,
   envBotToken: (env.TELEGRAM_BOT_TOKEN || '').trim(),
+  toolBotToken: (env.TOOL_BOT_TOKEN || '').trim(),           // bot riêng cho công cụ miễn phí /cong-cu/...
+  toolYoutubeId: /^[\w-]{11}$/.test((env.TOOL_YOUTUBE_ID || '').trim()) ? env.TOOL_YOUTUBE_ID.trim() : '',
   defaultTz: tz,
 };
