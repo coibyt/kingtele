@@ -250,3 +250,7 @@ dialog[open] { animation: pop .22s var(--ease); display: flex; flex-direction: c
 .found-mock .mono { font-size: .8rem; margin-top: 2px; }
 .mbtn { background: #2aabee; color: #031018; font-weight: 600; padding: 5px 10px; border-radius: 8px; font-size: .8rem; flex: none; }
 @media (max-width: 520px) { .gstep { grid-template-columns: 1fr; gap: 10px; padding: 18px 16px; } .gnum { width: 32px; height: 32px; } .guide-card summary { padding: 14px 16px; } .guide-body .lead { padding: 16px 16px 2px; } }
+
+/* Facebook: huy hiệu số bài đến hạn trên menu */
+.nav-badge { margin-inline-start: auto; min-width: 20px; height: 20px; padding: 0 6px; border-radius: 999px; background: #f59e0b; color: #1a1203; font: 700 .72rem/20px var(--mono); text-align: center; }
+.menu a { display: flex; align-items: center; }

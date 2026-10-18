@@ -876,7 +876,190 @@ async function membersView() {
 }
 
 // ---------- router ----------
-const routes = { overview: ['Tổng quan', overviewView], posts: ['Bài đăng', postsView], groups: ['Nhóm Telegram', groupsView], logs: ['Nhật ký gửi', logsView], settings: ['Cài đặt', settingsView], points: ['Điểm King', pointsView], members: ['Thành viên', membersView], installs: ['Ứng dụng', appStatsView], traffic: ['Truy cập', trafficView] };
+// ---------- Facebook: lịch nhắc + đăng nhanh vào nhóm ----------
+async function refreshFbBadge() {
+  try {
+    const due = await api('GET', '/fb/due');
+    const n = due.filter((x) => x.items.some((i) => !i.done)).length;
+    const a = document.querySelector('.menu a[data-route="facebook"]');
+    if (!a) return;
+    let b = a.querySelector('.nav-badge');
+    if (!n) { if (b) b.remove(); return; }
+    if (!b) { b = h('span', { class: 'nav-badge' }); a.append(b); }
+    b.textContent = String(n);
+  } catch { /* huy hiệu chỉ là phần phụ */ }
+}
+
+function copyToClipboard(text) {
+  const ok = () => toast('Đã sao chép nội dung');
+  const fallback = () => {
+    const ta = h('textarea', { style: 'position:fixed;opacity:0' });
+    ta.value = text; document.body.append(ta); ta.select();
+    try { document.execCommand('copy'); ok(); } catch { toast('Không sao chép được, hãy bôi đen và chép tay', 'err'); }
+    ta.remove();
+  };
+  if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(text).then(ok, fallback); else fallback();
+}
+
+function fbDueCard(it) {
+  const done = it.items.filter((i) => i.done).length;
+  const all = done === it.items.length;
+  return h('article', { class: 'card post' },
+    h('div', { class: 'post-top' },
+      h('div', { style: 'min-width:0;flex:1' }, h('h3', null, it.title), h('p', { class: 'excerpt' }, it.text)),
+      all ? h('span', { class: 'tag ok' }, 'Hoàn tất') : h('span', { class: 'tag warn' }, `${done}/${it.items.length} nhóm`)),
+    h('div', { class: 'meta' }, h('span', null, ico('clock'), `Đến hạn: ${fmtDT(it.dueAt)} (${rel(it.dueAt)})`)),
+    h('div', { class: 'list' }, it.items.map((g) => h('div', { class: 'li' },
+      h('div', { class: 'li-main' }, h('div', { class: 'li-t' }, g.name)),
+      h('a', { class: 'btn btn-sm', href: g.url, target: '_blank', rel: 'noopener noreferrer' }, ico('link'), 'Mở nhóm'),
+      h('button', { class: `btn btn-sm ${g.done ? '' : 'btn-primary'}`, type: 'button', onclick: (e) => act(e.currentTarget, async () => {
+        await api('POST', `/fb/due/${it.id}/items/${g.groupId}`, { done: !g.done }); route();
+      }) }, ico('check'), g.done ? 'Đã đăng' : 'Đánh dấu đã đăng')))),
+    h('div', { class: 'post-actions' },
+      h('button', { class: 'btn btn-sm btn-primary', type: 'button', onclick: () => copyToClipboard(it.text + (it.link ? `\n${it.link}` : '')) }, ico('copy'), 'Sao chép nội dung'),
+      h('button', { class: 'btn btn-sm btn-danger', type: 'button', onclick: (e) => act(e.currentTarget, async () => { await api('DELETE', `/fb/due/${it.id}`); route(); }) }, ico('trash'), 'Xoá')));
+}
+
+function fbTaskCard(t, groups) {
+  const names = t.groupIds.map((id) => (groups.find((g) => g.id === id) || {}).name).filter(Boolean);
+  return h('article', { class: 'card post' },
+    h('div', { class: 'post-top' }, h('div', { style: 'min-width:0;flex:1' }, h('h3', null, t.title), h('p', { class: 'excerpt' }, t.text)), statusTag(t.status)),
+    h('div', { class: 'meta' },
+      h('span', null, ico('repeat'), describe(t.schedule)),
+      t.nextRunAt ? h('span', null, ico('clock'), `Lần tới: ${fmtDT(t.nextRunAt, t.timezone)} (${rel(t.nextRunAt)})`) : null,
+      h('span', null, ico('globe'), t.timezone)),
+    h('div', { class: 'checks' }, names.length ? names.map((n) => h('span', { class: 'tag' }, n)) : h('span', { class: 'tag err' }, 'Chưa có nhóm')),
+    h('div', { class: 'post-actions' },
+      h('button', { class: 'btn btn-sm', type: 'button', onclick: (e) => act(e.currentTarget, async () => { await api('POST', `/fb/tasks/${t.id}/due-now`); route(); }, 'Đã đưa vào mục Đến hạn đăng') }, ico('zap'), 'Đến hạn ngay'),
+      t.status === 'active'
+        ? h('button', { class: 'btn btn-sm', type: 'button', onclick: (e) => act(e.currentTarget, async () => { await api('POST', `/fb/tasks/${t.id}/status`, { status: 'paused' }); route(); }, 'Đã tạm dừng') }, ico('pause'), 'Tạm dừng')
+        : h('button', { class: 'btn btn-sm', type: 'button', onclick: (e) => act(e.currentTarget, async () => { await api('POST', `/fb/tasks/${t.id}/status`, { status: 'active' }); route(); }, 'Đã tiếp tục') }, ico('play'), 'Tiếp tục'),
+      h('button', { class: 'btn btn-sm', type: 'button', onclick: () => openFbTask(t, groups) }, ico('edit'), 'Sửa'),
+      h('button', { class: 'btn btn-sm btn-danger', type: 'button', onclick: async () => {
+        if (await confirmBox('Xoá bài đăng?', `"${t.title}" sẽ bị xoá vĩnh viễn cùng lịch đăng.`, 'Xoá')) {
+          try { await api('DELETE', `/fb/tasks/${t.id}`); toast('Đã xoá bài đăng'); route(); } catch (e) { toast(e.message, 'err'); }
+        }
+      } }, ico('trash'), 'Xoá')));
+}
+
+function openFbTask(task, groups) {
+  const tzList = (Intl.supportedValuesOf ? Intl.supportedValuesOf('timeZone') : []).slice();
+  const tz0 = task ? task.timezone : state.tz;
+  for (const z of [state.tz, tz0]) if (!tzList.includes(z)) tzList.push(z);
+  const now = nowIn(tz0);
+  const s0 = task ? task.schedule : { type: 'once', date: now.date, time: now.time };
+  const sel = new Set(task ? task.groupIds : []);
+  const days = new Set(s0.days || [1, 2, 3, 4, 5]);
+  const f = {
+    title: h('input', { class: 'input', id: 'fb-title', maxLength: 120, value: task ? task.title : '', placeholder: 'VD: Bản tin sáng' }),
+    text: h('textarea', { class: 'input', id: 'fb-text', maxLength: 8000, rows: 6, placeholder: 'Nội dung bài đăng Facebook...' }),
+    link: h('input', { class: 'input', id: 'fb-link', type: 'url', value: task ? task.link : '', placeholder: 'https://...' }),
+    date: h('input', { class: 'input', id: 'fbs-date', type: 'date', value: s0.date || now.date, min: now.date }),
+    time: h('input', { class: 'input', id: 'fbs-time', type: 'time', value: s0.time || now.time }),
+    tz: h('select', { class: 'input', id: 'fbs-tz' }, tzList.map((z) => h('option', { value: z, selected: z === tz0 }, z))),
+  };
+  f.text.value = task ? task.text : '';
+  const err = h('p', { class: 'error-text', role: 'alert' });
+  const seg = h('div', { class: 'seg', role: 'radiogroup', 'aria-label': 'Kiểu lịch' },
+    [['once', 'Một lần'], ['daily', 'Hằng ngày'], ['weekly', 'Theo thứ']].map(([v, l]) => [
+      h('input', { type: 'radio', name: 'fbtype', id: `fbt-${v}`, value: v, checked: v === s0.type, onchange: sync }),
+      h('label', { for: `fbt-${v}` }, l)]));
+  const rowDate = h('div', { class: 'field' }, h('label', { for: 'fbs-date' }, 'Ngày'), f.date);
+  const rowDays = h('div', { class: 'field' }, h('span', { class: 'label' }, 'Các ngày đăng'),
+    h('div', { class: 'days', role: 'group', 'aria-label': 'Ngày trong tuần' }, [1, 2, 3, 4, 5, 6, 0].map((d) => h('div', { class: 'check' },
+      h('input', { type: 'checkbox', id: `fbd-${d}`, checked: days.has(d), onchange: (e) => { e.target.checked ? days.add(d) : days.delete(d); } }),
+      h('label', { for: `fbd-${d}` }, dayLabel(d))))));
+  const cur = () => (seg.querySelector('input:checked') || {}).value;
+  function sync() { rowDate.hidden = cur() !== 'once'; rowDays.hidden = cur() !== 'weekly'; }
+  const picks = groups.length
+    ? h('div', { class: 'checks' }, groups.map((g) => h('div', { class: 'check' },
+      h('input', { type: 'checkbox', id: `fbg-${g.id}`, checked: sel.has(g.id), onchange: (e) => { e.target.checked ? sel.add(g.id) : sel.delete(g.id); } }),
+      h('label', { for: `fbg-${g.id}` }, g.name))))
+    : h('p', { class: 'hint' }, 'Chưa có nhóm Facebook. Hãy thêm nhóm ở mục bên dưới trước.');
+  const save = h('button', { class: 'btn btn-primary', type: 'submit' }, ico('check'), task ? 'Lưu thay đổi' : 'Tạo bài đăng');
+  const form = h('form', { class: 'form-grid', novalidate: true, onsubmit: async (e) => {
+    e.preventDefault(); err.textContent = ''; save.disabled = true;
+    const t = cur();
+    const schedule = { type: t, time: f.time.value, ...(t === 'once' ? { date: f.date.value } : {}), ...(t === 'weekly' ? { days: [...days] } : {}) };
+    try {
+      const body = { title: f.title.value, text: f.text.value, link: f.link.value, groupIds: [...sel], schedule, timezone: f.tz.value };
+      if (task) await api('PUT', `/fb/tasks/${task.id}`, body); else await api('POST', '/fb/tasks', body);
+      dlg.close(); toast(task ? 'Đã lưu thay đổi' : 'Đã tạo bài đăng'); route();
+    } catch (ex) { err.textContent = ex.message; save.disabled = false; }
+  } },
+    h('div', { class: 'field' }, h('label', { for: 'fb-title' }, 'Tiêu đề'), f.title),
+    h('div', { class: 'field' }, h('label', { for: 'fb-text' }, 'Nội dung'), f.text),
+    h('div', { class: 'field' }, h('label', { for: 'fb-link' }, 'Link đính kèm (tuỳ chọn)'), f.link),
+    h('div', { class: 'field' }, h('span', { class: 'label' }, 'Nhóm Facebook'), picks),
+    h('div', { class: 'field' }, h('span', { class: 'label' }, 'Lịch nhắc'), seg),
+    h('div', { class: 'two' }, rowDate, h('div', { class: 'field' }, h('label', { for: 'fbs-time' }, 'Giờ'), f.time)),
+    rowDays,
+    h('div', { class: 'field' }, h('label', { for: 'fbs-tz' }, 'Múi giờ'), f.tz),
+    err, h('div', null, save));
+  sync();
+  const dlg = dialog({ title: task ? 'Sửa bài đăng' : 'Bài mới', body: form });
+}
+
+async function facebookView() {
+  const [groups, tasks, due, rem] = await Promise.all([api('GET', '/fb/groups'), api('GET', '/fb/tasks'), api('GET', '/fb/due'), api('GET', '/fb/reminder')]);
+  refreshFbBadge();
+  const pending = due.filter((x) => x.items.some((i) => !i.done));
+  const finished = due.filter((x) => !x.items.some((i) => !i.done));
+
+  const gName = h('input', { class: 'input', id: 'fbg-name', maxLength: 100, placeholder: 'VD: Hội mua bán nhà đất' });
+  const gUrl = h('input', { class: 'input', id: 'fbg-url', type: 'url', placeholder: 'https://www.facebook.com/groups/...' });
+  const gErr = h('p', { class: 'error-text', role: 'alert' });
+  const gBtn = h('button', { class: 'btn btn-primary', type: 'submit' }, ico('plus'), 'Thêm nhóm');
+  const addForm = h('form', { class: 'card card-pad form-grid', novalidate: true, onsubmit: async (e) => {
+    e.preventDefault(); gErr.textContent = ''; gBtn.disabled = true;
+    try { await api('POST', '/fb/groups', { name: gName.value, url: gUrl.value }); toast('Đã thêm nhóm'); route(); }
+    catch (ex) { gErr.textContent = ex.message; gBtn.disabled = false; }
+  } },
+    h('h2', null, 'Nhóm Facebook của bạn'),
+    h('div', { class: 'two' },
+      h('div', { class: 'field' }, h('label', { for: 'fbg-name' }, 'Tên nhóm'), gName),
+      h('div', { class: 'field' }, h('label', { for: 'fbg-url' }, 'Link nhóm'), gUrl)),
+    h('p', { class: 'hint' }, 'Mở nhóm trên Facebook, sao chép link trên thanh địa chỉ rồi dán vào đây.'),
+    gErr, h('div', null, gBtn),
+    groups.length ? h('div', { class: 'list' }, groups.map((g) => h('div', { class: 'li' },
+      h('div', { class: 'li-main' }, h('div', { class: 'li-t' }, g.name), h('div', { class: 'li-s mono' }, g.url)),
+      h('a', { class: 'btn btn-sm', href: g.url, target: '_blank', rel: 'noopener noreferrer' }, ico('link'), 'Mở nhóm'),
+      h('button', { class: 'btn btn-sm btn-danger btn-icon', type: 'button', 'aria-label': `Xoá ${g.name}`, onclick: async () => {
+        if (await confirmBox('Xoá nhóm?', `"${g.name}" sẽ bị gỡ khỏi danh sách và khỏi các bài đăng liên quan.`, 'Xoá')) {
+          try { await api('DELETE', `/fb/groups/${g.id}`); toast('Đã xoá nhóm'); route(); } catch (ex) { toast(ex.message, 'err'); }
+        }
+      } }, ico('trash')))) ) : null);
+
+  const chat = h('input', { class: 'input mono', id: 'fb-rem', value: rem.chatId, placeholder: '123456789' });
+  const remMsg = h('p', { class: 'hint', role: 'status' });
+  const remCard = h('div', { class: 'card card-pad form-grid' }, h('h2', null, 'Nhắc qua Telegram'),
+    rich('Đến giờ, KingTele nhắn cho bạn qua **bot Telegram đã kết nối** (không tốn Điểm King). Nhắn **/start** cho bot của bạn rồi bấm **Tự nhận diện**, hoặc dán Chat ID cá nhân vào ô bên dưới.', 'hint'),
+    h('div', { class: 'field' }, h('label', { for: 'fb-rem' }, 'Chat ID Telegram của bạn'), chat), remMsg,
+    h('div', { class: 'row' },
+      h('button', { class: 'btn', type: 'button', onclick: (e) => act(e.currentTarget, async () => {
+        const r = await api('GET', '/fb/reminder/discover');
+        if (!r.chatId) { remMsg.textContent = 'Chưa thấy tin nhắn nào. Hãy nhắn /start cho bot rồi bấm lại.'; return; }
+        chat.value = r.chatId; remMsg.textContent = r.name ? `Đã nhận diện: ${r.name}. Bấm Lưu để lưu lại.` : 'Đã nhận diện. Bấm Lưu để lưu lại.';
+      }) }, ico('refresh'), 'Tự nhận diện'),
+      h('button', { class: 'btn btn-primary', type: 'button', onclick: (e) => act(e.currentTarget, async () => { await api('PUT', '/fb/reminder', { chatId: chat.value }); }, 'Đã lưu') }, ico('check'), 'Lưu'),
+      h('button', { class: 'btn', type: 'button', onclick: (e) => act(e.currentTarget, async () => { await api('PUT', '/fb/reminder', { chatId: chat.value }); await api('POST', '/fb/reminder/test'); }, 'Đã gửi tin nhắn thử') }, ico('send'), 'Gửi thử')));
+
+  return h('div', null,
+    pageHead('Facebook', 'Hẹn giờ nhắc và đăng nhanh vào nhóm Facebook',
+      h('button', { class: 'btn btn-primary', type: 'button', onclick: () => openFbTask(null, groups) }, ico('plus'), 'Bài mới')),
+    h('div', { class: 'banner' }, ico('alert'), rich('**Facebook không cho phần mềm tự đăng vào Nhóm.** Vì vậy KingTele nhắc bạn đúng giờ và chuẩn bị sẵn nội dung: bấm **Sao chép nội dung**, **Mở nhóm**, dán và đăng. KingTele không bao giờ hỏi mật khẩu Facebook của bạn.', 'hint', 'div')),
+    h('div', { class: 'stack' },
+      h('h2', null, 'Đến hạn đăng'),
+      pending.length ? pending.map(fbDueCard) : empty('check', 'Không có bài nào đến hạn', 'Khi đến giờ, bài sẽ hiện ở đây và KingTele nhắc bạn qua Telegram.'),
+      finished.length ? h('details', { class: 'card card-pad' }, h('summary', null, `Đã hoàn tất (${finished.length})`), h('div', { class: 'stack', style: 'margin-top:12px' }, finished.map(fbDueCard))) : null,
+      h('h2', null, 'Bài hẹn giờ'),
+      tasks.length ? tasks.map((t) => fbTaskCard(t, groups))
+        : empty('file', 'Chưa có bài hẹn giờ nào', 'Tạo bài đầu tiên và đặt lịch để KingTele nhắc bạn đúng giờ.',
+          h('button', { class: 'btn btn-primary', type: 'button', onclick: () => openFbTask(null, groups) }, ico('plus'), 'Tạo bài đăng')),
+      addForm, remCard));
+}
+
+const routes = { overview: ['Tổng quan', overviewView], posts: ['Bài đăng', postsView], groups: ['Nhóm Telegram', groupsView], facebook: ['Facebook', facebookView], logs: ['Nhật ký gửi', logsView], settings: ['Cài đặt', settingsView], points: ['Điểm King', pointsView], members: ['Thành viên', membersView], installs: ['Ứng dụng', appStatsView], traffic: ['Truy cập', trafficView] };
 let token = 0;
 async function route() {
   const key = routes[location.hash.slice(1)] ? location.hash.slice(1) : 'overview';
@@ -889,7 +1072,7 @@ async function route() {
   if (!view.firstChild) view.append(h('div', { class: 'skeleton' }), h('div', { class: 'skeleton' }));
   try {
     const el = await fn();
-    if (mine === token) { view.replaceChildren(el); refreshPoints(); }
+    if (mine === token) { view.replaceChildren(el); refreshPoints(); if (key !== 'facebook') refreshFbBadge(); }
   } catch (e) {
     if (mine === token) view.replaceChildren(empty('alert', 'Không tải được dữ liệu', e.message, h('button', { class: 'btn', type: 'button', onclick: route }, 'Thử lại')));
   }

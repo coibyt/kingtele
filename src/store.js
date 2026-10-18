@@ -13,6 +13,9 @@ const DEFAULTS = () => ({
   pwa: { devices: {} },
   traffic: { days: {} },
   groups: [],
+  fbGroups: [],
+  fbTasks: [],
+  fbDue: [],
   posts: [],
   logs: [],
 });

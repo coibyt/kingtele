@@ -14,6 +14,7 @@ const { createPoints } = require('./src/points');
 const { createPwaStats } = require('./src/pwa-stats');
 const { createTraffic } = require('./src/traffic');
 const { startToolBot } = require('./src/chatid-tool');
+const { createFb } = require('./src/fb');
 
 const store = new Store(config.dataDir).init();
 // Token bot của từng thành viên; tài khoản admin dùng token trong Cài đặt hoặc biến môi trường.
@@ -30,6 +31,8 @@ if (points.migrate()) store.save();
 const auth = createAuth({ store, config, points });
 const media = createMedia({ store, uploadsDir: config.uploadsDir });
 const scheduler = createScheduler({ store, getToken: tokenFor, isActive, uploadsDir: config.uploadsDir, points });
+
+const fb = createFb({ store, getToken: tokenFor, isActive, publicUrl: config.baseUrl || config.publicUrl });
 
 const app = express();
 app.disable('x-powered-by');
@@ -56,7 +59,7 @@ app.use((req, res, next) => {
 app.use(express.json({ limit: '100kb' }));
 app.get('/healthz', (req, res) => res.json({ ok: true, uptime: Math.round(process.uptime()) }));
 const chatIdTool = config.toolBotToken ? startToolBot({ token: config.toolBotToken }) : null; // bot của công cụ /cong-cu/lay-id-nhom-telegram
-app.use('/api', createApi({ store, config, auth, scheduler, media, tokenFor, points, pwaStats, traffic, chatIdTool }));
+app.use('/api', createApi({ store, config, auth, scheduler, media, tokenFor, points, pwaStats, traffic, chatIdTool, fb }));
 
 // CDN của nhà cung cấp hosting có thể bỏ header Cache-Control, nên gắn mã phiên bản (?v=) vào mọi file /assets
 // trong HTML: mỗi lần deploy là một địa chỉ mới, điện thoại luôn tải bản mới.
@@ -99,12 +102,14 @@ app.use(page(path.join(__dirname, 'views', '404.html'), 404));
 const server = app.listen(config.port, () => {
   console.log(`KingTele chạy tại cổng ${config.port} (${config.production ? 'production' : 'dev'})`);
   scheduler.start();
+  fb.start();
   media.sweep();
   setInterval(() => traffic.flush(), 60000).unref(); // ghi số liệu truy cập xuống đĩa mỗi phút
 });
 
 async function shutdown() {
   scheduler.stop();
+  fb.stop();
   server.close();
   await traffic.flush();
   await store.flush();

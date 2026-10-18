@@ -1,0 +1,885 @@
+# Facebook: lịch nhắc + đăng nhanh vào nhóm
+
+= Đã sao chép nội dung
+en| Content copied
+zh| 已复制内容
+es| Contenido copiado
+hi| सामग्री कॉपी हो गई
+ar| تم نسخ المحتوى
+pt| Conteúdo copiado
+ru| Текст скопирован
+ja| 内容をコピーしました
+ko| 내용을 복사했습니다
+de| Inhalt kopiert
+fr| Contenu copié
+id| Konten disalin
+th| คัดลอกเนื้อหาแล้ว
+tr| İçerik kopyalandı
+fi| Sisältö kopioitu
+
+= Không sao chép được, hãy bôi đen và chép tay
+en| Couldn't copy. Select the text and copy it manually
+zh| 无法复制,请选中文字后手动复制
+es| No se pudo copiar. Selecciona el texto y cópialo a mano
+hi| कॉपी नहीं हो सका। टेक्स्ट चुनकर हाथ से कॉपी करें
+ar| تعذّر النسخ. حدّد النص وانسخه يدويًا
+pt| Não foi possível copiar. Selecione o texto e copie manualmente
+ru| Не удалось скопировать. Выделите текст и скопируйте вручную
+ja| コピーできませんでした。テキストを選択して手動でコピーしてください
+ko| 복사하지 못했습니다. 텍스트를 선택해 직접 복사하세요
+de| Kopieren nicht möglich. Markieren Sie den Text und kopieren Sie ihn manuell
+fr| Copie impossible. Sélectionnez le texte et copiez-le manuellement
+id| Tidak bisa menyalin. Blok teksnya lalu salin manual
+th| คัดลอกไม่ได้ กรุณาเลือกข้อความแล้วคัดลอกเอง
+tr| Kopyalanamadı. Metni seçip elle kopyalayın
+fi| Kopiointi ei onnistunut. Valitse teksti ja kopioi käsin
+
+= {0}/{1} nhóm
+en| {0}/{1} groups
+zh| {0}/{1} 个群组
+es| {0}/{1} grupos
+hi| {0}/{1} ग्रुप
+ar| {0}/{1} مجموعة
+pt| {0}/{1} grupos
+ru| {0}/{1} групп
+ja| {0}/{1} グループ
+ko| {0}/{1} 그룹
+de| {0}/{1} Gruppen
+fr| {0}/{1} groupes
+id| {0}/{1} grup
+th| {0}/{1} กลุ่ม
+tr| {0}/{1} grup
+fi| {0}/{1} ryhmää
+
+= Đến hạn: {0} ({1})
+en| Due: {0} ({1})
+zh| 到期:{0}({1})
+es| Vence: {0} ({1})
+hi| समय: {0} ({1})
+ar| الموعد: {0} ({1})
+pt| Vence: {0} ({1})
+ru| Срок: {0} ({1})
+ja| 期限:{0}({1})
+ko| 기한: {0} ({1})
+de| Fällig: {0} ({1})
+fr| Échéance : {0} ({1})
+id| Jatuh tempo: {0} ({1})
+th| ครบกำหนด: {0} ({1})
+tr| Vade: {0} ({1})
+fi| Erääntyy: {0} ({1})
+
+= Mở nhóm
+en| Open group
+zh| 打开群组
+es| Abrir grupo
+hi| ग्रुप खोलें
+ar| فتح المجموعة
+pt| Abrir grupo
+ru| Открыть группу
+ja| グループを開く
+ko| 그룹 열기
+de| Gruppe öffnen
+fr| Ouvrir le groupe
+id| Buka grup
+th| เปิดกลุ่ม
+tr| Grubu aç
+fi| Avaa ryhmä
+
+= Đã đăng
+en| Posted
+zh| 已发布
+es| Publicado
+hi| पोस्ट हो गया
+ar| تم النشر
+pt| Publicado
+ru| Опубликовано
+ja| 投稿済み
+ko| 게시됨
+de| Gepostet
+fr| Publié
+id| Sudah diposting
+th| โพสต์แล้ว
+tr| Paylaşıldı
+fi| Julkaistu
+
+= Đánh dấu đã đăng
+en| Mark as posted
+zh| 标记为已发布
+es| Marcar como publicado
+hi| पोस्ट हुआ चिह्नित करें
+ar| وضع علامة تم النشر
+pt| Marcar como publicado
+ru| Отметить как опубликованное
+ja| 投稿済みにする
+ko| 게시 완료로 표시
+de| Als gepostet markieren
+fr| Marquer comme publié
+id| Tandai sudah diposting
+th| ทำเครื่องหมายว่าโพสต์แล้ว
+tr| Paylaşıldı olarak işaretle
+fi| Merkitse julkaistuksi
+
+= Sao chép nội dung
+en| Copy content
+zh| 复制内容
+es| Copiar contenido
+hi| सामग्री कॉपी करें
+ar| نسخ المحتوى
+pt| Copiar conteúdo
+ru| Скопировать текст
+ja| 内容をコピー
+ko| 내용 복사
+de| Inhalt kopieren
+fr| Copier le contenu
+id| Salin konten
+th| คัดลอกเนื้อหา
+tr| İçeriği kopyala
+fi| Kopioi sisältö
+
+= Đã đưa vào mục Đến hạn đăng
+en| Added to Due to post
+zh| 已加入“待发布”
+es| Añadido a «Pendientes de publicar»
+hi| "पोस्ट करने का समय" में जोड़ा गया
+ar| تمت الإضافة إلى «حان وقت النشر»
+pt| Adicionado a «Pendentes de publicação»
+ru| Добавлено в «Пора публиковать»
+ja| 「投稿期限」に追加しました
+ko| "게시 예정"에 추가했습니다
+de| Zu „Jetzt zu posten“ hinzugefügt
+fr| Ajouté à « À publier »
+id| Ditambahkan ke "Jatuh tempo diposting"
+th| เพิ่มในรายการ "ถึงเวลาโพสต์" แล้ว
+tr| "Paylaşım zamanı" bölümüne eklendi
+fi| Lisätty kohtaan "Julkaistavat"
+
+= Đến hạn ngay
+en| Due now
+zh| 立即到期
+es| Vencer ahora
+hi| अभी समय करें
+ar| حان الآن
+pt| Vencer agora
+ru| Сделать срочным
+ja| 今すぐ期限にする
+ko| 지금 기한으로
+de| Jetzt fällig
+fr| Échéance immédiate
+id| Jatuh tempo sekarang
+th| ถึงกำหนดทันที
+tr| Hemen vadeli yap
+fi| Erääntyy heti
+
+= Nội dung bài đăng Facebook...
+en| Facebook post content...
+zh| Facebook 帖子内容...
+es| Contenido de la publicación de Facebook...
+hi| Facebook पोस्ट की सामग्री...
+ar| محتوى منشور فيسبوك...
+pt| Conteúdo da publicação do Facebook...
+ru| Текст публикации для Facebook...
+ja| Facebook投稿の内容...
+ko| Facebook 게시물 내용...
+de| Inhalt des Facebook-Beitrags...
+fr| Contenu de la publication Facebook...
+id| Isi postingan Facebook...
+th| เนื้อหาโพสต์ Facebook...
+tr| Facebook gönderi içeriği...
+fi| Facebook-julkaisun sisältö...
+
+= Chưa có nhóm Facebook. Hãy thêm nhóm ở mục bên dưới trước.
+en| No Facebook groups yet. Add a group in the section below first.
+zh| 还没有 Facebook 群组。请先在下方添加群组。
+es| Aún no hay grupos de Facebook. Primero añade un grupo en la sección de abajo.
+hi| अभी कोई Facebook ग्रुप नहीं है। पहले नीचे के हिस्से में ग्रुप जोड़ें।
+ar| لا توجد مجموعات فيسبوك بعد. أضف مجموعة أولًا من القسم أدناه.
+pt| Ainda não há grupos do Facebook. Adicione um grupo na seção abaixo primeiro.
+ru| Групп Facebook пока нет. Сначала добавьте группу в разделе ниже.
+ja| Facebookグループがまだありません。先に下のセクションでグループを追加してください。
+ko| 아직 Facebook 그룹이 없습니다. 먼저 아래 섹션에서 그룹을 추가하세요.
+de| Noch keine Facebook-Gruppen. Fügen Sie zuerst unten eine Gruppe hinzu.
+fr| Aucun groupe Facebook pour l'instant. Ajoutez d'abord un groupe dans la section ci-dessous.
+id| Belum ada grup Facebook. Tambahkan grup di bagian bawah terlebih dahulu.
+th| ยังไม่มีกลุ่ม Facebook โปรดเพิ่มกลุ่มในส่วนด้านล่างก่อน
+tr| Henüz Facebook grubu yok. Önce aşağıdaki bölümden bir grup ekleyin.
+fi| Facebook-ryhmiä ei vielä ole. Lisää ensin ryhmä alla olevassa osiossa.
+
+= Tiêu đề
+en| Title
+zh| 标题
+es| Título
+hi| शीर्षक
+ar| العنوان
+pt| Título
+ru| Заголовок
+ja| タイトル
+ko| 제목
+de| Titel
+fr| Titre
+id| Judul
+th| ชื่อเรื่อง
+tr| Başlık
+fi| Otsikko
+
+= Link đính kèm (tuỳ chọn)
+en| Attached link (optional)
+zh| 附加链接(可选)
+es| Enlace adjunto (opcional)
+hi| संलग्न लिंक (वैकल्पिक)
+ar| رابط مرفق (اختياري)
+pt| Link anexo (opcional)
+ru| Ссылка (необязательно)
+ja| 添付リンク(任意)
+ko| 첨부 링크(선택)
+de| Angehängter Link (optional)
+fr| Lien joint (facultatif)
+id| Tautan terlampir (opsional)
+th| ลิงก์แนบ (ไม่บังคับ)
+tr| Eklenen bağlantı (isteğe bağlı)
+fi| Liitetty linkki (valinnainen)
+
+= Nhóm Facebook
+en| Facebook groups
+zh| Facebook 群组
+es| Grupos de Facebook
+hi| Facebook ग्रुप
+ar| مجموعات فيسبوك
+pt| Grupos do Facebook
+ru| Группы Facebook
+ja| Facebookグループ
+ko| Facebook 그룹
+de| Facebook-Gruppen
+fr| Groupes Facebook
+id| Grup Facebook
+th| กลุ่ม Facebook
+tr| Facebook grupları
+fi| Facebook-ryhmät
+
+= Lịch nhắc
+en| Reminder schedule
+zh| 提醒计划
+es| Programa de recordatorios
+hi| रिमाइंडर शेड्यूल
+ar| جدول التذكير
+pt| Agenda de lembretes
+ru| Расписание напоминаний
+ja| リマインダーのスケジュール
+ko| 알림 일정
+de| Erinnerungsplan
+fr| Planning des rappels
+id| Jadwal pengingat
+th| ตารางเตือน
+tr| Hatırlatma takvimi
+fi| Muistutusaikataulu
+
+= VD: Hội mua bán nhà đất
+en| e.g. Real estate buy & sell group
+zh| 例如:房产买卖交流群
+es| Ej.: Grupo de compraventa de inmuebles
+hi| जैसे: प्रॉपर्टी खरीद-बिक्री ग्रुप
+ar| مثال: مجموعة بيع وشراء العقارات
+pt| Ex.: Grupo de compra e venda de imóveis
+ru| Напр.: Группа купли-продажи недвижимости
+ja| 例:不動産売買グループ
+ko| 예: 부동산 매매 그룹
+de| z. B. Immobilien-Kauf-und-Verkauf-Gruppe
+fr| Ex. : Groupe d'achat-vente immobilier
+id| Mis.: Grup jual beli properti
+th| เช่น กลุ่มซื้อขายอสังหาริมทรัพย์
+tr| Örn.: Emlak alım satım grubu
+fi| Esim. kiinteistökauppaa käsittelevä ryhmä
+
+= Nhóm Facebook của bạn
+en| Your Facebook groups
+zh| 你的 Facebook 群组
+es| Tus grupos de Facebook
+hi| आपके Facebook ग्रुप
+ar| مجموعات فيسبوك الخاصة بك
+pt| Seus grupos do Facebook
+ru| Ваши группы Facebook
+ja| あなたのFacebookグループ
+ko| 내 Facebook 그룹
+de| Ihre Facebook-Gruppen
+fr| Vos groupes Facebook
+id| Grup Facebook Anda
+th| กลุ่ม Facebook ของคุณ
+tr| Facebook gruplarınız
+fi| Facebook-ryhmäsi
+
+= Tên nhóm
+en| Group name
+zh| 群组名称
+es| Nombre del grupo
+hi| ग्रुप का नाम
+ar| اسم المجموعة
+pt| Nome do grupo
+ru| Название группы
+ja| グループ名
+ko| 그룹 이름
+de| Gruppenname
+fr| Nom du groupe
+id| Nama grup
+th| ชื่อกลุ่ม
+tr| Grup adı
+fi| Ryhmän nimi
+
+= Link nhóm
+en| Group link
+zh| 群组链接
+es| Enlace del grupo
+hi| ग्रुप का लिंक
+ar| رابط المجموعة
+pt| Link do grupo
+ru| Ссылка на группу
+ja| グループのリンク
+ko| 그룹 링크
+de| Gruppenlink
+fr| Lien du groupe
+id| Tautan grup
+th| ลิงก์กลุ่ม
+tr| Grup bağlantısı
+fi| Ryhmän linkki
+
+= Mở nhóm trên Facebook, sao chép link trên thanh địa chỉ rồi dán vào đây.
+en| Open the group on Facebook, copy the link from the address bar, and paste it here.
+zh| 在 Facebook 打开群组,复制地址栏中的链接,粘贴到这里。
+es| Abre el grupo en Facebook, copia el enlace de la barra de direcciones y pégalo aquí.
+hi| Facebook पर ग्रुप खोलें, एड्रेस बार से लिंक कॉपी करें और यहाँ पेस्ट करें।
+ar| افتح المجموعة على فيسبوك، وانسخ الرابط من شريط العنوان والصقه هنا.
+pt| Abra o grupo no Facebook, copie o link da barra de endereços e cole aqui.
+ru| Откройте группу в Facebook, скопируйте ссылку из адресной строки и вставьте сюда.
+ja| Facebookでグループを開き、アドレスバーのリンクをコピーしてここに貼り付けてください。
+ko| Facebook에서 그룹을 열고 주소창의 링크를 복사해 여기에 붙여넣으세요.
+de| Öffnen Sie die Gruppe auf Facebook, kopieren Sie den Link aus der Adressleiste und fügen Sie ihn hier ein.
+fr| Ouvrez le groupe sur Facebook, copiez le lien de la barre d'adresse et collez-le ici.
+id| Buka grup di Facebook, salin tautan dari bilah alamat, lalu tempel di sini.
+th| เปิดกลุ่มบน Facebook คัดลอกลิงก์จากแถบที่อยู่ แล้ววางที่นี่
+tr| Grubu Facebook'ta açın, adres çubuğundaki bağlantıyı kopyalayıp buraya yapıştırın.
+fi| Avaa ryhmä Facebookissa, kopioi linkki osoiterivistä ja liitä se tähän.
+
+= Nhắc qua Telegram
+en| Telegram reminders
+zh| 通过 Telegram 提醒
+es| Recordatorios por Telegram
+hi| Telegram पर रिमाइंडर
+ar| التذكير عبر تيليجرام
+pt| Lembretes pelo Telegram
+ru| Напоминания в Telegram
+ja| Telegramでリマインド
+ko| Telegram으로 알림
+de| Erinnerungen über Telegram
+fr| Rappels par Telegram
+id| Pengingat lewat Telegram
+th| เตือนผ่าน Telegram
+tr| Telegram ile hatırlatma
+fi| Muistutukset Telegramissa
+
+= Đến giờ, KingTele nhắn cho bạn qua **bot Telegram đã kết nối** (không tốn Điểm King). Nhắn **/start** cho bot của bạn rồi bấm **Tự nhận diện**, hoặc dán Chat ID cá nhân vào ô bên dưới.
+en| When it's time, KingTele messages you through your **connected Telegram bot** (costs no King Points). Send **/start** to your bot, then press **Detect automatically**, or paste your personal Chat ID below.
+zh| 到时间后,KingTele 会通过你**已连接的 Telegram 机器人**给你发消息(不消耗 King 积分)。先给你的机器人发送 **/start**,再点击**自动识别**,或在下方粘贴你的个人 Chat ID。
+es| Cuando llegue la hora, KingTele te escribe a través de tu **bot de Telegram conectado** (no gasta Puntos King). Envía **/start** a tu bot y pulsa **Detectar automáticamente**, o pega abajo tu Chat ID personal.
+hi| समय होने पर KingTele आपके **जुड़े हुए Telegram बॉट** से आपको संदेश भेजता है (King पॉइंट खर्च नहीं होते)। अपने बॉट को **/start** भेजें और **अपने-आप पहचानें** दबाएँ, या अपना निजी Chat ID नीचे पेस्ट करें।
+ar| عند حلول الوقت يرسل لك KingTele رسالة عبر **بوت تيليجرام المتصل** (دون خصم نقاط King). أرسل **/start** إلى بوتك ثم اضغط **التعرّف تلقائيًا**، أو الصق Chat ID الشخصي أدناه.
+pt| Na hora certa, o KingTele envia uma mensagem pelo seu **bot do Telegram conectado** (não gasta Pontos King). Envie **/start** ao seu bot e clique em **Detectar automaticamente**, ou cole seu Chat ID pessoal abaixo.
+ru| Когда придёт время, KingTele напишет вам через **подключённого Telegram-бота** (баллы King не списываются). Отправьте своему боту **/start** и нажмите **Определить автоматически**, либо вставьте свой личный Chat ID ниже.
+ja| 時間になると、KingTeleが**接続済みのTelegramボット**からメッセージを送ります(Kingポイントは消費しません)。ボットに **/start** を送って**自動検出**を押すか、下に個人のChat IDを貼り付けてください。
+ko| 시간이 되면 KingTele이 **연결된 Telegram 봇**으로 메시지를 보냅니다(King 포인트는 차감되지 않습니다). 봇에게 **/start**를 보낸 뒤 **자동 인식**을 누르거나, 아래에 개인 Chat ID를 붙여넣으세요.
+de| Wenn es soweit ist, schreibt KingTele Ihnen über Ihren **verbundenen Telegram-Bot** (kostet keine King-Punkte). Senden Sie **/start** an Ihren Bot und klicken Sie auf **Automatisch erkennen**, oder fügen Sie unten Ihre persönliche Chat-ID ein.
+fr| À l'heure prévue, KingTele vous écrit via votre **bot Telegram connecté** (sans dépenser de Points King). Envoyez **/start** à votre bot puis cliquez sur **Détecter automatiquement**, ou collez votre ID de discussion personnel ci-dessous.
+id| Saat tiba waktunya, KingTele mengirim pesan lewat **bot Telegram yang terhubung** (tidak memakai Poin King). Kirim **/start** ke bot Anda lalu tekan **Deteksi otomatis**, atau tempel Chat ID pribadi Anda di bawah.
+th| เมื่อถึงเวลา KingTele จะส่งข้อความถึงคุณผ่าน **บอท Telegram ที่เชื่อมต่อไว้** (ไม่เสียคะแนน King) ส่ง **/start** ให้บอทของคุณ แล้วกด **ตรวจหาอัตโนมัติ** หรือวาง Chat ID ส่วนตัวของคุณด้านล่าง
+tr| Zamanı geldiğinde KingTele size **bağlı Telegram botunuz** üzerinden mesaj gönderir (King Puanı harcamaz). Botunuza **/start** gönderip **Otomatik algıla**'ya basın veya kişisel Chat ID'nizi aşağıya yapıştırın.
+fi| Kun aika koittaa, KingTele lähettää sinulle viestin **yhdistetyn Telegram-bottisi** kautta (ei kuluta King-pisteitä). Lähetä botillesi **/start** ja paina **Tunnista automaattisesti**, tai liitä henkilökohtainen Chat ID alle.
+
+= Chat ID Telegram của bạn
+en| Your Telegram Chat ID
+zh| 你的 Telegram Chat ID
+es| Tu Chat ID de Telegram
+hi| आपका Telegram Chat ID
+ar| Chat ID الخاص بك في تيليجرام
+pt| Seu Chat ID do Telegram
+ru| Ваш Chat ID в Telegram
+ja| あなたのTelegram Chat ID
+ko| 내 Telegram Chat ID
+de| Ihre Telegram-Chat-ID
+fr| Votre ID de discussion Telegram
+id| Chat ID Telegram Anda
+th| Chat ID Telegram ของคุณ
+tr| Telegram Chat ID'niz
+fi| Telegram Chat ID:si
+
+= Chưa thấy tin nhắn nào. Hãy nhắn /start cho bot rồi bấm lại.
+en| No messages found yet. Send /start to your bot and press again.
+zh| 还没看到消息。请给机器人发送 /start 后再点一次。
+es| Aún no hay mensajes. Envía /start a tu bot y vuelve a pulsar.
+hi| अभी कोई संदेश नहीं मिला। बॉट को /start भेजें और फिर से दबाएँ।
+ar| لم تظهر أي رسالة بعد. أرسل /start إلى البوت ثم اضغط مجددًا.
+pt| Nenhuma mensagem encontrada. Envie /start ao bot e clique de novo.
+ru| Сообщений пока нет. Отправьте боту /start и нажмите снова.
+ja| メッセージがまだ見つかりません。ボットに /start を送ってからもう一度押してください。
+ko| 아직 메시지가 없습니다. 봇에게 /start를 보낸 뒤 다시 누르세요.
+de| Noch keine Nachricht gefunden. Senden Sie /start an Ihren Bot und klicken Sie erneut.
+fr| Aucun message trouvé. Envoyez /start à votre bot puis réessayez.
+id| Belum ada pesan. Kirim /start ke bot lalu tekan lagi.
+th| ยังไม่พบข้อความ ส่ง /start ให้บอทแล้วกดอีกครั้ง
+tr| Henüz mesaj bulunamadı. Bota /start gönderip tekrar basın.
+fi| Viestejä ei vielä löytynyt. Lähetä botille /start ja paina uudelleen.
+
+= Đã nhận diện: {0}. Bấm Lưu để lưu lại.
+en| Detected: {0}. Press Save to keep it.
+zh| 已识别:{0}。点击“保存”完成。
+es| Detectado: {0}. Pulsa Guardar para conservarlo.
+hi| पहचाना गया: {0}। सहेजने के लिए "सहेजें" दबाएँ।
+ar| تم التعرّف: {0}. اضغط "حفظ" للاحتفاظ به.
+pt| Detectado: {0}. Clique em Salvar para guardar.
+ru| Определено: {0}. Нажмите «Сохранить».
+ja| 検出しました:{0}。「保存」を押して確定してください。
+ko| 인식됨: {0}. 저장을 눌러 확정하세요.
+de| Erkannt: {0}. Klicken Sie auf Speichern, um es zu übernehmen.
+fr| Détecté : {0}. Cliquez sur Enregistrer pour le conserver.
+id| Terdeteksi: {0}. Tekan Simpan untuk menyimpan.
+th| ตรวจพบ: {0} กดบันทึกเพื่อเก็บไว้
+tr| Algılandı: {0}. Kaydetmek için Kaydet'e basın.
+fi| Tunnistettu: {0}. Tallenna painamalla Tallenna.
+
+= Đã nhận diện. Bấm Lưu để lưu lại.
+en| Detected. Press Save to keep it.
+zh| 已识别。点击“保存”完成。
+es| Detectado. Pulsa Guardar para conservarlo.
+hi| पहचान लिया गया। सहेजने के लिए "सहेजें" दबाएँ।
+ar| تم التعرّف. اضغط "حفظ" للاحتفاظ به.
+pt| Detectado. Clique em Salvar para guardar.
+ru| Определено. Нажмите «Сохранить».
+ja| 検出しました。「保存」を押して確定してください。
+ko| 인식되었습니다. 저장을 눌러 확정하세요.
+de| Erkannt. Klicken Sie auf Speichern, um es zu übernehmen.
+fr| Détecté. Cliquez sur Enregistrer pour le conserver.
+id| Terdeteksi. Tekan Simpan untuk menyimpan.
+th| ตรวจพบแล้ว กดบันทึกเพื่อเก็บไว้
+tr| Algılandı. Kaydetmek için Kaydet'e basın.
+fi| Tunnistettu. Tallenna painamalla Tallenna.
+
+= Tự nhận diện
+en| Detect automatically
+zh| 自动识别
+es| Detectar automáticamente
+hi| अपने-आप पहचानें
+ar| التعرّف تلقائيًا
+pt| Detectar automaticamente
+ru| Определить автоматически
+ja| 自動検出
+ko| 자동 인식
+de| Automatisch erkennen
+fr| Détecter automatiquement
+id| Deteksi otomatis
+th| ตรวจหาอัตโนมัติ
+tr| Otomatik algıla
+fi| Tunnista automaattisesti
+
+= Đã lưu
+en| Saved
+zh| 已保存
+es| Guardado
+hi| सहेजा गया
+ar| تم الحفظ
+pt| Salvo
+ru| Сохранено
+ja| 保存しました
+ko| 저장됨
+de| Gespeichert
+fr| Enregistré
+id| Tersimpan
+th| บันทึกแล้ว
+tr| Kaydedildi
+fi| Tallennettu
+
+= Lưu
+en| Save
+zh| 保存
+es| Guardar
+hi| सहेजें
+ar| حفظ
+pt| Salvar
+ru| Сохранить
+ja| 保存
+ko| 저장
+de| Speichern
+fr| Enregistrer
+id| Simpan
+th| บันทึก
+tr| Kaydet
+fi| Tallenna
+
+= Đã gửi tin nhắn thử
+en| Test message sent
+zh| 已发送测试消息
+es| Mensaje de prueba enviado
+hi| टेस्ट संदेश भेजा गया
+ar| تم إرسال رسالة تجريبية
+pt| Mensagem de teste enviada
+ru| Тестовое сообщение отправлено
+ja| テストメッセージを送信しました
+ko| 테스트 메시지를 보냈습니다
+de| Testnachricht gesendet
+fr| Message de test envoyé
+id| Pesan uji terkirim
+th| ส่งข้อความทดสอบแล้ว
+tr| Test mesajı gönderildi
+fi| Testiviesti lähetetty
+
+= Gửi thử
+en| Send test
+zh| 发送测试
+es| Enviar prueba
+hi| टेस्ट भेजें
+ar| إرسال تجربة
+pt| Enviar teste
+ru| Отправить тест
+ja| テスト送信
+ko| 테스트 발송
+de| Test senden
+fr| Envoyer un test
+id| Kirim uji
+th| ส่งทดสอบ
+tr| Test gönder
+fi| Lähetä testi
+
+= Hẹn giờ nhắc và đăng nhanh vào nhóm Facebook
+en| Schedule reminders and post quickly to Facebook groups
+zh| 设置提醒,快速发布到 Facebook 群组
+es| Programa recordatorios y publica rápido en grupos de Facebook
+hi| रिमाइंडर शेड्यूल करें और Facebook ग्रुप में तेज़ी से पोस्ट करें
+ar| جدولة التذكيرات والنشر السريع في مجموعات فيسبوك
+pt| Agende lembretes e publique rápido em grupos do Facebook
+ru| Планируйте напоминания и быстро публикуйте в группах Facebook
+ja| リマインダーを設定して、Facebookグループにすばやく投稿
+ko| 알림을 예약하고 Facebook 그룹에 빠르게 게시하세요
+de| Erinnerungen planen und schnell in Facebook-Gruppen posten
+fr| Planifiez des rappels et publiez vite dans des groupes Facebook
+id| Jadwalkan pengingat dan posting cepat ke grup Facebook
+th| ตั้งเวลาเตือนและโพสต์ลงกลุ่ม Facebook ได้รวดเร็ว
+tr| Hatırlatmaları zamanlayın ve Facebook gruplarına hızlıca paylaşın
+fi| Ajasta muistutuksia ja julkaise nopeasti Facebook-ryhmiin
+
+= **Facebook không cho phần mềm tự đăng vào Nhóm.** Vì vậy KingTele nhắc bạn đúng giờ và chuẩn bị sẵn nội dung: bấm **Sao chép nội dung**, **Mở nhóm**, dán và đăng. KingTele không bao giờ hỏi mật khẩu Facebook của bạn.
+en| **Facebook doesn't let software post to Groups automatically.** So KingTele reminds you on time and has your content ready: press **Copy content**, **Open group**, paste and post. KingTele never asks for your Facebook password.
+zh| **Facebook 不允许软件自动向群组发帖。**因此 KingTele 会准时提醒你并备好内容:点击**复制内容**、**打开群组**,粘贴并发布。KingTele 绝不会索要你的 Facebook 密码。
+es| **Facebook no permite que un software publique automáticamente en Grupos.** Por eso KingTele te avisa a tiempo y deja listo el contenido: pulsa **Copiar contenido**, **Abrir grupo**, pega y publica. KingTele nunca te pide la contraseña de Facebook.
+hi| **Facebook सॉफ़्टवेयर को ग्रुप में अपने-आप पोस्ट नहीं करने देता।** इसलिए KingTele ठीक समय पर याद दिलाता है और सामग्री तैयार रखता है: **सामग्री कॉपी करें**, **ग्रुप खोलें**, पेस्ट करें और पोस्ट करें। KingTele कभी आपका Facebook पासवर्ड नहीं माँगता।
+ar| **لا يسمح فيسبوك للبرامج بالنشر تلقائيًا في المجموعات.** لذلك ينبّهك KingTele في الوقت المناسب ويجهّز المحتوى: اضغط **نسخ المحتوى** ثم **فتح المجموعة**، والصق وانشر. لا يطلب KingTele كلمة مرور فيسبوك أبدًا.
+pt| **O Facebook não permite que um software publique automaticamente em Grupos.** Por isso o KingTele avisa na hora certa e deixa o conteúdo pronto: clique em **Copiar conteúdo**, **Abrir grupo**, cole e publique. O KingTele nunca pede a sua senha do Facebook.
+ru| **Facebook не позволяет программам автоматически публиковать в Группах.** Поэтому KingTele вовремя напоминает и готовит текст: нажмите **Скопировать текст**, **Открыть группу**, вставьте и опубликуйте. KingTele никогда не спрашивает пароль от Facebook.
+ja| **Facebookはソフトウェアによるグループへの自動投稿を認めていません。**そのためKingTeleは時間にお知らせし、内容を準備します。**内容をコピー**、**グループを開く**を押して、貼り付けて投稿してください。KingTeleがFacebookのパスワードを尋ねることはありません。
+ko| **Facebook은 소프트웨어가 그룹에 자동으로 게시하는 것을 허용하지 않습니다.** 그래서 KingTele이 정해진 시간에 알려 주고 내용을 준비해 둡니다. **내용 복사**, **그룹 열기**를 누르고 붙여넣어 게시하세요. KingTele은 Facebook 비밀번호를 절대 묻지 않습니다.
+de| **Facebook erlaubt es Software nicht, automatisch in Gruppen zu posten.** Deshalb erinnert KingTele Sie pünktlich und hält den Inhalt bereit: **Inhalt kopieren**, **Gruppe öffnen**, einfügen und posten. KingTele fragt nie nach Ihrem Facebook-Passwort.
+fr| **Facebook n'autorise pas un logiciel à publier automatiquement dans les Groupes.** KingTele vous prévient donc à l'heure et prépare le contenu : cliquez sur **Copier le contenu**, **Ouvrir le groupe**, collez et publiez. KingTele ne vous demande jamais votre mot de passe Facebook.
+id| **Facebook tidak mengizinkan perangkat lunak memposting otomatis ke Grup.** Karena itu KingTele mengingatkan tepat waktu dan menyiapkan kontennya: tekan **Salin konten**, **Buka grup**, tempel lalu posting. KingTele tidak pernah meminta kata sandi Facebook Anda.
+th| **Facebook ไม่อนุญาตให้ซอฟต์แวร์โพสต์ลงกลุ่มอัตโนมัติ** KingTele จึงเตือนตรงเวลาและเตรียมเนื้อหาให้พร้อม: กด **คัดลอกเนื้อหา**, **เปิดกลุ่ม** แล้ววางและโพสต์ KingTele ไม่เคยขอรหัสผ่าน Facebook ของคุณ
+tr| **Facebook, yazılımların Gruplara otomatik gönderi paylaşmasına izin vermez.** Bu yüzden KingTele sizi zamanında uyarır ve içeriği hazır tutar: **İçeriği kopyala**, **Grubu aç**, yapıştırın ve paylaşın. KingTele Facebook şifrenizi asla istemez.
+fi| **Facebook ei salli ohjelmistojen julkaista ryhmiin automaattisesti.** Siksi KingTele muistuttaa ajoissa ja valmistelee sisällön: paina **Kopioi sisältö**, **Avaa ryhmä**, liitä ja julkaise. KingTele ei koskaan kysy Facebook-salasanaasi.
+
+= Đến hạn đăng
+en| Due to post
+zh| 待发布
+es| Pendientes de publicar
+hi| पोस्ट करने का समय
+ar| حان وقت النشر
+pt| Pendentes de publicação
+ru| Пора публиковать
+ja| 投稿期限
+ko| 게시 예정
+de| Jetzt zu posten
+fr| À publier
+id| Jatuh tempo diposting
+th| ถึงเวลาโพสต์
+tr| Paylaşım zamanı
+fi| Julkaistavat
+
+= Không có bài nào đến hạn
+en| Nothing is due
+zh| 没有待发布的内容
+es| No hay nada pendiente
+hi| कोई पोस्ट देय नहीं है
+ar| لا يوجد ما حان موعده
+pt| Nada pendente
+ru| Ничего не пора публиковать
+ja| 期限の投稿はありません
+ko| 게시할 항목이 없습니다
+de| Nichts ist fällig
+fr| Rien à publier
+id| Tidak ada yang jatuh tempo
+th| ไม่มีโพสต์ที่ถึงกำหนด
+tr| Vadesi gelen bir şey yok
+fi| Ei julkaistavia
+
+= Khi đến giờ, bài sẽ hiện ở đây và KingTele nhắc bạn qua Telegram.
+en| When it's time, the post appears here and KingTele reminds you on Telegram.
+zh| 到时间后,内容会显示在这里,KingTele 也会通过 Telegram 提醒你。
+es| Cuando llegue la hora, la publicación aparecerá aquí y KingTele te avisará por Telegram.
+hi| समय होने पर पोस्ट यहाँ दिखेगी और KingTele Telegram पर याद दिलाएगा।
+ar| عند حلول الوقت سيظهر المنشور هنا وينبّهك KingTele عبر تيليجرام.
+pt| Na hora certa, a publicação aparece aqui e o KingTele avisa você pelo Telegram.
+ru| Когда придёт время, публикация появится здесь, а KingTele напомнит в Telegram.
+ja| 時間になると、ここに投稿が表示され、KingTeleがTelegramでお知らせします。
+ko| 시간이 되면 게시물이 여기에 나타나고 KingTele이 Telegram으로 알려 줍니다.
+de| Wenn es soweit ist, erscheint der Beitrag hier und KingTele erinnert Sie per Telegram.
+fr| À l'heure prévue, la publication apparaît ici et KingTele vous prévient par Telegram.
+id| Saat waktunya tiba, postingan muncul di sini dan KingTele mengingatkan Anda lewat Telegram.
+th| เมื่อถึงเวลา โพสต์จะแสดงที่นี่ และ KingTele จะเตือนคุณผ่าน Telegram
+tr| Zamanı geldiğinde gönderi burada görünür ve KingTele sizi Telegram'dan uyarır.
+fi| Kun aika koittaa, julkaisu ilmestyy tähän ja KingTele muistuttaa Telegramissa.
+
+= Đã hoàn tất ({0})
+en| Completed ({0})
+zh| 已完成({0})
+es| Completados ({0})
+hi| पूरे हुए ({0})
+ar| المكتملة ({0})
+pt| Concluídos ({0})
+ru| Завершено ({0})
+ja| 完了({0})
+ko| 완료({0})
+de| Abgeschlossen ({0})
+fr| Terminés ({0})
+id| Selesai ({0})
+th| เสร็จสิ้น ({0})
+tr| Tamamlananlar ({0})
+fi| Valmiit ({0})
+
+= Bài hẹn giờ
+en| Scheduled posts
+zh| 定时内容
+es| Publicaciones programadas
+hi| शेड्यूल की गई पोस्ट
+ar| المنشورات المجدولة
+pt| Publicações agendadas
+ru| Запланированные публикации
+ja| 予約投稿
+ko| 예약된 게시물
+de| Geplante Beiträge
+fr| Publications planifiées
+id| Postingan terjadwal
+th| โพสต์ที่ตั้งเวลา
+tr| Zamanlanmış gönderiler
+fi| Ajastetut julkaisut
+
+= Chưa có bài hẹn giờ nào
+en| No scheduled posts yet
+zh| 还没有定时内容
+es| Aún no hay publicaciones programadas
+hi| अभी कोई शेड्यूल पोस्ट नहीं है
+ar| لا توجد منشورات مجدولة بعد
+pt| Ainda não há publicações agendadas
+ru| Запланированных публикаций пока нет
+ja| 予約投稿はまだありません
+ko| 아직 예약된 게시물이 없습니다
+de| Noch keine geplanten Beiträge
+fr| Aucune publication planifiée
+id| Belum ada postingan terjadwal
+th| ยังไม่มีโพสต์ที่ตั้งเวลา
+tr| Henüz zamanlanmış gönderi yok
+fi| Ajastettuja julkaisuja ei vielä ole
+
+= Tạo bài đầu tiên và đặt lịch để KingTele nhắc bạn đúng giờ.
+en| Create your first post and set a schedule so KingTele reminds you on time.
+zh| 创建第一条内容并设置计划,KingTele 会准时提醒你。
+es| Crea tu primera publicación y fija un horario para que KingTele te avise a tiempo.
+hi| अपनी पहली पोस्ट बनाएँ और शेड्यूल तय करें ताकि KingTele समय पर याद दिलाए।
+ar| أنشئ أول منشور وحدّد موعده ليذكّرك KingTele في الوقت المناسب.
+pt| Crie sua primeira publicação e defina o horário para o KingTele avisar na hora certa.
+ru| Создайте первую публикацию и задайте расписание, чтобы KingTele напомнил вовремя.
+ja| 最初の投稿を作ってスケジュールを設定すると、KingTeleが時間にお知らせします。
+ko| 첫 게시물을 만들고 일정을 정하면 KingTele이 제때 알려 줍니다.
+de| Erstellen Sie Ihren ersten Beitrag und legen Sie einen Zeitplan fest, damit KingTele Sie pünktlich erinnert.
+fr| Créez votre première publication et fixez un horaire pour que KingTele vous prévienne à temps.
+id| Buat postingan pertama dan atur jadwal agar KingTele mengingatkan Anda tepat waktu.
+th| สร้างโพสต์แรกและตั้งเวลา เพื่อให้ KingTele เตือนคุณตรงเวลา
+tr| İlk gönderinizi oluşturun ve takvim belirleyin; KingTele sizi zamanında uyarsın.
+fi| Luo ensimmäinen julkaisu ja aseta aikataulu, niin KingTele muistuttaa ajoissa.
+
+= Nhập nội dung bài đăng
+en| Enter the post content
+zh| 请输入内容
+es| Escribe el contenido de la publicación
+hi| पोस्ट की सामग्री लिखें
+ar| أدخل محتوى المنشور
+pt| Informe o conteúdo da publicação
+ru| Введите текст публикации
+ja| 投稿の内容を入力してください
+ko| 게시물 내용을 입력하세요
+de| Geben Sie den Inhalt des Beitrags ein
+fr| Saisissez le contenu de la publication
+id| Isi konten postingan
+th| ใส่เนื้อหาโพสต์
+tr| Gönderi içeriğini girin
+fi| Kirjoita julkaisun sisältö
+
+= Nội dung quá dài
+en| Content is too long
+zh| 内容过长
+es| El contenido es demasiado largo
+hi| सामग्री बहुत लंबी है
+ar| المحتوى طويل جدًا
+pt| O conteúdo é longo demais
+ru| Слишком длинный текст
+ja| 内容が長すぎます
+ko| 내용이 너무 깁니다
+de| Der Inhalt ist zu lang
+fr| Le contenu est trop long
+id| Konten terlalu panjang
+th| เนื้อหายาวเกินไป
+tr| İçerik çok uzun
+fi| Sisältö on liian pitkä
+
+= Chọn ít nhất một nhóm Facebook
+en| Choose at least one Facebook group
+zh| 请至少选择一个 Facebook 群组
+es| Elige al menos un grupo de Facebook
+hi| कम से कम एक Facebook ग्रुप चुनें
+ar| اختر مجموعة فيسبوك واحدة على الأقل
+pt| Escolha pelo menos um grupo do Facebook
+ru| Выберите хотя бы одну группу Facebook
+ja| Facebookグループを1つ以上選択してください
+ko| Facebook 그룹을 하나 이상 선택하세요
+de| Wählen Sie mindestens eine Facebook-Gruppe
+fr| Choisissez au moins un groupe Facebook
+id| Pilih minimal satu grup Facebook
+th| เลือกกลุ่ม Facebook อย่างน้อยหนึ่งกลุ่ม
+tr| En az bir Facebook grubu seçin
+fi| Valitse vähintään yksi Facebook-ryhmä
+
+= Link phải bắt đầu bằng http:// hoặc https://
+en| The link must start with http:// or https://
+zh| 链接必须以 http:// 或 https:// 开头
+es| El enlace debe empezar por http:// o https://
+hi| लिंक http:// या https:// से शुरू होना चाहिए
+ar| يجب أن يبدأ الرابط بـ http:// أو https://
+pt| O link deve começar com http:// ou https://
+ru| Ссылка должна начинаться с http:// или https://
+ja| リンクは http:// または https:// で始めてください
+ko| 링크는 http:// 또는 https://로 시작해야 합니다
+de| Der Link muss mit http:// oder https:// beginnen
+fr| Le lien doit commencer par http:// ou https://
+id| Tautan harus diawali http:// atau https://
+th| ลิงก์ต้องขึ้นต้นด้วย http:// หรือ https://
+tr| Bağlantı http:// veya https:// ile başlamalıdır
+fi| Linkin on alettava http:// tai https://
+
+= Nhập tên nhóm
+en| Enter the group name
+zh| 请输入群组名称
+es| Escribe el nombre del grupo
+hi| ग्रुप का नाम लिखें
+ar| أدخل اسم المجموعة
+pt| Informe o nome do grupo
+ru| Введите название группы
+ja| グループ名を入力してください
+ko| 그룹 이름을 입력하세요
+de| Geben Sie den Gruppennamen ein
+fr| Saisissez le nom du groupe
+id| Isi nama grup
+th| ใส่ชื่อกลุ่ม
+tr| Grup adını girin
+fi| Kirjoita ryhmän nimi
+
+= Link nhóm phải là địa chỉ facebook.com, ví dụ https://www.facebook.com/groups/tennhom
+en| The group link must be a facebook.com address, for example https://www.facebook.com/groups/groupname
+zh| 群组链接必须是 facebook.com 的地址,例如 https://www.facebook.com/groups/tennhom
+es| El enlace del grupo debe ser una dirección de facebook.com, por ejemplo https://www.facebook.com/groups/nombre
+hi| ग्रुप का लिंक facebook.com का पता होना चाहिए, जैसे https://www.facebook.com/groups/tennhom
+ar| يجب أن يكون رابط المجموعة عنوانًا من facebook.com، مثل https://www.facebook.com/groups/tennhom
+pt| O link do grupo deve ser um endereço do facebook.com, por exemplo https://www.facebook.com/groups/nomedogrupo
+ru| Ссылка на группу должна быть адресом facebook.com, например https://www.facebook.com/groups/tennhom
+ja| グループのリンクはfacebook.comのアドレスにしてください。例:https://www.facebook.com/groups/tennhom
+ko| 그룹 링크는 facebook.com 주소여야 합니다. 예: https://www.facebook.com/groups/tennhom
+de| Der Gruppenlink muss eine facebook.com-Adresse sein, zum Beispiel https://www.facebook.com/groups/tennhom
+fr| Le lien du groupe doit être une adresse facebook.com, par exemple https://www.facebook.com/groups/tennhom
+id| Tautan grup harus berupa alamat facebook.com, misalnya https://www.facebook.com/groups/tennhom
+th| ลิงก์กลุ่มต้องเป็นที่อยู่ facebook.com เช่น https://www.facebook.com/groups/tennhom
+tr| Grup bağlantısı bir facebook.com adresi olmalıdır, örneğin https://www.facebook.com/groups/tennhom
+fi| Ryhmän linkin on oltava facebook.com-osoite, esimerkiksi https://www.facebook.com/groups/tennhom
+
+= Tối đa {0} nhóm Facebook
+en| Up to {0} Facebook groups
+zh| 最多 {0} 个 Facebook 群组
+es| Máximo {0} grupos de Facebook
+hi| अधिकतम {0} Facebook ग्रुप
+ar| بحد أقصى {0} مجموعة فيسبوك
+pt| No máximo {0} grupos do Facebook
+ru| Не более {0} групп Facebook
+ja| Facebookグループは最大{0}件です
+ko| Facebook 그룹은 최대 {0}개입니다
+de| Höchstens {0} Facebook-Gruppen
+fr| {0} groupes Facebook maximum
+id| Maksimal {0} grup Facebook
+th| สูงสุด {0} กลุ่ม Facebook
+tr| En fazla {0} Facebook grubu
+fi| Enintään {0} Facebook-ryhmää
+
+= Nhóm này đã được thêm
+en| This group has already been added
+zh| 该群组已添加
+es| Este grupo ya está añadido
+hi| यह ग्रुप पहले ही जोड़ा जा चुका है
+ar| تمت إضافة هذه المجموعة مسبقًا
+pt| Este grupo já foi adicionado
+ru| Эта группа уже добавлена
+ja| このグループは追加済みです
+ko| 이미 추가된 그룹입니다
+de| Diese Gruppe wurde bereits hinzugefügt
+fr| Ce groupe est déjà ajouté
+id| Grup ini sudah ditambahkan
+th| เพิ่มกลุ่มนี้แล้ว
+tr| Bu grup zaten eklenmiş
+fi| Tämä ryhmä on jo lisätty
+
+= Tối đa {0} bài hẹn giờ Facebook
+en| Up to {0} scheduled Facebook posts
+zh| 最多 {0} 条 Facebook 定时内容
+es| Máximo {0} publicaciones programadas de Facebook
+hi| अधिकतम {0} Facebook शेड्यूल पोस्ट
+ar| بحد أقصى {0} منشورًا مجدولًا على فيسبوك
+pt| No máximo {0} publicações agendadas do Facebook
+ru| Не более {0} запланированных публикаций Facebook
+ja| Facebookの予約投稿は最大{0}件です
+ko| Facebook 예약 게시물은 최대 {0}개입니다
+de| Höchstens {0} geplante Facebook-Beiträge
+fr| {0} publications Facebook planifiées maximum
+id| Maksimal {0} postingan Facebook terjadwal
+th| โพสต์ Facebook ที่ตั้งเวลาได้สูงสุด {0} โพสต์
+tr| En fazla {0} zamanlanmış Facebook gönderisi
+fi| Enintään {0} ajastettua Facebook-julkaisua
+
+= Chat ID nhắc việc không hợp lệ
+en| The reminder Chat ID is not valid
+zh| 提醒用的 Chat ID 无效
+es| El Chat ID de recordatorios no es válido
+hi| रिमाइंडर वाला Chat ID सही नहीं है
+ar| Chat ID الخاص بالتذكير غير صالح
+pt| O Chat ID dos lembretes não é válido
+ru| Chat ID для напоминаний недействителен
+ja| リマインダー用のChat IDが正しくありません
+ko| 알림용 Chat ID가 올바르지 않습니다
+de| Die Chat-ID für Erinnerungen ist ungültig
+fr| L'ID de discussion des rappels n'est pas valide
+id| Chat ID pengingat tidak valid
+th| Chat ID สำหรับการเตือนไม่ถูกต้อง
+tr| Hatırlatma Chat ID'si geçersiz
+fi| Muistutusten Chat ID ei kelpaa
+
+= Nhập Chat ID nhắc việc trước
+en| Enter the reminder Chat ID first
+zh| 请先输入提醒用的 Chat ID
+es| Introduce primero el Chat ID de recordatorios
+hi| पहले रिमाइंडर वाला Chat ID दर्ज करें
+ar| أدخل Chat ID الخاص بالتذكير أولًا
+pt| Informe primeiro o Chat ID dos lembretes
+ru| Сначала введите Chat ID для напоминаний
+ja| 先にリマインダー用のChat IDを入力してください
+ko| 먼저 알림용 Chat ID를 입력하세요
+de| Geben Sie zuerst die Chat-ID für Erinnerungen ein
+fr| Saisissez d'abord l'ID de discussion des rappels
+id| Isi dulu Chat ID pengingat
+th| ใส่ Chat ID สำหรับการเตือนก่อน
+tr| Önce hatırlatma Chat ID'sini girin
+fi| Kirjoita ensin muistutusten Chat ID

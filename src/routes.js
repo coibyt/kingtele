@@ -14,7 +14,7 @@ const MB = 1024 * 1024;
 
 const { lookup: lookupChatId, MESSAGES: MSG } = require('./chatid-tool');
 
-function createApi({ store, config, auth, scheduler, media, tokenFor, points, pwaStats, traffic, chatIdTool }) {
+function createApi({ store, config, auth, scheduler, media, tokenFor, points, pwaStats, traffic, chatIdTool, fb }) {
   const api = express.Router();
   const d = () => store.data;
 
@@ -82,6 +82,7 @@ function createApi({ store, config, auth, scheduler, media, tokenFor, points, pw
   }));
 
   api.use(auth.requireAuth);
+  if (fb) api.use('/fb', fb.router({ config }));
   api.post('/account/password', wrap(auth.changePassword));
 
   // ---------- Ảnh / video ----------
@@ -354,7 +355,7 @@ function createApi({ store, config, auth, scheduler, media, tokenFor, points, pw
   api.get('/export', (req, res) => {
     const strip = (p) => (p.media ? { ...p, media: { ...p.media, fileId: undefined } } : p);
     res.setHeader('Content-Disposition', `attachment; filename="kingtele-backup-${new Date().toISOString().slice(0, 10)}.json"`);
-    res.json({ groups: mine(d().groups, req), posts: mine(d().posts, req).map(strip), logs: mine(d().logs, req), settings: { timezone: tzOf(req) } });
+    res.json({ fbGroups: mine(d().fbGroups, req), fbTasks: mine(d().fbTasks, req), groups: mine(d().groups, req), posts: mine(d().posts, req).map(strip), logs: mine(d().logs, req), settings: { timezone: tzOf(req) } });
   });
 
   // ---------- Quản trị ----------
@@ -452,6 +453,7 @@ function createApi({ store, config, auth, scheduler, media, tokenFor, points, pw
     const files = d().posts.filter((p) => p.userId === u.id && p.media).map((p) => p.media.file);
     d().posts = d().posts.filter((p) => p.userId !== u.id);
     d().groups = d().groups.filter((g) => g.userId !== u.id);
+    for (const k of ['fbGroups', 'fbTasks', 'fbDue']) d()[k] = d()[k].filter((x) => x.userId !== u.id);
     d().logs = d().logs.filter((l) => l.userId !== u.id);
     d().users = d().users.filter((x) => x.id !== u.id);
     for (const f of files) await media.remove(f);
