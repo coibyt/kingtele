@@ -1138,7 +1138,70 @@ async function zaloView() {
       tabs, box));
 }
 
-const routes = { overview: ['Tổng quan', overviewView], posts: ['Bài đăng', postsView], groups: ['Nhóm Telegram', groupsView], facebook: ['Facebook', facebookView], zalo: ['Zalo', zaloView], logs: ['Nhật ký gửi', logsView], settings: ['Cài đặt', settingsView], points: ['Điểm King', pointsView], members: ['Thành viên', membersView], installs: ['Ứng dụng', appStatsView], traffic: ['Truy cập', trafficView] };
+// ---------- Duyệt bài trong nhóm Telegram ----------
+async function refreshModBadge() {
+  try {
+    const q = await api('GET', '/mod/queue');
+    const n = q.filter((x) => x.status === 'pending').length;
+    const a = document.querySelector('.menu a[data-route="moderation"]');
+    if (!a) return;
+    let b = a.querySelector('.nav-badge');
+    if (!n) { if (b) b.remove(); return; }
+    if (!b) { b = h('span', { class: 'nav-badge' }); a.append(b); }
+    b.textContent = String(n);
+  } catch { /* huy hiệu chỉ là phần phụ */ }
+}
+
+async function moderationView() {
+  const [st, queue] = await Promise.all([api('GET', '/mod/status'), api('GET', '/mod/queue')]);
+  const pending = queue.filter((x) => x.status === 'pending');
+  const done = queue.filter((x) => x.status !== 'pending');
+  refreshModBadge();
+
+  const chat = h('input', { class: 'input mono', id: 'm-chat', value: st.approverChatId, placeholder: '123456789' });
+  const msg = h('p', { class: 'hint', role: 'status' });
+  const approverCard = h('div', { class: 'card card-pad form-grid' }, h('h2', null, 'Admin nhận bài chờ duyệt'),
+    rich('**Nhắn /start cho bot** của bạn trước, rồi bấm **Tự nhận diện**. Bài chờ duyệt sẽ được gửi vào đây, kèm nút duyệt ngay trong Telegram.', 'hint'),
+    h('div', { class: 'field' }, h('label', { for: 'm-chat' }, 'Chat ID Telegram của bạn'), chat), msg,
+    h('div', { class: 'row' },
+      h('button', { class: 'btn', type: 'button', onclick: (e) => act(e.currentTarget, async () => {
+        const r = await api('GET', '/fb/reminder/discover');
+        if (!r.chatId) { msg.textContent = 'Chưa thấy tin nhắn nào. Hãy nhắn /start cho bot rồi bấm lại.'; return; }
+        chat.value = r.chatId; msg.textContent = 'Đã nhận diện. Bấm Lưu để lưu lại.';
+      }) }, ico('refresh'), 'Tự nhận diện'),
+      h('button', { class: 'btn btn-primary', type: 'button', onclick: (e) => act(e.currentTarget, async () => { await api('PUT', '/fb/reminder', { chatId: chat.value }); route(); }, 'Đã lưu') }, ico('check'), 'Lưu')));
+
+  const groupsCard = h('div', { class: 'card card-pad form-grid' }, h('h2', null, 'Nhóm cần duyệt bài'),
+    h('p', { class: 'hint' }, 'Bot phải là quản trị viên của nhóm và có quyền xoá tin nhắn. Admin của nhóm không bị chặn.'),
+    st.error ? h('p', { class: 'error-text', role: 'alert' }, st.error === 'webhook' ? 'Bot đang gắn webhook của dịch vụ khác nên không nhận được tin nhắn. Hãy gỡ webhook rồi thử lại.' : 'Token bot không còn dùng được. Hãy kiểm tra lại ở Cài đặt.') : null,
+    st.groups.length ? h('div', { class: 'list' }, st.groups.map((g) => h('div', { class: 'li li-wrap' },
+      h('div', { class: 'li-main' }, h('div', { class: 'li-t' }, g.title)),
+      g.moderated ? h('span', { class: 'tag ok' }, 'Đang duyệt') : h('span', { class: 'tag' }, 'Chưa bật'),
+      h('button', { class: `btn btn-sm ${g.moderated ? '' : 'btn-primary'}`, type: 'button', onclick: (e) => act(e.currentTarget, async () => {
+        await api('POST', `/mod/groups/${g.id}/toggle`, { enabled: !g.moderated }); route();
+      }, g.moderated ? 'Đã tắt duyệt bài' : 'Đã bật duyệt bài') }, g.moderated ? 'Tắt duyệt' : 'Bật duyệt'))))
+      : h('p', { class: 'hint' }, 'Chưa có nhóm Telegram phù hợp. Thêm nhóm ở mục Nhóm Telegram.'));
+
+  const decide = (item, approve) => (e) => act(e.currentTarget, async () => { await api('POST', `/mod/queue/${item.id}/decide`, { approve }); route(); }, approve ? 'Đã duyệt và đăng vào nhóm' : 'Đã từ chối');
+  const card = (it) => h('article', { class: 'card post' },
+    h('div', { class: 'post-top' }, h('div', { style: 'min-width:0;flex:1' }, h('h3', null, it.authorName), h('p', { class: 'excerpt' }, it.preview || 'Tin không có chữ (ảnh, video, tệp...)')),
+      it.status === 'pending' ? h('span', { class: 'tag warn' }, 'Chờ duyệt') : it.status === 'approved' ? h('span', { class: 'tag ok' }, 'Đã duyệt') : h('span', { class: 'tag err' }, 'Đã từ chối')),
+    h('div', { class: 'meta' }, h('span', null, ico('users'), it.groupTitle), h('span', null, ico('clock'), `${fmtDT(it.createdAt)} (${rel(it.createdAt)})`)),
+    it.status === 'pending' ? h('div', { class: 'post-actions' },
+      h('button', { class: 'btn btn-sm btn-primary', type: 'button', onclick: decide(it, true) }, ico('check'), 'Duyệt'),
+      h('button', { class: 'btn btn-sm btn-danger', type: 'button', onclick: decide(it, false) }, ico('x'), 'Từ chối')) : null);
+
+  return h('div', null,
+    pageHead('Duyệt bài', 'Giữ tin nhắn của thành viên cho tới khi admin duyệt', h('button', { class: 'btn', type: 'button', onclick: route }, ico('refresh'), 'Làm mới')),
+    h('div', { class: 'banner' }, ico('alert'), rich('**Cách hoạt động:** thành viên gửi tin vào nhóm, bot **xoá ngay** và chuyển tin cho admin kèm nút Duyệt hoặc Từ chối. Duyệt xong, bot **đăng lại** vào nhóm. Telegram không cho giữ tin trước khi đăng, nên tin có thể hiện khoảng 1 giây rồi biến mất.', 'hint', 'div')),
+    h('div', { class: 'stack' },
+      h('h2', null, 'Chờ duyệt'),
+      pending.length ? pending.map(card) : empty('check', 'Không có bài nào chờ duyệt', 'Khi thành viên gửi tin vào nhóm đã bật duyệt, tin sẽ hiện ở đây.'),
+      done.length ? h('details', { class: 'card card-pad' }, h('summary', null, `Đã xử lý (${done.length})`), h('div', { class: 'stack', style: 'margin-top:12px' }, done.map(card))) : null,
+      approverCard, groupsCard));
+}
+
+const routes = { overview: ['Tổng quan', overviewView], posts: ['Bài đăng', postsView], groups: ['Nhóm Telegram', groupsView], facebook: ['Facebook', facebookView], zalo: ['Zalo', zaloView], moderation: ['Duyệt bài', moderationView], logs: ['Nhật ký gửi', logsView], settings: ['Cài đặt', settingsView], points: ['Điểm King', pointsView], members: ['Thành viên', membersView], installs: ['Ứng dụng', appStatsView], traffic: ['Truy cập', trafficView] };
 let token = 0;
 async function route() {
   const key = routes[location.hash.slice(1)] ? location.hash.slice(1) : 'overview';
@@ -1151,7 +1214,7 @@ async function route() {
   if (!view.firstChild) view.append(h('div', { class: 'skeleton' }), h('div', { class: 'skeleton' }));
   try {
     const el = await fn();
-    if (mine === token) { view.replaceChildren(el); refreshPoints(); if (key !== 'facebook') refreshFbBadge(); }
+    if (mine === token) { view.replaceChildren(el); refreshPoints(); if (key !== 'facebook') refreshFbBadge(); if (key !== 'moderation') refreshModBadge(); }
   } catch (e) {
     if (mine === token) view.replaceChildren(empty('alert', 'Không tải được dữ liệu', e.message, h('button', { class: 'btn', type: 'button', onclick: route }, 'Thử lại')));
   }

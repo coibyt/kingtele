@@ -16,6 +16,7 @@ const { createTraffic } = require('./src/traffic');
 const { startToolBot } = require('./src/chatid-tool');
 const { createFb } = require('./src/fb');
 const { createZalo } = require('./src/zalo');
+const { createModeration } = require('./src/moderation');
 
 const store = new Store(config.dataDir).init();
 // Token bot của từng thành viên; tài khoản admin dùng token trong Cài đặt hoặc biến môi trường.
@@ -33,7 +34,8 @@ const auth = createAuth({ store, config, points });
 const media = createMedia({ store, uploadsDir: config.uploadsDir });
 const scheduler = createScheduler({ store, getToken: tokenFor, isActive, uploadsDir: config.uploadsDir, points });
 
-const fb = createFb({ store, getToken: tokenFor, isActive, publicUrl: config.baseUrl || config.publicUrl });
+const fb = createFb({ store, getToken: tokenFor, isActive, publicUrl: config.baseUrl || config.publicUrl, getUpdates: (u, t) => mod.updates(u, t) });
+const mod = createModeration({ store, getToken: tokenFor, isActive });
 
 const zalo = createZalo({ store });
 
@@ -62,7 +64,7 @@ app.use((req, res, next) => {
 app.use(express.json({ limit: '100kb' }));
 app.get('/healthz', (req, res) => res.json({ ok: true, uptime: Math.round(process.uptime()) }));
 const chatIdTool = config.toolBotToken ? startToolBot({ token: config.toolBotToken }) : null; // bot của công cụ /cong-cu/lay-id-nhom-telegram
-app.use('/api', createApi({ store, config, auth, scheduler, media, tokenFor, points, pwaStats, traffic, chatIdTool, fb, zalo }));
+app.use('/api', createApi({ store, config, auth, scheduler, media, tokenFor, points, pwaStats, traffic, chatIdTool, fb, zalo, mod }));
 
 // CDN của nhà cung cấp hosting có thể bỏ header Cache-Control, nên gắn mã phiên bản (?v=) vào mọi file /assets
 // trong HTML: mỗi lần deploy là một địa chỉ mới, điện thoại luôn tải bản mới.
@@ -106,6 +108,7 @@ const server = app.listen(config.port, () => {
   console.log(`KingTele chạy tại cổng ${config.port} (${config.production ? 'production' : 'dev'})`);
   scheduler.start();
   fb.start();
+  mod.start();
   media.sweep();
   setInterval(() => traffic.flush(), 60000).unref(); // ghi số liệu truy cập xuống đĩa mỗi phút
 });
@@ -113,6 +116,7 @@ const server = app.listen(config.port, () => {
 async function shutdown() {
   scheduler.stop();
   fb.stop();
+  mod.stop();
   server.close();
   await traffic.flush();
   await store.flush();

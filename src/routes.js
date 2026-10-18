@@ -14,7 +14,7 @@ const MB = 1024 * 1024;
 
 const { lookup: lookupChatId, MESSAGES: MSG } = require('./chatid-tool');
 
-function createApi({ store, config, auth, scheduler, media, tokenFor, points, pwaStats, traffic, chatIdTool, fb, zalo }) {
+function createApi({ store, config, auth, scheduler, media, tokenFor, points, pwaStats, traffic, chatIdTool, fb, zalo, mod }) {
   const api = express.Router();
   const d = () => store.data;
 
@@ -84,6 +84,7 @@ function createApi({ store, config, auth, scheduler, media, tokenFor, points, pw
   api.use(auth.requireAuth);
   if (fb) api.use('/fb', fb.router({ config }));
   if (zalo) api.use('/zalo', zalo.router());
+  if (mod) api.use('/mod', mod.router());
   api.post('/account/password', wrap(auth.changePassword));
 
   // ---------- Ảnh / video ----------
@@ -162,7 +163,7 @@ function createApi({ store, config, auth, scheduler, media, tokenFor, points, pw
   api.get('/groups/discover', wrap(async (req, res) => {
     if (!token(req)) throw bad('Hãy kết nối bot Telegram của bạn ở mục Cài đặt trước khi thêm nhóm');
     let updates;
-    try { updates = await tg.getUpdates(token(req)); } catch (e) {
+    try { updates = await (mod ? mod.updates(req.user.id, token(req)) : tg.getUpdates(token(req))); } catch (e) {
       if (e.code === 409) throw bad('Bot đang gắn với dịch vụ khác (webhook) nên không dò được nhóm. Hãy nhập Chat ID thủ công.');
       throw bad(e.message);
     }
@@ -214,6 +215,7 @@ function createApi({ store, config, auth, scheduler, media, tokenFor, points, pw
     d().groups.splice(d().groups.indexOf(g), 1);
     for (const p of mine(d().posts, req)) p.groupIds = p.groupIds.filter((id) => id !== g.id);
     await store.save();
+    if (mod) mod.sync();
     res.json({ ok: true });
   }));
 
@@ -454,7 +456,7 @@ function createApi({ store, config, auth, scheduler, media, tokenFor, points, pw
     const files = d().posts.filter((p) => p.userId === u.id && p.media).map((p) => p.media.file);
     d().posts = d().posts.filter((p) => p.userId !== u.id);
     d().groups = d().groups.filter((g) => g.userId !== u.id);
-    for (const k of ['fbGroups', 'fbTasks', 'fbDue', 'zaloContacts']) d()[k] = d()[k].filter((x) => x.userId !== u.id);
+    for (const k of ['fbGroups', 'fbTasks', 'fbDue', 'zaloContacts', 'modQueue']) d()[k] = d()[k].filter((x) => x.userId !== u.id);
     d().logs = d().logs.filter((l) => l.userId !== u.id);
     d().users = d().users.filter((x) => x.id !== u.id);
     for (const f of files) await media.remove(f);

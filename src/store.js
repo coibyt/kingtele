@@ -17,6 +17,7 @@ const DEFAULTS = () => ({
   fbTasks: [],
   fbDue: [],
   zaloContacts: [],
+  modQueue: [],
   posts: [],
   logs: [],
 });

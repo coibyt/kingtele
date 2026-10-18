@@ -32,7 +32,7 @@ function cleanFbUrl(raw) {
   } catch { return ''; }
 }
 
-function createFb({ store, getToken, isActive = () => true, publicUrl = 'https://kingtele.com' }) {
+function createFb({ store, getToken, isActive = () => true, publicUrl = 'https://kingtele.com', getUpdates }) {
   const d = () => store.data;
   let timer = null;
 
@@ -202,7 +202,7 @@ function createFb({ store, getToken, isActive = () => true, publicUrl = 'https:/
       const token = getToken(uid(req));
       if (!token) throw bad('Chưa kết nối bot Telegram - vào Cài đặt');
       let updates;
-      try { updates = await tg.getUpdates(token); } catch (e) { throw bad(e.code === 409 ? 'Bot đang gắn với dịch vụ khác (webhook) nên không dò được nhóm. Hãy nhập Chat ID thủ công.' : e.message); }
+      try { updates = await (getUpdates ? getUpdates(uid(req), token) : tg.getUpdates(token)); } catch (e) { throw bad(e.code === 409 ? 'Bot đang gắn với dịch vụ khác (webhook) nên không dò được nhóm. Hãy nhập Chat ID thủ công.' : e.message); }
       const last = [...updates].reverse().find((u) => u.message && u.message.chat && u.message.chat.type === 'private' && u.message.from && !u.message.from.is_bot);
       if (!last) return res.json({ chatId: '' });
       res.json({ chatId: String(last.message.chat.id), name: [last.message.from.first_name, last.message.from.last_name].filter(Boolean).join(' ') });
