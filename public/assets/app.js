@@ -909,7 +909,7 @@ function fbDueCard(it) {
       h('div', { style: 'min-width:0;flex:1' }, h('h3', null, it.title), h('p', { class: 'excerpt' }, it.text)),
       all ? h('span', { class: 'tag ok' }, 'Hoàn tất') : h('span', { class: 'tag warn' }, `${done}/${it.items.length} nhóm`)),
     h('div', { class: 'meta' }, h('span', null, ico('clock'), `Đến hạn: ${fmtDT(it.dueAt)} (${rel(it.dueAt)})`)),
-    h('div', { class: 'list' }, it.items.map((g) => h('div', { class: 'li' },
+    h('div', { class: 'list' }, it.items.map((g) => h('div', { class: 'li li-wrap' },
       h('div', { class: 'li-main' }, h('div', { class: 'li-t' }, g.name)),
       h('a', { class: 'btn btn-sm', href: g.url, target: '_blank', rel: 'noopener noreferrer' }, ico('link'), 'Mở nhóm'),
       h('button', { class: `btn btn-sm ${g.done ? '' : 'btn-primary'}`, type: 'button', onclick: (e) => act(e.currentTarget, async () => {
@@ -1059,7 +1059,86 @@ async function facebookView() {
       addForm, remCard));
 }
 
-const routes = { overview: ['Tổng quan', overviewView], posts: ['Bài đăng', postsView], groups: ['Nhóm Telegram', groupsView], facebook: ['Facebook', facebookView], logs: ['Nhật ký gửi', logsView], settings: ['Cài đặt', settingsView], points: ['Điểm King', pointsView], members: ['Thành viên', membersView], installs: ['Ứng dụng', appStatsView], traffic: ['Truy cập', trafficView] };
+// ---------- Zalo: danh sách + lời chào soạn sẵn (gửi thủ công) ----------
+const ZALO_DAILY = 20;
+let zaloFilter = 'todo';
+
+function zaloGreeting(tpl, name) {
+  return tpl.replace(/\s*\{ten\}/gi, name ? ` ${name}` : '').replace(/^\s+/, '');
+}
+
+async function zaloView() {
+  const [contacts, tpl] = await Promise.all([api('GET', '/zalo/contacts'), api('GET', '/zalo/template')]);
+  const startOfDay = new Date(); startOfDay.setHours(0, 0, 0, 0);
+  const today = contacts.filter((c) => c.sentAt && c.sentAt >= startOfDay.getTime()).length;
+
+  const tplBox = h('textarea', { class: 'input', id: 'z-tpl', maxLength: 500, rows: 3, placeholder: 'Chào {ten}, mình muốn kết bạn Zalo để trao đổi thêm. Cảm ơn bạn!' });
+  tplBox.value = tpl.text;
+  const greeting = (name) => zaloGreeting(tplBox.value.trim() || tplBox.placeholder, name);
+
+  const name = h('input', { class: 'input', id: 'z-name', maxLength: 100, placeholder: 'Nguyen Van A' });
+  const phone = h('input', { class: 'input mono', id: 'z-phone', type: 'tel', inputMode: 'tel', placeholder: '0912345678' });
+  const bulk = h('textarea', { class: 'input mono', id: 'z-bulk', rows: 4, placeholder: 'Nguyen Van A, 0912345678\n0987654321' });
+  const err = h('p', { class: 'error-text', role: 'alert' });
+  const submit = async (body, btn) => {
+    err.textContent = ''; btn.disabled = true;
+    try {
+      const r = await api('POST', '/zalo/contacts', body);
+      toast(`Đã thêm ${r.added} số, bỏ qua ${r.skipped} dòng trùng hoặc sai`); route();
+    } catch (ex) { err.textContent = ex.message; btn.disabled = false; }
+  };
+  const addBtn = h('button', { class: 'btn btn-primary', type: 'button', onclick: (e) => submit({ name: name.value, phone: phone.value }, e.currentTarget) }, ico('plus'), 'Thêm');
+  const bulkBtn = h('button', { class: 'btn', type: 'button', onclick: (e) => submit({ bulk: bulk.value }, e.currentTarget) }, ico('plus'), 'Thêm danh sách');
+
+  const box = h('div', { class: 'stack' });
+  const labels = { todo: 'Chưa gửi', invited: 'Đã gửi lời mời', friend: 'Đã kết bạn', skip: 'Bỏ qua' };
+  const setStatus = (c, status) => (e) => act(e.currentTarget, async () => { await api('PUT', `/zalo/contacts/${c.id}`, { status }); route(); });
+  const row = (c) => h('div', { class: 'li li-wrap' },
+    h('div', { class: 'li-main' }, h('div', { class: 'li-t' }, c.name || 'Chưa có tên'), h('div', { class: 'li-s mono' }, c.phone)),
+    h('button', { class: 'btn btn-sm', type: 'button', onclick: () => copyToClipboard(greeting(c.name)) }, ico('copy'), 'Sao chép lời chào'),
+    h('a', { class: 'btn btn-sm', href: `https://zalo.me/${c.phone}`, target: '_blank', rel: 'noopener noreferrer' }, ico('link'), 'Mở Zalo'),
+    c.status === 'todo' ? h('button', { class: 'btn btn-sm btn-primary', type: 'button', onclick: setStatus(c, 'invited') }, ico('check'), 'Đã gửi lời mời') : null,
+    c.status === 'invited' ? h('button', { class: 'btn btn-sm btn-primary', type: 'button', onclick: setStatus(c, 'friend') }, ico('check'), 'Đã kết bạn') : null,
+    c.status !== 'skip' && c.status !== 'friend' ? h('button', { class: 'btn btn-sm', type: 'button', onclick: setStatus(c, 'skip') }, 'Bỏ qua') : null,
+    c.status !== 'todo' ? h('button', { class: 'btn btn-sm', type: 'button', onclick: setStatus(c, 'todo') }, ico('refresh'), 'Chưa gửi') : null,
+    h('button', { class: 'btn btn-sm btn-danger btn-icon', type: 'button', 'aria-label': `Xoá ${c.name || c.phone}`, onclick: async () => {
+      if (await confirmBox('Xoá người này?', `Số ${c.phone} sẽ bị xoá khỏi danh sách.`, 'Xoá')) {
+        try { await api('DELETE', `/zalo/contacts/${c.id}`); route(); } catch (ex) { toast(ex.message, 'err'); }
+      }
+    } }, ico('trash')));
+  const draw = () => {
+    box.replaceChildren();
+    const list = contacts.filter((c) => zaloFilter === 'all' || c.status === zaloFilter);
+    if (!list.length) { box.append(empty('users', contacts.length ? 'Không có ai trong mục này' : 'Danh sách trống', contacts.length ? 'Thử chọn mục khác.' : 'Thêm số điện thoại ở form phía trên.')); return; }
+    box.append(h('div', { class: 'card card-pad' }, h('div', { class: 'list' }, list.map(row))));
+  };
+  const tabs = h('div', { class: 'tabs', role: 'group', 'aria-label': 'Lọc danh sách' },
+    [['todo'], ['invited'], ['friend'], ['skip'], ['all']].map(([k]) =>
+      h('button', { class: 'tab', type: 'button', 'aria-pressed': String(zaloFilter === k), onclick: (e) => {
+        zaloFilter = k; tabs.querySelectorAll('.tab').forEach((t) => t.setAttribute('aria-pressed', 'false')); e.currentTarget.setAttribute('aria-pressed', 'true'); draw();
+      } }, k === 'all' ? 'Tất cả' : `${labels[k]} (${contacts.filter((c) => c.status === k).length})`)));
+  draw();
+
+  return h('div', null,
+    pageHead('Zalo', 'Danh sách người cần kết bạn và lời chào soạn sẵn'),
+    h('div', { class: 'banner' }, ico('alert'), rich('**Zalo không cho phần mềm tự gửi lời mời kết bạn.** KingTele giúp bạn làm nhanh và gọn: bấm **Sao chép lời chào**, **Mở Zalo**, dán và gửi. Chỉ nên gửi khoảng 20 người mỗi ngày để tránh bị Zalo hạn chế tài khoản.', 'hint', 'div')),
+    h('div', { class: 'stack' },
+      h('div', { class: 'card card-pad form-grid' }, h('h2', null, 'Lời chào kết bạn'),
+        h('div', { class: 'field' }, h('label', { for: 'z-tpl' }, 'Nội dung'), tplBox,
+          h('span', { class: 'hint' }, 'Gõ {ten} để chèn tên người nhận. Để trống sẽ dùng lời chào mẫu.')),
+        h('div', null, h('button', { class: 'btn', type: 'button', onclick: (e) => act(e.currentTarget, async () => { await api('PUT', '/zalo/template', { text: tplBox.value }); }, 'Đã lưu') }, 'Lưu lời chào'))),
+      h('div', { class: 'card card-pad form-grid' }, h('h2', null, 'Thêm người'),
+        h('div', { class: 'two' },
+          h('div', { class: 'field' }, h('label', { for: 'z-name' }, 'Tên'), name),
+          h('div', { class: 'field' }, h('label', { for: 'z-phone' }, 'Số điện thoại'), phone)),
+        h('div', null, addBtn),
+        h('div', { class: 'field' }, h('label', { for: 'z-bulk' }, 'Hoặc dán danh sách (mỗi dòng: Tên, Số điện thoại)'), bulk),
+        err, h('div', null, bulkBtn)),
+      h('p', { class: today >= ZALO_DAILY ? 'error-text' : 'hint', role: 'status' }, `Hôm nay đã gửi lời mời: ${today} (gợi ý tối đa ${ZALO_DAILY})`),
+      tabs, box));
+}
+
+const routes = { overview: ['Tổng quan', overviewView], posts: ['Bài đăng', postsView], groups: ['Nhóm Telegram', groupsView], facebook: ['Facebook', facebookView], zalo: ['Zalo', zaloView], logs: ['Nhật ký gửi', logsView], settings: ['Cài đặt', settingsView], points: ['Điểm King', pointsView], members: ['Thành viên', membersView], installs: ['Ứng dụng', appStatsView], traffic: ['Truy cập', trafficView] };
 let token = 0;
 async function route() {
   const key = routes[location.hash.slice(1)] ? location.hash.slice(1) : 'overview';

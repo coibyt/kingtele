@@ -254,3 +254,8 @@ dialog[open] { animation: pop .22s var(--ease); display: flex; flex-direction: c
 /* Facebook: huy hiệu số bài đến hạn trên menu */
 .nav-badge { margin-inline-start: auto; min-width: 20px; height: 20px; padding: 0 6px; border-radius: 999px; background: #f59e0b; color: #1a1203; font: 700 .72rem/20px var(--mono); text-align: center; }
 .menu a { display: flex; align-items: center; }
+
+/* Hàng danh sách có nhiều nút: xuống dòng trên màn hình hẹp */
+.li-wrap { flex-wrap: wrap; }
+.li-wrap .li-main { flex: 1 1 100%; min-width: 0; }
+@media (min-width: 900px) { .li-wrap .li-main { flex: 1 1 0; } }

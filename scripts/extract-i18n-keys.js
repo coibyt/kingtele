@@ -20,7 +20,7 @@ for (const f of ['public/index.html', 'views/app.html', 'views/login.html', 'vie
 const SQ = /'((?:[^'\\\n]|\\.)*)'|"((?:[^"\\\n]|\\.)*)"/g;
 const TPL = /`((?:[^`\\]|\\.)*)`/g;
 const EXPR = /\$\{((?:[^{}]|\{[^{}]*\})*)\}/g;
-for (const f of ['public/assets/app.js', 'public/assets/login.js', 'public/assets/register.js', 'public/assets/site.js', 'public/assets/pwa.js', 'src/routes.js', 'src/auth.js', 'src/scheduler.js', 'src/media.js', 'src/points.js', 'src/schedule.js', 'src/fb.js', 'src/telegram.js']) {
+for (const f of ['public/assets/app.js', 'public/assets/login.js', 'public/assets/register.js', 'public/assets/site.js', 'public/assets/pwa.js', 'src/routes.js', 'src/auth.js', 'src/scheduler.js', 'src/media.js', 'src/points.js', 'src/schedule.js', 'src/fb.js', 'src/zalo.js', 'src/telegram.js']) {
   const src = fs.readFileSync(path.join(root, f), 'utf8');
   const lit = /'((?:[^'\\\n]|\\.)*)'|"((?:[^"\\\n]|\\.)*)"|`((?:[^`\\]|\\.)*)`/g;
   for (const m of src.matchAll(lit)) {

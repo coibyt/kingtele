@@ -1,0 +1,545 @@
+# Zalo: danh sách + lời chào soạn sẵn (gửi thủ công)
+
+= Chào {ten}, mình muốn kết bạn Zalo để trao đổi thêm. Cảm ơn bạn!
+en| Hi {ten}, I'd like to connect on Zalo to chat further. Thank you!
+zh| 你好 {ten},我想在 Zalo 上加你为好友,方便进一步交流。谢谢!
+es| Hola {ten}, me gustaría añadirte en Zalo para seguir hablando. ¡Gracias!
+hi| नमस्ते {ten}, मैं आगे बात करने के लिए Zalo पर आपसे जुड़ना चाहता हूँ। धन्यवाद!
+ar| مرحبًا {ten}، أودّ إضافتك على Zalo لمتابعة الحديث. شكرًا لك!
+pt| Olá {ten}, gostaria de te adicionar no Zalo para conversarmos melhor. Obrigado!
+ru| Здравствуйте, {ten}! Хочу добавить вас в друзья в Zalo, чтобы пообщаться. Спасибо!
+ja| {ten}さん、こんにちは。詳しくお話しするためにZaloでつながりたいです。よろしくお願いします。
+ko| 안녕하세요 {ten}님, 더 이야기 나누고 싶어 Zalo 친구를 신청합니다. 감사합니다!
+de| Hallo {ten}, ich würde mich gern auf Zalo mit Ihnen vernetzen, um uns weiter auszutauschen. Danke!
+fr| Bonjour {ten}, j'aimerais vous ajouter sur Zalo pour échanger davantage. Merci !
+id| Halo {ten}, saya ingin berteman di Zalo untuk berdiskusi lebih lanjut. Terima kasih!
+th| สวัสดี {ten} ขอเพิ่มเป็นเพื่อนใน Zalo เพื่อคุยกันต่อ ขอบคุณค่ะ/ครับ
+tr| Merhaba {ten}, daha fazla görüşmek için Zalo'da arkadaş olmak istiyorum. Teşekkürler!
+fi| Hei {ten}, haluaisin lisätä sinut Zalossa kaveriksi, jotta voimme jutella lisää. Kiitos!
+
+= Đã thêm {0} số, bỏ qua {1} dòng trùng hoặc sai
+en| Added {0} numbers, skipped {1} duplicate or invalid lines
+zh| 已添加 {0} 个号码,跳过 {1} 行重复或无效内容
+es| Añadidos {0} números, omitidas {1} líneas duplicadas o no válidas
+hi| {0} नंबर जोड़े गए, {1} दोहराई या गलत पंक्तियाँ छोड़ी गईं
+ar| تمت إضافة {0} رقمًا وتخطّي {1} سطرًا مكررًا أو غير صالح
+pt| {0} números adicionados, {1} linhas duplicadas ou inválidas ignoradas
+ru| Добавлено номеров: {0}, пропущено дубликатов или ошибочных строк: {1}
+ja| {0}件の番号を追加し、重複または無効な{1}行をスキップしました
+ko| 번호 {0}개를 추가했고, 중복되거나 잘못된 {1}줄은 건너뛰었습니다
+de| {0} Nummern hinzugefügt, {1} doppelte oder ungültige Zeilen übersprungen
+fr| {0} numéros ajoutés, {1} lignes en double ou invalides ignorées
+id| {0} nomor ditambahkan, {1} baris duplikat atau tidak valid dilewati
+th| เพิ่ม {0} หมายเลขแล้ว ข้าม {1} บรรทัดที่ซ้ำหรือไม่ถูกต้อง
+tr| {0} numara eklendi, {1} yinelenen veya geçersiz satır atlandı
+fi| Lisätty {0} numeroa, ohitettu {1} kaksoiskappaletta tai virheellistä riviä
+
+= Thêm danh sách
+en| Add list
+zh| 添加列表
+es| Añadir lista
+hi| सूची जोड़ें
+ar| إضافة القائمة
+pt| Adicionar lista
+ru| Добавить список
+ja| リストを追加
+ko| 목록 추가
+de| Liste hinzufügen
+fr| Ajouter la liste
+id| Tambah daftar
+th| เพิ่มรายการ
+tr| Listeyi ekle
+fi| Lisää luettelo
+
+= Chưa gửi
+en| Not sent
+zh| 未发送
+es| Sin enviar
+hi| नहीं भेजा
+ar| لم يُرسل
+pt| Não enviado
+ru| Не отправлено
+ja| 未送信
+ko| 미발송
+de| Nicht gesendet
+fr| Non envoyé
+id| Belum dikirim
+th| ยังไม่ส่ง
+tr| Gönderilmedi
+fi| Ei lähetetty
+
+= Đã gửi lời mời
+en| Request sent
+zh| 已发送邀请
+es| Solicitud enviada
+hi| अनुरोध भेजा गया
+ar| تم إرسال الطلب
+pt| Convite enviado
+ru| Запрос отправлен
+ja| 申請送信済み
+ko| 요청 보냄
+de| Anfrage gesendet
+fr| Invitation envoyée
+id| Permintaan terkirim
+th| ส่งคำขอแล้ว
+tr| İstek gönderildi
+fi| Pyyntö lähetetty
+
+= Đã kết bạn
+en| Connected
+zh| 已成为好友
+es| Conectados
+hi| जुड़ गए
+ar| تمت الصداقة
+pt| Conectados
+ru| В друзьях
+ja| 友だち済み
+ko| 친구 맺음
+de| Verbunden
+fr| Connectés
+id| Sudah berteman
+th| เป็นเพื่อนแล้ว
+tr| Bağlandı
+fi| Yhdistetty
+
+= Bỏ qua
+en| Skip
+zh| 跳过
+es| Omitir
+hi| छोड़ें
+ar| تخطّي
+pt| Ignorar
+ru| Пропустить
+ja| スキップ
+ko| 건너뛰기
+de| Überspringen
+fr| Ignorer
+id| Lewati
+th| ข้าม
+tr| Atla
+fi| Ohita
+
+= Chưa có tên
+en| No name
+zh| 未填写姓名
+es| Sin nombre
+hi| नाम नहीं
+ar| بلا اسم
+pt| Sem nome
+ru| Без имени
+ja| 名前なし
+ko| 이름 없음
+de| Kein Name
+fr| Sans nom
+id| Tanpa nama
+th| ไม่มีชื่อ
+tr| Ad yok
+fi| Ei nimeä
+
+= Sao chép lời chào
+en| Copy greeting
+zh| 复制问候语
+es| Copiar saludo
+hi| अभिवादन कॉपी करें
+ar| نسخ التحية
+pt| Copiar saudação
+ru| Скопировать приветствие
+ja| あいさつ文をコピー
+ko| 인사말 복사
+de| Begrüßung kopieren
+fr| Copier le message d'accueil
+id| Salin sapaan
+th| คัดลอกคำทักทาย
+tr| Selamlamayı kopyala
+fi| Kopioi tervehdys
+
+= Mở Zalo
+en| Open Zalo
+zh| 打开 Zalo
+es| Abrir Zalo
+hi| Zalo खोलें
+ar| فتح Zalo
+pt| Abrir Zalo
+ru| Открыть Zalo
+ja| Zaloを開く
+ko| Zalo 열기
+de| Zalo öffnen
+fr| Ouvrir Zalo
+id| Buka Zalo
+th| เปิด Zalo
+tr| Zalo'yu aç
+fi| Avaa Zalo
+
+= Xoá người này?
+en| Delete this person?
+zh| 删除此人?
+es| ¿Eliminar a esta persona?
+hi| इस व्यक्ति को हटाएँ?
+ar| حذف هذا الشخص؟
+pt| Excluir esta pessoa?
+ru| Удалить этого человека?
+ja| この人を削除しますか?
+ko| 이 사람을 삭제할까요?
+de| Diese Person löschen?
+fr| Supprimer cette personne ?
+id| Hapus orang ini?
+th| ลบบุคคลนี้หรือไม่?
+tr| Bu kişi silinsin mi?
+fi| Poistetaanko tämä henkilö?
+
+= Số {0} sẽ bị xoá khỏi danh sách.
+en| The number {0} will be removed from the list.
+zh| 号码 {0} 将从列表中删除。
+es| El número {0} se eliminará de la lista.
+hi| नंबर {0} सूची से हटा दिया जाएगा।
+ar| سيُحذف الرقم {0} من القائمة.
+pt| O número {0} será removido da lista.
+ru| Номер {0} будет удалён из списка.
+ja| 番号 {0} はリストから削除されます。
+ko| 번호 {0}이(가) 목록에서 삭제됩니다.
+de| Die Nummer {0} wird aus der Liste entfernt.
+fr| Le numéro {0} sera retiré de la liste.
+id| Nomor {0} akan dihapus dari daftar.
+th| หมายเลข {0} จะถูกลบออกจากรายการ
+tr| {0} numarası listeden kaldırılacak.
+fi| Numero {0} poistetaan luettelosta.
+
+= Không có ai trong mục này
+en| Nobody in this section
+zh| 此分类下没有人
+es| Nadie en esta sección
+hi| इस सेक्शन में कोई नहीं है
+ar| لا أحد في هذا القسم
+pt| Ninguém nesta seção
+ru| В этом разделе никого нет
+ja| このセクションには誰もいません
+ko| 이 항목에는 아무도 없습니다
+de| Niemand in diesem Bereich
+fr| Personne dans cette section
+id| Tidak ada siapa pun di bagian ini
+th| ไม่มีใครในหมวดนี้
+tr| Bu bölümde kimse yok
+fi| Tässä osiossa ei ole ketään
+
+= Danh sách trống
+en| The list is empty
+zh| 列表为空
+es| La lista está vacía
+hi| सूची खाली है
+ar| القائمة فارغة
+pt| A lista está vazia
+ru| Список пуст
+ja| リストは空です
+ko| 목록이 비어 있습니다
+de| Die Liste ist leer
+fr| La liste est vide
+id| Daftar kosong
+th| รายการว่างเปล่า
+tr| Liste boş
+fi| Luettelo on tyhjä
+
+= Thử chọn mục khác.
+en| Try another section.
+zh| 试试其他分类。
+es| Prueba otra sección.
+hi| कोई दूसरा सेक्शन चुनकर देखें।
+ar| جرّب قسمًا آخر.
+pt| Tente outra seção.
+ru| Выберите другой раздел.
+ja| 別のセクションをお試しください。
+ko| 다른 항목을 선택해 보세요.
+de| Versuchen Sie einen anderen Bereich.
+fr| Essayez une autre section.
+id| Coba bagian lain.
+th| ลองเลือกหมวดอื่น
+tr| Başka bir bölüm deneyin.
+fi| Kokeile toista osiota.
+
+= Thêm số điện thoại ở form phía trên.
+en| Add phone numbers using the form above.
+zh| 请在上方表单添加电话号码。
+es| Añade números de teléfono con el formulario de arriba.
+hi| ऊपर के फ़ॉर्म से फ़ोन नंबर जोड़ें।
+ar| أضف أرقام الهاتف من النموذج أعلاه.
+pt| Adicione números de telefone no formulário acima.
+ru| Добавьте номера телефонов в форме выше.
+ja| 上のフォームから電話番号を追加してください。
+ko| 위 양식에서 전화번호를 추가하세요.
+de| Fügen Sie Telefonnummern über das Formular oben hinzu.
+fr| Ajoutez des numéros de téléphone avec le formulaire ci-dessus.
+id| Tambahkan nomor telepon melalui formulir di atas.
+th| เพิ่มหมายเลขโทรศัพท์ในแบบฟอร์มด้านบน
+tr| Yukarıdaki formdan telefon numaraları ekleyin.
+fi| Lisää puhelinnumeroita yllä olevalla lomakkeella.
+
+= Lọc danh sách
+en| Filter list
+zh| 筛选列表
+es| Filtrar lista
+hi| सूची फ़िल्टर करें
+ar| تصفية القائمة
+pt| Filtrar lista
+ru| Фильтр списка
+ja| リストを絞り込む
+ko| 목록 필터
+de| Liste filtern
+fr| Filtrer la liste
+id| Filter daftar
+th| กรองรายการ
+tr| Listeyi filtrele
+fi| Suodata luetteloa
+
+= Danh sách người cần kết bạn và lời chào soạn sẵn
+en| People to connect with, and a ready-made greeting
+zh| 待加好友名单与预设问候语
+es| Personas con las que conectar y un saludo preparado
+hi| जिनसे जुड़ना है उनकी सूची और तैयार अभिवादन
+ar| قائمة من تريد إضافتهم وتحية جاهزة
+pt| Pessoas para adicionar e uma saudação pronta
+ru| Список людей для добавления и готовое приветствие
+ja| 友だち追加したい人のリストと、用意したあいさつ文
+ko| 친구 추가할 사람 목록과 준비된 인사말
+de| Liste der Kontakte und eine vorbereitete Begrüßung
+fr| Liste des personnes à ajouter et message d'accueil prêt à l'emploi
+id| Daftar orang yang ingin ditambahkan dan sapaan siap pakai
+th| รายชื่อคนที่ต้องการเพิ่มเป็นเพื่อน และคำทักทายที่เตรียมไว้
+tr| Eklenecek kişilerin listesi ve hazır bir selamlama
+fi| Lisättävien henkilöiden luettelo ja valmis tervehdys
+
+= **Zalo không cho phần mềm tự gửi lời mời kết bạn.** KingTele giúp bạn làm nhanh và gọn: bấm **Sao chép lời chào**, **Mở Zalo**, dán và gửi. Chỉ nên gửi khoảng 20 người mỗi ngày để tránh bị Zalo hạn chế tài khoản.
+en| **Zalo doesn't let software send friend requests automatically.** KingTele makes it quick and tidy: press **Copy greeting**, **Open Zalo**, paste and send. Send only about 20 people a day to avoid Zalo restricting your account.
+zh| **Zalo 不允许软件自动发送好友请求。**KingTele 让你快速完成:点击**复制问候语**、**打开 Zalo**,粘贴并发送。建议每天最多发送约 20 人,以免账号被 Zalo 限制。
+es| **Zalo no permite que un software envíe solicitudes de amistad automáticamente.** KingTele te lo pone fácil: pulsa **Copiar saludo**, **Abrir Zalo**, pega y envía. Envía solo unas 20 personas al día para evitar que Zalo limite tu cuenta.
+hi| **Zalo सॉफ़्टवेयर को अपने-आप फ़्रेंड रिक्वेस्ट नहीं भेजने देता।** KingTele इसे तेज़ और आसान बनाता है: **अभिवादन कॉपी करें**, **Zalo खोलें**, पेस्ट करें और भेजें। Zalo आपके खाते को सीमित न करे, इसलिए रोज़ सिर्फ़ लगभग 20 लोगों को भेजें।
+ar| **لا يسمح Zalo للبرامج بإرسال طلبات الصداقة تلقائيًا.** يسهّل KingTele الأمر: اضغط **نسخ التحية** ثم **فتح Zalo**، والصق وأرسل. أرسل لنحو 20 شخصًا يوميًا فقط لتجنّب تقييد Zalo لحسابك.
+pt| **O Zalo não permite que um software envie pedidos de amizade automaticamente.** O KingTele deixa tudo rápido e organizado: clique em **Copiar saudação**, **Abrir Zalo**, cole e envie. Envie só cerca de 20 pessoas por dia para o Zalo não restringir sua conta.
+ru| **Zalo не позволяет программам автоматически отправлять запросы в друзья.** KingTele делает это быстро и удобно: нажмите **Скопировать приветствие**, **Открыть Zalo**, вставьте и отправьте. Отправляйте не более 20 человек в день, чтобы Zalo не ограничил аккаунт.
+ja| **Zaloはソフトウェアによる友だち申請の自動送信を認めていません。**KingTeleなら手早く整理できます。**あいさつ文をコピー**、**Zaloを開く**を押して、貼り付けて送信してください。アカウント制限を避けるため、1日に送るのは20人程度までにしましょう。
+ko| **Zalo는 소프트웨어가 친구 요청을 자동으로 보내는 것을 허용하지 않습니다.** KingTele이 빠르고 깔끔하게 도와드립니다. **인사말 복사**, **Zalo 열기**를 누르고 붙여넣어 보내세요. Zalo의 계정 제한을 피하려면 하루 약 20명까지만 보내세요.
+de| **Zalo erlaubt es Software nicht, Freundschaftsanfragen automatisch zu senden.** KingTele macht es schnell und übersichtlich: **Begrüßung kopieren**, **Zalo öffnen**, einfügen und senden. Senden Sie nur etwa 20 Personen pro Tag, damit Zalo Ihr Konto nicht einschränkt.
+fr| **Zalo n'autorise pas un logiciel à envoyer des demandes d'ami automatiquement.** KingTele vous rend la tâche rapide et claire : cliquez sur **Copier le message d'accueil**, **Ouvrir Zalo**, collez et envoyez. N'écrivez qu'à une vingtaine de personnes par jour pour éviter que Zalo restreigne votre compte.
+id| **Zalo tidak mengizinkan perangkat lunak mengirim permintaan pertemanan otomatis.** KingTele membuatnya cepat dan rapi: tekan **Salin sapaan**, **Buka Zalo**, tempel lalu kirim. Kirim sekitar 20 orang per hari agar akun Anda tidak dibatasi Zalo.
+th| **Zalo ไม่อนุญาตให้ซอฟต์แวร์ส่งคำขอเป็นเพื่อนอัตโนมัติ** KingTele ช่วยให้ทำได้เร็วและเป็นระเบียบ: กด **คัดลอกคำทักทาย**, **เปิด Zalo** แล้ววางและส่ง ควรส่งประมาณ 20 คนต่อวัน เพื่อไม่ให้ Zalo จำกัดบัญชีของคุณ
+tr| **Zalo, yazılımların otomatik arkadaşlık isteği göndermesine izin vermez.** KingTele bunu hızlı ve düzenli hale getirir: **Selamlamayı kopyala**, **Zalo'yu aç**, yapıştırın ve gönderin. Hesabınız kısıtlanmasın diye günde yalnızca yaklaşık 20 kişiye gönderin.
+fi| **Zalo ei salli ohjelmistojen lähettää kaveripyyntöjä automaattisesti.** KingTele tekee siitä nopeaa ja selkeää: paina **Kopioi tervehdys**, **Avaa Zalo**, liitä ja lähetä. Lähetä vain noin 20 henkilölle päivässä, ettei Zalo rajoita tiliäsi.
+
+= Lời chào kết bạn
+en| Friend-request greeting
+zh| 好友请求问候语
+es| Saludo para la solicitud de amistad
+hi| फ़्रेंड रिक्वेस्ट का अभिवादन
+ar| تحية طلب الصداقة
+pt| Saudação do pedido de amizade
+ru| Приветствие для запроса в друзья
+ja| 友だち申請のあいさつ文
+ko| 친구 요청 인사말
+de| Begrüßung für die Freundschaftsanfrage
+fr| Message d'accueil de la demande d'ami
+id| Sapaan permintaan pertemanan
+th| คำทักทายขอเป็นเพื่อน
+tr| Arkadaşlık isteği selamlaması
+fi| Kaveripyynnön tervehdys
+
+= Gõ {ten} để chèn tên người nhận. Để trống sẽ dùng lời chào mẫu.
+en| Type {ten} to insert the recipient's name. Leave empty to use the sample greeting.
+zh| 输入 {ten} 可插入收件人姓名。留空则使用示例问候语。
+es| Escribe {ten} para insertar el nombre del destinatario. Si lo dejas vacío se usa el saludo de ejemplo.
+hi| प्राप्तकर्ता का नाम जोड़ने के लिए {ten} लिखें। खाली छोड़ने पर नमूना अभिवादन इस्तेमाल होगा।
+ar| اكتب {ten} لإدراج اسم المستلم. اتركه فارغًا لاستخدام التحية النموذجية.
+pt| Digite {ten} para inserir o nome do destinatário. Se deixar vazio, será usada a saudação de exemplo.
+ru| Введите {ten}, чтобы вставить имя получателя. Если оставить пустым, будет использовано приветствие-образец.
+ja| {ten} と入力すると相手の名前が入ります。空欄の場合はサンプルのあいさつ文を使います。
+ko| {ten}을 입력하면 받는 사람 이름이 들어갑니다. 비워 두면 예시 인사말을 사용합니다.
+de| Geben Sie {ten} ein, um den Namen des Empfängers einzufügen. Bleibt das Feld leer, wird die Beispielbegrüßung verwendet.
+fr| Tapez {ten} pour insérer le nom du destinataire. Laissez vide pour utiliser le message d'exemple.
+id| Ketik {ten} untuk menyisipkan nama penerima. Jika kosong, sapaan contoh akan dipakai.
+th| พิมพ์ {ten} เพื่อแทรกชื่อผู้รับ หากเว้นว่างจะใช้คำทักทายตัวอย่าง
+tr| Alıcının adını eklemek için {ten} yazın. Boş bırakırsanız örnek selamlama kullanılır.
+fi| Kirjoita {ten} lisätäksesi vastaanottajan nimen. Jos jätät tyhjäksi, käytetään esimerkkitervehdystä.
+
+= Lưu lời chào
+en| Save greeting
+zh| 保存问候语
+es| Guardar saludo
+hi| अभिवादन सहेजें
+ar| حفظ التحية
+pt| Salvar saudação
+ru| Сохранить приветствие
+ja| あいさつ文を保存
+ko| 인사말 저장
+de| Begrüßung speichern
+fr| Enregistrer le message
+id| Simpan sapaan
+th| บันทึกคำทักทาย
+tr| Selamlamayı kaydet
+fi| Tallenna tervehdys
+
+= Thêm người
+en| Add person
+zh| 添加联系人
+es| Añadir persona
+hi| व्यक्ति जोड़ें
+ar| إضافة شخص
+pt| Adicionar pessoa
+ru| Добавить человека
+ja| 人を追加
+ko| 사람 추가
+de| Person hinzufügen
+fr| Ajouter une personne
+id| Tambah orang
+th| เพิ่มบุคคล
+tr| Kişi ekle
+fi| Lisää henkilö
+
+= Tên
+en| Name
+zh| 姓名
+es| Nombre
+hi| नाम
+ar| الاسم
+pt| Nome
+ru| Имя
+ja| 名前
+ko| 이름
+de| Name
+fr| Nom
+id| Nama
+th| ชื่อ
+tr| Ad
+fi| Nimi
+
+= Số điện thoại
+en| Phone number
+zh| 电话号码
+es| Número de teléfono
+hi| फ़ोन नंबर
+ar| رقم الهاتف
+pt| Número de telefone
+ru| Номер телефона
+ja| 電話番号
+ko| 전화번호
+de| Telefonnummer
+fr| Numéro de téléphone
+id| Nomor telepon
+th| หมายเลขโทรศัพท์
+tr| Telefon numarası
+fi| Puhelinnumero
+
+= Hoặc dán danh sách (mỗi dòng: Tên, Số điện thoại)
+en| Or paste a list (one per line: Name, Phone number)
+zh| 或粘贴列表(每行:姓名, 电话号码)
+es| O pega una lista (una por línea: Nombre, Teléfono)
+hi| या सूची पेस्ट करें (हर पंक्ति में: नाम, फ़ोन नंबर)
+ar| أو الصق قائمة (في كل سطر: الاسم، رقم الهاتف)
+pt| Ou cole uma lista (um por linha: Nome, Telefone)
+ru| Или вставьте список (в каждой строке: Имя, Номер телефона)
+ja| またはリストを貼り付け(1行ごとに:名前, 電話番号)
+ko| 또는 목록을 붙여넣으세요(한 줄에: 이름, 전화번호)
+de| Oder fügen Sie eine Liste ein (pro Zeile: Name, Telefonnummer)
+fr| Ou collez une liste (une par ligne : Nom, Téléphone)
+id| Atau tempel daftar (satu per baris: Nama, Nomor telepon)
+th| หรือวางรายการ (บรรทัดละหนึ่งคน: ชื่อ, หมายเลขโทรศัพท์)
+tr| Veya bir liste yapıştırın (her satırda: Ad, Telefon numarası)
+fi| Tai liitä luettelo (yksi per rivi: Nimi, Puhelinnumero)
+
+= Hôm nay đã gửi lời mời: {0} (gợi ý tối đa {1})
+en| Requests sent today: {0} (suggested maximum {1})
+zh| 今日已发送邀请:{0}(建议最多 {1})
+es| Solicitudes enviadas hoy: {0} (máximo sugerido {1})
+hi| आज भेजे गए अनुरोध: {0} (सुझाई गई अधिकतम सीमा {1})
+ar| الطلبات المرسلة اليوم: {0} (الحد الأقصى المقترح {1})
+pt| Convites enviados hoje: {0} (máximo sugerido {1})
+ru| Отправлено запросов сегодня: {0} (рекомендуемый максимум {1})
+ja| 本日送信した申請:{0}件(上限の目安 {1}件)
+ko| 오늘 보낸 요청: {0}건 (권장 최대 {1}건)
+de| Heute gesendete Anfragen: {0} (empfohlenes Maximum {1})
+fr| Invitations envoyées aujourd'hui : {0} (maximum conseillé {1})
+id| Permintaan terkirim hari ini: {0} (saran maksimum {1})
+th| ส่งคำขอวันนี้: {0} (แนะนำสูงสุด {1})
+tr| Bugün gönderilen istekler: {0} (önerilen üst sınır {1})
+fi| Tänään lähetetyt pyynnöt: {0} (suositeltu enimmäismäärä {1})
+
+= Số điện thoại không hợp lệ
+en| Invalid phone number
+zh| 电话号码无效
+es| Número de teléfono no válido
+hi| फ़ोन नंबर सही नहीं है
+ar| رقم الهاتف غير صالح
+pt| Número de telefone inválido
+ru| Недопустимый номер телефона
+ja| 電話番号が正しくありません
+ko| 전화번호가 올바르지 않습니다
+de| Ungültige Telefonnummer
+fr| Numéro de téléphone invalide
+id| Nomor telepon tidak valid
+th| หมายเลขโทรศัพท์ไม่ถูกต้อง
+tr| Geçersiz telefon numarası
+fi| Virheellinen puhelinnumero
+
+= Không có số mới để thêm (trùng hoặc không hợp lệ)
+en| No new numbers to add (duplicate or invalid)
+zh| 没有可添加的新号码(重复或无效)
+es| No hay números nuevos que añadir (duplicados o no válidos)
+hi| जोड़ने के लिए कोई नया नंबर नहीं (दोहराया या गलत)
+ar| لا توجد أرقام جديدة لإضافتها (مكررة أو غير صالحة)
+pt| Nenhum número novo para adicionar (duplicados ou inválidos)
+ru| Нет новых номеров для добавления (дубликаты или ошибки)
+ja| 追加できる新しい番号がありません(重複または無効)
+ko| 추가할 새 번호가 없습니다(중복 또는 잘못됨)
+de| Keine neuen Nummern zum Hinzufügen (doppelt oder ungültig)
+fr| Aucun nouveau numéro à ajouter (doublons ou invalides)
+id| Tidak ada nomor baru untuk ditambahkan (duplikat atau tidak valid)
+th| ไม่มีหมายเลขใหม่ให้เพิ่ม (ซ้ำหรือไม่ถูกต้อง)
+tr| Eklenecek yeni numara yok (yinelenen veya geçersiz)
+fi| Ei uusia numeroita lisättäväksi (kaksoiskappaleita tai virheellisiä)
+
+= Nhập ít nhất một số điện thoại
+en| Enter at least one phone number
+zh| 请至少输入一个电话号码
+es| Introduce al menos un número de teléfono
+hi| कम से कम एक फ़ोन नंबर दर्ज करें
+ar| أدخل رقم هاتف واحدًا على الأقل
+pt| Informe pelo menos um número de telefone
+ru| Введите хотя бы один номер телефона
+ja| 電話番号を1つ以上入力してください
+ko| 전화번호를 하나 이상 입력하세요
+de| Geben Sie mindestens eine Telefonnummer ein
+fr| Saisissez au moins un numéro de téléphone
+id| Isi minimal satu nomor telepon
+th| ใส่หมายเลขโทรศัพท์อย่างน้อยหนึ่งหมายเลข
+tr| En az bir telefon numarası girin
+fi| Kirjoita vähintään yksi puhelinnumero
+
+= Tối đa {0} người trong danh sách
+en| Up to {0} people in the list
+zh| 列表最多 {0} 人
+es| Máximo {0} personas en la lista
+hi| सूची में अधिकतम {0} लोग
+ar| بحد أقصى {0} شخصًا في القائمة
+pt| No máximo {0} pessoas na lista
+ru| Не более {0} человек в списке
+ja| リストは最大{0}人までです
+ko| 목록에는 최대 {0}명까지 가능합니다
+de| Höchstens {0} Personen in der Liste
+fr| {0} personnes maximum dans la liste
+id| Maksimal {0} orang dalam daftar
+th| ในรายการมีได้สูงสุด {0} คน
+tr| Listede en fazla {0} kişi olabilir
+fi| Luettelossa enintään {0} henkilöä
+
+= Lời chào tối đa 500 ký tự
+en| The greeting can be up to 500 characters
+zh| 问候语最多 500 个字符
+es| El saludo admite hasta 500 caracteres
+hi| अभिवादन अधिकतम 500 अक्षरों का हो सकता है
+ar| يمكن أن تصل التحية إلى 500 حرف
+pt| A saudação pode ter até 500 caracteres
+ru| Приветствие — не более 500 символов
+ja| あいさつ文は500文字までです
+ko| 인사말은 최대 500자입니다
+de| Die Begrüßung darf höchstens 500 Zeichen lang sein
+fr| Le message d'accueil est limité à 500 caractères
+id| Sapaan maksimal 500 karakter
+th| คำทักทายยาวได้สูงสุด 500 ตัวอักษร
+tr| Selamlama en fazla 500 karakter olabilir
+fi| Tervehdys saa olla enintään 500 merkkiä
