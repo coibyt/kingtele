@@ -14,7 +14,7 @@ const MB = 1024 * 1024;
 
 const { lookup: lookupChatId, MESSAGES: MSG } = require('./chatid-tool');
 
-function createApi({ store, config, auth, scheduler, media, tokenFor, points, pwaStats, traffic, chatIdTool, fb, zalo, mod }) {
+function createApi({ store, config, auth, scheduler, media, tokenFor, points, pwaStats, traffic, chatIdTool, fb, zalo, mod, inbox }) {
   const api = express.Router();
   const d = () => store.data;
 
@@ -85,6 +85,7 @@ function createApi({ store, config, auth, scheduler, media, tokenFor, points, pw
   if (fb) api.use('/fb', fb.router({ config }));
   if (zalo) api.use('/zalo', zalo.router());
   if (mod) api.use('/mod', mod.router());
+  if (inbox) api.use('/inbox', inbox.router());
   api.post('/account/password', wrap(auth.changePassword));
 
   // ---------- Ảnh / video ----------
@@ -456,7 +457,7 @@ function createApi({ store, config, auth, scheduler, media, tokenFor, points, pw
     const files = d().posts.filter((p) => p.userId === u.id && p.media).map((p) => p.media.file);
     d().posts = d().posts.filter((p) => p.userId !== u.id);
     d().groups = d().groups.filter((g) => g.userId !== u.id);
-    for (const k of ['fbGroups', 'fbTasks', 'fbDue', 'zaloContacts', 'modQueue']) d()[k] = d()[k].filter((x) => x.userId !== u.id);
+    for (const k of ['fbGroups', 'fbTasks', 'fbDue', 'zaloContacts', 'modQueue', 'botContacts']) d()[k] = d()[k].filter((x) => x.userId !== u.id);
     d().logs = d().logs.filter((l) => l.userId !== u.id);
     d().users = d().users.filter((x) => x.id !== u.id);
     for (const f of files) await media.remove(f);

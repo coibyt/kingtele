@@ -1201,7 +1201,101 @@ async function moderationView() {
       approverCard, groupsCard));
 }
 
-const routes = { overview: ['Tổng quan', overviewView], posts: ['Bài đăng', postsView], groups: ['Nhóm Telegram', groupsView], facebook: ['Facebook', facebookView], zalo: ['Zalo', zaloView], moderation: ['Duyệt bài', moderationView], logs: ['Nhật ký gửi', logsView], settings: ['Cài đặt', settingsView], points: ['Điểm King', pointsView], members: ['Thành viên', membersView], installs: ['Ứng dụng', appStatsView], traffic: ['Truy cập', trafficView] };
+// ---------- Hộp thư bot: ghi nhận người nhắn tin, tự động trả lời, gửi tin cá nhân hoá ----------
+function openSendDialog(c) {
+  const text = h('textarea', { class: 'input', rows: 5, maxLength: 4000, placeholder: 'Xin chào {ten}, ...' });
+  const err = h('p', { class: 'error-text', role: 'alert' });
+  const send = h('button', { class: 'btn btn-primary', type: 'button', onclick: async () => {
+    err.textContent = ''; send.disabled = true;
+    try { await api('POST', `/inbox/contacts/${c.id}/send`, { text: text.value }); dlg.close(); toast('Đã gửi tin nhắn'); refreshPoints(); }
+    catch (ex) { err.textContent = ex.message; send.disabled = false; }
+  } }, ico('send'), 'Gửi');
+  const dlg = dialog({ title: `Nhắn cho ${c.name}`, body: h('div', { class: 'form-grid' },
+    h('div', { class: 'field' }, h('label', null, 'Nội dung'), text, h('span', { class: 'hint' }, 'Dùng {ten}, {ho_ten}, {username} để cá nhân hoá. Mỗi tin gửi thành công tốn 1 Điểm King.')), err, h('div', null, send)) });
+}
+
+async function inboxView() {
+  const [st, contacts, aud] = await Promise.all([api('GET', '/inbox/status'), api('GET', '/inbox/contacts'), api('GET', '/inbox/audience')]);
+  const enabled = h('input', { type: 'checkbox', id: 'ib-on', checked: st.enabled });
+  const text = h('textarea', { class: 'input', id: 'ib-text', rows: 3, maxLength: 4000, placeholder: 'Xin chào {ten}! Cảm ơn bạn đã nhắn tin, mình sẽ phản hồi sớm nhất.' });
+  text.value = st.text;
+  const hours = h('input', { class: 'input', id: 'ib-hours', type: 'number', min: 1, max: 168, value: st.cooldownHours });
+  const rules = st.rules.map((r) => ({ ...r }));
+  const rulesBox = h('div', { class: 'stack', style: 'gap:8px' });
+  const drawRules = () => rulesBox.replaceChildren(...rules.map((r, i) => h('div', { class: 'two' },
+    h('input', { class: 'input', value: r.keyword, maxLength: 60, placeholder: 'Từ khoá, VD: giá', 'aria-label': 'Từ khoá', oninput: (e) => { r.keyword = e.target.value; } }),
+    h('div', { class: 'row', style: 'flex-wrap:nowrap' },
+      h('input', { class: 'input', value: r.text, maxLength: 4000, placeholder: 'Nội dung trả lời', 'aria-label': 'Nội dung trả lời', oninput: (e) => { r.text = e.target.value; } }),
+      h('button', { class: 'btn btn-sm btn-danger btn-icon', type: 'button', 'aria-label': 'Xoá', onclick: () => { rules.splice(i, 1); drawRules(); } }, ico('trash'))))));
+  drawRules();
+  const err = h('p', { class: 'error-text', role: 'alert' });
+
+  const settingsCard = h('div', { class: 'card card-pad form-grid' }, h('h2', null, 'Hộp thư bot'),
+    h('p', { class: 'hint' }, `${st.counts.total} người đã nhắn tin · ${st.counts.active} người nhận được tin`),
+    h('div', { class: 'check' }, enabled, h('label', { for: 'ib-on' }, 'Bật hộp thư (ghi nhận người nhắn tin và tự động trả lời)')),
+    h('div', { class: 'field' }, h('label', { for: 'ib-text' }, 'Tin trả lời tự động'), text,
+      h('span', { class: 'hint' }, 'Dùng {ten}, {ho_ten}, {username} để cá nhân hoá. Để trống nếu chỉ muốn ghi nhận người nhắn tin.')),
+    h('div', { class: 'field' }, h('label', { for: 'ib-hours' }, 'Chỉ trả lời lại một người sau (giờ)'), hours),
+    h('div', { class: 'field' }, h('span', { class: 'label' }, 'Trả lời theo từ khoá (tuỳ chọn)'), rulesBox,
+      h('div', null, h('button', { class: 'btn btn-sm', type: 'button', onclick: () => { if (rules.length < 10) { rules.push({ keyword: '', text: '' }); drawRules(); } } }, ico('plus'), 'Thêm quy tắc'))),
+    err,
+    h('div', null, h('button', { class: 'btn btn-primary', type: 'button', onclick: (e) => act(e.currentTarget, async () => {
+      err.textContent = '';
+      try { await api('PUT', '/inbox/settings', { enabled: enabled.checked, text: text.value, cooldownHours: hours.value, rules }); route(); }
+      catch (ex) { err.textContent = ex.message; throw ex; }
+    }, 'Đã lưu') }, ico('check'), 'Lưu')));
+
+  const link = st.bot ? `https://t.me/${st.bot}` : '';
+  const inviteCard = h('div', { class: 'card card-pad form-grid' }, h('h2', null, 'Mời thành viên nhóm nhắn tin cho bot'),
+    rich('Bot **không thể tự nhắn** cho người chưa từng nhắn với bot, và Telegram không cho lấy danh sách thành viên nhóm. Hãy đăng link bot vào nhóm, ai bấm **Start** sẽ vào danh sách nhận tin.', 'hint'),
+    link ? h('div', { class: 'row' }, h('code', { class: 'mono' }, link), h('button', { class: 'btn btn-sm', type: 'button', onclick: () => copyToClipboard(link) }, ico('copy'), 'Sao chép link bot')) : h('p', { class: 'hint' }, 'Chưa kết nối bot Telegram. Vào Cài đặt để kết nối.'));
+
+  const msg = h('textarea', { class: 'input', id: 'ib-msg', rows: 4, maxLength: 4000, placeholder: 'Xin chào {ten}, hôm nay bên mình có ưu đãi mới...' });
+  const audience = h('select', { class: 'input', id: 'ib-aud' },
+    h('option', { value: 'all' }, `Tất cả người nhận được tin (${aud.all})`),
+    h('option', { value: 'active7' }, `Nhắn tin trong 7 ngày qua (${aud.active7})`));
+  const prog = h('p', { class: 'hint', role: 'status' });
+  const bErr = h('p', { class: 'error-text', role: 'alert' });
+  const watch = () => {
+    const t = setInterval(async () => {
+      if (!document.body.contains(prog)) return clearInterval(t);
+      const j = await api('GET', '/inbox/broadcast').catch(() => null);
+      if (!j) return;
+      prog.textContent = `Đã gửi ${j.sent}/${j.total} (lỗi ${j.failed})`;
+      if (j.done) { clearInterval(t); refreshPoints(); if (j.error) bErr.textContent = j.error; }
+    }, 2000);
+  };
+  const broadcastCard = h('div', { class: 'card card-pad form-grid' }, h('h2', null, 'Gửi tin cho nhiều người'),
+    h('div', { class: 'field' }, h('label', { for: 'ib-msg' }, 'Nội dung'), msg,
+      h('span', { class: 'hint' }, 'Dùng {ten}, {ho_ten}, {username} để cá nhân hoá. Mỗi tin gửi thành công tốn 1 Điểm King. Người đã gõ /stop hoặc chặn bot sẽ bị bỏ qua.')),
+    h('div', { class: 'field' }, h('label', { for: 'ib-aud' }, 'Người nhận'), audience),
+    bErr, prog,
+    h('div', null, h('button', { class: 'btn btn-primary', type: 'button', onclick: async (e) => {
+      bErr.textContent = '';
+      const n = audience.value === 'all' ? aud.all : aud.active7;
+      if (!msg.value.trim()) { bErr.textContent = 'Nhập nội dung tin nhắn'; return; }
+      if (!(await confirmBox('Gửi tin hàng loạt?', `Gửi tới ${n} người, tốn tối đa ${n} Điểm King.`, 'Gửi'))) return;
+      await act(e.currentTarget, async () => { await api('POST', '/inbox/broadcast', { text: msg.value, audience: audience.value }); prog.textContent = 'Đang gửi...'; watch(); });
+    } }, ico('send'), 'Gửi cho mọi người')));
+
+  const row = (c) => h('div', { class: 'li li-wrap' },
+    h('div', { class: 'li-main' }, h('div', { class: 'li-t' }, c.name, c.username ? ` @${c.username}` : ''), h('div', { class: 'li-s' }, c.lastText || '...'), h('div', { class: 'li-s' }, `${fmtDT(c.lastSeen)} (${rel(c.lastSeen)})`)),
+    c.optedOut ? h('span', { class: 'tag warn' }, 'Đã hủy nhận tin') : null,
+    c.blocked ? h('span', { class: 'tag err' }, 'Đã chặn bot') : null,
+    h('button', { class: 'btn btn-sm', type: 'button', disabled: c.optedOut || c.blocked, onclick: () => openSendDialog(c) }, ico('send'), 'Nhắn'),
+    h('button', { class: 'btn btn-sm btn-danger btn-icon', type: 'button', 'aria-label': `Xoá ${c.name}`, onclick: async () => {
+      if (await confirmBox('Xoá người này?', `${c.name} sẽ bị xoá khỏi danh sách.`, 'Xoá')) { try { await api('DELETE', `/inbox/contacts/${c.id}`); route(); } catch (ex) { toast(ex.message, 'err'); } }
+    } }, ico('trash')));
+
+  return h('div', null,
+    pageHead('Hộp thư bot', 'Trả lời tự động và nhắn tin cá nhân hoá cho người đã nhắn tin với bot', h('button', { class: 'btn', type: 'button', onclick: route }, ico('refresh'), 'Làm mới')),
+    h('div', { class: 'banner' }, ico('alert'), rich('**Chỉ gửi được cho người đã nhắn tin với bot.** Đây là quy định của Telegram, giúp tránh tin rác. Mỗi người có thể gõ **/stop** để hủy nhận tin bất cứ lúc nào.', 'hint', 'div')),
+    h('div', { class: 'stack' }, settingsCard, inviteCard, broadcastCard,
+      contacts.length ? h('div', { class: 'card card-pad' }, h('div', { class: 'list' }, contacts.map(row)))
+        : empty('users', 'Chưa có ai nhắn tin cho bot', 'Bật hộp thư rồi mời mọi người nhắn tin cho bot. Họ sẽ hiện ở đây.')));
+}
+
+const routes = { overview: ['Tổng quan', overviewView], posts: ['Bài đăng', postsView], groups: ['Nhóm Telegram', groupsView], facebook: ['Facebook', facebookView], zalo: ['Zalo', zaloView], moderation: ['Duyệt bài', moderationView], inbox: ['Hộp thư bot', inboxView], logs: ['Nhật ký gửi', logsView], settings: ['Cài đặt', settingsView], points: ['Điểm King', pointsView], members: ['Thành viên', membersView], installs: ['Ứng dụng', appStatsView], traffic: ['Truy cập', trafficView] };
 let token = 0;
 async function route() {
   const key = routes[location.hash.slice(1)] ? location.hash.slice(1) : 'overview';

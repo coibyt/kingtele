@@ -25,7 +25,7 @@ function kindOf(m) {
   return '';
 }
 
-function createModeration({ store, getToken, isActive = () => true, api = tg }) {
+function createModeration({ store, getToken, isActive = () => true, api = tg, extraWant = () => false, onPrivate = null }) {
   const d = () => store.data;
   const pollers = new Map();
   let timer = null;
@@ -111,6 +111,7 @@ function createModeration({ store, getToken, isActive = () => true, api = tg }) 
 
   async function handle(userId, p, u) {
     if (u.callback_query) return handleCallback(userId, p, u.callback_query);
+    if (u.message && u.message.chat && u.message.chat.type === 'private') return onPrivate ? onPrivate(userId, p.token, u.message) : undefined;
     if (u.message) return handleMessage(userId, p, u.message);
   }
 
@@ -137,6 +138,7 @@ function createModeration({ store, getToken, isActive = () => true, api = tg }) 
   /** Đồng bộ danh sách vòng polling với các nhóm đang bật duyệt. */
   function sync() {
     const want = new Set(d().groups.filter((g) => g.moderated).map((g) => g.userId).filter((id) => isActive(id) && getToken(id) && approverOf(id)));
+    for (const id of [...d().users.map((u) => u.id), 'admin']) if (isActive(id) && getToken(id) && extraWant(id)) want.add(id);
     for (const [id, p] of pollers) {
       if (!want.has(id) || p.token !== getToken(id)) { p.stopped = true; pollers.delete(id); }
       else if (p.dead) pollers.delete(id); // thử lại (vd. sau khi gỡ webhook)

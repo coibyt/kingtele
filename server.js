@@ -17,6 +17,7 @@ const { startToolBot } = require('./src/chatid-tool');
 const { createFb } = require('./src/fb');
 const { createZalo } = require('./src/zalo');
 const { createModeration } = require('./src/moderation');
+const { createInbox } = require('./src/inbox');
 
 const store = new Store(config.dataDir).init();
 // Token bot của từng thành viên; tài khoản admin dùng token trong Cài đặt hoặc biến môi trường.
@@ -35,7 +36,8 @@ const media = createMedia({ store, uploadsDir: config.uploadsDir });
 const scheduler = createScheduler({ store, getToken: tokenFor, isActive, uploadsDir: config.uploadsDir, points });
 
 const fb = createFb({ store, getToken: tokenFor, isActive, publicUrl: config.baseUrl || config.publicUrl, getUpdates: (u, t) => mod.updates(u, t) });
-const mod = createModeration({ store, getToken: tokenFor, isActive });
+const inbox = createInbox({ store, getToken: tokenFor, points, onChange: () => mod.sync() });
+const mod = createModeration({ store, getToken: tokenFor, isActive, extraWant: inbox.wants, onPrivate: inbox.onPrivate });
 
 const zalo = createZalo({ store });
 
@@ -64,7 +66,7 @@ app.use((req, res, next) => {
 app.use(express.json({ limit: '100kb' }));
 app.get('/healthz', (req, res) => res.json({ ok: true, uptime: Math.round(process.uptime()) }));
 const chatIdTool = config.toolBotToken ? startToolBot({ token: config.toolBotToken }) : null; // bot của công cụ /cong-cu/lay-id-nhom-telegram
-app.use('/api', createApi({ store, config, auth, scheduler, media, tokenFor, points, pwaStats, traffic, chatIdTool, fb, zalo, mod }));
+app.use('/api', createApi({ store, config, auth, scheduler, media, tokenFor, points, pwaStats, traffic, chatIdTool, fb, zalo, mod, inbox }));
 
 // CDN của nhà cung cấp hosting có thể bỏ header Cache-Control, nên gắn mã phiên bản (?v=) vào mọi file /assets
 // trong HTML: mỗi lần deploy là một địa chỉ mới, điện thoại luôn tải bản mới.

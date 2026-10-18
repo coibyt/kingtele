@@ -1,0 +1,800 @@
+# Hộp thư bot: trả lời tự động và nhắn tin cá nhân hoá
+
+= Hộp thư bot
+en| Bot inbox
+zh| 机器人收件箱
+es| Bandeja del bot
+hi| बॉट इनबॉक्स
+ar| صندوق بريد البوت
+pt| Caixa de entrada do bot
+ru| Входящие бота
+ja| ボットの受信箱
+ko| 봇 받은편지함
+de| Bot-Posteingang
+fr| Boîte de réception du bot
+id| Kotak masuk bot
+th| กล่องข้อความบอท
+tr| Bot gelen kutusu
+fi| Botin saapuneet
+
+= Xin chào {ten}, ...
+en| Hello {ten}, ...
+zh| 你好 {ten},...
+es| Hola {ten}, ...
+hi| नमस्ते {ten}, ...
+ar| مرحبًا {ten}، ...
+pt| Olá {ten}, ...
+ru| Здравствуйте, {ten}, ...
+ja| {ten}さん、こんにちは。...
+ko| 안녕하세요 {ten}님, ...
+de| Hallo {ten}, ...
+fr| Bonjour {ten}, ...
+id| Halo {ten}, ...
+th| สวัสดี {ten} ...
+tr| Merhaba {ten}, ...
+fi| Hei {ten}, ...
+
+= Đã gửi tin nhắn
+en| Message sent
+zh| 消息已发送
+es| Mensaje enviado
+hi| संदेश भेजा गया
+ar| تم إرسال الرسالة
+pt| Mensagem enviada
+ru| Сообщение отправлено
+ja| メッセージを送信しました
+ko| 메시지를 보냈습니다
+de| Nachricht gesendet
+fr| Message envoyé
+id| Pesan terkirim
+th| ส่งข้อความแล้ว
+tr| Mesaj gönderildi
+fi| Viesti lähetetty
+
+= Gửi
+en| Send
+zh| 发送
+es| Enviar
+hi| भेजें
+ar| إرسال
+pt| Enviar
+ru| Отправить
+ja| 送信
+ko| 보내기
+de| Senden
+fr| Envoyer
+id| Kirim
+th| ส่ง
+tr| Gönder
+fi| Lähetä
+
+= Nhắn cho {0}
+en| Message {0}
+zh| 给 {0} 发消息
+es| Escribir a {0}
+hi| {0} को संदेश भेजें
+ar| مراسلة {0}
+pt| Enviar mensagem para {0}
+ru| Написать {0}
+ja| {0}にメッセージ
+ko| {0}에게 메시지
+de| Nachricht an {0}
+fr| Écrire à {0}
+id| Kirim pesan ke {0}
+th| ส่งข้อความถึง {0}
+tr| {0} kişisine mesaj
+fi| Viesti: {0}
+
+= Dùng {ten}, {ho_ten}, {username} để cá nhân hoá. Mỗi tin gửi thành công tốn 1 Điểm King.
+en| Use {ten}, {ho_ten}, {username} to personalize. Each successfully sent message costs 1 King Point.
+zh| 使用 {ten}、{ho_ten}、{username} 进行个性化。每条发送成功的消息消耗 1 King 积分。
+es| Usa {ten}, {ho_ten}, {username} para personalizar. Cada mensaje enviado con éxito cuesta 1 Punto King.
+hi| निजीकरण के लिए {ten}, {ho_ten}, {username} इस्तेमाल करें। हर सफल संदेश पर 1 King पॉइंट लगता है।
+ar| استخدم {ten} و{ho_ten} و{username} للتخصيص. كل رسالة تُرسل بنجاح تخصم نقطة King واحدة.
+pt| Use {ten}, {ho_ten}, {username} para personalizar. Cada mensagem enviada com sucesso custa 1 Ponto King.
+ru| Используйте {ten}, {ho_ten}, {username} для персонализации. Каждое успешно отправленное сообщение стоит 1 King-балл.
+ja| {ten}、{ho_ten}、{username} で個別化できます。送信に成功するたびに1 Kingポイントを消費します。
+ko| {ten}, {ho_ten}, {username}으로 개인화할 수 있습니다. 성공적으로 보낸 메시지마다 1 King 포인트가 차감됩니다.
+de| Mit {ten}, {ho_ten}, {username} personalisieren Sie die Nachricht. Jede erfolgreich gesendete Nachricht kostet 1 King-Punkt.
+fr| Utilisez {ten}, {ho_ten}, {username} pour personnaliser. Chaque message envoyé avec succès coûte 1 Point King.
+id| Gunakan {ten}, {ho_ten}, {username} untuk personalisasi. Setiap pesan yang berhasil terkirim memakai 1 Poin King.
+th| ใช้ {ten}, {ho_ten}, {username} เพื่อปรับให้เป็นส่วนตัว ข้อความที่ส่งสำเร็จแต่ละข้อความหัก 1 คะแนน King
+tr| Kişiselleştirmek için {ten}, {ho_ten}, {username} kullanın. Başarıyla gönderilen her mesaj 1 King Puanı düşer.
+fi| Käytä {ten}, {ho_ten}, {username} yksilöintiin. Jokainen onnistuneesti lähetetty viesti maksaa 1 King-pisteen.
+
+= Xin chào {ten}! Cảm ơn bạn đã nhắn tin, mình sẽ phản hồi sớm nhất.
+en| Hello {ten}! Thanks for your message, I'll reply as soon as possible.
+zh| 你好 {ten}!感谢你的留言,我会尽快回复。
+es| ¡Hola {ten}! Gracias por tu mensaje, responderé lo antes posible.
+hi| नमस्ते {ten}! संदेश के लिए धन्यवाद, मैं जल्द से जल्द जवाब दूँगा।
+ar| مرحبًا {ten}! شكرًا لرسالتك، سأرد في أقرب وقت.
+pt| Olá {ten}! Obrigado pela mensagem, responderei assim que possível.
+ru| Здравствуйте, {ten}! Спасибо за сообщение, отвечу как можно скорее.
+ja| {ten}さん、こんにちは!メッセージありがとうございます。できるだけ早く返信します。
+ko| 안녕하세요 {ten}님! 메시지 감사합니다. 최대한 빨리 답변드리겠습니다.
+de| Hallo {ten}! Danke für Ihre Nachricht, ich antworte so schnell wie möglich.
+fr| Bonjour {ten} ! Merci pour votre message, je vous répondrai dès que possible.
+id| Halo {ten}! Terima kasih atas pesannya, saya akan segera membalas.
+th| สวัสดี {ten}! ขอบคุณที่ส่งข้อความมา จะตอบกลับโดยเร็วที่สุด
+tr| Merhaba {ten}! Mesajınız için teşekkürler, en kısa sürede yanıt vereceğim.
+fi| Hei {ten}! Kiitos viestistäsi, vastaan mahdollisimman pian.
+
+= Từ khoá, VD: giá
+en| Keyword, e.g. price
+zh| 关键词,例如:价格
+es| Palabra clave, p. ej.: precio
+hi| कीवर्ड, जैसे: कीमत
+ar| كلمة مفتاحية، مثل: السعر
+pt| Palavra-chave, ex.: preço
+ru| Ключевое слово, напр.: цена
+ja| キーワード(例:価格)
+ko| 키워드, 예: 가격
+de| Stichwort, z. B. Preis
+fr| Mot-clé, ex. : prix
+id| Kata kunci, mis.: harga
+th| คีย์เวิร์ด เช่น ราคา
+tr| Anahtar kelime, örn.: fiyat
+fi| Avainsana, esim. hinta
+
+= Từ khoá
+en| Keyword
+zh| 关键词
+es| Palabra clave
+hi| कीवर्ड
+ar| كلمة مفتاحية
+pt| Palavra-chave
+ru| Ключевое слово
+ja| キーワード
+ko| 키워드
+de| Stichwort
+fr| Mot-clé
+id| Kata kunci
+th| คีย์เวิร์ด
+tr| Anahtar kelime
+fi| Avainsana
+
+= Nội dung trả lời
+en| Reply text
+zh| 回复内容
+es| Texto de respuesta
+hi| जवाब का पाठ
+ar| نص الرد
+pt| Texto da resposta
+ru| Текст ответа
+ja| 返信内容
+ko| 답변 내용
+de| Antworttext
+fr| Texte de la réponse
+id| Isi balasan
+th| ข้อความตอบกลับ
+tr| Yanıt metni
+fi| Vastausteksti
+
+= {0} người đã nhắn tin · {1} người nhận được tin
+en| {0} people have messaged · {1} can receive messages
+zh| 已有 {0} 人发来消息 · {1} 人可接收消息
+es| {0} personas han escrito · {1} pueden recibir mensajes
+hi| {0} लोगों ने संदेश भेजा · {1} संदेश पा सकते हैं
+ar| راسلنا {0} شخصًا · {1} يمكنهم استلام الرسائل
+pt| {0} pessoas já enviaram mensagem · {1} podem receber mensagens
+ru| Написали {0} человек · получать сообщения могут {1}
+ja| メッセージをくれた人:{0}人 · 受信可能:{1}人
+ko| 메시지를 보낸 사람 {0}명 · 수신 가능 {1}명
+de| {0} Personen haben geschrieben · {1} können Nachrichten empfangen
+fr| {0} personnes ont écrit · {1} peuvent recevoir des messages
+id| {0} orang telah mengirim pesan · {1} bisa menerima pesan
+th| มีผู้ส่งข้อความมา {0} คน · รับข้อความได้ {1} คน
+tr| {0} kişi mesaj gönderdi · {1} kişi mesaj alabilir
+fi| {0} henkilöä on lähettänyt viestin · {1} voi vastaanottaa viestejä
+
+= Bật hộp thư (ghi nhận người nhắn tin và tự động trả lời)
+en| Turn on inbox (record people who message and auto-reply)
+zh| 开启收件箱(记录来信的人并自动回复)
+es| Activar bandeja (registrar a quienes escriben y responder automáticamente)
+hi| इनबॉक्स चालू करें (संदेश भेजने वालों को दर्ज करें और अपने-आप जवाब दें)
+ar| تفعيل الصندوق (تسجيل من يراسلك والرد تلقائيًا)
+pt| Ativar caixa de entrada (registrar quem escreve e responder automaticamente)
+ru| Включить входящие (запоминать написавших и отвечать автоматически)
+ja| 受信箱をオンにする(メッセージをくれた人を記録して自動返信)
+ko| 받은편지함 켜기(메시지를 보낸 사람을 기록하고 자동 답장)
+de| Posteingang einschalten (Absender erfassen und automatisch antworten)
+fr| Activer la boîte de réception (enregistrer les expéditeurs et répondre automatiquement)
+id| Aktifkan kotak masuk (catat orang yang mengirim pesan dan balas otomatis)
+th| เปิดกล่องข้อความ (บันทึกผู้ที่ส่งข้อความมาและตอบกลับอัตโนมัติ)
+tr| Gelen kutusunu aç (mesaj atanları kaydet ve otomatik yanıtla)
+fi| Ota saapuneet käyttöön (tallenna viestin lähettäneet ja vastaa automaattisesti)
+
+= Tin trả lời tự động
+en| Auto-reply message
+zh| 自动回复内容
+es| Mensaje de respuesta automática
+hi| ऑटो-रिप्लाई संदेश
+ar| رسالة الرد التلقائي
+pt| Mensagem de resposta automática
+ru| Текст автоответа
+ja| 自動返信メッセージ
+ko| 자동 답장 메시지
+de| Automatische Antwort
+fr| Message de réponse automatique
+id| Pesan balasan otomatis
+th| ข้อความตอบกลับอัตโนมัติ
+tr| Otomatik yanıt mesajı
+fi| Automaattinen vastaus
+
+= Dùng {ten}, {ho_ten}, {username} để cá nhân hoá. Để trống nếu chỉ muốn ghi nhận người nhắn tin.
+en| Use {ten}, {ho_ten}, {username} to personalize. Leave empty if you only want to record people who message.
+zh| 使用 {ten}、{ho_ten}、{username} 进行个性化。如只想记录来信者,请留空。
+es| Usa {ten}, {ho_ten}, {username} para personalizar. Déjalo vacío si solo quieres registrar a quienes escriben.
+hi| निजीकरण के लिए {ten}, {ho_ten}, {username} इस्तेमाल करें। सिर्फ़ संदेश भेजने वालों को दर्ज करना हो तो खाली छोड़ें।
+ar| استخدم {ten} و{ho_ten} و{username} للتخصيص. اتركه فارغًا إذا أردت تسجيل من يراسلك فقط.
+pt| Use {ten}, {ho_ten}, {username} para personalizar. Deixe vazio se só quiser registrar quem escreve.
+ru| Используйте {ten}, {ho_ten}, {username} для персонализации. Оставьте пустым, если нужно только запоминать написавших.
+ja| {ten}、{ho_ten}、{username} で個別化できます。メッセージをくれた人の記録だけでよければ空欄にしてください。
+ko| {ten}, {ho_ten}, {username}으로 개인화할 수 있습니다. 메시지를 보낸 사람만 기록하려면 비워 두세요.
+de| Mit {ten}, {ho_ten}, {username} personalisieren Sie die Nachricht. Leer lassen, wenn Sie nur Absender erfassen möchten.
+fr| Utilisez {ten}, {ho_ten}, {username} pour personnaliser. Laissez vide pour seulement enregistrer les expéditeurs.
+id| Gunakan {ten}, {ho_ten}, {username} untuk personalisasi. Biarkan kosong jika hanya ingin mencatat orang yang mengirim pesan.
+th| ใช้ {ten}, {ho_ten}, {username} เพื่อปรับให้เป็นส่วนตัว เว้นว่างไว้หากต้องการเพียงบันทึกผู้ที่ส่งข้อความมา
+tr| Kişiselleştirmek için {ten}, {ho_ten}, {username} kullanın. Yalnızca mesaj atanları kaydetmek istiyorsanız boş bırakın.
+fi| Käytä {ten}, {ho_ten}, {username} yksilöintiin. Jätä tyhjäksi, jos haluat vain tallentaa viestin lähettäneet.
+
+= Chỉ trả lời lại một người sau (giờ)
+en| Reply to the same person again only after (hours)
+zh| 对同一个人再次回复的间隔(小时)
+es| Volver a responder a la misma persona solo después de (horas)
+hi| उसी व्यक्ति को दोबारा जवाब कितने घंटे बाद (घंटे)
+ar| إعادة الرد على الشخص نفسه بعد (ساعات)
+pt| Responder à mesma pessoa novamente só depois de (horas)
+ru| Отвечать тому же человеку повторно не чаще, чем раз в (часов)
+ja| 同じ人に再度返信する間隔(時間)
+ko| 같은 사람에게 다시 답장하기까지의 간격(시간)
+de| Derselben Person erst nach (Stunden) erneut antworten
+fr| Ne répondre à nouveau à la même personne qu'après (heures)
+id| Balas orang yang sama lagi hanya setelah (jam)
+th| ตอบกลับคนเดิมอีกครั้งหลังจาก (ชั่วโมง)
+tr| Aynı kişiye tekrar yanıt verme aralığı (saat)
+fi| Vastaa samalle henkilölle uudelleen vasta (tuntia) jälkeen
+
+= Trả lời theo từ khoá (tuỳ chọn)
+en| Keyword replies (optional)
+zh| 按关键词回复(可选)
+es| Respuestas por palabra clave (opcional)
+hi| कीवर्ड के अनुसार जवाब (वैकल्पिक)
+ar| ردود حسب الكلمات المفتاحية (اختياري)
+pt| Respostas por palavra-chave (opcional)
+ru| Ответы по ключевым словам (необязательно)
+ja| キーワード別の返信(任意)
+ko| 키워드별 답변(선택)
+de| Antworten nach Stichwort (optional)
+fr| Réponses par mot-clé (facultatif)
+id| Balasan berdasarkan kata kunci (opsional)
+th| ตอบกลับตามคีย์เวิร์ด (ไม่บังคับ)
+tr| Anahtar kelimeye göre yanıtlar (isteğe bağlı)
+fi| Avainsanavastaukset (valinnainen)
+
+= Thêm quy tắc
+en| Add rule
+zh| 添加规则
+es| Añadir regla
+hi| नियम जोड़ें
+ar| إضافة قاعدة
+pt| Adicionar regra
+ru| Добавить правило
+ja| ルールを追加
+ko| 규칙 추가
+de| Regel hinzufügen
+fr| Ajouter une règle
+id| Tambah aturan
+th| เพิ่มกฎ
+tr| Kural ekle
+fi| Lisää sääntö
+
+= Mời thành viên nhóm nhắn tin cho bot
+en| Invite group members to message the bot
+zh| 邀请群成员给机器人发消息
+es| Invita a los miembros del grupo a escribir al bot
+hi| ग्रुप सदस्यों को बॉट को संदेश भेजने के लिए आमंत्रित करें
+ar| ادعُ أعضاء المجموعة لمراسلة البوت
+pt| Convide membros do grupo a falar com o bot
+ru| Пригласите участников группы написать боту
+ja| グループメンバーにボットへのメッセージを促す
+ko| 그룹 멤버를 봇에게 메시지 보내도록 초대하기
+de| Gruppenmitglieder einladen, dem Bot zu schreiben
+fr| Invitez les membres du groupe à écrire au bot
+id| Undang anggota grup untuk mengirim pesan ke bot
+th| เชิญสมาชิกกลุ่มให้ส่งข้อความหาบอท
+tr| Grup üyelerini bota mesaj atmaya davet edin
+fi| Kutsu ryhmän jäsenet viestimään botille
+
+= Bot **không thể tự nhắn** cho người chưa từng nhắn với bot, và Telegram không cho lấy danh sách thành viên nhóm. Hãy đăng link bot vào nhóm, ai bấm **Start** sẽ vào danh sách nhận tin.
+en| The bot **cannot message** people who have never messaged it, and Telegram doesn't allow listing group members. Post the bot link in your group; anyone who presses **Start** joins the recipient list.
+zh| 机器人**无法主动给**从未联系过它的人发消息,Telegram 也不允许获取群成员名单。请把机器人链接发到群里,点击 **Start** 的人就会进入收件名单。
+es| El bot **no puede escribir por su cuenta** a quien nunca le ha escrito, y Telegram no permite obtener la lista de miembros del grupo. Publica el enlace del bot en el grupo: quien pulse **Start** entra en la lista de destinatarios.
+hi| बॉट उन लोगों को **खुद संदेश नहीं भेज सकता** जिन्होंने कभी उसे संदेश नहीं भेजा, और Telegram ग्रुप सदस्यों की सूची निकालने नहीं देता। बॉट का लिंक ग्रुप में डालें; जो **Start** दबाएगा वह प्राप्तकर्ता सूची में आ जाएगा।
+ar| **لا يستطيع البوت مراسلة** من لم يراسله من قبل، ولا يسمح تيليجرام بجلب قائمة أعضاء المجموعة. انشر رابط البوت في المجموعة، ومن يضغط **Start** يدخل قائمة المستلمين.
+pt| O bot **não pode enviar mensagem por conta própria** a quem nunca falou com ele, e o Telegram não permite obter a lista de membros do grupo. Publique o link do bot no grupo: quem clicar em **Start** entra na lista de destinatários.
+ru| Бот **не может сам написать** тому, кто ему никогда не писал, а Telegram не позволяет получить список участников группы. Опубликуйте ссылку на бота в группе: кто нажмёт **Start**, попадёт в список получателей.
+ja| ボットは、一度もメッセージを送ってきていない人に**自分からは送れません**。また、Telegramではグループメンバー一覧も取得できません。ボットのリンクをグループに投稿し、**Start**を押した人が受信リストに入ります。
+ko| 봇은 한 번도 메시지를 보낸 적 없는 사람에게 **먼저 메시지를 보낼 수 없고**, Telegram은 그룹 멤버 목록도 가져오지 못하게 합니다. 봇 링크를 그룹에 올리면 **Start**를 누른 사람이 수신 목록에 들어갑니다.
+de| Der Bot **kann nicht von sich aus schreiben**, wenn die Person ihm nie geschrieben hat, und Telegram erlaubt keine Liste der Gruppenmitglieder. Posten Sie den Bot-Link in der Gruppe; wer **Start** drückt, kommt auf die Empfängerliste.
+fr| Le bot **ne peut pas écrire de lui-même** à quelqu'un qui ne lui a jamais écrit, et Telegram ne permet pas d'obtenir la liste des membres d'un groupe. Publiez le lien du bot dans le groupe : quiconque appuie sur **Start** rejoint la liste des destinataires.
+id| Bot **tidak bisa memulai pesan** ke orang yang belum pernah mengirim pesan, dan Telegram tidak mengizinkan daftar anggota grup diambil. Posting tautan bot di grup; siapa pun yang menekan **Start** masuk ke daftar penerima.
+th| บอท **ส่งข้อความหาเองไม่ได้** หากคนนั้นไม่เคยส่งข้อความหาบอท และ Telegram ไม่อนุญาตให้ดึงรายชื่อสมาชิกกลุ่ม ให้โพสต์ลิงก์บอทในกลุ่ม ใครกด **Start** จะเข้ารายชื่อผู้รับ
+tr| Bot, kendisine hiç yazmamış kişilere **kendiliğinden mesaj atamaz** ve Telegram grup üyeleri listesinin alınmasına izin vermez. Bot bağlantısını gruba gönderin; **Start**'a basan herkes alıcı listesine girer.
+fi| Botti **ei voi itse kirjoittaa** henkilölle, joka ei ole koskaan kirjoittanut sille, eikä Telegram salli ryhmän jäsenluettelon hakemista. Julkaise botin linkki ryhmässä; jokainen, joka painaa **Start**, tulee vastaanottajaluetteloon.
+
+= Sao chép link bot
+en| Copy bot link
+zh| 复制机器人链接
+es| Copiar enlace del bot
+hi| बॉट का लिंक कॉपी करें
+ar| نسخ رابط البوت
+pt| Copiar link do bot
+ru| Скопировать ссылку на бота
+ja| ボットのリンクをコピー
+ko| 봇 링크 복사
+de| Bot-Link kopieren
+fr| Copier le lien du bot
+id| Salin tautan bot
+th| คัดลอกลิงก์บอท
+tr| Bot bağlantısını kopyala
+fi| Kopioi botin linkki
+
+= Chưa kết nối bot Telegram. Vào Cài đặt để kết nối.
+en| No Telegram bot connected. Go to Settings to connect one.
+zh| 尚未连接 Telegram 机器人。请到设置中连接。
+es| No hay un bot de Telegram conectado. Ve a Ajustes para conectarlo.
+hi| कोई Telegram बॉट जुड़ा नहीं है। जोड़ने के लिए सेटिंग्स में जाएँ।
+ar| لم يتم ربط بوت تيليجرام. انتقل إلى الإعدادات لربطه.
+pt| Nenhum bot do Telegram conectado. Vá em Configurações para conectar.
+ru| Telegram-бот не подключён. Подключите его в настройках.
+ja| Telegramボットが接続されていません。設定で接続してください。
+ko| 연결된 Telegram 봇이 없습니다. 설정에서 연결하세요.
+de| Kein Telegram-Bot verbunden. Verbinden Sie einen in den Einstellungen.
+fr| Aucun bot Telegram connecté. Rendez-vous dans les Paramètres pour en connecter un.
+id| Belum ada bot Telegram yang terhubung. Buka Pengaturan untuk menghubungkan.
+th| ยังไม่ได้เชื่อมต่อบอท Telegram ไปที่การตั้งค่าเพื่อเชื่อมต่อ
+tr| Bağlı bir Telegram botu yok. Bağlamak için Ayarlar'a gidin.
+fi| Telegram-bottia ei ole yhdistetty. Yhdistä se asetuksissa.
+
+= Xin chào {ten}, hôm nay bên mình có ưu đãi mới...
+en| Hello {ten}, we have a new offer today...
+zh| 你好 {ten},我们今天有新优惠...
+es| Hola {ten}, hoy tenemos una nueva oferta...
+hi| नमस्ते {ten}, आज हमारे यहाँ नया ऑफ़र है...
+ar| مرحبًا {ten}، لدينا عرض جديد اليوم...
+pt| Olá {ten}, hoje temos uma nova oferta...
+ru| Здравствуйте, {ten}, сегодня у нас новое предложение...
+ja| {ten}さん、本日新しいお得な情報があります...
+ko| 안녕하세요 {ten}님, 오늘 새로운 혜택이 있습니다...
+de| Hallo {ten}, heute haben wir ein neues Angebot...
+fr| Bonjour {ten}, nous avons une nouvelle offre aujourd'hui...
+id| Halo {ten}, hari ini kami punya penawaran baru...
+th| สวัสดี {ten} วันนี้เรามีข้อเสนอใหม่...
+tr| Merhaba {ten}, bugün yeni bir teklifimiz var...
+fi| Hei {ten}, meillä on tänään uusi tarjous...
+
+= Tất cả người nhận được tin ({0})
+en| Everyone who can receive messages ({0})
+zh| 所有可接收消息的人({0})
+es| Todos los que pueden recibir mensajes ({0})
+hi| संदेश पा सकने वाले सभी लोग ({0})
+ar| جميع من يمكنهم استلام الرسائل ({0})
+pt| Todos que podem receber mensagens ({0})
+ru| Все, кто может получать сообщения ({0})
+ja| 受信可能な全員({0})
+ko| 수신 가능한 모든 사람({0})
+de| Alle, die Nachrichten empfangen können ({0})
+fr| Toutes les personnes pouvant recevoir des messages ({0})
+id| Semua yang bisa menerima pesan ({0})
+th| ทุกคนที่รับข้อความได้ ({0})
+tr| Mesaj alabilen herkes ({0})
+fi| Kaikki, jotka voivat vastaanottaa viestejä ({0})
+
+= Nhắn tin trong 7 ngày qua ({0})
+en| Messaged in the last 7 days ({0})
+zh| 最近 7 天内来信的人({0})
+es| Escribieron en los últimos 7 días ({0})
+hi| पिछले 7 दिनों में संदेश भेजने वाले ({0})
+ar| راسلوا خلال آخر 7 أيام ({0})
+pt| Escreveram nos últimos 7 dias ({0})
+ru| Писали за последние 7 дней ({0})
+ja| 過去7日間にメッセージをくれた人({0})
+ko| 최근 7일 내 메시지를 보낸 사람({0})
+de| Haben in den letzten 7 Tagen geschrieben ({0})
+fr| Ont écrit au cours des 7 derniers jours ({0})
+id| Mengirim pesan dalam 7 hari terakhir ({0})
+th| ส่งข้อความมาใน 7 วันที่ผ่านมา ({0})
+tr| Son 7 günde mesaj atanlar ({0})
+fi| Kirjoittanut viimeisten 7 päivän aikana ({0})
+
+= Đã gửi {0}/{1} (lỗi {2})
+en| Sent {0}/{1} ({2} failed)
+zh| 已发送 {0}/{1}(失败 {2})
+es| Enviados {0}/{1} ({2} con error)
+hi| भेजे गए {0}/{1} ({2} विफल)
+ar| تم إرسال {0}/{1} (فشل {2})
+pt| Enviados {0}/{1} ({2} com erro)
+ru| Отправлено {0}/{1} (ошибок: {2})
+ja| 送信済み {0}/{1}(失敗 {2})
+ko| {0}/{1} 발송(실패 {2})
+de| {0}/{1} gesendet ({2} fehlgeschlagen)
+fr| {0}/{1} envoyés ({2} en échec)
+id| Terkirim {0}/{1} ({2} gagal)
+th| ส่งแล้ว {0}/{1} (ล้มเหลว {2})
+tr| {0}/{1} gönderildi ({2} başarısız)
+fi| Lähetetty {0}/{1} ({2} epäonnistui)
+
+= Gửi tin cho nhiều người
+en| Send to many people
+zh| 群发消息
+es| Enviar a varias personas
+hi| कई लोगों को भेजें
+ar| إرسال إلى عدة أشخاص
+pt| Enviar para várias pessoas
+ru| Рассылка нескольким людям
+ja| 複数の人に送信
+ko| 여러 사람에게 보내기
+de| An mehrere Personen senden
+fr| Envoyer à plusieurs personnes
+id| Kirim ke banyak orang
+th| ส่งถึงหลายคน
+tr| Birçok kişiye gönder
+fi| Lähetä usealle henkilölle
+
+= Dùng {ten}, {ho_ten}, {username} để cá nhân hoá. Mỗi tin gửi thành công tốn 1 Điểm King. Người đã gõ /stop hoặc chặn bot sẽ bị bỏ qua.
+en| Use {ten}, {ho_ten}, {username} to personalize. Each successfully sent message costs 1 King Point. People who typed /stop or blocked the bot are skipped.
+zh| 使用 {ten}、{ho_ten}、{username} 进行个性化。每条发送成功的消息消耗 1 King 积分。已发送 /stop 或屏蔽机器人的人会被跳过。
+es| Usa {ten}, {ho_ten}, {username} para personalizar. Cada mensaje enviado con éxito cuesta 1 Punto King. Se omite a quien escribió /stop o bloqueó el bot.
+hi| निजीकरण के लिए {ten}, {ho_ten}, {username} इस्तेमाल करें। हर सफल संदेश पर 1 King पॉइंट लगता है। जिसने /stop लिखा या बॉट ब्लॉक किया उसे छोड़ दिया जाता है।
+ar| استخدم {ten} و{ho_ten} و{username} للتخصيص. كل رسالة تُرسل بنجاح تخصم نقطة King واحدة. يُتخطّى من كتب /stop أو حظر البوت.
+pt| Use {ten}, {ho_ten}, {username} para personalizar. Cada mensagem enviada com sucesso custa 1 Ponto King. Quem digitou /stop ou bloqueou o bot é ignorado.
+ru| Используйте {ten}, {ho_ten}, {username} для персонализации. Каждое успешно отправленное сообщение стоит 1 King-балл. Тех, кто написал /stop или заблокировал бота, пропускаем.
+ja| {ten}、{ho_ten}、{username} で個別化できます。送信に成功するたびに1 Kingポイントを消費します。/stop を送った人やボットをブロックした人は対象外です。
+ko| {ten}, {ho_ten}, {username}으로 개인화할 수 있습니다. 성공적으로 보낸 메시지마다 1 King 포인트가 차감됩니다. /stop을 입력했거나 봇을 차단한 사람은 건너뜁니다.
+de| Mit {ten}, {ho_ten}, {username} personalisieren Sie die Nachricht. Jede erfolgreich gesendete Nachricht kostet 1 King-Punkt. Wer /stop gesendet oder den Bot blockiert hat, wird übersprungen.
+fr| Utilisez {ten}, {ho_ten}, {username} pour personnaliser. Chaque message envoyé avec succès coûte 1 Point King. Les personnes ayant tapé /stop ou bloqué le bot sont ignorées.
+id| Gunakan {ten}, {ho_ten}, {username} untuk personalisasi. Setiap pesan yang berhasil terkirim memakai 1 Poin King. Orang yang mengetik /stop atau memblokir bot dilewati.
+th| ใช้ {ten}, {ho_ten}, {username} เพื่อปรับให้เป็นส่วนตัว ข้อความที่ส่งสำเร็จแต่ละข้อความหัก 1 คะแนน King ผู้ที่พิมพ์ /stop หรือบล็อกบอทจะถูกข้าม
+tr| Kişiselleştirmek için {ten}, {ho_ten}, {username} kullanın. Başarıyla gönderilen her mesaj 1 King Puanı düşer. /stop yazan veya botu engelleyenler atlanır.
+fi| Käytä {ten}, {ho_ten}, {username} yksilöintiin. Jokainen onnistuneesti lähetetty viesti maksaa 1 King-pisteen. Henkilöt, jotka kirjoittivat /stop tai estivät botin, ohitetaan.
+
+= Người nhận
+en| Recipients
+zh| 收件人
+es| Destinatarios
+hi| प्राप्तकर्ता
+ar| المستلمون
+pt| Destinatários
+ru| Получатели
+ja| 宛先
+ko| 수신자
+de| Empfänger
+fr| Destinataires
+id| Penerima
+th| ผู้รับ
+tr| Alıcılar
+fi| Vastaanottajat
+
+= Nhập nội dung tin nhắn
+en| Enter the message content
+zh| 请输入消息内容
+es| Escribe el contenido del mensaje
+hi| संदेश की सामग्री लिखें
+ar| أدخل نص الرسالة
+pt| Informe o conteúdo da mensagem
+ru| Введите текст сообщения
+ja| メッセージの内容を入力してください
+ko| 메시지 내용을 입력하세요
+de| Geben Sie den Nachrichtentext ein
+fr| Saisissez le contenu du message
+id| Isi konten pesan
+th| ใส่เนื้อหาข้อความ
+tr| Mesaj içeriğini girin
+fi| Kirjoita viestin sisältö
+
+= Gửi tin hàng loạt?
+en| Send bulk message?
+zh| 确认群发?
+es| ¿Enviar mensaje masivo?
+hi| सामूहिक संदेश भेजें?
+ar| إرسال رسالة جماعية؟
+pt| Enviar mensagem em massa?
+ru| Отправить массовую рассылку?
+ja| 一斉送信しますか?
+ko| 단체 메시지를 보낼까요?
+de| Sammelnachricht senden?
+fr| Envoyer un message groupé ?
+id| Kirim pesan massal?
+th| ส่งข้อความหมู่หรือไม่?
+tr| Toplu mesaj gönderilsin mi?
+fi| Lähetetäänkö massaviesti?
+
+= Gửi tới {0} người, tốn tối đa {1} Điểm King.
+en| Sending to {0} people, costing up to {1} King Points.
+zh| 将发送给 {0} 人,最多消耗 {1} King 积分。
+es| Se enviará a {0} personas y costará hasta {1} Puntos King.
+hi| {0} लोगों को भेजा जाएगा, अधिकतम {1} King पॉइंट लगेंगे।
+ar| سيُرسل إلى {0} شخصًا وقد يخصم حتى {1} نقطة King.
+pt| Será enviado a {0} pessoas, custando até {1} Pontos King.
+ru| Будет отправлено {0} людям, спишется до {1} King-баллов.
+ja| {0}人に送信します。最大{1} Kingポイントを消費します。
+ko| {0}명에게 보내며 최대 {1} King 포인트가 차감됩니다.
+de| Wird an {0} Personen gesendet und kostet bis zu {1} King-Punkte.
+fr| Envoi à {0} personnes, pour un coût maximal de {1} Points King.
+id| Dikirim ke {0} orang, memakai hingga {1} Poin King.
+th| จะส่งถึง {0} คน หักสูงสุด {1} คะแนน King
+tr| {0} kişiye gönderilecek, en fazla {1} King Puanı düşecek.
+fi| Lähetetään {0} henkilölle, maksaa enintään {1} King-pistettä.
+
+= Đang gửi...
+en| Sending...
+zh| 发送中...
+es| Enviando...
+hi| भेजा जा रहा है...
+ar| جارٍ الإرسال...
+pt| Enviando...
+ru| Отправка...
+ja| 送信中...
+ko| 보내는 중...
+de| Wird gesendet...
+fr| Envoi en cours...
+id| Mengirim...
+th| กำลังส่ง...
+tr| Gönderiliyor...
+fi| Lähetetään...
+
+= Gửi cho mọi người
+en| Send to everyone
+zh| 发送给所有人
+es| Enviar a todos
+hi| सभी को भेजें
+ar| إرسال للجميع
+pt| Enviar para todos
+ru| Отправить всем
+ja| 全員に送信
+ko| 모두에게 보내기
+de| An alle senden
+fr| Envoyer à tous
+id| Kirim ke semua orang
+th| ส่งถึงทุกคน
+tr| Herkese gönder
+fi| Lähetä kaikille
+
+= Đã hủy nhận tin
+en| Unsubscribed
+zh| 已退订
+es| Se dio de baja
+hi| सदस्यता रद्द
+ar| ألغى الاشتراك
+pt| Cancelou o recebimento
+ru| Отписался
+ja| 配信停止済み
+ko| 수신 거부함
+de| Abgemeldet
+fr| Désabonné
+id| Berhenti berlangganan
+th| ยกเลิกรับข้อความแล้ว
+tr| Aboneliği iptal etti
+fi| Peruutti tilauksen
+
+= Đã chặn bot
+en| Blocked the bot
+zh| 已屏蔽机器人
+es| Bloqueó el bot
+hi| बॉट ब्लॉक किया
+ar| حظر البوت
+pt| Bloqueou o bot
+ru| Заблокировал бота
+ja| ボットをブロック済み
+ko| 봇을 차단함
+de| Hat den Bot blockiert
+fr| A bloqué le bot
+id| Memblokir bot
+th| บล็อกบอทแล้ว
+tr| Botu engelledi
+fi| Esti botin
+
+= Nhắn
+en| Message
+zh| 发消息
+es| Escribir
+hi| संदेश
+ar| مراسلة
+pt| Mensagem
+ru| Написать
+ja| メッセージ
+ko| 메시지
+de| Nachricht
+fr| Écrire
+id| Pesan
+th| ส่งข้อความ
+tr| Mesaj
+fi| Viesti
+
+= {0} sẽ bị xoá khỏi danh sách.
+en| {0} will be removed from the list.
+zh| {0} 将从列表中删除。
+es| {0} se eliminará de la lista.
+hi| {0} को सूची से हटा दिया जाएगा।
+ar| سيُحذف {0} من القائمة.
+pt| {0} será removido da lista.
+ru| {0} будет удалён из списка.
+ja| {0}はリストから削除されます。
+ko| {0}이(가) 목록에서 삭제됩니다.
+de| {0} wird aus der Liste entfernt.
+fr| {0} sera retiré de la liste.
+id| {0} akan dihapus dari daftar.
+th| {0} จะถูกลบออกจากรายการ
+tr| {0} listeden kaldırılacak.
+fi| {0} poistetaan luettelosta.
+
+= Trả lời tự động và nhắn tin cá nhân hoá cho người đã nhắn tin với bot
+en| Auto-reply and send personalized messages to people who have messaged your bot
+zh| 对给机器人发过消息的人自动回复并发送个性化消息
+es| Respuestas automáticas y mensajes personalizados para quienes han escrito a tu bot
+hi| आपके बॉट को संदेश भेज चुके लोगों को ऑटो-रिप्लाई और निजी संदेश भेजें
+ar| رد تلقائي ورسائل مخصّصة لمن راسل بوتك
+pt| Resposta automática e mensagens personalizadas para quem já falou com o seu bot
+ru| Автоответы и персональные сообщения тем, кто писал вашему боту
+ja| ボットにメッセージをくれた人へ自動返信と個別化メッセージを送信
+ko| 봇에게 메시지를 보낸 사람에게 자동 답장과 맞춤 메시지를 보냅니다
+de| Automatische Antworten und personalisierte Nachrichten an Personen, die Ihrem Bot geschrieben haben
+fr| Réponses automatiques et messages personnalisés pour les personnes ayant écrit à votre bot
+id| Balasan otomatis dan pesan personal untuk orang yang pernah mengirim pesan ke bot Anda
+th| ตอบกลับอัตโนมัติและส่งข้อความเฉพาะบุคคลถึงผู้ที่เคยส่งข้อความหาบอทของคุณ
+tr| Botunuza mesaj atan kişilere otomatik yanıt ve kişiselleştirilmiş mesajlar gönderin
+fi| Automaattiset vastaukset ja yksilölliset viestit botillesi kirjoittaneille
+
+= **Chỉ gửi được cho người đã nhắn tin với bot.** Đây là quy định của Telegram, giúp tránh tin rác. Mỗi người có thể gõ **/stop** để hủy nhận tin bất cứ lúc nào.
+en| **Messages can only be sent to people who have messaged the bot.** This is a Telegram rule that prevents spam. Anyone can type **/stop** to unsubscribe at any time.
+zh| **只能给与机器人有过对话的人发消息。**这是 Telegram 防止垃圾信息的规定。任何人都可以随时发送 **/stop** 退订。
+es| **Solo se puede escribir a quien ya ha escrito al bot.** Es una norma de Telegram para evitar el spam. Cualquiera puede escribir **/stop** para darse de baja en cualquier momento.
+hi| **सिर्फ़ उन्हीं को संदेश भेजा जा सकता है जिन्होंने बॉट को संदेश भेजा हो।** यह Telegram का नियम है जो स्पैम रोकता है। कोई भी व्यक्ति कभी भी **/stop** लिखकर सदस्यता रद्द कर सकता है।
+ar| **لا يمكن الإرسال إلا لمن راسل البوت من قبل.** هذه قاعدة من تيليجرام لمنع الرسائل المزعجة. يمكن لأي شخص كتابة **/stop** لإلغاء الاشتراك في أي وقت.
+pt| **Só é possível enviar mensagens a quem já falou com o bot.** É uma regra do Telegram para evitar spam. Qualquer pessoa pode digitar **/stop** para cancelar a qualquer momento.
+ru| **Писать можно только тем, кто уже писал боту.** Это правило Telegram для защиты от спама. Любой человек может в любой момент отправить **/stop**, чтобы отписаться.
+ja| **メッセージを送れるのは、ボットにメッセージをくれた人だけです。**これはスパムを防ぐTelegramの決まりです。誰でもいつでも **/stop** と送れば配信停止できます。
+ko| **봇에게 메시지를 보낸 적 있는 사람에게만 보낼 수 있습니다.** 스팸을 막기 위한 Telegram의 규정입니다. 누구나 언제든 **/stop**을 입력해 수신을 거부할 수 있습니다.
+de| **Nachrichten können nur an Personen gesendet werden, die dem Bot geschrieben haben.** Das ist eine Telegram-Regel gegen Spam. Jeder kann jederzeit **/stop** eingeben, um sich abzumelden.
+fr| **On ne peut écrire qu'aux personnes qui ont déjà écrit au bot.** C'est une règle de Telegram contre le spam. Chacun peut taper **/stop** à tout moment pour se désabonner.
+id| **Pesan hanya bisa dikirim ke orang yang pernah mengirim pesan ke bot.** Ini aturan Telegram untuk mencegah spam. Siapa pun bisa mengetik **/stop** kapan saja untuk berhenti berlangganan.
+th| **ส่งข้อความได้เฉพาะผู้ที่เคยส่งข้อความหาบอท** นี่เป็นกฎของ Telegram เพื่อป้องกันสแปม ทุกคนพิมพ์ **/stop** เพื่อยกเลิกรับข้อความได้ตลอดเวลา
+tr| **Yalnızca bota daha önce mesaj atmış kişilere mesaj gönderilebilir.** Bu, spam'i önleyen bir Telegram kuralıdır. Herkes istediği zaman **/stop** yazarak aboneliğini iptal edebilir.
+fi| **Viestejä voi lähettää vain henkilöille, jotka ovat kirjoittaneet botille.** Tämä on Telegramin sääntö roskaviestien estämiseksi. Kuka tahansa voi kirjoittaa **/stop** peruuttaakseen tilauksen milloin tahansa.
+
+= Chưa có ai nhắn tin cho bot
+en| Nobody has messaged the bot yet
+zh| 还没有人给机器人发过消息
+es| Nadie ha escrito al bot todavía
+hi| अभी तक किसी ने बॉट को संदेश नहीं भेजा
+ar| لم يراسل أحد البوت بعد
+pt| Ninguém falou com o bot ainda
+ru| Боту пока никто не писал
+ja| まだ誰もボットにメッセージを送っていません
+ko| 아직 봇에게 메시지를 보낸 사람이 없습니다
+de| Noch hat niemand dem Bot geschrieben
+fr| Personne n'a encore écrit au bot
+id| Belum ada yang mengirim pesan ke bot
+th| ยังไม่มีใครส่งข้อความหาบอท
+tr| Bota henüz kimse mesaj atmadı
+fi| Kukaan ei ole vielä kirjoittanut botille
+
+= Bật hộp thư rồi mời mọi người nhắn tin cho bot. Họ sẽ hiện ở đây.
+en| Turn on the inbox, then invite people to message the bot. They'll appear here.
+zh| 开启收件箱,然后邀请大家给机器人发消息,他们会显示在这里。
+es| Activa la bandeja e invita a la gente a escribir al bot. Aparecerán aquí.
+hi| इनबॉक्स चालू करें, फिर लोगों को बॉट को संदेश भेजने के लिए बुलाएँ। वे यहाँ दिखेंगे।
+ar| فعّل الصندوق ثم ادعُ الناس لمراسلة البوت. سيظهرون هنا.
+pt| Ative a caixa de entrada e convide as pessoas a falar com o bot. Elas aparecerão aqui.
+ru| Включите входящие и пригласите людей написать боту. Они появятся здесь.
+ja| 受信箱をオンにして、みんなにボットへメッセージを送ってもらいましょう。ここに表示されます。
+ko| 받은편지함을 켜고 사람들이 봇에게 메시지를 보내도록 초대하세요. 여기에 표시됩니다.
+de| Schalten Sie den Posteingang ein und laden Sie Leute ein, dem Bot zu schreiben. Sie erscheinen hier.
+fr| Activez la boîte de réception puis invitez les gens à écrire au bot. Ils apparaîtront ici.
+id| Aktifkan kotak masuk lalu undang orang mengirim pesan ke bot. Mereka akan muncul di sini.
+th| เปิดกล่องข้อความแล้วเชิญผู้คนส่งข้อความหาบอท พวกเขาจะแสดงที่นี่
+tr| Gelen kutusunu açın ve insanları bota mesaj atmaya davet edin. Burada görünecekler.
+fi| Ota saapuneet käyttöön ja kutsu ihmisiä kirjoittamaan botille. He näkyvät tässä.
+
+= Người này đã chặn bot hoặc hủy nhận tin
+en| This person has blocked the bot or unsubscribed
+zh| 此人已屏蔽机器人或已退订
+es| Esta persona bloqueó el bot o se dio de baja
+hi| इस व्यक्ति ने बॉट ब्लॉक किया है या सदस्यता रद्द कर दी है
+ar| هذا الشخص حظر البوت أو ألغى الاشتراك
+pt| Esta pessoa bloqueou o bot ou cancelou o recebimento
+ru| Этот человек заблокировал бота или отписался
+ja| この人はボットをブロックしたか配信停止しています
+ko| 이 사람은 봇을 차단했거나 수신을 거부했습니다
+de| Diese Person hat den Bot blockiert oder sich abgemeldet
+fr| Cette personne a bloqué le bot ou s'est désabonnée
+id| Orang ini memblokir bot atau berhenti berlangganan
+th| บุคคลนี้บล็อกบอทหรือยกเลิกรับข้อความแล้ว
+tr| Bu kişi botu engelledi veya aboneliğini iptal etti
+fi| Tämä henkilö on estänyt botin tai peruuttanut tilauksen
+
+= Tối đa {0} quy tắc
+en| Up to {0} rules
+zh| 最多 {0} 条规则
+es| Máximo {0} reglas
+hi| अधिकतम {0} नियम
+ar| بحد أقصى {0} قواعد
+pt| No máximo {0} regras
+ru| Не более {0} правил
+ja| ルールは最大{0}件です
+ko| 규칙은 최대 {0}개입니다
+de| Höchstens {0} Regeln
+fr| {0} règles maximum
+id| Maksimal {0} aturan
+th| ตั้งกฎได้สูงสุด {0} ข้อ
+tr| En fazla {0} kural
+fi| Enintään {0} sääntöä
+
+= Từ khoá và nội dung trả lời không được để trống
+en| Keyword and reply text must not be empty
+zh| 关键词和回复内容不能为空
+es| La palabra clave y el texto de respuesta no pueden estar vacíos
+hi| कीवर्ड और जवाब का पाठ खाली नहीं हो सकता
+ar| لا يجوز ترك الكلمة المفتاحية ونص الرد فارغين
+pt| Palavra-chave e texto da resposta não podem ficar vazios
+ru| Ключевое слово и текст ответа не могут быть пустыми
+ja| キーワードと返信内容は空にできません
+ko| 키워드와 답변 내용은 비워 둘 수 없습니다
+de| Stichwort und Antworttext dürfen nicht leer sein
+fr| Le mot-clé et le texte de la réponse ne peuvent pas être vides
+id| Kata kunci dan isi balasan tidak boleh kosong
+th| คีย์เวิร์ดและข้อความตอบกลับต้องไม่ว่าง
+tr| Anahtar kelime ve yanıt metni boş olamaz
+fi| Avainsana ja vastausteksti eivät saa olla tyhjiä
+
+= Tin nhắn tối đa {0} ký tự
+en| Messages can be up to {0} characters
+zh| 消息最多 {0} 个字符
+es| Los mensajes admiten hasta {0} caracteres
+hi| संदेश अधिकतम {0} अक्षरों का हो सकता है
+ar| يمكن أن تصل الرسالة إلى {0} حرف
+pt| As mensagens podem ter até {0} caracteres
+ru| Сообщение — не более {0} символов
+ja| メッセージは{0}文字までです
+ko| 메시지는 최대 {0}자입니다
+de| Nachrichten dürfen höchstens {0} Zeichen lang sein
+fr| Les messages sont limités à {0} caractères
+id| Pesan maksimal {0} karakter
+th| ข้อความยาวได้สูงสุด {0} ตัวอักษร
+tr| Mesajlar en fazla {0} karakter olabilir
+fi| Viestit voivat olla enintään {0} merkkiä
+
+= Đang có đợt gửi khác, vui lòng chờ
+en| Another batch is being sent, please wait
+zh| 正在发送另一批,请稍候
+es| Se está enviando otro lote, espera un momento
+hi| दूसरा बैच भेजा जा रहा है, कृपया प्रतीक्षा करें
+ar| هناك دفعة أخرى قيد الإرسال، يرجى الانتظار
+pt| Outro lote está sendo enviado, aguarde
+ru| Идёт другая рассылка, подождите
+ja| 別の一斉送信が進行中です。しばらくお待ちください
+ko| 다른 발송이 진행 중입니다. 잠시 기다려 주세요
+de| Es läuft bereits ein anderer Versand, bitte warten
+fr| Un autre envoi est en cours, veuillez patienter
+id| Sedang ada pengiriman lain, harap tunggu
+th| กำลังส่งชุดอื่นอยู่ โปรดรอสักครู่
+tr| Başka bir gönderim sürüyor, lütfen bekleyin
+fi| Toinen lähetys on käynnissä, odota hetki
+
+= Chưa có người nào để gửi
+en| There is nobody to send to yet
+zh| 暂时没有可发送的人
+es| Aún no hay a quién enviar
+hi| अभी भेजने के लिए कोई नहीं है
+ar| لا يوجد أحد لإرسال الرسالة إليه بعد
+pt| Ainda não há para quem enviar
+ru| Пока некому отправлять
+ja| 送信できる相手がまだいません
+ko| 아직 보낼 사람이 없습니다
+de| Es gibt noch niemanden, an den gesendet werden kann
+fr| Personne à qui envoyer pour l'instant
+id| Belum ada yang bisa dikirimi
+th| ยังไม่มีผู้รับ
+tr| Henüz gönderilecek kimse yok
+fi| Ei vielä vastaanottajia
