@@ -457,7 +457,7 @@ function createApi({ store, config, auth, scheduler, media, tokenFor, points, pw
     const files = d().posts.filter((p) => p.userId === u.id && p.media).map((p) => p.media.file);
     d().posts = d().posts.filter((p) => p.userId !== u.id);
     d().groups = d().groups.filter((g) => g.userId !== u.id);
-    for (const k of ['fbGroups', 'fbTasks', 'fbDue', 'zaloContacts', 'modQueue', 'botContacts']) d()[k] = d()[k].filter((x) => x.userId !== u.id);
+    for (const k of ['fbGroups', 'fbTasks', 'fbDue', 'zaloContacts', 'modQueue', 'botContacts', 'filterLog']) d()[k] = d()[k].filter((x) => x.userId !== u.id);
     d().logs = d().logs.filter((l) => l.userId !== u.id);
     d().users = d().users.filter((x) => x.id !== u.id);
     for (const f of files) await media.remove(f);

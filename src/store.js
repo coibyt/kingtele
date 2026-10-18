@@ -19,6 +19,7 @@ const DEFAULTS = () => ({
   zaloContacts: [],
   modQueue: [],
   botContacts: [],
+  filterLog: [],
   posts: [],
   logs: [],
 });

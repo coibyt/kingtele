@@ -1295,7 +1295,49 @@ async function inboxView() {
         : empty('users', 'Chưa có ai nhắn tin cho bot', 'Bật hộp thư rồi mời mọi người nhắn tin cho bot. Họ sẽ hiện ở đây.')));
 }
 
-const routes = { overview: ['Tổng quan', overviewView], posts: ['Bài đăng', postsView], groups: ['Nhóm Telegram', groupsView], facebook: ['Facebook', facebookView], zalo: ['Zalo', zaloView], moderation: ['Duyệt bài', moderationView], inbox: ['Hộp thư bot', inboxView], logs: ['Nhật ký gửi', logsView], settings: ['Cài đặt', settingsView], points: ['Điểm King', pointsView], members: ['Thành viên', membersView], installs: ['Ứng dụng', appStatsView], traffic: ['Truy cập', trafficView] };
+// ---------- Lọc từ khoá trong nhóm Telegram ----------
+async function filterView() {
+  const [groups, log] = await Promise.all([api('GET', '/mod/filters'), api('GET', '/mod/filter-log')]);
+
+  const card = (g) => {
+    const f = g.filter;
+    const on = h('input', { type: 'checkbox', id: `f-on-${g.id}`, checked: f.enabled });
+    const words = h('textarea', { class: 'input', id: `f-w-${g.id}`, rows: 4, placeholder: 'spam\n18+\n@' });
+    words.value = f.words.join('\n');
+    const action = h('select', { class: 'input', id: `f-a-${g.id}` },
+      h('option', { value: 'delete', selected: f.action !== 'hold' }, 'Xoá luôn tin nhắn'),
+      h('option', { value: 'hold', selected: f.action === 'hold' }, 'Giữ lại để admin duyệt'));
+    const acc = h('input', { type: 'checkbox', id: `f-c-${g.id}`, checked: f.ignoreAccents !== false });
+    const err = h('p', { class: 'error-text', role: 'alert' });
+    return h('div', { class: 'card card-pad form-grid' },
+      h('div', { class: 'row', style: 'justify-content:space-between' }, h('h2', null, g.title), f.enabled ? h('span', { class: 'tag ok' }, 'Đang lọc') : h('span', { class: 'tag' }, 'Chưa bật')),
+      h('div', { class: 'check' }, on, h('label', { for: `f-on-${g.id}` }, 'Bật lọc từ khoá cho nhóm này')),
+      h('div', { class: 'field' }, h('label', { for: `f-w-${g.id}` }, 'Từ hoặc ký tự bị chặn (mỗi dòng một mục)'), words,
+        h('span', { class: 'hint' }, 'Một chữ cái, một ký hiệu hoặc cả cụm từ đều được. Tin có chứa mục nào sẽ bị xử lý. Không phân biệt chữ hoa, chữ thường.')),
+      h('div', { class: 'field' }, h('label', { for: `f-a-${g.id}` }, 'Khi phát hiện'), action),
+      h('div', { class: 'check' }, acc, h('label', { for: `f-c-${g.id}` }, 'Bỏ qua dấu tiếng Việt (VD: "tuý" khớp cả "tuy")')),
+      err,
+      h('div', null, h('button', { class: 'btn btn-primary', type: 'button', onclick: (e) => act(e.currentTarget, async () => {
+        err.textContent = '';
+        try {
+          await api('PUT', `/mod/groups/${g.id}/filter`, { enabled: on.checked, words: words.value.split(/\r?\n/), action: action.value, ignoreAccents: acc.checked });
+          route();
+        } catch (ex) { err.textContent = ex.message; throw ex; }
+      }, 'Đã lưu') }, ico('check'), 'Lưu')));
+  };
+
+  return h('div', null,
+    pageHead('Lọc từ khoá', 'Tự động xoá tin của thành viên có chứa từ hoặc ký tự bị cấm', h('button', { class: 'btn', type: 'button', onclick: route }, ico('refresh'), 'Làm mới')),
+    h('div', { class: 'banner' }, ico('alert'), rich('**Cách hoạt động:** bot đọc tin thành viên gửi vào nhóm, nếu có từ bị chặn thì **xoá ngay** (hoặc giữ lại cho admin duyệt). Tin được sửa sau đó cũng bị kiểm tra. Bot phải là **quản trị viên có quyền xoá tin nhắn**. Admin của nhóm không bị chặn.', 'hint', 'div')),
+    h('div', { class: 'stack' },
+      groups.length ? groups.map(card) : empty('users', 'Chưa có nhóm Telegram phù hợp', 'Thêm nhóm ở mục Nhóm Telegram. Lọc từ khoá chỉ áp dụng cho nhóm, không áp dụng cho kênh.'),
+      h('h2', null, 'Nhật ký đã xoá'),
+      log.length ? h('div', { class: 'card card-pad' }, h('div', { class: 'list' }, log.map((x) => h('div', { class: 'li li-wrap' },
+        h('div', { class: 'li-main' }, h('div', { class: 'li-t' }, x.authorName), h('div', { class: 'li-s' }, x.preview), h('div', { class: 'li-s' }, `${x.groupTitle} · ${fmtDT(x.at)} (${rel(x.at)})`)),
+        h('span', { class: 'tag err' }, x.word))))) : h('p', { class: 'hint' }, 'Chưa có tin nào bị xoá.')));
+}
+
+const routes = { overview: ['Tổng quan', overviewView], posts: ['Bài đăng', postsView], groups: ['Nhóm Telegram', groupsView], facebook: ['Facebook', facebookView], zalo: ['Zalo', zaloView], moderation: ['Duyệt bài', moderationView], inbox: ['Hộp thư bot', inboxView], filter: ['Lọc từ khoá', filterView], logs: ['Nhật ký gửi', logsView], settings: ['Cài đặt', settingsView], points: ['Điểm King', pointsView], members: ['Thành viên', membersView], installs: ['Ứng dụng', appStatsView], traffic: ['Truy cập', trafficView] };
 let token = 0;
 async function route() {
   const key = routes[location.hash.slice(1)] ? location.hash.slice(1) : 'overview';

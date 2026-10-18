@@ -8,6 +8,7 @@ module.exports = {
   published: (author) => `↑ Bài của ${author}, đã được admin duyệt`,
   enabled: (group) => `✅ KingTele: đã bật duyệt bài cho nhóm ${group}. Bài chờ duyệt sẽ gửi vào đây.`,
   cantDelete: (group) => `⚠️ KingTele: không xoá được tin trong nhóm ${group}, nên tin chưa bị chặn. Hãy đặt bot làm quản trị viên và cấp quyền xoá tin nhắn.`,
+  filtered: (author) => `🚫 Tin nhắn của ${author} đã bị xoá vì chứa nội dung không được phép.`,
   approved: 'Đã duyệt',
   rejected: 'Đã từ chối',
   handled: 'Bài này đã được xử lý',

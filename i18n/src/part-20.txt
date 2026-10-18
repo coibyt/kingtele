@@ -1,0 +1,290 @@
+# Lọc từ khoá trong nhóm Telegram
+
+= Lọc từ khoá
+en| Keyword filter
+zh| 关键词过滤
+es| Filtro de palabras
+hi| कीवर्ड फ़िल्टर
+ar| تصفية الكلمات
+pt| Filtro de palavras
+ru| Фильтр слов
+ja| キーワードフィルター
+ko| 키워드 필터
+de| Stichwortfilter
+fr| Filtre de mots-clés
+id| Filter kata kunci
+th| ตัวกรองคำ
+tr| Anahtar kelime filtresi
+fi| Sanasuodatin
+
+= Xoá luôn tin nhắn
+en| Delete the message right away
+zh| 直接删除消息
+es| Borrar el mensaje de inmediato
+hi| संदेश तुरंत हटा दें
+ar| حذف الرسالة فورًا
+pt| Apagar a mensagem imediatamente
+ru| Сразу удалять сообщение
+ja| メッセージをすぐに削除
+ko| 메시지를 즉시 삭제
+de| Nachricht sofort löschen
+fr| Supprimer le message immédiatement
+id| Hapus pesan langsung
+th| ลบข้อความทันที
+tr| Mesajı hemen sil
+fi| Poista viesti heti
+
+= Giữ lại để admin duyệt
+en| Hold for admin approval
+zh| 保留等待管理员审核
+es| Retener para aprobación del administrador
+hi| एडमिन की मंज़ूरी के लिए रोकें
+ar| احتجازها لموافقة المشرف
+pt| Reter para aprovação do administrador
+ru| Удержать для одобрения администратором
+ja| 管理者の承認まで保留
+ko| 관리자 승인을 위해 보류
+de| Zur Freigabe durch den Admin zurückhalten
+fr| Retenir pour validation par l'administrateur
+id| Tahan untuk persetujuan admin
+th| พักไว้รอผู้ดูแลอนุมัติ
+tr| Yönetici onayı için beklet
+fi| Pidä ylläpitäjän hyväksyntää varten
+
+= Đang lọc
+en| Filtering
+zh| 过滤中
+es| Filtrando
+hi| फ़िल्टर चालू
+ar| قيد التصفية
+pt| Filtrando
+ru| Фильтрация включена
+ja| フィルター中
+ko| 필터링 중
+de| Filter aktiv
+fr| Filtrage actif
+id| Memfilter
+th| กำลังกรอง
+tr| Filtreleniyor
+fi| Suodatus päällä
+
+= Bật lọc từ khoá cho nhóm này
+en| Turn on keyword filter for this group
+zh| 为此群组开启关键词过滤
+es| Activar el filtro de palabras para este grupo
+hi| इस ग्रुप के लिए कीवर्ड फ़िल्टर चालू करें
+ar| تفعيل تصفية الكلمات لهذه المجموعة
+pt| Ativar o filtro de palavras neste grupo
+ru| Включить фильтр слов для этой группы
+ja| このグループのキーワードフィルターをオンにする
+ko| 이 그룹의 키워드 필터 켜기
+de| Stichwortfilter für diese Gruppe einschalten
+fr| Activer le filtre de mots-clés pour ce groupe
+id| Aktifkan filter kata kunci untuk grup ini
+th| เปิดตัวกรองคำสำหรับกลุ่มนี้
+tr| Bu grup için anahtar kelime filtresini aç
+fi| Ota sanasuodatin käyttöön tässä ryhmässä
+
+= Từ hoặc ký tự bị chặn (mỗi dòng một mục)
+en| Blocked words or characters (one per line)
+zh| 被屏蔽的词或字符(每行一项)
+es| Palabras o caracteres bloqueados (uno por línea)
+hi| ब्लॉक किए गए शब्द या अक्षर (हर पंक्ति में एक)
+ar| الكلمات أو الأحرف المحظورة (واحدة في كل سطر)
+pt| Palavras ou caracteres bloqueados (um por linha)
+ru| Запрещённые слова или символы (по одному в строке)
+ja| ブロックする単語・文字(1行に1つ)
+ko| 차단할 단어 또는 문자(한 줄에 하나)
+de| Gesperrte Wörter oder Zeichen (eines pro Zeile)
+fr| Mots ou caractères bloqués (un par ligne)
+id| Kata atau karakter yang diblokir (satu per baris)
+th| คำหรืออักขระที่ถูกบล็อก (บรรทัดละหนึ่งรายการ)
+tr| Engellenen sözcükler veya karakterler (her satırda bir tane)
+fi| Estetyt sanat tai merkit (yksi per rivi)
+
+= Một chữ cái, một ký hiệu hoặc cả cụm từ đều được. Tin có chứa mục nào sẽ bị xử lý. Không phân biệt chữ hoa, chữ thường.
+en| A single letter, a symbol or a whole phrase all work. Any message containing an entry is handled. Not case-sensitive.
+zh| 一个字母、一个符号或整个词组都可以。消息中只要包含任一条目就会被处理。不区分大小写。
+es| Sirve una sola letra, un símbolo o una frase completa. Se procesa cualquier mensaje que contenga alguna entrada. No distingue mayúsculas de minúsculas.
+hi| एक अक्षर, एक चिह्न या पूरा वाक्यांश, सब चलेगा। जिस संदेश में कोई भी प्रविष्टि होगी उस पर कार्रवाई होगी। बड़े-छोटे अक्षर में फ़र्क नहीं।
+ar| يصلح حرف واحد أو رمز أو عبارة كاملة. تُعالَج أي رسالة تحتوي على أحد المدخلات. لا فرق بين الأحرف الكبيرة والصغيرة.
+pt| Vale uma única letra, um símbolo ou uma frase inteira. Qualquer mensagem que contenha um item é tratada. Não diferencia maiúsculas de minúsculas.
+ru| Подойдёт одна буква, символ или целая фраза. Любое сообщение с такой записью будет обработано. Регистр не учитывается.
+ja| 1文字、記号、フレーズ全体のどれでも指定できます。いずれかを含むメッセージが処理されます。大文字と小文字は区別しません。
+ko| 글자 하나, 기호 하나, 문구 전체 모두 가능합니다. 항목이 포함된 메시지는 처리됩니다. 대소문자를 구분하지 않습니다.
+de| Ein einzelner Buchstabe, ein Symbol oder eine ganze Wendung ist möglich. Jede Nachricht mit einem Eintrag wird bearbeitet. Groß- und Kleinschreibung wird nicht unterschieden.
+fr| Une seule lettre, un symbole ou une expression entière conviennent. Tout message contenant une entrée est traité. Insensible à la casse.
+id| Satu huruf, satu simbol, atau seluruh frasa semuanya bisa. Pesan yang mengandung salah satu entri akan diproses. Tidak membedakan huruf besar dan kecil.
+th| ใส่ตัวอักษรเดียว สัญลักษณ์ หรือทั้งวลีก็ได้ ข้อความที่มีรายการใดรายการหนึ่งจะถูกจัดการ ไม่แยกตัวพิมพ์ใหญ่เล็ก
+tr| Tek bir harf, bir simge veya tüm bir ifade olabilir. Girdilerden birini içeren her mesaj işleme alınır. Büyük/küçük harf ayrımı yoktur.
+fi| Yksi kirjain, merkki tai kokonainen ilmaus kelpaa. Jokainen viesti, joka sisältää jonkin kohdan, käsitellään. Isoilla ja pienillä kirjaimilla ei ole eroa.
+
+= Khi phát hiện
+en| When detected
+zh| 发现时
+es| Al detectarlo
+hi| पता चलने पर
+ar| عند الاكتشاف
+pt| Ao detectar
+ru| При обнаружении
+ja| 検出時の動作
+ko| 감지되면
+de| Bei Erkennung
+fr| En cas de détection
+id| Saat terdeteksi
+th| เมื่อตรวจพบ
+tr| Tespit edildiğinde
+fi| Kun havaitaan
+
+= Bỏ qua dấu tiếng Việt (VD: "tuý" khớp cả "tuy")
+en| Ignore Vietnamese accents (e.g. "tuý" also matches "tuy")
+zh| 忽略越南语声调符号(例如 "tuý" 也匹配 "tuy")
+es| Ignorar los acentos vietnamitas (p. ej. "tuý" también coincide con "tuy")
+hi| वियतनामी उच्चारण चिह्न अनदेखा करें (जैसे "tuý" से "tuy" भी मिलेगा)
+ar| تجاهل علامات التشكيل الفيتنامية (مثلًا "tuý" يطابق "tuy" أيضًا)
+pt| Ignorar acentos vietnamitas (ex.: "tuý" também corresponde a "tuy")
+ru| Игнорировать вьетнамские диакритические знаки (напр. "tuý" совпадёт и с "tuy")
+ja| ベトナム語の声調記号を無視する(例:"tuý" は "tuy" にも一致)
+ko| 베트남어 성조 기호 무시(예: "tuý"가 "tuy"와도 일치)
+de| Vietnamesische Akzente ignorieren (z. B. "tuý" passt auch auf "tuy")
+fr| Ignorer les accents vietnamiens (ex. : « tuý » correspond aussi à « tuy »)
+id| Abaikan tanda diakritik Vietnam (mis.: "tuý" juga cocok dengan "tuy")
+th| ไม่สนใจเครื่องหมายวรรณยุกต์เวียดนาม (เช่น "tuý" ตรงกับ "tuy" ด้วย)
+tr| Vietnamca aksanları yok say (örn. "tuý" aynı zamanda "tuy" ile de eşleşir)
+fi| Ohita vietnamilaiset aksentit (esim. "tuý" vastaa myös sanaa "tuy")
+
+= Tự động xoá tin của thành viên có chứa từ hoặc ký tự bị cấm
+en| Automatically delete members' messages that contain banned words or characters
+zh| 自动删除成员消息中包含违禁词或字符的内容
+es| Borra automáticamente los mensajes de los miembros que contengan palabras o caracteres prohibidos
+hi| प्रतिबंधित शब्द या अक्षर वाले सदस्यों के संदेश अपने-आप हटाएँ
+ar| حذف رسائل الأعضاء تلقائيًا إذا احتوت على كلمات أو أحرف محظورة
+pt| Apague automaticamente as mensagens dos membros que contenham palavras ou caracteres proibidos
+ru| Автоматически удаляйте сообщения участников с запрещёнными словами или символами
+ja| 禁止された単語や文字を含むメンバーのメッセージを自動削除します
+ko| 금지된 단어나 문자가 포함된 멤버의 메시지를 자동으로 삭제합니다
+de| Nachrichten von Mitgliedern mit verbotenen Wörtern oder Zeichen automatisch löschen
+fr| Supprimez automatiquement les messages des membres contenant des mots ou caractères interdits
+id| Hapus otomatis pesan anggota yang mengandung kata atau karakter terlarang
+th| ลบข้อความของสมาชิกที่มีคำหรืออักขระต้องห้ามโดยอัตโนมัติ
+tr| Yasaklı sözcük veya karakter içeren üye mesajlarını otomatik sil
+fi| Poista automaattisesti jäsenten viestit, jotka sisältävät kiellettyjä sanoja tai merkkejä
+
+= **Cách hoạt động:** bot đọc tin thành viên gửi vào nhóm, nếu có từ bị chặn thì **xoá ngay** (hoặc giữ lại cho admin duyệt). Tin được sửa sau đó cũng bị kiểm tra. Bot phải là **quản trị viên có quyền xoá tin nhắn**. Admin của nhóm không bị chặn.
+en| **How it works:** the bot reads messages members post in the group; if one has a blocked word it **deletes it immediately** (or holds it for admin approval). Messages edited afterwards are checked too. The bot must be an **administrator with permission to delete messages**. Group admins are never blocked.
+zh| **工作方式:**机器人会读取成员在群里发的消息,发现屏蔽词就**立即删除**(或保留等待管理员审核)。之后被编辑的消息也会检查。机器人必须是**拥有删除消息权限的管理员**。群组管理员不会被拦截。
+es| **Cómo funciona:** el bot lee los mensajes que los miembros envían al grupo; si hay una palabra bloqueada, **lo borra al instante** (o lo retiene para que lo apruebe un administrador). También se revisan los mensajes editados después. El bot debe ser **administrador con permiso para borrar mensajes**. Los administradores del grupo nunca se bloquean.
+hi| **यह कैसे काम करता है:** बॉट ग्रुप में सदस्यों के संदेश पढ़ता है; अगर उसमें ब्लॉक किया गया शब्द हो तो वह उसे **तुरंत हटा देता है** (या एडमिन की मंज़ूरी के लिए रोक लेता है)। बाद में एडिट किए गए संदेश भी जाँचे जाते हैं। बॉट को **संदेश हटाने की अनुमति वाला एडमिन** होना चाहिए। ग्रुप एडमिन के संदेश नहीं रोके जाते।
+ar| **طريقة العمل:** يقرأ البوت رسائل الأعضاء في المجموعة، وإذا احتوت على كلمة محظورة **يحذفها فورًا** (أو يحتجزها لموافقة المشرف). تُفحص أيضًا الرسائل المعدّلة لاحقًا. يجب أن يكون البوت **مشرفًا لديه صلاحية حذف الرسائل**. لا تُحجب رسائل مشرفي المجموعة.
+pt| **Como funciona:** o bot lê as mensagens dos membros no grupo; se houver uma palavra bloqueada, **apaga na hora** (ou retém para aprovação do administrador). Mensagens editadas depois também são verificadas. O bot precisa ser **administrador com permissão para apagar mensagens**. Administradores do grupo nunca são bloqueados.
+ru| **Как это работает:** бот читает сообщения участников в группе; если в них есть запрещённое слово, он **сразу удаляет** сообщение (или удерживает его для одобрения администратором). Отредактированные позже сообщения тоже проверяются. Бот должен быть **администратором с правом удалять сообщения**. Сообщения администраторов группы не блокируются.
+ja| **仕組み:**ボットはグループに投稿されたメッセージを読み取り、ブロック語があれば**すぐに削除**します(または管理者の承認まで保留)。後から編集されたメッセージも確認します。ボットは**メッセージ削除権限のある管理者**である必要があります。グループ管理者の投稿は止められません。
+ko| **작동 방식:** 봇이 멤버가 그룹에 보낸 메시지를 읽고, 차단 단어가 있으면 **즉시 삭제**합니다(또는 관리자 승인을 위해 보류). 나중에 수정된 메시지도 검사합니다. 봇은 **메시지 삭제 권한이 있는 관리자**여야 합니다. 그룹 관리자의 메시지는 차단되지 않습니다.
+de| **So funktioniert es:** Der Bot liest die Nachrichten der Mitglieder in der Gruppe; enthält eine ein gesperrtes Wort, **löscht er sie sofort** (oder hält sie zur Freigabe zurück). Nachträglich bearbeitete Nachrichten werden ebenfalls geprüft. Der Bot muss **Administrator mit Recht zum Löschen von Nachrichten** sein. Gruppenadmins werden nie blockiert.
+fr| **Fonctionnement :** le bot lit les messages des membres dans le groupe ; s'il y a un mot bloqué, il **le supprime aussitôt** (ou le retient pour validation). Les messages modifiés ensuite sont aussi vérifiés. Le bot doit être **administrateur avec le droit de supprimer des messages**. Les administrateurs du groupe ne sont jamais bloqués.
+id| **Cara kerja:** bot membaca pesan anggota di grup; jika ada kata yang diblokir, bot **langsung menghapusnya** (atau menahannya untuk persetujuan admin). Pesan yang diedit setelahnya juga diperiksa. Bot harus menjadi **administrator dengan izin menghapus pesan**. Admin grup tidak pernah diblokir.
+th| **วิธีทำงาน:** บอทอ่านข้อความที่สมาชิกส่งในกลุ่ม หากมีคำที่ถูกบล็อกจะ **ลบทันที** (หรือพักไว้รอผู้ดูแลอนุมัติ) ข้อความที่แก้ไขภายหลังก็ถูกตรวจด้วย บอทต้องเป็น **ผู้ดูแลที่มีสิทธิ์ลบข้อความ** ผู้ดูแลกลุ่มจะไม่ถูกบล็อก
+tr| **Nasıl çalışır:** Bot, üyelerin gruba gönderdiği mesajları okur; engellenen bir sözcük varsa mesajı **hemen siler** (veya yönetici onayı için bekletir). Sonradan düzenlenen mesajlar da denetlenir. Bot, **mesaj silme yetkisine sahip bir yönetici** olmalıdır. Grup yöneticileri asla engellenmez.
+fi| **Näin se toimii:** botti lukee jäsenten ryhmään lähettämät viestit; jos viestissä on estetty sana, botti **poistaa sen heti** (tai pidättää sen ylläpitäjän hyväksyntää varten). Myöhemmin muokatut viestit tarkistetaan myös. Botin on oltava **ylläpitäjä, jolla on oikeus poistaa viestejä**. Ryhmän ylläpitäjiä ei koskaan estetä.
+
+= Chưa có nhóm Telegram phù hợp
+en| No suitable Telegram group yet
+zh| 还没有合适的 Telegram 群组
+es| Aún no hay un grupo de Telegram adecuado
+hi| अभी कोई उपयुक्त Telegram ग्रुप नहीं है
+ar| لا توجد مجموعة تيليجرام مناسبة بعد
+pt| Ainda não há um grupo do Telegram adequado
+ru| Подходящих групп Telegram пока нет
+ja| 対象のTelegramグループがまだありません
+ko| 적합한 Telegram 그룹이 아직 없습니다
+de| Noch keine geeignete Telegram-Gruppe
+fr| Aucun groupe Telegram adapté pour l'instant
+id| Belum ada grup Telegram yang sesuai
+th| ยังไม่มีกลุ่ม Telegram ที่เหมาะสม
+tr| Henüz uygun bir Telegram grubu yok
+fi| Sopivaa Telegram-ryhmää ei vielä ole
+
+= Thêm nhóm ở mục Nhóm Telegram. Lọc từ khoá chỉ áp dụng cho nhóm, không áp dụng cho kênh.
+en| Add a group in Telegram groups. Keyword filtering applies to groups, not channels.
+zh| 请在“Telegram 群组”中添加群组。关键词过滤仅适用于群组,不适用于频道。
+es| Añade un grupo en Grupos de Telegram. El filtro de palabras se aplica a grupos, no a canales.
+hi| Telegram ग्रुप में जाकर ग्रुप जोड़ें। कीवर्ड फ़िल्टर सिर्फ़ ग्रुप पर लागू होता है, चैनल पर नहीं।
+ar| أضف مجموعة من قسم مجموعات تيليجرام. تنطبق تصفية الكلمات على المجموعات وليس القنوات.
+pt| Adicione um grupo em Grupos do Telegram. O filtro de palavras vale para grupos, não para canais.
+ru| Добавьте группу в разделе «Группы Telegram». Фильтр слов работает для групп, а не для каналов.
+ja| 「Telegramグループ」でグループを追加してください。キーワードフィルターはグループ専用で、チャンネルには適用されません。
+ko| "Telegram 그룹"에서 그룹을 추가하세요. 키워드 필터는 그룹에만 적용되며 채널에는 적용되지 않습니다.
+de| Fügen Sie unter Telegram-Gruppen eine Gruppe hinzu. Der Stichwortfilter gilt für Gruppen, nicht für Kanäle.
+fr| Ajoutez un groupe dans Groupes Telegram. Le filtre de mots-clés s'applique aux groupes, pas aux canaux.
+id| Tambahkan grup di Grup Telegram. Filter kata kunci berlaku untuk grup, bukan kanal.
+th| เพิ่มกลุ่มที่เมนูกลุ่ม Telegram ตัวกรองคำใช้กับกลุ่มเท่านั้น ไม่ใช้กับแชนเนล
+tr| Telegram grupları bölümünden bir grup ekleyin. Anahtar kelime filtresi gruplar için geçerlidir, kanallar için değil.
+fi| Lisää ryhmä kohdassa Telegram-ryhmät. Sanasuodatin koskee ryhmiä, ei kanavia.
+
+= Nhật ký đã xoá
+en| Deleted messages log
+zh| 已删除消息日志
+es| Registro de mensajes eliminados
+hi| हटाए गए संदेशों का लॉग
+ar| سجل الرسائل المحذوفة
+pt| Registro de mensagens apagadas
+ru| Журнал удалённых сообщений
+ja| 削除したメッセージの履歴
+ko| 삭제된 메시지 기록
+de| Protokoll gelöschter Nachrichten
+fr| Journal des messages supprimés
+id| Catatan pesan yang dihapus
+th| บันทึกข้อความที่ถูกลบ
+tr| Silinen mesajların günlüğü
+fi| Poistettujen viestien loki
+
+= Chưa có tin nào bị xoá.
+en| No messages have been deleted yet.
+zh| 还没有消息被删除。
+es| Aún no se ha eliminado ningún mensaje.
+hi| अभी तक कोई संदेश नहीं हटाया गया।
+ar| لم تُحذف أي رسالة بعد.
+pt| Nenhuma mensagem foi apagada ainda.
+ru| Пока ни одно сообщение не удалено.
+ja| まだ削除されたメッセージはありません。
+ko| 아직 삭제된 메시지가 없습니다.
+de| Es wurden noch keine Nachrichten gelöscht.
+fr| Aucun message n'a encore été supprimé.
+id| Belum ada pesan yang dihapus.
+th| ยังไม่มีข้อความที่ถูกลบ
+tr| Henüz silinen mesaj yok.
+fi| Viestejä ei ole vielä poistettu.
+
+= Tối đa 100 từ hoặc ký tự
+en| Up to 100 words or characters
+zh| 最多 100 个词或字符
+es| Máximo 100 palabras o caracteres
+hi| अधिकतम 100 शब्द या अक्षर
+ar| بحد أقصى 100 كلمة أو حرف
+pt| No máximo 100 palavras ou caracteres
+ru| Не более 100 слов или символов
+ja| 単語・文字は最大100件です
+ko| 단어 또는 문자는 최대 100개입니다
+de| Höchstens 100 Wörter oder Zeichen
+fr| 100 mots ou caractères maximum
+id| Maksimal 100 kata atau karakter
+th| ได้สูงสุด 100 คำหรืออักขระ
+tr| En fazla 100 sözcük veya karakter
+fi| Enintään 100 sanaa tai merkkiä
+
+= Nhập ít nhất một từ hoặc ký tự cần chặn
+en| Enter at least one word or character to block
+zh| 请至少输入一个要屏蔽的词或字符
+es| Introduce al menos una palabra o carácter que bloquear
+hi| ब्लॉक करने के लिए कम से कम एक शब्द या अक्षर दर्ज करें
+ar| أدخل كلمة أو حرفًا واحدًا على الأقل لحظره
+pt| Informe pelo menos uma palavra ou caractere para bloquear
+ru| Введите хотя бы одно слово или символ для блокировки
+ja| ブロックする単語または文字を1つ以上入力してください
+ko| 차단할 단어 또는 문자를 하나 이상 입력하세요
+de| Geben Sie mindestens ein Wort oder Zeichen zum Sperren ein
+fr| Saisissez au moins un mot ou caractère à bloquer
+id| Isi minimal satu kata atau karakter yang akan diblokir
+th| ใส่คำหรืออักขระที่ต้องการบล็อกอย่างน้อยหนึ่งรายการ
+tr| Engellenecek en az bir sözcük veya karakter girin
+fi| Kirjoita vähintään yksi estettävä sana tai merkki

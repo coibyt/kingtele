@@ -25,6 +25,18 @@ function kindOf(m) {
   return '';
 }
 
+const norm = (s, accents) => {
+  let t = String(s).replace(/[\u200B-\u200D\u2060\uFEFF\u00AD]/g, '').toLowerCase();
+  if (accents) t = t.normalize('NFD').replace(/\p{M}/gu, '').replace(/đ/g, 'd');
+  return t;
+};
+/** Từ/ký tự bị cấm đầu tiên có trong văn bản ('' nếu không có). Không phân biệt hoa thường; tuỳ chọn bỏ qua dấu tiếng Việt. */
+function matchWord(filter, text) {
+  if (!text || !filter || !Array.isArray(filter.words) || !filter.words.length) return '';
+  const t = norm(text, filter.ignoreAccents);
+  return filter.words.find((w) => { const n = norm(w, filter.ignoreAccents); return n && t.includes(n); }) || '';
+}
+
 function createModeration({ store, getToken, isActive = () => true, api = tg, extraWant = () => false, onPrivate = null }) {
   const d = () => store.data;
   const pollers = new Map();
@@ -33,6 +45,7 @@ function createModeration({ store, getToken, isActive = () => true, api = tg, ex
   const prefsOf = (id) => (id === 'admin' ? d().settings : d().users.find((u) => u.id === id) || {});
   const approverOf = (id) => prefsOf(id).reminderChatId || '';
   const modGroups = (id) => d().groups.filter((g) => g.userId === id && g.moderated);
+  const activeGroup = (id, chatId) => d().groups.find((g) => g.userId === id && g.chatId === chatId && (g.moderated || (g.filter && g.filter.enabled)));
   const raw = (token, method, payload) => api.callRaw(token, method, payload);
 
   async function isExempt(p, token, chatId, from) {
@@ -45,17 +58,22 @@ function createModeration({ store, getToken, isActive = () => true, api = tg, ex
     return c.ids.has(String(from.id));
   }
 
-  async function handleMessage(userId, p, m) {
+  async function handleMessage(userId, p, m, edited = false) {
     if (!m.chat || !['group', 'supergroup'].includes(m.chat.type)) return;
-    const g = modGroups(userId).find((x) => x.chatId === String(m.chat.id));
+    const g = activeGroup(userId, String(m.chat.id));
     if (!g || !m.from || m.from.is_bot || m.sender_chat) return;
     const kind = kindOf(m);
     const approver = approverOf(userId);
-    if (!kind || !approver || String(m.from.id) === String(approver)) return;
+    if (!kind || String(m.from.id) === String(approver)) return;
+    const hit = g.filter && g.filter.enabled ? matchWord(g.filter, m.text || m.caption || '') : '';
+    const mustHold = !edited && g.moderated && !!approver;
+    if (!hit && !mustHold) return;
     if (await isExempt(p, p.token, String(m.chat.id), m.from)) return;
+    const author = nameOf(m.from);
+    const holdIt = hit ? g.filter.action === 'hold' && !!approver && !edited : mustHold;
+    if (hit && !holdIt) return removeMessage(userId, p, g, m, author, hit, approver);
 
     const id = crypto.randomUUID();
-    const author = nameOf(m.from);
     let hold;
     try {
       hold = await raw(p.token, 'copyMessage', {
@@ -67,20 +85,42 @@ function createModeration({ store, getToken, isActive = () => true, api = tg, ex
       await raw(p.token, 'deleteMessage', { chat_id: m.chat.id, message_id: m.message_id });
     } catch {
       raw(p.token, 'deleteMessage', { chat_id: approver, message_id: hold.message_id }).catch(() => {});
-      if (Date.now() - p.warnedAt > WARN_EVERY) { p.warnedAt = Date.now(); raw(p.token, 'sendMessage', { chat_id: approver, text: T.cantDelete(g.title) }).catch(() => {}); }
+      warnCantDelete(p, g, approver);
       return;
     }
     d().modQueue.unshift({
-      id, userId, groupId: g.id, groupTitle: g.title, chatId: String(m.chat.id), authorId: String(m.from.id), authorName: author, kind,
+      id, userId, groupId: g.id, groupTitle: g.title, chatId: String(m.chat.id), authorId: String(m.from.id), authorName: author, kind, matched: hit,
       preview: (m.text || m.caption || '').slice(0, 300), holdChatId: String(approver), holdMsgId: hold.message_id, status: 'pending', createdAt: Date.now(), decidedAt: null,
     });
     const mine = d().modQueue.filter((x) => x.userId === userId);
     for (const old of mine.slice(KEEP)) d().modQueue.splice(d().modQueue.indexOf(old), 1);
     await store.save();
-    raw(p.token, 'sendMessage', { chat_id: approver, reply_to_message_id: hold.message_id, text: T.held(author, g.title) }).catch(() => {});
-    raw(p.token, 'sendMessage', { chat_id: m.chat.id, text: T.notice(author) })
-      .then((n) => setTimeout(() => raw(p.token, 'deleteMessage', { chat_id: m.chat.id, message_id: n.message_id }).catch(() => {}), NOTICE_MS).unref())
+    raw(p.token, 'sendMessage', { chat_id: approver, reply_to_message_id: hold.message_id, text: T.held(author, g.title) + (hit ? ` · ⚠️ ${hit}` : '') }).catch(() => {});
+    notice(p, m.chat.id, T.notice(author));
+  }
+
+  function warnCantDelete(p, g, approver) {
+    if (!approver || Date.now() - p.warnedAt <= WARN_EVERY) return;
+    p.warnedAt = Date.now();
+    raw(p.token, 'sendMessage', { chat_id: approver, text: T.cantDelete(g.title) }).catch(() => {});
+  }
+
+  /** Thông báo ngắn trong nhóm, tự xoá sau vài giây. */
+  function notice(p, chatId, text) {
+    raw(p.token, 'sendMessage', { chat_id: chatId, text })
+      .then((n) => setTimeout(() => raw(p.token, 'deleteMessage', { chat_id: chatId, message_id: n.message_id }).catch(() => {}), NOTICE_MS).unref())
       .catch(() => {});
+  }
+
+  /** Lọc từ khoá: xoá tin chứa từ bị cấm và ghi nhật ký. */
+  async function removeMessage(userId, p, g, m, author, word, approver) {
+    try { await raw(p.token, 'deleteMessage', { chat_id: m.chat.id, message_id: m.message_id }); }
+    catch { warnCantDelete(p, g, approver); return; }
+    d().filterLog.unshift({ id: crypto.randomUUID(), userId, groupId: g.id, groupTitle: g.title, authorName: author, word, preview: (m.text || m.caption || '').slice(0, 200), at: Date.now() });
+    const mine = d().filterLog.filter((x) => x.userId === userId);
+    for (const old of mine.slice(KEEP)) d().filterLog.splice(d().filterLog.indexOf(old), 1);
+    await store.save();
+    notice(p, m.chat.id, T.filtered(author));
   }
 
   /** Duyệt hoặc từ chối một bài. Ném lỗi nếu Telegram không đăng lại được. */
@@ -112,6 +152,7 @@ function createModeration({ store, getToken, isActive = () => true, api = tg, ex
   async function handle(userId, p, u) {
     if (u.callback_query) return handleCallback(userId, p, u.callback_query);
     if (u.message && u.message.chat && u.message.chat.type === 'private') return onPrivate ? onPrivate(userId, p.token, u.message) : undefined;
+    if (u.edited_message) return handleMessage(userId, p, u.edited_message, true);
     if (u.message) return handleMessage(userId, p, u.message);
   }
 
@@ -119,7 +160,7 @@ function createModeration({ store, getToken, isActive = () => true, api = tg, ex
     let offset = 0;
     while (!p.stopped) {
       try {
-        const ups = await raw(p.token, 'getUpdates', { offset, timeout: 25, allowed_updates: ['message', 'callback_query', 'my_chat_member', 'channel_post'] }, { timeoutMs: 40000 });
+        const ups = await raw(p.token, 'getUpdates', { offset, timeout: 25, allowed_updates: ['message', 'edited_message', 'callback_query', 'my_chat_member', 'channel_post'] }, { timeoutMs: 40000 });
         for (const u of ups) {
           offset = u.update_id + 1;
           p.recent.push(u); if (p.recent.length > 100) p.recent.shift();
@@ -138,6 +179,7 @@ function createModeration({ store, getToken, isActive = () => true, api = tg, ex
   /** Đồng bộ danh sách vòng polling với các nhóm đang bật duyệt. */
   function sync() {
     const want = new Set(d().groups.filter((g) => g.moderated).map((g) => g.userId).filter((id) => isActive(id) && getToken(id) && approverOf(id)));
+    for (const g of d().groups) if (g.filter && g.filter.enabled && isActive(g.userId) && getToken(g.userId)) want.add(g.userId);
     for (const id of [...d().users.map((u) => u.id), 'admin']) if (isActive(id) && getToken(id) && extraWant(id)) want.add(id);
     for (const [id, p] of pollers) {
       if (!want.has(id) || p.token !== getToken(id)) { p.stopped = true; pollers.delete(id); }
@@ -194,6 +236,36 @@ function createModeration({ store, getToken, isActive = () => true, api = tg, ex
       res.json({ ok: true });
     }));
 
+    r.get('/filters', (req, res) => res.json(d().groups.filter((g) => g.userId === uid(req) && ['group', 'supergroup'].includes(g.type))
+      .map((g) => ({ id: g.id, title: g.title, filter: g.filter || { enabled: false, words: [], action: 'delete', ignoreAccents: true } }))));
+
+    r.put('/groups/:id/filter', wrap(async (req, res) => {
+      const g = myGroup(req);
+      if (!g) return res.status(404).json({ error: 'Không tìm thấy nhóm' });
+      const b = req.body || {};
+      const words = [...new Set((Array.isArray(b.words) ? b.words : []).map((w) => String(w).trim().slice(0, 50)).filter(Boolean))];
+      if (words.length > 100) throw bad('Tối đa 100 từ hoặc ký tự');
+      const action = b.action === 'hold' ? 'hold' : 'delete';
+      const enabled = !!b.enabled;
+      if (enabled) {
+        const token = getToken(uid(req));
+        if (!['group', 'supergroup'].includes(g.type)) throw bad('Chỉ áp dụng cho nhóm, không áp dụng cho kênh');
+        if (!token) throw bad('Chưa kết nối bot Telegram - vào Cài đặt');
+        if (!words.length) throw bad('Nhập ít nhất một từ hoặc ký tự cần chặn');
+        if (action === 'hold' && !approverOf(uid(req))) throw bad('Hãy lưu Chat ID admin nhận bài chờ duyệt trước');
+        try {
+          const me = await tg.getMe(token);
+          const member = await raw(token, 'getChatMember', { chat_id: g.chatId, user_id: me.id });
+          if (member.status !== 'creator' && !(member.status === 'administrator' && member.can_delete_messages !== false)) throw new Error('no');
+        } catch { throw bad('Bot cần là quản trị viên của nhóm và có quyền xoá tin nhắn'); }
+      }
+      g.filter = { enabled, words, action, ignoreAccents: b.ignoreAccents !== false };
+      await store.save();
+      sync();
+      res.json({ ok: true });
+    }));
+    r.get('/filter-log', (req, res) => res.json(d().filterLog.filter((x) => x.userId === uid(req)).slice(0, 100)));
+
     r.get('/queue', (req, res) => res.json(mine(req).slice(0, 100)));
     r.post('/queue/:id/decide', wrap(async (req, res) => {
       const item = mine(req).find((x) => x.id === req.params.id);
@@ -210,4 +282,4 @@ function createModeration({ store, getToken, isActive = () => true, api = tg, ex
   };
 }
 
-module.exports = { createModeration, kindOf };
+module.exports = { createModeration, kindOf, matchWord };
