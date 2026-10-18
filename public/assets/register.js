@@ -8,7 +8,6 @@ try {
   if (q && /^[A-Za-z0-9]{4,16}$/.test(q)) localStorage.setItem('kt_ref', q.toUpperCase());
   ref = localStorage.getItem('kt_ref') || '';
 } catch { /* localStorage bị chặn */ }
-if (ref) document.getElementById('refnote').hidden = false;
 
 const show = (msg) => { err.textContent = msg; err.hidden = false; };
 
