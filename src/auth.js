@@ -35,7 +35,7 @@ function limiter(max, windowMs) {
   };
 }
 
-function createAuth({ store, config, points }) {
+function createAuth({ store, config, points, accountMail }) {
   const secret = () => store.data.settings.sessionSecret;
   const sign = (payload) => crypto.createHmac('sha256', secret()).update(payload).digest('base64url');
   const adminUser = () => ({ id: 'admin', role: 'admin', owner: true, name: config.adminUser, email: '' });
@@ -94,15 +94,16 @@ function createAuth({ store, config, points }) {
     if (loginIp.blocked(ip) || loginId.blocked(ident)) {
       return res.status(429).json({ error: 'Đăng nhập sai quá nhiều lần. Thử lại sau 15 phút.' });
     }
-    let id = null, locked = false;
+    let id = null, locked = false, unverified = false;
     if (ident && ident === String(config.adminUser).toLowerCase()) {
       if (safeEq(password, config.adminPassword)) id = 'admin';
     } else {
       const u = store.data.users.find((x) => x.email === ident);
       const ok = await verifyPassword(password, u ? u.passwordHash : await DUMMY);
-      if (u && ok) { if (u.disabled) locked = true; else id = u.id; }
+      if (u && ok) { if (u.disabled) locked = true; else if (accountMail && accountMail.required() && u.emailVerified === false) unverified = true; else id = u.id; }
     }
     if (locked) return res.status(403).json({ error: 'Tài khoản đã bị khoá. Liên hệ quản trị viên.' });
+    if (unverified) return res.status(403).json({ error: 'Hãy xác nhận email trước khi đăng nhập. Kiểm tra hộp thư của bạn hoặc gửi lại email xác nhận.', needVerify: true });
     if (!id) {
       loginIp.hit(ip); loginId.hit(ident);
       return res.status(401).json({ error: 'Sai email hoặc mật khẩu' });
@@ -135,13 +136,20 @@ function createAuth({ store, config, points }) {
     }
     if (store.data.users.length >= config.maxUsers) return res.status(403).json({ error: 'Hệ thống đã đạt giới hạn thành viên.' });
     regIp.hit(req.ip);
+    const verifyOn = !!(accountMail && accountMail.required());
     const user = {
       id: crypto.randomUUID(), name, email, passwordHash: await hashPassword(password),
       botToken: '', timezone: '', disabled: false, createdAt: Date.now(),
+      ...(verifyOn ? { emailVerified: false } : {}),
     };
+    if (verifyOn) {
+      try { await accountMail.sendVerification(user, b.lang); }
+      catch (e) { console.error('[mail] verification email failed:', e.code || e.message); return res.status(502).json({ error: 'Không gửi được email xác nhận. Hãy kiểm tra địa chỉ email hoặc thử lại sau.' }); }
+    }
     points.initUser(user, { ip: req.ip, ref: b.ref });
     store.data.users.push(user);
     await store.save();
+    if (verifyOn) return res.status(201).json({ ok: true, verify: true });
     setCookie(res, req, issue(user.id), TTL);
     res.status(201).json({ ok: true });
   }
@@ -178,4 +186,4 @@ function createAuth({ store, config, points }) {
   return { login, register, changePassword, logout, requireAuth, requireAdmin, session, hashPassword };
 }
 
-module.exports = { createAuth, hashPassword, verifyPassword };
+module.exports = { createAuth, hashPassword, verifyPassword, limiter };

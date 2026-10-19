@@ -1337,7 +1337,65 @@ async function filterView() {
         h('span', { class: 'tag err' }, x.word))))) : h('p', { class: 'hint' }, 'Chưa có tin nào bị xoá.')));
 }
 
-const routes = { overview: ['Tổng quan', overviewView], posts: ['Bài đăng', postsView], groups: ['Nhóm Telegram', groupsView], facebook: ['Facebook', facebookView], zalo: ['Zalo', zaloView], moderation: ['Duyệt bài', moderationView], inbox: ['Hộp thư bot', inboxView], filter: ['Lọc từ khoá', filterView], logs: ['Nhật ký gửi', logsView], settings: ['Cài đặt', settingsView], points: ['Điểm King', pointsView], members: ['Thành viên', membersView], installs: ['Ứng dụng', appStatsView], traffic: ['Truy cập', trafficView] };
+// ---------- Quản trị: Email (SMTP, xác nhận email, email quảng bá) ----------
+async function emailAdminView() {
+  const st = await api('GET', '/admin/email/status');
+  const testTo = h('input', { class: 'input', id: 'em-to', type: 'email', placeholder: 'ban@example.com' });
+  const testMsg = h('p', { class: 'hint', role: 'status' });
+  const smtpCard = h('div', { class: 'card card-pad form-grid' }, h('h2', null, 'Kết nối email (SMTP)'),
+    st.configured
+      ? h('p', { class: 'hint' }, h('span', { class: 'tag ok' }, 'Đã cấu hình'), ` ${st.host}:${st.port} · ${st.from}`)
+      : h('p', { class: 'error-text' }, 'Chưa cấu hình. Đặt các biến môi trường SMTP_USER và SMTP_PASS trên máy chủ rồi deploy lại.'),
+    h('div', { class: 'field' }, h('label', { for: 'em-to' }, 'Gửi email thử tới'), testTo), testMsg,
+    h('div', null, h('button', { class: 'btn', type: 'button', disabled: !st.configured, onclick: (e) => act(e.currentTarget, async () => {
+      await api('POST', '/admin/email/test', { to: testTo.value });
+    }, 'Đã gửi email thử') }, ico('send'), 'Gửi email thử')));
+
+  const on = h('input', { type: 'checkbox', id: 'em-ver', checked: st.requireEmailVerify });
+  const verifyCard = h('div', { class: 'card card-pad form-grid' }, h('h2', null, 'Xác nhận email khi đăng ký'),
+    h('div', { class: 'check' }, on, h('label', { for: 'em-ver' }, 'Bắt buộc xác nhận email trước khi dùng tài khoản')),
+    h('p', { class: 'hint' }, 'Khi bật, thành viên mới phải bấm liên kết trong email mới đăng nhập được. Thành viên cũ không bị ảnh hưởng.'),
+    h('p', { class: 'hint' }, `${st.counts.verified} đã xác nhận · ${st.counts.unverified} chờ xác nhận`),
+    h('div', null, h('button', { class: 'btn btn-primary', type: 'button', onclick: (e) => act(e.currentTarget, async () => {
+      await api('PUT', '/admin/email/settings', { requireEmailVerify: on.checked }); route();
+    }, 'Đã lưu') }, ico('check'), 'Lưu')));
+
+  const subject = h('input', { class: 'input', id: 'em-sub', maxLength: 150, placeholder: 'Ưu đãi mới từ KingTele' });
+  const body = h('textarea', { class: 'input', id: 'em-body', rows: 7, maxLength: 10000, placeholder: 'Xin chào {ten},\n\n...' });
+  const aud = h('select', { class: 'input', id: 'em-aud' },
+    h('option', { value: 'all' }, `Tất cả thành viên nhận được email (${st.audience.all})`),
+    h('option', { value: 'verified' }, `Chỉ thành viên đã xác nhận email (${st.audience.verified})`));
+  const prog = h('p', { class: 'hint', role: 'status' });
+  const bErr = h('p', { class: 'error-text', role: 'alert' });
+  const watch = () => {
+    const t = setInterval(async () => {
+      if (!document.body.contains(prog)) return clearInterval(t);
+      const s = await api('GET', '/admin/email/status').catch(() => null);
+      if (!s || !s.job) return;
+      prog.textContent = `Đã gửi ${s.job.sent}/${s.job.total} (lỗi ${s.job.failed})`;
+      if (s.job.done) clearInterval(t);
+    }, 2500);
+  };
+  const mktCard = h('div', { class: 'card card-pad form-grid' }, h('h2', null, 'Gửi email quảng bá'),
+    h('div', { class: 'field' }, h('label', { for: 'em-sub' }, 'Tiêu đề'), subject),
+    h('div', { class: 'field' }, h('label', { for: 'em-body' }, 'Nội dung'), body,
+      h('span', { class: 'hint' }, 'Dùng {ten} để chèn tên. Mỗi email có link hủy nhận ở cuối. Tối đa 300 người mỗi đợt, gửi giãn cách để tránh bị nhà cung cấp chặn.')),
+    h('div', { class: 'field' }, h('label', { for: 'em-aud' }, 'Người nhận'), aud),
+    bErr, prog,
+    h('div', null, h('button', { class: 'btn btn-primary', type: 'button', disabled: !st.configured, onclick: async (e) => {
+      bErr.textContent = '';
+      if (!subject.value.trim() || !body.value.trim()) { bErr.textContent = 'Nhập tiêu đề và nội dung email'; return; }
+      const n = Math.min(300, aud.value === 'all' ? st.audience.all : st.audience.verified);
+      if (!(await confirmBox('Gửi email quảng bá?', `Gửi tới ${n} người.`, 'Gửi'))) return;
+      await act(e.currentTarget, async () => { await api('POST', '/admin/email/broadcast', { subject: subject.value, body: body.value, audience: aud.value }); prog.textContent = 'Đang gửi...'; watch(); });
+    } }, ico('send'), 'Gửi cho mọi người')));
+
+  return h('div', null,
+    pageHead('Email', 'Email xác nhận đăng ký, đặt lại mật khẩu và email quảng bá', h('button', { class: 'btn', type: 'button', onclick: route }, ico('refresh'), 'Làm mới')),
+    h('div', { class: 'stack' }, smtpCard, verifyCard, mktCard));
+}
+
+const routes = { overview: ['Tổng quan', overviewView], posts: ['Bài đăng', postsView], groups: ['Nhóm Telegram', groupsView], facebook: ['Facebook', facebookView], zalo: ['Zalo', zaloView], moderation: ['Duyệt bài', moderationView], inbox: ['Hộp thư bot', inboxView], filter: ['Lọc từ khoá', filterView], logs: ['Nhật ký gửi', logsView], settings: ['Cài đặt', settingsView], points: ['Điểm King', pointsView], members: ['Thành viên', membersView], installs: ['Ứng dụng', appStatsView], traffic: ['Truy cập', trafficView], email: ['Email', emailAdminView] };
 let token = 0;
 async function route() {
   const key = routes[location.hash.slice(1)] ? location.hash.slice(1) : 'overview';
@@ -1376,7 +1434,8 @@ setInterval(tick, 20000); tick();
     if (me.user.role === 'admin') {
       document.querySelector('.menu').append(h('a', { href: '#members', 'data-route': 'members' }, ico('users'), 'Thành viên'),
         h('a', { href: '#installs', 'data-route': 'installs' }, ico('download'), 'Ứng dụng'),
-        h('a', { href: '#traffic', 'data-route': 'traffic' }, ico('globe'), 'Truy cập'));
+        h('a', { href: '#traffic', 'data-route': 'traffic' }, ico('globe'), 'Truy cập'),
+        h('a', { href: '#email', 'data-route': 'email' }, ico('send'), 'Email'));
     }
   } catch { /* api() đã chuyển về trang đăng nhập nếu hết phiên */ }
   route();

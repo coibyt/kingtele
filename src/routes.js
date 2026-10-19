@@ -14,7 +14,7 @@ const MB = 1024 * 1024;
 
 const { lookup: lookupChatId, MESSAGES: MSG } = require('./chatid-tool');
 
-function createApi({ store, config, auth, scheduler, media, tokenFor, points, pwaStats, traffic, chatIdTool, fb, zalo, mod, inbox }) {
+function createApi({ store, config, auth, scheduler, media, tokenFor, points, pwaStats, traffic, chatIdTool, fb, zalo, mod, inbox, accountMail }) {
   const api = express.Router();
   const d = () => store.data;
 
@@ -34,6 +34,7 @@ function createApi({ store, config, auth, scheduler, media, tokenFor, points, pw
     u ? res.json({ user: u, registrationOpen: config.registrationOpen, points: points.balanceOf(u.id) }) : res.status(401).json({ error: 'Chưa đăng nhập' });
   });
   api.get('/config', (req, res) => res.json({ registrationOpen: config.registrationOpen }));
+  if (accountMail) api.use(accountMail.publicRouter());
 
   // Công cụ miễn phí lấy ID nhóm Telegram: không cần đăng nhập. 30 lượt tra/10 phút/IP.
   const toolHits = new Map();
@@ -466,6 +467,7 @@ function createApi({ store, config, auth, scheduler, media, tokenFor, points, pw
     res.json({ ok: true });
   }));
 
+  if (accountMail) admin.use('/email', accountMail.adminRouter());
   api.use('/admin', admin);
 
   api.use((req, res) => res.status(404).json({ error: 'Không tìm thấy' }));

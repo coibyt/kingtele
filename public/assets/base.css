@@ -157,3 +157,5 @@ html.i18n-pending body { opacity: 0; }
 @media (max-width: 400px) { .install-banner .ib-text span { display: none; } .install-banner { gap: 10px; } }
 body.has-install-banner { padding-bottom: 96px; }
 body.has-install-banner .toasts { bottom: calc(100px + env(safe-area-inset-bottom)); }
+
+.ok-text { color: var(--ok, #4ade80); font-size: .9rem; margin: 0; }

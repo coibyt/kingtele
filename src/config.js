@@ -89,6 +89,13 @@ module.exports = {
   adminUser: env.ADMIN_USERNAME || 'admin',
   adminPassword,
   envBotToken: (env.TELEGRAM_BOT_TOKEN || '').trim(),
+  smtp: {
+    host: (env.SMTP_HOST || 'smtp.hostinger.com').trim(),
+    port: Number(env.SMTP_PORT) || 465,
+    user: (env.SMTP_USER || '').trim(),
+    pass: env.SMTP_PASS || '',
+    from: (env.MAIL_FROM || '').trim() || ((env.SMTP_USER || '').trim() ? `KingTele <${(env.SMTP_USER || '').trim()}>` : ''),
+  },
   publicUrl: (env.PUBLIC_URL || 'https://kingtele.com').replace(/\/+$/, ''),
   toolBotToken: (env.TOOL_BOT_TOKEN || '').trim(),           // bot riêng cho công cụ miễn phí /cong-cu/...
   toolYoutubeId: /^[\w-]{11}$/.test((env.TOOL_YOUTUBE_ID || '').trim()) ? env.TOOL_YOUTUBE_ID.trim() : '',

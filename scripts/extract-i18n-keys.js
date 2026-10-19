@@ -11,7 +11,7 @@ const add = (s, file) => {
   set.get(s).add(path.basename(file));
 };
 
-for (const f of ['public/index.html', 'views/app.html', 'views/login.html', 'views/register.html', 'views/404.html', 'public/offline.html']) {
+for (const f of ['public/index.html', 'views/app.html', 'views/login.html', 'views/register.html', 'views/404.html', 'views/forgot.html', 'views/reset.html', 'public/offline.html']) {
   const src = fs.readFileSync(path.join(root, f), 'utf8').replace(/<script[\s\S]*?<\/script>/g, '').replace(/<style[\s\S]*?<\/style>/g, '').replace(/<!--[\s\S]*?-->/g, '');
   for (const m of src.matchAll(/>([^<>]+)</g)) add(m[1], f);
   for (const m of src.matchAll(/\b(?:aria-label|placeholder|title|content|alt)="([^"]+)"/g)) add(m[1], f);
@@ -20,7 +20,7 @@ for (const f of ['public/index.html', 'views/app.html', 'views/login.html', 'vie
 const SQ = /'((?:[^'\\\n]|\\.)*)'|"((?:[^"\\\n]|\\.)*)"/g;
 const TPL = /`((?:[^`\\]|\\.)*)`/g;
 const EXPR = /\$\{((?:[^{}]|\{[^{}]*\})*)\}/g;
-for (const f of ['public/assets/app.js', 'public/assets/login.js', 'public/assets/register.js', 'public/assets/site.js', 'public/assets/pwa.js', 'src/routes.js', 'src/auth.js', 'src/scheduler.js', 'src/media.js', 'src/points.js', 'src/schedule.js', 'src/fb.js', 'src/zalo.js', 'src/moderation.js', 'src/inbox.js', 'src/telegram.js']) {
+for (const f of ['public/assets/app.js', 'public/assets/login.js', 'public/assets/register.js', 'public/assets/forgot.js', 'public/assets/reset.js', 'public/assets/site.js', 'public/assets/pwa.js', 'src/routes.js', 'src/auth.js', 'src/scheduler.js', 'src/media.js', 'src/points.js', 'src/schedule.js', 'src/fb.js', 'src/zalo.js', 'src/moderation.js', 'src/inbox.js', 'src/account-mail.js', 'src/telegram.js']) {
   const src = fs.readFileSync(path.join(root, f), 'utf8');
   const lit = /'((?:[^'\\\n]|\\.)*)'|"((?:[^"\\\n]|\\.)*)"|`((?:[^`\\]|\\.)*)`/g;
   for (const m of src.matchAll(lit)) {

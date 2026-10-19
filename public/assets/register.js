@@ -25,10 +25,17 @@ form.addEventListener('submit', async (e) => {
     const r = await fetch('/api/register', {
       method: 'POST',
       headers: { 'content-type': 'application/json', 'x-requested-with': 'postpilot' },
-      body: JSON.stringify({ name, email, password, website: form.website.value, ref }),
+      body: JSON.stringify({ name, email, password, website: form.website.value, ref, lang: (window.I18N && window.I18N.lang) || 'vi' }),
     });
     const j = await r.json().catch(() => ({}));
     if (!r.ok) throw new Error(j.error || 'Không tạo được tài khoản');
+    if (j.verify) {
+      form.hidden = true;
+      const done = document.getElementById('done');
+      done.textContent = `Đã gửi email xác nhận tới ${email}. Hãy mở email và bấm vào liên kết để kích hoạt tài khoản.`;
+      done.hidden = false;
+      return;
+    }
     location.href = '/app#settings';
   } catch (ex) {
     show(ex.message);

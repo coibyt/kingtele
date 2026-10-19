@@ -1,0 +1,800 @@
+# Email: xác nhận đăng ký, quên mật khẩu, quản trị email
+
+= Gửi lại email xác nhận
+en| Resend confirmation email
+zh| 重新发送确认邮件
+es| Reenviar correo de confirmación
+hi| पुष्टि ईमेल दोबारा भेजें
+ar| إعادة إرسال بريد التأكيد
+pt| Reenviar e-mail de confirmação
+ru| Отправить письмо с подтверждением ещё раз
+ja| 確認メールを再送
+ko| 확인 이메일 다시 보내기
+de| Bestätigungs-E-Mail erneut senden
+fr| Renvoyer l'e-mail de confirmation
+id| Kirim ulang email konfirmasi
+th| ส่งอีเมลยืนยันอีกครั้ง
+tr| Onay e-postasını yeniden gönder
+fi| Lähetä vahvistussähköposti uudelleen
+
+= Quên mật khẩu?
+en| Forgot password?
+zh| 忘记密码?
+es| ¿Olvidaste tu contraseña?
+hi| पासवर्ड भूल गए?
+ar| نسيت كلمة المرور؟
+pt| Esqueceu a senha?
+ru| Забыли пароль?
+ja| パスワードをお忘れですか?
+ko| 비밀번호를 잊으셨나요?
+de| Passwort vergessen?
+fr| Mot de passe oublié ?
+id| Lupa kata sandi?
+th| ลืมรหัสผ่าน?
+tr| Şifreni mi unuttun?
+fi| Unohditko salasanan?
+
+= Quên mật khẩu - KingTele
+en| Forgot password - KingTele
+zh| 忘记密码 - KingTele
+es| Contraseña olvidada - KingTele
+hi| पासवर्ड भूल गए - KingTele
+ar| نسيت كلمة المرور - KingTele
+pt| Esqueci a senha - KingTele
+ru| Забыли пароль - KingTele
+ja| パスワードを忘れた場合 - KingTele
+ko| 비밀번호 찾기 - KingTele
+de| Passwort vergessen - KingTele
+fr| Mot de passe oublié - KingTele
+id| Lupa kata sandi - KingTele
+th| ลืมรหัสผ่าน - KingTele
+tr| Şifremi unuttum - KingTele
+fi| Unohtunut salasana - KingTele
+
+= Quên mật khẩu
+en| Forgot password
+zh| 忘记密码
+es| Contraseña olvidada
+hi| पासवर्ड भूल गए
+ar| نسيت كلمة المرور
+pt| Esqueci a senha
+ru| Забыли пароль
+ja| パスワードを忘れた場合
+ko| 비밀번호 찾기
+de| Passwort vergessen
+fr| Mot de passe oublié
+id| Lupa kata sandi
+th| ลืมรหัสผ่าน
+tr| Şifremi unuttum
+fi| Unohtunut salasana
+
+= Nhập email đã đăng ký, chúng tôi sẽ gửi liên kết đặt lại mật khẩu.
+en| Enter your registered email and we'll send you a link to reset your password.
+zh| 输入注册时使用的邮箱,我们会发送重置密码的链接。
+es| Introduce tu correo registrado y te enviaremos un enlace para restablecer la contraseña.
+hi| अपना पंजीकृत ईमेल दर्ज करें, हम पासवर्ड रीसेट करने का लिंक भेजेंगे।
+ar| أدخل بريدك الإلكتروني المسجّل وسنرسل لك رابطًا لإعادة تعيين كلمة المرور.
+pt| Informe seu e-mail cadastrado e enviaremos um link para redefinir a senha.
+ru| Введите email, указанный при регистрации, и мы отправим ссылку для сброса пароля.
+ja| 登録したメールアドレスを入力すると、パスワード再設定用のリンクをお送りします。
+ko| 가입한 이메일을 입력하면 비밀번호 재설정 링크를 보내 드립니다.
+de| Geben Sie Ihre registrierte E-Mail-Adresse ein, wir senden Ihnen einen Link zum Zurücksetzen des Passworts.
+fr| Saisissez votre e-mail d'inscription et nous vous enverrons un lien pour réinitialiser votre mot de passe.
+id| Masukkan email terdaftar Anda dan kami akan mengirim tautan untuk mengatur ulang kata sandi.
+th| ใส่อีเมลที่ลงทะเบียนไว้ เราจะส่งลิงก์สำหรับตั้งรหัสผ่านใหม่ให้
+tr| Kayıtlı e-posta adresinizi girin, şifrenizi sıfırlamanız için bir bağlantı gönderelim.
+fi| Kirjoita rekisteröity sähköpostiosoitteesi, niin lähetämme linkin salasanan nollaamiseen.
+
+= Gửi liên kết
+en| Send link
+zh| 发送链接
+es| Enviar enlace
+hi| लिंक भेजें
+ar| إرسال الرابط
+pt| Enviar link
+ru| Отправить ссылку
+ja| リンクを送信
+ko| 링크 보내기
+de| Link senden
+fr| Envoyer le lien
+id| Kirim tautan
+th| ส่งลิงก์
+tr| Bağlantı gönder
+fi| Lähetä linkki
+
+= Quay lại đăng nhập
+en| Back to sign in
+zh| 返回登录
+es| Volver a iniciar sesión
+hi| लॉगिन पर वापस जाएँ
+ar| العودة إلى تسجيل الدخول
+pt| Voltar ao login
+ru| Вернуться ко входу
+ja| ログインに戻る
+ko| 로그인으로 돌아가기
+de| Zurück zur Anmeldung
+fr| Retour à la connexion
+id| Kembali ke halaman masuk
+th| กลับไปหน้าเข้าสู่ระบบ
+tr| Girişe dön
+fi| Takaisin kirjautumiseen
+
+= Đặt lại mật khẩu - KingTele
+en| Reset password - KingTele
+zh| 重置密码 - KingTele
+es| Restablecer contraseña - KingTele
+hi| पासवर्ड रीसेट - KingTele
+ar| إعادة تعيين كلمة المرور - KingTele
+pt| Redefinir senha - KingTele
+ru| Сброс пароля - KingTele
+ja| パスワード再設定 - KingTele
+ko| 비밀번호 재설정 - KingTele
+de| Passwort zurücksetzen - KingTele
+fr| Réinitialiser le mot de passe - KingTele
+id| Atur ulang kata sandi - KingTele
+th| ตั้งรหัสผ่านใหม่ - KingTele
+tr| Şifreyi sıfırla - KingTele
+fi| Nollaa salasana - KingTele
+
+= Đặt lại mật khẩu
+en| Reset password
+zh| 重置密码
+es| Restablecer contraseña
+hi| पासवर्ड रीसेट करें
+ar| إعادة تعيين كلمة المرور
+pt| Redefinir senha
+ru| Сброс пароля
+ja| パスワード再設定
+ko| 비밀번호 재설정
+de| Passwort zurücksetzen
+fr| Réinitialiser le mot de passe
+id| Atur ulang kata sandi
+th| ตั้งรหัสผ่านใหม่
+tr| Şifreyi sıfırla
+fi| Nollaa salasana
+
+= Nhập mật khẩu mới cho tài khoản của bạn.
+en| Enter a new password for your account.
+zh| 请为你的账号输入新密码。
+es| Introduce una nueva contraseña para tu cuenta.
+hi| अपने खाते के लिए नया पासवर्ड दर्ज करें।
+ar| أدخل كلمة مرور جديدة لحسابك.
+pt| Informe uma nova senha para sua conta.
+ru| Введите новый пароль для вашего аккаунта.
+ja| アカウントの新しいパスワードを入力してください。
+ko| 계정의 새 비밀번호를 입력하세요.
+de| Geben Sie ein neues Passwort für Ihr Konto ein.
+fr| Saisissez un nouveau mot de passe pour votre compte.
+id| Masukkan kata sandi baru untuk akun Anda.
+th| ใส่รหัสผ่านใหม่สำหรับบัญชีของคุณ
+tr| Hesabınız için yeni bir şifre girin.
+fi| Kirjoita tilillesi uusi salasana.
+
+= Mật khẩu mới
+en| New password
+zh| 新密码
+es| Nueva contraseña
+hi| नया पासवर्ड
+ar| كلمة المرور الجديدة
+pt| Nova senha
+ru| Новый пароль
+ja| 新しいパスワード
+ko| 새 비밀번호
+de| Neues Passwort
+fr| Nouveau mot de passe
+id| Kata sandi baru
+th| รหัสผ่านใหม่
+tr| Yeni şifre
+fi| Uusi salasana
+
+= Đặt mật khẩu mới
+en| Set new password
+zh| 设置新密码
+es| Establecer nueva contraseña
+hi| नया पासवर्ड सेट करें
+ar| تعيين كلمة المرور الجديدة
+pt| Definir nova senha
+ru| Задать новый пароль
+ja| 新しいパスワードを設定
+ko| 새 비밀번호 설정
+de| Neues Passwort festlegen
+fr| Définir le nouveau mot de passe
+id| Atur kata sandi baru
+th| ตั้งรหัสผ่านใหม่
+tr| Yeni şifreyi belirle
+fi| Aseta uusi salasana
+
+= Kết nối email (SMTP)
+en| Email connection (SMTP)
+zh| 邮件连接(SMTP)
+es| Conexión de correo (SMTP)
+hi| ईमेल कनेक्शन (SMTP)
+ar| اتصال البريد الإلكتروني (SMTP)
+pt| Conexão de e-mail (SMTP)
+ru| Подключение почты (SMTP)
+ja| メール接続(SMTP)
+ko| 이메일 연결(SMTP)
+de| E-Mail-Verbindung (SMTP)
+fr| Connexion e-mail (SMTP)
+id| Koneksi email (SMTP)
+th| การเชื่อมต่ออีเมล (SMTP)
+tr| E-posta bağlantısı (SMTP)
+fi| Sähköpostiyhteys (SMTP)
+
+= Đã cấu hình
+en| Configured
+zh| 已配置
+es| Configurado
+hi| कॉन्फ़िगर हो गया
+ar| تم الإعداد
+pt| Configurado
+ru| Настроено
+ja| 設定済み
+ko| 설정됨
+de| Konfiguriert
+fr| Configuré
+id| Sudah dikonfigurasi
+th| ตั้งค่าแล้ว
+tr| Yapılandırıldı
+fi| Määritetty
+
+= Chưa cấu hình. Đặt các biến môi trường SMTP_USER và SMTP_PASS trên máy chủ rồi deploy lại.
+en| Not configured. Set the SMTP_USER and SMTP_PASS environment variables on the server, then redeploy.
+zh| 尚未配置。请在服务器上设置环境变量 SMTP_USER 和 SMTP_PASS,然后重新部署。
+es| Sin configurar. Define las variables de entorno SMTP_USER y SMTP_PASS en el servidor y vuelve a desplegar.
+hi| कॉन्फ़िगर नहीं है। सर्वर पर पर्यावरण चर SMTP_USER और SMTP_PASS सेट करें और फिर से डिप्लॉय करें।
+ar| غير معدّ. اضبط متغيرَي البيئة SMTP_USER وSMTP_PASS على الخادم ثم أعد النشر.
+pt| Não configurado. Defina as variáveis de ambiente SMTP_USER e SMTP_PASS no servidor e faça um novo deploy.
+ru| Не настроено. Задайте переменные окружения SMTP_USER и SMTP_PASS на сервере и повторите деплой.
+ja| 未設定です。サーバーに環境変数 SMTP_USER と SMTP_PASS を設定して再デプロイしてください。
+ko| 설정되지 않았습니다. 서버에 환경 변수 SMTP_USER와 SMTP_PASS를 설정한 뒤 다시 배포하세요.
+de| Nicht konfiguriert. Setzen Sie die Umgebungsvariablen SMTP_USER und SMTP_PASS auf dem Server und deployen Sie erneut.
+fr| Non configuré. Définissez les variables d'environnement SMTP_USER et SMTP_PASS sur le serveur puis redéployez.
+id| Belum dikonfigurasi. Atur variabel lingkungan SMTP_USER dan SMTP_PASS di server lalu deploy ulang.
+th| ยังไม่ได้ตั้งค่า ตั้งค่าตัวแปรสภาพแวดล้อม SMTP_USER และ SMTP_PASS บนเซิร์ฟเวอร์แล้วดีพลอยใหม่
+tr| Yapılandırılmadı. Sunucuda SMTP_USER ve SMTP_PASS ortam değişkenlerini ayarlayıp yeniden dağıtın.
+fi| Ei määritetty. Aseta palvelimella ympäristömuuttujat SMTP_USER ja SMTP_PASS ja julkaise uudelleen.
+
+= Gửi email thử tới
+en| Send a test email to
+zh| 发送测试邮件至
+es| Enviar un correo de prueba a
+hi| टेस्ट ईमेल भेजें इस पते पर
+ar| إرسال بريد تجريبي إلى
+pt| Enviar e-mail de teste para
+ru| Отправить тестовое письмо на
+ja| テストメールの送信先
+ko| 테스트 이메일 받을 주소
+de| Test-E-Mail senden an
+fr| Envoyer un e-mail de test à
+id| Kirim email uji ke
+th| ส่งอีเมลทดสอบไปที่
+tr| Test e-postasının gönderileceği adres
+fi| Lähetä testisähköposti osoitteeseen
+
+= Đã gửi email thử
+en| Test email sent
+zh| 测试邮件已发送
+es| Correo de prueba enviado
+hi| टेस्ट ईमेल भेजा गया
+ar| تم إرسال البريد التجريبي
+pt| E-mail de teste enviado
+ru| Тестовое письмо отправлено
+ja| テストメールを送信しました
+ko| 테스트 이메일을 보냈습니다
+de| Test-E-Mail gesendet
+fr| E-mail de test envoyé
+id| Email uji terkirim
+th| ส่งอีเมลทดสอบแล้ว
+tr| Test e-postası gönderildi
+fi| Testisähköposti lähetetty
+
+= Gửi email thử
+en| Send test email
+zh| 发送测试邮件
+es| Enviar correo de prueba
+hi| टेस्ट ईमेल भेजें
+ar| إرسال بريد تجريبي
+pt| Enviar e-mail de teste
+ru| Отправить тестовое письмо
+ja| テストメールを送信
+ko| 테스트 이메일 보내기
+de| Test-E-Mail senden
+fr| Envoyer un e-mail de test
+id| Kirim email uji
+th| ส่งอีเมลทดสอบ
+tr| Test e-postası gönder
+fi| Lähetä testisähköposti
+
+= Xác nhận email khi đăng ký
+en| Email confirmation at sign-up
+zh| 注册时的邮箱确认
+es| Confirmación de correo al registrarse
+hi| साइन अप पर ईमेल की पुष्टि
+ar| تأكيد البريد الإلكتروني عند التسجيل
+pt| Confirmação de e-mail no cadastro
+ru| Подтверждение email при регистрации
+ja| 登録時のメール確認
+ko| 가입 시 이메일 확인
+de| E-Mail-Bestätigung bei der Registrierung
+fr| Confirmation de l'e-mail à l'inscription
+id| Konfirmasi email saat mendaftar
+th| การยืนยันอีเมลเมื่อสมัคร
+tr| Kayıtta e-posta doğrulaması
+fi| Sähköpostin vahvistus rekisteröitymisessä
+
+= Bắt buộc xác nhận email trước khi dùng tài khoản
+en| Require email confirmation before the account can be used
+zh| 必须先确认邮箱才能使用账号
+es| Exigir confirmar el correo antes de usar la cuenta
+hi| खाता इस्तेमाल करने से पहले ईमेल की पुष्टि अनिवार्य करें
+ar| اشتراط تأكيد البريد الإلكتروني قبل استخدام الحساب
+pt| Exigir confirmação de e-mail antes de usar a conta
+ru| Требовать подтверждение email перед использованием аккаунта
+ja| アカウント利用前にメール確認を必須にする
+ko| 계정을 사용하기 전에 이메일 확인 필수
+de| E-Mail-Bestätigung vor der Nutzung des Kontos verlangen
+fr| Exiger la confirmation de l'e-mail avant d'utiliser le compte
+id| Wajibkan konfirmasi email sebelum akun dipakai
+th| บังคับยืนยันอีเมลก่อนใช้งานบัญชี
+tr| Hesabı kullanmadan önce e-posta doğrulamasını zorunlu kıl
+fi| Vaadi sähköpostin vahvistus ennen tilin käyttöä
+
+= Khi bật, thành viên mới phải bấm liên kết trong email mới đăng nhập được. Thành viên cũ không bị ảnh hưởng.
+en| When on, new members must click the link in the email before they can sign in. Existing members are not affected.
+zh| 开启后,新成员必须点击邮件中的链接才能登录。现有成员不受影响。
+es| Al activarlo, los nuevos miembros deben pulsar el enlace del correo para poder iniciar sesión. Los miembros actuales no se ven afectados.
+hi| चालू होने पर नए सदस्यों को लॉगिन करने से पहले ईमेल का लिंक दबाना होगा। मौजूदा सदस्यों पर कोई असर नहीं।
+ar| عند التفعيل يجب على الأعضاء الجدد الضغط على الرابط في البريد قبل تسجيل الدخول. لا يتأثر الأعضاء الحاليون.
+pt| Quando ativado, novos membros precisam clicar no link do e-mail antes de entrar. Membros atuais não são afetados.
+ru| Если включить, новые участники смогут войти только после перехода по ссылке из письма. Текущих участников это не затрагивает.
+ja| オンにすると、新規メンバーはメール内のリンクをクリックしないとログインできません。既存メンバーには影響しません。
+ko| 켜면 신규 멤버는 이메일의 링크를 눌러야 로그인할 수 있습니다. 기존 멤버에게는 영향이 없습니다.
+de| Wenn aktiviert, müssen neue Mitglieder den Link in der E-Mail anklicken, bevor sie sich anmelden können. Bestehende Mitglieder sind nicht betroffen.
+fr| Lorsque cette option est activée, les nouveaux membres doivent cliquer sur le lien de l'e-mail pour pouvoir se connecter. Les membres existants ne sont pas concernés.
+id| Jika aktif, anggota baru harus menekan tautan di email sebelum bisa masuk. Anggota lama tidak terpengaruh.
+th| เมื่อเปิด สมาชิกใหม่ต้องกดลิงก์ในอีเมลก่อนจึงจะเข้าสู่ระบบได้ สมาชิกเดิมไม่ได้รับผลกระทบ
+tr| Açıkken yeni üyeler giriş yapmadan önce e-postadaki bağlantıya tıklamalıdır. Mevcut üyeler etkilenmez.
+fi| Kun päällä, uusien jäsenten on napsautettava sähköpostin linkkiä ennen kirjautumista. Nykyisiin jäseniin tämä ei vaikuta.
+
+= {0} đã xác nhận · {1} chờ xác nhận
+en| {0} confirmed · {1} awaiting confirmation
+zh| {0} 个已确认 · {1} 个待确认
+es| {0} confirmados · {1} pendientes de confirmar
+hi| {0} पुष्टि हो चुकी · {1} पुष्टि बाकी
+ar| {0} مؤكَّد · {1} بانتظار التأكيد
+pt| {0} confirmados · {1} aguardando confirmação
+ru| Подтверждено: {0} · ожидают подтверждения: {1}
+ja| 確認済み {0} · 確認待ち {1}
+ko| 확인됨 {0} · 확인 대기 {1}
+de| {0} bestätigt · {1} warten auf Bestätigung
+fr| {0} confirmés · {1} en attente de confirmation
+id| {0} terkonfirmasi · {1} menunggu konfirmasi
+th| ยืนยันแล้ว {0} · รอยืนยัน {1}
+tr| {0} onaylandı · {1} onay bekliyor
+fi| {0} vahvistettu · {1} odottaa vahvistusta
+
+= Ưu đãi mới từ KingTele
+en| New offer from KingTele
+zh| KingTele 的新优惠
+es| Nueva oferta de KingTele
+hi| KingTele से नया ऑफ़र
+ar| عرض جديد من KingTele
+pt| Nova oferta do KingTele
+ru| Новое предложение от KingTele
+ja| KingTeleからの新しいお得な情報
+ko| KingTele의 새로운 혜택
+de| Neues Angebot von KingTele
+fr| Nouvelle offre de KingTele
+id| Penawaran baru dari KingTele
+th| ข้อเสนอใหม่จาก KingTele
+tr| KingTele'den yeni teklif
+fi| Uusi tarjous KingTelelta
+
+= Tất cả thành viên nhận được email ({0})
+en| All members who can receive email ({0})
+zh| 所有可接收邮件的成员({0})
+es| Todos los miembros que pueden recibir correo ({0})
+hi| ईमेल पा सकने वाले सभी सदस्य ({0})
+ar| جميع الأعضاء الذين يمكنهم استلام البريد ({0})
+pt| Todos os membros que podem receber e-mail ({0})
+ru| Все участники, которые могут получать письма ({0})
+ja| メールを受信できる全メンバー({0})
+ko| 이메일을 받을 수 있는 모든 멤버({0})
+de| Alle Mitglieder, die E-Mails erhalten können ({0})
+fr| Tous les membres pouvant recevoir des e-mails ({0})
+id| Semua anggota yang bisa menerima email ({0})
+th| สมาชิกทุกคนที่รับอีเมลได้ ({0})
+tr| E-posta alabilen tüm üyeler ({0})
+fi| Kaikki jäsenet, jotka voivat vastaanottaa sähköpostia ({0})
+
+= Chỉ thành viên đã xác nhận email ({0})
+en| Only members with confirmed email ({0})
+zh| 仅已确认邮箱的成员({0})
+es| Solo miembros con correo confirmado ({0})
+hi| केवल ईमेल की पुष्टि कर चुके सदस्य ({0})
+ar| الأعضاء الذين أكّدوا بريدهم فقط ({0})
+pt| Somente membros com e-mail confirmado ({0})
+ru| Только участники с подтверждённым email ({0})
+ja| メール確認済みのメンバーのみ({0})
+ko| 이메일을 확인한 멤버만({0})
+de| Nur Mitglieder mit bestätigter E-Mail ({0})
+fr| Uniquement les membres dont l'e-mail est confirmé ({0})
+id| Hanya anggota dengan email terkonfirmasi ({0})
+th| เฉพาะสมาชิกที่ยืนยันอีเมลแล้ว ({0})
+tr| Yalnızca e-postası onaylı üyeler ({0})
+fi| Vain jäsenet, joiden sähköposti on vahvistettu ({0})
+
+= Gửi email quảng bá
+en| Send marketing email
+zh| 发送营销邮件
+es| Enviar correo promocional
+hi| प्रचार ईमेल भेजें
+ar| إرسال بريد ترويجي
+pt| Enviar e-mail promocional
+ru| Отправить рекламную рассылку
+ja| 宣伝メールを送信
+ko| 홍보 이메일 보내기
+de| Marketing-E-Mail senden
+fr| Envoyer un e-mail promotionnel
+id| Kirim email promosi
+th| ส่งอีเมลโปรโมชัน
+tr| Tanıtım e-postası gönder
+fi| Lähetä markkinointisähköposti
+
+= Dùng {ten} để chèn tên. Mỗi email có link hủy nhận ở cuối. Tối đa 300 người mỗi đợt, gửi giãn cách để tránh bị nhà cung cấp chặn.
+en| Use {ten} to insert the name. Every email has an unsubscribe link at the bottom. Up to 300 people per batch, sent with gaps so the provider doesn't block it.
+zh| 使用 {ten} 插入姓名。每封邮件末尾都有退订链接。每批最多 300 人,会间隔发送以免被服务商拦截。
+es| Usa {ten} para insertar el nombre. Cada correo lleva al final un enlace para darse de baja. Máximo 300 personas por lote, con pausas para que el proveedor no lo bloquee.
+hi| नाम जोड़ने के लिए {ten} इस्तेमाल करें। हर ईमेल के अंत में सदस्यता रद्द करने का लिंक होता है। एक बार में अधिकतम 300 लोग, अंतराल के साथ ताकि प्रदाता ब्लॉक न करे।
+ar| استخدم {ten} لإدراج الاسم. في أسفل كل بريد رابط لإلغاء الاشتراك. بحد أقصى 300 شخص في الدفعة، مع فواصل زمنية لتجنب الحظر من المزوّد.
+pt| Use {ten} para inserir o nome. Todo e-mail tem um link de cancelamento no final. No máximo 300 pessoas por lote, enviados com intervalos para o provedor não bloquear.
+ru| Используйте {ten}, чтобы вставить имя. В конце каждого письма есть ссылка для отписки. Не более 300 получателей за раз, отправка с паузами, чтобы провайдер не заблокировал.
+ja| {ten} で名前を挿入できます。すべてのメールの末尾に配信停止リンクが付きます。1回あたり最大300人で、プロバイダーにブロックされないよう間隔を空けて送信します。
+ko| {ten}으로 이름을 넣을 수 있습니다. 모든 이메일 하단에 수신 거부 링크가 포함됩니다. 한 번에 최대 300명이며, 제공업체에 차단되지 않도록 간격을 두고 보냅니다.
+de| Mit {ten} fügen Sie den Namen ein. Jede E-Mail enthält unten einen Abmeldelink. Höchstens 300 Personen pro Durchgang, mit Pausen versendet, damit der Anbieter nicht blockiert.
+fr| Utilisez {ten} pour insérer le nom. Chaque e-mail contient un lien de désabonnement en bas. 300 personnes maximum par envoi, espacés pour éviter un blocage par le fournisseur.
+id| Gunakan {ten} untuk menyisipkan nama. Setiap email memiliki tautan berhenti berlangganan di bagian bawah. Maksimal 300 orang per gelombang, dikirim dengan jeda agar tidak diblokir penyedia.
+th| ใช้ {ten} เพื่อแทรกชื่อ ทุกอีเมลมีลิงก์ยกเลิกรับอีเมลที่ท้ายจดหมาย ส่งได้สูงสุด 300 คนต่อรอบ และส่งแบบเว้นระยะเพื่อไม่ให้ผู้ให้บริการบล็อก
+tr| Adı eklemek için {ten} kullanın. Her e-postanın sonunda abonelikten çıkma bağlantısı vardır. Her seferde en fazla 300 kişi, sağlayıcı engellemesin diye aralıklı gönderilir.
+fi| Käytä {ten} nimen lisäämiseen. Jokaisen sähköpostin lopussa on peruutuslinkki. Enintään 300 henkilöä kerrallaan, lähetys tauotettuna, ettei palveluntarjoaja estä sitä.
+
+= Nhập tiêu đề và nội dung email
+en| Enter the email subject and content
+zh| 请输入邮件标题和内容
+es| Escribe el asunto y el contenido del correo
+hi| ईमेल का विषय और सामग्री लिखें
+ar| أدخل عنوان البريد ومحتواه
+pt| Informe o assunto e o conteúdo do e-mail
+ru| Введите тему и текст письма
+ja| メールの件名と本文を入力してください
+ko| 이메일 제목과 내용을 입력하세요
+de| Geben Sie Betreff und Inhalt der E-Mail ein
+fr| Saisissez l'objet et le contenu de l'e-mail
+id| Isi subjek dan konten email
+th| ใส่หัวข้อและเนื้อหาอีเมล
+tr| E-posta konusunu ve içeriğini girin
+fi| Kirjoita sähköpostin otsikko ja sisältö
+
+= Gửi email quảng bá?
+en| Send marketing email?
+zh| 确认发送营销邮件?
+es| ¿Enviar el correo promocional?
+hi| प्रचार ईमेल भेजें?
+ar| إرسال البريد الترويجي؟
+pt| Enviar o e-mail promocional?
+ru| Отправить рекламную рассылку?
+ja| 宣伝メールを送信しますか?
+ko| 홍보 이메일을 보낼까요?
+de| Marketing-E-Mail senden?
+fr| Envoyer l'e-mail promotionnel ?
+id| Kirim email promosi?
+th| ส่งอีเมลโปรโมชันหรือไม่?
+tr| Tanıtım e-postası gönderilsin mi?
+fi| Lähetetäänkö markkinointisähköposti?
+
+= Gửi tới {0} người.
+en| Sending to {0} people.
+zh| 将发送给 {0} 人。
+es| Se enviará a {0} personas.
+hi| {0} लोगों को भेजा जाएगा।
+ar| سيُرسل إلى {0} شخصًا.
+pt| Será enviado a {0} pessoas.
+ru| Будет отправлено {0} получателям.
+ja| {0}人に送信します。
+ko| {0}명에게 보냅니다.
+de| Wird an {0} Personen gesendet.
+fr| Envoi à {0} personnes.
+id| Dikirim ke {0} orang.
+th| จะส่งถึง {0} คน
+tr| {0} kişiye gönderilecek.
+fi| Lähetetään {0} henkilölle.
+
+= Email xác nhận đăng ký, đặt lại mật khẩu và email quảng bá
+en| Sign-up confirmation, password reset and marketing emails
+zh| 注册确认、重置密码和营销邮件
+es| Correos de confirmación de registro, restablecimiento de contraseña y promociones
+hi| साइन-अप की पुष्टि, पासवर्ड रीसेट और प्रचार ईमेल
+ar| رسائل تأكيد التسجيل وإعادة تعيين كلمة المرور والرسائل الترويجية
+pt| E-mails de confirmação de cadastro, redefinição de senha e promoções
+ru| Письма подтверждения регистрации, сброса пароля и рекламные рассылки
+ja| 登録確認、パスワード再設定、宣伝メール
+ko| 가입 확인, 비밀번호 재설정, 홍보 이메일
+de| Registrierungsbestätigung, Passwort-Zurücksetzen und Marketing-E-Mails
+fr| E-mails de confirmation d'inscription, de réinitialisation du mot de passe et promotionnels
+id| Email konfirmasi pendaftaran, atur ulang kata sandi, dan promosi
+th| อีเมลยืนยันการสมัคร ตั้งรหัสผ่านใหม่ และอีเมลโปรโมชัน
+tr| Kayıt onayı, şifre sıfırlama ve tanıtım e-postaları
+fi| Rekisteröitymisen vahvistus-, salasanan nollaus- ja markkinointisähköpostit
+
+= Email đã được xác nhận. Bạn có thể đăng nhập.
+en| Your email is confirmed. You can sign in now.
+zh| 邮箱已确认,现在可以登录了。
+es| Tu correo está confirmado. Ya puedes iniciar sesión.
+hi| आपका ईमेल पुष्ट हो गया है। अब आप लॉगिन कर सकते हैं।
+ar| تم تأكيد بريدك الإلكتروني. يمكنك تسجيل الدخول الآن.
+pt| Seu e-mail foi confirmado. Você já pode entrar.
+ru| Email подтверждён. Теперь можно войти.
+ja| メールアドレスを確認しました。ログインできます。
+ko| 이메일이 확인되었습니다. 이제 로그인할 수 있습니다.
+de| Ihre E-Mail ist bestätigt. Sie können sich jetzt anmelden.
+fr| Votre e-mail est confirmé. Vous pouvez maintenant vous connecter.
+id| Email Anda sudah terkonfirmasi. Silakan masuk.
+th| ยืนยันอีเมลของคุณแล้ว เข้าสู่ระบบได้เลย
+tr| E-postanız onaylandı. Artık giriş yapabilirsiniz.
+fi| Sähköpostisi on vahvistettu. Voit nyt kirjautua sisään.
+
+= Liên kết xác nhận không hợp lệ hoặc đã hết hạn.
+en| The confirmation link is invalid or has expired.
+zh| 确认链接无效或已过期。
+es| El enlace de confirmación no es válido o ha caducado.
+hi| पुष्टि का लिंक अमान्य है या समाप्त हो चुका है।
+ar| رابط التأكيد غير صالح أو منتهي الصلاحية.
+pt| O link de confirmação é inválido ou expirou.
+ru| Ссылка подтверждения недействительна или устарела.
+ja| 確認リンクが無効か、有効期限が切れています。
+ko| 확인 링크가 올바르지 않거나 만료되었습니다.
+de| Der Bestätigungslink ist ungültig oder abgelaufen.
+fr| Le lien de confirmation est invalide ou a expiré.
+id| Tautan konfirmasi tidak valid atau sudah kedaluwarsa.
+th| ลิงก์ยืนยันไม่ถูกต้องหรือหมดอายุแล้ว
+tr| Onay bağlantısı geçersiz veya süresi dolmuş.
+fi| Vahvistuslinkki on virheellinen tai vanhentunut.
+
+= Đã gửi lại email xác nhận. Hãy kiểm tra hộp thư.
+en| Confirmation email sent again. Please check your inbox.
+zh| 已重新发送确认邮件,请查收。
+es| Correo de confirmación reenviado. Revisa tu bandeja de entrada.
+hi| पुष्टि ईमेल दोबारा भेजा गया। अपना इनबॉक्स देखें।
+ar| أُعيد إرسال بريد التأكيد. يرجى تفقّد صندوق الوارد.
+pt| E-mail de confirmação reenviado. Verifique sua caixa de entrada.
+ru| Письмо с подтверждением отправлено повторно. Проверьте почту.
+ja| 確認メールを再送しました。受信トレイをご確認ください。
+ko| 확인 이메일을 다시 보냈습니다. 받은편지함을 확인하세요.
+de| Bestätigungs-E-Mail erneut gesendet. Bitte prüfen Sie Ihren Posteingang.
+fr| E-mail de confirmation renvoyé. Vérifiez votre boîte de réception.
+id| Email konfirmasi dikirim ulang. Silakan periksa kotak masuk Anda.
+th| ส่งอีเมลยืนยันอีกครั้งแล้ว โปรดตรวจสอบกล่องจดหมาย
+tr| Onay e-postası yeniden gönderildi. Lütfen gelen kutunuzu kontrol edin.
+fi| Vahvistussähköposti lähetetty uudelleen. Tarkista saapuneet.
+
+= Đã gửi email xác nhận tới {0}. Hãy mở email và bấm vào liên kết để kích hoạt tài khoản.
+en| A confirmation email was sent to {0}. Open it and click the link to activate your account.
+zh| 确认邮件已发送至 {0}。请打开邮件并点击链接以激活账号。
+es| Se envió un correo de confirmación a {0}. Ábrelo y pulsa el enlace para activar tu cuenta.
+hi| {0} पर पुष्टि ईमेल भेजा गया है। ईमेल खोलें और खाता सक्रिय करने के लिए लिंक दबाएँ।
+ar| أُرسل بريد تأكيد إلى {0}. افتحه واضغط على الرابط لتفعيل حسابك.
+pt| Um e-mail de confirmação foi enviado para {0}. Abra-o e clique no link para ativar sua conta.
+ru| Письмо с подтверждением отправлено на {0}. Откройте его и перейдите по ссылке, чтобы активировать аккаунт.
+ja| {0}に確認メールを送信しました。メールを開いてリンクをクリックし、アカウントを有効にしてください。
+ko| {0}(으)로 확인 이메일을 보냈습니다. 이메일을 열고 링크를 눌러 계정을 활성화하세요.
+de| Eine Bestätigungs-E-Mail wurde an {0} gesendet. Öffnen Sie sie und klicken Sie auf den Link, um Ihr Konto zu aktivieren.
+fr| Un e-mail de confirmation a été envoyé à {0}. Ouvrez-le et cliquez sur le lien pour activer votre compte.
+id| Email konfirmasi telah dikirim ke {0}. Buka email dan klik tautannya untuk mengaktifkan akun Anda.
+th| ส่งอีเมลยืนยันไปที่ {0} แล้ว เปิดอีเมลและกดลิงก์เพื่อเปิดใช้งานบัญชี
+tr| {0} adresine bir onay e-postası gönderildi. E-postayı açıp bağlantıya tıklayarak hesabınızı etkinleştirin.
+fi| Vahvistussähköposti lähetettiin osoitteeseen {0}. Avaa se ja napsauta linkkiä aktivoidaksesi tilisi.
+
+= Có lỗi xảy ra, vui lòng thử lại.
+en| Something went wrong, please try again.
+zh| 出错了,请重试。
+es| Algo salió mal, inténtalo de nuevo.
+hi| कुछ गड़बड़ हुई, कृपया फिर कोशिश करें।
+ar| حدث خطأ ما، يرجى المحاولة مجددًا.
+pt| Algo deu errado, tente novamente.
+ru| Что-то пошло не так, попробуйте ещё раз.
+ja| エラーが発生しました。もう一度お試しください。
+ko| 오류가 발생했습니다. 다시 시도하세요.
+de| Etwas ist schiefgelaufen, bitte versuchen Sie es erneut.
+fr| Une erreur s'est produite, veuillez réessayer.
+id| Terjadi kesalahan, silakan coba lagi.
+th| เกิดข้อผิดพลาด โปรดลองอีกครั้ง
+tr| Bir şeyler ters gitti, lütfen tekrar deneyin.
+fi| Jokin meni pieleen, yritä uudelleen.
+
+= Nếu email này đã đăng ký, liên kết đặt lại mật khẩu đã được gửi. Hãy kiểm tra hộp thư (cả mục thư rác).
+en| If this email is registered, a password reset link has been sent. Check your inbox (and spam folder).
+zh| 如果该邮箱已注册,重置密码链接已发送。请查收邮箱(包括垃圾邮件)。
+es| Si este correo está registrado, se ha enviado un enlace para restablecer la contraseña. Revisa tu bandeja (y el spam).
+hi| अगर यह ईमेल पंजीकृत है तो पासवर्ड रीसेट का लिंक भेज दिया गया है। इनबॉक्स (और स्पैम फ़ोल्डर) देखें।
+ar| إذا كان هذا البريد مسجّلًا فقد أُرسل رابط إعادة تعيين كلمة المرور. تفقّد صندوق الوارد (ومجلد الرسائل غير المرغوبة).
+pt| Se este e-mail estiver cadastrado, um link de redefinição de senha foi enviado. Verifique a caixa de entrada (e o spam).
+ru| Если этот email зарегистрирован, ссылка для сброса пароля отправлена. Проверьте почту (и папку «Спам»).
+ja| このメールアドレスが登録されている場合、パスワード再設定用のリンクを送信しました。受信トレイ(迷惑メールも)をご確認ください。
+ko| 이 이메일이 가입되어 있다면 비밀번호 재설정 링크를 보냈습니다. 받은편지함(스팸함 포함)을 확인하세요.
+de| Wenn diese E-Mail registriert ist, wurde ein Link zum Zurücksetzen des Passworts gesendet. Prüfen Sie Ihren Posteingang (und Spam-Ordner).
+fr| Si cet e-mail est enregistré, un lien de réinitialisation a été envoyé. Vérifiez votre boîte de réception (et les spams).
+id| Jika email ini terdaftar, tautan atur ulang kata sandi telah dikirim. Periksa kotak masuk (dan folder spam).
+th| หากอีเมลนี้ลงทะเบียนไว้ เราได้ส่งลิงก์ตั้งรหัสผ่านใหม่แล้ว โปรดตรวจสอบกล่องจดหมาย (และโฟลเดอร์สแปม)
+tr| Bu e-posta kayıtlıysa şifre sıfırlama bağlantısı gönderildi. Gelen kutunuzu (ve spam klasörünü) kontrol edin.
+fi| Jos tämä sähköposti on rekisteröity, salasanan nollauslinkki on lähetetty. Tarkista saapuneet (ja roskaposti).
+
+= Liên kết không hợp lệ hoặc đã hết hạn. Hãy yêu cầu liên kết mới.
+en| The link is invalid or has expired. Please request a new one.
+zh| 链接无效或已过期,请重新申请。
+es| El enlace no es válido o ha caducado. Solicita uno nuevo.
+hi| लिंक अमान्य है या समाप्त हो चुका है। नया लिंक माँगें।
+ar| الرابط غير صالح أو منتهي الصلاحية. اطلب رابطًا جديدًا.
+pt| O link é inválido ou expirou. Solicite um novo.
+ru| Ссылка недействительна или устарела. Запросите новую.
+ja| リンクが無効か、有効期限が切れています。新しいリンクをリクエストしてください。
+ko| 링크가 올바르지 않거나 만료되었습니다. 새 링크를 요청하세요.
+de| Der Link ist ungültig oder abgelaufen. Bitte fordern Sie einen neuen an.
+fr| Le lien est invalide ou a expiré. Demandez-en un nouveau.
+id| Tautan tidak valid atau sudah kedaluwarsa. Minta tautan baru.
+th| ลิงก์ไม่ถูกต้องหรือหมดอายุแล้ว โปรดขอลิงก์ใหม่
+tr| Bağlantı geçersiz veya süresi dolmuş. Lütfen yeni bir bağlantı isteyin.
+fi| Linkki on virheellinen tai vanhentunut. Pyydä uusi.
+
+= Đang lưu...
+en| Saving...
+zh| 保存中...
+es| Guardando...
+hi| सहेजा जा रहा है...
+ar| جارٍ الحفظ...
+pt| Salvando...
+ru| Сохранение...
+ja| 保存中...
+ko| 저장 중...
+de| Wird gespeichert...
+fr| Enregistrement...
+id| Menyimpan...
+th| กำลังบันทึก...
+tr| Kaydediliyor...
+fi| Tallennetaan...
+
+= Đã đặt lại mật khẩu. Đang chuyển tới trang đăng nhập...
+en| Password reset. Taking you to the sign-in page...
+zh| 密码已重置,正在跳转到登录页面...
+es| Contraseña restablecida. Te llevamos a la página de inicio de sesión...
+hi| पासवर्ड रीसेट हो गया। आपको लॉगिन पेज पर ले जाया जा रहा है...
+ar| تمت إعادة تعيين كلمة المرور. جارٍ نقلك إلى صفحة تسجيل الدخول...
+pt| Senha redefinida. Levando você à página de login...
+ru| Пароль сброшен. Переходим на страницу входа...
+ja| パスワードを再設定しました。ログインページに移動します...
+ko| 비밀번호를 재설정했습니다. 로그인 페이지로 이동합니다...
+de| Passwort zurückgesetzt. Sie werden zur Anmeldeseite weitergeleitet...
+fr| Mot de passe réinitialisé. Redirection vers la page de connexion...
+id| Kata sandi telah diatur ulang. Mengarahkan ke halaman masuk...
+th| ตั้งรหัสผ่านใหม่แล้ว กำลังพาไปหน้าเข้าสู่ระบบ...
+tr| Şifre sıfırlandı. Giriş sayfasına yönlendiriliyorsunuz...
+fi| Salasana nollattu. Siirrytään kirjautumissivulle...
+
+= Hãy xác nhận email trước khi đăng nhập. Kiểm tra hộp thư của bạn hoặc gửi lại email xác nhận.
+en| Please confirm your email before signing in. Check your inbox or resend the confirmation email.
+zh| 请先确认邮箱再登录。请查收邮箱,或重新发送确认邮件。
+es| Confirma tu correo antes de iniciar sesión. Revisa tu bandeja o reenvía el correo de confirmación.
+hi| लॉगिन करने से पहले अपना ईमेल पुष्ट करें। इनबॉक्स देखें या पुष्टि ईमेल दोबारा भेजें।
+ar| يرجى تأكيد بريدك الإلكتروني قبل تسجيل الدخول. تفقّد صندوق الوارد أو أعد إرسال بريد التأكيد.
+pt| Confirme seu e-mail antes de entrar. Verifique a caixa de entrada ou reenvie o e-mail de confirmação.
+ru| Подтвердите email перед входом. Проверьте почту или отправьте письмо с подтверждением ещё раз.
+ja| ログインする前にメールアドレスを確認してください。受信トレイを確認するか、確認メールを再送してください。
+ko| 로그인하기 전에 이메일을 확인하세요. 받은편지함을 확인하거나 확인 이메일을 다시 보내세요.
+de| Bitte bestätigen Sie Ihre E-Mail, bevor Sie sich anmelden. Prüfen Sie Ihren Posteingang oder senden Sie die Bestätigungs-E-Mail erneut.
+fr| Veuillez confirmer votre e-mail avant de vous connecter. Vérifiez votre boîte de réception ou renvoyez l'e-mail de confirmation.
+id| Konfirmasi email Anda sebelum masuk. Periksa kotak masuk atau kirim ulang email konfirmasi.
+th| โปรดยืนยันอีเมลก่อนเข้าสู่ระบบ ตรวจสอบกล่องจดหมายหรือส่งอีเมลยืนยันอีกครั้ง
+tr| Giriş yapmadan önce e-postanızı onaylayın. Gelen kutunuzu kontrol edin veya onay e-postasını yeniden gönderin.
+fi| Vahvista sähköpostisi ennen kirjautumista. Tarkista saapuneet tai lähetä vahvistussähköposti uudelleen.
+
+= Không gửi được email xác nhận. Hãy kiểm tra địa chỉ email hoặc thử lại sau.
+en| Couldn't send the confirmation email. Check the email address or try again later.
+zh| 无法发送确认邮件。请检查邮箱地址或稍后重试。
+es| No se pudo enviar el correo de confirmación. Revisa la dirección o inténtalo más tarde.
+hi| पुष्टि ईमेल नहीं भेजा जा सका। ईमेल पता जाँचें या बाद में फिर कोशिश करें।
+ar| تعذّر إرسال بريد التأكيد. تحقق من عنوان البريد أو حاول لاحقًا.
+pt| Não foi possível enviar o e-mail de confirmação. Verifique o endereço ou tente mais tarde.
+ru| Не удалось отправить письмо с подтверждением. Проверьте адрес или повторите позже.
+ja| 確認メールを送信できませんでした。メールアドレスを確認するか、後でもう一度お試しください。
+ko| 확인 이메일을 보내지 못했습니다. 이메일 주소를 확인하거나 나중에 다시 시도하세요.
+de| Die Bestätigungs-E-Mail konnte nicht gesendet werden. Prüfen Sie die Adresse oder versuchen Sie es später erneut.
+fr| Impossible d'envoyer l'e-mail de confirmation. Vérifiez l'adresse ou réessayez plus tard.
+id| Tidak bisa mengirim email konfirmasi. Periksa alamat email atau coba lagi nanti.
+th| ส่งอีเมลยืนยันไม่สำเร็จ โปรดตรวจสอบที่อยู่อีเมลหรือลองใหม่ภายหลัง
+tr| Onay e-postası gönderilemedi. E-posta adresini kontrol edin veya daha sonra tekrar deneyin.
+fi| Vahvistussähköpostia ei voitu lähettää. Tarkista osoite tai yritä myöhemmin uudelleen.
+
+= Chức năng gửi email tạm thời chưa khả dụng.
+en| Email sending is temporarily unavailable.
+zh| 邮件发送功能暂时不可用。
+es| El envío de correos no está disponible por el momento.
+hi| ईमेल भेजने की सुविधा अभी उपलब्ध नहीं है।
+ar| خدمة إرسال البريد غير متاحة مؤقتًا.
+pt| O envio de e-mails está temporariamente indisponível.
+ru| Отправка писем временно недоступна.
+ja| メール送信機能は一時的にご利用いただけません。
+ko| 이메일 발송 기능을 일시적으로 사용할 수 없습니다.
+de| Der E-Mail-Versand ist vorübergehend nicht verfügbar.
+fr| L'envoi d'e-mails est temporairement indisponible.
+id| Pengiriman email sementara tidak tersedia.
+th| ฟังก์ชันส่งอีเมลใช้งานไม่ได้ชั่วคราว
+tr| E-posta gönderimi geçici olarak kullanılamıyor.
+fi| Sähköpostin lähetys ei ole tilapäisesti käytettävissä.
+
+= Bạn yêu cầu quá nhiều lần. Vui lòng thử lại sau.
+en| Too many requests. Please try again later.
+zh| 请求过于频繁,请稍后再试。
+es| Demasiadas solicitudes. Inténtalo más tarde.
+hi| बहुत ज़्यादा अनुरोध। कृपया बाद में फिर कोशिश करें।
+ar| طلبات كثيرة جدًا. يرجى المحاولة لاحقًا.
+pt| Muitas solicitações. Tente novamente mais tarde.
+ru| Слишком много запросов. Повторите попытку позже.
+ja| リクエストが多すぎます。しばらくしてからもう一度お試しください。
+ko| 요청이 너무 많습니다. 나중에 다시 시도하세요.
+de| Zu viele Anfragen. Bitte versuchen Sie es später erneut.
+fr| Trop de demandes. Veuillez réessayer plus tard.
+id| Terlalu banyak permintaan. Silakan coba lagi nanti.
+th| คำขอมากเกินไป โปรดลองใหม่ภายหลัง
+tr| Çok fazla istek. Lütfen daha sonra tekrar deneyin.
+fi| Liian monta pyyntöä. Yritä myöhemmin uudelleen.
+
+= Chưa cấu hình SMTP nên chưa thể bật xác nhận email.
+en| SMTP isn't configured, so email confirmation can't be turned on yet.
+zh| 尚未配置 SMTP,因此暂时无法开启邮箱确认。
+es| SMTP no está configurado, por lo que aún no se puede activar la confirmación por correo.
+hi| SMTP कॉन्फ़िगर नहीं है, इसलिए ईमेल पुष्टि अभी चालू नहीं की जा सकती।
+ar| لم يتم إعداد SMTP لذلك لا يمكن تفعيل تأكيد البريد بعد.
+pt| O SMTP não está configurado, então a confirmação por e-mail ainda não pode ser ativada.
+ru| SMTP не настроен, поэтому включить подтверждение email пока нельзя.
+ja| SMTPが未設定のため、メール確認はまだオンにできません。
+ko| SMTP가 설정되지 않아 이메일 확인을 아직 켤 수 없습니다.
+de| SMTP ist nicht konfiguriert, daher kann die E-Mail-Bestätigung noch nicht eingeschaltet werden.
+fr| SMTP n'est pas configuré : la confirmation par e-mail ne peut pas encore être activée.
+id| SMTP belum dikonfigurasi sehingga konfirmasi email belum bisa diaktifkan.
+th| ยังไม่ได้ตั้งค่า SMTP จึงยังเปิดการยืนยันอีเมลไม่ได้
+tr| SMTP yapılandırılmadığı için e-posta doğrulaması henüz açılamıyor.
+fi| SMTP:tä ei ole määritetty, joten sähköpostin vahvistusta ei voi vielä ottaa käyttöön.
+
+= Chưa cấu hình SMTP
+en| SMTP is not configured
+zh| 尚未配置 SMTP
+es| SMTP sin configurar
+hi| SMTP कॉन्फ़िगर नहीं है
+ar| لم يتم إعداد SMTP
+pt| SMTP não configurado
+ru| SMTP не настроен
+ja| SMTPが未設定です
+ko| SMTP가 설정되지 않았습니다
+de| SMTP ist nicht konfiguriert
+fr| SMTP non configuré
+id| SMTP belum dikonfigurasi
+th| ยังไม่ได้ตั้งค่า SMTP
+tr| SMTP yapılandırılmadı
+fi| SMTP:tä ei ole määritetty
+
+= Không gửi được email: {0}
+en| Couldn't send the email: {0}
+zh| 无法发送邮件:{0}
+es| No se pudo enviar el correo: {0}
+hi| ईमेल नहीं भेजा जा सका: {0}
+ar| تعذّر إرسال البريد: {0}
+pt| Não foi possível enviar o e-mail: {0}
+ru| Не удалось отправить письмо: {0}
+ja| メールを送信できませんでした:{0}
+ko| 이메일을 보내지 못했습니다: {0}
+de| E-Mail konnte nicht gesendet werden: {0}
+fr| Impossible d'envoyer l'e-mail : {0}
+id| Tidak bisa mengirim email: {0}
+th| ส่งอีเมลไม่สำเร็จ: {0}
+tr| E-posta gönderilemedi: {0}
+fi| Sähköpostia ei voitu lähettää: {0}

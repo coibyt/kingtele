@@ -167,3 +167,6 @@ html, body { overflow-x: clip; }
   .nav-cta .btn-sm { padding: 0 10px; font-size: .82rem; }
   .wrap { width: calc(100% - 32px); }
 }
+
+.auth-card .back-link { display: block; text-align: center; }
+.auth-card .back-link + .back-link { margin-top: 10px; }

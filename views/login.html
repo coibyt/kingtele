@@ -41,8 +41,11 @@
           <input class="input" id="p" name="password" type="password" autocomplete="current-password" required>
         </div>
         <p class="error-text" id="err" role="alert" aria-live="polite" hidden></p>
+        <p class="ok-text" id="ok" role="status" aria-live="polite" hidden></p>
         <button class="btn btn-primary" id="go" type="submit">Đăng nhập</button>
+        <button class="btn btn-ghost" id="resend" type="button" hidden>Gửi lại email xác nhận</button>
       </form>
+      <a class="back-link" href="/forgot">Quên mật khẩu?</a>
       <a class="back-link" href="/register">Chưa có tài khoản? Tạo tài khoản</a>
     </div>
   </main>

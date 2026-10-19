@@ -18,6 +18,8 @@ const { createFb } = require('./src/fb');
 const { createZalo } = require('./src/zalo');
 const { createModeration } = require('./src/moderation');
 const { createInbox } = require('./src/inbox');
+const { createMailer } = require('./src/mail');
+const { createAccountMail } = require('./src/account-mail');
 
 const store = new Store(config.dataDir).init();
 // Token bot của từng thành viên; tài khoản admin dùng token trong Cài đặt hoặc biến môi trường.
@@ -31,7 +33,9 @@ const points = createPoints({ store, config });
 const pwaStats = createPwaStats({ store });
 const traffic = createTraffic({ store, tz: config.defaultTz });
 if (points.migrate()) store.save();
-const auth = createAuth({ store, config, points });
+const mailer = createMailer(config);
+const accountMail = createAccountMail({ store, config, mailer });
+const auth = createAuth({ store, config, points, accountMail });
 const media = createMedia({ store, uploadsDir: config.uploadsDir });
 const scheduler = createScheduler({ store, getToken: tokenFor, isActive, uploadsDir: config.uploadsDir, points });
 
@@ -66,7 +70,7 @@ app.use((req, res, next) => {
 app.use(express.json({ limit: '100kb' }));
 app.get('/healthz', (req, res) => res.json({ ok: true, uptime: Math.round(process.uptime()) }));
 const chatIdTool = config.toolBotToken ? startToolBot({ token: config.toolBotToken }) : null; // bot của công cụ /cong-cu/lay-id-nhom-telegram
-app.use('/api', createApi({ store, config, auth, scheduler, media, tokenFor, points, pwaStats, traffic, chatIdTool, fb, zalo, mod, inbox }));
+app.use('/api', createApi({ store, config, auth, scheduler, media, tokenFor, points, pwaStats, traffic, chatIdTool, fb, zalo, mod, inbox, accountMail }));
 
 // CDN của nhà cung cấp hosting có thể bỏ header Cache-Control, nên gắn mã phiên bản (?v=) vào mọi file /assets
 // trong HTML: mỗi lần deploy là một địa chỉ mới, điện thoại luôn tải bản mới.
@@ -91,6 +95,10 @@ const page = (file, status = 200) => (req, res) => {
   res.status(status).set({ 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-cache' }).send(html);
 };
 const view = (name) => page(path.join(__dirname, 'views', name));
+app.get('/verify-email', (req, res) => accountMail.verifyPage(req, res).catch(() => res.redirect('/login?verified=0')));
+app.get('/unsubscribe', (req, res) => accountMail.unsubscribePage(req, res).catch(() => res.status(500).end()));
+app.get('/forgot', view('forgot.html'));
+app.get('/reset', view('reset.html'));
 app.get('/', page(path.join(__dirname, 'public', 'index.html')));
 app.get('/cong-cu/lay-id-nhom-telegram', view('tool-chat-id.html'));
 app.get('/app', (req, res) => (auth.session(req) ? view('app.html')(req, res) : res.redirect('/login')));
